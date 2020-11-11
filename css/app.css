@@ -1,6 +1,13 @@
-@tailwind base;
+/*@import "tailwindcss/base";
 
-@tailwind components;
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";*/
+
+/* Reset */
+@import './reset.css';
+
+/* Components */
 @import './components/tag.css';
 
-@tailwind utilities;
+/* Utilities */

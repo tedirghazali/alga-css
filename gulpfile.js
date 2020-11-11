@@ -6,18 +6,20 @@ const terser = require('gulp-terser')
 const postcss = require('gulp-postcss')
 
 const dist = {
-  css: '../codetube/tailstrap/assets/css/',
-  js: '../codetube/tailstrap/assets/js/',
+  css: './dist/css/',
+  js: './dist/js/',
 }
 
 function css() {
-  return src('css/**/tag.css', { sourcemaps: true })
+  return src('css/app.css', { sourcemaps: true })
     .pipe(postcss([
+      require("postcss-import"),
       require('tailwindcss'),
+      require('postcss-nested'),
       require('autoprefixer')
     ]))
     .pipe(rename("tailstrap.css"))
-    .pipe(dest(dist.css), { sourcemaps: '.' })
+    .pipe(dest(dist.css, { sourcemaps: '.' }))
 }
 
 function cssMin() {
@@ -36,7 +38,7 @@ function cssMin() {
 }*/
 
 function watchChanges() {
-  watch(['css/**/*.css', '!css/app.css'], series(css, cssMin))
+  watch('css/app.css', series(css, cssMin))
   //watch('js/tailstrap.js', js)
 }
 
