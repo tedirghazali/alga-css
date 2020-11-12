@@ -4,10 +4,22 @@
 
 @import "tailwindcss/utilities";*/
 
-/* Reset */
+/* Basic */
+@import './base.css';
 @import './reset.css';
+
+/* Layout */
+@import './layout/container.css';
+
+/* Columns */
+
+/* Forms */
+
+/* Elements */
 
 /* Components */
 @import './components/tag.css';
+
+/* Helpers */
 
 /* Utilities */
