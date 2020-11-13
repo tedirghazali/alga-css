@@ -1,0 +1,170 @@
+@layer components {
+  .page {
+    /* autoprefixer grid: no-autoplace */
+    @apply grid w-full;
+    
+    &-two-1 {
+      grid-template:  [nav-left] "nav nav" auto [nav-right]
+                      [main-left] "main main" 1fr [main-right]
+                      / auto 1fr;
+    }
+    
+    &-two-2 {
+      grid-template:  [nav-left] "nav main" auto [main-right]
+                      [nav-left] "nav main" 1fr [main-right]
+                      / auto 1fr;
+    }
+    
+    &-two-3 {
+      grid-template:  [main-left] "main nav" auto [nav-right]
+                      [main-left] "main nav" 1fr [nav-right]
+                      / 1fr auto;
+    }
+    
+    &-two-4 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [main-left] "main main" 1fr [main-right]
+                      / auto 1fr;
+    }
+    
+    &-two-5 {
+      grid-template:  [side-left] "leftside main" auto [main-right]
+                      [side-left] "lefside main" 1fr [main-right]
+                      / auto 1fr;
+    }
+    
+    &-two-6 {
+      grid-template:  [main-left] "main rightside" auto [side-right]
+                      [main-left] "main rightside" 1fr [side-right]
+                      / 1fr auto;
+    }
+    
+    &-three-1 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [nav-left] "nav main" 1fr [main-right]
+                      / auto 1fr;
+    }
+    
+    &-three-2 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [main-left] "main nav" 1fr  [nav-right]
+                      / 1fr auto;
+    }
+    
+    &-three-3 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [side-left] "leftside main" 1fr [main-right]
+                      / auto 1fr;
+    }
+    
+    &-three-4 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [main-left] "main rightside" 1fr [side-right]
+                      / 1fr auto;
+    }
+    
+    &-three-5 {
+      grid-template:  [nav-left] "nav nav" auto [nav-right]
+                      [side-left] "leftside main" 1fr [main-right]
+                      / auto 1fr;
+    }
+    
+    &-three-6 {
+      grid-template:  [nav-left] "nav nav" auto [nav-right]
+                      [main-left] "main rightside" 1fr [side-right]
+                      / 1fr auto;
+    }
+    
+    &-four-1 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [nav-left]  "nav  main" 1fr [main-right]
+                      [foot-left] "foot  foot" auto [foot-right]
+                      / auto 1fr;
+    }
+    
+    &-four-2 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [main-left] "main nav" 1fr [main-right]
+                      [foot-left] "foot foot" auto [foot-right]
+                      / 1fr auto;
+    }
+    
+    &-four-3 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [side-left] "leftside main" 1fr [main-right]
+                      [foot-left] "foot foot" auto [foot-right]
+                      / auto 1fr;
+    }
+    
+    &-four-4 {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [main-left] "main rightside" 1fr [side-right]
+                      [foot-left] "foot foot" auto [foot-right]
+                      / 1fr auto;
+    }
+    
+    &-four-5 {
+      grid-template:  [nav-left] "nav nav" auto [nav-right]
+                      [side-left] "leftside main" 1fr [main-right]
+                      [foot-left] "foot foot" auto [foot-right]
+                      / auto 1fr;
+    }
+    
+    &-four-6 {
+      grid-template:  [nav-left] "nav nav" auto [nav-right]
+                      [main-left] "main rightside" 1fr [side-right]
+                      [foot-left] "foot foot" auto [foot-right]
+                      / 1fr auto;
+    }
+    
+    &-five-1 {
+      grid-template:  [head-left] "head head head" auto [head-right]
+                      [side-left] "leftside main rightside" 1fr [side-right]
+                      [foot-left] "foot foot foot" auto [foot-right]
+                      / auto 1fr auto;
+    }
+    
+    &-five-2 {
+      grid-template:  [head-left] "head head head" auto [head-right]
+                      [side-left] "leftside main rightside" 1fr [side-right]
+                      / auto 1fr auto;
+    }
+    
+    &-five-3 {
+      grid-template:  [nav-left] "nav nav nav" auto [nav-right]
+                      [side-left] "leftside main rightside" 1fr [side-right]
+                      [foot-left] "foot foot foot" auto [foot-right]
+                      / auto 1fr auto;
+    }
+    
+    &-five-4 {
+      grid-template:  [nav-left] "nav nav nav" auto [nav-right]
+                      [side-left] "leftside main rightside" 1fr [side-right]
+                      / auto 1fr auto;
+    }
+    
+    &-nav {
+      grid-area: nav;
+    }
+
+    &-header {
+      grid-area: head;
+    }
+
+    &-leftside {
+      grid-area: leftside;
+    }
+
+    &-main {
+      grid-area: main;
+    }
+
+    &-rightside {
+      grid-area: rightside;
+    }
+
+    &-footer {
+      grid-area: foot;
+    }
+  }
+}
