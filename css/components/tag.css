@@ -16,7 +16,7 @@
   }
   
   .tag {
-    @apply items-center inline-flex text-xs justify-center leading-normal whitespace-no-wrap;
+    @apply items-center inline-flex text-xs justify-center leading-normal whitespace-nowrap;
     background-color: whitesmoke;
     border-radius: 4px;
     color: #4a4a4a;
@@ -50,7 +50,7 @@
   }
 
   .tag-info {
-    @apply bg-teal-600 text-white;
+    @apply bg-blue-400 text-white;
   }
 
   .tag-light {
@@ -61,11 +61,11 @@
     @apply bg-gray-900 text-white;
   }
 
-  .tag-lg {
+  .tag-large {
     @apply text-xl;
   }
 
-  .tag-sm {
+  .tag-small {
     @apply text-xs;
   }
 
@@ -184,7 +184,7 @@
   }
 
   .tag-control-hidden {
-    @apply absolute overflow-hidden invisible whitespace-no-wrap;
+    @apply absolute overflow-hidden invisible whitespace-nowrap;
     top: 0;
     left: -9999px;
   }
