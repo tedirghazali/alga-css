@@ -5,22 +5,22 @@
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control,
-.input-group > .form-select {
+.input-group > .input,
+.input-group > .select {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus,
-.input-group > .form-select:focus {
+.input-group > .input:focus,
+.input-group > .select:focus {
   z-index: 3;
 }
-.input-group .btn {
+.input-group .button {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .button:focus {
   z-index: 3;
 }
 
@@ -39,26 +39,26 @@
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control,
-.input-group-lg > .form-select,
+.input-group-lg > .input,
+.input-group-lg > .select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control,
-.input-group-sm > .form-select,
+.input-group-sm > .input,
+.input-group-sm > .select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
-.input-group-lg > .form-select,
-.input-group-sm > .form-select {
+.input-group-lg > .select,
+.input-group-sm > .select {
   padding-right: 1.75rem;
 }
 

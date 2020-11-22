@@ -1,24 +1,24 @@
 @layer components {
-  .form-label {
+  .label {
     @apply mb-2;
   }
 
-  .col-form-label {
+  .col-label {
     @apply pt-1.5 pb-1.5 mb-0 leading-normal;
     font-size: inherit;
   }
 
-  .col-form-label-large {
+  .col-label-large {
     @apply pt-2 pb-2;
     font-size: 1.25rem;
   }
 
-  .col-form-label-small {
+  .col-label-small {
     @apply pt-1 pb-1;
     font-size: 0.875rem;
   }
 
-  .form-text {
+  .text {
     @apply mt-1;
     font-size: 0.875em;
     color: #6c757d;
