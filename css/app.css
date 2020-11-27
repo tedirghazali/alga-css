@@ -26,7 +26,7 @@
 @import './forms/switch.css';
 @import './forms/range.css';
 @import './forms/floating.css';
-@import './forms/group.css';
+@import './forms/input-group.css';
 
 /* Components */
 @import './components/tag.css';
