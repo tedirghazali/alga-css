@@ -11,12 +11,15 @@
 /* Layout */
 @import './layout/container.css';
 @import './layout/page.css';
+@import './layout/navbar.css';
+@import './layout/sidebar.css';
 
 /* Columns */
 
 /* Elements */
 @import './elements/button.css';
 @import './elements/list.css';
+@import './elements/nav.css';
 
 /* Forms */
 @import './forms/label.css';

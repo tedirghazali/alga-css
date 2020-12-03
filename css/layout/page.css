@@ -3,143 +3,156 @@
     /* autoprefixer grid: no-autoplace */
     @apply grid w-full;
     
-    &-two-1 {
+    &.with-nav-top {
       grid-template:  [nav-left] "nav nav" auto [nav-right]
                       [main-left] "main main" 1fr [main-right]
                       / auto 1fr;
     }
     
-    &-two-2 {
+    &.with-nav-bottom {
+      grid-template:  [main-left] "main main" 1fr [main-right]
+                      [nav-left] "nav nav" auto [nav-right]
+                      / auto 1fr;
+    }
+    
+    &.with-nav-left {
       grid-template:  [nav-left] "nav main" auto [main-right]
                       [nav-left] "nav main" 1fr [main-right]
                       / auto 1fr;
     }
     
-    &-two-3 {
+    &.with-nav-right {
       grid-template:  [main-left] "main nav" auto [nav-right]
                       [main-left] "main nav" 1fr [nav-right]
                       / 1fr auto;
     }
     
-    &-two-4 {
+    &.only-header {
       grid-template:  [head-left] "head head" auto [head-right]
                       [main-left] "main main" 1fr [main-right]
                       / auto 1fr;
     }
     
-    &-two-5 {
-      grid-template:  [side-left] "leftside main" auto [main-right]
-                      [side-left] "lefside main" 1fr [main-right]
+    &.only-sidebar {
+      grid-template:  [side-left] "side main" auto [main-right]
+                      [side-left] "side main" 1fr [main-right]
                       / auto 1fr;
     }
     
-    &-two-6 {
-      grid-template:  [main-left] "main rightside" auto [side-right]
-                      [main-left] "main rightside" 1fr [side-right]
+    &.only-sidebar-right {
+      grid-template:  [main-left] "main side" auto [side-right]
+                      [main-left] "main side" 1fr [side-right]
                       / 1fr auto;
     }
     
-    &-three-1 {
+    &.with-head-nav-left {
       grid-template:  [head-left] "head head" auto [head-right]
                       [nav-left] "nav main" 1fr [main-right]
                       / auto 1fr;
     }
     
-    &-three-2 {
+    &.with-head-nav-right {
       grid-template:  [head-left] "head head" auto [head-right]
                       [main-left] "main nav" 1fr  [nav-right]
                       / 1fr auto;
     }
     
-    &-three-3 {
+    &.with-head-sidebar {
       grid-template:  [head-left] "head head" auto [head-right]
-                      [side-left] "leftside main" 1fr [main-right]
+                      [side-left] "side main" 1fr [main-right]
                       / auto 1fr;
     }
     
-    &-three-4 {
+    &.with-head-sidebar-right {
       grid-template:  [head-left] "head head" auto [head-right]
-                      [main-left] "main rightside" 1fr [side-right]
+                      [main-left] "main side" 1fr [side-right]
                       / 1fr auto;
     }
     
-    &-three-5 {
+    &.with-sidebar {
       grid-template:  [nav-left] "nav nav" auto [nav-right]
-                      [side-left] "leftside main" 1fr [main-right]
+                      [side-left] "side main" 1fr [main-right]
                       / auto 1fr;
     }
     
-    &-three-6 {
+    &.with-sidebar-right {
       grid-template:  [nav-left] "nav nav" auto [nav-right]
-                      [main-left] "main rightside" 1fr [side-right]
+                      [main-left] "main side" 1fr [side-right]
                       / 1fr auto;
     }
     
-    &-four-1 {
+    &.with-pancake {
+      grid-template:  [head-left] "head head" auto [head-right]
+                      [main-left] "main  main" 1fr [main-right]
+                      [foot-left] "foot  foot" auto [foot-right]
+                      / auto 1fr;
+    }
+    
+    &.with-pancake-nav-left {
       grid-template:  [head-left] "head head" auto [head-right]
                       [nav-left]  "nav  main" 1fr [main-right]
                       [foot-left] "foot  foot" auto [foot-right]
                       / auto 1fr;
     }
     
-    &-four-2 {
+    &.with-pancake-nav-right {
       grid-template:  [head-left] "head head" auto [head-right]
                       [main-left] "main nav" 1fr [main-right]
                       [foot-left] "foot foot" auto [foot-right]
                       / 1fr auto;
     }
     
-    &-four-3 {
+    &.with-pancake-sidebar {
       grid-template:  [head-left] "head head" auto [head-right]
-                      [side-left] "leftside main" 1fr [main-right]
+                      [side-left] "side main" 1fr [main-right]
                       [foot-left] "foot foot" auto [foot-right]
                       / auto 1fr;
     }
     
-    &-four-4 {
+    &.with-pancake-sidebar-right {
       grid-template:  [head-left] "head head" auto [head-right]
-                      [main-left] "main rightside" 1fr [side-right]
+                      [main-left] "main side" 1fr [side-right]
                       [foot-left] "foot foot" auto [foot-right]
                       / 1fr auto;
     }
     
-    &-four-5 {
+    &.with-pancake-nav-sidebar {
       grid-template:  [nav-left] "nav nav" auto [nav-right]
-                      [side-left] "leftside main" 1fr [main-right]
+                      [side-left] "side main" 1fr [main-right]
                       [foot-left] "foot foot" auto [foot-right]
                       / auto 1fr;
     }
     
-    &-four-6 {
+    &.with-pancake-nav-sidebar-right {
       grid-template:  [nav-left] "nav nav" auto [nav-right]
-                      [main-left] "main rightside" 1fr [side-right]
+                      [main-left] "main side" 1fr [side-right]
                       [foot-left] "foot foot" auto [foot-right]
                       / 1fr auto;
     }
     
-    &-five-1 {
+    &.with-holy-grail {
       grid-template:  [head-left] "head head head" auto [head-right]
-                      [side-left] "leftside main rightside" 1fr [side-right]
+                      [side-left] "side main side-right" 1fr [side-right]
                       [foot-left] "foot foot foot" auto [foot-right]
                       / auto 1fr auto;
     }
     
-    &-five-2 {
+    &.with-classic-header {
       grid-template:  [head-left] "head head head" auto [head-right]
-                      [side-left] "leftside main rightside" 1fr [side-right]
+                      [side-left] "side main side-right" 1fr [side-right]
                       / auto 1fr auto;
     }
     
-    &-five-3 {
+    &.with-holy-grail-nav {
       grid-template:  [nav-left] "nav nav nav" auto [nav-right]
-                      [side-left] "leftside main rightside" 1fr [side-right]
+                      [side-left] "side main side-right" 1fr [side-right]
                       [foot-left] "foot foot foot" auto [foot-right]
                       / auto 1fr auto;
     }
     
-    &-five-4 {
+    &.with-classic {
       grid-template:  [nav-left] "nav nav nav" auto [nav-right]
-                      [side-left] "leftside main rightside" 1fr [side-right]
+                      [side-left] "side main side-right" 1fr [side-right]
                       / auto 1fr auto;
     }
     
@@ -151,16 +164,16 @@
       grid-area: head;
     }
 
-    &-leftside {
-      grid-area: leftside;
+    &-sidebar {
+      grid-area: side;
     }
 
     &-main {
       grid-area: main;
     }
 
-    &-rightside {
-      grid-area: rightside;
+    &-sidebar-right {
+      grid-area: side-right;
     }
 
     &-footer {

@@ -3,3 +3,15 @@
 *, *::before, *::after {
   @apply box-border;
 }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #1187c7;
+}
+
+a:hover {
+  color: #0275af;
+}

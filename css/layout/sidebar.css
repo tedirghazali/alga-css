@@ -1,0 +1,21 @@
+@layer components {
+  .sidebar {
+    @apply flex flex-col flex-wrap justify-between h-full;
+  
+    &-avatar {
+      @apply w-full;
+    }
+    
+    &-form {
+      @apply w-full;
+    }
+    
+    &-menu {
+      @apply w-full flex-grow overflow-y-auto overflow-x-hidden;
+    }
+    
+    &-footer {
+      @apply w-full;
+    }
+  }
+}
