@@ -13,43 +13,15 @@
     @apply flex flex-col flex-wrap items-center justify-between;
   }
   
-  .navbar .navbar-left {
+  .navbar .navbar-main {
     @apply flex justify-start;
-    
-    &.is-center {
-      @apply flex justify-center;
-    }
-    
-    &.is-right {
-      @apply flex justify-end;
-    }
-    
-    &.is-justify {
-      @apply flex justify-between;
-    }
   }
   
-  .navbar .navbar-center {
+  .navbar .navbar-primary {
     @apply flex-grow;
-    
-    &.is-left {
-      @apply flex justify-start;
-    }
-    
-    &.is-center {
-      @apply flex justify-center;
-    }
-    
-    &.is-right {
-      @apply flex justify-end;
-    }
-    
-    &.is-justify {
-      @apply flex justify-between;
-    }
   }
   
-  .navbar .navbar-right {
+  .navbar .navbar-secondary {
     @apply flex justify-end;
   }
   
@@ -109,21 +81,7 @@
     text-decoration: none;
     white-space: nowrap;
   }
-  .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-  .navbar-nav .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .navbar-nav .dropdown-menu {
-    position: static;
-  }
-
+  
   .navbar-text {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -134,7 +92,7 @@
     width: 100%;
   }
 
-  .navbar-button {
+  .navbar-toggler {
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
     line-height: 1;
@@ -144,20 +102,20 @@
     transition: box-shadow 0.15s ease-in-out;
   }
   @media (prefers-reduced-motion: reduce) {
-    .navbar-button {
+    .navbar-toggler {
       transition: none;
     }
   }
-  .navbar-button:hover {
+  .navbar-toggler:hover {
     text-decoration: none;
   }
-  .navbar-button:focus {
+  .navbar-toggler:focus {
     text-decoration: none;
     outline: 0;
     box-shadow: 0 0 0 0.25rem;
   }
 
-  .navbar-button-icon {
+  .navbar-toggler-icon {
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
@@ -185,7 +143,7 @@
     .navbar-expand-sm .navbar-collapse {
       display: flex !important;
     }
-    .navbar-expand-sm .navbar-button {
+    .navbar-expand-sm .navbar-toggler {
       display: none;
     }
   }
@@ -207,7 +165,7 @@
     .navbar-expand-md .navbar-collapse {
       display: flex !important;
     }
-    .navbar-expand-md .navbar-button {
+    .navbar-expand-md .navbar-toggler {
       display: none;
     }
   }
@@ -229,7 +187,7 @@
     .navbar-expand-lg .navbar-collapse {
       display: flex !important;
     }
-    .navbar-expand-lg .navbar-button {
+    .navbar-expand-lg .navbar-toggler {
       display: none;
     }
   }
@@ -251,7 +209,7 @@
     .navbar-expand-xl .navbar-collapse {
       display: flex !important;
     }
-    .navbar-expand-xl .navbar-button {
+    .navbar-expand-xl .navbar-toggler {
       display: none;
     }
   }
@@ -273,7 +231,7 @@
     .navbar-expand-xxl .navbar-collapse {
       display: flex !important;
     }
-    .navbar-expand-xxl .navbar-button {
+    .navbar-expand-xxl .navbar-toggler {
       display: none;
     }
   }
@@ -294,7 +252,7 @@
   .navbar-expand .navbar-collapse {
     display: flex !important;
   }
-  .navbar-expand .navbar-button {
+  .navbar-expand .navbar-toggler {
     display: none;
   }
 
@@ -317,11 +275,11 @@
   .navbar-light .navbar-nav .nav-link.active {
     color: rgba(0, 0, 0, 0.9);
   }
-  .navbar-light .navbar-button {
+  .navbar-light .navbar-toggler {
     color: rgba(0, 0, 0, 0.55);
     border-color: rgba(0, 0, 0, 0.1);
   }
-  .navbar-light .navbar-button-icon {
+  .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
   .navbar-light .navbar-text {
@@ -352,11 +310,11 @@
   .navbar-dark .navbar-nav .nav-link.active {
     color: #fff;
   }
-  .navbar-dark .navbar-button {
+  .navbar-dark .navbar-toggler {
     color: rgba(255, 255, 255, 0.55);
     border-color: rgba(255, 255, 255, 0.1);
   }
-  .navbar-dark .navbar-button-icon {
+  .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
   .navbar-dark .navbar-text {

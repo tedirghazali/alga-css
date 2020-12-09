@@ -26,10 +26,10 @@
 
   .picker-box,
   .picker-autocomplete {
-    @apply absolute top-full left-0 hidden text-left bg-white bg-clip-padding rounded;
+    @apply absolute top-full left-0 text-left bg-white bg-clip-padding rounded;
     z-index: 1000;
-    min-width: 10rem;
-    padding: 0.5rem 0;
+    min-width: 17.5rem;
+    padding: 0.625rem 0.625rem;
     margin: 0.125rem 0 0;
     font-size: 1rem;
     color: #212529;
