@@ -384,7 +384,7 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 
 /* Layout */
 
-.container, .container-fluid, .container-largest, .container-larger, .container-large, .container-medium, .container-small{
+.container, .container.fluid, .container.largest, .container.larger, .container.large, .container.medium, .container.small{
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.75rem;
@@ -393,32 +393,32 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 640px) {
-  .container-small, .container {
+  .container.small, .container {
     max-width: 620px;
   }
 }
 
 @media (min-width: 768px) {
-  .container-medium, .container-small, .container {
+  .container.medium, .container.small, .container {
     max-width: 748px;
   }
 }
 
 @media (min-width: 1024px) {
-  .container-large, .container-medium, .container-small, .container {
+  .container.large, .container.medium, .container.small, .container {
     max-width: 1004px;
   }
 }
 
 @media (min-width: 1280px) {
-  .container-larger, .container-large, .container-medium, .container-small, .container {
+  .container.larger, .container.large, .container.medium, .container.small, .container {
     max-width: 1260px;
   }
 }
 
-@media (min-width: 1400px) {
-  .container-largest, .container-larger, .container-large, 
-    .container-medium, .container-small, .container {
+@media (min-width: 1536px) {
+  .container.largest, .container.larger, .container.large, 
+    .container.medium, .container.small, .container {
     max-width: 1346px;
   }
 }
@@ -618,7 +618,71 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   flex-wrap: wrap;
 }
 
-.navbar > .container, .navbar > .container-fluid, .navbar > .container-small, .navbar > .container-medium, .navbar > .container-large, .navbar > .container-larger, .navbar > .container-largest{
+.navbar .navbar-main {
+    display: flex;
+    justify-content: flex-start;
+    display: flex;
+  }
+
+.navbar .navbar-primary {
+    flex-grow: 1;
+  }
+
+.navbar .navbar-secondary {
+    display: flex;
+    justify-content: flex-end;
+    display: flex;
+  }
+
+.navbar .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+  }
+
+.navbar .center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+.navbar .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+  }
+
+.navbar .justify {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+  }
+
+.navbar .around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+  }
+
+.navbar .evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+  }
+
+.navbar > .container, .navbar > .container.fluid, .navbar > .container.small, .navbar > .container.medium, .navbar > .container.large, .navbar > .container.larger, .navbar > .container.largest{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -626,22 +690,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
-}
-
-.navbar .navbar-main {
-  display: flex;
-  justify-content: flex-start;
-  display: flex;
-}
-
-.navbar .navbar-primary {
-  flex-grow: 1;
-}
-
-.navbar .navbar-secondary {
-  display: flex;
-  justify-content: flex-end;
-  display: flex;
 }
 
 @media (min-width: 640px) {
@@ -1012,6 +1060,48 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 
 .sidebar-footer {
     width: 100%;
+  }
+
+.sidebar .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+  }
+
+.sidebar .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+  }
+
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+  }
+
+.sidebar .space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+  }
+
+.sidebar .space-around {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: flex;
+  }
+
+.sidebar .space-evenly {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
   }
 
 /* Columns */
@@ -3542,95 +3632,7 @@ textarea.input-lg {
 
 /* Helpers */
 
-.left {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  display: flex;
-  flex-direction: row;
-}
-
-.center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.right {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  display: flex;
-  flex-direction: row;
-}
-
-.justify {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-}
-
-.around {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  display: flex;
-  flex-direction: row;
-}
-
-.evenly {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  display: flex;
-  flex-direction: row;
-}
-
-.top {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  display: flex;
-}
-
-.middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-}
-
-.bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  display: flex;
-}
-
-.space-between {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  display: flex;
-}
-
-.space-around {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  display: flex;
-}
-
-.space-evenly {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  display: flex;
-}
+/*@import './helpers/arrange.css';*/
 
 /* Utilities */
 

@@ -36,7 +36,7 @@
 @import './components/picker.css';
 
 /* Helpers */
-@import './helpers/arrange.css';
+/*@import './helpers/arrange.css';*/
 
 /* Utilities */
 @import './utilities/flex.css';

@@ -17,5 +17,29 @@
     &-footer {
       @apply w-full;
     }
+    
+    & .top {
+      @apply flex flex-col justify-start;
+    }
+          
+    & .middle {
+      @apply flex flex-col justify-center;
+    }
+          
+    & .bottom {
+      @apply flex flex-col justify-end;
+    }
+          
+    & .space-between {
+      @apply flex flex-col justify-between;
+    }
+         
+    & .space-around {
+      @apply flex flex-col justify-around;
+    }
+         
+    & .space-evenly {
+      @apply flex flex-col justify-evenly;
+    }
   }
 }

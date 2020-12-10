@@ -1,41 +1,41 @@
 @layer components {
   .container,
-  .container-fluid,
-  .container-largest,
-  .container-larger,
-  .container-large,
-  .container-medium,
-  .container-small {
+  .container.fluid,
+  .container.largest,
+  .container.larger,
+  .container.large,
+  .container.medium,
+  .container.small {
     @apply w-full px-3 mx-auto;
   }
   
   @screen sm {
-    .container-small, .container {
+    .container.small, .container {
       max-width: 620px;
     }
   }
   
   @screen md {
-    .container-medium, .container-small, .container {
+    .container.medium, .container.small, .container {
       max-width: 748px;
     }
   }
   
   @screen lg {
-    .container-large, .container-medium, .container-small, .container {
+    .container.large, .container.medium, .container.small, .container {
       max-width: 1004px;
     }
   }
   
   @screen xl {
-    .container-larger, .container-large, .container-medium, .container-small, .container {
+    .container.larger, .container.large, .container.medium, .container.small, .container {
       max-width: 1260px;
     }
   }
   
-  @media (min-width: 1400px) {
-    .container-largest, .container-larger, .container-large, 
-    .container-medium, .container-small, .container {
+  @screen 2xl {
+    .container.largest, .container.larger, .container.large, 
+    .container.medium, .container.small, .container {
       max-width: 1346px;
     }
   }

@@ -1,28 +1,52 @@
 @layer components {
   .navbar {
     @apply relative flex flex-col flex-wrap items-center justify-between;
+    
+    & .navbar-main {
+      @apply flex justify-start;
+    }
+    
+    & .navbar-primary {
+      @apply flex-grow;
+    }
+    
+    & .navbar-secondary {
+      @apply flex justify-end;
+    }
+    
+    & .left {
+      @apply flex flex-row justify-start;
+    }
+          
+    & .center {
+      @apply flex flex-row justify-center;
+    }
+          
+    & .right {
+      @apply flex flex-row justify-end;
+    }
+          
+    & .justify {
+      @apply flex flex-row justify-between;
+    }
+         
+    & .around {
+      @apply flex flex-row justify-around;
+    }
+        
+    & .evenly {
+      @apply flex flex-row justify-evenly;
+    }
   }
   
   .navbar > .container,
-  .navbar > .container-fluid,
-  .navbar > .container-small,
-  .navbar > .container-medium,
-  .navbar > .container-large,
-  .navbar > .container-larger,
-  .navbar > .container-largest {
+  .navbar > .container.fluid,
+  .navbar > .container.small,
+  .navbar > .container.medium,
+  .navbar > .container.large,
+  .navbar > .container.larger,
+  .navbar > .container.largest {
     @apply flex flex-col flex-wrap items-center justify-between;
-  }
-  
-  .navbar .navbar-main {
-    @apply flex justify-start;
-  }
-  
-  .navbar .navbar-primary {
-    @apply flex-grow;
-  }
-  
-  .navbar .navbar-secondary {
-    @apply flex justify-end;
   }
   
   @screen sm {

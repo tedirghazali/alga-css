@@ -1,49 +1,47 @@
-@layer components {
-  .left {
-    @apply flex flex-row justify-start;
-  }
+.left {
+  @apply flex flex-row justify-start;
+}
       
-  .center {
-    @apply flex flex-row justify-center;
-  }
+.center {
+  @apply flex flex-row justify-center;
+}
       
-  .right {
-    @apply flex flex-row justify-end;
-  }
+.right {
+  @apply flex flex-row justify-end;
+}
       
-  .justify {
-    @apply flex flex-row justify-between;
-  }
+.justify {
+  @apply flex flex-row justify-between;
+}
      
-  .around {
-    @apply flex flex-row justify-around;
-  }
+.around {
+  @apply flex flex-row justify-around;
+}
     
-  .evenly {
-    @apply flex flex-row justify-evenly;
-  }
+.evenly {
+  @apply flex flex-row justify-evenly;
+}
   
-  .top {
-    @apply flex flex-col justify-start;
-  }
+.top {
+  @apply flex flex-col justify-start;
+}
       
-  .middle {
-    @apply flex flex-col justify-center;
-  }
+.middle {
+  @apply flex flex-col justify-center;
+}
       
-  .bottom {
-    @apply flex flex-col justify-end;
-  }
+.bottom {
+  @apply flex flex-col justify-end;
+}
       
-  .space-between {
-    @apply flex flex-col justify-between;
-  }
+.space-between {
+  @apply flex flex-col justify-between;
+}
      
-  .space-around {
-    @apply flex flex-col justify-around;
-  }
+.space-around {
+  @apply flex flex-col justify-around;
+}
      
-  .space-evenly {
-    @apply flex flex-col justify-evenly;
-  }
+.space-evenly {
+  @apply flex flex-col justify-evenly;
 }
