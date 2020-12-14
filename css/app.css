@@ -35,11 +35,12 @@
 /* Components */
 @import './components/tag.css';
 @import './components/picker.css';
+@import './components/dropzone.css';
 
 /* Helpers */
+@import './helpers/color.css';
 /*@import './helpers/arrange.css';*/
 
 /* Utilities */
 @import './utilities/flex.css';
-@import './utilities/color.css';
 

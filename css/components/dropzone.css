@@ -1,0 +1,43 @@
+@layer components {
+  .dropzone {
+    @apply p-5 break-words;
+    max-width: calc(100vw - 2.5rem);
+    max-height: calc(100vh - 2.5rem);
+    
+    &-file {
+      @apply absolute w-px h-px overflow-hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+    
+    &-wrapper {
+      @apply border-current border-dashed;
+      border-width: 3px;
+      box-shadow: -1px 5px 25px -9px rgba(0, 0, 0, 0.2);
+    }
+    
+    &-label {
+      @apply grid place-items-center w-full h-full pt-10 pb-12 cursor-pointer;
+      
+      &-text {
+        @apply text-center;
+      }
+      
+      &-icon {
+        @apply pointer-events-none text-current;
+      }
+      
+      &-text p,
+      &-text span {
+        @apply m-0;
+      }
+      
+      & .button {
+        @apply bg-transparent inline-block font-normal text-center align-middle select-none; 
+        @apply text-current pointer-events-none border-2 border-solid border-current py-1.5 px-3 text-base mt-5;
+        border-radius: 0.35rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+    }
+  }
+}

@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+:root {
+  --ts-primary-color: #0d6efd;
+  --ts-secondary-color: #6c757d;
+  --ts-accent-color: #b31b94;
+  --ts-success-color: #198754;
+  --ts-info-color: #0dcaf0;
+  --ts-warning-color: #ffc107;
+  --ts-danger-color: #dc3545;
+  --ts-dark-color: #212529;
+  --ts-light-color: #f8f9fa;
+  --ts-black-color: #000;
+  --ts-white-color: #fff;
+  --ts-transparent-color: transparent;
+  --ts-current-color: currentColor;
+}
+
 *, *::before, *::after {
   @apply box-border;
 }
