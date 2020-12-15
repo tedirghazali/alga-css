@@ -1,550 +1,1041 @@
 @layer utilities {
   .primary {
-    color: var(--ts-white-color, #fff);
-    background-color: var(--ts-primary-color, #0d6efd);
-    border-color: var(--ts-primary-color, #0d6efd);
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-primary, #0d6efd);
+    border-color: var(--ts-primary, #0d6efd);
     
     &-hover:hover {
-      color: var(--ts-white-color, #fff);
-      background-color: var(--ts-primary-color, #0d6efd);
-      border-color: var(--ts-primary-color, #0d6efd);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-primary, #0d6efd);
+      border-color: var(--ts-primary, #0d6efd);
     }
     
     &-outline {
-      color: var(--ts-primary-color, #0d6efd);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-primary-color, #0d6efd);
+      color: var(--ts-primary, #0d6efd);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-primary, #0d6efd);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-primary-color, #0d6efd);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-primary-color, #0d6efd);
+      color: var(--ts-primary, #0d6efd);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-primary, #0d6efd);
     }
     
     &-bg {
-      background-color: var(--ts-primary-color, #0d6efd);
+      background-color: var(--ts-primary, #0d6efd);
     }
     
     &-text {
-      color: var(--ts-primary-color, #0d6efd);
+      color: var(--ts-primary, #0d6efd);
     }
     
     &-border {
-      border-color: var(--ts-primary-color, #0d6efd);
+      border-color: var(--ts-primary, #0d6efd);
     }
     
     &-caret {
-      caret-color: var(--ts-primary-color, #0d6efd);
+      caret-color: var(--ts-primary, #0d6efd);
     }
     
     &-ring {
-      outline-color: var(--ts-primary-color, #0d6efd);
+      outline-color: var(--ts-primary, #0d6efd);
     }
     
     &-fill {
-      fill: var(--ts-primary-color, #0d6efd);
+      fill: var(--ts-primary, #0d6efd);
     }
     
     &-stroke {
-      stroke: var(--ts-primary-color, #0d6efd);
+      stroke: var(--ts-primary, #0d6efd);
     }
   }
   
   .secondary {
-    color: var(--ts-white-color, #fff);
-    background-color: var(--ts-secondary-color, #6c757d);
-    border-color: var(--ts-secondary-color, #6c757d);
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-secondary, #6c757d);
+    border-color: var(--ts-secondary, #6c757d);
     
     &-hover:hover {
-      color: var(--ts-white-color, #fff);
-      background-color: var(--ts-secondary-color, #6c757d);
-      border-color: var(--ts-secondary-color, #6c757d);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-secondary, #6c757d);
+      border-color: var(--ts-secondary, #6c757d);
     }
     
     &-outline {
-      color: var(--ts-secondary-color, #6c757d);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-secondary-color, #6c757d);
+      color: var(--ts-secondary, #6c757d);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-secondary, #6c757d);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-secondary-color, #6c757d);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-secondary-color, #6c757d);
+      color: var(--ts-secondary, #6c757d);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-secondary, #6c757d);
     }
     
     &-bg {
-      background-color: var(--ts-secondary-color, #6c757d);
+      background-color: var(--ts-secondary, #6c757d);
     }
     
     &-text {
-      color: var(--ts-secondary-color, #6c757d);
+      color: var(--ts-secondary, #6c757d);
     }
     
     &-border {
-      border-color: var(--ts-secondary-color, #6c757d);
+      border-color: var(--ts-secondary, #6c757d);
     }
     
     &-caret {
-      caret-color: var(--ts-secondary-color, #6c757d);
+      caret-color: var(--ts-secondary, #6c757d);
     }
     
     &-ring {
-      outline-color: var(--ts-secondary-color, #6c757d);
+      outline-color: var(--ts-secondary, #6c757d);
     }
     
     &-fill {
-      fill: var(--ts-secondary-color, #6c757d);
+      fill: var(--ts-secondary, #6c757d);
     }
     
     &-stroke {
-      stroke: var(--ts-secondary-color, #6c757d);
+      stroke: var(--ts-secondary, #6c757d);
     }
   }
   
   .accent {
-    color: var(--ts-white-color, #fff);
-    background-color: var(--ts-accent-color, #b31b94);
-    border-color: var(--ts-accent-color, #b31b94);
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-accent, #b31b94);
+    border-color: var(--ts-accent, #b31b94);
     
     &-hover:hover {
-      color: var(--ts-white-color, #fff);
-      background-color: var(--ts-accent-color, #b31b94);
-      border-color: var(--ts-accent-color, #b31b94);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-accent, #b31b94);
+      border-color: var(--ts-accent, #b31b94);
     }
     
     &-outline {
-      color: var(--ts-accent-color, #b31b94);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-accent-color, #b31b94);
+      color: var(--ts-accent, #b31b94);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-accent, #b31b94);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-accent-color, #b31b94);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-accent-color, #b31b94);
+      color: var(--ts-accent, #b31b94);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-accent, #b31b94);
     }
     
     &-bg {
-      background-color: var(--ts-accent-color, #b31b94);
+      background-color: var(--ts-accent, #b31b94);
     }
     
     &-text {
-      color: var(--ts-accent-color, #b31b94);
+      color: var(--ts-accent, #b31b94);
     }
     
     &-border {
-      border-color: var(--ts-accent-color, #b31b94);
+      border-color: var(--ts-accent, #b31b94);
     }
     
     &-caret {
-      caret-color: var(--ts-accent-color, #b31b94);
+      caret-color: var(--ts-accent, #b31b94);
     }
     
     &-ring {
-      outline-color: var(--ts-accent-color, #b31b94);
+      outline-color: var(--ts-accent, #b31b94);
     }
     
     &-fill {
-      fill: var(--ts-accent-color, #b31b94);
+      fill: var(--ts-accent, #b31b94);
     }
     
     &-stroke {
-      stroke: var(--ts-accent-color, #b31b94);
+      stroke: var(--ts-accent, #b31b94);
     }
   }
   
   .success {
-    color: var(--ts-white-color, #fff);
-    background-color: var(--ts-success-color, #198754);
-    border-color: var(--ts-success-color, #198754);
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-success, #198754);
+    border-color: var(--ts-success, #198754);
     
     &-hover:hover {
-      color: var(--ts-white-color, #fff);
-      background-color: var(--ts-success-color, #198754);
-      border-color: var(--ts-success-color, #198754);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-success, #198754);
+      border-color: var(--ts-success, #198754);
     }
     
     &-outline {
-      color: var(--ts-success-color, #198754);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-success-color, #198754);
+      color: var(--ts-success, #198754);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-success, #198754);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-success-color, #198754);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-success-color, #198754);
+      color: var(--ts-success, #198754);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-success, #198754);
     }
     
     &-bg {
-      background-color: var(--ts-success-color, #198754);
+      background-color: var(--ts-success, #198754);
     }
     
     &-text {
-      color: var(--ts-success-color, #198754);
+      color: var(--ts-success, #198754);
     }
     
     &-border {
-      border-color: var(--ts-success-color, #198754);
+      border-color: var(--ts-success, #198754);
     }
     
     &-caret {
-      caret-color: var(--ts-success-color, #198754);
+      caret-color: var(--ts-success, #198754);
     }
     
     &-ring {
-      outline-color: var(--ts-success-color, #198754);
+      outline-color: var(--ts-success, #198754);
     }
     
     &-fill {
-      fill: var(--ts-success-color, #198754);
+      fill: var(--ts-success, #198754);
     }
     
     &-stroke {
-      stroke: var(--ts-success-color, #198754);
+      stroke: var(--ts-success, #198754);
     }
   }
   
   .info {
-    color: var(--ts-white-color, #fff);
-    background-color: var(--ts-info-color, #0dcaf0);
-    border-color: var(--ts-info-color, #0dcaf0);
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-info, #0dcaf0);
+    border-color: var(--ts-info, #0dcaf0);
     
     &-hover:hover {
-      color: var(--ts-white-color, #fff);
-      background-color: var(--ts-info-color, #0dcaf0);
-      border-color: var(--ts-info-color, #0dcaf0);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-info, #0dcaf0);
+      border-color: var(--ts-info, #0dcaf0);
     }
     
     &-outline {
-      color: var(--ts-info-color, #0dcaf0);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-info-color, #0dcaf0);
+      color: var(--ts-info, #0dcaf0);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-info, #0dcaf0);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-info-color, #0dcaf0);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-info-color, #0dcaf0);
+      color: var(--ts-info, #0dcaf0);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-info, #0dcaf0);
     }
     
     &-bg {
-      background-color: var(--ts-info-color, #0dcaf0);
+      background-color: var(--ts-info, #0dcaf0);
     }
     
     &-text {
-      color: var(--ts-info-color, #0dcaf0);
+      color: var(--ts-info, #0dcaf0);
     }
     
     &-border {
-      border-color: var(--ts-info-color, #0dcaf0);
+      border-color: var(--ts-info, #0dcaf0);
     }
     
     &-caret {
-      caret-color: var(--ts-info-color, #0dcaf0);
+      caret-color: var(--ts-info, #0dcaf0);
     }
     
     &-ring {
-      outline-color: var(--ts-info-color, #0dcaf0);
+      outline-color: var(--ts-info, #0dcaf0);
     }
     
     &-fill {
-      fill: var(--ts-info-color, #0dcaf0);
+      fill: var(--ts-info, #0dcaf0);
     }
     
     &-stroke {
-      stroke: var(--ts-info-color, #0dcaf0);
+      stroke: var(--ts-info, #0dcaf0);
     }
   }
 
   .warning {
-    color: var(--ts-black-color, #000);
-    background-color: var(--ts-warning-color, #ffc107);
-    border-color: var(--ts-warning-color, #ffc107);
+    color: var(--ts-black, #000);
+    background-color: var(--ts-warning, #ffc107);
+    border-color: var(--ts-warning, #ffc107);
     
     &-hover:hover {
-      color: var(--ts-black-color, #000);
-      background-color: var(--ts-warning-color, #ffc107);
-      border-color: var(--ts-warning-color, #ffc107);
+      color: var(--ts-black, #000);
+      background-color: var(--ts-warning, #ffc107);
+      border-color: var(--ts-warning, #ffc107);
     }
     
     &-outline {
-      color: var(--ts-warning-color, #ffc107);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-warning-color, #ffc107);
+      color: var(--ts-warning, #ffc107);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-warning, #ffc107);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-warning-color, #ffc107);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-warning-color, #ffc107);
+      color: var(--ts-warning, #ffc107);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-warning, #ffc107);
     }
     
     &-bg {
-      background-color: var(--ts-warning-color, #ffc107);
+      background-color: var(--ts-warning, #ffc107);
     }
     
     &-text {
-      color: var(--ts-warning-color, #ffc107);
+      color: var(--ts-warning, #ffc107);
     }
     
     &-border {
-      border-color: var(--ts-warning-color, #ffc107);
+      border-color: var(--ts-warning, #ffc107);
     }
     
     &-caret {
-      caret-color: var(--ts-warning-color, #ffc107);
+      caret-color: var(--ts-warning, #ffc107);
     }
     
     &-ring {
-      outline-color: var(--ts-warning-color, #ffc107);
+      outline-color: var(--ts-warning, #ffc107);
     }
     
     &-fill {
-      fill: var(--ts-warning-color, #ffc107);
+      fill: var(--ts-warning, #ffc107);
     }
     
     &-stroke {
-      stroke: var(--ts-warning-color, #ffc107);
+      stroke: var(--ts-warning, #ffc107);
     }
   }
   
   .danger {
-    color: var(--ts-white-color, #fff);
-    background-color: var(--ts-danger-color, #dc3545);
-    border-color: var(--ts-danger-color, #dc3545);
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-danger, #dc3545);
+    border-color: var(--ts-danger, #dc3545);
     
     &-hover:hover {
-      color: var(--ts-white-color, #fff);
-      background-color: var(--ts-danger-color, #dc3545);
-      border-color: var(--ts-danger-color, #dc3545);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-danger, #dc3545);
+      border-color: var(--ts-danger, #dc3545);
     }
     
     &-outline {
-      color: var(--ts-danger-color, #dc3545);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-danger-color, #dc3545);
+      color: var(--ts-danger, #dc3545);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-danger, #dc3545);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-danger-color, #dc3545);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-danger-color, #dc3545);
+      color: var(--ts-danger, #dc3545);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-danger, #dc3545);
     }
     
     &-bg {
-      background-color: var(--ts-danger-color, #dc3545);
+      background-color: var(--ts-danger, #dc3545);
     }
     
     &-text {
-      color: var(--ts-danger-color, #dc3545);
+      color: var(--ts-danger, #dc3545);
     }
     
     &-border {
-      border-color: var(--ts-danger-color, #dc3545);
+      border-color: var(--ts-danger, #dc3545);
     }
     
     &-caret {
-      caret-color: var(--ts-danger-color, #dc3545);
+      caret-color: var(--ts-danger, #dc3545);
     }
     
     &-ring {
-      outline-color: var(--ts-danger-color, #dc3545);
+      outline-color: var(--ts-danger, #dc3545);
     }
     
     &-fill {
-      fill: var(--ts-danger-color, #dc3545);
+      fill: var(--ts-danger, #dc3545);
     }
     
     &-stroke {
-      stroke: var(--ts-danger-color, #dc3545);
+      stroke: var(--ts-danger, #dc3545);
     }
   }
   
-  .dark {
-    color: var(--ts-white-color, #fff);
-    background-color: var(--ts-dark-color, #212529);
-    border-color: var(--ts-dark-color, #212529);
+  .black {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-black, #000);
+    border-color: var(--ts-black, #000);
     
     &-hover:hover {
-      color: var(--ts-white-color, #fff);
-      background-color: var(--ts-dark-color, #212529);
-      border-color: var(--ts-dark-color, #212529);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-black, #000);
+      border-color: var(--ts-black, #000);
     }
     
     &-outline {
-      color: var(--ts-dark-color, #212529);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-dark-color, #212529);
+      color: var(--ts-black, #000);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-black, #000);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-dark-color, #212529);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-dark-color, #212529);
+      color: var(--ts-black, #000);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-black, #000);
     }
     
     &-bg {
-      background-color: var(--ts-dark-color, #212529);
+      background-color: var(--ts-black, #000);
     }
     
     &-text {
-      color: var(--ts-dark-color, #212529);
+      color: var(--ts-black, #000);
     }
     
     &-border {
-      border-color: var(--ts-dark-color, #212529);
+      border-color: var(--ts-black, #000);
     }
     
     &-caret {
-      caret-color: var(--ts-dark-color, #212529);
+      caret-color: var(--ts-black, #000);
     }
     
     &-ring {
-      outline-color: var(--ts-dark-color, #212529);
+      outline-color: var(--ts-black, #000);
     }
     
     &-fill {
-      fill: var(--ts-dark-color, #212529);
+      fill: var(--ts-black, #000);
     }
     
     &-stroke {
-      stroke: var(--ts-dark-color, #212529);
+      stroke: var(--ts-black, #000);
     }
   }
   
-  .light {
-    color: var(--ts-black-color, #000);
-    background-color: var(--ts-light-color, #f8f9fa);
-    border-color: var(--ts-light-color, #f8f9fa);
+  .white {
+    color: var(--ts-black, #000);
+    background-color: var(--ts-white, #fff);
+    border-color: var(--ts-white, #fff);
     
     &-hover:hover {
-      color: var(--ts-black-color, #000);
-      background-color: var(--ts-light-color, #f8f9fa);
-      border-color: var(--ts-light-color, #f8f9fa);
+      color: var(--ts-black, #000);
+      background-color: var(--ts-white, #fff);
+      border-color: var(--ts-white, #fff);
     }
     
     &-outline {
-      color: var(--ts-light-color, #f8f9fa);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-light-color, #f8f9fa);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-white, #fff);
     }
     
     &-outline-hover:hover {
-      color: var(--ts-light-color, #f8f9fa);
-      background-color: var(--ts-transparent-color, transparent);
-      border-color: var(--ts-light-color, #f8f9fa);
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-white, #fff);
     }
     
     &-bg {
-      background-color: var(--ts-light-color, #f8f9fa);
+      background-color: var(--ts-white, #fff);
     }
     
     &-text {
-      color: var(--ts-light-color, #f8f9fa);
+      color: var(--ts-white, #fff);
     }
     
     &-border {
-      border-color: var(--ts-light-color, #f8f9fa);
+      border-color: var(--ts-white, #fff);
     }
     
     &-caret {
-      caret-color: var(--ts-light-color, #f8f9fa);
+      caret-color: var(--ts-white, #fff);
     }
     
     &-ring {
-      outline-color: var(--ts-light-color, #f8f9fa);
+      outline-color: var(--ts-white, #fff);
     }
     
     &-fill {
-      fill: var(--ts-light-color, #f8f9fa);
+      fill: var(--ts-white, #fff);
     }
     
     &-stroke {
-      stroke: var(--ts-light-color, #f8f9fa);
+      stroke: var(--ts-white, #fff);
     }
   }
   
-  .bg {
-    &-black {
-      color: #fff;
-      background-color: #000;
-      border-color: #000;
+  .blue {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-blue, #0d6efd);
+    border-color: var(--ts-blue, #0d6efd);
+    
+    &-hover:hover {
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-blue, #0d6efd);
+      border-color: var(--ts-blue, #0d6efd);
     }
     
-    &-white {
-      color: #000;
-      background-color: #fff;
-      border-color: #fff;
+    &-outline {
+      color: var(--ts-blue, #0d6efd);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-blue, #0d6efd);
     }
     
-    &-blue {
-      color: #fff;
-      background-color: #0d6efd;
-      border-color: #0d6efd;
+    &-outline-hover:hover {
+      color: var(--ts-blue, #0d6efd);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-blue, #0d6efd);
     }
     
-    &-indigo {
-      color: #fff;
-      background-color: #6610f2;
-      border-color: #6610f2;
+    &-bg {
+      background-color: var(--ts-blue, #0d6efd);
     }
     
-    &-purple {
-      color: #fff;
-      background-color: #6f42c1;
-      border-color: #6f42c1;
+    &-text {
+      color: var(--ts-blue, #0d6efd);
     }
     
-    &-pink {
-      color: #fff;
-      background-color: #d63384;
-      border-color: #d63384;
+    &-border {
+      border-color: var(--ts-blue, #0d6efd);
     }
     
-    &-red {
-      color: #fff;
-      background-color: #dc3545;
-      border-color: #dc3545;
+    &-caret {
+      caret-color: var(--ts-blue, #0d6efd);
     }
     
-    &-orange {
-      color: #fff;
-      background-color: #fd7e14;
-      border-color: #fd7e14;
+    &-ring {
+      outline-color: var(--ts-blue, #0d6efd);
     }
     
-    &-yellow {
-      color: #000;
-      background-color: #ffc107;
-      border-color: #ffc107;
+    &-fill {
+      fill: var(--ts-blue, #0d6efd);
     }
     
-    &-green {
-      color: #fff;
-      background-color: #198754;
-      border-color: #198754;
-    }
-    
-    &-teal {
-      color: #000;
-      background-color: #20c997;
-      border-color: #20c997;
-    }
-    
-    &-cyan {
-      color: #000;
-      background-color: #0dcaf0;
-      border-color: #0dcaf0;
-    }
-    
-    &-gray {
-      color: #fff;
-      background-color: #6c757d;
-      border-color: #6c757d;
+    &-stroke {
+      stroke: var(--ts-blue, #0d6efd);
     }
   }
   
+  .indigo {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-indigo, #6610f2);
+    border-color: var(--ts-indigo, #6610f2);
+    
+    &-hover:hover {
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-indigo, #6610f2);
+      border-color: var(--ts-indigo, #6610f2);
+    }
+    
+    &-outline {
+      color: var(--ts-indigo, #6610f2);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-indigo, #6610f2);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-indigo, #6610f2);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-indigo, #6610f2);
+    }
+    
+    &-bg {
+      background-color: var(--ts-indigo, #6610f2);
+    }
+    
+    &-text {
+      color: var(--ts-indigo, #6610f2);
+    }
+    
+    &-border {
+      border-color: var(--ts-indigo, #6610f2);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-indigo, #6610f2);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-indigo, #6610f2);
+    }
+    
+    &-fill {
+      fill: var(--ts-indigo, #6610f2);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-indigo, #6610f2);
+    }
+  }
+  
+  .purple {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-purple, #6f42c1);
+    border-color: var(--ts-purple, #6f42c1);
+    
+    &-hover:hover {
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-purple, #6f42c1);
+      border-color: var(--ts-purple, #6f42c1);
+    }
+    
+    &-outline {
+      color: var(--ts-purple, #6f42c1);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-purple, #6f42c1);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-purple, #6f42c1);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-purple, #6f42c1);
+    }
+    
+    &-bg {
+      background-color: var(--ts-purple, #6f42c1);
+    }
+    
+    &-text {
+      color: var(--ts-purple, #6f42c1);
+    }
+    
+    &-border {
+      border-color: var(--ts-purple, #6f42c1);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-purple, #6f42c1);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-purple, #6f42c1);
+    }
+    
+    &-fill {
+      fill: var(--ts-purple, #6f42c1);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-purple, #6f42c1);
+    }
+  }
+  
+  .pink {
+    color: var(--ts-black, #000);
+    background-color: var(--ts-pink, #d63384);
+    border-color: var(--ts-pink, #d63384);
+    
+    &-hover:hover {
+      color: var(--ts-black, #000);
+      background-color: var(--ts-pink, #d63384);
+      border-color: var(--ts-pink, #d63384);
+    }
+    
+    &-outline {
+      color: var(--ts-pink, #d63384);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-pink, #d63384);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-pink, #d63384);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-pink, #d63384);
+    }
+    
+    &-bg {
+      background-color: var(--ts-pink, #d63384);
+    }
+    
+    &-text {
+      color: var(--ts-pink, #d63384);
+    }
+    
+    &-border {
+      border-color: var(--ts-pink, #d63384);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-pink, #d63384);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-pink, #d63384);
+    }
+    
+    &-fill {
+      fill: var(--ts-pink, #d63384);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-pink, #d63384);
+    }
+  }
+  
+  .red {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-red, #dc3545);
+    border-color: var(--ts-red, #dc3545);
+    
+    &-hover:hover {
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-red, #dc3545);
+      border-color: var(--ts-red, #dc3545);
+    }
+    
+    &-outline {
+      color: var(--ts-red, #dc3545);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-red, #dc3545);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-red, #dc3545);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-red, #dc3545);
+    }
+    
+    &-bg {
+      background-color: var(--ts-red, #dc3545);
+    }
+    
+    &-text {
+      color: var(--ts-red, #dc3545);
+    }
+    
+    &-border {
+      border-color: var(--ts-red, #dc3545);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-red, #dc3545);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-red, #dc3545);
+    }
+    
+    &-fill {
+      fill: var(--ts-red, #dc3545);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-red, #dc3545);
+    }
+  }
+  
+  .orange {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-orange, #fd7e14);
+    border-color: var(--ts-orange, #fd7e14);
+    
+    &-hover:hover {
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-orange, #fd7e14);
+      border-color: var(--ts-orange, #fd7e14);
+    }
+    
+    &-outline {
+      color: var(--ts-orange, #fd7e14);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-orange, #fd7e14);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-orange, #fd7e14);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-orange, #fd7e14);
+    }
+    
+    &-bg {
+      background-color: var(--ts-orange, #fd7e14);
+    }
+    
+    &-text {
+      color: var(--ts-orange, #fd7e14);
+    }
+    
+    &-border {
+      border-color: var(--ts-orange, #fd7e14);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-orange, #fd7e14);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-orange, #fd7e14);
+    }
+    
+    &-fill {
+      fill: var(--ts-orange, #fd7e14);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-orange, #fd7e14);
+    }
+  }
+  
+  .yellow {
+    color: var(--ts-black, #000);
+    background-color: var(--ts-yellow, #ffc107);
+    border-color: var(--ts-yellow, #ffc107);
+    
+    &-hover:hover {
+      color: var(--ts-black, #000);
+      background-color: var(--ts-yellow, #ffc107);
+      border-color: var(--ts-yellow, #ffc107);
+    }
+    
+    &-outline {
+      color: var(--ts-yellow, #ffc107);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-yellow, #ffc107);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-yellow, #ffc107);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-yellow, #ffc107);
+    }
+    
+    &-bg {
+      background-color: var(--ts-yellow, #ffc107);
+    }
+    
+    &-text {
+      color: var(--ts-yellow, #ffc107);
+    }
+    
+    &-border {
+      border-color: var(--ts-yellow, #ffc107);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-yellow, #ffc107);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-yellow, #ffc107);
+    }
+    
+    &-fill {
+      fill: var(--ts-yellow, #ffc107);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-yellow, #ffc107);
+    }
+  }
+  
+  .green {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-green, #198754);
+    border-color: var(--ts-green, #198754);
+    
+    &-hover:hover {
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-green, #198754);
+      border-color: var(--ts-green, #198754);
+    }
+    
+    &-outline {
+      color: var(--ts-green, #198754);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-green, #198754);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-green, #198754);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-green, #198754);
+    }
+    
+    &-bg {
+      background-color: var(--ts-green, #198754);
+    }
+    
+    &-text {
+      color: var(--ts-green, #198754);
+    }
+    
+    &-border {
+      border-color: var(--ts-green, #198754);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-green, #198754);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-green, #198754);
+    }
+    
+    &-fill {
+      fill: var(--ts-green, #198754);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-green, #198754);
+    }
+  }
+  
+  .teal {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-teal, #20c997);
+    border-color: var(--ts-teal, #20c997);
+    
+    &-hover:hover {
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-teal, #20c997);
+      border-color: var(--ts-teal, #20c997);
+    }
+    
+    &-outline {
+      color: var(--ts-teal, #20c997);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-teal, #20c997);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-teal, #20c997);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-teal, #20c997);
+    }
+    
+    &-bg {
+      background-color: var(--ts-teal, #20c997);
+    }
+    
+    &-text {
+      color: var(--ts-teal, #20c997);
+    }
+    
+    &-border {
+      border-color: var(--ts-teal, #20c997);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-teal, #20c997);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-teal, #20c997);
+    }
+    
+    &-fill {
+      fill: var(--ts-teal, #20c997);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-teal, #20c997);
+    }
+  }
+  
+  .cyan {
+    color: var(--ts-white, #fff);
+    background-color: var(--ts-cyan, #0dcaf0);
+    border-color: var(--ts-cyan, #0dcaf0);
+    
+    &-hover:hover {
+      color: var(--ts-white, #fff);
+      background-color: var(--ts-cyan, #0dcaf0);
+      border-color: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-outline {
+      color: var(--ts-cyan, #0dcaf0);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-cyan, #0dcaf0);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-bg {
+      background-color: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-text {
+      color: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-border {
+      border-color: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-fill {
+      fill: var(--ts-cyan, #0dcaf0);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-cyan, #0dcaf0);
+    }
+  }
+  
+  .gray {
+    color: var(--ts-black, #000);
+    background-color: var(--ts-gray, #6c757d);
+    border-color: var(--ts-gray, #6c757d);
+    
+    &-hover:hover {
+      color: var(--ts-black, #000);
+      background-color: var(--ts-gray, #6c757d);
+      border-color: var(--ts-gray, #6c757d);
+    }
+    
+    &-outline {
+      color: var(--ts-gray, #6c757d);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-gray, #6c757d);
+    }
+    
+    &-outline-hover:hover {
+      color: var(--ts-gray, #6c757d);
+      background-color: var(--ts-transparent, transparent);
+      border-color: var(--ts-gray, #6c757d);
+    }
+    
+    &-bg {
+      background-color: var(--ts-gray, #6c757d);
+    }
+    
+    &-text {
+      color: var(--ts-gray, #6c757d);
+    }
+    
+    &-border {
+      border-color: var(--ts-gray, #6c757d);
+    }
+    
+    &-caret {
+      caret-color: var(--ts-gray, #6c757d);
+    }
+    
+    &-ring {
+      outline-color: var(--ts-gray, #6c757d);
+    }
+    
+    &-fill {
+      fill: var(--ts-gray, #6c757d);
+    }
+    
+    &-stroke {
+      stroke: var(--ts-gray, #6c757d);
+    }
+  }
 }

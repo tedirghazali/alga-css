@@ -36,10 +36,10 @@
 @import './components/tag.css';
 @import './components/picker.css';
 @import './components/dropzone.css';
+@import './components/card.css';
 
 /* Helpers */
 @import './helpers/color.css';
-/*@import './helpers/arrange.css';*/
 
 /* Utilities */
 @import './utilities/flex.css';
