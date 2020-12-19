@@ -9,11 +9,11 @@
 @import './reset.css';
 
 /* Layout */
-@import './layout/container.css';
-@import './layout/page.css';
-@import './layout/navbar.css';
-@import './layout/sidebar.css';
-@import './layout/column.css';
+@import './layouts/container.css';
+@import './layouts/page.css';
+@import './layouts/navbar.css';
+@import './layouts/sidebar.css';
+@import './layouts/column.css';
 
 /* Columns */
 
@@ -40,6 +40,7 @@
 
 /* Helpers */
 @import './helpers/color.css';
+@import './helpers/rounded.css';
 
 /* Utilities */
 @import './utilities/flex.css';

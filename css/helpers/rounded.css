@@ -1,0 +1,81 @@
+.rounded {
+  @mixin rounded-basic 0.25rem;
+  @mixin rounded-position 0, 0;
+  @mixin rounded-position 1, 0.125rem;
+  @mixin rounded-position 2, 0.25rem;
+  @mixin rounded-position 3, 0.375rem;
+  @mixin rounded-position 4, 0.5rem;
+  @mixin rounded-position 5, 0.75rem;
+  @mixin rounded-position 6, 1rem;
+  @mixin rounded-position 7, 1.5rem;
+}
+
+@screen sm {
+  .rounded-small {
+    @mixin rounded-basic 0.25rem;
+    @mixin rounded-position 0, 0;
+    @mixin rounded-position 1, 0.125rem;
+    @mixin rounded-position 2, 0.25rem;
+    @mixin rounded-position 3, 0.375rem;
+    @mixin rounded-position 4, 0.5rem;
+    @mixin rounded-position 5, 0.75rem;
+    @mixin rounded-position 6, 1rem;
+    @mixin rounded-position 7, 1.5rem;
+  }
+}
+
+@screen md {
+  .rounded-medium {
+    @mixin rounded-basic 0.25rem;
+    @mixin rounded-position 0, 0;
+    @mixin rounded-position 1, 0.125rem;
+    @mixin rounded-position 2, 0.25rem;
+    @mixin rounded-position 3, 0.375rem;
+    @mixin rounded-position 4, 0.5rem;
+    @mixin rounded-position 5, 0.75rem;
+    @mixin rounded-position 6, 1rem;
+    @mixin rounded-position 7, 1.5rem;
+  }
+}
+
+@screen lg {
+  .rounded-large {
+    @mixin rounded-basic 0.25rem;
+    @mixin rounded-position 0, 0;
+    @mixin rounded-position 1, 0.125rem;
+    @mixin rounded-position 2, 0.25rem;
+    @mixin rounded-position 3, 0.375rem;
+    @mixin rounded-position 4, 0.5rem;
+    @mixin rounded-position 5, 0.75rem;
+    @mixin rounded-position 6, 1rem;
+    @mixin rounded-position 7, 1.5rem;
+  }
+}
+
+@screen xl {
+  .rounded-larger {
+    @mixin rounded-basic 0.25rem;
+    @mixin rounded-position 0, 0;
+    @mixin rounded-position 1, 0.125rem;
+    @mixin rounded-position 2, 0.25rem;
+    @mixin rounded-position 3, 0.375rem;
+    @mixin rounded-position 4, 0.5rem;
+    @mixin rounded-position 5, 0.75rem;
+    @mixin rounded-position 6, 1rem;
+    @mixin rounded-position 7, 1.5rem;
+  }
+}
+
+@screen 2xl {
+  .rounded-largest {
+    @mixin rounded-basic 0.25rem;
+    @mixin rounded-position 0, 0;
+    @mixin rounded-position 1, 0.125rem;
+    @mixin rounded-position 2, 0.25rem;
+    @mixin rounded-position 3, 0.375rem;
+    @mixin rounded-position 4, 0.5rem;
+    @mixin rounded-position 5, 0.75rem;
+    @mixin rounded-position 6, 1rem;
+    @mixin rounded-position 7, 1.5rem;
+  }
+}

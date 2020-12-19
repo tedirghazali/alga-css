@@ -33,8 +33,11 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.4.1",
     "postcss": "^8.1.7",
+    "postcss-custom-properties": "^10.0.0",
     "postcss-import": "^13.0.0",
+    "postcss-mixins": "^7.0.2",
     "postcss-nested": "^5.0.1",
+    "postcss-simple-vars": "^6.0.2",
     "tailwindcss": "^2.0.1"
   }
 }

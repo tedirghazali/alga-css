@@ -1,6 +1,6 @@
 @layer components {
   .dropzone {
-    @apply p-5 break-words;
+    @apply break-words;
     max-width: calc(100vw - 2.5rem);
     max-height: calc(100vh - 2.5rem);
     

@@ -4,6 +4,7 @@ const cleanCSS = require('gulp-clean-css')
 const rename = require('gulp-rename')
 const terser = require('gulp-terser')
 const postcss = require('gulp-postcss')
+const path = require('path')
 
 const dist = {
   css: './dist/css/',
@@ -13,8 +14,13 @@ const dist = {
 function css() {
   return src('css/app.css', { sourcemaps: true })
     .pipe(postcss([
-      require("postcss-import"),
+      require('postcss-import'),
+      require('postcss-mixins')({
+        mixinsDir: path.join(__dirname, 'css/mixins')
+      }),
       require('tailwindcss'),
+      require('postcss-custom-properties'),
+      require('postcss-simple-vars'),
       require('postcss-nested'),
       require('autoprefixer')
     ]))

@@ -1,0 +1,121 @@
+@define-mixin rounded-basic $size {
+  border-radius: $size !important;
+    
+  &-0 {
+    border-radius: 0 !important;
+  }
+
+  &-1 {
+    border-radius: 0.125rem !important;
+  }
+
+  &-2 {
+    border-radius: $size !important;
+  }
+
+  &-3 {
+    border-radius: 0.375rem !important;
+  }
+
+  &-4 {
+    border-radius: 0.5rem !important;
+  }
+
+  &-5 {
+    border-radius: 0.75rem !important;
+  }
+
+  &-6 {
+    border-radius: 1rem !important;
+  }
+
+  &-7 {
+    border-radius: 1.5rem !important;
+  }
+
+  &-circle {
+    border-radius: 50% !important;
+  }
+
+  &-pill {
+    border-radius: 50rem !important;
+  }
+
+  &-full {
+    border-radius: 9999px !important;
+  }
+  
+  &-top {
+    border-top-left-radius: $size !important;
+    border-top-right-radius: $size !important;
+  }
+
+  &-top-left {
+    border-top-left-radius: $size !important;
+  }
+
+  &-top-right {
+    border-top-right-radius: $size !important;
+  }
+
+  &-right {
+    border-top-right-radius: $size !important;
+    border-bottom-right-radius: $size !important;
+  }
+
+  &-bottom {
+    border-bottom-right-radius: $size !important;
+    border-bottom-left-radius: $size !important;
+  }
+
+  &-bottom-left {
+    border-bottom-left-radius: $size !important;
+  }
+
+  &-bottom-right {
+    border-bottom-right-radius: $size !important;
+  }
+
+  &-left {
+    border-bottom-left-radius: $size !important;
+    border-top-left-radius: $size !important;
+  }
+}
+
+@define-mixin rounded-position $number, $size {
+  &-top-$(number) {
+    border-top-left-radius: $size !important;
+    border-top-right-radius: $size !important;
+  }
+
+  &-top-left-$(number) {
+    border-top-left-radius: $size !important;
+  }
+
+  &-top-right-$(number) {
+    border-top-right-radius: $size !important;
+  }
+
+  &-right-$(number) {
+    border-top-right-radius: $size !important;
+    border-bottom-right-radius: $size !important;
+  }
+
+  &-bottom-$(number) {
+    border-bottom-right-radius: $size !important;
+    border-bottom-left-radius: $size !important;
+  }
+
+  &-bottom-left-$(number) {
+    border-bottom-left-radius: $size !important;
+  }
+
+  &-bottom-right-$(number) {
+    border-bottom-right-radius: $size !important;
+  }
+
+  &-left-$(number) {
+    border-bottom-left-radius: $size !important;
+    border-top-left-radius: $size !important;
+  }
+}
