@@ -10,8 +10,8 @@
   @mixin rounded-position 7, 1.5rem;
 }
 
-@screen sm {
-  .rounded-small {
+@media (min-width: 640px) {
+  .small\:rounded {
     @mixin rounded-basic 0.25rem;
     @mixin rounded-position 0, 0;
     @mixin rounded-position 1, 0.125rem;
@@ -24,8 +24,8 @@
   }
 }
 
-@screen md {
-  .rounded-medium {
+@media (min-width: 768px) {
+  .medium\:rounded {
     @mixin rounded-basic 0.25rem;
     @mixin rounded-position 0, 0;
     @mixin rounded-position 1, 0.125rem;
@@ -38,8 +38,8 @@
   }
 }
 
-@screen lg {
-  .rounded-large {
+@media (min-width: 1024px) {
+  .large\:rounded {
     @mixin rounded-basic 0.25rem;
     @mixin rounded-position 0, 0;
     @mixin rounded-position 1, 0.125rem;
@@ -52,8 +52,8 @@
   }
 }
 
-@screen xl {
-  .rounded-larger {
+@media (min-width: 1280px) {
+  .larger\:rounded {
     @mixin rounded-basic 0.25rem;
     @mixin rounded-position 0, 0;
     @mixin rounded-position 1, 0.125rem;
@@ -66,8 +66,8 @@
   }
 }
 
-@screen 2xl {
-  .rounded-largest {
+@media (min-width: 1536px) {
+  .largest\:rounded {
     @mixin rounded-basic 0.25rem;
     @mixin rounded-position 0, 0;
     @mixin rounded-position 1, 0.125rem;

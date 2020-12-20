@@ -1,0 +1,177 @@
+.margin {
+  @mixin margin-basic 0.25rem;
+}
+
+.start\:margin {
+  @mixin margin-start 0.25rem;
+}
+
+.end\:margin {
+  @mixin margin-end 0.25rem;
+}
+
+.top\:margin {
+  @mixin margin-top 0.25rem;
+}
+
+.right\:margin {
+  @mixin margin-right 0.25rem;
+}
+
+.bottom\:margin {
+  @mixin margin-bottom 0.25rem;
+}
+
+.left\:margin {
+  @mixin margin-left 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .small\:margin {
+    @mixin margin-basic 0.25rem;
+  }
+
+  .small\:start\:margin {
+    @mixin margin-start 0.25rem;
+  }
+
+  .small\:end\:margin {
+    @mixin margin-end 0.25rem;
+  }
+
+  .small\:top\:margin {
+    @mixin margin-top 0.25rem;
+  }
+
+  .small\:right\:margin {
+    @mixin margin-right 0.25rem;
+  }
+
+  .small\:bottom\:margin {
+    @mixin margin-bottom 0.25rem;
+  }
+
+  .small\:left\:margin {
+    @mixin margin-left 0.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .medium\:margin {
+    @mixin margin-basic 0.25rem;
+  }
+
+  .medium\:start\:margin {
+    @mixin margin-start 0.25rem;
+  }
+
+  .medium\:end\:margin {
+    @mixin margin-end 0.25rem;
+  }
+
+  .medium\:top\:margin {
+    @mixin margin-top 0.25rem;
+  }
+
+  .medium\:right\:margin {
+    @mixin margin-right 0.25rem;
+  }
+
+  .medium\:bottom\:margin {
+    @mixin margin-bottom 0.25rem;
+  }
+
+  .medium\:left\:margin {
+    @mixin margin-left 0.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .large\:margin {
+    @mixin margin-basic 0.25rem;
+  }
+
+  .large\:start\:margin {
+    @mixin margin-start 0.25rem;
+  }
+
+  .large\:end\:margin {
+    @mixin margin-end 0.25rem;
+  }
+
+  .large\:top\:margin {
+    @mixin margin-top 0.25rem;
+  }
+
+  .large\:right\:margin {
+    @mixin margin-right 0.25rem;
+  }
+
+  .large\:bottom\:margin {
+    @mixin margin-bottom 0.25rem;
+  }
+
+  .large\:left\:margin {
+    @mixin margin-left 0.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .larger\:margin {
+    @mixin margin-basic 0.25rem;
+  }
+
+  .larger\:start\:margin {
+    @mixin margin-start 0.25rem;
+  }
+
+  .larger\:end\:margin {
+    @mixin margin-end 0.25rem;
+  }
+
+  .larger\:top\:margin {
+    @mixin margin-top 0.25rem;
+  }
+
+  .larger\:right\:margin {
+    @mixin margin-right 0.25rem;
+  }
+
+  .larger\:bottom\:margin {
+    @mixin margin-bottom 0.25rem;
+  }
+
+  .larger\:left\:margin {
+    @mixin margin-left 0.25rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .largest\:margin {
+    @mixin margin-basic 0.25rem;
+  }
+
+  .largest\:start\:margin {
+    @mixin margin-start 0.25rem;
+  }
+
+  .largest\:end\:margin {
+    @mixin margin-end 0.25rem;
+  }
+
+  .largest\:top\:margin {
+    @mixin margin-top 0.25rem;
+  }
+
+  .largest\:right\:margin {
+    @mixin margin-right 0.25rem;
+  }
+
+  .largest\:bottom\:margin {
+    @mixin margin-bottom 0.25rem;
+  }
+
+  .largest\:left\:margin {
+    @mixin margin-left 0.25rem;
+  }
+}
