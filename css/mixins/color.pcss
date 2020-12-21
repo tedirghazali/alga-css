@@ -1,0 +1,53 @@
+@define-mixin color-mixin $class, $main, $text {
+  $class {
+    color: var(--ts-$(text));
+    background-color: var(--ts-$(main));
+    border-color: var(--ts-$(main));
+  }
+    
+  $(class)\:hover:hover {
+    color: var(--ts-$(text));
+    background-color: var(--ts-$(main));
+    border-color: var(--ts-$(main));
+  }
+    
+  $(class)\:outline {
+    color: var(--ts-$(main));
+    background-color: var(--ts-transparent);
+    border-color: var(--ts-$(main));
+  }
+    
+  $(class)\:outline-hover:hover {
+    color: var(--ts-$(main));
+    background-color: var(--ts-transparent);
+    border-color: var(--ts-$(main));
+  }
+    
+  $(class)\:background {
+    background-color: var(--ts-$(main));
+  }
+    
+  $(class)\:text {
+    color: var(--ts-$(main));
+  }
+    
+  $(class)\:border {
+    border-color: var(--ts-$(main));
+  }
+    
+  $(class)\:caret {
+    caret-color: var(--ts-$(main));
+  }
+    
+  $(class)\:ring {
+    outline-color: var(--ts-$(main));
+  }
+    
+  $(class)\:fill {
+    fill: var(--ts-$(main));
+  }
+    
+  $(class)\:stroke {
+    stroke: var(--ts-$(main));
+  }
+}

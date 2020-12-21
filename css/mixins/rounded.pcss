@@ -1,121 +1,111 @@
-@define-mixin rounded-basic $size {
-  border-radius: $size !important;
+@define-mixin rounded-mixin $class, $rule {
+  $class {
+    $(rule): 0.25rem !important;
+  }
     
-  &-0 {
-    border-radius: 0 !important;
+  $(class)-0 {
+    $(rule): 0 !important;
   }
 
-  &-1 {
-    border-radius: 0.125rem !important;
+  $(class)-1 {
+    $(rule): 0.125rem !important;
   }
 
-  &-2 {
-    border-radius: $size !important;
+  $(class)-2 {
+    $(rule): 0.25rem !important;
   }
 
-  &-3 {
-    border-radius: 0.375rem !important;
+  $(class)-3 {
+    $(rule): 0.375rem !important;
   }
 
-  &-4 {
-    border-radius: 0.5rem !important;
+  $(class)-4 {
+    $(rule): 0.5rem !important;
   }
 
-  &-5 {
-    border-radius: 0.75rem !important;
+  $(class)-5 {
+    $(rule): 0.75rem !important;
   }
 
-  &-6 {
-    border-radius: 1rem !important;
+  $(class)-6 {
+    $(rule): 1rem !important;
   }
 
-  &-7 {
-    border-radius: 1.5rem !important;
+  $(class)-7 {
+    $(rule): 1.5rem !important;
   }
 
-  &-circle {
-    border-radius: 50% !important;
+  $(class)-circle {
+    $(rule): 50% !important;
   }
 
-  &-pill {
-    border-radius: 50rem !important;
+  $(class)-pill {
+    $(rule): 50rem !important;
   }
 
-  &-full {
-    border-radius: 9999px !important;
-  }
-  
-  &-top {
-    border-top-left-radius: $size !important;
-    border-top-right-radius: $size !important;
-  }
-
-  &-top-left {
-    border-top-left-radius: $size !important;
-  }
-
-  &-top-right {
-    border-top-right-radius: $size !important;
-  }
-
-  &-right {
-    border-top-right-radius: $size !important;
-    border-bottom-right-radius: $size !important;
-  }
-
-  &-bottom {
-    border-bottom-right-radius: $size !important;
-    border-bottom-left-radius: $size !important;
-  }
-
-  &-bottom-left {
-    border-bottom-left-radius: $size !important;
-  }
-
-  &-bottom-right {
-    border-bottom-right-radius: $size !important;
-  }
-
-  &-left {
-    border-bottom-left-radius: $size !important;
-    border-top-left-radius: $size !important;
+  $(class)-full {
+    $(rule): 9999px !important;
   }
 }
 
-@define-mixin rounded-position $number, $size {
-  &-top-$(number) {
-    border-top-left-radius: $size !important;
-    border-top-right-radius: $size !important;
+@define-mixin rounded-double $class, $first, $second {
+  $class {
+    $(first): 0.25rem !important;
+    $(second): 0.25rem !important;
+  }
+    
+  $(class)-0 {
+    $(first): 0 !important;
+    $(second): 0 !important;
   }
 
-  &-top-left-$(number) {
-    border-top-left-radius: $size !important;
+  $(class)-1 {
+    $(first): 0.125rem !important;
+    $(second): 0.125rem !important;
   }
 
-  &-top-right-$(number) {
-    border-top-right-radius: $size !important;
+  $(class)-2 {
+    $(first): 0.25rem !important;
+    $(second): 0.25rem !important;
   }
 
-  &-right-$(number) {
-    border-top-right-radius: $size !important;
-    border-bottom-right-radius: $size !important;
+  $(class)-3 {
+    $(first): 0.375rem !important;
+    $(second): 0.375rem !important;
   }
 
-  &-bottom-$(number) {
-    border-bottom-right-radius: $size !important;
-    border-bottom-left-radius: $size !important;
+  $(class)-4 {
+    $(first): 0.5rem !important;
+    $(second): 0.5rem !important;
   }
 
-  &-bottom-left-$(number) {
-    border-bottom-left-radius: $size !important;
+  $(class)-5 {
+    $(first): 0.75rem !important;
+    $(second): 0.75rem !important;
   }
 
-  &-bottom-right-$(number) {
-    border-bottom-right-radius: $size !important;
+  $(class)-6 {
+    $(first): 1rem !important;
+    $(second): 1rem !important;
   }
 
-  &-left-$(number) {
-    border-bottom-left-radius: $size !important;
-    border-top-left-radius: $size !important;
+  $(class)-7 {
+    $(first): 1.5rem !important;
+    $(second): 1.5rem !important;
+  }
+
+  $(class)-circle {
+    $(first): 50% !important;
+    $(second): 50% !important;
+  }
+
+  $(class)-pill {
+    $(first): 50rem !important;
+    $(second): 50rem !important;
+  }
+
+  $(class)-full {
+    $(first): 9999px !important;
+    $(second): 9999px !important;
   }
 }

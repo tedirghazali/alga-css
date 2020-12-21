@@ -1,177 +1,57 @@
-.padding {
-  @mixin padding-basic 0.25rem;
-}
-
-.start\:padding {
-  @mixin padding-start 0.25rem;
-}
-
-.end\:padding {
-  @mixin padding-end 0.25rem;
-}
-
-.top\:padding {
-  @mixin padding-top 0.25rem;
-}
-
-.right\:padding {
-  @mixin padding-right 0.25rem;
-}
-
-.bottom\:padding {
-  @mixin padding-bottom 0.25rem;
-}
-
-.left\:padding {
-  @mixin padding-left 0.25rem;
-}
+@mixin padding-mixin .padding, padding;
+@mixin padding-double .start\:padding, padding-top, padding-bottom;
+@mixin padding-double .end\:padding, padding-right, padding-left;
+@mixin padding-mixin .top\:padding, padding-top;
+@mixin padding-mixin .right\:padding, padding-right;
+@mixin padding-mixin .bottom\:padding, padding-bottom;
+@mixin padding-mixin .left\:padding, padding-left;
 
 @media (min-width: 640px) {
-  .small\:padding {
-    @mixin padding-basic 0.25rem;
-  }
-
-  .small\:start\:padding {
-    @mixin padding-start 0.25rem;
-  }
-
-  .small\:end\:padding {
-    @mixin padding-end 0.25rem;
-  }
-
-  .small\:top\:padding {
-    @mixin padding-top 0.25rem;
-  }
-
-  .small\:right\:padding {
-    @mixin padding-right 0.25rem;
-  }
-
-  .small\:bottom\:padding {
-    @mixin padding-bottom 0.25rem;
-  }
-
-  .small\:left\:padding {
-    @mixin padding-left 0.25rem;
-  }
+  @mixin padding-mixin .small\:padding, padding;
+  @mixin padding-double .small\:start\:padding, padding-top, padding-bottom;
+  @mixin padding-double .small\:end\:padding, padding-right, padding-left;
+  @mixin padding-mixin .small\:top\:padding, padding-top;
+  @mixin padding-mixin .small\:right\:padding, padding-right;
+  @mixin padding-mixin .small\:bottom\:padding, padding-bottom;
+  @mixin padding-mixin .small\:left\:padding, padding-left;
 }
 
 @media (min-width: 768px) {
-  .medium\:padding {
-    @mixin padding-basic 0.25rem;
-  }
-
-  .medium\:start\:padding {
-    @mixin padding-start 0.25rem;
-  }
-
-  .medium\:end\:padding {
-    @mixin padding-end 0.25rem;
-  }
-
-  .medium\:top\:padding {
-    @mixin padding-top 0.25rem;
-  }
-
-  .medium\:right\:padding {
-    @mixin padding-right 0.25rem;
-  }
-
-  .medium\:bottom\:padding {
-    @mixin padding-bottom 0.25rem;
-  }
-
-  .medium\:left\:padding {
-    @mixin padding-left 0.25rem;
-  }
+  @mixin padding-mixin .medium\:padding, padding;
+  @mixin padding-double .medium\:start\:padding, padding-top, padding-bottom;
+  @mixin padding-double .medium\:end\:padding, padding-right, padding-left;
+  @mixin padding-mixin .medium\:top\:padding, padding-top;
+  @mixin padding-mixin .medium\:right\:padding, padding-right;
+  @mixin padding-mixin .medium\:bottom\:padding, padding-bottom;
+  @mixin padding-mixin .medium\:left\:padding, padding-left;
 }
 
 @media (min-width: 1024px) {
-  .large\:padding {
-    @mixin padding-basic 0.25rem;
-  }
-
-  .large\:start\:padding {
-    @mixin padding-start 0.25rem;
-  }
-
-  .large\:end\:padding {
-    @mixin padding-end 0.25rem;
-  }
-
-  .large\:top\:padding {
-    @mixin padding-top 0.25rem;
-  }
-
-  .large\:right\:padding {
-    @mixin padding-right 0.25rem;
-  }
-
-  .large\:bottom\:padding {
-    @mixin padding-bottom 0.25rem;
-  }
-
-  .large\:left\:padding {
-    @mixin padding-left 0.25rem;
-  }
+  @mixin padding-mixin .large\:padding, padding;
+  @mixin padding-double .large\:start\:padding, padding-top, padding-bottom;
+  @mixin padding-double .large\:end\:padding, padding-right, padding-left;
+  @mixin padding-mixin .large\:top\:padding, padding-top;
+  @mixin padding-mixin .large\:right\:padding, padding-right;
+  @mixin padding-mixin .large\:bottom\:padding, padding-bottom;
+  @mixin padding-mixin .large\:left\:padding, padding-left;
 }
 
 @media (min-width: 1280px) {
-  .larger\:padding {
-    @mixin padding-basic 0.25rem;
-  }
-
-  .larger\:start\:padding {
-    @mixin padding-start 0.25rem;
-  }
-
-  .larger\:end\:padding {
-    @mixin padding-end 0.25rem;
-  }
-
-  .larger\:top\:padding {
-    @mixin padding-top 0.25rem;
-  }
-
-  .larger\:right\:padding {
-    @mixin padding-right 0.25rem;
-  }
-
-  .larger\:bottom\:padding {
-    @mixin padding-bottom 0.25rem;
-  }
-
-  .larger\:left\:padding {
-    @mixin padding-left 0.25rem;
-  }
+  @mixin padding-mixin .larger\:padding, padding;
+  @mixin padding-double .larger\:start\:padding, padding-top, padding-bottom;
+  @mixin padding-double .larger\:end\:padding, padding-right, padding-left;
+  @mixin padding-mixin .larger\:top\:padding, padding-top;
+  @mixin padding-mixin .larger\:right\:padding, padding-right;
+  @mixin padding-mixin .larger\:bottom\:padding, padding-bottom;
+  @mixin padding-mixin .larger\:left\:padding, padding-left;
 }
 
 @media (min-width: 1536px) {
-  .largest\:padding {
-    @mixin padding-basic 0.25rem;
-  }
-
-  .largest\:start\:padding {
-    @mixin padding-start 0.25rem;
-  }
-
-  .largest\:end\:padding {
-    @mixin padding-end 0.25rem;
-  }
-
-  .largest\:top\:padding {
-    @mixin padding-top 0.25rem;
-  }
-
-  .largest\:right\:padding {
-    @mixin padding-right 0.25rem;
-  }
-
-  .largest\:bottom\:padding {
-    @mixin padding-bottom 0.25rem;
-  }
-
-  .largest\:left\:padding {
-    @mixin padding-left 0.25rem;
-  }
+  @mixin padding-mixin .largest\:padding, padding;
+  @mixin padding-double .largest\:start\:padding, padding-top, padding-bottom;
+  @mixin padding-double .largest\:end\:padding, padding-right, padding-left;
+  @mixin padding-mixin .largest\:top\:padding, padding-top;
+  @mixin padding-mixin .largest\:right\:padding, padding-right;
+  @mixin padding-mixin .largest\:bottom\:padding, padding-bottom;
+  @mixin padding-mixin .largest\:left\:padding, padding-left;
 }

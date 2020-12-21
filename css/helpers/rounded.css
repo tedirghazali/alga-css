@@ -1,81 +1,69 @@
-.rounded {
-  @mixin rounded-basic 0.25rem;
-  @mixin rounded-position 0, 0;
-  @mixin rounded-position 1, 0.125rem;
-  @mixin rounded-position 2, 0.25rem;
-  @mixin rounded-position 3, 0.375rem;
-  @mixin rounded-position 4, 0.5rem;
-  @mixin rounded-position 5, 0.75rem;
-  @mixin rounded-position 6, 1rem;
-  @mixin rounded-position 7, 1.5rem;
-}
+@mixin rounded-mixin .rounded border-radius;
+@mixin rounded-double .top\:rounded, border-top-left-radius, border-top-right-radius;
+@mixin rounded-double .right\:rounded, border-top-right-radius, border-bottom-right-radius;
+@mixin rounded-double .bottom\:rounded, border-bottom-right-radius, border-bottom-left-radius;
+@mixin rounded-double .left\:rounded, border-bottom-left-radius, border-top-left-radius;
+@mixin rounded-mixin .start-1\:rounded, border-top-left-radius;
+@mixin rounded-mixin .start-2\:rounded, border-bottom-left-radius;
+@mixin rounded-mixin .end-1\:rounded, border-top-right-radius;
+@mixin rounded-mixin .end-2\:rounded, border-bottom-right-radius;
 
 @media (min-width: 640px) {
-  .small\:rounded {
-    @mixin rounded-basic 0.25rem;
-    @mixin rounded-position 0, 0;
-    @mixin rounded-position 1, 0.125rem;
-    @mixin rounded-position 2, 0.25rem;
-    @mixin rounded-position 3, 0.375rem;
-    @mixin rounded-position 4, 0.5rem;
-    @mixin rounded-position 5, 0.75rem;
-    @mixin rounded-position 6, 1rem;
-    @mixin rounded-position 7, 1.5rem;
-  }
+  @mixin rounded-mixin .small\:rounded border-radius;
+  @mixin rounded-double .small\:top\:rounded, border-top-left-radius, border-top-right-radius;
+  @mixin rounded-double .small\:right\:rounded, border-top-right-radius, border-bottom-right-radius;
+  @mixin rounded-double .small\:bottom\:rounded, border-bottom-right-radius, border-bottom-left-radius;
+  @mixin rounded-double .small\:left\:rounded, border-bottom-left-radius, border-top-left-radius;
+  @mixin rounded-mixin .small\:start-1\:rounded, border-top-left-radius;
+  @mixin rounded-mixin .small\:start-2\:rounded, border-bottom-left-radius;
+  @mixin rounded-mixin .small\:end-1\:rounded, border-top-right-radius;
+  @mixin rounded-mixin .small\:end-2\:rounded, border-bottom-right-radius;
 }
 
 @media (min-width: 768px) {
-  .medium\:rounded {
-    @mixin rounded-basic 0.25rem;
-    @mixin rounded-position 0, 0;
-    @mixin rounded-position 1, 0.125rem;
-    @mixin rounded-position 2, 0.25rem;
-    @mixin rounded-position 3, 0.375rem;
-    @mixin rounded-position 4, 0.5rem;
-    @mixin rounded-position 5, 0.75rem;
-    @mixin rounded-position 6, 1rem;
-    @mixin rounded-position 7, 1.5rem;
-  }
+  @mixin rounded-mixin .medium\:rounded border-radius;
+  @mixin rounded-double .medium\:top\:rounded, border-top-left-radius, border-top-right-radius;
+  @mixin rounded-double .medium\:right\:rounded, border-top-right-radius, border-bottom-right-radius;
+  @mixin rounded-double .medium\:bottom\:rounded, border-bottom-right-radius, border-bottom-left-radius;
+  @mixin rounded-double .medium\:left\:rounded, border-bottom-left-radius, border-top-left-radius;
+  @mixin rounded-mixin .medium\:start-1\:rounded, border-top-left-radius;
+  @mixin rounded-mixin .medium\:start-2\:rounded, border-bottom-left-radius;
+  @mixin rounded-mixin .medium\:end-1\:rounded, border-top-right-radius;
+  @mixin rounded-mixin .medium\:end-2\:rounded, border-bottom-right-radius;
 }
 
 @media (min-width: 1024px) {
-  .large\:rounded {
-    @mixin rounded-basic 0.25rem;
-    @mixin rounded-position 0, 0;
-    @mixin rounded-position 1, 0.125rem;
-    @mixin rounded-position 2, 0.25rem;
-    @mixin rounded-position 3, 0.375rem;
-    @mixin rounded-position 4, 0.5rem;
-    @mixin rounded-position 5, 0.75rem;
-    @mixin rounded-position 6, 1rem;
-    @mixin rounded-position 7, 1.5rem;
-  }
+  @mixin rounded-mixin .large\:rounded border-radius;
+  @mixin rounded-double .large\:top\:rounded, border-top-left-radius, border-top-right-radius;
+  @mixin rounded-double .large\:right\:rounded, border-top-right-radius, border-bottom-right-radius;
+  @mixin rounded-double .large\:bottom\:rounded, border-bottom-right-radius, border-bottom-left-radius;
+  @mixin rounded-double .large\:left\:rounded, border-bottom-left-radius, border-top-left-radius;
+  @mixin rounded-mixin .large\:start-1\:rounded, border-top-left-radius;
+  @mixin rounded-mixin .large\:start-2\:rounded, border-bottom-left-radius;
+  @mixin rounded-mixin .large\:end-1\:rounded, border-top-right-radius;
+  @mixin rounded-mixin .large\:end-2\:rounded, border-bottom-right-radius;
 }
 
 @media (min-width: 1280px) {
-  .larger\:rounded {
-    @mixin rounded-basic 0.25rem;
-    @mixin rounded-position 0, 0;
-    @mixin rounded-position 1, 0.125rem;
-    @mixin rounded-position 2, 0.25rem;
-    @mixin rounded-position 3, 0.375rem;
-    @mixin rounded-position 4, 0.5rem;
-    @mixin rounded-position 5, 0.75rem;
-    @mixin rounded-position 6, 1rem;
-    @mixin rounded-position 7, 1.5rem;
-  }
+  @mixin rounded-mixin .larger\:rounded border-radius;
+  @mixin rounded-double .larger\:top\:rounded, border-top-left-radius, border-top-right-radius;
+  @mixin rounded-double .larger\:right\:rounded, border-top-right-radius, border-bottom-right-radius;
+  @mixin rounded-double .larger\:bottom\:rounded, border-bottom-right-radius, border-bottom-left-radius;
+  @mixin rounded-double .larger\:left\:rounded, border-bottom-left-radius, border-top-left-radius;
+  @mixin rounded-mixin .larger\:start-1\:rounded, border-top-left-radius;
+  @mixin rounded-mixin .larger\:start-2\:rounded, border-bottom-left-radius;
+  @mixin rounded-mixin .larger\:end-1\:rounded, border-top-right-radius;
+  @mixin rounded-mixin .larger\:end-2\:rounded, border-bottom-right-radius;
 }
 
 @media (min-width: 1536px) {
-  .largest\:rounded {
-    @mixin rounded-basic 0.25rem;
-    @mixin rounded-position 0, 0;
-    @mixin rounded-position 1, 0.125rem;
-    @mixin rounded-position 2, 0.25rem;
-    @mixin rounded-position 3, 0.375rem;
-    @mixin rounded-position 4, 0.5rem;
-    @mixin rounded-position 5, 0.75rem;
-    @mixin rounded-position 6, 1rem;
-    @mixin rounded-position 7, 1.5rem;
-  }
+  @mixin rounded-mixin .largest\:rounded border-radius;
+  @mixin rounded-double .largest\:top\:rounded, border-top-left-radius, border-top-right-radius;
+  @mixin rounded-double .largest\:right\:rounded, border-top-right-radius, border-bottom-right-radius;
+  @mixin rounded-double .largest\:bottom\:rounded, border-bottom-right-radius, border-bottom-left-radius;
+  @mixin rounded-double .largest\:left\:rounded, border-bottom-left-radius, border-top-left-radius;
+  @mixin rounded-mixin .largest\:start-1\:rounded, border-top-left-radius;
+  @mixin rounded-mixin .largest\:start-2\:rounded, border-bottom-left-radius;
+  @mixin rounded-mixin .largest\:end-1\:rounded, border-top-right-radius;
+  @mixin rounded-mixin .largest\:end-2\:rounded, border-bottom-right-radius;
 }
