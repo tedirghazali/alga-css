@@ -1,0 +1,81 @@
+.layer,
+.absolute\:layer { position: absolute; }
+.relative\:layer { position: relative; }
+.static\:layer { position: static; }
+.fixed\:layer { position: fixed; will-change: transform; }
+.sticky\:layer { position: relative; will-change: transform; }
+
+@mixin position-mixin .left, left;
+@mixin position-mixin .right, right;
+@mixin position-mixin .top, top;
+@mixin position-mixin .bottom, bottom;
+
+@media (min-width: 640px) {
+  .small\:layer,
+  .small\:absolute\:layer { position: absolute; }
+  .small\:relative\:layer { position: relative; }
+  .small\:static\:layer { position: static; }
+  .small\:fixed\:layer { position: fixed; will-change: transform; }
+  .small\:sticky\:layer { position: relative; will-change: transform; }
+
+  @mixin position-mixin .small\:left, left;
+  @mixin position-mixin .small\:right, right;
+  @mixin position-mixin .small\:top, top;
+  @mixin position-mixin .small\:bottom, bottom;
+}
+
+@media (min-width: 768px) {
+  .medium\:layer,
+  .medium\:absolute\:layer { position: absolute; }
+  .medium\:relative\:layer { position: relative; }
+  .medium\:static\:layer { position: static; }
+  .medium\:fixed\:layer { position: fixed; will-change: transform; }
+  .medium\:sticky\:layer { position: relative; will-change: transform; }
+
+  @mixin position-mixin .medium\:left, left;
+  @mixin position-mixin .medium\:right, right;
+  @mixin position-mixin .medium\:top, top;
+  @mixin position-mixin .medium\:bottom, bottom;
+}
+
+@media (min-width: 1024px) {
+  .large\:layer,
+  .large\:absolute\:layer { position: absolute; }
+  .large\:relative\:layer { position: relative; }
+  .large\:static\:layer { position: static; }
+  .large\:fixed\:layer { position: fixed; will-change: transform; }
+  .large\:sticky\:layer { position: relative; will-change: transform; }
+
+  @mixin position-mixin .large\:left, left;
+  @mixin position-mixin .large\:right, right;
+  @mixin position-mixin .large\:top, top;
+  @mixin position-mixin .large\:bottom, bottom;
+}
+
+@media (min-width: 1280px) {
+  .larger\:layer,
+  .larger\:absolute\:layer { position: absolute; }
+  .larger\:relative\:layer { position: relative; }
+  .larger\:static\:layer { position: static; }
+  .larger\:fixed\:layer { position: fixed; will-change: transform; }
+  .larger\:sticky\:layer { position: relative; will-change: transform; }
+
+  @mixin position-mixin .larger\:left, left;
+  @mixin position-mixin .larger\:right, right;
+  @mixin position-mixin .larger\:top, top;
+  @mixin position-mixin .larger\:bottom, bottom;
+}
+
+@media (min-width: 1536px) {
+  .largest\:layer,
+  .largest\:absolute\:layer { position: absolute; }
+  .largest\:relative\:layer { position: relative; }
+  .largest\:static\:layer { position: static; }
+  .largest\:fixed\:layer { position: fixed; will-change: transform; }
+  .largest\:sticky\:layer { position: relative; will-change: transform; }
+
+  @mixin position-mixin .largest\:left, left;
+  @mixin position-mixin .largest\:right, right;
+  @mixin position-mixin .largest\:top, top;
+  @mixin position-mixin .largest\:bottom, bottom;
+}

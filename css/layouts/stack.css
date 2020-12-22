@@ -1,0 +1,105 @@
+.stack {
+  &-0 { z-index: 0; }
+  &-1 { z-index: 1; }
+  &-2 { z-index: 2; }
+  &-3 { z-index: 3; }
+  &-4 { z-index: 4; }
+  &-5 { z-index: 5; }
+  &-6 { z-index: 6; }
+  &-7 { z-index: 7; }
+  &-9 { z-index: 9; }
+  &-10 { z-index: 10; }
+  &-11 { z-index: 11; }
+  &-12 { z-index: 12; }
+  &-auto { z-index: auto; }
+}
+
+@media (min-width: 640px) {
+  .small\:stack {
+    &-0 { z-index: 0; }
+    &-1 { z-index: 1; }
+    &-2 { z-index: 2; }
+    &-3 { z-index: 3; }
+    &-4 { z-index: 4; }
+    &-5 { z-index: 5; }
+    &-6 { z-index: 6; }
+    &-7 { z-index: 7; }
+    &-9 { z-index: 9; }
+    &-10 { z-index: 10; }
+    &-11 { z-index: 11; }
+    &-12 { z-index: 12; }
+    &-auto { z-index: auto; }
+  }
+}
+
+@media (min-width: 768px) {
+  .medium\:stack {
+    &-0 { z-index: 0; }
+    &-1 { z-index: 1; }
+    &-2 { z-index: 2; }
+    &-3 { z-index: 3; }
+    &-4 { z-index: 4; }
+    &-5 { z-index: 5; }
+    &-6 { z-index: 6; }
+    &-7 { z-index: 7; }
+    &-9 { z-index: 9; }
+    &-10 { z-index: 10; }
+    &-11 { z-index: 11; }
+    &-12 { z-index: 12; }
+    &-auto { z-index: auto; }
+  }
+}
+
+@media (min-width: 1024px) {
+  .large\:stack {
+    &-0 { z-index: 0; }
+    &-1 { z-index: 1; }
+    &-2 { z-index: 2; }
+    &-3 { z-index: 3; }
+    &-4 { z-index: 4; }
+    &-5 { z-index: 5; }
+    &-6 { z-index: 6; }
+    &-7 { z-index: 7; }
+    &-9 { z-index: 9; }
+    &-10 { z-index: 10; }
+    &-11 { z-index: 11; }
+    &-12 { z-index: 12; }
+    &-auto { z-index: auto; }
+  }
+}
+
+@media (min-width: 1280px) {
+  .larger\:stack {
+    &-0 { z-index: 0; }
+    &-1 { z-index: 1; }
+    &-2 { z-index: 2; }
+    &-3 { z-index: 3; }
+    &-4 { z-index: 4; }
+    &-5 { z-index: 5; }
+    &-6 { z-index: 6; }
+    &-7 { z-index: 7; }
+    &-9 { z-index: 9; }
+    &-10 { z-index: 10; }
+    &-11 { z-index: 11; }
+    &-12 { z-index: 12; }
+    &-auto { z-index: auto; }
+  }
+}
+
+@media (min-width: 1536px) {
+  .largest\:stack {
+    &-0 { z-index: 0; }
+    &-1 { z-index: 1; }
+    &-2 { z-index: 2; }
+    &-3 { z-index: 3; }
+    &-4 { z-index: 4; }
+    &-5 { z-index: 5; }
+    &-6 { z-index: 6; }
+    &-7 { z-index: 7; }
+    &-9 { z-index: 9; }
+    &-10 { z-index: 10; }
+    &-11 { z-index: 11; }
+    &-12 { z-index: 12; }
+    &-auto { z-index: auto; }
+  }
+}

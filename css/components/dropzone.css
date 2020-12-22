@@ -1,8 +1,9 @@
 @layer components {
   .dropzone {
     @apply break-words;
-    max-width: calc(100vw - 2.5rem);
-    max-height: calc(100vh - 2.5rem);
+    max-width: calc(100vw - 0.5rem);
+    max-height: calc(100vh - 0.5rem);
+    padding: 0.5rem;
     
     &-file {
       @apply absolute w-px h-px overflow-hidden;

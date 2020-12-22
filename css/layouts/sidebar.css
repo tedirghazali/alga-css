@@ -2,11 +2,11 @@
   .sidebar {
     @apply flex flex-col flex-wrap justify-between h-full;
   
-    &-avatar {
+    &-header {
       @apply w-full;
     }
     
-    &-form {
+    &-control {
       @apply w-full;
     }
     

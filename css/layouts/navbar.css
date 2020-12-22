@@ -6,11 +6,11 @@
       @apply flex justify-start;
     }
     
-    & .navbar-primary {
+    & .navbar-control {
       @apply flex-grow;
     }
     
-    & .navbar-secondary {
+    & .navbar-menu {
       @apply flex justify-end;
     }
     
