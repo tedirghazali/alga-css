@@ -1,53 +1,279 @@
-@define-mixin position-mixin $class, $rule {
+@define-mixin position-mixin $class, $rule, $unit {
   $(class)-0 {
     $(rule): 0;
   }
   
-  $(class)-1 {
-    $(rule): 0.25rem;
-  }
-  
-  $(class)-2 {
-    $(rule): 0.5rem;
-  }
-  
-  $(class)-3 {
-    $(rule): 0.75rem;
-  }
-  
-  $(class)-4 {
-    $(rule): 1rem;
-  }
-  
   $(class)-5 {
-    $(rule): 1.25rem;
-  }
-  
-  $(class)-6 {
-    $(rule): 1.5rem;
-  }
-  
-  $(class)-7 {
-    $(rule): 1.75rem;
-  }
-  
-  $(class)-8 {
-    $(rule): 2rem;
-  }
-  
-  $(class)-9 {
-    $(rule): 2.25rem;
+    $(rule): calc(0.125 + $(unit));
   }
   
   $(class)-10 {
-    $(rule): 2.5rem;
+    $(rule): calc(0.25 + $(unit));
   }
   
-  $(class)-11 {
-    $(rule): 2.75rem;
+  $(class)-15 {
+    $(rule): calc(0.375 + $(unit));
   }
   
-  $(class)-12 {
-    $(rule): 3rem;
+  $(class)-20 {
+    $(rule): calc(0.5 + $(unit));
+  }
+  
+  $(class)-25 {
+    $(rule): calc(0.625 + $(unit));
+  }
+  
+  $(class)-30 {
+    $(rule): calc(0.75 + $(unit));
+  }
+  
+  $(class)-35 {
+    $(rule): calc(0.875 + $(unit));
+  }
+  
+  $(class)-40 {
+    $(rule): calc(1 + $(unit));
+  }
+  
+  $(class)-45 {
+    $(rule): calc(1.125 + $(unit));
+  }
+  
+  $(class)-50 {
+    $(rule): calc(1.25 + $(unit));
+  }
+  
+  $(class)-55 {
+    $(rule): calc(1.375 + $(unit));
+  }
+  
+  $(class)-60 {
+    $(rule): calc(1.5 + $(unit));
+  }
+  
+  $(class)-65 {
+    $(rule): calc(1.625 + $(unit));
+  }
+  
+  $(class)-70 {
+    $(rule): calc(1.75 + $(unit));
+  }
+  
+  $(class)-75 {
+    $(rule): calc(1.875 + $(unit));
+  }
+  
+  $(class)-80 {
+    $(rule): calc(2 + $(unit));
+  }
+  
+  $(class)-85 {
+    $(rule): calc(2.125 + $(unit));
+  }
+  
+  $(class)-90 {
+    $(rule): calc(2.25 + $(unit));
+  }
+  
+  $(class)-95 {
+    $(rule): calc(2.375 + $(unit));
+  }
+  
+  $(class)-100 {
+    $(rule): calc(2.5 + $(unit));
   }
 }
+
+@define-mixin position-percent $class, $rule, $unit {
+  $(class)-0 {
+    $(rule): 0;
+  }
+  
+  $(class)-5 {
+    $(rule): calc(5 + $(unit));
+  }
+  
+  $(class)-10 {
+    $(rule): calc(10 + $(unit));
+  }
+  
+  $(class)-15 {
+    $(rule): calc(15 + $(unit));
+  }
+  
+  $(class)-20 {
+    $(rule): calc(20 + $(unit));
+  }
+  
+  $(class)-25 {
+    $(rule): calc(25 + $(unit));
+  }
+  
+  $(class)-30 {
+    $(rule): calc(30 + $(unit));
+  }
+  
+  $(class)-35 {
+    $(rule): calc(35 + $(unit));
+  }
+  
+  $(class)-40 {
+    $(rule): calc(40 + $(unit));
+  }
+  
+  $(class)-45 {
+    $(rule): calc(45 + $(unit));
+  }
+  
+  $(class)-50 {
+    $(rule): calc(50 + $(unit));
+  }
+  
+  $(class)-55 {
+    $(rule): calc(55 + $(unit));
+  }
+  
+  $(class)-60 {
+    $(rule): calc(60 + $(unit));
+  }
+  
+  $(class)-65 {
+    $(rule): calc(65 + $(unit));
+  }
+  
+  $(class)-70 {
+    $(rule): calc(70 + $(unit));
+  }
+  
+  $(class)-75 {
+    $(rule): calc(75 + $(unit));
+  }
+  
+  $(class)-80 {
+    $(rule): calc(80 + $(unit));
+  }
+  
+  $(class)-85 {
+    $(rule): calc(85 + $(unit));
+  }
+  
+  $(class)-90 {
+    $(rule): calc(90 + $(unit));
+  }
+  
+  $(class)-95 {
+    $(rule): calc(95 + $(unit));
+  }
+  
+  $(class)-100 {
+    $(rule): calc(100 + $(unit));
+  }
+}
+
+@define-mixin position-double $class, $rule1, $rule2, $unit {
+  $(class)-0 {
+    $(rule1): 0;
+    $(rule2): 0;
+  }
+  
+  $(class)-5 {
+    $(rule1): calc(5 + $(unit));
+    $(rule2): calc(5 + $(unit));
+  }
+  
+  $(class)-10 {
+    $(rule1): calc(10 + $(unit));
+    $(rule2): calc(10 + $(unit));
+  }
+  
+  $(class)-15 {
+    $(rule1): calc(15 + $(unit));
+    $(rule2): calc(15 + $(unit));
+  }
+  
+  $(class)-20 {
+    $(rule1): calc(20 + $(unit));
+    $(rule2): calc(20 + $(unit));
+  }
+  
+  $(class)-25 {
+    $(rule1): calc(25 + $(unit));
+    $(rule2): calc(25 + $(unit));
+  }
+  
+  $(class)-30 {
+    $(rule1): calc(30 + $(unit));
+    $(rule2): calc(30 + $(unit));
+  }
+  
+  $(class)-35 {
+    $(rule1): calc(35 + $(unit));
+    $(rule2): calc(35 + $(unit));
+  }
+  
+  $(class)-40 {
+    $(rule1): calc(40 + $(unit));
+    $(rule2): calc(40 + $(unit));
+  }
+  
+  $(class)-45 {
+    $(rule1): calc(45 + $(unit));
+    $(rule2): calc(45 + $(unit));
+  }
+  
+  $(class)-50 {
+    $(rule1): calc(50 + $(unit));
+    $(rule2): calc(50 + $(unit));
+  }
+  
+  $(class)-55 {
+    $(rule1): calc(55 + $(unit));
+    $(rule2): calc(55 + $(unit));
+  }
+  
+  $(class)-60 {
+    $(rule1): calc(60 + $(unit));
+    $(rule2): calc(60 + $(unit));
+  }
+  
+  $(class)-65 {
+    $(rule1): calc(65 + $(unit));
+    $(rule2): calc(65 + $(unit));
+  }
+  
+  $(class)-70 {
+    $(rule1): calc(70 + $(unit));
+    $(rule2): calc(70 + $(unit));
+  }
+  
+  $(class)-75 {
+    $(rule1): calc(75 + $(unit));
+    $(rule2): calc(75 + $(unit));
+  }
+  
+  $(class)-80 {
+    $(rule1): calc(80 + $(unit));
+    $(rule2): calc(80 + $(unit));
+  }
+  
+  $(class)-85 {
+    $(rule1): calc(85 + $(unit));
+    $(rule2): calc(85 + $(unit));
+  }
+  
+  $(class)-90 {
+    $(rule1): calc(90 + $(unit));
+    $(rule2): calc(90 + $(unit));
+  }
+  
+  $(class)-95 {
+    $(rule1): calc(95 + $(unit));
+    $(rule2): calc(95 + $(unit));
+  }
+  
+  $(class)-100 {
+    $(rule1): calc(100 + $(unit));
+    $(rule2): calc(100 + $(unit));
+  }
+}
+

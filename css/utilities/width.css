@@ -1,0 +1,45 @@
+@mixin size-percent .width, width, %;
+@mixin size-percent .vw\:width, width, vw;
+@mixin size-pixel .px\:width, width;
+@mixin size-mixin .em\:width, width, em;
+@mixin size-mixin .rem\:width, width, rem;
+
+@media (min-width: 640px) {
+  @mixin size-percent .small\:width, width, %;
+  @mixin size-percent .small\:vw\:width, width, vw;
+  @mixin size-pixel .small\:px\:width, width;
+  @mixin size-mixin .small\:em\:width, width, em;
+  @mixin size-mixin .small\:rem\:width, width, rem;
+}
+
+@media (min-width: 768px) {
+  @mixin size-percent .medium\:width, width, %;
+  @mixin size-percent .medium\:vw\:width, width, vw;
+  @mixin size-pixel .medium\:px\:width, width;
+  @mixin size-mixin .medium\:em\:width, width, em;
+  @mixin size-mixin .medium\:rem\:width, width, rem;
+}
+
+@media (min-width: 1024px) {
+  @mixin size-percent .large\:width, width, %;
+  @mixin size-percent .large\:vw\:width, width, vw;
+  @mixin size-pixel .large\:px\:width, width;
+  @mixin size-mixin .large\:em\:width, width, em;
+  @mixin size-mixin .large\:rem\:width, width, rem;
+}
+
+@media (min-width: 1280px) {
+  @mixin size-percent .larger\:width, width, %;
+  @mixin size-percent .larger\:vw\:width, width, vw;
+  @mixin size-pixel .larger\:px\:width, width;
+  @mixin size-mixin .larger\:em\:width, width, em;
+  @mixin size-mixin .larger\:rem\:width, width, rem;
+}
+
+@media (min-width: 1536px) {
+  @mixin size-percent .largest\:width, width, %;
+  @mixin size-percent .largest\:vw\:width, width, vw;
+  @mixin size-pixel .largest\:px\:width, width;
+  @mixin size-mixin .largest\:em\:width, width, em;
+  @mixin size-mixin .largest\:rem\:width, width, rem;
+}
