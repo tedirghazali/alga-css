@@ -1,0 +1,61 @@
+.visible { visibility: visible !important; }
+.invisible { visibility: hidden !important; }
+.hidden { display: none !important; }
+.inline { display: inline !important; }
+.block { display: block !important; }
+.block-inline { display: inline-block !important; }
+
+@media (min-width: 640px) {
+  .small\:visible { visibility: visible !important; }
+  .small\:invisible { visibility: hidden !important; }
+  .small\:hidden { display: none !important; }
+  .small\:inline { display: inline !important; }
+  .small\:block { display: block !important; }
+  .small\:block-inline { display: inline-block !important; }
+}
+
+@media (min-width: 768px) {
+  .medium\:visible { visibility: visible !important; }
+  .medium\:invisible { visibility: hidden !important; }
+  .medium\:hidden { display: none !important; }
+  .medium\:inline { display: inline !important; }
+  .medium\:block { display: block !important; }
+  .medium\:block-inline { display: inline-block !important; }
+}
+
+@media (min-width: 1024px) {
+  .large\:visible { visibility: visible !important; }
+  .large\:invisible { visibility: hidden !important; }
+  .large\:hidden { display: none !important; }
+  .large\:inline { display: inline !important; }
+  .large\:block { display: block !important; }
+  .large\:block-inline { display: inline-block !important; }
+}
+
+@media (min-width: 1280px) {
+  .larger\:visible { visibility: visible !important; }
+  .larger\:invisible { visibility: hidden !important; }
+  .larger\:hidden { display: none !important; }
+  .larger\:inline { display: inline !important; }
+  .larger\:block { display: block !important; }
+  .larger\:block-inline { display: inline-block !important; }
+}
+
+@media (min-width: 1536px) {
+  .largest\:visible { visibility: visible !important; }
+  .largest\:invisible { visibility: hidden !important; }
+  .largest\:hidden { display: none !important; }
+  .largest\:inline { display: inline !important; }
+  .largest\:block { display: block !important; }
+  .largest\:block-inline { display: inline-block !important; }
+}
+
+
+@media print {
+  .print\:visible { visibility: visible !important; }
+  .print\:invisible { visibility: hidden !important; }
+  .print\:hidden { display: none !important; }
+  .print\:inline { display: inline !important; }
+  .print\:block { display: block !important; }
+  .print\:block-inline { display: inline-block !important; }
+}

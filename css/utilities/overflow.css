@@ -1,0 +1,393 @@
+.overflow,
+.auto\:overflow { 
+  overflow: auto !important;
+  &-x {
+    overflow-x: auto !important;
+  }
+  &-y {
+    overflow-y: auto !important;
+  }
+}
+
+.hidden\:overflow { 
+  overflow: hidden !important;
+  &-x {
+    overflow-x: hidden !important;
+  }
+  &-y {
+    overflow-y: hidden !important;
+  }
+}
+
+.visible\:overflow { 
+  overflow: visible !important;
+  &-x {
+    overflow-x: visible !important;
+  }
+  &-y {
+    overflow-y: visible !important;
+  }
+}
+.scroll\:overflow { 
+  overflow: scroll !important;
+  &-x {
+    overflow-x: scroll !important;
+  }
+  &-y {
+    overflow-y: scroll !important;
+  }
+}
+
+.clip\:text {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.truncate\:text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.less\:text {
+  overflow: hidden;
+  text-overflow: " [..]";
+  white-space: nowrap;
+}
+
+.more\:text {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: initial;
+}
+
+@media (min-width: 640px) {
+  .small\:overflow,
+  .small\:auto\:overflow { 
+    overflow: auto !important;
+    &-x {
+      overflow-x: auto !important;
+    }
+    &-y {
+      overflow-y: auto !important;
+    }
+  }
+
+  .small\:hidden\:overflow { 
+    overflow: hidden !important;
+    &-x {
+      overflow-x: hidden !important;
+    }
+    &-y {
+      overflow-y: hidden !important;
+    }
+  }
+
+  .small\:visible\:overflow { 
+    overflow: visible !important;
+    &-x {
+      overflow-x: visible !important;
+    }
+    &-y {
+      overflow-y: visible !important;
+    }
+  }
+  .small\:scroll\:overflow { 
+    overflow: scroll !important;
+    &-x {
+      overflow-x: scroll !important;
+    }
+    &-y {
+      overflow-y: scroll !important;
+    }
+  }
+
+  .small\:clip\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+
+  .small\:truncate\:text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .small\:less\:text {
+    overflow: hidden;
+    text-overflow: " [..]";
+    white-space: nowrap;
+  }
+
+  .small\:more\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: initial;
+  }
+}
+
+@media (min-width: 768px) {
+  .medium\:overflow,
+  .medium\:auto\:overflow { 
+    overflow: auto !important;
+    &-x {
+      overflow-x: auto !important;
+    }
+    &-y {
+      overflow-y: auto !important;
+    }
+  }
+
+  .medium\:hidden\:overflow { 
+    overflow: hidden !important;
+    &-x {
+      overflow-x: hidden !important;
+    }
+    &-y {
+      overflow-y: hidden !important;
+    }
+  }
+
+  .medium\:visible\:overflow { 
+    overflow: visible !important;
+    &-x {
+      overflow-x: visible !important;
+    }
+    &-y {
+      overflow-y: visible !important;
+    }
+  }
+  .medium\:scroll\:overflow { 
+    overflow: scroll !important;
+    &-x {
+      overflow-x: scroll !important;
+    }
+    &-y {
+      overflow-y: scroll !important;
+    }
+  }
+
+  .medium\:clip\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+
+  .medium\:truncate\:text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .medium\:less\:text {
+    overflow: hidden;
+    text-overflow: " [..]";
+    white-space: nowrap;
+  }
+
+  .medium\:more\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: initial;
+  }
+}
+
+@media (min-width: 1024px) {
+  .large\:overflow,
+  .large\:auto\:overflow { 
+    overflow: auto !important;
+    &-x {
+      overflow-x: auto !important;
+    }
+    &-y {
+      overflow-y: auto !important;
+    }
+  }
+
+  .large\:hidden\:overflow { 
+    overflow: hidden !important;
+    &-x {
+      overflow-x: hidden !important;
+    }
+    &-y {
+      overflow-y: hidden !important;
+    }
+  }
+
+  .large\:visible\:overflow { 
+    overflow: visible !important;
+    &-x {
+      overflow-x: visible !important;
+    }
+    &-y {
+      overflow-y: visible !important;
+    }
+  }
+  .large\:scroll\:overflow { 
+    overflow: scroll !important;
+    &-x {
+      overflow-x: scroll !important;
+    }
+    &-y {
+      overflow-y: scroll !important;
+    }
+  }
+
+  .large\:clip\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+
+  .large\:truncate\:text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .large\:less\:text {
+    overflow: hidden;
+    text-overflow: " [..]";
+    white-space: nowrap;
+  }
+
+  .large\:more\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: initial;
+  }
+}
+
+@media (min-width: 1280px) {
+  .larger\:overflow,
+  .larger\:auto\:overflow { 
+    overflow: auto !important;
+    &-x {
+      overflow-x: auto !important;
+    }
+    &-y {
+      overflow-y: auto !important;
+    }
+  }
+
+  .larger\:hidden\:overflow { 
+    overflow: hidden !important;
+    &-x {
+      overflow-x: hidden !important;
+    }
+    &-y {
+      overflow-y: hidden !important;
+    }
+  }
+
+  .larger\:visible\:overflow { 
+    overflow: visible !important;
+    &-x {
+      overflow-x: visible !important;
+    }
+    &-y {
+      overflow-y: visible !important;
+    }
+  }
+  .larger\:scroll\:overflow { 
+    overflow: scroll !important;
+    &-x {
+      overflow-x: scroll !important;
+    }
+    &-y {
+      overflow-y: scroll !important;
+    }
+  }
+
+  .larger\:clip\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+
+  .larger\:truncate\:text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .larger\:less\:text {
+    overflow: hidden;
+    text-overflow: " [..]";
+    white-space: nowrap;
+  }
+
+  .larger\:more\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: initial;
+  }
+}
+
+@media (min-width: 1536px) {
+  .largest\:overflow,
+  .largest\:auto\:overflow { 
+    overflow: auto !important;
+    &-x {
+      overflow-x: auto !important;
+    }
+    &-y {
+      overflow-y: auto !important;
+    }
+  }
+
+  .largest\:hidden\:overflow { 
+    overflow: hidden !important;
+    &-x {
+      overflow-x: hidden !important;
+    }
+    &-y {
+      overflow-y: hidden !important;
+    }
+  }
+
+  .largest\:visible\:overflow { 
+    overflow: visible !important;
+    &-x {
+      overflow-x: visible !important;
+    }
+    &-y {
+      overflow-y: visible !important;
+    }
+  }
+  .largest\:scroll\:overflow { 
+    overflow: scroll !important;
+    &-x {
+      overflow-x: scroll !important;
+    }
+    &-y {
+      overflow-y: scroll !important;
+    }
+  }
+
+  .largest\:clip\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+
+  .largest\:truncate\:text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .largest\:less\:text {
+    overflow: hidden;
+    text-overflow: " [..]";
+    white-space: nowrap;
+  }
+
+  .largest\:more\:text {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: initial;
+  }
+}

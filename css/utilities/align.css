@@ -1,0 +1,129 @@
+.left\:align, .left\:text { text-align: left !important; }
+.right\:align, .right\:text { text-align: right !important; }
+.center\:align, .center\:text { text-align: center !important; }
+
+.top\:align { vertical-align: top !important; }
+.middle\:align { vertical-align: middle !important; }
+.bottom\:align { vertical-align: bottom !important; }
+.top\:text { vertical-align: text-top !important; }
+.bottom\:text { vertical-align: text-bottom !important; }
+
+.left\:float { float: left !important; }
+.right\:float { float: right !important; }
+.none\:float { float: none !important; }
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+@media (min-width: 640px) {
+  .small\:left\:align, .small\:left\:text { text-align: left !important; }
+  .small\:right\:align, .small\:right\:text { text-align: right !important; }
+  .small\:center\:align, .small\:center\:text { text-align: center !important; }
+  
+  .small\:top\:align { vertical-align: top !important; }
+  .small\:middle\:align { vertical-align: middle !important; }
+  .small\:bottom\:align { vertical-align: bottom !important; }
+  .small\:top\:text { vertical-align: text-top !important; }
+  .small\:bottom\:text { vertical-align: text-bottom !important; }
+
+  .small\:left\:float { float: left !important; }
+  .small\:right\:float { float: right !important; }
+  .small\:none\:float { float: none !important; }
+  
+  .small\:clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 768px) {
+  .medium\:left\:align, .medium\:left\:text { text-align: left !important; }
+  .medium\:right\:align, .medium\:right\:text { text-align: right !important; }
+  .medium\:center\:align, .medium\:center\:text { text-align: center !important; }
+  
+  .medium\:top\:align { vertical-align: top !important; }
+  .medium\:middle\:align { vertical-align: middle !important; }
+  .medium\:bottom\:align { vertical-align: bottom !important; }
+  .medium\:top\:text { vertical-align: text-top !important; }
+  .medium\:bottom\:text { vertical-align: text-bottom !important; }
+
+  .medium\:left\:float { float: left !important; }
+  .medium\:right\:float { float: right !important; }
+  .medium\:none\:float { float: none !important; }
+  
+  .medium\:clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 1024px) {
+  .large\:left\:align, .large\:left\:text { text-align: left !important; }
+  .large\:right\:align, .large\:right\:text { text-align: right !important; }
+  .large\:center\:align, .large\:center\:text { text-align: center !important; }
+  
+  .large\:top\:align { vertical-align: top !important; }
+  .large\:middle\:align { vertical-align: middle !important; }
+  .large\:bottom\:align { vertical-align: bottom !important; }
+  .large\:top\:text { vertical-align: text-top !important; }
+  .large\:bottom\:text { vertical-align: text-bottom !important; }
+
+  .large\:left\:float { float: left !important; }
+  .large\:right\:float { float: right !important; }
+  .large\:none\:float { float: none !important; }
+  
+  .large\:clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 1280px) {
+  .larger\:left\:align, .larger\:left\:text { text-align: left !important; }
+  .larger\:right\:align, .larger\:right\:text { text-align: right !important; }
+  .larger\:center\:align, .larger\:center\:text { text-align: center !important; }
+  
+  .larger\:top\:align { vertical-align: top !important; }
+  .larger\:middle\:align { vertical-align: middle !important; }
+  .larger\:bottom\:align { vertical-align: bottom !important; }
+  .larger\:top\:text { vertical-align: text-top !important; }
+  .larger\:bottom\:text { vertical-align: text-bottom !important; }
+
+  .larger\:left\:float { float: left !important; }
+  .larger\:right\:float { float: right !important; }
+  .larger\:none\:float { float: none !important; }
+  
+  .larger\:clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 1536px) {
+  .largest\:left\:align, .largest\:left\:text { text-align: left !important; }
+  .largest\:right\:align, .largest\:right\:text { text-align: right !important; }
+  .largest\:center\:align, .largest\:center\:text { text-align: center !important; }
+  
+  .largest\:top\:align { vertical-align: top !important; }
+  .largest\:middle\:align { vertical-align: middle !important; }
+  .largest\:bottom\:align { vertical-align: bottom !important; }
+  .largest\:top\:text { vertical-align: text-top !important; }
+  .largest\:bottom\:text { vertical-align: text-bottom !important; }
+
+  .largest\:left\:float { float: left !important; }
+  .largest\:right\:float { float: right !important; }
+  .largest\:none\:float { float: none !important; }
+  
+  .largest\:clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

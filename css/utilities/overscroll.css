@@ -1,0 +1,195 @@
+.overscroll,
+.auto\:overscroll {
+  overscroll-behavior: auto !important;
+  &-x {
+    overscroll-behavior-x: auto !important;
+  }
+  &-y {
+    overscroll-behavior-y: auto !important;
+  }
+}
+
+.contain\:overscroll {
+  overscroll-behavior: contain !important;
+  &-x {
+    overscroll-behavior-x: contain !important;
+  }
+  &-y {
+    overscroll-behavior-y: contain !important;
+  }
+}
+
+.none\:overscroll {
+  overscroll-behavior: none !important;
+  &-x {
+    overscroll-behavior-x: none !important;
+  }
+  &-y {
+    overscroll-behavior-y: none !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .small\:overscroll,
+  .small\:auto\:overscroll {
+    overscroll-behavior: auto !important;
+    &-x {
+      overscroll-behavior-x: auto !important;
+    }
+    &-y {
+      overscroll-behavior-y: auto !important;
+    }
+  }
+
+  .small\:contain\:overscroll {
+    overscroll-behavior: contain !important;
+    &-x {
+      overscroll-behavior-x: contain !important;
+    }
+    &-y {
+      overscroll-behavior-y: contain !important;
+    }
+  }
+
+  .small\:none\:overscroll {
+    overscroll-behavior: none !important;
+    &-x {
+      overscroll-behavior-x: none !important;
+    }
+    &-y {
+      overscroll-behavior-y: none !important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .medium\:overscroll,
+  .medium\:auto\:overscroll {
+    overscroll-behavior: auto !important;
+    &-x {
+      overscroll-behavior-x: auto !important;
+    }
+    &-y {
+      overscroll-behavior-y: auto !important;
+    }
+  }
+
+  .medium\:contain\:overscroll {
+    overscroll-behavior: contain !important;
+    &-x {
+      overscroll-behavior-x: contain !important;
+    }
+    &-y {
+      overscroll-behavior-y: contain !important;
+    }
+  }
+
+  .medium\:none\:overscroll {
+    overscroll-behavior: none !important;
+    &-x {
+      overscroll-behavior-x: none !important;
+    }
+    &-y {
+      overscroll-behavior-y: none !important;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .large\:overscroll,
+  .large\:auto\:overscroll {
+    overscroll-behavior: auto !important;
+    &-x {
+      overscroll-behavior-x: auto !important;
+    }
+    &-y {
+      overscroll-behavior-y: auto !important;
+    }
+  }
+
+  .large\:contain\:overscroll {
+    overscroll-behavior: contain !important;
+    &-x {
+      overscroll-behavior-x: contain !important;
+    }
+    &-y {
+      overscroll-behavior-y: contain !important;
+    }
+  }
+
+  .large\:none\:overscroll {
+    overscroll-behavior: none !important;
+    &-x {
+      overscroll-behavior-x: none !important;
+    }
+    &-y {
+      overscroll-behavior-y: none !important;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .larger\:overscroll,
+  .larger\:auto\:overscroll {
+    overscroll-behavior: auto !important;
+    &-x {
+      overscroll-behavior-x: auto !important;
+    }
+    &-y {
+      overscroll-behavior-y: auto !important;
+    }
+  }
+
+  .larger\:contain\:overscroll {
+    overscroll-behavior: contain !important;
+    &-x {
+      overscroll-behavior-x: contain !important;
+    }
+    &-y {
+      overscroll-behavior-y: contain !important;
+    }
+  }
+
+  .larger\:none\:overscroll {
+    overscroll-behavior: none !important;
+    &-x {
+      overscroll-behavior-x: none !important;
+    }
+    &-y {
+      overscroll-behavior-y: none !important;
+    }
+  }
+}
+
+@media (min-width: 1536px) {
+  .largest\:overscroll,
+  .largest\:auto\:overscroll {
+    overscroll-behavior: auto !important;
+    &-x {
+      overscroll-behavior-x: auto !important;
+    }
+    &-y {
+      overscroll-behavior-y: auto !important;
+    }
+  }
+
+  .largest\:contain\:overscroll {
+    overscroll-behavior: contain !important;
+    &-x {
+      overscroll-behavior-x: contain !important;
+    }
+    &-y {
+      overscroll-behavior-y: contain !important;
+    }
+  }
+
+  .largest\:none\:overscroll {
+    overscroll-behavior: none !important;
+    &-x {
+      overscroll-behavior-x: none !important;
+    }
+    &-y {
+      overscroll-behavior-y: none !important;
+    }
+  }
+}

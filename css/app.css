@@ -42,6 +42,7 @@
 @import './helpers/color.css';
 @import './helpers/rounded.css';
 @import './helpers/stack.css';
+@import './helpers/text.css';
 
 /* Utilities */
 @import './utilities/flex.css';
@@ -50,4 +51,8 @@
 @import './utilities/position.css';
 @import './utilities/width.css';
 @import './utilities/height.css';
+@import './utilities/visibility.css';
+@import './utilities/align.css';
+@import './utilities/overflow.css';
+@import './utilities/overscroll.css';
 
