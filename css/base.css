@@ -2,30 +2,30 @@
 
 :root {
   /* These colors are based on Bootstrap 5 colors */
-  --ts-primary: #0d6efd;
-  --ts-secondary: #6c757d;
-  --ts-accent: #b31b94;
-  --ts-success: #198754;
-  --ts-info: #0dcaf0;
-  --ts-warning: #ffc107;
-  --ts-danger: #dc3545;
-  --ts-black: #000;
-  --ts-white: #fff;
-  --ts-transparent: transparent;
-  --ts-current: currentColor;
-  --ts-blue: #0d6efd;
-  --ts-indigo: #6610f2;
-  --ts-purple: #6f42c1;
-  --ts-pink: #d63384;
-  --ts-red: #dc3545;
-  --ts-orange: #fd7e14;
-  --ts-yellow: #ffc107;
-  --ts-green: #198754;
-  --ts-teal: #20c997;
-  --ts-cyan: #0dcaf0;
-  --ts-gray: #6c757d;
-  --ts-dark: #212529;
-  --ts-light: #f8f9fa;
+  --alga-primary: #0d6efd;
+  --alga-secondary: #6c757d;
+  --alga-accent: #b31b94;
+  --alga-success: #198754;
+  --alga-info: #0dcaf0;
+  --alga-warning: #ffc107;
+  --alga-danger: #dc3545;
+  --alga-black: #000;
+  --alga-white: #fff;
+  --alga-transparent: transparent;
+  --alga-current: currentColor;
+  --alga-blue: #0d6efd;
+  --alga-indigo: #6610f2;
+  --alga-purple: #6f42c1;
+  --alga-pink: #d63384;
+  --alga-red: #dc3545;
+  --alga-orange: #fd7e14;
+  --alga-yellow: #ffc107;
+  --alga-green: #198754;
+  --alga-teal: #20c997;
+  --alga-cyan: #0dcaf0;
+  --alga-gray: #6c757d;
+  --alga-dark: #212529;
+  --alga-light: #f8f9fa;
 }
 
 *, *::before, *::after {

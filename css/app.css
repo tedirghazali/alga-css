@@ -37,6 +37,7 @@
 @import './components/picker.css';
 @import './components/dropzone.css';
 @import './components/card.css';
+@import './components/progress.css';
 
 /* Helpers */
 @import './helpers/color.css';
