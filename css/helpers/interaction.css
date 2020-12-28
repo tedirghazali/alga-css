@@ -1,0 +1,22 @@
+.all\:selection { user-select: all !important; }
+.auto\:selection { user-select: auto !important; }
+.none\:selection { user-select: none !important; }
+.text\:selection { user-select: none !important; }
+
+.none\:event { pointer-events: none !important; }
+.auto\:event { pointer-events: auto !important; }
+
+.cursor { cursor: default; }
+.auto\:cursor { cursor: auto; }
+.pointer\:cursor { cursor: pointer; }
+.wait\:cursor { cursor: wait; }
+.text\:cursor { cursor: text; }
+.move\:cursor { cursor: move; }
+.cursor-disabled { cursor: not-allowed; }
+
+.none\:appearance {	appearance: none; }
+
+.resize { resize: both; }
+.none\:resize { resize: none; }
+.start\:resize { resize: vertical; }
+.end\:resize { resize: horizontal; }

@@ -1,45 +1,45 @@
-@mixin size-percent .width, width, %;
-@mixin size-percent .vw\:width, width, vw;
-@mixin size-pixel .px\:width, width;
-@mixin size-mixin .em\:width, width, em;
-@mixin size-mixin .rem\:width, width, rem;
+@mixin sizing-percent .width, width;
+@mixin sizing-vw .vw\:width, width;
+@mixin sizing-pixel .px\:width, width;
+@mixin sizing-em .em\:width, width;
+@mixin sizing-mixin .rem\:width, width;
 
 @media (min-width: 640px) {
-  @mixin size-percent .small\:width, width, %;
-  @mixin size-percent .small\:vw\:width, width, vw;
-  @mixin size-pixel .small\:px\:width, width;
-  @mixin size-mixin .small\:em\:width, width, em;
-  @mixin size-mixin .small\:rem\:width, width, rem;
+  @mixin sizing-percent .small\:width, width;
+  @mixin sizing-vw .small\:vw\:width, width;
+  @mixin sizing-pixel .small\:px\:width, width;
+  @mixin sizing-em .small\:em\:width, width;
+  @mixin sizing-mixin .small\:rem\:width, width;
 }
 
 @media (min-width: 768px) {
-  @mixin size-percent .medium\:width, width, %;
-  @mixin size-percent .medium\:vw\:width, width, vw;
-  @mixin size-pixel .medium\:px\:width, width;
-  @mixin size-mixin .medium\:em\:width, width, em;
-  @mixin size-mixin .medium\:rem\:width, width, rem;
+  @mixin sizing-percent .medium\:width, width;
+  @mixin sizing-vw .medium\:vw\:width, width;
+  @mixin sizing-pixel .medium\:px\:width, width;
+  @mixin sizing-em .medium\:em\:width, width;
+  @mixin sizing-mixin .medium\:rem\:width, width;
 }
 
 @media (min-width: 1024px) {
-  @mixin size-percent .large\:width, width, %;
-  @mixin size-percent .large\:vw\:width, width, vw;
-  @mixin size-pixel .large\:px\:width, width;
-  @mixin size-mixin .large\:em\:width, width, em;
-  @mixin size-mixin .large\:rem\:width, width, rem;
+  @mixin sizing-percent .large\:width, width;
+  @mixin sizing-vw .large\:vw\:width, width;
+  @mixin sizing-pixel .large\:px\:width, width;
+  @mixin sizing-em .large\:em\:width, width;
+  @mixin sizing-mixin .large\:rem\:width, width;
 }
 
 @media (min-width: 1280px) {
-  @mixin size-percent .larger\:width, width, %;
-  @mixin size-percent .larger\:vw\:width, width, vw;
-  @mixin size-pixel .larger\:px\:width, width;
-  @mixin size-mixin .larger\:em\:width, width, em;
-  @mixin size-mixin .larger\:rem\:width, width, rem;
+  @mixin sizing-percent .larger\:width, width;
+  @mixin sizing-vw .larger\:vw\:width, width;
+  @mixin sizing-pixel .larger\:px\:width, width;
+  @mixin sizing-em .larger\:em\:width, width;
+  @mixin sizing-mixin .larger\:rem\:width, width;
 }
 
 @media (min-width: 1536px) {
-  @mixin size-percent .largest\:width, width, %;
-  @mixin size-percent .largest\:vw\:width, width, vw;
-  @mixin size-pixel .largest\:px\:width, width;
-  @mixin size-mixin .largest\:em\:width, width, em;
-  @mixin size-mixin .largest\:rem\:width, width, rem;
+  @mixin sizing-percent .largest\:width, width;
+  @mixin sizing-vw .largest\:vw\:width, width;
+  @mixin sizing-pixel .largest\:px\:width, width;
+  @mixin sizing-em .largest\:em\:width, width;
+  @mixin sizing-mixin .largest\:rem\:width, width;
 }

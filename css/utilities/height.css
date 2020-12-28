@@ -1,45 +1,45 @@
-@mixin size-percent .height, height, %;
-@mixin size-percent .vh\:height, height, vh;
-@mixin size-pixel .px\:height, height;
-@mixin size-mixin .em\:height, height, em;
-@mixin size-mixin .rem\:height, height, rem;
+@mixin sizing-percent .height, height;
+@mixin sizing-vh .vh\:height, height;
+@mixin sizing-pixel .px\:height, height;
+@mixin sizing-em .em\:height, height;
+@mixin sizing-mixin .rem\:height, height;
 
 @media (min-height: 640px) {
-  @mixin size-percent .small\:height, height, %;
-  @mixin size-percent .small\:vh\:height, height, vh;
-  @mixin size-pixel .small\:px\:height, height;
-  @mixin size-mixin .small\:em\:height, height, em;
-  @mixin size-mixin .small\:rem\:height, height, rem;
+  @mixin sizing-percent .small\:height, height;
+  @mixin sizing-vh .small\:vh\:height, height;
+  @mixin sizing-pixel .small\:px\:height, height;
+  @mixin sizing-em .small\:em\:height, height;
+  @mixin sizing-mixin .small\:rem\:height, height;
 }
 
 @media (min-height: 768px) {
-  @mixin size-percent .medium\:height, height, %;
-  @mixin size-percent .medium\:vh\:height, height, vh;
-  @mixin size-pixel .medium\:px\:height, height;
-  @mixin size-mixin .medium\:em\:height, height, em;
-  @mixin size-mixin .medium\:rem\:height, height, rem;
+  @mixin sizing-percent .medium\:height, height;
+  @mixin sizing-vh .medium\:vh\:height, height;
+  @mixin sizing-pixel .medium\:px\:height, height;
+  @mixin sizing-em .medium\:em\:height, height;
+  @mixin sizing-mixin .medium\:rem\:height, height;
 }
 
 @media (min-height: 1024px) {
-  @mixin size-percent .large\:height, height, %;
-  @mixin size-percent .large\:vh\:height, height, vh;
-  @mixin size-pixel .large\:px\:height, height;
-  @mixin size-mixin .large\:em\:height, height, em;
-  @mixin size-mixin .large\:rem\:height, height, rem;
+  @mixin sizing-percent .large\:height, height;
+  @mixin sizing-vh .large\:vh\:height, height;
+  @mixin sizing-pixel .large\:px\:height, height;
+  @mixin sizing-em .large\:em\:height, height;
+  @mixin sizing-mixin .large\:rem\:height, height;
 }
 
 @media (min-height: 1280px) {
-  @mixin size-percent .larger\:height, height, %;
-  @mixin size-percent .larger\:vh\:height, height, vh;
-  @mixin size-pixel .larger\:px\:height, height;
-  @mixin size-mixin .larger\:em\:height, height, em;
-  @mixin size-mixin .larger\:rem\:height, height, rem;
+  @mixin sizing-percent .larger\:height, height;
+  @mixin sizing-vh .larger\:vh\:height, height;
+  @mixin sizing-pixel .larger\:px\:height, height;
+  @mixin sizing-em .larger\:em\:height, height;
+  @mixin sizing-mixin .larger\:rem\:height, height;
 }
 
 @media (min-height: 1536px) {
-  @mixin size-percent .largest\:height, height, %;
-  @mixin size-percent .largest\:vh\:height, height, vh;
-  @mixin size-pixel .largest\:px\:height, height;
-  @mixin size-mixin .largest\:em\:height, height, em;
-  @mixin size-mixin .largest\:rem\:height, height, rem;
+  @mixin sizing-percent .largest\:height, height;
+  @mixin sizing-vh .largest\:vh\:height, height;
+  @mixin sizing-pixel .largest\:px\:height, height;
+  @mixin sizing-em .largest\:em\:height, height;
+  @mixin sizing-mixin .largest\:rem\:height, height;
 }

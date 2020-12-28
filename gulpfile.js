@@ -19,6 +19,7 @@ function css() {
         mixinsDir: path.join(__dirname, 'css/mixins')
       }),
       require('tailwindcss'),
+      //require("stylelint"),
       require('postcss-custom-properties'),
       require('postcss-simple-vars'),
       require('postcss-nested'),

@@ -1,18 +1,18 @@
 {
-  "name": "tailstrap",
-  "version": "0.0.1",
-  "description": "Tailstrap CSS is a front-end framework based on Tailwind CSS with Bootstrap like classes",
+  "name": "alga-css",
+  "version": "0.0.1-development-1",
+  "description": "Alga CSS is an alternative toolkit based on Tailwind CSS and Bootstrap 5",
   "main": "css/app.css",
   "scripts": {
     "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tedirghazali/tailstrap.git"
+    "url": "git+https://github.com/tedirghazali/alga-css.git"
   },
   "keywords": [
-    "tailwindcss",
-    "bootstrap5",
+    "css-framework",
+    "postcss",
     "frontend",
     "framework",
     "css"
@@ -20,9 +20,9 @@
   "author": "Tedir Ghazali",
   "license": "SEE LICENSE IN license.txt",
   "bugs": {
-    "url": "https://github.com/tedirghazali/tailstrap/issues"
+    "url": "https://github.com/tedirghazali/alga-css/issues"
   },
-  "homepage": "https://github.com/tedirghazali/tailstrap#readme",
+  "homepage": "https://github.com/tedirghazali/alga-css#readme",
   "devDependencies": {
     "autoprefixer": "^10.0.2",
     "gulp": "^4.0.2",
@@ -38,6 +38,7 @@
     "postcss-mixins": "^7.0.2",
     "postcss-nested": "^5.0.1",
     "postcss-simple-vars": "^6.0.2",
+    "stylelint": "^13.8.0",
     "tailwindcss": "^2.0.1"
   }
 }
