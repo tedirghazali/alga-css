@@ -1,0 +1,8 @@
+.tab {
+  &-content > &-panel {
+    display: none;
+  }
+  &-content > .active {
+    display: block;
+  }
+}

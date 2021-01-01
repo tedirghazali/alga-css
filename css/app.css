@@ -21,6 +21,7 @@
 @import './elements/button.css';
 @import './elements/list.css';
 @import './elements/nav.css';
+@import './elements/tab.css';
 
 /* Forms */
 @import './forms/label.css';
@@ -48,6 +49,7 @@
 
 /* Utilities */
 @import './utilities/flex.css';
+@import './utilities/grid.css';
 @import './utilities/margin.css';
 @import './utilities/padding.css';
 @import './utilities/position.css';

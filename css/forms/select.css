@@ -13,37 +13,37 @@
   background-position: right 0.75rem center;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-.select:focus {
-  border-color: #86b7fe;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-}
-.select[multiple], .select[size]:not([size="1"]) {
-  padding-right: 0.75rem;
-  background-image: none;
-}
-.select:disabled {
-  color: #6c757d;
-  background-color: #e9ecef;
-}
-.select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #212529;
+  
+  &:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+  &[multiple], &[size]:not([size="1"]) {
+    padding-right: 0.75rem;
+    background-image: none;
+  }
+  &:disabled {
+    color: #6c757d;
+    background-color: #e9ecef;
+  }
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #212529;
+  }
 }
 
-.select-sm {
+.small\:select{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   font-size: 0.875rem;
 }
 
-.select-lg {
+.large\:select {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;

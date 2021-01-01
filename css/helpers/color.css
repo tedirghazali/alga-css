@@ -21,6 +21,10 @@
 @mixin color-mixin .teal, teal, white;
 @mixin color-mixin .cyan, cyan, white;
 @mixin color-mixin .gray, gray, black;
+@mixin color-mixin .transparent-light, transparent, black;
+@mixin color-mixin .transparent-dark, transparent, white;
+@mixin color-mixin .current-light, currentColor, black;
+@mixin color-mixin .current-dark, currentColor, white;
 
 @media (min-width: 640px) {
   @mixin color-mixin .small\:secondary, secondary, white;
@@ -45,6 +49,10 @@
   @mixin color-mixin .small\:teal, teal, white;
   @mixin color-mixin .small\:cyan, cyan, white;
   @mixin color-mixin .small\:gray, gray, black;
+  @mixin color-mixin .small\:transparent-light, transparent, black;
+  @mixin color-mixin .small\:transparent-dark, transparent, white;
+  @mixin color-mixin .small\:current-light, currentColor, black;
+  @mixin color-mixin .small\:current-dark, currentColor, white;
 }
 
 @media (min-width: 768px) {
@@ -70,6 +78,10 @@
   @mixin color-mixin .medium\:teal, teal, white;
   @mixin color-mixin .medium\:cyan, cyan, white;
   @mixin color-mixin .medium\:gray, gray, black;
+  @mixin color-mixin .medium\:transparent-light, transparent, black;
+  @mixin color-mixin .medium\:transparent-dark, transparent, white;
+  @mixin color-mixin .medium\:current-light, currentColor, black;
+  @mixin color-mixin .medium\:current-dark, currentColor, white;
 }
 
 @media (min-width: 1024px) {
@@ -95,6 +107,10 @@
   @mixin color-mixin .large\:teal, teal, white;
   @mixin color-mixin .large\:cyan, cyan, white;
   @mixin color-mixin .large\:gray, gray, black;
+  @mixin color-mixin .large\:transparent-light, transparent, black;
+  @mixin color-mixin .large\:transparent-dark, transparent, white;
+  @mixin color-mixin .large\:current-light, currentColor, black;
+  @mixin color-mixin .large\:current-dark, currentColor, white;
 }
 
 @media (min-width: 1280px) {
@@ -120,6 +136,10 @@
   @mixin color-mixin .larger\:teal, teal, white;
   @mixin color-mixin .larger\:cyan, cyan, white;
   @mixin color-mixin .larger\:gray, gray, black;
+  @mixin color-mixin .larger\:transparent-light, transparent, black;
+  @mixin color-mixin .larger\:transparent-dark, transparent, white;
+  @mixin color-mixin .larger\:current-light, currentColor, black;
+  @mixin color-mixin .larger\:current-dark, currentColor, white;
 }
 
 @media (min-width: 1536px) {
@@ -145,4 +165,8 @@
   @mixin color-mixin .largest\:teal, teal, white;
   @mixin color-mixin .largest\:cyan, cyan, white;
   @mixin color-mixin .largest\:gray, gray, black;
+  @mixin color-mixin .largest\:transparent-light, transparent, black;
+  @mixin color-mixin .largest\:transparent-dark, transparent, white;
+  @mixin color-mixin .largest\:current-light, currentColor, black;
+  @mixin color-mixin .largest\:current-dark, currentColor, white;
 }
