@@ -40,6 +40,7 @@
 @import './components/card.css';
 @import './components/progress.css';
 @import './components/modal.css';
+@import './components/callout.css';
 
 /* Helpers */
 @import './helpers/color.css';

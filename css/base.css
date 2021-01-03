@@ -3,29 +3,53 @@
 :root {
   /* These colors are based on Bootstrap 5 colors */
   --alga-primary: #0d6efd;
+  --alga-primary-opacity: #0d6efd33;
   --alga-secondary: #6c757d;
+  --alga-secondary-opacity: #6c757d33;
   --alga-accent: #b31b94;
+  --alga-accent-opacity: #b31b9433;
   --alga-success: #198754;
+  --alga-success-opacity: #19875433;
   --alga-info: #0dcaf0;
+  --alga-info-opacity: #0dcaf033;
   --alga-warning: #ffc107;
+  --alga-warning-opacity: #ffc10733;
   --alga-danger: #dc3545;
+  --alga-danger-opacity: #dc354533;
   --alga-black: #000;
+  --alga-black-opacity: #00000033;
   --alga-white: #fff;
+  --alga-white-opacity: #ffffff33;
   --alga-transparent: transparent;
+  --alga-transparent-opacity: transparent;
   --alga-current: currentColor;
+  --alga-current-opacity: currentColor;
   --alga-blue: #0d6efd;
+  --alga-blue-opacity: #0d6efd33;
   --alga-indigo: #6610f2;
+  --alga-indigo-opacity: #6610f233;
   --alga-purple: #6f42c1;
+  --alga-purple-opacity: #6f42c133;
   --alga-pink: #d63384;
+  --alga-pink-opacity: #d6338433;
   --alga-red: #dc3545;
+  --alga-red-opacity: #dc354533;
   --alga-orange: #fd7e14;
+  --alga-orange-opacity: #fd7e1433;
   --alga-yellow: #ffc107;
+  --alga-yellow-opacity: #ffc10733;
   --alga-green: #198754;
+  --alga-green-opacity: #19875433;
   --alga-teal: #20c997;
+  --alga-teal-opacity: #20c99733;
   --alga-cyan: #0dcaf0;
+  --alga-cyan-opacity: #0dcaf033;
   --alga-gray: #6c757d;
+  --alga-gray-opacity: #6c757d33;
   --alga-dark: #212529;
+  --alga-dark-opacity: #21252933;
   --alga-light: #f8f9fa;
+  --alga-light-opacity: #f8f9fa33;
 }
 
 *, *::before, *::after {
