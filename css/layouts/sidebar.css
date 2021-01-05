@@ -1,45 +1,34 @@
-@layer components {
-  .sidebar {
-    @apply flex flex-col flex-wrap justify-between h-full;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  width: 250px;
   
-    &-header {
-      @apply w-full;
-    }
+  & > * {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  & &-menu,
+  & .top\:sidebar-menu {
+    justify-content: flex-start;
+  }
+  
+  & .top\:sidebar-menu {
+    overflow: hidden;
+  }
     
-    &-control {
-      @apply w-full;
-    }
+  & .middle\:sidebar-menu {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
     
-    &-menu {
-      @apply w-full flex-grow overflow-y-auto overflow-x-hidden;
-    }
-    
-    &-footer {
-      @apply w-full;
-    }
-    
-    & .top {
-      @apply flex flex-col justify-start;
-    }
-          
-    & .middle {
-      @apply flex flex-col justify-center;
-    }
-          
-    & .bottom {
-      @apply flex flex-col justify-end;
-    }
-          
-    & .space-between {
-      @apply flex flex-col justify-between;
-    }
-         
-    & .space-around {
-      @apply flex flex-col justify-around;
-    }
-         
-    & .space-evenly {
-      @apply flex flex-col justify-evenly;
-    }
+  & .bottom\:sidebar-menu {
+    overflow: hidden;
+    justify-content: flex-end;
   }
 }

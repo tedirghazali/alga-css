@@ -1,0 +1,104 @@
+.overlay {
+  position: absolute;
+  z-index: 6;
+}
+
+.top\:overlay {
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.bottom\:overlay {
+  position: absolute;
+  z-index: 6;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.right\:overlay {
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.left\:overlay {
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top\:fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.bottom\:fixed {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.top\:sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+@media (min-width: 640px) {
+  .small\:top\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .medium\:top\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .large\:top\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .larger\:top\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1536px) {
+  .largest\:top\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}

@@ -11,13 +11,13 @@
     border-color: var(--alga-$(main));
   }
     
-  $(class)\:outline {
+  $(class)\:outlined {
     color: var(--alga-$(main));
     background-color: var(--alga-transparent);
     border-color: var(--alga-$(main));
   }
     
-  $(class)\:outline-hover:hover {
+  $(class)\:outlined\:hover:hover {
     color: var(--alga-$(main));
     background-color: var(--alga-transparent);
     border-color: var(--alga-$(main));
@@ -39,7 +39,11 @@
     caret-color: var(--alga-$(main));
   }
     
-  $(class)\:ring {
+  $(class)\:outline {
+    outline-color: var(--alga-$(main));
+  }
+    
+  $(class)\:outline\:focus:focus {
     outline-color: var(--alga-$(main));
   }
     
