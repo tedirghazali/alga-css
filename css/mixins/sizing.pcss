@@ -88,96 +88,6 @@
   }
 }
 
-@define-mixin sizing-em $class, $rule {
-  $(class)-0 {
-    $(rule): 0px !important;
-  }
-  
-  $(class)-5 {
-    $(rule): 0.125em !important;
-  }
-  
-  $(class)-10 {
-    $(rule): 0.25em !important;
-  }
-  
-  $(class)-15 {
-    $(rule): 0.375em !important;
-  }
-  
-  $(class)-20 {
-    $(rule): 0.5em !important;
-  }
-  
-  $(class)-25 {
-    $(rule): 0.625em !important;
-  }
-  
-  $(class)-30 {
-    $(rule): 0.75em !important;
-  }
-  
-  $(class)-35 {
-    $(rule): 0.875em !important;
-  }
-  
-  $(class)-40 {
-    $(rule): 1em !important;
-  }
-  
-  $(class)-45 {
-    $(rule): 1.125em !important;
-  }
-  
-  $(class)-50 {
-    $(rule): 1.25em !important;
-  }
-  
-  $(class)-55 {
-    $(rule): 1.375em !important;
-  }
-  
-  $(class)-60 {
-    $(rule): 1.5em !important;
-  }
-  
-  $(class)-65 {
-    $(rule): 1.625em !important;
-  }
-  
-  $(class)-70 {
-    $(rule): 1.75em !important;
-  }
-  
-  $(class)-75 {
-    $(rule): 1.875em !important;
-  }
-  
-  $(class)-80 {
-    $(rule): 2em !important;
-  }
-  
-  $(class)-85 {
-    $(rule): 2.125em !important;
-  }
-  
-  $(class)-90 {
-    $(rule): 2.25em !important;
-  }
-  
-  $(class)-95 {
-    $(rule): 2.375em !important;
-  }
-  
-  $(class)-100 {
-    $(rule): 2.5em !important;
-  }
-  
-  $(class)-auto {
-    $(rule): auto !important;
-  }
-}
-
 @define-mixin sizing-percent $class, $rule {
   $(class)-0 {
     $(rule): 0px !important;
@@ -448,7 +358,7 @@
   }
 }
 
-@define-mixin sizing-pixel $class {
+@define-mixin sizing-pixel $class, $rule {
   $(class)-0 {
     $(rule): 0px !important;
   }

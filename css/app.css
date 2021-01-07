@@ -16,6 +16,8 @@
 @import './elements/list.css';
 @import './elements/nav.css';
 @import './elements/tab.css';
+@import './elements/accordion.css';
+@import './elements/breadcrumb.css';
 
 /* Forms */
 @import './forms/label.css';

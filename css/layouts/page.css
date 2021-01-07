@@ -135,27 +135,28 @@
                       / auto 1fr auto;
     }
     
-    &-nav {
+    & .nav\:page-section {
       grid-area: nav;
     }
 
-    &-head {
+    & .head\:page-section {
       grid-area: head;
     }
 
-    &-side {
+    & .side\:page-section,
+    & .leftside\:page-section {
       grid-area: side;
     }
 
-    &-main {
+    & .main\:page-section {
       grid-area: main;
     }
 
-    &-side-right {
+    & .rightside\:page-section {
       grid-area: side-right;
     }
 
-    &-foot {
+    & .foot\:page-section {
       grid-area: foot;
     }
   }

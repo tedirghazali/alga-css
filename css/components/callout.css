@@ -11,24 +11,46 @@
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
+  
+  &-heading {
+    color: inherit;
+  }
+
+  &-link {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  &-dismissible {
+    padding-right: 3rem;
+  }
+  &-dismissible .button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1.25rem 1rem;
+  }
 }
 
-.alert-heading {
-  color: inherit;
-}
-
-.alert-link {
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
   font-weight: 700;
-  text-decoration: underline;
-}
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  
+  &:empty {
+    display: none;
+  }
 
-.alert-dismissible {
-  padding-right: 3rem;
-}
-.alert-dismissible .button-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  padding: 1.25rem 1rem;
+  .button & {
+    position: relative;
+    top: -1px;
+  }
 }

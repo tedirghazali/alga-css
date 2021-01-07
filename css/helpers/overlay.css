@@ -45,7 +45,23 @@
 
 .bottom\:fixed {
   position: fixed;
+  bottom: 0;
   right: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.right\:fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.left\:fixed {
+  position: fixed;
+  top: 0;
   bottom: 0;
   left: 0;
   z-index: 3;
@@ -58,47 +74,84 @@
   z-index: 2;
 }
 
+.left\:sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
 @media (min-width: 640px) {
-  .small\:top\:sticky {
+  .small\(top\:sticky\) {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 2;
+  }
+  .small\(left\:sticky\) {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
     z-index: 2;
   }
 }
 
 @media (min-width: 768px) {
-  .medium\:top\:sticky {
+  .medium\(top\:sticky\) {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 2;
+  }
+  .medium\(left\:sticky\) {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
     z-index: 2;
   }
 }
 
 @media (min-width: 1024px) {
-  .large\:top\:sticky {
+  .large\(top\:sticky\) {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 2;
+  }
+  .large\(left\:sticky\) {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
     z-index: 2;
   }
 }
 
 @media (min-width: 1280px) {
-  .larger\:top\:sticky {
+  .larger\(top\:sticky\) {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 2;
   }
+  .larger\(left\:sticky\) {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+  }
 }
 
 @media (min-width: 1536px) {
-  .largest\:top\:sticky {
+  .largest\(top\:sticky\) {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 2;
+  }
+  .largest\(left\:sticky\) {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
     z-index: 2;
   }
 }

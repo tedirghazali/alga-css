@@ -27,6 +27,12 @@
     overflow-x: hidden;
   }
     
+  & .fill\:sidebar-menu {
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: center;
+  }
+    
   & .bottom\:sidebar-menu {
     overflow: hidden;
     justify-content: flex-end;

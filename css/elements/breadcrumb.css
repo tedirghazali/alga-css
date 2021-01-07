@@ -1,0 +1,29 @@
+.breadcrumb\:nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+  
+  & .nav-item + & .nav-item {
+    padding-left: 0.5rem;
+  }
+  
+  & .nav-item + & .nav-item::before {
+    float: left;
+    padding-right: 0.5rem;
+    color: #6c757d;
+    content: var(--breadcrumb-divider, "/");
+    content: attr(data-divider);
+  }
+  
+  & .nav-item.active,
+  & .nav-item.active .nav-link {
+    color: #6c757d;
+  }
+  
+  & .nav-item.show,
+  & .nav-item.show .nav-link {
+    color: #6c757d;
+  }
+}

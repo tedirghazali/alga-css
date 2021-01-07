@@ -23,8 +23,12 @@
     justify-content: flex-start;
   }
     
-  & .center\:navbar-menu {
+  & .fill\:navbar-menu {
     flex-grow: 1;
+  }
+    
+  & .center\:navbar-menu {
+    justify-content: center;
   }
     
   & .right\:navbar-menu {

@@ -23,7 +23,7 @@
 }
 
 @media (min-width: 640px) {
-  .small\:stack {
+  .small\(stack\) {
     &-0 { z-index: 0; }
     &-1 { z-index: 1; }
     &-2 { z-index: 2; }
@@ -49,7 +49,7 @@
 }
 
 @media (min-width: 768px) {
-  .medium\:stack {
+  .medium\(stack\) {
     &-0 { z-index: 0; }
     &-1 { z-index: 1; }
     &-2 { z-index: 2; }
@@ -75,7 +75,7 @@
 }
 
 @media (min-width: 1024px) {
-  .large\:stack {
+  .large\(stack\) {
     &-0 { z-index: 0; }
     &-1 { z-index: 1; }
     &-2 { z-index: 2; }
@@ -101,7 +101,7 @@
 }
 
 @media (min-width: 1280px) {
-  .larger\:stack {
+  .larger\(stack\) {
     &-0 { z-index: 0; }
     &-1 { z-index: 1; }
     &-2 { z-index: 2; }
@@ -127,7 +127,7 @@
 }
 
 @media (min-width: 1536px) {
-  .largest\:stack {
+  .largest\(stack\) {
     &-0 { z-index: 0; }
     &-1 { z-index: 1; }
     &-2 { z-index: 2; }
