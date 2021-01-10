@@ -7,8 +7,8 @@ const postcss = require('gulp-postcss')
 const path = require('path')
 
 const dist = {
-  css: './dist/css/',
-  js: './dist/js/',
+  css: './dist/',
+  js: './dist/',
 }
 
 function css() {
@@ -25,19 +25,19 @@ function css() {
       require('postcss-nested'),
       require('autoprefixer')
     ]))
-    .pipe(rename("tailstrap.css"))
+    .pipe(rename("alga.css"))
     .pipe(dest(dist.css, { sourcemaps: '.' }))
 }
 
 function cssMin() {
-  return src(`${dist.css}tailstrap.css`)
+  return src(`${dist.css}alga.css`)
     .pipe(cleanCSS({ level: { 1: { specialComments: 0 } } }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(dest(dist.css))
 }
 
 /*function js() {
-  return src('./js/tailstrap.js')
+  return src('./js/alga.js')
     .pipe(dest(dist.js))
     .pipe(terser())
     .pipe(rename({ suffix: '.min' }))
@@ -46,7 +46,7 @@ function cssMin() {
 
 function watchChanges() {
   watch('css/app.css', series(css, cssMin))
-  //watch('js/tailstrap.js', js)
+  //watch('js/alga.js', js)
 }
 
 exports.watch = watchChanges

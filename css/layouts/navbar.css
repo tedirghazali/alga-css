@@ -13,11 +13,6 @@
     align-items: center;
   }
   
-  & > * > * {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   & &-menu,
   & .left\:navbar-menu {
     justify-content: flex-start;
@@ -43,5 +38,20 @@
   & > .larger\:container,
   & > .largest\:container {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-menu:not(:first-child),
+  .navbar-menu > *:not(:first-child),
+  .fill\:navbar-menu,
+  .center\:navbar-menu,
+  .right\:navbar-menu {
+    display: none;
+  }
+  
+  .navbar > .navbar-menu:first-child > *,
+  .navbar > .left\:navbar-menu:first-child > * {
+    width: 100vw;
   }
 }
