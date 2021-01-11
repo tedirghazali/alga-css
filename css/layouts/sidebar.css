@@ -3,8 +3,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 100vh;
   height: 100%;
-  width: 250px;
+  width: 260px;
   
   & > * {
     width: 100%;
@@ -21,13 +22,13 @@
     overflow: hidden;
   }
     
-  & .middle\:sidebar-menu {
+  & .fill\:sidebar-menu {
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
   }
     
-  & .fill\:sidebar-menu {
+  & .middle\:sidebar-menu {
     overflow-y: auto;
     overflow-x: hidden;
     justify-content: center;

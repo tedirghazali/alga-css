@@ -95,3 +95,7 @@
     border-bottom-width: 0;
   }
 }
+
+.sidebar .list-link {
+  color: inherit;
+}

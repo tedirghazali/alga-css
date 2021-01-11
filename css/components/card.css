@@ -3,22 +3,22 @@
 .bottom\:card,
 .left\:card,
 .right\:card,
-.small\:top\:card,
-.small\:bottom\:card,
-.small\:left\:card,
-.small\:right\:card,
-.medium\:top\:card,
-.medium\:bottom\:card,
-.medium\:left\:card,
-.medium\:right\:card,
-.large\:top\:card,
-.large\:bottom\:card,
-.large\:left\:card,
-.large\:right\:card,
-.larger\:top\:card,
-.larger\:bottom\:card,
-.larger\:left\:card,
-.larger\:right\:card,
+.small\(top\:card,
+.small\(bottom\:card,
+.small\(left\:card,
+.small\(right\:card,
+.medium\(top\:card,
+.medium\(bottom\:card,
+.medium\(left\:card,
+.medium\(right\:card,
+.large\(top\:card,
+.large\(bottom\:card,
+.large\(left\:card,
+.large\(right\:card,
+.larger\(top\:card,
+.larger\(bottom\:card,
+.larger\(left\:card,
+.larger\(right\:card,
 .largest\:top\:card,
 .largest\:bottom\:card,
 .largest\:left\:card,
@@ -108,36 +108,36 @@
 @mixin card-mixin .right\:card, row-reverse, 150px;
 
 @media (min-width: 640px) {
-  @mixin card-mixin .small\:top\:card, column, 100%;
-  @mixin card-mixin .small\:bottom\:card, column-reverse, 100%; 
-  @mixin card-mixin .small\:left\:card, row, 160px;
-  @mixin card-mixin .small\:right\:card, row-reverse, 160px;
+  @mixin card-mixin .small\(top\:card\), column, 100%;
+  @mixin card-mixin .small\(bottom\:card\), column-reverse, 100%; 
+  @mixin card-mixin .small\(left\:card\), row, 160px;
+  @mixin card-mixin .small\(right\:card\), row-reverse, 160px;
 }
 
 @media (min-width: 768px) {
-  @mixin card-mixin .medium\:top\:card, column, 100%;
-  @mixin card-mixin .medium\:bottom\:card, column-reverse, 100%; 
-  @mixin card-mixin .medium\:left\:card, row, 192px;
-  @mixin card-mixin .medium\:right\:card, row-reverse, 192px;
+  @mixin card-mixin .medium\(top\:card\), column, 100%;
+  @mixin card-mixin .medium\(bottom\:card\), column-reverse, 100%; 
+  @mixin card-mixin .medium\(left\:card\), row, 192px;
+  @mixin card-mixin .medium\(right\:card\), row-reverse, 192px;
 }
 
 @media (min-width: 1024px) {
-  @mixin card-mixin .large\:top\:card, column, 100%;
-  @mixin card-mixin .large\:bottom\:card, column-reverse, 100%; 
-  @mixin card-mixin .large\:left\:card, row, 256px;
-  @mixin card-mixin .large\:right\:card, row-reverse, 256px;
+  @mixin card-mixin .large\(top\:card\), column, 100%;
+  @mixin card-mixin .large\(bottom\:card\), column-reverse, 100%; 
+  @mixin card-mixin .large\(left\:card\), row, 256px;
+  @mixin card-mixin .large\(right\:card\), row-reverse, 256px;
 }
 
 @media (min-width: 1280px) {
-  @mixin card-mixin .larger\:top\:card, column, 100%;
-  @mixin card-mixin .larger\:bottom\:card, column-reverse, 100%; 
-  @mixin card-mixin .larger\:left\:card, row, 320px;
-  @mixin card-mixin .larger\:right\:card, row-reverse, 320px;
+  @mixin card-mixin .larger\(top\:card\), column, 100%;
+  @mixin card-mixin .larger\(bottom\:card\), column-reverse, 100%; 
+  @mixin card-mixin .larger\(left\:card\), row, 320px;
+  @mixin card-mixin .larger\(right\:card\), row-reverse, 320px;
 }
 
 @media (min-width: 1536px) {
-  @mixin card-mixin .larger\:top\:card, column, 100%;
-  @mixin card-mixin .larger\:bottom\:card, column-reverse, 100%; 
-  @mixin card-mixin .larger\:left\:card, row, 384px;
-  @mixin card-mixin .larger\:right\:card, row-reverse, 384px;
+  @mixin card-mixin .largest\(top\:card\), column, 100%;
+  @mixin card-mixin .largest\(bottom\:card\), column-reverse, 100%; 
+  @mixin card-mixin .largest\(left\:card\), row, 384px;
+  @mixin card-mixin .largest\(right\:card\), row-reverse, 384px;
 }

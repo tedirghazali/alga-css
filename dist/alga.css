@@ -702,8 +702,9 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 100vh;
   height: 100%;
-  width: 250px;
+  width: 260px;
 }
 
 .sidebar > * {
@@ -721,13 +722,13 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     overflow: hidden;
   }
 
-.sidebar .middle\:sidebar-menu {
+.sidebar .fill\:sidebar-menu {
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
   }
 
-.sidebar .fill\:sidebar-menu {
+.sidebar .middle\:sidebar-menu {
     overflow-y: auto;
     overflow-x: hidden;
     justify-content: center;
@@ -7292,6 +7293,10 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     border-bottom-width: 0;
   }
 
+.sidebar .list-link {
+  color: inherit;
+}
+
 .nav,
 .tab\:nav,
 .pill\:nav {
@@ -8962,22 +8967,22 @@ textarea.large\:input {
 .bottom\:card,
 .left\:card,
 .right\:card,
-.small\:top\:card,
-.small\:bottom\:card,
-.small\:left\:card,
-.small\:right\:card,
-.medium\:top\:card,
-.medium\:bottom\:card,
-.medium\:left\:card,
-.medium\:right\:card,
-.large\:top\:card,
-.large\:bottom\:card,
-.large\:left\:card,
-.large\:right\:card,
-.larger\:top\:card,
-.larger\:bottom\:card,
-.larger\:left\:card,
-.larger\:right\:card,
+.small\(top\:card,
+.small\(bottom\:card,
+.small\(left\:card,
+.small\(right\:card,
+.medium\(top\:card,
+.medium\(bottom\:card,
+.medium\(left\:card,
+.medium\(right\:card,
+.large\(top\:card,
+.large\(bottom\:card,
+.large\(left\:card,
+.large\(right\:card,
+.larger\(top\:card,
+.larger\(bottom\:card,
+.larger\(left\:card,
+.larger\(right\:card,
 .largest\:top\:card,
 .largest\:bottom\:card,
 .largest\:left\:card,
@@ -8992,17 +8997,17 @@ textarea.large\:input {
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card-image, .top\:card-image, .bottom\:card-image, .left\:card-image, .right\:card-image, .small\:top\:card-image, .small\:bottom\:card-image, .small\:left\:card-image, .small\:right\:card-image, .medium\:top\:card-image, .medium\:bottom\:card-image, .medium\:left\:card-image, .medium\:right\:card-image, .large\:top\:card-image, .large\:bottom\:card-image, .large\:left\:card-image, .large\:right\:card-image, .larger\:top\:card-image, .larger\:bottom\:card-image, .larger\:left\:card-image, .larger\:right\:card-image, .largest\:top\:card-image, .largest\:bottom\:card-image, .largest\:left\:card-image, .largest\:right\:card-image {
+.card-image, .top\:card-image, .bottom\:card-image, .left\:card-image, .right\:card-image, .small\(top\:card-image {
     width: 100%;
   }
 
-.card-figure, .top\:card-figure, .bottom\:card-figure, .left\:card-figure, .right\:card-figure, .small\:top\:card-figure, .small\:bottom\:card-figure, .small\:left\:card-figure, .small\:right\:card-figure, .medium\:top\:card-figure, .medium\:bottom\:card-figure, .medium\:left\:card-figure, .medium\:right\:card-figure, .large\:top\:card-figure, .large\:bottom\:card-figure, .large\:left\:card-figure, .large\:right\:card-figure, .larger\:top\:card-figure, .larger\:bottom\:card-figure, .larger\:left\:card-figure, .larger\:right\:card-figure, .largest\:top\:card-figure, .largest\:bottom\:card-figure, .largest\:left\:card-figure, .largest\:right\:card-figure {
+.card-figure, .top\:card-figure, .bottom\:card-figure, .left\:card-figure, .right\:card-figure, .small\(top\:card-figure {
     position: relative;
     width: 100%;
     margin: 0;
   }
 
-.card-figure .card-caption, .top\:card-figure .top\:card-caption, .bottom\:card-figure .bottom\:card-caption, .left\:card-figure .left\:card-caption, .right\:card-figure .right\:card-caption, .small\:top\:card-figure .small\:top\:card-caption, .small\:bottom\:card-figure .small\:bottom\:card-caption, .small\:left\:card-figure .small\:left\:card-caption, .small\:right\:card-figure .small\:right\:card-caption, .medium\:top\:card-figure .medium\:top\:card-caption, .medium\:bottom\:card-figure .medium\:bottom\:card-caption, .medium\:left\:card-figure .medium\:left\:card-caption, .medium\:right\:card-figure .medium\:right\:card-caption, .large\:top\:card-figure .large\:top\:card-caption, .large\:bottom\:card-figure .large\:bottom\:card-caption, .large\:left\:card-figure .large\:left\:card-caption, .large\:right\:card-figure .large\:right\:card-caption, .larger\:top\:card-figure .larger\:top\:card-caption, .larger\:bottom\:card-figure .larger\:bottom\:card-caption, .larger\:left\:card-figure .larger\:left\:card-caption, .larger\:right\:card-figure .larger\:right\:card-caption, .largest\:top\:card-figure .largest\:top\:card-caption, .largest\:bottom\:card-figure .largest\:bottom\:card-caption, .largest\:left\:card-figure .largest\:left\:card-caption, .largest\:right\:card-figure .largest\:right\:card-caption {
+.card-figure .card-caption, .top\:card-figure .top\:card-caption, .bottom\:card-figure .bottom\:card-caption, .left\:card-figure .left\:card-caption, .right\:card-figure .right\:card-caption, .small\(top\:card-figure .small\(top\:card-caption {
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -9013,47 +9018,47 @@ textarea.large\:input {
     color: #fff;
   }
 
-.card-content, .top\:card-content, .bottom\:card-content, .left\:card-content, .right\:card-content, .small\:top\:card-content, .small\:bottom\:card-content, .small\:left\:card-content, .small\:right\:card-content, .medium\:top\:card-content, .medium\:bottom\:card-content, .medium\:left\:card-content, .medium\:right\:card-content, .large\:top\:card-content, .large\:bottom\:card-content, .large\:left\:card-content, .large\:right\:card-content, .larger\:top\:card-content, .larger\:bottom\:card-content, .larger\:left\:card-content, .larger\:right\:card-content, .largest\:top\:card-content, .largest\:bottom\:card-content, .largest\:left\:card-content, .largest\:right\:card-content {
+.card-content, .top\:card-content, .bottom\:card-content, .left\:card-content, .right\:card-content, .small\(top\:card-content {
     display: flex;
     flex-direction: column;
   }
 
-.card-header, .top\:card-header, .bottom\:card-header, .left\:card-header, .right\:card-header, .small\:top\:card-header, .small\:bottom\:card-header, .small\:left\:card-header, .small\:right\:card-header, .medium\:top\:card-header, .medium\:bottom\:card-header, .medium\:left\:card-header, .medium\:right\:card-header, .large\:top\:card-header, .large\:bottom\:card-header, .large\:left\:card-header, .large\:right\:card-header, .larger\:top\:card-header, .larger\:bottom\:card-header, .larger\:left\:card-header, .larger\:right\:card-header, .largest\:top\:card-header, .largest\:bottom\:card-header, .largest\:left\:card-header, .largest\:right\:card-header {
+.card-header, .top\:card-header, .bottom\:card-header, .left\:card-header, .right\:card-header, .small\(top\:card-header {
     padding: 0.5rem 1rem;
     margin-bottom: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   }
 
-.card-body, .top\:card-body, .bottom\:card-body, .left\:card-body, .right\:card-body, .small\:top\:card-body, .small\:bottom\:card-body, .small\:left\:card-body, .small\:right\:card-body, .medium\:top\:card-body, .medium\:bottom\:card-body, .medium\:left\:card-body, .medium\:right\:card-body, .large\:top\:card-body, .large\:bottom\:card-body, .large\:left\:card-body, .large\:right\:card-body, .larger\:top\:card-body, .larger\:bottom\:card-body, .larger\:left\:card-body, .larger\:right\:card-body, .largest\:top\:card-body, .largest\:bottom\:card-body, .largest\:left\:card-body, .largest\:right\:card-body {
+.card-body, .top\:card-body, .bottom\:card-body, .left\:card-body, .right\:card-body, .small\(top\:card-body {
     flex: 1 1 auto;
     padding: 1rem 1rem;
   }
 
-.card-footer, .top\:card-footer, .bottom\:card-footer, .left\:card-footer, .right\:card-footer, .small\:top\:card-footer, .small\:bottom\:card-footer, .small\:left\:card-footer, .small\:right\:card-footer, .medium\:top\:card-footer, .medium\:bottom\:card-footer, .medium\:left\:card-footer, .medium\:right\:card-footer, .large\:top\:card-footer, .large\:bottom\:card-footer, .large\:left\:card-footer, .large\:right\:card-footer, .larger\:top\:card-footer, .larger\:bottom\:card-footer, .larger\:left\:card-footer, .larger\:right\:card-footer, .largest\:top\:card-footer, .largest\:bottom\:card-footer, .largest\:left\:card-footer, .largest\:right\:card-footer {
+.card-footer, .top\:card-footer, .bottom\:card-footer, .left\:card-footer, .right\:card-footer, .small\(top\:card-footer {
     padding: 0.5rem 1rem;
     border-top: 1px solid rgba(0, 0, 0, 0.125);
   }
 
-.card-title, .top\:card-title, .bottom\:card-title, .left\:card-title, .right\:card-title, .small\:top\:card-title, .small\:bottom\:card-title, .small\:left\:card-title, .small\:right\:card-title, .medium\:top\:card-title, .medium\:bottom\:card-title, .medium\:left\:card-title, .medium\:right\:card-title, .large\:top\:card-title, .large\:bottom\:card-title, .large\:left\:card-title, .large\:right\:card-title, .larger\:top\:card-title, .larger\:bottom\:card-title, .larger\:left\:card-title, .larger\:right\:card-title, .largest\:top\:card-title, .largest\:bottom\:card-title, .largest\:left\:card-title, .largest\:right\:card-title {
+.card-title, .top\:card-title, .bottom\:card-title, .left\:card-title, .right\:card-title, .small\(top\:card-title {
     margin-top: 0;
     margin-bottom: 0.5rem;
   }
 
-.card-subtitle, .top\:card-subtitle, .bottom\:card-subtitle, .left\:card-subtitle, .right\:card-subtitle, .small\:top\:card-subtitle, .small\:bottom\:card-subtitle, .small\:left\:card-subtitle, .small\:right\:card-subtitle, .medium\:top\:card-subtitle, .medium\:bottom\:card-subtitle, .medium\:left\:card-subtitle, .medium\:right\:card-subtitle, .large\:top\:card-subtitle, .large\:bottom\:card-subtitle, .large\:left\:card-subtitle, .large\:right\:card-subtitle, .larger\:top\:card-subtitle, .larger\:bottom\:card-subtitle, .larger\:left\:card-subtitle, .larger\:right\:card-subtitle, .largest\:top\:card-subtitle, .largest\:bottom\:card-subtitle, .largest\:left\:card-subtitle, .largest\:right\:card-subtitle {
+.card-subtitle, .top\:card-subtitle, .bottom\:card-subtitle, .left\:card-subtitle, .right\:card-subtitle, .small\(top\:card-subtitle {
     margin-top: -0.25rem;
     margin-bottom: 0;
   }
 
-.card-text, .top\:card-text, .bottom\:card-text, .left\:card-text, .right\:card-text, .small\:top\:card-text, .small\:bottom\:card-text, .small\:left\:card-text, .small\:right\:card-text, .medium\:top\:card-text, .medium\:bottom\:card-text, .medium\:left\:card-text, .medium\:right\:card-text, .large\:top\:card-text, .large\:bottom\:card-text, .large\:left\:card-text, .large\:right\:card-text, .larger\:top\:card-text, .larger\:bottom\:card-text, .larger\:left\:card-text, .larger\:right\:card-text, .largest\:top\:card-text, .largest\:bottom\:card-text, .largest\:left\:card-text, .largest\:right\:card-text {
+.card-text, .top\:card-text, .bottom\:card-text, .left\:card-text, .right\:card-text, .small\(top\:card-text {
     margin-bottom: 0;
   }
 
-.card > *:first-child, .top\:card > *:first-child, .bottom\:card > *:first-child, .left\:card > *:first-child, .right\:card > *:first-child, .small\:top\:card > *:first-child, .small\:bottom\:card > *:first-child, .small\:left\:card > *:first-child, .small\:right\:card > *:first-child, .medium\:top\:card > *:first-child, .medium\:bottom\:card > *:first-child, .medium\:left\:card > *:first-child, .medium\:right\:card > *:first-child, .large\:top\:card > *:first-child, .large\:bottom\:card > *:first-child, .large\:left\:card > *:first-child, .large\:right\:card > *:first-child, .larger\:top\:card > *:first-child, .larger\:bottom\:card > *:first-child, .larger\:left\:card > *:first-child, .larger\:right\:card > *:first-child, .largest\:top\:card > *:first-child, .largest\:bottom\:card > *:first-child, .largest\:left\:card > *:first-child, .largest\:right\:card > *:first-child {
+.card > *:first-child, .top\:card > *:first-child, .bottom\:card > *:first-child, .left\:card > *:first-child, .right\:card > *:first-child, .small\(top\:card > *:first-child {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
   }
 
-.card > *:last-child, .top\:card > *:last-child, .bottom\:card > *:last-child, .left\:card > *:last-child, .right\:card > *:last-child, .small\:top\:card > *:last-child, .small\:bottom\:card > *:last-child, .small\:left\:card > *:last-child, .small\:right\:card > *:last-child, .medium\:top\:card > *:last-child, .medium\:bottom\:card > *:last-child, .medium\:left\:card > *:last-child, .medium\:right\:card > *:last-child, .large\:top\:card > *:last-child, .large\:bottom\:card > *:last-child, .large\:left\:card > *:last-child, .large\:right\:card > *:last-child, .larger\:top\:card > *:last-child, .larger\:bottom\:card > *:last-child, .larger\:left\:card > *:last-child, .larger\:right\:card > *:last-child, .largest\:top\:card > *:last-child, .largest\:bottom\:card > *:last-child, .largest\:left\:card > *:last-child, .largest\:right\:card > *:last-child {
+.card > *:last-child, .top\:card > *:last-child, .bottom\:card > *:last-child, .left\:card > *:last-child, .right\:card > *:last-child, .small\(top\:card > *:last-child {
     border-bottom-right-radius: inherit;
     border-bottom-left-radius: inherit;
   }
@@ -9119,280 +9124,280 @@ textarea.large\:input {
   }
 
 @media (min-width: 640px) {
-  .small\:top\:card {
+  .small\(top\:card\) {
     flex-direction: column;
   }
-  .small\:top\:card .card-image,
-  .small\:top\:card .card-figure {
+  .small\(top\:card\) .card-image,
+  .small\(top\:card\) .card-figure {
     width: 100%;
   }
-  .small\:top\:card .card-figure .card-image {
+  .small\(top\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .small\:bottom\:card {
+  .small\(bottom\:card\) {
     flex-direction: column-reverse;
   }
 
-  .small\:bottom\:card .card-image,
-  .small\:bottom\:card .card-figure {
+  .small\(bottom\:card\) .card-image,
+  .small\(bottom\:card\) .card-figure {
     width: 100%;
   }
 
-  .small\:bottom\:card .card-figure .card-image {
+  .small\(bottom\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .small\:left\:card {
+  .small\(left\:card\) {
     flex-direction: row;
   }
 
-  .small\:left\:card .card-image,
-  .small\:left\:card .card-figure {
+  .small\(left\:card\) .card-image,
+  .small\(left\:card\) .card-figure {
     width: 160px;
   }
 
-  .small\:left\:card .card-figure .card-image {
+  .small\(left\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .small\:right\:card {
+  .small\(right\:card\) {
     flex-direction: row-reverse;
   }
 
-  .small\:right\:card .card-image,
-  .small\:right\:card .card-figure {
+  .small\(right\:card\) .card-image,
+  .small\(right\:card\) .card-figure {
     width: 160px;
   }
 
-  .small\:right\:card .card-figure .card-image {
+  .small\(right\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  .medium\:top\:card {
+  .medium\(top\:card\) {
     flex-direction: column;
   }
-  .medium\:top\:card .card-image,
-  .medium\:top\:card .card-figure {
+  .medium\(top\:card\) .card-image,
+  .medium\(top\:card\) .card-figure {
     width: 100%;
   }
-  .medium\:top\:card .card-figure .card-image {
+  .medium\(top\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .medium\:bottom\:card {
+  .medium\(bottom\:card\) {
     flex-direction: column-reverse;
   }
 
-  .medium\:bottom\:card .card-image,
-  .medium\:bottom\:card .card-figure {
+  .medium\(bottom\:card\) .card-image,
+  .medium\(bottom\:card\) .card-figure {
     width: 100%;
   }
 
-  .medium\:bottom\:card .card-figure .card-image {
+  .medium\(bottom\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .medium\:left\:card {
+  .medium\(left\:card\) {
     flex-direction: row;
   }
 
-  .medium\:left\:card .card-image,
-  .medium\:left\:card .card-figure {
+  .medium\(left\:card\) .card-image,
+  .medium\(left\:card\) .card-figure {
     width: 192px;
   }
 
-  .medium\:left\:card .card-figure .card-image {
+  .medium\(left\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .medium\:right\:card {
+  .medium\(right\:card\) {
     flex-direction: row-reverse;
   }
 
-  .medium\:right\:card .card-image,
-  .medium\:right\:card .card-figure {
+  .medium\(right\:card\) .card-image,
+  .medium\(right\:card\) .card-figure {
     width: 192px;
   }
 
-  .medium\:right\:card .card-figure .card-image {
+  .medium\(right\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 }
 
 @media (min-width: 1024px) {
-  .large\:top\:card {
+  .large\(top\:card\) {
     flex-direction: column;
   }
-  .large\:top\:card .card-image,
-  .large\:top\:card .card-figure {
+  .large\(top\:card\) .card-image,
+  .large\(top\:card\) .card-figure {
     width: 100%;
   }
-  .large\:top\:card .card-figure .card-image {
+  .large\(top\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .large\:bottom\:card {
+  .large\(bottom\:card\) {
     flex-direction: column-reverse;
   }
 
-  .large\:bottom\:card .card-image,
-  .large\:bottom\:card .card-figure {
+  .large\(bottom\:card\) .card-image,
+  .large\(bottom\:card\) .card-figure {
     width: 100%;
   }
 
-  .large\:bottom\:card .card-figure .card-image {
+  .large\(bottom\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .large\:left\:card {
+  .large\(left\:card\) {
     flex-direction: row;
   }
 
-  .large\:left\:card .card-image,
-  .large\:left\:card .card-figure {
+  .large\(left\:card\) .card-image,
+  .large\(left\:card\) .card-figure {
     width: 256px;
   }
 
-  .large\:left\:card .card-figure .card-image {
+  .large\(left\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .large\:right\:card {
+  .large\(right\:card\) {
     flex-direction: row-reverse;
   }
 
-  .large\:right\:card .card-image,
-  .large\:right\:card .card-figure {
+  .large\(right\:card\) .card-image,
+  .large\(right\:card\) .card-figure {
     width: 256px;
   }
 
-  .large\:right\:card .card-figure .card-image {
+  .large\(right\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 }
 
 @media (min-width: 1280px) {
-  .larger\:top\:card {
+  .larger\(top\:card\) {
     flex-direction: column;
   }
-  .larger\:top\:card .card-image,
-  .larger\:top\:card .card-figure {
+  .larger\(top\:card\) .card-image,
+  .larger\(top\:card\) .card-figure {
     width: 100%;
   }
-  .larger\:top\:card .card-figure .card-image {
+  .larger\(top\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .larger\:bottom\:card {
+  .larger\(bottom\:card\) {
     flex-direction: column-reverse;
   }
 
-  .larger\:bottom\:card .card-image,
-  .larger\:bottom\:card .card-figure {
+  .larger\(bottom\:card\) .card-image,
+  .larger\(bottom\:card\) .card-figure {
     width: 100%;
   }
 
-  .larger\:bottom\:card .card-figure .card-image {
+  .larger\(bottom\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .larger\:left\:card {
+  .larger\(left\:card\) {
     flex-direction: row;
   }
 
-  .larger\:left\:card .card-image,
-  .larger\:left\:card .card-figure {
+  .larger\(left\:card\) .card-image,
+  .larger\(left\:card\) .card-figure {
     width: 320px;
   }
 
-  .larger\:left\:card .card-figure .card-image {
+  .larger\(left\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .larger\:right\:card {
+  .larger\(right\:card\) {
     flex-direction: row-reverse;
   }
 
-  .larger\:right\:card .card-image,
-  .larger\:right\:card .card-figure {
+  .larger\(right\:card\) .card-image,
+  .larger\(right\:card\) .card-figure {
     width: 320px;
   }
 
-  .larger\:right\:card .card-figure .card-image {
+  .larger\(right\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 }
 
 @media (min-width: 1536px) {
-  .larger\:top\:card {
+  .largest\(top\:card\) {
     flex-direction: column;
   }
-  .larger\:top\:card .card-image,
-  .larger\:top\:card .card-figure {
+  .largest\(top\:card\) .card-image,
+  .largest\(top\:card\) .card-figure {
     width: 100%;
   }
-  .larger\:top\:card .card-figure .card-image {
+  .largest\(top\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .larger\:bottom\:card {
+  .largest\(bottom\:card\) {
     flex-direction: column-reverse;
   }
 
-  .larger\:bottom\:card .card-image,
-  .larger\:bottom\:card .card-figure {
+  .largest\(bottom\:card\) .card-image,
+  .largest\(bottom\:card\) .card-figure {
     width: 100%;
   }
 
-  .larger\:bottom\:card .card-figure .card-image {
+  .largest\(bottom\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .larger\:left\:card {
+  .largest\(left\:card\) {
     flex-direction: row;
   }
 
-  .larger\:left\:card .card-image,
-  .larger\:left\:card .card-figure {
+  .largest\(left\:card\) .card-image,
+  .largest\(left\:card\) .card-figure {
     width: 384px;
   }
 
-  .larger\:left\:card .card-figure .card-image {
+  .largest\(left\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
 
-  .larger\:right\:card {
+  .largest\(right\:card\) {
     flex-direction: row-reverse;
   }
 
-  .larger\:right\:card .card-image,
-  .larger\:right\:card .card-figure {
+  .largest\(right\:card\) .card-image,
+  .largest\(right\:card\) .card-figure {
     width: 384px;
   }
 
-  .larger\:right\:card .card-figure .card-image {
+  .largest\(right\:card\) .card-figure .card-image {
     width: 100%;
     height: 100%;
   }
