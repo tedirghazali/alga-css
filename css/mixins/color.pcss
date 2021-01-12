@@ -5,19 +5,7 @@
     border-color: var(--alga-$(main));
   }
     
-  $(class)\:hover:hover {
-    color: var(--alga-$(text));
-    background-color: var(--alga-$(main));
-    border-color: var(--alga-$(main));
-  }
-    
   $(class)\:outlined {
-    color: var(--alga-$(main));
-    background-color: var(--alga-transparent);
-    border-color: var(--alga-$(main));
-  }
-    
-  $(class)\:outlined\:hover:hover {
     color: var(--alga-$(main));
     background-color: var(--alga-transparent);
     border-color: var(--alga-$(main));
@@ -35,15 +23,27 @@
     border-color: var(--alga-$(main));
   }
     
+  $(class)\:top\:border {
+    border-top-color: var(--alga-$(main));
+  }
+    
+  $(class)\:right\:border {
+    border-right-color: var(--alga-$(main));
+  }
+    
+  $(class)\:bottom\:border {
+    border-bottom-color: var(--alga-$(main));
+  }
+    
+  $(class)\:left\:border {
+    border-left-color: var(--alga-$(main));
+  }
+    
   $(class)\:caret {
     caret-color: var(--alga-$(main));
   }
     
   $(class)\:outline {
-    outline-color: var(--alga-$(main));
-  }
-    
-  $(class)\:outline\:focus:focus {
     outline-color: var(--alga-$(main));
   }
     
@@ -55,11 +55,135 @@
     stroke: var(--alga-$(main));
   }
     
-  $(class)\:callout {
+  $(class)\:alert {
+    color: var(--alga-$(main));
+    background-color: var(--alga-$(main)-opacity);
+    border-color: var(--alga-$(main)-opacity);
+  }
+}
+
+@define-mixin color-hover $class, $main, $text {
+  $(class):hover {
+    color: var(--alga-$(text));
+    background-color: var(--alga-$(main));
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)\:outlined:hover {
+    color: var(--alga-$(main));
+    background-color: var(--alga-transparent);
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)\:background:hover {
+    background-color: var(--alga-$(main));
+  }
+    
+  $(class)\:text:hover {
+    color: var(--alga-$(main));
+  }
+    
+  $(class)\:border:hover {
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)\:top\:border:hover {
+    border-top-color: var(--alga-$(main));
+  }
+    
+  $(class)\:right\:border:hover {
+    border-right-color: var(--alga-$(main));
+  }
+    
+  $(class)\:bottom\:border:hover {
+    border-bottom-color: var(--alga-$(main));
+  }
+    
+  $(class)\:left\:border:hover {
     border-left-color: var(--alga-$(main));
   }
     
-  $(class)\:alert {
+  $(class)\:caret:hover {
+    caret-color: var(--alga-$(main));
+  }
+    
+  $(class)\:outline:hover {
+    outline-color: var(--alga-$(main));
+  }
+    
+  $(class)\:fill:hover {
+    fill: var(--alga-$(main));
+  }
+    
+  $(class)\:stroke:hover {
+    stroke: var(--alga-$(main));
+  }
+    
+  $(class)\:alert:hover {
+    color: var(--alga-$(main));
+    background-color: var(--alga-$(main)-opacity);
+    border-color: var(--alga-$(main)-opacity);
+  }
+}
+
+@define-mixin color-focus $class, $main, $text {
+  $(class):focus {
+    color: var(--alga-$(text));
+    background-color: var(--alga-$(main));
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)\:outlined:focus {
+    color: var(--alga-$(main));
+    background-color: var(--alga-transparent);
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)\:background:focus {
+    background-color: var(--alga-$(main));
+  }
+    
+  $(class)\:text:focus {
+    color: var(--alga-$(main));
+  }
+    
+  $(class)\:border:focus {
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)\:top\:border:focus {
+    border-top-color: var(--alga-$(main));
+  }
+    
+  $(class)\:right\:border:focus {
+    border-right-color: var(--alga-$(main));
+  }
+    
+  $(class)\:bottom\:border:focus {
+    border-bottom-color: var(--alga-$(main));
+  }
+    
+  $(class)\:left\:border:focus {
+    border-left-color: var(--alga-$(main));
+  }
+    
+  $(class)\:caret:focus {
+    caret-color: var(--alga-$(main));
+  }
+    
+  $(class)\:outline:focus {
+    outline-color: var(--alga-$(main));
+  }
+    
+  $(class)\:fill:focus {
+    fill: var(--alga-$(main));
+  }
+    
+  $(class)\:stroke:focus {
+    stroke: var(--alga-$(main));
+  }
+    
+  $(class)\:alert:focus {
     color: var(--alga-$(main));
     background-color: var(--alga-$(main)-opacity);
     border-color: var(--alga-$(main)-opacity);

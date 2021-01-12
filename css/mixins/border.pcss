@@ -1,0 +1,137 @@
+@define-mixin border-mixin $class, $rule {
+  $class {
+    $(rule): 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+  $(class)-1 {
+    $(rule)-width: 1px;
+  }
+  
+  $(class)-2 {
+    $(rule)-width: 2px;
+  }
+  
+  $(class)-3 {
+    $(rule)-width: 3px;
+  }
+  
+  $(class)-4 {
+    $(rule)-width: 4px;
+  }
+  
+  $(class)-5 {
+    $(rule)-width: 5px;
+  }
+  
+  $(class)-6 {
+    $(rule)-width: 6px;
+  }
+  
+  $(class)-7 {
+    $(rule)-width: 7px;
+  }
+  
+  $(class)-8 {
+    $(rule)-width: 8px;
+  }
+  
+  $(class)-9 {
+    $(rule)-width: 9px;
+  }
+  
+  $(class)-10 {
+    $(rule)-width: 10px;
+  }
+  
+  $(class)-11 {
+    $(rule)-width: 11px;
+  }
+  
+  $(class)-12 {
+    $(rule)-width: 12px;
+  }
+}
+
+@define-mixin border-style $class, $value {
+  $(class)\:border {
+    border-style: $value;
+  }
+  
+  $(class)\:top\:border {
+    border-top-style: $value;
+  }
+  
+  $(class)\:right\:border {
+    border-right-style: $value;
+  }
+  
+  $(class)\:bottom\:border {
+    border-bottom-style: $value;
+  }
+  
+  $(class)\:left\:border {
+    border-left-style: $value;
+  }
+}
+
+@define-mixin border-double $class, $rule, $value {
+  $(class)-1 {
+    $(rule)-width: 1px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-2 {
+    $(rule)-width: 2px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-3 {
+    $(rule)-width: 3px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-4 {
+    $(rule)-width: 4px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-5 {
+    $(rule)-width: 5px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-6 {
+    $(rule)-width: 6px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-7 {
+    $(rule)-width: 7px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-8 {
+    $(rule)-width: 8px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-9 {
+    $(rule)-width: 9px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-10 {
+    $(rule)-width: 10px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-11 {
+    $(rule)-width: 11px;
+    $(rule)-style: $value;
+  }
+  
+  $(class)-12 {
+    $(rule)-width: 12px;
+    $(rule)-style: $value;
+  }
+}
