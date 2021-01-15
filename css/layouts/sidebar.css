@@ -1,4 +1,5 @@
-.sidebar {
+.sidebar,
+.shrink\:sidebar {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -37,5 +38,37 @@
   & .bottom\:sidebar-menu {
     overflow: hidden;
     justify-content: flex-end;
+  }
+  
+  &.active,
+  &.show {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar,
+  .shrink\:sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .shrink\:sidebar {
+    width: 40px;
+    
+    & .sidebar-feature,
+    & .sidebar-form,
+    & .sidebar-title,
+    & .sidebar-text {
+      display: none;
+    }
+    
+    & .sidebar-icon,
+    & .sidebar-icon i,
+    & .sidebar-icon svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

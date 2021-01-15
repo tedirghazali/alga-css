@@ -1,0 +1,57 @@
+.editor,
+.text\:editor,
+.block\:editor,
+.inline\:editor {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  background-color: var(--alga-white);
+  background-clip: border;
+  overflow-wrap: break-word;
+}
+
+.text\:editor {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  
+  & > * {
+    width: 100%;
+  }
+  
+  & .editor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  
+  & .editor-content {
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  & .editor-statusbar {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.block\:editor {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  
+  & .editor-toolbar {
+    
+  }
+  
+  & .editor-content {
+  
+  }
+  
+  & .editor-mover {
+  
+  }
+}

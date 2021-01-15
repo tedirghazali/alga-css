@@ -30,8 +30,8 @@
 }
 
 @media (min-width: 640px) {
-  .small\:overscroll,
-  .small\:auto\:overscroll {
+  .small\(overscroll\),
+  .small\(auto\:overscroll\) {
     overscroll-behavior: auto !important;
     &-x {
       overscroll-behavior-x: auto !important;
@@ -41,7 +41,7 @@
     }
   }
 
-  .small\:contain\:overscroll {
+  .small\(contain\:overscroll\) {
     overscroll-behavior: contain !important;
     &-x {
       overscroll-behavior-x: contain !important;
@@ -51,7 +51,7 @@
     }
   }
 
-  .small\:none\:overscroll {
+  .small\(none\:overscroll\) {
     overscroll-behavior: none !important;
     &-x {
       overscroll-behavior-x: none !important;
@@ -63,8 +63,8 @@
 }
 
 @media (min-width: 768px) {
-  .medium\:overscroll,
-  .medium\:auto\:overscroll {
+  .medium\(overscroll\),
+  .medium\(auto\:overscroll\) {
     overscroll-behavior: auto !important;
     &-x {
       overscroll-behavior-x: auto !important;
@@ -74,7 +74,7 @@
     }
   }
 
-  .medium\:contain\:overscroll {
+  .medium\(contain\:overscroll\) {
     overscroll-behavior: contain !important;
     &-x {
       overscroll-behavior-x: contain !important;
@@ -84,7 +84,7 @@
     }
   }
 
-  .medium\:none\:overscroll {
+  .medium\(none\:overscroll\) {
     overscroll-behavior: none !important;
     &-x {
       overscroll-behavior-x: none !important;
@@ -96,8 +96,8 @@
 }
 
 @media (min-width: 1024px) {
-  .large\:overscroll,
-  .large\:auto\:overscroll {
+  .large\(overscroll\),
+  .large\(auto\:overscroll\) {
     overscroll-behavior: auto !important;
     &-x {
       overscroll-behavior-x: auto !important;
@@ -107,7 +107,7 @@
     }
   }
 
-  .large\:contain\:overscroll {
+  .large\(contain\:overscroll\) {
     overscroll-behavior: contain !important;
     &-x {
       overscroll-behavior-x: contain !important;
@@ -117,7 +117,7 @@
     }
   }
 
-  .large\:none\:overscroll {
+  .large\(none\:overscroll\) {
     overscroll-behavior: none !important;
     &-x {
       overscroll-behavior-x: none !important;
@@ -129,8 +129,8 @@
 }
 
 @media (min-width: 1280px) {
-  .larger\:overscroll,
-  .larger\:auto\:overscroll {
+  .larger\(overscroll\),
+  .larger\(auto\:overscroll\) {
     overscroll-behavior: auto !important;
     &-x {
       overscroll-behavior-x: auto !important;
@@ -140,7 +140,7 @@
     }
   }
 
-  .larger\:contain\:overscroll {
+  .larger\(contain\:overscroll\) {
     overscroll-behavior: contain !important;
     &-x {
       overscroll-behavior-x: contain !important;
@@ -150,7 +150,7 @@
     }
   }
 
-  .larger\:none\:overscroll {
+  .larger\(none\:overscroll\) {
     overscroll-behavior: none !important;
     &-x {
       overscroll-behavior-x: none !important;
@@ -162,8 +162,8 @@
 }
 
 @media (min-width: 1536px) {
-  .largest\:overscroll,
-  .largest\:auto\:overscroll {
+  .largest\(overscroll\),
+  .largest\(auto\:overscroll\) {
     overscroll-behavior: auto !important;
     &-x {
       overscroll-behavior-x: auto !important;
@@ -173,7 +173,7 @@
     }
   }
 
-  .largest\:contain\:overscroll {
+  .largest\(contain\:overscroll\) {
     overscroll-behavior: contain !important;
     &-x {
       overscroll-behavior-x: contain !important;
@@ -183,7 +183,7 @@
     }
   }
 
-  .largest\:none\:overscroll {
+  .largest\(none\:overscroll\) {
     overscroll-behavior: none !important;
     &-x {
       overscroll-behavior-x: none !important;

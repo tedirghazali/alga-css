@@ -4,7 +4,7 @@
 .regular\:text { font-weight: 400 !important; }
 .medium\:text { font-weight: 500 !important; }
 .semibold\:text { font-weight: 600 !important; }
-.bold\:text { font-weight: 700 !important; }
+.bold\:text\) { font-weight: 700 !important; }
 .ultrabold\:text { font-weight: 800 !important; }
 .heavy\:text { font-weight: 900 !important; }
 .ultraheavy\:text { font-weight: 950 !important; }
@@ -42,226 +42,226 @@
 @mixin text-double .capitalize\:text, text-transform, capitalize;
 
 @media (min-width: 640px) {
-  .small\:thin\:text { font-weight: 100 !important; }
-  .small\:ultralight\:text { font-weight: 200 !important; }
-  .small\:light\:text { font-weight: 300 !important; }
-  .small\:regular\:text { font-weight: 400 !important; }
-  .small\:medium\:text { font-weight: 500 !important; }
-  .small\:semibold\:text { font-weight: 600 !important; }
-  .small\:bold\:text { font-weight: 700 !important; }
-  .small\:ultrabold\:text { font-weight: 800 !important; }
-  .small\:heavy\:text { font-weight: 900 !important; }
-  .small\:ultraheavy\:text { font-weight: 950 !important; }
+  .small\(thin\:text\) { font-weight: 100 !important; }
+  .small\(ultralight\:text\) { font-weight: 200 !important; }
+  .small\(light\:text\) { font-weight: 300 !important; }
+  .small\(regular\:text\) { font-weight: 400 !important; }
+  .small\(medium\:text\) { font-weight: 500 !important; }
+  .small\(semibold\:text\) { font-weight: 600 !important; }
+  .small\(bold\:text\) { font-weight: 700 !important; }
+  .small\(ultrabold\:text\) { font-weight: 800 !important; }
+  .small\(heavy\:text\) { font-weight: 900 !important; }
+  .small\(ultraheavy\:text\) { font-weight: 950 !important; }
 
-  .small\:lighter\:text { font-weight: lighter !important; }
-  .small\:bolder\:text { font-weight: bolder !important; }
+  .small\(lighter\:text\) { font-weight: lighter !important; }
+  .small\(bolder\:text\) { font-weight: bolder !important; }
 
-  .small\:italic\:text { font-style: italic !important; }
-  .small\:normal\:text { font-style: normal !important; }
+  .small\(italic\:text\) { font-style: italic !important; }
+  .small\(normal\:text\) { font-style: normal !important; }
 
-  .small\:lowercase\:text { text-transform: lowercase !important; }
-  .small\:uppercase\:text { text-transform: uppercase !important; }
-  .small\:capitalize\:text { text-transform: capitalize !important; }
+  .small\(lowercase\:text\) { text-transform: lowercase !important; }
+  .small\(uppercase\:text\) { text-transform: uppercase !important; }
+  .small\(capitalize\:text\) { text-transform: capitalize !important; }
 
-  @mixin text-size .small\:text;
-  @mixin text-double .small\:thin\:text, font-weight, 100;
-  @mixin text-double .small\:ultralight\:text, font-weight, 200;
-  @mixin text-double .small\:light\:text, font-weight, 300;
-  @mixin text-double .small\:regular\:text, font-weight, 400;
-  @mixin text-double .small\:medium\:text, font-weight, 500;
-  @mixin text-double .small\:semibold\:text, font-weight, 600;
-  @mixin text-double .small\:bold\:text, font-weight, 700;
-  @mixin text-double .small\:ultrabold\:text, font-weight, 800;
-  @mixin text-double .small\:heavy\:text, font-weight, 900;
-  @mixin text-double .small\:ultraheavy\:text, font-weight, 950;
+  @mixin text-size .small\(text\);
+  @mixin text-double .small\(thin\:text\), font-weight, 100;
+  @mixin text-double .small\(ultralight\:text\), font-weight, 200;
+  @mixin text-double .small\(light\:text\), font-weight, 300;
+  @mixin text-double .small\(regular\:text\), font-weight, 400;
+  @mixin text-double .small\(medium\:text\), font-weight, 500;
+  @mixin text-double .small\(semibold\:text\), font-weight, 600;
+  @mixin text-double .small\(bold\:text\), font-weight, 700;
+  @mixin text-double .small\(ultrabold\:text\), font-weight, 800;
+  @mixin text-double .small\(heavy\:text\), font-weight, 900;
+  @mixin text-double .small\(ultraheavy\:text\), font-weight, 950;
 
-  @mixin text-double .small\:lighter\:text, font-weight, lighter;
-  @mixin text-double .small\:bolder\:text, font-weight, bolder;
+  @mixin text-double .small\(lighter\:text\), font-weight, lighter;
+  @mixin text-double .small\(bolder\:text\), font-weight, bolder;
 
-  @mixin text-double .small\:italic\:text, font-style, italic;
-  @mixin text-double .small\:normal\:text, font-style, normal;
+  @mixin text-double .small\(italic\:text\), font-style, italic;
+  @mixin text-double .small\(normal\:text\), font-style, normal;
 
-  @mixin text-double .small\:lowercase\:text, text-transform, lowercase;
-  @mixin text-double .small\:uppercase\:text, text-transform, uppercase;
-  @mixin text-double .small\:capitalize\:text, text-transform, capitalize;
+  @mixin text-double .small\(lowercase\:text\), text-transform, lowercase;
+  @mixin text-double .small\(uppercase\:text\), text-transform, uppercase;
+  @mixin text-double .small\(capitalize\:text\), text-transform, capitalize;
 }
 
 @media (min-width: 768px) {
-  .medium\:thin\:text { font-weight: 100 !important; }
-  .medium\:ultralight\:text { font-weight: 200 !important; }
-  .medium\:light\:text { font-weight: 300 !important; }
-  .medium\:regular\:text { font-weight: 400 !important; }
-  .medium\:medium\:text { font-weight: 500 !important; }
-  .medium\:semibold\:text { font-weight: 600 !important; }
-  .medium\:bold\:text { font-weight: 700 !important; }
-  .medium\:ultrabold\:text { font-weight: 800 !important; }
-  .medium\:heavy\:text { font-weight: 900 !important; }
-  .medium\:ultraheavy\:text { font-weight: 950 !important; }
+  .medium\(thin\:text\) { font-weight: 100 !important; }
+  .medium\(ultralight\:text\) { font-weight: 200 !important; }
+  .medium\(light\:text\) { font-weight: 300 !important; }
+  .medium\(regular\:text\) { font-weight: 400 !important; }
+  .medium\(medium\:text\) { font-weight: 500 !important; }
+  .medium\(semibold\:text\) { font-weight: 600 !important; }
+  .medium\(bold\:text\) { font-weight: 700 !important; }
+  .medium\(ultrabold\:text\) { font-weight: 800 !important; }
+  .medium\(heavy\:text\) { font-weight: 900 !important; }
+  .medium\(ultraheavy\:text\) { font-weight: 950 !important; }
 
-  .medium\:lighter\:text { font-weight: lighter !important; }
-  .medium\:bolder\:text { font-weight: bolder !important; }
+  .medium\(lighter\:text\) { font-weight: lighter !important; }
+  .medium\(bolder\:text\) { font-weight: bolder !important; }
 
-  .medium\:italic\:text { font-style: italic !important; }
-  .medium\:normal\:text { font-style: normal !important; }
+  .medium\(italic\:text\) { font-style: italic !important; }
+  .medium\(normal\:text\) { font-style: normal !important; }
 
-  .medium\:lowercase\:text { text-transform: lowercase !important; }
-  .medium\:uppercase\:text { text-transform: uppercase !important; }
-  .medium\:capitalize\:text { text-transform: capitalize !important; }
+  .medium\(lowercase\:text\) { text-transform: lowercase !important; }
+  .medium\(uppercase\:text\) { text-transform: uppercase !important; }
+  .medium\(capitalize\:text\) { text-transform: capitalize !important; }
 
-  @mixin text-size .medium\:text;
-  @mixin text-double .medium\:thin\:text, font-weight, 100;
-  @mixin text-double .medium\:ultralight\:text, font-weight, 200;
-  @mixin text-double .medium\:light\:text, font-weight, 300;
-  @mixin text-double .medium\:regular\:text, font-weight, 400;
-  @mixin text-double .medium\:medium\:text, font-weight, 500;
-  @mixin text-double .medium\:semibold\:text, font-weight, 600;
-  @mixin text-double .medium\:bold\:text, font-weight, 700;
-  @mixin text-double .medium\:ultrabold\:text, font-weight, 800;
-  @mixin text-double .medium\:heavy\:text, font-weight, 900;
-  @mixin text-double .medium\:ultraheavy\:text, font-weight, 950;
+  @mixin text-size .medium\(text\);
+  @mixin text-double .medium\(thin\:text\), font-weight, 100;
+  @mixin text-double .medium\(ultralight\:text\), font-weight, 200;
+  @mixin text-double .medium\(light\:text\), font-weight, 300;
+  @mixin text-double .medium\(regular\:text\), font-weight, 400;
+  @mixin text-double .medium\(medium\:text\), font-weight, 500;
+  @mixin text-double .medium\(semibold\:text\), font-weight, 600;
+  @mixin text-double .medium\(bold\:text\), font-weight, 700;
+  @mixin text-double .medium\(ultrabold\:text\), font-weight, 800;
+  @mixin text-double .medium\(heavy\:text\), font-weight, 900;
+  @mixin text-double .medium\(ultraheavy\:text\), font-weight, 950;
 
-  @mixin text-double .medium\:lighter\:text, font-weight, lighter;
-  @mixin text-double .medium\:bolder\:text, font-weight, bolder;
+  @mixin text-double .medium\(lighter\:text\), font-weight, lighter;
+  @mixin text-double .medium\(bolder\:text\), font-weight, bolder;
 
-  @mixin text-double .medium\:italic\:text, font-style, italic;
-  @mixin text-double .medium\:normal\:text, font-style, normal;
+  @mixin text-double .medium\(italic\:text\), font-style, italic;
+  @mixin text-double .medium\(normal\:text\), font-style, normal;
 
-  @mixin text-double .medium\:lowercase\:text, text-transform, lowercase;
-  @mixin text-double .medium\:uppercase\:text, text-transform, uppercase;
-  @mixin text-double .medium\:capitalize\:text, text-transform, capitalize;
+  @mixin text-double .medium\(lowercase\:text\), text-transform, lowercase;
+  @mixin text-double .medium\(uppercase\:text\), text-transform, uppercase;
+  @mixin text-double .medium\(capitalize\:text\), text-transform, capitalize;
 }
 
 @media (min-width: 1024px) {
-  .large\:thin\:text { font-weight: 100 !important; }
-  .large\:ultralight\:text { font-weight: 200 !important; }
-  .large\:light\:text { font-weight: 300 !important; }
-  .large\:regular\:text { font-weight: 400 !important; }
-  .large\:medium\:text { font-weight: 500 !important; }
-  .large\:semibold\:text { font-weight: 600 !important; }
-  .large\:bold\:text { font-weight: 700 !important; }
-  .large\:ultrabold\:text { font-weight: 800 !important; }
-  .large\:heavy\:text { font-weight: 900 !important; }
-  .large\:ultraheavy\:text { font-weight: 950 !important; }
+  .large\(thin\:text\) { font-weight: 100 !important; }
+  .large\(ultralight\:text\) { font-weight: 200 !important; }
+  .large\(light\:text\) { font-weight: 300 !important; }
+  .large\(regular\:text\) { font-weight: 400 !important; }
+  .large\(medium\:text\) { font-weight: 500 !important; }
+  .large\(semibold\:text\) { font-weight: 600 !important; }
+  .large\(bold\:text\) { font-weight: 700 !important; }
+  .large\(ultrabold\:text\) { font-weight: 800 !important; }
+  .large\(heavy\:text\) { font-weight: 900 !important; }
+  .large\(ultraheavy\:text\) { font-weight: 950 !important; }
 
-  .large\:lighter\:text { font-weight: lighter !important; }
-  .large\:bolder\:text { font-weight: bolder !important; }
+  .large\(lighter\:text\) { font-weight: lighter !important; }
+  .large\(bolder\:text\) { font-weight: bolder !important; }
 
-  .large\:italic\:text { font-style: italic !important; }
-  .large\:normal\:text { font-style: normal !important; }
+  .large\(italic\:text\) { font-style: italic !important; }
+  .large\(normal\:text\) { font-style: normal !important; }
 
-  .large\:lowercase\:text { text-transform: lowercase !important; }
-  .large\:uppercase\:text { text-transform: uppercase !important; }
-  .large\:capitalize\:text { text-transform: capitalize !important; }
+  .large\(lowercase\:text\) { text-transform: lowercase !important; }
+  .large\(uppercase\:text\) { text-transform: uppercase !important; }
+  .large\(capitalize\:text\) { text-transform: capitalize !important; }
 
-  @mixin text-size .large\:text;
-  @mixin text-double .large\:thin\:text, font-weight, 100;
-  @mixin text-double .large\:ultralight\:text, font-weight, 200;
-  @mixin text-double .large\:light\:text, font-weight, 300;
-  @mixin text-double .large\:regular\:text, font-weight, 400;
-  @mixin text-double .large\:medium\:text, font-weight, 500;
-  @mixin text-double .large\:semibold\:text, font-weight, 600;
-  @mixin text-double .large\:bold\:text, font-weight, 700;
-  @mixin text-double .large\:ultrabold\:text, font-weight, 800;
-  @mixin text-double .large\:heavy\:text, font-weight, 900;
-  @mixin text-double .large\:ultraheavy\:text, font-weight, 950;
+  @mixin text-size .large\(text\);
+  @mixin text-double .large\(thin\:text\), font-weight, 100;
+  @mixin text-double .large\(ultralight\:text\), font-weight, 200;
+  @mixin text-double .large\(light\:text\), font-weight, 300;
+  @mixin text-double .large\(regular\:text\), font-weight, 400;
+  @mixin text-double .large\(medium\:text\), font-weight, 500;
+  @mixin text-double .large\(semibold\:text\), font-weight, 600;
+  @mixin text-double .large\(bold\:text\), font-weight, 700;
+  @mixin text-double .large\(ultrabold\:text\), font-weight, 800;
+  @mixin text-double .large\(heavy\:text\), font-weight, 900;
+  @mixin text-double .large\(ultraheavy\:text\), font-weight, 950;
 
-  @mixin text-double .large\:lighter\:text, font-weight, lighter;
-  @mixin text-double .large\:bolder\:text, font-weight, bolder;
+  @mixin text-double .large\(lighter\:text\), font-weight, lighter;
+  @mixin text-double .large\(bolder\:text\), font-weight, bolder;
 
-  @mixin text-double .large\:italic\:text, font-style, italic;
-  @mixin text-double .large\:normal\:text, font-style, normal;
+  @mixin text-double .large\(italic\:text\), font-style, italic;
+  @mixin text-double .large\(normal\:text\), font-style, normal;
 
-  @mixin text-double .large\:lowercase\:text, text-transform, lowercase;
-  @mixin text-double .large\:uppercase\:text, text-transform, uppercase;
-  @mixin text-double .large\:capitalize\:text, text-transform, capitalize;
+  @mixin text-double .large\(lowercase\:text\), text-transform, lowercase;
+  @mixin text-double .large\(uppercase\:text\), text-transform, uppercase;
+  @mixin text-double .large\(capitalize\:text\), text-transform, capitalize;
 }
 
 @media (min-width: 1280px) {
-  .larger\:thin\:text { font-weight: 100 !important; }
-  .larger\:ultralight\:text { font-weight: 200 !important; }
-  .larger\:light\:text { font-weight: 300 !important; }
-  .larger\:regular\:text { font-weight: 400 !important; }
-  .larger\:medium\:text { font-weight: 500 !important; }
-  .larger\:semibold\:text { font-weight: 600 !important; }
-  .larger\:bold\:text { font-weight: 700 !important; }
-  .larger\:ultrabold\:text { font-weight: 800 !important; }
-  .larger\:heavy\:text { font-weight: 900 !important; }
-  .larger\:ultraheavy\:text { font-weight: 950 !important; }
+  .larger\(thin\:text\) { font-weight: 100 !important; }
+  .larger\(ultralight\:text\) { font-weight: 200 !important; }
+  .larger\(light\:text\) { font-weight: 300 !important; }
+  .larger\(regular\:text\) { font-weight: 400 !important; }
+  .larger\(medium\:text\) { font-weight: 500 !important; }
+  .larger\(semibold\:text\) { font-weight: 600 !important; }
+  .larger\(bold\:text\) { font-weight: 700 !important; }
+  .larger\(ultrabold\:text\) { font-weight: 800 !important; }
+  .larger\(heavy\:text\) { font-weight: 900 !important; }
+  .larger\(ultraheavy\:text\) { font-weight: 950 !important; }
 
-  .larger\:lighter\:text { font-weight: lighter !important; }
-  .larger\:bolder\:text { font-weight: bolder !important; }
+  .larger\(lighter\:text\) { font-weight: lighter !important; }
+  .larger\(bolder\:text\) { font-weight: bolder !important; }
 
-  .larger\:italic\:text { font-style: italic !important; }
-  .larger\:normal\:text { font-style: normal !important; }
+  .larger\(italic\:text\) { font-style: italic !important; }
+  .larger\(normal\:text\) { font-style: normal !important; }
 
-  .larger\:lowercase\:text { text-transform: lowercase !important; }
-  .larger\:uppercase\:text { text-transform: uppercase !important; }
-  .larger\:capitalize\:text { text-transform: capitalize !important; }
+  .larger\(lowercase\:text\) { text-transform: lowercase !important; }
+  .larger\(uppercase\:text\) { text-transform: uppercase !important; }
+  .larger\(capitalize\:text\) { text-transform: capitalize !important; }
 
-  @mixin text-size .larger\:text;
-  @mixin text-double .larger\:thin\:text, font-weight, 100;
-  @mixin text-double .larger\:ultralight\:text, font-weight, 200;
-  @mixin text-double .larger\:light\:text, font-weight, 300;
-  @mixin text-double .larger\:regular\:text, font-weight, 400;
-  @mixin text-double .larger\:medium\:text, font-weight, 500;
-  @mixin text-double .larger\:semibold\:text, font-weight, 600;
-  @mixin text-double .larger\:bold\:text, font-weight, 700;
-  @mixin text-double .larger\:ultrabold\:text, font-weight, 800;
-  @mixin text-double .larger\:heavy\:text, font-weight, 900;
-  @mixin text-double .larger\:ultraheavy\:text, font-weight, 950;
+  @mixin text-size .larger\(text\);
+  @mixin text-double .larger\(thin\:text\), font-weight, 100;
+  @mixin text-double .larger\(ultralight\:text\), font-weight, 200;
+  @mixin text-double .larger\(light\:text\), font-weight, 300;
+  @mixin text-double .larger\(regular\:text\), font-weight, 400;
+  @mixin text-double .larger\(medium\:text\), font-weight, 500;
+  @mixin text-double .larger\(semibold\:text\), font-weight, 600;
+  @mixin text-double .larger\(bold\:text\), font-weight, 700;
+  @mixin text-double .larger\(ultrabold\:text\), font-weight, 800;
+  @mixin text-double .larger\(heavy\:text\), font-weight, 900;
+  @mixin text-double .larger\(ultraheavy\:text\), font-weight, 950;
 
-  @mixin text-double .larger\:lighter\:text, font-weight, lighter;
-  @mixin text-double .larger\:bolder\:text, font-weight, bolder;
+  @mixin text-double .larger\(lighter\:text\), font-weight, lighter;
+  @mixin text-double .larger\(bolder\:text\), font-weight, bolder;
 
-  @mixin text-double .larger\:italic\:text, font-style, italic;
-  @mixin text-double .larger\:normal\:text, font-style, normal;
+  @mixin text-double .larger\(italic\:text\), font-style, italic;
+  @mixin text-double .larger\(normal\:text\), font-style, normal;
 
-  @mixin text-double .larger\:lowercase\:text, text-transform, lowercase;
-  @mixin text-double .larger\:uppercase\:text, text-transform, uppercase;
-  @mixin text-double .larger\:capitalize\:text, text-transform, capitalize;
+  @mixin text-double .larger\(lowercase\:text\), text-transform, lowercase;
+  @mixin text-double .larger\(uppercase\:text\), text-transform, uppercase;
+  @mixin text-double .larger\(capitalize\:text\), text-transform, capitalize;
 }
 
 @media (min-width: 1536px) {
-  .largest\:thin\:text { font-weight: 100 !important; }
-  .largest\:ultralight\:text { font-weight: 200 !important; }
-  .largest\:light\:text { font-weight: 300 !important; }
-  .largest\:regular\:text { font-weight: 400 !important; }
-  .largest\:medium\:text { font-weight: 500 !important; }
-  .largest\:semibold\:text { font-weight: 600 !important; }
-  .largest\:bold\:text { font-weight: 700 !important; }
-  .largest\:ultrabold\:text { font-weight: 800 !important; }
-  .largest\:heavy\:text { font-weight: 900 !important; }
-  .largest\:ultraheavy\:text { font-weight: 950 !important; }
+  .largest\(thin\:text\) { font-weight: 100 !important; }
+  .largest\(ultralight\:text\) { font-weight: 200 !important; }
+  .largest\(light\:text\) { font-weight: 300 !important; }
+  .largest\(regular\:text\) { font-weight: 400 !important; }
+  .largest\(medium\:text\) { font-weight: 500 !important; }
+  .largest\(semibold\:text\) { font-weight: 600 !important; }
+  .largest\(bold\:text\) { font-weight: 700 !important; }
+  .largest\(ultrabold\:text\) { font-weight: 800 !important; }
+  .largest\(heavy\:text\) { font-weight: 900 !important; }
+  .largest\(ultraheavy\:text\) { font-weight: 950 !important; }
 
-  .largest\:lighter\:text { font-weight: lighter !important; }
-  .largest\:bolder\:text { font-weight: bolder !important; }
+  .largest\(lighter\:text\) { font-weight: lighter !important; }
+  .largest\(bolder\:text\) { font-weight: bolder !important; }
 
-  .largest\:italic\:text { font-style: italic !important; }
-  .largest\:normal\:text { font-style: normal !important; }
+  .largest\(italic\:text\) { font-style: italic !important; }
+  .largest\(normal\:text\) { font-style: normal !important; }
 
-  .largest\:lowercase\:text { text-transform: lowercase !important; }
-  .largest\:uppercase\:text { text-transform: uppercase !important; }
-  .largest\:capitalize\:text { text-transform: capitalize !important; }
+  .largest\(lowercase\:text\) { text-transform: lowercase !important; }
+  .largest\(uppercase\:text\) { text-transform: uppercase !important; }
+  .largest\(capitalize\:text\) { text-transform: capitalize !important; }
 
-  @mixin text-size .largest\:text;
-  @mixin text-double .largest\:thin\:text, font-weight, 100;
-  @mixin text-double .largest\:ultralight\:text, font-weight, 200;
-  @mixin text-double .largest\:light\:text, font-weight, 300;
-  @mixin text-double .largest\:regular\:text, font-weight, 400;
-  @mixin text-double .largest\:medium\:text, font-weight, 500;
-  @mixin text-double .largest\:semibold\:text, font-weight, 600;
-  @mixin text-double .largest\:bold\:text, font-weight, 700;
-  @mixin text-double .largest\:ultrabold\:text, font-weight, 800;
-  @mixin text-double .largest\:heavy\:text, font-weight, 900;
-  @mixin text-double .largest\:ultraheavy\:text, font-weight, 950;
+  @mixin text-size .largest\(text\);
+  @mixin text-double .largest\(thin\:text\), font-weight, 100;
+  @mixin text-double .largest\(ultralight\:text\), font-weight, 200;
+  @mixin text-double .largest\(light\:text\), font-weight, 300;
+  @mixin text-double .largest\(regular\:text\), font-weight, 400;
+  @mixin text-double .largest\(medium\:text\), font-weight, 500;
+  @mixin text-double .largest\(semibold\:text\), font-weight, 600;
+  @mixin text-double .largest\(bold\:text\), font-weight, 700;
+  @mixin text-double .largest\(ultrabold\:text\), font-weight, 800;
+  @mixin text-double .largest\(heavy\:text\), font-weight, 900;
+  @mixin text-double .largest\(ultraheavy\:text\), font-weight, 950;
 
-  @mixin text-double .largest\:lighter\:text, font-weight, lighter;
-  @mixin text-double .largest\:bolder\:text, font-weight, bolder;
+  @mixin text-double .largest\(lighter\:text\), font-weight, lighter;
+  @mixin text-double .largest\(bolder\:text\), font-weight, bolder;
 
-  @mixin text-double .largest\:italic\:text, font-style, italic;
-  @mixin text-double .largest\:normal\:text, font-style, normal;
+  @mixin text-double .largest\(italic\:text\), font-style, italic;
+  @mixin text-double .largest\(normal\:text\), font-style, normal;
 
-  @mixin text-double .largest\:lowercase\:text, text-transform, lowercase;
-  @mixin text-double .largest\:uppercase\:text, text-transform, uppercase;
-  @mixin text-double .largest\:capitalize\:text, text-transform, capitalize;
+  @mixin text-double .largest\(lowercase\:text\), text-transform, lowercase;
+  @mixin text-double .largest\(uppercase\:text\), text-transform, uppercase;
+  @mixin text-double .largest\(capitalize\:text\), text-transform, capitalize;
 }
