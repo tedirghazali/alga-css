@@ -1,6 +1,7 @@
 .nav,
 .tab\:nav,
-.pill\:nav {
+.pill\:nav,
+.breadcrumb\:nav {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;

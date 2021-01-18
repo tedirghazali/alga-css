@@ -1,20 +1,13 @@
 .breadcrumb\:nav {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 0;
-  margin-bottom: 1rem;
-  list-style: none;
-  
-  & .nav-item + & .nav-item {
-    padding-left: 0.5rem;
+  & .nav-item:not(:first-child) {
+    display: flex;
+    align-items: center;
   }
   
-  & .nav-item + & .nav-item::before {
-    float: left;
-    padding-right: 0.5rem;
+  & .nav-item:not(:first-child)::before {
+    padding-right: 0.1px;
     color: #6c757d;
     content: var(--alga-divider, "/");
-    content: attr(data-divider);
   }
   
   & .nav-item.active,

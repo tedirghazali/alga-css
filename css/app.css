@@ -36,7 +36,9 @@
 @import './components/card.css';
 @import './components/progress.css';
 @import './components/modal.css';
-@import './components/callout.css';
+@import './components/editor.css';
+@import './components/tooltip.css';
+@import './components/badge.css';
 
 /* Helpers */
 @import './helpers/color.css';
