@@ -33,181 +33,181 @@
 @mixin grid-gap .row\:gap, row-gap;
 
 @media (min-width: 640px) {
-  .small\:grid {
+  .small\(grid\) {
     display: grid;
   }
 
-  @mixin grid-mixin .small\:column\:grid, grid-template-columns;
-  @mixin grid-template .small\:grid-columns, grid-template-columns;
-  @mixin grid-auto .small\:auto\:grid-columns, grid-auto-columns, auto;
-  @mixin grid-auto .small\:min\:grid-columns, grid-auto-columns, min-content;
-  @mixin grid-auto .small\:max\:grid-columns, grid-auto-columns, max-content;
-  @mixin grid-auto .small\:fr\:grid-columns, grid-auto-columns, minmax(0, 1fr);
-  @mixin grid-auto .small\:flow\:grid-columns, grid-auto-flow, column;
-  @mixin grid-auto .small\:dense\:grid-columns, grid-auto-flow, column dense;
+  @mixin grid-mixin .small\(column\:grid\), grid-template-columns;
+  @mixin grid-template .small\(grid-columns\), grid-template-columns;
+  @mixin grid-auto .small\(auto\:grid-columns\), grid-auto-columns, auto;
+  @mixin grid-auto .small\(min\:grid-columns\), grid-auto-columns, min-content;
+  @mixin grid-auto .small\(max\:grid-columns\), grid-auto-columns, max-content;
+  @mixin grid-auto .small\(fr\:grid-columns\), grid-auto-columns, minmax(0, 1fr);
+  @mixin grid-auto .small\(flow\:grid-columns\), grid-auto-flow, column;
+  @mixin grid-auto .small\(dense\:grid-columns\), grid-auto-flow, column dense;
 
-  @mixin grid-mixin .small\:row\:grid, grid-template-rows;
-  @mixin grid-template .small\:grid-rows, grid-template-rows;
-  @mixin grid-auto .small\:auto\:grid-rows, grid-auto-rows, auto;
-  @mixin grid-auto .small\:min\:grid-rows, grid-auto-rows, min-content;
-  @mixin grid-auto .small\:max\:grid-rows, grid-auto-rows, max-content;
-  @mixin grid-auto .small\:fr\:grid-rows, grid-auto-rows, minmax(0, 1fr);
-  @mixin grid-auto .small\:flow\:grid-rows, grid-auto-flow, row;
-  @mixin grid-auto .small\:dense\:grid-rows, grid-auto-flow, row dense;
+  @mixin grid-mixin .small\(row\:grid\), grid-template-rows;
+  @mixin grid-template .small\(grid-rows\), grid-template-rows;
+  @mixin grid-auto .small\(auto\:grid-rows\), grid-auto-rows, auto;
+  @mixin grid-auto .small\(min\:grid-rows\), grid-auto-rows, min-content;
+  @mixin grid-auto .small\(max\:grid-rows\), grid-auto-rows, max-content;
+  @mixin grid-auto .small\(fr\:grid-rows\), grid-auto-rows, minmax(0, 1fr);
+  @mixin grid-auto .small\(flow\:grid-rows\), grid-auto-flow, row;
+  @mixin grid-auto .small\(dense\:grid-rows\), grid-auto-flow, row dense;
 
-  @mixin grid-span .small\:colspan, grid-column;
-  @mixin grid-line .small\:start\:colspan, grid-column-start;
-  @mixin grid-line .small\:end\:colspan, grid-column-end;
+  @mixin grid-span .small\(colspan\), grid-column;
+  @mixin grid-line .small\(start\:colspan\), grid-column-start;
+  @mixin grid-line .small\(end\:colspan\), grid-column-end;
 
-  @mixin grid-span .small\:rowspan, grid-row;
-  @mixin grid-line .small\:start\:rowspan, grid-row-start;
-  @mixin grid-line .small\:end\:rowspan, grid-row-end;
+  @mixin grid-span .small\(rowspan\), grid-row;
+  @mixin grid-line .small\(start\:rowspan\), grid-row-start;
+  @mixin grid-line .small\(end\:rowspan\), grid-row-end;
 
-  @mixin grid-gap .small\:gap, gap;
-  @mixin grid-gap .small\:column\:gap, column-gap;
-  @mixin grid-gap .small\:row\:gap, row-gap;
+  @mixin grid-gap .small\(gap\), gap;
+  @mixin grid-gap .small\(column\:gap\), column-gap;
+  @mixin grid-gap .small\(row\:gap\), row-gap;
 }
 
 @media (min-width: 768px) {
-  .medium\:grid {
+  .medium\(grid\) {
     display: grid;
   }
 
-  @mixin grid-mixin .medium\:column\:grid, grid-template-columns;
-  @mixin grid-template .medium\:grid-columns, grid-template-columns;
-  @mixin grid-auto .medium\:auto\:grid-columns, grid-auto-columns, auto;
-  @mixin grid-auto .medium\:min\:grid-columns, grid-auto-columns, min-content;
-  @mixin grid-auto .medium\:max\:grid-columns, grid-auto-columns, max-content;
-  @mixin grid-auto .medium\:fr\:grid-columns, grid-auto-columns, minmax(0, 1fr);
-  @mixin grid-auto .medium\:flow\:grid-columns, grid-auto-flow, column;
-  @mixin grid-auto .medium\:dense\:grid-columns, grid-auto-flow, column dense;
+  @mixin grid-mixin .medium\(column\:grid\), grid-template-columns;
+  @mixin grid-template .medium\(grid-columns\), grid-template-columns;
+  @mixin grid-auto .medium\(auto\:grid-columns\), grid-auto-columns, auto;
+  @mixin grid-auto .medium\(min\:grid-columns\), grid-auto-columns, min-content;
+  @mixin grid-auto .medium\(max\:grid-columns\), grid-auto-columns, max-content;
+  @mixin grid-auto .medium\(fr\:grid-columns\), grid-auto-columns, minmax(0, 1fr);
+  @mixin grid-auto .medium\(flow\:grid-columns\), grid-auto-flow, column;
+  @mixin grid-auto .medium\(dense\:grid-columns\), grid-auto-flow, column dense;
 
-  @mixin grid-mixin .medium\:row\:grid, grid-template-rows;
-  @mixin grid-template .medium\:grid-rows, grid-template-rows;
-  @mixin grid-auto .medium\:auto\:grid-rows, grid-auto-rows, auto;
-  @mixin grid-auto .medium\:min\:grid-rows, grid-auto-rows, min-content;
-  @mixin grid-auto .medium\:max\:grid-rows, grid-auto-rows, max-content;
-  @mixin grid-auto .medium\:fr\:grid-rows, grid-auto-rows, minmax(0, 1fr);
-  @mixin grid-auto .medium\:flow\:grid-rows, grid-auto-flow, row;
-  @mixin grid-auto .medium\:dense\:grid-rows, grid-auto-flow, row dense;
+  @mixin grid-mixin .medium\(row\:grid\), grid-template-rows;
+  @mixin grid-template .medium\(grid-rows\), grid-template-rows;
+  @mixin grid-auto .medium\(auto\:grid-rows\), grid-auto-rows, auto;
+  @mixin grid-auto .medium\(min\:grid-rows\), grid-auto-rows, min-content;
+  @mixin grid-auto .medium\(max\:grid-rows\), grid-auto-rows, max-content;
+  @mixin grid-auto .medium\(fr\:grid-rows\), grid-auto-rows, minmax(0, 1fr);
+  @mixin grid-auto .medium\(flow\:grid-rows\), grid-auto-flow, row;
+  @mixin grid-auto .medium\(dense\:grid-rows\), grid-auto-flow, row dense;
 
-  @mixin grid-span .medium\:colspan, grid-column;
-  @mixin grid-line .medium\:start\:colspan, grid-column-start;
-  @mixin grid-line .medium\:end\:colspan, grid-column-end;
+  @mixin grid-span .medium\(colspan\), grid-column;
+  @mixin grid-line .medium\(start\:colspan\), grid-column-start;
+  @mixin grid-line .medium\(end\:colspan\), grid-column-end;
 
-  @mixin grid-span .medium\:rowspan, grid-row;
-  @mixin grid-line .medium\:start\:rowspan, grid-row-start;
-  @mixin grid-line .medium\:end\:rowspan, grid-row-end;
+  @mixin grid-span .medium\(rowspan\), grid-row;
+  @mixin grid-line .medium\(start\:rowspan\), grid-row-start;
+  @mixin grid-line .medium\(end\:rowspan\), grid-row-end;
 
-  @mixin grid-gap .medium\:gap, gap;
-  @mixin grid-gap .medium\:column\:gap, column-gap;
-  @mixin grid-gap .medium\:row\:gap, row-gap;
+  @mixin grid-gap .medium\(gap\), gap;
+  @mixin grid-gap .medium\(column\:gap\), column-gap;
+  @mixin grid-gap .medium\(row\:gap\), row-gap;
 }
 
 @media (min-width: 1024px) {
-  .large\:grid {
+  .large\(grid\) {
     display: grid;
   }
 
-  @mixin grid-mixin .large\:column\:grid, grid-template-columns;
-  @mixin grid-template .large\:grid-columns, grid-template-columns;
-  @mixin grid-auto .large\:auto\:grid-columns, grid-auto-columns, auto;
-  @mixin grid-auto .large\:min\:grid-columns, grid-auto-columns, min-content;
-  @mixin grid-auto .large\:max\:grid-columns, grid-auto-columns, max-content;
-  @mixin grid-auto .large\:fr\:grid-columns, grid-auto-columns, minmax(0, 1fr);
-  @mixin grid-auto .large\:flow\:grid-columns, grid-auto-flow, column;
-  @mixin grid-auto .large\:dense\:grid-columns, grid-auto-flow, column dense;
+  @mixin grid-mixin .large\(column\:grid\), grid-template-columns;
+  @mixin grid-template .large\(grid-columns\), grid-template-columns;
+  @mixin grid-auto .large\(auto\:grid-columns\), grid-auto-columns, auto;
+  @mixin grid-auto .large\(min\:grid-columns\), grid-auto-columns, min-content;
+  @mixin grid-auto .large\(max\:grid-columns\), grid-auto-columns, max-content;
+  @mixin grid-auto .large\(fr\:grid-columns\), grid-auto-columns, minmax(0, 1fr);
+  @mixin grid-auto .large\(flow\:grid-columns\), grid-auto-flow, column;
+  @mixin grid-auto .large\(dense\:grid-columns\), grid-auto-flow, column dense;
 
-  @mixin grid-mixin .large\:row\:grid, grid-template-rows;
-  @mixin grid-template .large\:grid-rows, grid-template-rows;
-  @mixin grid-auto .large\:auto\:grid-rows, grid-auto-rows, auto;
-  @mixin grid-auto .large\:min\:grid-rows, grid-auto-rows, min-content;
-  @mixin grid-auto .large\:max\:grid-rows, grid-auto-rows, max-content;
-  @mixin grid-auto .large\:fr\:grid-rows, grid-auto-rows, minmax(0, 1fr);
-  @mixin grid-auto .large\:flow\:grid-rows, grid-auto-flow, row;
-  @mixin grid-auto .large\:dense\:grid-rows, grid-auto-flow, row dense;
+  @mixin grid-mixin .large\(row\:grid\), grid-template-rows;
+  @mixin grid-template .large\(grid-rows\), grid-template-rows;
+  @mixin grid-auto .large\(auto\:grid-rows\), grid-auto-rows, auto;
+  @mixin grid-auto .large\(min\:grid-rows\), grid-auto-rows, min-content;
+  @mixin grid-auto .large\(max\:grid-rows\), grid-auto-rows, max-content;
+  @mixin grid-auto .large\(fr\:grid-rows\), grid-auto-rows, minmax(0, 1fr);
+  @mixin grid-auto .large\(flow\:grid-rows\), grid-auto-flow, row;
+  @mixin grid-auto .large\(dense\:grid-rows\), grid-auto-flow, row dense;
 
-  @mixin grid-span .large\:colspan, grid-column;
-  @mixin grid-line .large\:start\:colspan, grid-column-start;
-  @mixin grid-line .large\:end\:colspan, grid-column-end;
+  @mixin grid-span .large\(colspan\), grid-column;
+  @mixin grid-line .large\(start\:colspan\), grid-column-start;
+  @mixin grid-line .large\(end\:colspan\), grid-column-end;
 
-  @mixin grid-span .large\:rowspan, grid-row;
-  @mixin grid-line .large\:start\:rowspan, grid-row-start;
-  @mixin grid-line .large\:end\:rowspan, grid-row-end;
+  @mixin grid-span .large\(rowspan\), grid-row;
+  @mixin grid-line .large\(start\:rowspan\), grid-row-start;
+  @mixin grid-line .large\(end\:rowspan\), grid-row-end;
 
-  @mixin grid-gap .large\:gap, gap;
-  @mixin grid-gap .large\:column\:gap, column-gap;
-  @mixin grid-gap .large\:row\:gap, row-gap;
+  @mixin grid-gap .large\(gap\), gap;
+  @mixin grid-gap .large\(column\:gap\), column-gap;
+  @mixin grid-gap .large\(row\:gap\), row-gap;
 }
 
 @media (min-width: 1280px) {
-  .larger\:grid {
+  .larger\(grid\) {
     display: grid;
   }
 
-  @mixin grid-mixin .larger\:column\:grid, grid-template-columns;
-  @mixin grid-template .larger\:grid-columns, grid-template-columns;
-  @mixin grid-auto .larger\:auto\:grid-columns, grid-auto-columns, auto;
-  @mixin grid-auto .larger\:min\:grid-columns, grid-auto-columns, min-content;
-  @mixin grid-auto .larger\:max\:grid-columns, grid-auto-columns, max-content;
-  @mixin grid-auto .larger\:fr\:grid-columns, grid-auto-columns, minmax(0, 1fr);
-  @mixin grid-auto .larger\:flow\:grid-columns, grid-auto-flow, column;
-  @mixin grid-auto .larger\:dense\:grid-columns, grid-auto-flow, column dense;
+  @mixin grid-mixin .larger\(column\:grid\), grid-template-columns;
+  @mixin grid-template .larger\(grid-columns\), grid-template-columns;
+  @mixin grid-auto .larger\(auto\:grid-columns\), grid-auto-columns, auto;
+  @mixin grid-auto .larger\(min\:grid-columns\), grid-auto-columns, min-content;
+  @mixin grid-auto .larger\(max\:grid-columns\), grid-auto-columns, max-content;
+  @mixin grid-auto .larger\(fr\:grid-columns\), grid-auto-columns, minmax(0, 1fr);
+  @mixin grid-auto .larger\(flow\:grid-columns\), grid-auto-flow, column;
+  @mixin grid-auto .larger\(dense\:grid-columns\), grid-auto-flow, column dense;
 
-  @mixin grid-mixin .larger\:row\:grid, grid-template-rows;
-  @mixin grid-template .larger\:grid-rows, grid-template-rows;
-  @mixin grid-auto .larger\:auto\:grid-rows, grid-auto-rows, auto;
-  @mixin grid-auto .larger\:min\:grid-rows, grid-auto-rows, min-content;
-  @mixin grid-auto .larger\:max\:grid-rows, grid-auto-rows, max-content;
-  @mixin grid-auto .larger\:fr\:grid-rows, grid-auto-rows, minmax(0, 1fr);
-  @mixin grid-auto .larger\:flow\:grid-rows, grid-auto-flow, row;
-  @mixin grid-auto .larger\:dense\:grid-rows, grid-auto-flow, row dense;
+  @mixin grid-mixin .larger\(row\:grid\), grid-template-rows;
+  @mixin grid-template .larger\(grid-rows\), grid-template-rows;
+  @mixin grid-auto .larger\(auto\:grid-rows\), grid-auto-rows, auto;
+  @mixin grid-auto .larger\(min\:grid-rows\), grid-auto-rows, min-content;
+  @mixin grid-auto .larger\(max\:grid-rows\), grid-auto-rows, max-content;
+  @mixin grid-auto .larger\(fr\:grid-rows\), grid-auto-rows, minmax(0, 1fr);
+  @mixin grid-auto .larger\(flow\:grid-rows\), grid-auto-flow, row;
+  @mixin grid-auto .larger\(dense\:grid-rows\), grid-auto-flow, row dense;
 
-  @mixin grid-span .larger\:colspan, grid-column;
-  @mixin grid-line .larger\:start\:colspan, grid-column-start;
-  @mixin grid-line .larger\:end\:colspan, grid-column-end;
+  @mixin grid-span .larger\(colspan\), grid-column;
+  @mixin grid-line .larger\(start\:colspan\), grid-column-start;
+  @mixin grid-line .larger\(end\:colspan\), grid-column-end;
 
-  @mixin grid-span .larger\:rowspan, grid-row;
-  @mixin grid-line .larger\:start\:rowspan, grid-row-start;
-  @mixin grid-line .larger\:end\:rowspan, grid-row-end;
+  @mixin grid-span .larger\(rowspan\), grid-row;
+  @mixin grid-line .larger\(start\:rowspan\), grid-row-start;
+  @mixin grid-line .larger\(end\:rowspan\), grid-row-end;
 
-  @mixin grid-gap .larger\:gap, gap;
-  @mixin grid-gap .larger\:column\:gap, column-gap;
-  @mixin grid-gap .larger\:row\:gap, row-gap;
+  @mixin grid-gap .larger\(gap\), gap;
+  @mixin grid-gap .larger\(column\:gap\), column-gap;
+  @mixin grid-gap .larger\(row\:gap\), row-gap;
 }
 
 @media (min-width: 1536px) {
-  .largest\:grid {
+  .largest\(grid\) {
     display: grid;
   }
 
-  @mixin grid-mixin .largest\:column\:grid, grid-template-columns;
-  @mixin grid-template .largest\:grid-columns, grid-template-columns;
-  @mixin grid-auto .largest\:auto\:grid-columns, grid-auto-columns, auto;
-  @mixin grid-auto .largest\:min\:grid-columns, grid-auto-columns, min-content;
-  @mixin grid-auto .largest\:max\:grid-columns, grid-auto-columns, max-content;
-  @mixin grid-auto .largest\:fr\:grid-columns, grid-auto-columns, minmax(0, 1fr);
-  @mixin grid-auto .largest\:flow\:grid-columns, grid-auto-flow, column;
-  @mixin grid-auto .largest\:dense\:grid-columns, grid-auto-flow, column dense;
+  @mixin grid-mixin .largest\(column\:grid\), grid-template-columns;
+  @mixin grid-template .largest\(grid-columns\), grid-template-columns;
+  @mixin grid-auto .largest\(auto\:grid-columns\), grid-auto-columns, auto;
+  @mixin grid-auto .largest\(min\:grid-columns\), grid-auto-columns, min-content;
+  @mixin grid-auto .largest\(max\:grid-columns\), grid-auto-columns, max-content;
+  @mixin grid-auto .largest\(fr\:grid-columns\), grid-auto-columns, minmax(0, 1fr);
+  @mixin grid-auto .largest\(flow\:grid-columns\), grid-auto-flow, column;
+  @mixin grid-auto .largest\(dense\:grid-columns\), grid-auto-flow, column dense;
 
-  @mixin grid-mixin .largest\:row\:grid, grid-template-rows;
-  @mixin grid-template .largest\:grid-rows, grid-template-rows;
-  @mixin grid-auto .largest\:auto\:grid-rows, grid-auto-rows, auto;
-  @mixin grid-auto .largest\:min\:grid-rows, grid-auto-rows, min-content;
-  @mixin grid-auto .largest\:max\:grid-rows, grid-auto-rows, max-content;
-  @mixin grid-auto .largest\:fr\:grid-rows, grid-auto-rows, minmax(0, 1fr);
-  @mixin grid-auto .largest\:flow\:grid-rows, grid-auto-flow, row;
-  @mixin grid-auto .largest\:dense\:grid-rows, grid-auto-flow, row dense;
+  @mixin grid-mixin .largest\(row\:grid\), grid-template-rows;
+  @mixin grid-template .largest\(grid-rows\), grid-template-rows;
+  @mixin grid-auto .largest\(auto\:grid-rows\), grid-auto-rows, auto;
+  @mixin grid-auto .largest\(min\:grid-rows\), grid-auto-rows, min-content;
+  @mixin grid-auto .largest\(max\:grid-rows\), grid-auto-rows, max-content;
+  @mixin grid-auto .largest\(fr\:grid-rows\), grid-auto-rows, minmax(0, 1fr);
+  @mixin grid-auto .largest\(flow\:grid-rows\), grid-auto-flow, row;
+  @mixin grid-auto .largest\(dense\:grid-rows\), grid-auto-flow, row dense;
 
-  @mixin grid-span .largest\:colspan, grid-column;
-  @mixin grid-line .largest\:start\:colspan, grid-column-start;
-  @mixin grid-line .largest\:end\:colspan, grid-column-end;
+  @mixin grid-span .largest\(colspan\), grid-column;
+  @mixin grid-line .largest\(start\:colspan\), grid-column-start;
+  @mixin grid-line .largest\(end\:colspan\), grid-column-end;
 
-  @mixin grid-span .largest\:rowspan, grid-row;
-  @mixin grid-line .largest\:start\:rowspan, grid-row-start;
-  @mixin grid-line .largest\:end\:rowspan, grid-row-end;
+  @mixin grid-span .largest\(rowspan\), grid-row;
+  @mixin grid-line .largest\(start\:rowspan\), grid-row-start;
+  @mixin grid-line .largest\(end\:rowspan\), grid-row-end;
 
-  @mixin grid-gap .largest\:gap, gap;
-  @mixin grid-gap .largest\:column\:gap, column-gap;
-  @mixin grid-gap .largest\:row\:gap, row-gap;
+  @mixin grid-gap .largest\(gap\), gap;
+  @mixin grid-gap .largest\(column\:gap\), column-gap;
+  @mixin grid-gap .largest\(row\:gap\), row-gap;
 }

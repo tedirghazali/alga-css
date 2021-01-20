@@ -63,8 +63,8 @@
 }
 
 @media (min-width: 640px) {
-  .small\:overflow,
-  .small\:auto\:overflow { 
+  .small\(overflow\),
+  .small\(auto\:overflow\) { 
     overflow: auto !important;
     &-x {
       overflow-x: auto !important;
@@ -74,7 +74,7 @@
     }
   }
 
-  .small\:hidden\:overflow { 
+  .small\(hidden\:overflow\) { 
     overflow: hidden !important;
     &-x {
       overflow-x: hidden !important;
@@ -84,7 +84,7 @@
     }
   }
 
-  .small\:visible\:overflow { 
+  .small\(visible\:overflow\) { 
     overflow: visible !important;
     &-x {
       overflow-x: visible !important;
@@ -93,7 +93,7 @@
       overflow-y: visible !important;
     }
   }
-  .small\:scroll\:overflow { 
+  .small\(scroll\:overflow\) { 
     overflow: scroll !important;
     &-x {
       overflow-x: scroll !important;
@@ -103,25 +103,25 @@
     }
   }
 
-  .small\:clip\:text {
+  .small\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .small\:truncate\:text {
+  .small\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .small\:less\:text {
+  .small\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .small\:more\:text {
+  .small\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -129,8 +129,8 @@
 }
 
 @media (min-width: 768px) {
-  .medium\:overflow,
-  .medium\:auto\:overflow { 
+  .medium\(overflow\),
+  .medium\(auto\:overflow\) { 
     overflow: auto !important;
     &-x {
       overflow-x: auto !important;
@@ -140,7 +140,7 @@
     }
   }
 
-  .medium\:hidden\:overflow { 
+  .medium\(hidden\:overflow\) { 
     overflow: hidden !important;
     &-x {
       overflow-x: hidden !important;
@@ -150,7 +150,7 @@
     }
   }
 
-  .medium\:visible\:overflow { 
+  .medium\(visible\:overflow\) { 
     overflow: visible !important;
     &-x {
       overflow-x: visible !important;
@@ -159,7 +159,7 @@
       overflow-y: visible !important;
     }
   }
-  .medium\:scroll\:overflow { 
+  .medium\(scroll\:overflow\) { 
     overflow: scroll !important;
     &-x {
       overflow-x: scroll !important;
@@ -169,25 +169,25 @@
     }
   }
 
-  .medium\:clip\:text {
+  .medium\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .medium\:truncate\:text {
+  .medium\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .medium\:less\:text {
+  .medium\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .medium\:more\:text {
+  .medium\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -195,8 +195,8 @@
 }
 
 @media (min-width: 1024px) {
-  .large\:overflow,
-  .large\:auto\:overflow { 
+  .large\(overflow\),
+  .large\(auto\:overflow\) { 
     overflow: auto !important;
     &-x {
       overflow-x: auto !important;
@@ -206,7 +206,7 @@
     }
   }
 
-  .large\:hidden\:overflow { 
+  .large\(hidden\:overflow\) { 
     overflow: hidden !important;
     &-x {
       overflow-x: hidden !important;
@@ -216,7 +216,7 @@
     }
   }
 
-  .large\:visible\:overflow { 
+  .large\(visible\:overflow\) { 
     overflow: visible !important;
     &-x {
       overflow-x: visible !important;
@@ -225,7 +225,7 @@
       overflow-y: visible !important;
     }
   }
-  .large\:scroll\:overflow { 
+  .large\(scroll\:overflow\) { 
     overflow: scroll !important;
     &-x {
       overflow-x: scroll !important;
@@ -235,25 +235,25 @@
     }
   }
 
-  .large\:clip\:text {
+  .large\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .large\:truncate\:text {
+  .large\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .large\:less\:text {
+  .large\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .large\:more\:text {
+  .large\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -261,8 +261,8 @@
 }
 
 @media (min-width: 1280px) {
-  .larger\:overflow,
-  .larger\:auto\:overflow { 
+  .larger\(overflow\),
+  .larger\(auto\:overflow\) { 
     overflow: auto !important;
     &-x {
       overflow-x: auto !important;
@@ -272,7 +272,7 @@
     }
   }
 
-  .larger\:hidden\:overflow { 
+  .larger\(hidden\:overflow\) { 
     overflow: hidden !important;
     &-x {
       overflow-x: hidden !important;
@@ -282,7 +282,7 @@
     }
   }
 
-  .larger\:visible\:overflow { 
+  .larger\(visible\:overflow\) { 
     overflow: visible !important;
     &-x {
       overflow-x: visible !important;
@@ -291,7 +291,7 @@
       overflow-y: visible !important;
     }
   }
-  .larger\:scroll\:overflow { 
+  .larger\(scroll\:overflow\) { 
     overflow: scroll !important;
     &-x {
       overflow-x: scroll !important;
@@ -301,25 +301,25 @@
     }
   }
 
-  .larger\:clip\:text {
+  .larger\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .larger\:truncate\:text {
+  .larger\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .larger\:less\:text {
+  .larger\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .larger\:more\:text {
+  .larger\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -327,8 +327,8 @@
 }
 
 @media (min-width: 1536px) {
-  .largest\:overflow,
-  .largest\:auto\:overflow { 
+  .largest\(overflow\),
+  .largest\(auto\:overflow\) { 
     overflow: auto !important;
     &-x {
       overflow-x: auto !important;
@@ -338,7 +338,7 @@
     }
   }
 
-  .largest\:hidden\:overflow { 
+  .largest\(hidden\:overflow\) { 
     overflow: hidden !important;
     &-x {
       overflow-x: hidden !important;
@@ -348,7 +348,7 @@
     }
   }
 
-  .largest\:visible\:overflow { 
+  .largest\(visible\:overflow\) { 
     overflow: visible !important;
     &-x {
       overflow-x: visible !important;
@@ -357,7 +357,7 @@
       overflow-y: visible !important;
     }
   }
-  .largest\:scroll\:overflow { 
+  .largest\(scroll\:overflow\) { 
     overflow: scroll !important;
     &-x {
       overflow-x: scroll !important;
@@ -367,25 +367,25 @@
     }
   }
 
-  .largest\:clip\:text {
+  .largest\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .largest\:truncate\:text {
+  .largest\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .largest\:less\:text {
+  .largest\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .largest\:more\:text {
+  .largest\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;

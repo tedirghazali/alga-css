@@ -31650,1526 +31650,1526 @@ textarea.large\:input {
   }
 
 @media (min-width: 640px) {
-  .small\:flex {
+  .small\(flex\) {
     display: flex !important;
   }
 
-  .small\:start\:flex {
+  .small\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
   }
 
-  .small\:end\:flex {
+  .small\(end\:flex\) {
     display: flex !important;
     justify-content: flex-end !important;
   }
 
-  .small\:center\:flex {
+  .small\(center\:flex\) {
     display: flex !important;
     justify-content: center !important;
   }
 
-  .small\:between\:flex {
+  .small\(between\:flex\) {
     display: flex !important;
     justify-content: space-between !important;
   }
 
-  .small\:around\:flex {
+  .small\(around\:flex\) {
     display: flex !important;
     justify-content: space-around !important;
   }
 
-  .small\:evenly\:flex {
+  .small\(evenly\:flex\) {
     display: flex !important;
     justify-content: space-evenly !important;
   }
 
-  .small\:row\:flex {
+  .small\(row\:flex\) {
     display: flex !important;
     flex-direction: row !important;
   }
 
-  .small\:column\:flex {
+  .small\(column\:flex\) {
     display: flex !important;
     flex-direction: column !important;
   }
 
-  .small\:row\:flex-reverse {
+  .small\(row\:flex-reverse\) {
     display: flex !important;
     flex-direction: row-reverse !important;
   }
 
-  .small\:column\:flex-reverse {
+  .small\(column\:flex-reverse\) {
     display: flex !important;
     flex-direction: column-reverse !important;
   }
 
-  .small\:start\:flex-align {
+  .small\(start\:flex-align\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .small\:end\:flex-align {
+  .small\(end\:flex-align\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .small\:center\:flex-align {
+  .small\(center\:flex-align\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .small\:baseline\:flex-align {
+  .small\(baseline\:flex-align\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .small\:stretch\:flex-align {
+  .small\(stretch\:flex-align\) {
     display: flex !important;
     align-items: stretch !important;
   }
 
-  .small\:start\:flex-content {
+  .small\(start\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-start !important;
   }
 
-  .small\:end\:flex-content {
+  .small\(end\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-end !important;
   }
 
-  .small\:center\:flex-content {
+  .small\(center\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: center !important;
   }
 
-  .small\:between\:flex-content {
+  .small\(between\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-between !important;
   }
 
-  .small\:around\:flex-content {
+  .small\(around\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-around !important;
   }
 
-  .small\:stretch\:flex-content {
+  .small\(stretch\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
   }
 
-  .small\:flex-inline {
+  .small\(flex-inline\) {
     display: inline-flex !important;
   }
 
-  .small\:flex-fill {
+  .small\(flex-fill\) {
     flex: 1 1 auto !important;
   }
 
-  .small\:flex-item {
+  .small\(flex-item\) {
     flex: 1 1 0% !important;
   }
 
-  .small\:flex-base {
+  .small\(flex-base\) {
     flex: 0 1 auto !important;
   }
 
-  .small\:flex-none {
+  .small\(flex-none\) {
     none:  !important;
   }
 
-  .small\:flex-row {
+  .small\(flex-row\) {
     flex-direction: row !important;
   }
 
-  .small\:flex-column {
+  .small\(flex-column\) {
     flex-direction: column !important;
   }
 
-  .small\:flex-row-reverse {
+  .small\(flex-row-reverse\) {
     flex-direction: row-reverse !important;
   }
 
-  .small\:flex-column-reverse {
+  .small\(flex-column-reverse\) {
     flex-direction: column-reverse !important;
   }
 
-  .small\:flex-grow-0 {
+  .small\(flex-grow-0\) {
     flex-grow: 0 !important;
   }
 
-  .small\:flex-grow-1 {
+  .small\(flex-grow-1\) {
     flex-grow: 1 !important;
   }
 
-  .small\:flex-shrink-0 {
+  .small\(flex-shrink-0\) {
     flex-shrink: 0 !important;
   }
 
-  .small\:flex-shrink-1 {
+  .small\(flex-shrink-1\) {
     flex-shrink: 1 !important;
   }
 
-  .small\:flex-wrap {
+  .small\(flex-wrap\) {
     flex-wrap: wrap !important;
   }
 
-  .small\:flex-nowrap {
+  .small\(flex-nowrap\) {
     flex-wrap: nowrap !important;
   }
 
-  .small\:flex-wrap-reverse {
+  .small\(flex-wrap-reverse\) {
     flex-wrap: wrap-reverse !important;
   }
 
-  .small\:start\:justify-content {
+  .small\(start\:justify-content\) {
     justify-content: flex-start !important;
   }
 
-  .small\:end\:justify-content {
+  .small\(end\:justify-content\) {
     justify-content: flex-end !important;
   }
 
-  .small\:center\:justify-content {
+  .small\(center\:justify-content\) {
     justify-content: center !important;
   }
 
-  .small\:between\:justify-content {
+  .small\(between\:justify-content\) {
     justify-content: space-between !important;
   }
 
-  .small\:around\:justify-content {
+  .small\(around\:justify-content\) {
     justify-content: space-around !important;
   }
 
-  .small\:evenly\:justify-content {
+  .small\(evenly\:justify-content\) {
     justify-content: space-evenly !important;
   }
 
-  .small\:start\:align-items {
+  .small\(start\:align-items\) {
     align-items: flex-start !important;
   }
 
-  .small\:end\:align-items {
+  .small\(end\:align-items\) {
     align-items: flex-end !important;
   }
 
-  .small\:center\:align-items {
+  .small\(center\:align-items\) {
     align-items: center !important;
   }
 
-  .small\:baseline\:align-items {
+  .small\(baseline\:align-items\) {
     align-items: baseline !important;
   }
 
-  .small\:stretch\:align-items {
+  .small\(stretch\:align-items\) {
     align-items: stretch !important;
   }
 
-  .small\:start\:align-content {
+  .small\(start\:align-content\) {
     align-content: flex-start !important;
   }
 
-  .small\:end\:align-content {
+  .small\(end\:align-content\) {
     align-content: flex-end !important;
   }
 
-  .small\:center\:align-content {
+  .small\(center\:align-content\) {
     align-content: center !important;
   }
 
-  .small\:between\:align-content {
+  .small\(between\:align-content\) {
     align-content: space-between !important;
   }
 
-  .small\:around\:align-content {
+  .small\(around\:align-content\) {
     align-content: space-around !important;
   }
 
-  .small\:stretch\:align-content {
+  .small\(stretch\:align-content\) {
     align-content: stretch !important;
   }
 
-  .small\:auto\:align-self {
+  .small\(auto\:align-self\) {
     align-self: auto !important;
   }
 
-  .small\:start\:align-self {
+  .small\(start\:align-self\) {
     align-self: flex-start !important;
   }
 
-  .small\:end\:align-self {
+  .small\(end\:align-self\) {
     align-self: flex-end !important;
   }
 
-  .small\:center\:align-self {
+  .small\(center\:align-self\) {
     align-self: center !important;
   }
 
-  .small\:baseline\:align-self {
+  .small\(baseline\:align-self\) {
     align-self: baseline !important;
   }
 
-  .small\:stretch\:align-self {
+  .small\(stretch\:align-self\) {
     align-self: stretch !important;
   }
 
-  .small\:order-first {
-    .small\:order: -1 !important;
+  .small\(order\)-first {
+    .small\(order\): -1 !important;
   }
 
-  .small\:order-0 {
+  .small\(order\)-0 {
     order: 0 !important;
   }
 
-  .small\:order-1 {
+  .small\(order\)-1 {
     order: 1 !important;
   }
 
-  .small\:order-2 {
+  .small\(order\)-2 {
     order: 2 !important;
   }
 
-  .small\:order-3 {
+  .small\(order\)-3 {
     order: 3 !important;
   }
 
-  .small\:order-4 {
+  .small\(order\)-4 {
     order: 4 !important;
   }
 
-  .small\:order-5 {
+  .small\(order\)-5 {
     order: 5 !important;
   }
 
-  .small\:order-last {
+  .small\(order\)-last {
     order: 6 !important;
   }
 }
 
 @media (min-width: 768px) {
-  .medium\:flex {
+  .medium\(flex\) {
     display: flex !important;
   }
 
-  .medium\:start\:flex {
+  .medium\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
   }
 
-  .medium\:end\:flex {
+  .medium\(end\:flex\) {
     display: flex !important;
     justify-content: flex-end !important;
   }
 
-  .medium\:center\:flex {
+  .medium\(center\:flex\) {
     display: flex !important;
     justify-content: center !important;
   }
 
-  .medium\:between\:flex {
+  .medium\(between\:flex\) {
     display: flex !important;
     justify-content: space-between !important;
   }
 
-  .medium\:around\:flex {
+  .medium\(around\:flex\) {
     display: flex !important;
     justify-content: space-around !important;
   }
 
-  .medium\:evenly\:flex {
+  .medium\(evenly\:flex\) {
     display: flex !important;
     justify-content: space-evenly !important;
   }
 
-  .medium\:row\:flex {
+  .medium\(row\:flex\) {
     display: flex !important;
     flex-direction: row !important;
   }
 
-  .medium\:column\:flex {
+  .medium\(column\:flex\) {
     display: flex !important;
     flex-direction: column !important;
   }
 
-  .medium\:row\:flex-reverse {
+  .medium\(row\:flex-reverse\) {
     display: flex !important;
     flex-direction: row-reverse !important;
   }
 
-  .medium\:column\:flex-reverse {
+  .medium\(column\:flex-reverse\) {
     display: flex !important;
     flex-direction: column-reverse !important;
   }
 
-  .medium\:start\:flex-align {
+  .medium\(start\:flex-align\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .medium\:end\:flex-align {
+  .medium\(end\:flex-align\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .medium\:center\:flex-align {
+  .medium\(center\:flex-align\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .medium\:baseline\:flex-align {
+  .medium\(baseline\:flex-align\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .medium\:stretch\:flex-align {
+  .medium\(stretch\:flex-align\) {
     display: flex !important;
     align-items: stretch !important;
   }
 
-  .medium\:start\:flex-content {
+  .medium\(start\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-start !important;
   }
 
-  .medium\:end\:flex-content {
+  .medium\(end\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-end !important;
   }
 
-  .medium\:center\:flex-content {
+  .medium\(center\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: center !important;
   }
 
-  .medium\:between\:flex-content {
+  .medium\(between\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-between !important;
   }
 
-  .medium\:around\:flex-content {
+  .medium\(around\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-around !important;
   }
 
-  .medium\:stretch\:flex-content {
+  .medium\(stretch\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
   }
 
-  .medium\:flex-inline {
+  .medium\(flex-inline\) {
     display: inline-flex !important;
   }
 
-  .medium\:flex-fill {
+  .medium\(flex-fill\) {
     flex: 1 1 auto !important;
   }
 
-  .medium\:flex-item {
+  .medium\(flex-item\) {
     flex: 1 1 0% !important;
   }
 
-  .medium\:flex-base {
+  .medium\(flex-base\) {
     flex: 0 1 auto !important;
   }
 
-  .medium\:flex-none {
+  .medium\(flex-none\) {
     none:  !important;
   }
 
-  .medium\:flex-row {
+  .medium\(flex-row\) {
     flex-direction: row !important;
   }
 
-  .medium\:flex-column {
+  .medium\(flex-column\) {
     flex-direction: column !important;
   }
 
-  .medium\:flex-row-reverse {
+  .medium\(flex-row-reverse\) {
     flex-direction: row-reverse !important;
   }
 
-  .medium\:flex-column-reverse {
+  .medium\(flex-column-reverse\) {
     flex-direction: column-reverse !important;
   }
 
-  .medium\:flex-grow-0 {
+  .medium\(flex-grow-0\) {
     flex-grow: 0 !important;
   }
 
-  .medium\:flex-grow-1 {
+  .medium\(flex-grow-1\) {
     flex-grow: 1 !important;
   }
 
-  .medium\:flex-shrink-0 {
+  .medium\(flex-shrink-0\) {
     flex-shrink: 0 !important;
   }
 
-  .medium\:flex-shrink-1 {
+  .medium\(flex-shrink-1\) {
     flex-shrink: 1 !important;
   }
 
-  .medium\:flex-wrap {
+  .medium\(flex-wrap\) {
     flex-wrap: wrap !important;
   }
 
-  .medium\:flex-nowrap {
+  .medium\(flex-nowrap\) {
     flex-wrap: nowrap !important;
   }
 
-  .medium\:flex-wrap-reverse {
+  .medium\(flex-wrap-reverse\) {
     flex-wrap: wrap-reverse !important;
   }
 
-  .medium\:start\:justify-content {
+  .medium\(start\:justify-content\) {
     justify-content: flex-start !important;
   }
 
-  .medium\:end\:justify-content {
+  .medium\(end\:justify-content\) {
     justify-content: flex-end !important;
   }
 
-  .medium\:center\:justify-content {
+  .medium\(center\:justify-content\) {
     justify-content: center !important;
   }
 
-  .medium\:between\:justify-content {
+  .medium\(between\:justify-content\) {
     justify-content: space-between !important;
   }
 
-  .medium\:around\:justify-content {
+  .medium\(around\:justify-content\) {
     justify-content: space-around !important;
   }
 
-  .medium\:evenly\:justify-content {
+  .medium\(evenly\:justify-content\) {
     justify-content: space-evenly !important;
   }
 
-  .medium\:start\:align-items {
+  .medium\(start\:align-items\) {
     align-items: flex-start !important;
   }
 
-  .medium\:end\:align-items {
+  .medium\(end\:align-items\) {
     align-items: flex-end !important;
   }
 
-  .medium\:center\:align-items {
+  .medium\(center\:align-items\) {
     align-items: center !important;
   }
 
-  .medium\:baseline\:align-items {
+  .medium\(baseline\:align-items\) {
     align-items: baseline !important;
   }
 
-  .medium\:stretch\:align-items {
+  .medium\(stretch\:align-items\) {
     align-items: stretch !important;
   }
 
-  .medium\:start\:align-content {
+  .medium\(start\:align-content\) {
     align-content: flex-start !important;
   }
 
-  .medium\:end\:align-content {
+  .medium\(end\:align-content\) {
     align-content: flex-end !important;
   }
 
-  .medium\:center\:align-content {
+  .medium\(center\:align-content\) {
     align-content: center !important;
   }
 
-  .medium\:between\:align-content {
+  .medium\(between\:align-content\) {
     align-content: space-between !important;
   }
 
-  .medium\:around\:align-content {
+  .medium\(around\:align-content\) {
     align-content: space-around !important;
   }
 
-  .medium\:stretch\:align-content {
+  .medium\(stretch\:align-content\) {
     align-content: stretch !important;
   }
 
-  .medium\:auto\:align-self {
+  .medium\(auto\:align-self\) {
     align-self: auto !important;
   }
 
-  .medium\:start\:align-self {
+  .medium\(start\:align-self\) {
     align-self: flex-start !important;
   }
 
-  .medium\:end\:align-self {
+  .medium\(end\:align-self\) {
     align-self: flex-end !important;
   }
 
-  .medium\:center\:align-self {
+  .medium\(center\:align-self\) {
     align-self: center !important;
   }
 
-  .medium\:baseline\:align-self {
+  .medium\(baseline\:align-self\) {
     align-self: baseline !important;
   }
 
-  .medium\:stretch\:align-self {
+  .medium\(stretch\:align-self\) {
     align-self: stretch !important;
   }
 
-  .medium\:order-first {
-    .medium\:order: -1 !important;
+  .medium\(order\)-first {
+    .medium\(order\): -1 !important;
   }
 
-  .medium\:order-0 {
+  .medium\(order\)-0 {
     order: 0 !important;
   }
 
-  .medium\:order-1 {
+  .medium\(order\)-1 {
     order: 1 !important;
   }
 
-  .medium\:order-2 {
+  .medium\(order\)-2 {
     order: 2 !important;
   }
 
-  .medium\:order-3 {
+  .medium\(order\)-3 {
     order: 3 !important;
   }
 
-  .medium\:order-4 {
+  .medium\(order\)-4 {
     order: 4 !important;
   }
 
-  .medium\:order-5 {
+  .medium\(order\)-5 {
     order: 5 !important;
   }
 
-  .medium\:order-last {
+  .medium\(order\)-last {
     order: 6 !important;
   }
 }
 
 @media (min-width: 1024px) {
-  .large\:flex {
+  .large\(flex\) {
     display: flex !important;
   }
 
-  .large\:start\:flex {
+  .large\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
   }
 
-  .large\:end\:flex {
+  .large\(end\:flex\) {
     display: flex !important;
     justify-content: flex-end !important;
   }
 
-  .large\:center\:flex {
+  .large\(center\:flex\) {
     display: flex !important;
     justify-content: center !important;
   }
 
-  .large\:between\:flex {
+  .large\(between\:flex\) {
     display: flex !important;
     justify-content: space-between !important;
   }
 
-  .large\:around\:flex {
+  .large\(around\:flex\) {
     display: flex !important;
     justify-content: space-around !important;
   }
 
-  .large\:evenly\:flex {
+  .large\(evenly\:flex\) {
     display: flex !important;
     justify-content: space-evenly !important;
   }
 
-  .large\:row\:flex {
+  .large\(row\:flex\) {
     display: flex !important;
     flex-direction: row !important;
   }
 
-  .large\:column\:flex {
+  .large\(column\:flex\) {
     display: flex !important;
     flex-direction: column !important;
   }
 
-  .large\:row\:flex-reverse {
+  .large\(row\:flex-reverse\) {
     display: flex !important;
     flex-direction: row-reverse !important;
   }
 
-  .large\:column\:flex-reverse {
+  .large\(column\:flex-reverse\) {
     display: flex !important;
     flex-direction: column-reverse !important;
   }
 
-  .large\:start\:flex-align {
+  .large\(start\:flex-align\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .large\:end\:flex-align {
+  .large\(end\:flex-align\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .large\:center\:flex-align {
+  .large\(center\:flex-align\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .large\:baseline\:flex-align {
+  .large\(baseline\:flex-align\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .large\:stretch\:flex-align {
+  .large\(stretch\:flex-align\) {
     display: flex !important;
     align-items: stretch !important;
   }
 
-  .large\:start\:flex-content {
+  .large\(start\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-start !important;
   }
 
-  .large\:end\:flex-content {
+  .large\(end\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-end !important;
   }
 
-  .large\:center\:flex-content {
+  .large\(center\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: center !important;
   }
 
-  .large\:between\:flex-content {
+  .large\(between\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-between !important;
   }
 
-  .large\:around\:flex-content {
+  .large\(around\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-around !important;
   }
 
-  .large\:stretch\:flex-content {
+  .large\(stretch\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
   }
 
-  .large\:flex-inline {
+  .large\(flex-inline\) {
     display: inline-flex !important;
   }
 
-  .large\:flex-fill {
+  .large\(flex-fill\) {
     flex: 1 1 auto !important;
   }
 
-  .large\:flex-item {
+  .large\(flex-item\) {
     flex: 1 1 0% !important;
   }
 
-  .large\:flex-base {
+  .large\(flex-base\) {
     flex: 0 1 auto !important;
   }
 
-  .large\:flex-none {
+  .large\(flex-none\) {
     none:  !important;
   }
 
-  .large\:flex-row {
+  .large\(flex-row\) {
     flex-direction: row !important;
   }
 
-  .large\:flex-column {
+  .large\(flex-column\) {
     flex-direction: column !important;
   }
 
-  .large\:flex-row-reverse {
+  .large\(flex-row-reverse\) {
     flex-direction: row-reverse !important;
   }
 
-  .large\:flex-column-reverse {
+  .large\(flex-column-reverse\) {
     flex-direction: column-reverse !important;
   }
 
-  .large\:flex-grow-0 {
+  .large\(flex-grow-0\) {
     flex-grow: 0 !important;
   }
 
-  .large\:flex-grow-1 {
+  .large\(flex-grow-1\) {
     flex-grow: 1 !important;
   }
 
-  .large\:flex-shrink-0 {
+  .large\(flex-shrink-0\) {
     flex-shrink: 0 !important;
   }
 
-  .large\:flex-shrink-1 {
+  .large\(flex-shrink-1\) {
     flex-shrink: 1 !important;
   }
 
-  .large\:flex-wrap {
+  .large\(flex-wrap\) {
     flex-wrap: wrap !important;
   }
 
-  .large\:flex-nowrap {
+  .large\(flex-nowrap\) {
     flex-wrap: nowrap !important;
   }
 
-  .large\:flex-wrap-reverse {
+  .large\(flex-wrap-reverse\) {
     flex-wrap: wrap-reverse !important;
   }
 
-  .large\:start\:justify-content {
+  .large\(start\:justify-content\) {
     justify-content: flex-start !important;
   }
 
-  .large\:end\:justify-content {
+  .large\(end\:justify-content\) {
     justify-content: flex-end !important;
   }
 
-  .large\:center\:justify-content {
+  .large\(center\:justify-content\) {
     justify-content: center !important;
   }
 
-  .large\:between\:justify-content {
+  .large\(between\:justify-content\) {
     justify-content: space-between !important;
   }
 
-  .large\:around\:justify-content {
+  .large\(around\:justify-content\) {
     justify-content: space-around !important;
   }
 
-  .large\:evenly\:justify-content {
+  .large\(evenly\:justify-content\) {
     justify-content: space-evenly !important;
   }
 
-  .large\:start\:align-items {
+  .large\(start\:align-items\) {
     align-items: flex-start !important;
   }
 
-  .large\:end\:align-items {
+  .large\(end\:align-items\) {
     align-items: flex-end !important;
   }
 
-  .large\:center\:align-items {
+  .large\(center\:align-items\) {
     align-items: center !important;
   }
 
-  .large\:baseline\:align-items {
+  .large\(baseline\:align-items\) {
     align-items: baseline !important;
   }
 
-  .large\:stretch\:align-items {
+  .large\(stretch\:align-items\) {
     align-items: stretch !important;
   }
 
-  .large\:start\:align-content {
+  .large\(start\:align-content\) {
     align-content: flex-start !important;
   }
 
-  .large\:end\:align-content {
+  .large\(end\:align-content\) {
     align-content: flex-end !important;
   }
 
-  .large\:center\:align-content {
+  .large\(center\:align-content\) {
     align-content: center !important;
   }
 
-  .large\:between\:align-content {
+  .large\(between\:align-content\) {
     align-content: space-between !important;
   }
 
-  .large\:around\:align-content {
+  .large\(around\:align-content\) {
     align-content: space-around !important;
   }
 
-  .large\:stretch\:align-content {
+  .large\(stretch\:align-content\) {
     align-content: stretch !important;
   }
 
-  .large\:auto\:align-self {
+  .large\(auto\:align-self\) {
     align-self: auto !important;
   }
 
-  .large\:start\:align-self {
+  .large\(start\:align-self\) {
     align-self: flex-start !important;
   }
 
-  .large\:end\:align-self {
+  .large\(end\:align-self\) {
     align-self: flex-end !important;
   }
 
-  .large\:center\:align-self {
+  .large\(center\:align-self\) {
     align-self: center !important;
   }
 
-  .large\:baseline\:align-self {
+  .large\(baseline\:align-self\) {
     align-self: baseline !important;
   }
 
-  .large\:stretch\:align-self {
+  .large\(stretch\:align-self\) {
     align-self: stretch !important;
   }
 
-  .large\:order-first {
-    .large\:order: -1 !important;
+  .large\(order\)-first {
+    .large\(order\): -1 !important;
   }
 
-  .large\:order-0 {
+  .large\(order\)-0 {
     order: 0 !important;
   }
 
-  .large\:order-1 {
+  .large\(order\)-1 {
     order: 1 !important;
   }
 
-  .large\:order-2 {
+  .large\(order\)-2 {
     order: 2 !important;
   }
 
-  .large\:order-3 {
+  .large\(order\)-3 {
     order: 3 !important;
   }
 
-  .large\:order-4 {
+  .large\(order\)-4 {
     order: 4 !important;
   }
 
-  .large\:order-5 {
+  .large\(order\)-5 {
     order: 5 !important;
   }
 
-  .large\:order-last {
+  .large\(order\)-last {
     order: 6 !important;
   }
 }
 
 @media (min-width: 1280px) {
-  .larger\:flex {
+  .larger\(flex\) {
     display: flex !important;
   }
 
-  .larger\:start\:flex {
+  .larger\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
   }
 
-  .larger\:end\:flex {
+  .larger\(end\:flex\) {
     display: flex !important;
     justify-content: flex-end !important;
   }
 
-  .larger\:center\:flex {
+  .larger\(center\:flex\) {
     display: flex !important;
     justify-content: center !important;
   }
 
-  .larger\:between\:flex {
+  .larger\(between\:flex\) {
     display: flex !important;
     justify-content: space-between !important;
   }
 
-  .larger\:around\:flex {
+  .larger\(around\:flex\) {
     display: flex !important;
     justify-content: space-around !important;
   }
 
-  .larger\:evenly\:flex {
+  .larger\(evenly\:flex\) {
     display: flex !important;
     justify-content: space-evenly !important;
   }
 
-  .larger\:row\:flex {
+  .larger\(row\:flex\) {
     display: flex !important;
     flex-direction: row !important;
   }
 
-  .larger\:column\:flex {
+  .larger\(column\:flex\) {
     display: flex !important;
     flex-direction: column !important;
   }
 
-  .larger\:row\:flex-reverse {
+  .larger\(row\:flex-reverse\) {
     display: flex !important;
     flex-direction: row-reverse !important;
   }
 
-  .larger\:column\:flex-reverse {
+  .larger\(column\:flex-reverse\) {
     display: flex !important;
     flex-direction: column-reverse !important;
   }
 
-  .larger\:start\:flex-align {
+  .larger\(start\:flex-align\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .larger\:end\:flex-align {
+  .larger\(end\:flex-align\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .larger\:center\:flex-align {
+  .larger\(center\:flex-align\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .larger\:baseline\:flex-align {
+  .larger\(baseline\:flex-align\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .larger\:stretch\:flex-align {
+  .larger\(stretch\:flex-align\) {
     display: flex !important;
     align-items: stretch !important;
   }
 
-  .larger\:start\:flex-content {
+  .larger\(start\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-start !important;
   }
 
-  .larger\:end\:flex-content {
+  .larger\(end\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-end !important;
   }
 
-  .larger\:center\:flex-content {
+  .larger\(center\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: center !important;
   }
 
-  .larger\:between\:flex-content {
+  .larger\(between\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-between !important;
   }
 
-  .larger\:around\:flex-content {
+  .larger\(around\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-around !important;
   }
 
-  .larger\:stretch\:flex-content {
+  .larger\(stretch\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
   }
 
-  .larger\:flex-inline {
+  .larger\(flex-inline\) {
     display: inline-flex !important;
   }
 
-  .larger\:flex-fill {
+  .larger\(flex-fill\) {
     flex: 1 1 auto !important;
   }
 
-  .larger\:flex-item {
+  .larger\(flex-item\) {
     flex: 1 1 0% !important;
   }
 
-  .larger\:flex-base {
+  .larger\(flex-base\) {
     flex: 0 1 auto !important;
   }
 
-  .larger\:flex-none {
+  .larger\(flex-none\) {
     none:  !important;
   }
 
-  .larger\:flex-row {
+  .larger\(flex-row\) {
     flex-direction: row !important;
   }
 
-  .larger\:flex-column {
+  .larger\(flex-column\) {
     flex-direction: column !important;
   }
 
-  .larger\:flex-row-reverse {
+  .larger\(flex-row-reverse\) {
     flex-direction: row-reverse !important;
   }
 
-  .larger\:flex-column-reverse {
+  .larger\(flex-column-reverse\) {
     flex-direction: column-reverse !important;
   }
 
-  .larger\:flex-grow-0 {
+  .larger\(flex-grow-0\) {
     flex-grow: 0 !important;
   }
 
-  .larger\:flex-grow-1 {
+  .larger\(flex-grow-1\) {
     flex-grow: 1 !important;
   }
 
-  .larger\:flex-shrink-0 {
+  .larger\(flex-shrink-0\) {
     flex-shrink: 0 !important;
   }
 
-  .larger\:flex-shrink-1 {
+  .larger\(flex-shrink-1\) {
     flex-shrink: 1 !important;
   }
 
-  .larger\:flex-wrap {
+  .larger\(flex-wrap\) {
     flex-wrap: wrap !important;
   }
 
-  .larger\:flex-nowrap {
+  .larger\(flex-nowrap\) {
     flex-wrap: nowrap !important;
   }
 
-  .larger\:flex-wrap-reverse {
+  .larger\(flex-wrap-reverse\) {
     flex-wrap: wrap-reverse !important;
   }
 
-  .larger\:start\:justify-content {
+  .larger\(start\:justify-content\) {
     justify-content: flex-start !important;
   }
 
-  .larger\:end\:justify-content {
+  .larger\(end\:justify-content\) {
     justify-content: flex-end !important;
   }
 
-  .larger\:center\:justify-content {
+  .larger\(center\:justify-content\) {
     justify-content: center !important;
   }
 
-  .larger\:between\:justify-content {
+  .larger\(between\:justify-content\) {
     justify-content: space-between !important;
   }
 
-  .larger\:around\:justify-content {
+  .larger\(around\:justify-content\) {
     justify-content: space-around !important;
   }
 
-  .larger\:evenly\:justify-content {
+  .larger\(evenly\:justify-content\) {
     justify-content: space-evenly !important;
   }
 
-  .larger\:start\:align-items {
+  .larger\(start\:align-items\) {
     align-items: flex-start !important;
   }
 
-  .larger\:end\:align-items {
+  .larger\(end\:align-items\) {
     align-items: flex-end !important;
   }
 
-  .larger\:center\:align-items {
+  .larger\(center\:align-items\) {
     align-items: center !important;
   }
 
-  .larger\:baseline\:align-items {
+  .larger\(baseline\:align-items\) {
     align-items: baseline !important;
   }
 
-  .larger\:stretch\:align-items {
+  .larger\(stretch\:align-items\) {
     align-items: stretch !important;
   }
 
-  .larger\:start\:align-content {
+  .larger\(start\:align-content\) {
     align-content: flex-start !important;
   }
 
-  .larger\:end\:align-content {
+  .larger\(end\:align-content\) {
     align-content: flex-end !important;
   }
 
-  .larger\:center\:align-content {
+  .larger\(center\:align-content\) {
     align-content: center !important;
   }
 
-  .larger\:between\:align-content {
+  .larger\(between\:align-content\) {
     align-content: space-between !important;
   }
 
-  .larger\:around\:align-content {
+  .larger\(around\:align-content\) {
     align-content: space-around !important;
   }
 
-  .larger\:stretch\:align-content {
+  .larger\(stretch\:align-content\) {
     align-content: stretch !important;
   }
 
-  .larger\:auto\:align-self {
+  .larger\(auto\:align-self\) {
     align-self: auto !important;
   }
 
-  .larger\:start\:align-self {
+  .larger\(start\:align-self\) {
     align-self: flex-start !important;
   }
 
-  .larger\:end\:align-self {
+  .larger\(end\:align-self\) {
     align-self: flex-end !important;
   }
 
-  .larger\:center\:align-self {
+  .larger\(center\:align-self\) {
     align-self: center !important;
   }
 
-  .larger\:baseline\:align-self {
+  .larger\(baseline\:align-self\) {
     align-self: baseline !important;
   }
 
-  .larger\:stretch\:align-self {
+  .larger\(stretch\:align-self\) {
     align-self: stretch !important;
   }
 
-  .larger\:order-first {
-    .larger\:order: -1 !important;
+  .larger\(order\)-first {
+    .larger\(order\): -1 !important;
   }
 
-  .larger\:order-0 {
+  .larger\(order\)-0 {
     order: 0 !important;
   }
 
-  .larger\:order-1 {
+  .larger\(order\)-1 {
     order: 1 !important;
   }
 
-  .larger\:order-2 {
+  .larger\(order\)-2 {
     order: 2 !important;
   }
 
-  .larger\:order-3 {
+  .larger\(order\)-3 {
     order: 3 !important;
   }
 
-  .larger\:order-4 {
+  .larger\(order\)-4 {
     order: 4 !important;
   }
 
-  .larger\:order-5 {
+  .larger\(order\)-5 {
     order: 5 !important;
   }
 
-  .larger\:order-last {
+  .larger\(order\)-last {
     order: 6 !important;
   }
 }
 
 @media (min-width: 1536px) {
-  .largest\:flex {
+  .largest\(flex\) {
     display: flex !important;
   }
 
-  .largest\:start\:flex {
+  .largest\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
   }
 
-  .largest\:end\:flex {
+  .largest\(end\:flex\) {
     display: flex !important;
     justify-content: flex-end !important;
   }
 
-  .largest\:center\:flex {
+  .largest\(center\:flex\) {
     display: flex !important;
     justify-content: center !important;
   }
 
-  .largest\:between\:flex {
+  .largest\(between\:flex\) {
     display: flex !important;
     justify-content: space-between !important;
   }
 
-  .largest\:around\:flex {
+  .largest\(around\:flex\) {
     display: flex !important;
     justify-content: space-around !important;
   }
 
-  .largest\:evenly\:flex {
+  .largest\(evenly\:flex\) {
     display: flex !important;
     justify-content: space-evenly !important;
   }
 
-  .largest\:row\:flex {
+  .largest\(row\:flex\) {
     display: flex !important;
     flex-direction: row !important;
   }
 
-  .largest\:column\:flex {
+  .largest\(column\:flex\) {
     display: flex !important;
     flex-direction: column !important;
   }
 
-  .largest\:row\:flex-reverse {
+  .largest\(row\:flex-reverse\) {
     display: flex !important;
     flex-direction: row-reverse !important;
   }
 
-  .largest\:column\:flex-reverse {
+  .largest\(column\:flex-reverse\) {
     display: flex !important;
     flex-direction: column-reverse !important;
   }
 
-  .largest\:start\:flex-align {
+  .largest\(start\:flex-align\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .largest\:end\:flex-align {
+  .largest\(end\:flex-align\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .largest\:center\:flex-align {
+  .largest\(center\:flex-align\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .largest\:baseline\:flex-align {
+  .largest\(baseline\:flex-align\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .largest\:stretch\:flex-align {
+  .largest\(stretch\:flex-align\) {
     display: flex !important;
     align-items: stretch !important;
   }
 
-  .largest\:start\:flex-content {
+  .largest\(start\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-start !important;
   }
 
-  .largest\:end\:flex-content {
+  .largest\(end\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: flex-end !important;
   }
 
-  .largest\:center\:flex-content {
+  .largest\(center\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: center !important;
   }
 
-  .largest\:between\:flex-content {
+  .largest\(between\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-between !important;
   }
 
-  .largest\:around\:flex-content {
+  .largest\(around\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: space-around !important;
   }
 
-  .largest\:stretch\:flex-content {
+  .largest\(stretch\:flex-content\) {
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
   }
 
-  .largest\:flex-inline {
+  .largest\(flex-inline\) {
     display: inline-flex !important;
   }
 
-  .largest\:flex-fill {
+  .largest\(flex-fill\) {
     flex: 1 1 auto !important;
   }
 
-  .largest\:flex-item {
+  .largest\(flex-item\) {
     flex: 1 1 0% !important;
   }
 
-  .largest\:flex-base {
+  .largest\(flex-base\) {
     flex: 0 1 auto !important;
   }
 
-  .largest\:flex-none {
+  .largest\(flex-none\) {
     none:  !important;
   }
 
-  .largest\:flex-row {
+  .largest\(flex-row\) {
     flex-direction: row !important;
   }
 
-  .largest\:flex-column {
+  .largest\(flex-column\) {
     flex-direction: column !important;
   }
 
-  .largest\:flex-row-reverse {
+  .largest\(flex-row-reverse\) {
     flex-direction: row-reverse !important;
   }
 
-  .largest\:flex-column-reverse {
+  .largest\(flex-column-reverse\) {
     flex-direction: column-reverse !important;
   }
 
-  .largest\:flex-grow-0 {
+  .largest\(flex-grow-0\) {
     flex-grow: 0 !important;
   }
 
-  .largest\:flex-grow-1 {
+  .largest\(flex-grow-1\) {
     flex-grow: 1 !important;
   }
 
-  .largest\:flex-shrink-0 {
+  .largest\(flex-shrink-0\) {
     flex-shrink: 0 !important;
   }
 
-  .largest\:flex-shrink-1 {
+  .largest\(flex-shrink-1\) {
     flex-shrink: 1 !important;
   }
 
-  .largest\:flex-wrap {
+  .largest\(flex-wrap\) {
     flex-wrap: wrap !important;
   }
 
-  .largest\:flex-nowrap {
+  .largest\(flex-nowrap\) {
     flex-wrap: nowrap !important;
   }
 
-  .largest\:flex-wrap-reverse {
+  .largest\(flex-wrap-reverse\) {
     flex-wrap: wrap-reverse !important;
   }
 
-  .largest\:start\:justify-content {
+  .largest\(start\:justify-content\) {
     justify-content: flex-start !important;
   }
 
-  .largest\:end\:justify-content {
+  .largest\(end\:justify-content\) {
     justify-content: flex-end !important;
   }
 
-  .largest\:center\:justify-content {
+  .largest\(center\:justify-content\) {
     justify-content: center !important;
   }
 
-  .largest\:between\:justify-content {
+  .largest\(between\:justify-content\) {
     justify-content: space-between !important;
   }
 
-  .largest\:around\:justify-content {
+  .largest\(around\:justify-content\) {
     justify-content: space-around !important;
   }
 
-  .largest\:evenly\:justify-content {
+  .largest\(evenly\:justify-content\) {
     justify-content: space-evenly !important;
   }
 
-  .largest\:start\:align-items {
+  .largest\(start\:align-items\) {
     align-items: flex-start !important;
   }
 
-  .largest\:end\:align-items {
+  .largest\(end\:align-items\) {
     align-items: flex-end !important;
   }
 
-  .largest\:center\:align-items {
+  .largest\(center\:align-items\) {
     align-items: center !important;
   }
 
-  .largest\:baseline\:align-items {
+  .largest\(baseline\:align-items\) {
     align-items: baseline !important;
   }
 
-  .largest\:stretch\:align-items {
+  .largest\(stretch\:align-items\) {
     align-items: stretch !important;
   }
 
-  .largest\:start\:align-content {
+  .largest\(start\:align-content\) {
     align-content: flex-start !important;
   }
 
-  .largest\:end\:align-content {
+  .largest\(end\:align-content\) {
     align-content: flex-end !important;
   }
 
-  .largest\:center\:align-content {
+  .largest\(center\:align-content\) {
     align-content: center !important;
   }
 
-  .largest\:between\:align-content {
+  .largest\(between\:align-content\) {
     align-content: space-between !important;
   }
 
-  .largest\:around\:align-content {
+  .largest\(around\:align-content\) {
     align-content: space-around !important;
   }
 
-  .largest\:stretch\:align-content {
+  .largest\(stretch\:align-content\) {
     align-content: stretch !important;
   }
 
-  .largest\:auto\:align-self {
+  .largest\(auto\:align-self\) {
     align-self: auto !important;
   }
 
-  .largest\:start\:align-self {
+  .largest\(start\:align-self\) {
     align-self: flex-start !important;
   }
 
-  .largest\:end\:align-self {
+  .largest\(end\:align-self\) {
     align-self: flex-end !important;
   }
 
-  .largest\:center\:align-self {
+  .largest\(center\:align-self\) {
     align-self: center !important;
   }
 
-  .largest\:baseline\:align-self {
+  .largest\(baseline\:align-self\) {
     align-self: baseline !important;
   }
 
-  .largest\:stretch\:align-self {
+  .largest\(stretch\:align-self\) {
     align-self: stretch !important;
   }
 
-  .largest\:order-first {
-    .largest\:order: -1 !important;
+  .largest\(order\)-first {
+    .largest\(order\): -1 !important;
   }
 
-  .largest\:order-0 {
+  .largest\(order\)-0 {
     order: 0 !important;
   }
 
-  .largest\:order-1 {
+  .largest\(order\)-1 {
     order: 1 !important;
   }
 
-  .largest\:order-2 {
+  .largest\(order\)-2 {
     order: 2 !important;
   }
 
-  .largest\:order-3 {
+  .largest\(order\)-3 {
     order: 3 !important;
   }
 
-  .largest\:order-4 {
+  .largest\(order\)-4 {
     order: 4 !important;
   }
 
-  .largest\:order-5 {
+  .largest\(order\)-5 {
     order: 5 !important;
   }
 
-  .largest\:order-last {
+  .largest\(order\)-last {
     order: 6 !important;
   }
 }
@@ -34061,4441 +34061,4441 @@ textarea.large\:input {
   }
 
 @media (min-width: 640px) {
-  .small\:grid {
+  .small\(grid\) {
     display: grid;
   }
 
-  .small\:column\:grid-1 {
+  .small\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-2 {
+  .small\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-3 {
+  .small\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-4 {
+  .small\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-5 {
+  .small\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-6 {
+  .small\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-7 {
+  .small\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-8 {
+  .small\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-9 {
+  .small\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-10 {
+  .small\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-11 {
+  .small\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-12 {
+  .small\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .small\:column\:grid-none {
+  .small\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .small\:grid-columns-1 {
+  .small\(grid-columns\)-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-2 {
+  .small\(grid-columns\)-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-3 {
+  .small\(grid-columns\)-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-4 {
+  .small\(grid-columns\)-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-5 {
+  .small\(grid-columns\)-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-6 {
+  .small\(grid-columns\)-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-7 {
+  .small\(grid-columns\)-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-8 {
+  .small\(grid-columns\)-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-9 {
+  .small\(grid-columns\)-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-10 {
+  .small\(grid-columns\)-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-11 {
+  .small\(grid-columns\)-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-12 {
+  .small\(grid-columns\)-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .small\:grid-columns-none {
+  .small\(grid-columns\)-none {
     grid-template-columns: none;
   }
 
-  .small\:auto\:grid-columns {
+  .small\(auto\:grid-columns\) {
     grid-auto-columns: auto;
   }
 
-  .small\:min\:grid-columns {
+  .small\(min\:grid-columns\) {
     grid-auto-columns: min-content;
   }
 
-  .small\:max\:grid-columns {
+  .small\(max\:grid-columns\) {
     grid-auto-columns: max-content;
   }
 
-  .small\:fr\:grid-columns {
+  .small\(fr\:grid-columns\) {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .small\:flow\:grid-columns {
+  .small\(flow\:grid-columns\) {
     grid-auto-flow: column;
   }
 
-  .small\:dense\:grid-columns {
+  .small\(dense\:grid-columns\) {
     grid-auto-flow: column dense;
   }
 
-  .small\:row\:grid-1 {
+  .small\(row\:grid\)-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-2 {
+  .small\(row\:grid\)-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-3 {
+  .small\(row\:grid\)-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-4 {
+  .small\(row\:grid\)-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-5 {
+  .small\(row\:grid\)-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-6 {
+  .small\(row\:grid\)-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-7 {
+  .small\(row\:grid\)-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-8 {
+  .small\(row\:grid\)-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-9 {
+  .small\(row\:grid\)-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-10 {
+  .small\(row\:grid\)-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-11 {
+  .small\(row\:grid\)-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-12 {
+  .small\(row\:grid\)-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .small\:row\:grid-none {
+  .small\(row\:grid\)-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .small\:grid-rows-1 {
+  .small\(grid-rows\)-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-2 {
+  .small\(grid-rows\)-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-3 {
+  .small\(grid-rows\)-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-4 {
+  .small\(grid-rows\)-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-5 {
+  .small\(grid-rows\)-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-6 {
+  .small\(grid-rows\)-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-7 {
+  .small\(grid-rows\)-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-8 {
+  .small\(grid-rows\)-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-9 {
+  .small\(grid-rows\)-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-10 {
+  .small\(grid-rows\)-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-11 {
+  .small\(grid-rows\)-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-12 {
+  .small\(grid-rows\)-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .small\:grid-rows-none {
+  .small\(grid-rows\)-none {
     grid-template-rows: none;
   }
 
-  .small\:auto\:grid-rows {
+  .small\(auto\:grid-rows\) {
     grid-auto-rows: auto;
   }
 
-  .small\:min\:grid-rows {
+  .small\(min\:grid-rows\) {
     grid-auto-rows: min-content;
   }
 
-  .small\:max\:grid-rows {
+  .small\(max\:grid-rows\) {
     grid-auto-rows: max-content;
   }
 
-  .small\:fr\:grid-rows {
+  .small\(fr\:grid-rows\) {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .small\:flow\:grid-rows {
+  .small\(flow\:grid-rows\) {
     grid-auto-flow: row;
   }
 
-  .small\:dense\:grid-rows {
+  .small\(dense\:grid-rows\) {
     grid-auto-flow: row dense;
   }
 
-  .small\:colspan-auto {
+  .small\(colspan\)-auto {
     grid-column: auto;
   }
 
-  .small\:colspan-1 {
+  .small\(colspan\)-1 {
     grid-column: span 1 / span 1;
   }
 
-  .small\:colspan-2 {
+  .small\(colspan\)-2 {
     grid-column: span 2 / span 2;
   }
 
-  .small\:colspan-3 {
+  .small\(colspan\)-3 {
     grid-column: span 3 / span 3;
   }
 
-  .small\:colspan-4 {
+  .small\(colspan\)-4 {
     grid-column: span 4 / span 4;
   }
 
-  .small\:colspan-5 {
+  .small\(colspan\)-5 {
     grid-column: span 5 / span 5;
   }
 
-  .small\:colspan-6 {
+  .small\(colspan\)-6 {
     grid-column: span 6 / span 6;
   }
 
-  .small\:colspan-7 {
+  .small\(colspan\)-7 {
     grid-column: span 7 / span 7;
   }
 
-  .small\:colspan-8 {
+  .small\(colspan\)-8 {
     grid-column: span 8 / span 8;
   }
 
-  .small\:colspan-9 {
+  .small\(colspan\)-9 {
     grid-column: span 9 / span 9;
   }
 
-  .small\:colspan-10 {
+  .small\(colspan\)-10 {
     grid-column: span 10 / span 10;
   }
 
-  .small\:colspan-11 {
+  .small\(colspan\)-11 {
     grid-column: span 11 / span 11;
   }
 
-  .small\:colspan-12 {
+  .small\(colspan\)-12 {
     grid-column: span 12 / span 12;
   }
 
-  .small\:colspan-full {
+  .small\(colspan\)-full {
     grid-column: 1 / -1;
   }
 
-  .small\:start\:colspan-auto {
+  .small\(start\:colspan\)-auto {
     grid-column-start: auto;
   }
 
-  .small\:start\:colspan-1 {
+  .small\(start\:colspan\)-1 {
     grid-column-start: 1;
   }
 
-  .small\:start\:colspan-2 {
+  .small\(start\:colspan\)-2 {
     grid-column-start: 2;
   }
 
-  .small\:start\:colspan-3 {
+  .small\(start\:colspan\)-3 {
     grid-column-start: 3;
   }
 
-  .small\:start\:colspan-4 {
+  .small\(start\:colspan\)-4 {
     grid-column-start: 4;
   }
 
-  .small\:start\:colspan-5 {
+  .small\(start\:colspan\)-5 {
     grid-column-start: 5;
   }
 
-  .small\:start\:colspan-6 {
+  .small\(start\:colspan\)-6 {
     grid-column-start: 6;
   }
 
-  .small\:start\:colspan-7 {
+  .small\(start\:colspan\)-7 {
     grid-column-start: 7;
   }
 
-  .small\:start\:colspan-8 {
+  .small\(start\:colspan\)-8 {
     grid-column-start: 8;
   }
 
-  .small\:start\:colspan-9 {
+  .small\(start\:colspan\)-9 {
     grid-column-start: 9;
   }
 
-  .small\:start\:colspan-10 {
+  .small\(start\:colspan\)-10 {
     grid-column-start: 10;
   }
 
-  .small\:start\:colspan-11 {
+  .small\(start\:colspan\)-11 {
     grid-column-start: 11;
   }
 
-  .small\:start\:colspan-12 {
+  .small\(start\:colspan\)-12 {
     grid-column-start: 12;
   }
 
-  .small\:start\:colspan-13 {
+  .small\(start\:colspan\)-13 {
     grid-column-start: 13;
   }
 
-  .small\:end\:colspan-auto {
+  .small\(end\:colspan\)-auto {
     grid-column-end: auto;
   }
 
-  .small\:end\:colspan-1 {
+  .small\(end\:colspan\)-1 {
     grid-column-end: 1;
   }
 
-  .small\:end\:colspan-2 {
+  .small\(end\:colspan\)-2 {
     grid-column-end: 2;
   }
 
-  .small\:end\:colspan-3 {
+  .small\(end\:colspan\)-3 {
     grid-column-end: 3;
   }
 
-  .small\:end\:colspan-4 {
+  .small\(end\:colspan\)-4 {
     grid-column-end: 4;
   }
 
-  .small\:end\:colspan-5 {
+  .small\(end\:colspan\)-5 {
     grid-column-end: 5;
   }
 
-  .small\:end\:colspan-6 {
+  .small\(end\:colspan\)-6 {
     grid-column-end: 6;
   }
 
-  .small\:end\:colspan-7 {
+  .small\(end\:colspan\)-7 {
     grid-column-end: 7;
   }
 
-  .small\:end\:colspan-8 {
+  .small\(end\:colspan\)-8 {
     grid-column-end: 8;
   }
 
-  .small\:end\:colspan-9 {
+  .small\(end\:colspan\)-9 {
     grid-column-end: 9;
   }
 
-  .small\:end\:colspan-10 {
+  .small\(end\:colspan\)-10 {
     grid-column-end: 10;
   }
 
-  .small\:end\:colspan-11 {
+  .small\(end\:colspan\)-11 {
     grid-column-end: 11;
   }
 
-  .small\:end\:colspan-12 {
+  .small\(end\:colspan\)-12 {
     grid-column-end: 12;
   }
 
-  .small\:end\:colspan-13 {
+  .small\(end\:colspan\)-13 {
     grid-column-end: 13;
   }
 
-  .small\:rowspan-auto {
+  .small\(rowspan\)-auto {
     grid-row: auto;
   }
 
-  .small\:rowspan-1 {
+  .small\(rowspan\)-1 {
     grid-row: span 1 / span 1;
   }
 
-  .small\:rowspan-2 {
+  .small\(rowspan\)-2 {
     grid-row: span 2 / span 2;
   }
 
-  .small\:rowspan-3 {
+  .small\(rowspan\)-3 {
     grid-row: span 3 / span 3;
   }
 
-  .small\:rowspan-4 {
+  .small\(rowspan\)-4 {
     grid-row: span 4 / span 4;
   }
 
-  .small\:rowspan-5 {
+  .small\(rowspan\)-5 {
     grid-row: span 5 / span 5;
   }
 
-  .small\:rowspan-6 {
+  .small\(rowspan\)-6 {
     grid-row: span 6 / span 6;
   }
 
-  .small\:rowspan-7 {
+  .small\(rowspan\)-7 {
     grid-row: span 7 / span 7;
   }
 
-  .small\:rowspan-8 {
+  .small\(rowspan\)-8 {
     grid-row: span 8 / span 8;
   }
 
-  .small\:rowspan-9 {
+  .small\(rowspan\)-9 {
     grid-row: span 9 / span 9;
   }
 
-  .small\:rowspan-10 {
+  .small\(rowspan\)-10 {
     grid-row: span 10 / span 10;
   }
 
-  .small\:rowspan-11 {
+  .small\(rowspan\)-11 {
     grid-row: span 11 / span 11;
   }
 
-  .small\:rowspan-12 {
+  .small\(rowspan\)-12 {
     grid-row: span 12 / span 12;
   }
 
-  .small\:rowspan-full {
+  .small\(rowspan\)-full {
     grid-row: 1 / -1;
   }
 
-  .small\:start\:rowspan-auto {
+  .small\(start\:rowspan\)-auto {
     grid-row-start: auto;
   }
 
-  .small\:start\:rowspan-1 {
+  .small\(start\:rowspan\)-1 {
     grid-row-start: 1;
   }
 
-  .small\:start\:rowspan-2 {
+  .small\(start\:rowspan\)-2 {
     grid-row-start: 2;
   }
 
-  .small\:start\:rowspan-3 {
+  .small\(start\:rowspan\)-3 {
     grid-row-start: 3;
   }
 
-  .small\:start\:rowspan-4 {
+  .small\(start\:rowspan\)-4 {
     grid-row-start: 4;
   }
 
-  .small\:start\:rowspan-5 {
+  .small\(start\:rowspan\)-5 {
     grid-row-start: 5;
   }
 
-  .small\:start\:rowspan-6 {
+  .small\(start\:rowspan\)-6 {
     grid-row-start: 6;
   }
 
-  .small\:start\:rowspan-7 {
+  .small\(start\:rowspan\)-7 {
     grid-row-start: 7;
   }
 
-  .small\:start\:rowspan-8 {
+  .small\(start\:rowspan\)-8 {
     grid-row-start: 8;
   }
 
-  .small\:start\:rowspan-9 {
+  .small\(start\:rowspan\)-9 {
     grid-row-start: 9;
   }
 
-  .small\:start\:rowspan-10 {
+  .small\(start\:rowspan\)-10 {
     grid-row-start: 10;
   }
 
-  .small\:start\:rowspan-11 {
+  .small\(start\:rowspan\)-11 {
     grid-row-start: 11;
   }
 
-  .small\:start\:rowspan-12 {
+  .small\(start\:rowspan\)-12 {
     grid-row-start: 12;
   }
 
-  .small\:start\:rowspan-13 {
+  .small\(start\:rowspan\)-13 {
     grid-row-start: 13;
   }
 
-  .small\:end\:rowspan-auto {
+  .small\(end\:rowspan\)-auto {
     grid-row-end: auto;
   }
 
-  .small\:end\:rowspan-1 {
+  .small\(end\:rowspan\)-1 {
     grid-row-end: 1;
   }
 
-  .small\:end\:rowspan-2 {
+  .small\(end\:rowspan\)-2 {
     grid-row-end: 2;
   }
 
-  .small\:end\:rowspan-3 {
+  .small\(end\:rowspan\)-3 {
     grid-row-end: 3;
   }
 
-  .small\:end\:rowspan-4 {
+  .small\(end\:rowspan\)-4 {
     grid-row-end: 4;
   }
 
-  .small\:end\:rowspan-5 {
+  .small\(end\:rowspan\)-5 {
     grid-row-end: 5;
   }
 
-  .small\:end\:rowspan-6 {
+  .small\(end\:rowspan\)-6 {
     grid-row-end: 6;
   }
 
-  .small\:end\:rowspan-7 {
+  .small\(end\:rowspan\)-7 {
     grid-row-end: 7;
   }
 
-  .small\:end\:rowspan-8 {
+  .small\(end\:rowspan\)-8 {
     grid-row-end: 8;
   }
 
-  .small\:end\:rowspan-9 {
+  .small\(end\:rowspan\)-9 {
     grid-row-end: 9;
   }
 
-  .small\:end\:rowspan-10 {
+  .small\(end\:rowspan\)-10 {
     grid-row-end: 10;
   }
 
-  .small\:end\:rowspan-11 {
+  .small\(end\:rowspan\)-11 {
     grid-row-end: 11;
   }
 
-  .small\:end\:rowspan-12 {
+  .small\(end\:rowspan\)-12 {
     grid-row-end: 12;
   }
 
-  .small\:end\:rowspan-13 {
+  .small\(end\:rowspan\)-13 {
     grid-row-end: 13;
   }
 
-  .small\:gap-0 {
+  .small\(gap\)-0 {
     gap: 0px;
   }
 
-  .small\:gap-1 {
+  .small\(gap\)-1 {
     gap: 0.125rem;
   }
 
-  .small\:gap-2 {
+  .small\(gap\)-2 {
     gap: 0.25rem;
   }
 
-  .small\:gap-3 {
+  .small\(gap\)-3 {
     gap: 0.375rem;
   }
 
-  .small\:gap-4 {
+  .small\(gap\)-4 {
     gap: 0.5rem;
   }
 
-  .small\:gap-5 {
+  .small\(gap\)-5 {
     gap: 0.625rem;
   }
 
-  .small\:gap-6 {
+  .small\(gap\)-6 {
     gap: 0.75rem;
   }
 
-  .small\:gap-7 {
+  .small\(gap\)-7 {
     gap: 0.875rem;
   }
 
-  .small\:gap-8 {
+  .small\(gap\)-8 {
     gap: 1rem;
   }
 
-  .small\:gap-9 {
+  .small\(gap\)-9 {
     gap: 1.25rem;
   }
 
-  .small\:gap-10 {
+  .small\(gap\)-10 {
     gap: 1.5rem;
   }
 
-  .small\:gap-11 {
+  .small\(gap\)-11 {
     gap: 1.75rem;
   }
 
-  .small\:gap-12 {
+  .small\(gap\)-12 {
     gap: 2rem;
   }
 
-  .small\:gap-13 {
+  .small\(gap\)-13 {
     gap: 2.25rem;
   }
 
-  .small\:gap-14 {
+  .small\(gap\)-14 {
     gap: 2.5rem;
   }
 
-  .small\:gap-15 {
+  .small\(gap\)-15 {
     gap: 2.75rem;
   }
 
-  .small\:gap-15 {
+  .small\(gap\)-15 {
     gap: 3rem;
   }
 
-  .small\:gap-16 {
+  .small\(gap\)-16 {
     gap: 3.25rem;
   }
 
-  .small\:gap-17 {
+  .small\(gap\)-17 {
     gap: 3.5rem;
   }
 
-  .small\:gap-18 {
+  .small\(gap\)-18 {
     gap: 3.75rem;
   }
 
-  .small\:gap-19 {
+  .small\(gap\)-19 {
     gap: 4rem;
   }
 
-  .small\:gap-20 {
+  .small\(gap\)-20 {
     gap: 4.25rem;
   }
 
-  .small\:column\:gap-0 {
+  .small\(column\:gap\)-0 {
     column-gap: 0px;
   }
 
-  .small\:column\:gap-1 {
+  .small\(column\:gap\)-1 {
     column-gap: 0.125rem;
   }
 
-  .small\:column\:gap-2 {
+  .small\(column\:gap\)-2 {
     column-gap: 0.25rem;
   }
 
-  .small\:column\:gap-3 {
+  .small\(column\:gap\)-3 {
     column-gap: 0.375rem;
   }
 
-  .small\:column\:gap-4 {
+  .small\(column\:gap\)-4 {
     column-gap: 0.5rem;
   }
 
-  .small\:column\:gap-5 {
+  .small\(column\:gap\)-5 {
     column-gap: 0.625rem;
   }
 
-  .small\:column\:gap-6 {
+  .small\(column\:gap\)-6 {
     column-gap: 0.75rem;
   }
 
-  .small\:column\:gap-7 {
+  .small\(column\:gap\)-7 {
     column-gap: 0.875rem;
   }
 
-  .small\:column\:gap-8 {
+  .small\(column\:gap\)-8 {
     column-gap: 1rem;
   }
 
-  .small\:column\:gap-9 {
+  .small\(column\:gap\)-9 {
     column-gap: 1.25rem;
   }
 
-  .small\:column\:gap-10 {
+  .small\(column\:gap\)-10 {
     column-gap: 1.5rem;
   }
 
-  .small\:column\:gap-11 {
+  .small\(column\:gap\)-11 {
     column-gap: 1.75rem;
   }
 
-  .small\:column\:gap-12 {
+  .small\(column\:gap\)-12 {
     column-gap: 2rem;
   }
 
-  .small\:column\:gap-13 {
+  .small\(column\:gap\)-13 {
     column-gap: 2.25rem;
   }
 
-  .small\:column\:gap-14 {
+  .small\(column\:gap\)-14 {
     column-gap: 2.5rem;
   }
 
-  .small\:column\:gap-15 {
+  .small\(column\:gap\)-15 {
     column-gap: 2.75rem;
   }
 
-  .small\:column\:gap-15 {
+  .small\(column\:gap\)-15 {
     column-gap: 3rem;
   }
 
-  .small\:column\:gap-16 {
+  .small\(column\:gap\)-16 {
     column-gap: 3.25rem;
   }
 
-  .small\:column\:gap-17 {
+  .small\(column\:gap\)-17 {
     column-gap: 3.5rem;
   }
 
-  .small\:column\:gap-18 {
+  .small\(column\:gap\)-18 {
     column-gap: 3.75rem;
   }
 
-  .small\:column\:gap-19 {
+  .small\(column\:gap\)-19 {
     column-gap: 4rem;
   }
 
-  .small\:column\:gap-20 {
+  .small\(column\:gap\)-20 {
     column-gap: 4.25rem;
   }
 
-  .small\:row\:gap-0 {
+  .small\(row\:gap\)-0 {
     row-gap: 0px;
   }
 
-  .small\:row\:gap-1 {
+  .small\(row\:gap\)-1 {
     row-gap: 0.125rem;
   }
 
-  .small\:row\:gap-2 {
+  .small\(row\:gap\)-2 {
     row-gap: 0.25rem;
   }
 
-  .small\:row\:gap-3 {
+  .small\(row\:gap\)-3 {
     row-gap: 0.375rem;
   }
 
-  .small\:row\:gap-4 {
+  .small\(row\:gap\)-4 {
     row-gap: 0.5rem;
   }
 
-  .small\:row\:gap-5 {
+  .small\(row\:gap\)-5 {
     row-gap: 0.625rem;
   }
 
-  .small\:row\:gap-6 {
+  .small\(row\:gap\)-6 {
     row-gap: 0.75rem;
   }
 
-  .small\:row\:gap-7 {
+  .small\(row\:gap\)-7 {
     row-gap: 0.875rem;
   }
 
-  .small\:row\:gap-8 {
+  .small\(row\:gap\)-8 {
     row-gap: 1rem;
   }
 
-  .small\:row\:gap-9 {
+  .small\(row\:gap\)-9 {
     row-gap: 1.25rem;
   }
 
-  .small\:row\:gap-10 {
+  .small\(row\:gap\)-10 {
     row-gap: 1.5rem;
   }
 
-  .small\:row\:gap-11 {
+  .small\(row\:gap\)-11 {
     row-gap: 1.75rem;
   }
 
-  .small\:row\:gap-12 {
+  .small\(row\:gap\)-12 {
     row-gap: 2rem;
   }
 
-  .small\:row\:gap-13 {
+  .small\(row\:gap\)-13 {
     row-gap: 2.25rem;
   }
 
-  .small\:row\:gap-14 {
+  .small\(row\:gap\)-14 {
     row-gap: 2.5rem;
   }
 
-  .small\:row\:gap-15 {
+  .small\(row\:gap\)-15 {
     row-gap: 2.75rem;
   }
 
-  .small\:row\:gap-15 {
+  .small\(row\:gap\)-15 {
     row-gap: 3rem;
   }
 
-  .small\:row\:gap-16 {
+  .small\(row\:gap\)-16 {
     row-gap: 3.25rem;
   }
 
-  .small\:row\:gap-17 {
+  .small\(row\:gap\)-17 {
     row-gap: 3.5rem;
   }
 
-  .small\:row\:gap-18 {
+  .small\(row\:gap\)-18 {
     row-gap: 3.75rem;
   }
 
-  .small\:row\:gap-19 {
+  .small\(row\:gap\)-19 {
     row-gap: 4rem;
   }
 
-  .small\:row\:gap-20 {
+  .small\(row\:gap\)-20 {
     row-gap: 4.25rem;
   }
 }
 
 @media (min-width: 768px) {
-  .medium\:grid {
+  .medium\(grid\) {
     display: grid;
   }
 
-  .medium\:column\:grid-1 {
+  .medium\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-2 {
+  .medium\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-3 {
+  .medium\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-4 {
+  .medium\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-5 {
+  .medium\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-6 {
+  .medium\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-7 {
+  .medium\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-8 {
+  .medium\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-9 {
+  .medium\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-10 {
+  .medium\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-11 {
+  .medium\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-12 {
+  .medium\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .medium\:column\:grid-none {
+  .medium\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .medium\:grid-columns-1 {
+  .medium\(grid-columns\)-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-2 {
+  .medium\(grid-columns\)-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-3 {
+  .medium\(grid-columns\)-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-4 {
+  .medium\(grid-columns\)-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-5 {
+  .medium\(grid-columns\)-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-6 {
+  .medium\(grid-columns\)-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-7 {
+  .medium\(grid-columns\)-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-8 {
+  .medium\(grid-columns\)-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-9 {
+  .medium\(grid-columns\)-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-10 {
+  .medium\(grid-columns\)-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-11 {
+  .medium\(grid-columns\)-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-12 {
+  .medium\(grid-columns\)-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .medium\:grid-columns-none {
+  .medium\(grid-columns\)-none {
     grid-template-columns: none;
   }
 
-  .medium\:auto\:grid-columns {
+  .medium\(auto\:grid-columns\) {
     grid-auto-columns: auto;
   }
 
-  .medium\:min\:grid-columns {
+  .medium\(min\:grid-columns\) {
     grid-auto-columns: min-content;
   }
 
-  .medium\:max\:grid-columns {
+  .medium\(max\:grid-columns\) {
     grid-auto-columns: max-content;
   }
 
-  .medium\:fr\:grid-columns {
+  .medium\(fr\:grid-columns\) {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .medium\:flow\:grid-columns {
+  .medium\(flow\:grid-columns\) {
     grid-auto-flow: column;
   }
 
-  .medium\:dense\:grid-columns {
+  .medium\(dense\:grid-columns\) {
     grid-auto-flow: column dense;
   }
 
-  .medium\:row\:grid-1 {
+  .medium\(row\:grid\)-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-2 {
+  .medium\(row\:grid\)-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-3 {
+  .medium\(row\:grid\)-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-4 {
+  .medium\(row\:grid\)-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-5 {
+  .medium\(row\:grid\)-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-6 {
+  .medium\(row\:grid\)-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-7 {
+  .medium\(row\:grid\)-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-8 {
+  .medium\(row\:grid\)-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-9 {
+  .medium\(row\:grid\)-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-10 {
+  .medium\(row\:grid\)-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-11 {
+  .medium\(row\:grid\)-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-12 {
+  .medium\(row\:grid\)-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .medium\:row\:grid-none {
+  .medium\(row\:grid\)-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .medium\:grid-rows-1 {
+  .medium\(grid-rows\)-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-2 {
+  .medium\(grid-rows\)-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-3 {
+  .medium\(grid-rows\)-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-4 {
+  .medium\(grid-rows\)-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-5 {
+  .medium\(grid-rows\)-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-6 {
+  .medium\(grid-rows\)-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-7 {
+  .medium\(grid-rows\)-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-8 {
+  .medium\(grid-rows\)-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-9 {
+  .medium\(grid-rows\)-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-10 {
+  .medium\(grid-rows\)-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-11 {
+  .medium\(grid-rows\)-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-12 {
+  .medium\(grid-rows\)-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .medium\:grid-rows-none {
+  .medium\(grid-rows\)-none {
     grid-template-rows: none;
   }
 
-  .medium\:auto\:grid-rows {
+  .medium\(auto\:grid-rows\) {
     grid-auto-rows: auto;
   }
 
-  .medium\:min\:grid-rows {
+  .medium\(min\:grid-rows\) {
     grid-auto-rows: min-content;
   }
 
-  .medium\:max\:grid-rows {
+  .medium\(max\:grid-rows\) {
     grid-auto-rows: max-content;
   }
 
-  .medium\:fr\:grid-rows {
+  .medium\(fr\:grid-rows\) {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .medium\:flow\:grid-rows {
+  .medium\(flow\:grid-rows\) {
     grid-auto-flow: row;
   }
 
-  .medium\:dense\:grid-rows {
+  .medium\(dense\:grid-rows\) {
     grid-auto-flow: row dense;
   }
 
-  .medium\:colspan-auto {
+  .medium\(colspan\)-auto {
     grid-column: auto;
   }
 
-  .medium\:colspan-1 {
+  .medium\(colspan\)-1 {
     grid-column: span 1 / span 1;
   }
 
-  .medium\:colspan-2 {
+  .medium\(colspan\)-2 {
     grid-column: span 2 / span 2;
   }
 
-  .medium\:colspan-3 {
+  .medium\(colspan\)-3 {
     grid-column: span 3 / span 3;
   }
 
-  .medium\:colspan-4 {
+  .medium\(colspan\)-4 {
     grid-column: span 4 / span 4;
   }
 
-  .medium\:colspan-5 {
+  .medium\(colspan\)-5 {
     grid-column: span 5 / span 5;
   }
 
-  .medium\:colspan-6 {
+  .medium\(colspan\)-6 {
     grid-column: span 6 / span 6;
   }
 
-  .medium\:colspan-7 {
+  .medium\(colspan\)-7 {
     grid-column: span 7 / span 7;
   }
 
-  .medium\:colspan-8 {
+  .medium\(colspan\)-8 {
     grid-column: span 8 / span 8;
   }
 
-  .medium\:colspan-9 {
+  .medium\(colspan\)-9 {
     grid-column: span 9 / span 9;
   }
 
-  .medium\:colspan-10 {
+  .medium\(colspan\)-10 {
     grid-column: span 10 / span 10;
   }
 
-  .medium\:colspan-11 {
+  .medium\(colspan\)-11 {
     grid-column: span 11 / span 11;
   }
 
-  .medium\:colspan-12 {
+  .medium\(colspan\)-12 {
     grid-column: span 12 / span 12;
   }
 
-  .medium\:colspan-full {
+  .medium\(colspan\)-full {
     grid-column: 1 / -1;
   }
 
-  .medium\:start\:colspan-auto {
+  .medium\(start\:colspan\)-auto {
     grid-column-start: auto;
   }
 
-  .medium\:start\:colspan-1 {
+  .medium\(start\:colspan\)-1 {
     grid-column-start: 1;
   }
 
-  .medium\:start\:colspan-2 {
+  .medium\(start\:colspan\)-2 {
     grid-column-start: 2;
   }
 
-  .medium\:start\:colspan-3 {
+  .medium\(start\:colspan\)-3 {
     grid-column-start: 3;
   }
 
-  .medium\:start\:colspan-4 {
+  .medium\(start\:colspan\)-4 {
     grid-column-start: 4;
   }
 
-  .medium\:start\:colspan-5 {
+  .medium\(start\:colspan\)-5 {
     grid-column-start: 5;
   }
 
-  .medium\:start\:colspan-6 {
+  .medium\(start\:colspan\)-6 {
     grid-column-start: 6;
   }
 
-  .medium\:start\:colspan-7 {
+  .medium\(start\:colspan\)-7 {
     grid-column-start: 7;
   }
 
-  .medium\:start\:colspan-8 {
+  .medium\(start\:colspan\)-8 {
     grid-column-start: 8;
   }
 
-  .medium\:start\:colspan-9 {
+  .medium\(start\:colspan\)-9 {
     grid-column-start: 9;
   }
 
-  .medium\:start\:colspan-10 {
+  .medium\(start\:colspan\)-10 {
     grid-column-start: 10;
   }
 
-  .medium\:start\:colspan-11 {
+  .medium\(start\:colspan\)-11 {
     grid-column-start: 11;
   }
 
-  .medium\:start\:colspan-12 {
+  .medium\(start\:colspan\)-12 {
     grid-column-start: 12;
   }
 
-  .medium\:start\:colspan-13 {
+  .medium\(start\:colspan\)-13 {
     grid-column-start: 13;
   }
 
-  .medium\:end\:colspan-auto {
+  .medium\(end\:colspan\)-auto {
     grid-column-end: auto;
   }
 
-  .medium\:end\:colspan-1 {
+  .medium\(end\:colspan\)-1 {
     grid-column-end: 1;
   }
 
-  .medium\:end\:colspan-2 {
+  .medium\(end\:colspan\)-2 {
     grid-column-end: 2;
   }
 
-  .medium\:end\:colspan-3 {
+  .medium\(end\:colspan\)-3 {
     grid-column-end: 3;
   }
 
-  .medium\:end\:colspan-4 {
+  .medium\(end\:colspan\)-4 {
     grid-column-end: 4;
   }
 
-  .medium\:end\:colspan-5 {
+  .medium\(end\:colspan\)-5 {
     grid-column-end: 5;
   }
 
-  .medium\:end\:colspan-6 {
+  .medium\(end\:colspan\)-6 {
     grid-column-end: 6;
   }
 
-  .medium\:end\:colspan-7 {
+  .medium\(end\:colspan\)-7 {
     grid-column-end: 7;
   }
 
-  .medium\:end\:colspan-8 {
+  .medium\(end\:colspan\)-8 {
     grid-column-end: 8;
   }
 
-  .medium\:end\:colspan-9 {
+  .medium\(end\:colspan\)-9 {
     grid-column-end: 9;
   }
 
-  .medium\:end\:colspan-10 {
+  .medium\(end\:colspan\)-10 {
     grid-column-end: 10;
   }
 
-  .medium\:end\:colspan-11 {
+  .medium\(end\:colspan\)-11 {
     grid-column-end: 11;
   }
 
-  .medium\:end\:colspan-12 {
+  .medium\(end\:colspan\)-12 {
     grid-column-end: 12;
   }
 
-  .medium\:end\:colspan-13 {
+  .medium\(end\:colspan\)-13 {
     grid-column-end: 13;
   }
 
-  .medium\:rowspan-auto {
+  .medium\(rowspan\)-auto {
     grid-row: auto;
   }
 
-  .medium\:rowspan-1 {
+  .medium\(rowspan\)-1 {
     grid-row: span 1 / span 1;
   }
 
-  .medium\:rowspan-2 {
+  .medium\(rowspan\)-2 {
     grid-row: span 2 / span 2;
   }
 
-  .medium\:rowspan-3 {
+  .medium\(rowspan\)-3 {
     grid-row: span 3 / span 3;
   }
 
-  .medium\:rowspan-4 {
+  .medium\(rowspan\)-4 {
     grid-row: span 4 / span 4;
   }
 
-  .medium\:rowspan-5 {
+  .medium\(rowspan\)-5 {
     grid-row: span 5 / span 5;
   }
 
-  .medium\:rowspan-6 {
+  .medium\(rowspan\)-6 {
     grid-row: span 6 / span 6;
   }
 
-  .medium\:rowspan-7 {
+  .medium\(rowspan\)-7 {
     grid-row: span 7 / span 7;
   }
 
-  .medium\:rowspan-8 {
+  .medium\(rowspan\)-8 {
     grid-row: span 8 / span 8;
   }
 
-  .medium\:rowspan-9 {
+  .medium\(rowspan\)-9 {
     grid-row: span 9 / span 9;
   }
 
-  .medium\:rowspan-10 {
+  .medium\(rowspan\)-10 {
     grid-row: span 10 / span 10;
   }
 
-  .medium\:rowspan-11 {
+  .medium\(rowspan\)-11 {
     grid-row: span 11 / span 11;
   }
 
-  .medium\:rowspan-12 {
+  .medium\(rowspan\)-12 {
     grid-row: span 12 / span 12;
   }
 
-  .medium\:rowspan-full {
+  .medium\(rowspan\)-full {
     grid-row: 1 / -1;
   }
 
-  .medium\:start\:rowspan-auto {
+  .medium\(start\:rowspan\)-auto {
     grid-row-start: auto;
   }
 
-  .medium\:start\:rowspan-1 {
+  .medium\(start\:rowspan\)-1 {
     grid-row-start: 1;
   }
 
-  .medium\:start\:rowspan-2 {
+  .medium\(start\:rowspan\)-2 {
     grid-row-start: 2;
   }
 
-  .medium\:start\:rowspan-3 {
+  .medium\(start\:rowspan\)-3 {
     grid-row-start: 3;
   }
 
-  .medium\:start\:rowspan-4 {
+  .medium\(start\:rowspan\)-4 {
     grid-row-start: 4;
   }
 
-  .medium\:start\:rowspan-5 {
+  .medium\(start\:rowspan\)-5 {
     grid-row-start: 5;
   }
 
-  .medium\:start\:rowspan-6 {
+  .medium\(start\:rowspan\)-6 {
     grid-row-start: 6;
   }
 
-  .medium\:start\:rowspan-7 {
+  .medium\(start\:rowspan\)-7 {
     grid-row-start: 7;
   }
 
-  .medium\:start\:rowspan-8 {
+  .medium\(start\:rowspan\)-8 {
     grid-row-start: 8;
   }
 
-  .medium\:start\:rowspan-9 {
+  .medium\(start\:rowspan\)-9 {
     grid-row-start: 9;
   }
 
-  .medium\:start\:rowspan-10 {
+  .medium\(start\:rowspan\)-10 {
     grid-row-start: 10;
   }
 
-  .medium\:start\:rowspan-11 {
+  .medium\(start\:rowspan\)-11 {
     grid-row-start: 11;
   }
 
-  .medium\:start\:rowspan-12 {
+  .medium\(start\:rowspan\)-12 {
     grid-row-start: 12;
   }
 
-  .medium\:start\:rowspan-13 {
+  .medium\(start\:rowspan\)-13 {
     grid-row-start: 13;
   }
 
-  .medium\:end\:rowspan-auto {
+  .medium\(end\:rowspan\)-auto {
     grid-row-end: auto;
   }
 
-  .medium\:end\:rowspan-1 {
+  .medium\(end\:rowspan\)-1 {
     grid-row-end: 1;
   }
 
-  .medium\:end\:rowspan-2 {
+  .medium\(end\:rowspan\)-2 {
     grid-row-end: 2;
   }
 
-  .medium\:end\:rowspan-3 {
+  .medium\(end\:rowspan\)-3 {
     grid-row-end: 3;
   }
 
-  .medium\:end\:rowspan-4 {
+  .medium\(end\:rowspan\)-4 {
     grid-row-end: 4;
   }
 
-  .medium\:end\:rowspan-5 {
+  .medium\(end\:rowspan\)-5 {
     grid-row-end: 5;
   }
 
-  .medium\:end\:rowspan-6 {
+  .medium\(end\:rowspan\)-6 {
     grid-row-end: 6;
   }
 
-  .medium\:end\:rowspan-7 {
+  .medium\(end\:rowspan\)-7 {
     grid-row-end: 7;
   }
 
-  .medium\:end\:rowspan-8 {
+  .medium\(end\:rowspan\)-8 {
     grid-row-end: 8;
   }
 
-  .medium\:end\:rowspan-9 {
+  .medium\(end\:rowspan\)-9 {
     grid-row-end: 9;
   }
 
-  .medium\:end\:rowspan-10 {
+  .medium\(end\:rowspan\)-10 {
     grid-row-end: 10;
   }
 
-  .medium\:end\:rowspan-11 {
+  .medium\(end\:rowspan\)-11 {
     grid-row-end: 11;
   }
 
-  .medium\:end\:rowspan-12 {
+  .medium\(end\:rowspan\)-12 {
     grid-row-end: 12;
   }
 
-  .medium\:end\:rowspan-13 {
+  .medium\(end\:rowspan\)-13 {
     grid-row-end: 13;
   }
 
-  .medium\:gap-0 {
+  .medium\(gap\)-0 {
     gap: 0px;
   }
 
-  .medium\:gap-1 {
+  .medium\(gap\)-1 {
     gap: 0.125rem;
   }
 
-  .medium\:gap-2 {
+  .medium\(gap\)-2 {
     gap: 0.25rem;
   }
 
-  .medium\:gap-3 {
+  .medium\(gap\)-3 {
     gap: 0.375rem;
   }
 
-  .medium\:gap-4 {
+  .medium\(gap\)-4 {
     gap: 0.5rem;
   }
 
-  .medium\:gap-5 {
+  .medium\(gap\)-5 {
     gap: 0.625rem;
   }
 
-  .medium\:gap-6 {
+  .medium\(gap\)-6 {
     gap: 0.75rem;
   }
 
-  .medium\:gap-7 {
+  .medium\(gap\)-7 {
     gap: 0.875rem;
   }
 
-  .medium\:gap-8 {
+  .medium\(gap\)-8 {
     gap: 1rem;
   }
 
-  .medium\:gap-9 {
+  .medium\(gap\)-9 {
     gap: 1.25rem;
   }
 
-  .medium\:gap-10 {
+  .medium\(gap\)-10 {
     gap: 1.5rem;
   }
 
-  .medium\:gap-11 {
+  .medium\(gap\)-11 {
     gap: 1.75rem;
   }
 
-  .medium\:gap-12 {
+  .medium\(gap\)-12 {
     gap: 2rem;
   }
 
-  .medium\:gap-13 {
+  .medium\(gap\)-13 {
     gap: 2.25rem;
   }
 
-  .medium\:gap-14 {
+  .medium\(gap\)-14 {
     gap: 2.5rem;
   }
 
-  .medium\:gap-15 {
+  .medium\(gap\)-15 {
     gap: 2.75rem;
   }
 
-  .medium\:gap-15 {
+  .medium\(gap\)-15 {
     gap: 3rem;
   }
 
-  .medium\:gap-16 {
+  .medium\(gap\)-16 {
     gap: 3.25rem;
   }
 
-  .medium\:gap-17 {
+  .medium\(gap\)-17 {
     gap: 3.5rem;
   }
 
-  .medium\:gap-18 {
+  .medium\(gap\)-18 {
     gap: 3.75rem;
   }
 
-  .medium\:gap-19 {
+  .medium\(gap\)-19 {
     gap: 4rem;
   }
 
-  .medium\:gap-20 {
+  .medium\(gap\)-20 {
     gap: 4.25rem;
   }
 
-  .medium\:column\:gap-0 {
+  .medium\(column\:gap\)-0 {
     column-gap: 0px;
   }
 
-  .medium\:column\:gap-1 {
+  .medium\(column\:gap\)-1 {
     column-gap: 0.125rem;
   }
 
-  .medium\:column\:gap-2 {
+  .medium\(column\:gap\)-2 {
     column-gap: 0.25rem;
   }
 
-  .medium\:column\:gap-3 {
+  .medium\(column\:gap\)-3 {
     column-gap: 0.375rem;
   }
 
-  .medium\:column\:gap-4 {
+  .medium\(column\:gap\)-4 {
     column-gap: 0.5rem;
   }
 
-  .medium\:column\:gap-5 {
+  .medium\(column\:gap\)-5 {
     column-gap: 0.625rem;
   }
 
-  .medium\:column\:gap-6 {
+  .medium\(column\:gap\)-6 {
     column-gap: 0.75rem;
   }
 
-  .medium\:column\:gap-7 {
+  .medium\(column\:gap\)-7 {
     column-gap: 0.875rem;
   }
 
-  .medium\:column\:gap-8 {
+  .medium\(column\:gap\)-8 {
     column-gap: 1rem;
   }
 
-  .medium\:column\:gap-9 {
+  .medium\(column\:gap\)-9 {
     column-gap: 1.25rem;
   }
 
-  .medium\:column\:gap-10 {
+  .medium\(column\:gap\)-10 {
     column-gap: 1.5rem;
   }
 
-  .medium\:column\:gap-11 {
+  .medium\(column\:gap\)-11 {
     column-gap: 1.75rem;
   }
 
-  .medium\:column\:gap-12 {
+  .medium\(column\:gap\)-12 {
     column-gap: 2rem;
   }
 
-  .medium\:column\:gap-13 {
+  .medium\(column\:gap\)-13 {
     column-gap: 2.25rem;
   }
 
-  .medium\:column\:gap-14 {
+  .medium\(column\:gap\)-14 {
     column-gap: 2.5rem;
   }
 
-  .medium\:column\:gap-15 {
+  .medium\(column\:gap\)-15 {
     column-gap: 2.75rem;
   }
 
-  .medium\:column\:gap-15 {
+  .medium\(column\:gap\)-15 {
     column-gap: 3rem;
   }
 
-  .medium\:column\:gap-16 {
+  .medium\(column\:gap\)-16 {
     column-gap: 3.25rem;
   }
 
-  .medium\:column\:gap-17 {
+  .medium\(column\:gap\)-17 {
     column-gap: 3.5rem;
   }
 
-  .medium\:column\:gap-18 {
+  .medium\(column\:gap\)-18 {
     column-gap: 3.75rem;
   }
 
-  .medium\:column\:gap-19 {
+  .medium\(column\:gap\)-19 {
     column-gap: 4rem;
   }
 
-  .medium\:column\:gap-20 {
+  .medium\(column\:gap\)-20 {
     column-gap: 4.25rem;
   }
 
-  .medium\:row\:gap-0 {
+  .medium\(row\:gap\)-0 {
     row-gap: 0px;
   }
 
-  .medium\:row\:gap-1 {
+  .medium\(row\:gap\)-1 {
     row-gap: 0.125rem;
   }
 
-  .medium\:row\:gap-2 {
+  .medium\(row\:gap\)-2 {
     row-gap: 0.25rem;
   }
 
-  .medium\:row\:gap-3 {
+  .medium\(row\:gap\)-3 {
     row-gap: 0.375rem;
   }
 
-  .medium\:row\:gap-4 {
+  .medium\(row\:gap\)-4 {
     row-gap: 0.5rem;
   }
 
-  .medium\:row\:gap-5 {
+  .medium\(row\:gap\)-5 {
     row-gap: 0.625rem;
   }
 
-  .medium\:row\:gap-6 {
+  .medium\(row\:gap\)-6 {
     row-gap: 0.75rem;
   }
 
-  .medium\:row\:gap-7 {
+  .medium\(row\:gap\)-7 {
     row-gap: 0.875rem;
   }
 
-  .medium\:row\:gap-8 {
+  .medium\(row\:gap\)-8 {
     row-gap: 1rem;
   }
 
-  .medium\:row\:gap-9 {
+  .medium\(row\:gap\)-9 {
     row-gap: 1.25rem;
   }
 
-  .medium\:row\:gap-10 {
+  .medium\(row\:gap\)-10 {
     row-gap: 1.5rem;
   }
 
-  .medium\:row\:gap-11 {
+  .medium\(row\:gap\)-11 {
     row-gap: 1.75rem;
   }
 
-  .medium\:row\:gap-12 {
+  .medium\(row\:gap\)-12 {
     row-gap: 2rem;
   }
 
-  .medium\:row\:gap-13 {
+  .medium\(row\:gap\)-13 {
     row-gap: 2.25rem;
   }
 
-  .medium\:row\:gap-14 {
+  .medium\(row\:gap\)-14 {
     row-gap: 2.5rem;
   }
 
-  .medium\:row\:gap-15 {
+  .medium\(row\:gap\)-15 {
     row-gap: 2.75rem;
   }
 
-  .medium\:row\:gap-15 {
+  .medium\(row\:gap\)-15 {
     row-gap: 3rem;
   }
 
-  .medium\:row\:gap-16 {
+  .medium\(row\:gap\)-16 {
     row-gap: 3.25rem;
   }
 
-  .medium\:row\:gap-17 {
+  .medium\(row\:gap\)-17 {
     row-gap: 3.5rem;
   }
 
-  .medium\:row\:gap-18 {
+  .medium\(row\:gap\)-18 {
     row-gap: 3.75rem;
   }
 
-  .medium\:row\:gap-19 {
+  .medium\(row\:gap\)-19 {
     row-gap: 4rem;
   }
 
-  .medium\:row\:gap-20 {
+  .medium\(row\:gap\)-20 {
     row-gap: 4.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .large\:grid {
+  .large\(grid\) {
     display: grid;
   }
 
-  .large\:column\:grid-1 {
+  .large\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-2 {
+  .large\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-3 {
+  .large\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-4 {
+  .large\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-5 {
+  .large\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-6 {
+  .large\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-7 {
+  .large\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-8 {
+  .large\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-9 {
+  .large\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-10 {
+  .large\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-11 {
+  .large\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-12 {
+  .large\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .large\:column\:grid-none {
+  .large\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .large\:grid-columns-1 {
+  .large\(grid-columns\)-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-2 {
+  .large\(grid-columns\)-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-3 {
+  .large\(grid-columns\)-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-4 {
+  .large\(grid-columns\)-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-5 {
+  .large\(grid-columns\)-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-6 {
+  .large\(grid-columns\)-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-7 {
+  .large\(grid-columns\)-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-8 {
+  .large\(grid-columns\)-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-9 {
+  .large\(grid-columns\)-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-10 {
+  .large\(grid-columns\)-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-11 {
+  .large\(grid-columns\)-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-12 {
+  .large\(grid-columns\)-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .large\:grid-columns-none {
+  .large\(grid-columns\)-none {
     grid-template-columns: none;
   }
 
-  .large\:auto\:grid-columns {
+  .large\(auto\:grid-columns\) {
     grid-auto-columns: auto;
   }
 
-  .large\:min\:grid-columns {
+  .large\(min\:grid-columns\) {
     grid-auto-columns: min-content;
   }
 
-  .large\:max\:grid-columns {
+  .large\(max\:grid-columns\) {
     grid-auto-columns: max-content;
   }
 
-  .large\:fr\:grid-columns {
+  .large\(fr\:grid-columns\) {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .large\:flow\:grid-columns {
+  .large\(flow\:grid-columns\) {
     grid-auto-flow: column;
   }
 
-  .large\:dense\:grid-columns {
+  .large\(dense\:grid-columns\) {
     grid-auto-flow: column dense;
   }
 
-  .large\:row\:grid-1 {
+  .large\(row\:grid\)-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-2 {
+  .large\(row\:grid\)-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-3 {
+  .large\(row\:grid\)-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-4 {
+  .large\(row\:grid\)-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-5 {
+  .large\(row\:grid\)-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-6 {
+  .large\(row\:grid\)-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-7 {
+  .large\(row\:grid\)-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-8 {
+  .large\(row\:grid\)-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-9 {
+  .large\(row\:grid\)-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-10 {
+  .large\(row\:grid\)-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-11 {
+  .large\(row\:grid\)-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-12 {
+  .large\(row\:grid\)-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .large\:row\:grid-none {
+  .large\(row\:grid\)-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .large\:grid-rows-1 {
+  .large\(grid-rows\)-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-2 {
+  .large\(grid-rows\)-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-3 {
+  .large\(grid-rows\)-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-4 {
+  .large\(grid-rows\)-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-5 {
+  .large\(grid-rows\)-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-6 {
+  .large\(grid-rows\)-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-7 {
+  .large\(grid-rows\)-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-8 {
+  .large\(grid-rows\)-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-9 {
+  .large\(grid-rows\)-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-10 {
+  .large\(grid-rows\)-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-11 {
+  .large\(grid-rows\)-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-12 {
+  .large\(grid-rows\)-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .large\:grid-rows-none {
+  .large\(grid-rows\)-none {
     grid-template-rows: none;
   }
 
-  .large\:auto\:grid-rows {
+  .large\(auto\:grid-rows\) {
     grid-auto-rows: auto;
   }
 
-  .large\:min\:grid-rows {
+  .large\(min\:grid-rows\) {
     grid-auto-rows: min-content;
   }
 
-  .large\:max\:grid-rows {
+  .large\(max\:grid-rows\) {
     grid-auto-rows: max-content;
   }
 
-  .large\:fr\:grid-rows {
+  .large\(fr\:grid-rows\) {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .large\:flow\:grid-rows {
+  .large\(flow\:grid-rows\) {
     grid-auto-flow: row;
   }
 
-  .large\:dense\:grid-rows {
+  .large\(dense\:grid-rows\) {
     grid-auto-flow: row dense;
   }
 
-  .large\:colspan-auto {
+  .large\(colspan\)-auto {
     grid-column: auto;
   }
 
-  .large\:colspan-1 {
+  .large\(colspan\)-1 {
     grid-column: span 1 / span 1;
   }
 
-  .large\:colspan-2 {
+  .large\(colspan\)-2 {
     grid-column: span 2 / span 2;
   }
 
-  .large\:colspan-3 {
+  .large\(colspan\)-3 {
     grid-column: span 3 / span 3;
   }
 
-  .large\:colspan-4 {
+  .large\(colspan\)-4 {
     grid-column: span 4 / span 4;
   }
 
-  .large\:colspan-5 {
+  .large\(colspan\)-5 {
     grid-column: span 5 / span 5;
   }
 
-  .large\:colspan-6 {
+  .large\(colspan\)-6 {
     grid-column: span 6 / span 6;
   }
 
-  .large\:colspan-7 {
+  .large\(colspan\)-7 {
     grid-column: span 7 / span 7;
   }
 
-  .large\:colspan-8 {
+  .large\(colspan\)-8 {
     grid-column: span 8 / span 8;
   }
 
-  .large\:colspan-9 {
+  .large\(colspan\)-9 {
     grid-column: span 9 / span 9;
   }
 
-  .large\:colspan-10 {
+  .large\(colspan\)-10 {
     grid-column: span 10 / span 10;
   }
 
-  .large\:colspan-11 {
+  .large\(colspan\)-11 {
     grid-column: span 11 / span 11;
   }
 
-  .large\:colspan-12 {
+  .large\(colspan\)-12 {
     grid-column: span 12 / span 12;
   }
 
-  .large\:colspan-full {
+  .large\(colspan\)-full {
     grid-column: 1 / -1;
   }
 
-  .large\:start\:colspan-auto {
+  .large\(start\:colspan\)-auto {
     grid-column-start: auto;
   }
 
-  .large\:start\:colspan-1 {
+  .large\(start\:colspan\)-1 {
     grid-column-start: 1;
   }
 
-  .large\:start\:colspan-2 {
+  .large\(start\:colspan\)-2 {
     grid-column-start: 2;
   }
 
-  .large\:start\:colspan-3 {
+  .large\(start\:colspan\)-3 {
     grid-column-start: 3;
   }
 
-  .large\:start\:colspan-4 {
+  .large\(start\:colspan\)-4 {
     grid-column-start: 4;
   }
 
-  .large\:start\:colspan-5 {
+  .large\(start\:colspan\)-5 {
     grid-column-start: 5;
   }
 
-  .large\:start\:colspan-6 {
+  .large\(start\:colspan\)-6 {
     grid-column-start: 6;
   }
 
-  .large\:start\:colspan-7 {
+  .large\(start\:colspan\)-7 {
     grid-column-start: 7;
   }
 
-  .large\:start\:colspan-8 {
+  .large\(start\:colspan\)-8 {
     grid-column-start: 8;
   }
 
-  .large\:start\:colspan-9 {
+  .large\(start\:colspan\)-9 {
     grid-column-start: 9;
   }
 
-  .large\:start\:colspan-10 {
+  .large\(start\:colspan\)-10 {
     grid-column-start: 10;
   }
 
-  .large\:start\:colspan-11 {
+  .large\(start\:colspan\)-11 {
     grid-column-start: 11;
   }
 
-  .large\:start\:colspan-12 {
+  .large\(start\:colspan\)-12 {
     grid-column-start: 12;
   }
 
-  .large\:start\:colspan-13 {
+  .large\(start\:colspan\)-13 {
     grid-column-start: 13;
   }
 
-  .large\:end\:colspan-auto {
+  .large\(end\:colspan\)-auto {
     grid-column-end: auto;
   }
 
-  .large\:end\:colspan-1 {
+  .large\(end\:colspan\)-1 {
     grid-column-end: 1;
   }
 
-  .large\:end\:colspan-2 {
+  .large\(end\:colspan\)-2 {
     grid-column-end: 2;
   }
 
-  .large\:end\:colspan-3 {
+  .large\(end\:colspan\)-3 {
     grid-column-end: 3;
   }
 
-  .large\:end\:colspan-4 {
+  .large\(end\:colspan\)-4 {
     grid-column-end: 4;
   }
 
-  .large\:end\:colspan-5 {
+  .large\(end\:colspan\)-5 {
     grid-column-end: 5;
   }
 
-  .large\:end\:colspan-6 {
+  .large\(end\:colspan\)-6 {
     grid-column-end: 6;
   }
 
-  .large\:end\:colspan-7 {
+  .large\(end\:colspan\)-7 {
     grid-column-end: 7;
   }
 
-  .large\:end\:colspan-8 {
+  .large\(end\:colspan\)-8 {
     grid-column-end: 8;
   }
 
-  .large\:end\:colspan-9 {
+  .large\(end\:colspan\)-9 {
     grid-column-end: 9;
   }
 
-  .large\:end\:colspan-10 {
+  .large\(end\:colspan\)-10 {
     grid-column-end: 10;
   }
 
-  .large\:end\:colspan-11 {
+  .large\(end\:colspan\)-11 {
     grid-column-end: 11;
   }
 
-  .large\:end\:colspan-12 {
+  .large\(end\:colspan\)-12 {
     grid-column-end: 12;
   }
 
-  .large\:end\:colspan-13 {
+  .large\(end\:colspan\)-13 {
     grid-column-end: 13;
   }
 
-  .large\:rowspan-auto {
+  .large\(rowspan\)-auto {
     grid-row: auto;
   }
 
-  .large\:rowspan-1 {
+  .large\(rowspan\)-1 {
     grid-row: span 1 / span 1;
   }
 
-  .large\:rowspan-2 {
+  .large\(rowspan\)-2 {
     grid-row: span 2 / span 2;
   }
 
-  .large\:rowspan-3 {
+  .large\(rowspan\)-3 {
     grid-row: span 3 / span 3;
   }
 
-  .large\:rowspan-4 {
+  .large\(rowspan\)-4 {
     grid-row: span 4 / span 4;
   }
 
-  .large\:rowspan-5 {
+  .large\(rowspan\)-5 {
     grid-row: span 5 / span 5;
   }
 
-  .large\:rowspan-6 {
+  .large\(rowspan\)-6 {
     grid-row: span 6 / span 6;
   }
 
-  .large\:rowspan-7 {
+  .large\(rowspan\)-7 {
     grid-row: span 7 / span 7;
   }
 
-  .large\:rowspan-8 {
+  .large\(rowspan\)-8 {
     grid-row: span 8 / span 8;
   }
 
-  .large\:rowspan-9 {
+  .large\(rowspan\)-9 {
     grid-row: span 9 / span 9;
   }
 
-  .large\:rowspan-10 {
+  .large\(rowspan\)-10 {
     grid-row: span 10 / span 10;
   }
 
-  .large\:rowspan-11 {
+  .large\(rowspan\)-11 {
     grid-row: span 11 / span 11;
   }
 
-  .large\:rowspan-12 {
+  .large\(rowspan\)-12 {
     grid-row: span 12 / span 12;
   }
 
-  .large\:rowspan-full {
+  .large\(rowspan\)-full {
     grid-row: 1 / -1;
   }
 
-  .large\:start\:rowspan-auto {
+  .large\(start\:rowspan\)-auto {
     grid-row-start: auto;
   }
 
-  .large\:start\:rowspan-1 {
+  .large\(start\:rowspan\)-1 {
     grid-row-start: 1;
   }
 
-  .large\:start\:rowspan-2 {
+  .large\(start\:rowspan\)-2 {
     grid-row-start: 2;
   }
 
-  .large\:start\:rowspan-3 {
+  .large\(start\:rowspan\)-3 {
     grid-row-start: 3;
   }
 
-  .large\:start\:rowspan-4 {
+  .large\(start\:rowspan\)-4 {
     grid-row-start: 4;
   }
 
-  .large\:start\:rowspan-5 {
+  .large\(start\:rowspan\)-5 {
     grid-row-start: 5;
   }
 
-  .large\:start\:rowspan-6 {
+  .large\(start\:rowspan\)-6 {
     grid-row-start: 6;
   }
 
-  .large\:start\:rowspan-7 {
+  .large\(start\:rowspan\)-7 {
     grid-row-start: 7;
   }
 
-  .large\:start\:rowspan-8 {
+  .large\(start\:rowspan\)-8 {
     grid-row-start: 8;
   }
 
-  .large\:start\:rowspan-9 {
+  .large\(start\:rowspan\)-9 {
     grid-row-start: 9;
   }
 
-  .large\:start\:rowspan-10 {
+  .large\(start\:rowspan\)-10 {
     grid-row-start: 10;
   }
 
-  .large\:start\:rowspan-11 {
+  .large\(start\:rowspan\)-11 {
     grid-row-start: 11;
   }
 
-  .large\:start\:rowspan-12 {
+  .large\(start\:rowspan\)-12 {
     grid-row-start: 12;
   }
 
-  .large\:start\:rowspan-13 {
+  .large\(start\:rowspan\)-13 {
     grid-row-start: 13;
   }
 
-  .large\:end\:rowspan-auto {
+  .large\(end\:rowspan\)-auto {
     grid-row-end: auto;
   }
 
-  .large\:end\:rowspan-1 {
+  .large\(end\:rowspan\)-1 {
     grid-row-end: 1;
   }
 
-  .large\:end\:rowspan-2 {
+  .large\(end\:rowspan\)-2 {
     grid-row-end: 2;
   }
 
-  .large\:end\:rowspan-3 {
+  .large\(end\:rowspan\)-3 {
     grid-row-end: 3;
   }
 
-  .large\:end\:rowspan-4 {
+  .large\(end\:rowspan\)-4 {
     grid-row-end: 4;
   }
 
-  .large\:end\:rowspan-5 {
+  .large\(end\:rowspan\)-5 {
     grid-row-end: 5;
   }
 
-  .large\:end\:rowspan-6 {
+  .large\(end\:rowspan\)-6 {
     grid-row-end: 6;
   }
 
-  .large\:end\:rowspan-7 {
+  .large\(end\:rowspan\)-7 {
     grid-row-end: 7;
   }
 
-  .large\:end\:rowspan-8 {
+  .large\(end\:rowspan\)-8 {
     grid-row-end: 8;
   }
 
-  .large\:end\:rowspan-9 {
+  .large\(end\:rowspan\)-9 {
     grid-row-end: 9;
   }
 
-  .large\:end\:rowspan-10 {
+  .large\(end\:rowspan\)-10 {
     grid-row-end: 10;
   }
 
-  .large\:end\:rowspan-11 {
+  .large\(end\:rowspan\)-11 {
     grid-row-end: 11;
   }
 
-  .large\:end\:rowspan-12 {
+  .large\(end\:rowspan\)-12 {
     grid-row-end: 12;
   }
 
-  .large\:end\:rowspan-13 {
+  .large\(end\:rowspan\)-13 {
     grid-row-end: 13;
   }
 
-  .large\:gap-0 {
+  .large\(gap\)-0 {
     gap: 0px;
   }
 
-  .large\:gap-1 {
+  .large\(gap\)-1 {
     gap: 0.125rem;
   }
 
-  .large\:gap-2 {
+  .large\(gap\)-2 {
     gap: 0.25rem;
   }
 
-  .large\:gap-3 {
+  .large\(gap\)-3 {
     gap: 0.375rem;
   }
 
-  .large\:gap-4 {
+  .large\(gap\)-4 {
     gap: 0.5rem;
   }
 
-  .large\:gap-5 {
+  .large\(gap\)-5 {
     gap: 0.625rem;
   }
 
-  .large\:gap-6 {
+  .large\(gap\)-6 {
     gap: 0.75rem;
   }
 
-  .large\:gap-7 {
+  .large\(gap\)-7 {
     gap: 0.875rem;
   }
 
-  .large\:gap-8 {
+  .large\(gap\)-8 {
     gap: 1rem;
   }
 
-  .large\:gap-9 {
+  .large\(gap\)-9 {
     gap: 1.25rem;
   }
 
-  .large\:gap-10 {
+  .large\(gap\)-10 {
     gap: 1.5rem;
   }
 
-  .large\:gap-11 {
+  .large\(gap\)-11 {
     gap: 1.75rem;
   }
 
-  .large\:gap-12 {
+  .large\(gap\)-12 {
     gap: 2rem;
   }
 
-  .large\:gap-13 {
+  .large\(gap\)-13 {
     gap: 2.25rem;
   }
 
-  .large\:gap-14 {
+  .large\(gap\)-14 {
     gap: 2.5rem;
   }
 
-  .large\:gap-15 {
+  .large\(gap\)-15 {
     gap: 2.75rem;
   }
 
-  .large\:gap-15 {
+  .large\(gap\)-15 {
     gap: 3rem;
   }
 
-  .large\:gap-16 {
+  .large\(gap\)-16 {
     gap: 3.25rem;
   }
 
-  .large\:gap-17 {
+  .large\(gap\)-17 {
     gap: 3.5rem;
   }
 
-  .large\:gap-18 {
+  .large\(gap\)-18 {
     gap: 3.75rem;
   }
 
-  .large\:gap-19 {
+  .large\(gap\)-19 {
     gap: 4rem;
   }
 
-  .large\:gap-20 {
+  .large\(gap\)-20 {
     gap: 4.25rem;
   }
 
-  .large\:column\:gap-0 {
+  .large\(column\:gap\)-0 {
     column-gap: 0px;
   }
 
-  .large\:column\:gap-1 {
+  .large\(column\:gap\)-1 {
     column-gap: 0.125rem;
   }
 
-  .large\:column\:gap-2 {
+  .large\(column\:gap\)-2 {
     column-gap: 0.25rem;
   }
 
-  .large\:column\:gap-3 {
+  .large\(column\:gap\)-3 {
     column-gap: 0.375rem;
   }
 
-  .large\:column\:gap-4 {
+  .large\(column\:gap\)-4 {
     column-gap: 0.5rem;
   }
 
-  .large\:column\:gap-5 {
+  .large\(column\:gap\)-5 {
     column-gap: 0.625rem;
   }
 
-  .large\:column\:gap-6 {
+  .large\(column\:gap\)-6 {
     column-gap: 0.75rem;
   }
 
-  .large\:column\:gap-7 {
+  .large\(column\:gap\)-7 {
     column-gap: 0.875rem;
   }
 
-  .large\:column\:gap-8 {
+  .large\(column\:gap\)-8 {
     column-gap: 1rem;
   }
 
-  .large\:column\:gap-9 {
+  .large\(column\:gap\)-9 {
     column-gap: 1.25rem;
   }
 
-  .large\:column\:gap-10 {
+  .large\(column\:gap\)-10 {
     column-gap: 1.5rem;
   }
 
-  .large\:column\:gap-11 {
+  .large\(column\:gap\)-11 {
     column-gap: 1.75rem;
   }
 
-  .large\:column\:gap-12 {
+  .large\(column\:gap\)-12 {
     column-gap: 2rem;
   }
 
-  .large\:column\:gap-13 {
+  .large\(column\:gap\)-13 {
     column-gap: 2.25rem;
   }
 
-  .large\:column\:gap-14 {
+  .large\(column\:gap\)-14 {
     column-gap: 2.5rem;
   }
 
-  .large\:column\:gap-15 {
+  .large\(column\:gap\)-15 {
     column-gap: 2.75rem;
   }
 
-  .large\:column\:gap-15 {
+  .large\(column\:gap\)-15 {
     column-gap: 3rem;
   }
 
-  .large\:column\:gap-16 {
+  .large\(column\:gap\)-16 {
     column-gap: 3.25rem;
   }
 
-  .large\:column\:gap-17 {
+  .large\(column\:gap\)-17 {
     column-gap: 3.5rem;
   }
 
-  .large\:column\:gap-18 {
+  .large\(column\:gap\)-18 {
     column-gap: 3.75rem;
   }
 
-  .large\:column\:gap-19 {
+  .large\(column\:gap\)-19 {
     column-gap: 4rem;
   }
 
-  .large\:column\:gap-20 {
+  .large\(column\:gap\)-20 {
     column-gap: 4.25rem;
   }
 
-  .large\:row\:gap-0 {
+  .large\(row\:gap\)-0 {
     row-gap: 0px;
   }
 
-  .large\:row\:gap-1 {
+  .large\(row\:gap\)-1 {
     row-gap: 0.125rem;
   }
 
-  .large\:row\:gap-2 {
+  .large\(row\:gap\)-2 {
     row-gap: 0.25rem;
   }
 
-  .large\:row\:gap-3 {
+  .large\(row\:gap\)-3 {
     row-gap: 0.375rem;
   }
 
-  .large\:row\:gap-4 {
+  .large\(row\:gap\)-4 {
     row-gap: 0.5rem;
   }
 
-  .large\:row\:gap-5 {
+  .large\(row\:gap\)-5 {
     row-gap: 0.625rem;
   }
 
-  .large\:row\:gap-6 {
+  .large\(row\:gap\)-6 {
     row-gap: 0.75rem;
   }
 
-  .large\:row\:gap-7 {
+  .large\(row\:gap\)-7 {
     row-gap: 0.875rem;
   }
 
-  .large\:row\:gap-8 {
+  .large\(row\:gap\)-8 {
     row-gap: 1rem;
   }
 
-  .large\:row\:gap-9 {
+  .large\(row\:gap\)-9 {
     row-gap: 1.25rem;
   }
 
-  .large\:row\:gap-10 {
+  .large\(row\:gap\)-10 {
     row-gap: 1.5rem;
   }
 
-  .large\:row\:gap-11 {
+  .large\(row\:gap\)-11 {
     row-gap: 1.75rem;
   }
 
-  .large\:row\:gap-12 {
+  .large\(row\:gap\)-12 {
     row-gap: 2rem;
   }
 
-  .large\:row\:gap-13 {
+  .large\(row\:gap\)-13 {
     row-gap: 2.25rem;
   }
 
-  .large\:row\:gap-14 {
+  .large\(row\:gap\)-14 {
     row-gap: 2.5rem;
   }
 
-  .large\:row\:gap-15 {
+  .large\(row\:gap\)-15 {
     row-gap: 2.75rem;
   }
 
-  .large\:row\:gap-15 {
+  .large\(row\:gap\)-15 {
     row-gap: 3rem;
   }
 
-  .large\:row\:gap-16 {
+  .large\(row\:gap\)-16 {
     row-gap: 3.25rem;
   }
 
-  .large\:row\:gap-17 {
+  .large\(row\:gap\)-17 {
     row-gap: 3.5rem;
   }
 
-  .large\:row\:gap-18 {
+  .large\(row\:gap\)-18 {
     row-gap: 3.75rem;
   }
 
-  .large\:row\:gap-19 {
+  .large\(row\:gap\)-19 {
     row-gap: 4rem;
   }
 
-  .large\:row\:gap-20 {
+  .large\(row\:gap\)-20 {
     row-gap: 4.25rem;
   }
 }
 
 @media (min-width: 1280px) {
-  .larger\:grid {
+  .larger\(grid\) {
     display: grid;
   }
 
-  .larger\:column\:grid-1 {
+  .larger\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-2 {
+  .larger\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-3 {
+  .larger\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-4 {
+  .larger\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-5 {
+  .larger\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-6 {
+  .larger\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-7 {
+  .larger\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-8 {
+  .larger\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-9 {
+  .larger\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-10 {
+  .larger\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-11 {
+  .larger\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-12 {
+  .larger\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .larger\:column\:grid-none {
+  .larger\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .larger\:grid-columns-1 {
+  .larger\(grid-columns\)-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-2 {
+  .larger\(grid-columns\)-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-3 {
+  .larger\(grid-columns\)-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-4 {
+  .larger\(grid-columns\)-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-5 {
+  .larger\(grid-columns\)-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-6 {
+  .larger\(grid-columns\)-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-7 {
+  .larger\(grid-columns\)-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-8 {
+  .larger\(grid-columns\)-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-9 {
+  .larger\(grid-columns\)-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-10 {
+  .larger\(grid-columns\)-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-11 {
+  .larger\(grid-columns\)-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-12 {
+  .larger\(grid-columns\)-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .larger\:grid-columns-none {
+  .larger\(grid-columns\)-none {
     grid-template-columns: none;
   }
 
-  .larger\:auto\:grid-columns {
+  .larger\(auto\:grid-columns\) {
     grid-auto-columns: auto;
   }
 
-  .larger\:min\:grid-columns {
+  .larger\(min\:grid-columns\) {
     grid-auto-columns: min-content;
   }
 
-  .larger\:max\:grid-columns {
+  .larger\(max\:grid-columns\) {
     grid-auto-columns: max-content;
   }
 
-  .larger\:fr\:grid-columns {
+  .larger\(fr\:grid-columns\) {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .larger\:flow\:grid-columns {
+  .larger\(flow\:grid-columns\) {
     grid-auto-flow: column;
   }
 
-  .larger\:dense\:grid-columns {
+  .larger\(dense\:grid-columns\) {
     grid-auto-flow: column dense;
   }
 
-  .larger\:row\:grid-1 {
+  .larger\(row\:grid\)-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-2 {
+  .larger\(row\:grid\)-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-3 {
+  .larger\(row\:grid\)-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-4 {
+  .larger\(row\:grid\)-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-5 {
+  .larger\(row\:grid\)-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-6 {
+  .larger\(row\:grid\)-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-7 {
+  .larger\(row\:grid\)-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-8 {
+  .larger\(row\:grid\)-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-9 {
+  .larger\(row\:grid\)-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-10 {
+  .larger\(row\:grid\)-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-11 {
+  .larger\(row\:grid\)-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-12 {
+  .larger\(row\:grid\)-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .larger\:row\:grid-none {
+  .larger\(row\:grid\)-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .larger\:grid-rows-1 {
+  .larger\(grid-rows\)-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-2 {
+  .larger\(grid-rows\)-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-3 {
+  .larger\(grid-rows\)-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-4 {
+  .larger\(grid-rows\)-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-5 {
+  .larger\(grid-rows\)-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-6 {
+  .larger\(grid-rows\)-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-7 {
+  .larger\(grid-rows\)-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-8 {
+  .larger\(grid-rows\)-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-9 {
+  .larger\(grid-rows\)-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-10 {
+  .larger\(grid-rows\)-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-11 {
+  .larger\(grid-rows\)-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-12 {
+  .larger\(grid-rows\)-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .larger\:grid-rows-none {
+  .larger\(grid-rows\)-none {
     grid-template-rows: none;
   }
 
-  .larger\:auto\:grid-rows {
+  .larger\(auto\:grid-rows\) {
     grid-auto-rows: auto;
   }
 
-  .larger\:min\:grid-rows {
+  .larger\(min\:grid-rows\) {
     grid-auto-rows: min-content;
   }
 
-  .larger\:max\:grid-rows {
+  .larger\(max\:grid-rows\) {
     grid-auto-rows: max-content;
   }
 
-  .larger\:fr\:grid-rows {
+  .larger\(fr\:grid-rows\) {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .larger\:flow\:grid-rows {
+  .larger\(flow\:grid-rows\) {
     grid-auto-flow: row;
   }
 
-  .larger\:dense\:grid-rows {
+  .larger\(dense\:grid-rows\) {
     grid-auto-flow: row dense;
   }
 
-  .larger\:colspan-auto {
+  .larger\(colspan\)-auto {
     grid-column: auto;
   }
 
-  .larger\:colspan-1 {
+  .larger\(colspan\)-1 {
     grid-column: span 1 / span 1;
   }
 
-  .larger\:colspan-2 {
+  .larger\(colspan\)-2 {
     grid-column: span 2 / span 2;
   }
 
-  .larger\:colspan-3 {
+  .larger\(colspan\)-3 {
     grid-column: span 3 / span 3;
   }
 
-  .larger\:colspan-4 {
+  .larger\(colspan\)-4 {
     grid-column: span 4 / span 4;
   }
 
-  .larger\:colspan-5 {
+  .larger\(colspan\)-5 {
     grid-column: span 5 / span 5;
   }
 
-  .larger\:colspan-6 {
+  .larger\(colspan\)-6 {
     grid-column: span 6 / span 6;
   }
 
-  .larger\:colspan-7 {
+  .larger\(colspan\)-7 {
     grid-column: span 7 / span 7;
   }
 
-  .larger\:colspan-8 {
+  .larger\(colspan\)-8 {
     grid-column: span 8 / span 8;
   }
 
-  .larger\:colspan-9 {
+  .larger\(colspan\)-9 {
     grid-column: span 9 / span 9;
   }
 
-  .larger\:colspan-10 {
+  .larger\(colspan\)-10 {
     grid-column: span 10 / span 10;
   }
 
-  .larger\:colspan-11 {
+  .larger\(colspan\)-11 {
     grid-column: span 11 / span 11;
   }
 
-  .larger\:colspan-12 {
+  .larger\(colspan\)-12 {
     grid-column: span 12 / span 12;
   }
 
-  .larger\:colspan-full {
+  .larger\(colspan\)-full {
     grid-column: 1 / -1;
   }
 
-  .larger\:start\:colspan-auto {
+  .larger\(start\:colspan\)-auto {
     grid-column-start: auto;
   }
 
-  .larger\:start\:colspan-1 {
+  .larger\(start\:colspan\)-1 {
     grid-column-start: 1;
   }
 
-  .larger\:start\:colspan-2 {
+  .larger\(start\:colspan\)-2 {
     grid-column-start: 2;
   }
 
-  .larger\:start\:colspan-3 {
+  .larger\(start\:colspan\)-3 {
     grid-column-start: 3;
   }
 
-  .larger\:start\:colspan-4 {
+  .larger\(start\:colspan\)-4 {
     grid-column-start: 4;
   }
 
-  .larger\:start\:colspan-5 {
+  .larger\(start\:colspan\)-5 {
     grid-column-start: 5;
   }
 
-  .larger\:start\:colspan-6 {
+  .larger\(start\:colspan\)-6 {
     grid-column-start: 6;
   }
 
-  .larger\:start\:colspan-7 {
+  .larger\(start\:colspan\)-7 {
     grid-column-start: 7;
   }
 
-  .larger\:start\:colspan-8 {
+  .larger\(start\:colspan\)-8 {
     grid-column-start: 8;
   }
 
-  .larger\:start\:colspan-9 {
+  .larger\(start\:colspan\)-9 {
     grid-column-start: 9;
   }
 
-  .larger\:start\:colspan-10 {
+  .larger\(start\:colspan\)-10 {
     grid-column-start: 10;
   }
 
-  .larger\:start\:colspan-11 {
+  .larger\(start\:colspan\)-11 {
     grid-column-start: 11;
   }
 
-  .larger\:start\:colspan-12 {
+  .larger\(start\:colspan\)-12 {
     grid-column-start: 12;
   }
 
-  .larger\:start\:colspan-13 {
+  .larger\(start\:colspan\)-13 {
     grid-column-start: 13;
   }
 
-  .larger\:end\:colspan-auto {
+  .larger\(end\:colspan\)-auto {
     grid-column-end: auto;
   }
 
-  .larger\:end\:colspan-1 {
+  .larger\(end\:colspan\)-1 {
     grid-column-end: 1;
   }
 
-  .larger\:end\:colspan-2 {
+  .larger\(end\:colspan\)-2 {
     grid-column-end: 2;
   }
 
-  .larger\:end\:colspan-3 {
+  .larger\(end\:colspan\)-3 {
     grid-column-end: 3;
   }
 
-  .larger\:end\:colspan-4 {
+  .larger\(end\:colspan\)-4 {
     grid-column-end: 4;
   }
 
-  .larger\:end\:colspan-5 {
+  .larger\(end\:colspan\)-5 {
     grid-column-end: 5;
   }
 
-  .larger\:end\:colspan-6 {
+  .larger\(end\:colspan\)-6 {
     grid-column-end: 6;
   }
 
-  .larger\:end\:colspan-7 {
+  .larger\(end\:colspan\)-7 {
     grid-column-end: 7;
   }
 
-  .larger\:end\:colspan-8 {
+  .larger\(end\:colspan\)-8 {
     grid-column-end: 8;
   }
 
-  .larger\:end\:colspan-9 {
+  .larger\(end\:colspan\)-9 {
     grid-column-end: 9;
   }
 
-  .larger\:end\:colspan-10 {
+  .larger\(end\:colspan\)-10 {
     grid-column-end: 10;
   }
 
-  .larger\:end\:colspan-11 {
+  .larger\(end\:colspan\)-11 {
     grid-column-end: 11;
   }
 
-  .larger\:end\:colspan-12 {
+  .larger\(end\:colspan\)-12 {
     grid-column-end: 12;
   }
 
-  .larger\:end\:colspan-13 {
+  .larger\(end\:colspan\)-13 {
     grid-column-end: 13;
   }
 
-  .larger\:rowspan-auto {
+  .larger\(rowspan\)-auto {
     grid-row: auto;
   }
 
-  .larger\:rowspan-1 {
+  .larger\(rowspan\)-1 {
     grid-row: span 1 / span 1;
   }
 
-  .larger\:rowspan-2 {
+  .larger\(rowspan\)-2 {
     grid-row: span 2 / span 2;
   }
 
-  .larger\:rowspan-3 {
+  .larger\(rowspan\)-3 {
     grid-row: span 3 / span 3;
   }
 
-  .larger\:rowspan-4 {
+  .larger\(rowspan\)-4 {
     grid-row: span 4 / span 4;
   }
 
-  .larger\:rowspan-5 {
+  .larger\(rowspan\)-5 {
     grid-row: span 5 / span 5;
   }
 
-  .larger\:rowspan-6 {
+  .larger\(rowspan\)-6 {
     grid-row: span 6 / span 6;
   }
 
-  .larger\:rowspan-7 {
+  .larger\(rowspan\)-7 {
     grid-row: span 7 / span 7;
   }
 
-  .larger\:rowspan-8 {
+  .larger\(rowspan\)-8 {
     grid-row: span 8 / span 8;
   }
 
-  .larger\:rowspan-9 {
+  .larger\(rowspan\)-9 {
     grid-row: span 9 / span 9;
   }
 
-  .larger\:rowspan-10 {
+  .larger\(rowspan\)-10 {
     grid-row: span 10 / span 10;
   }
 
-  .larger\:rowspan-11 {
+  .larger\(rowspan\)-11 {
     grid-row: span 11 / span 11;
   }
 
-  .larger\:rowspan-12 {
+  .larger\(rowspan\)-12 {
     grid-row: span 12 / span 12;
   }
 
-  .larger\:rowspan-full {
+  .larger\(rowspan\)-full {
     grid-row: 1 / -1;
   }
 
-  .larger\:start\:rowspan-auto {
+  .larger\(start\:rowspan\)-auto {
     grid-row-start: auto;
   }
 
-  .larger\:start\:rowspan-1 {
+  .larger\(start\:rowspan\)-1 {
     grid-row-start: 1;
   }
 
-  .larger\:start\:rowspan-2 {
+  .larger\(start\:rowspan\)-2 {
     grid-row-start: 2;
   }
 
-  .larger\:start\:rowspan-3 {
+  .larger\(start\:rowspan\)-3 {
     grid-row-start: 3;
   }
 
-  .larger\:start\:rowspan-4 {
+  .larger\(start\:rowspan\)-4 {
     grid-row-start: 4;
   }
 
-  .larger\:start\:rowspan-5 {
+  .larger\(start\:rowspan\)-5 {
     grid-row-start: 5;
   }
 
-  .larger\:start\:rowspan-6 {
+  .larger\(start\:rowspan\)-6 {
     grid-row-start: 6;
   }
 
-  .larger\:start\:rowspan-7 {
+  .larger\(start\:rowspan\)-7 {
     grid-row-start: 7;
   }
 
-  .larger\:start\:rowspan-8 {
+  .larger\(start\:rowspan\)-8 {
     grid-row-start: 8;
   }
 
-  .larger\:start\:rowspan-9 {
+  .larger\(start\:rowspan\)-9 {
     grid-row-start: 9;
   }
 
-  .larger\:start\:rowspan-10 {
+  .larger\(start\:rowspan\)-10 {
     grid-row-start: 10;
   }
 
-  .larger\:start\:rowspan-11 {
+  .larger\(start\:rowspan\)-11 {
     grid-row-start: 11;
   }
 
-  .larger\:start\:rowspan-12 {
+  .larger\(start\:rowspan\)-12 {
     grid-row-start: 12;
   }
 
-  .larger\:start\:rowspan-13 {
+  .larger\(start\:rowspan\)-13 {
     grid-row-start: 13;
   }
 
-  .larger\:end\:rowspan-auto {
+  .larger\(end\:rowspan\)-auto {
     grid-row-end: auto;
   }
 
-  .larger\:end\:rowspan-1 {
+  .larger\(end\:rowspan\)-1 {
     grid-row-end: 1;
   }
 
-  .larger\:end\:rowspan-2 {
+  .larger\(end\:rowspan\)-2 {
     grid-row-end: 2;
   }
 
-  .larger\:end\:rowspan-3 {
+  .larger\(end\:rowspan\)-3 {
     grid-row-end: 3;
   }
 
-  .larger\:end\:rowspan-4 {
+  .larger\(end\:rowspan\)-4 {
     grid-row-end: 4;
   }
 
-  .larger\:end\:rowspan-5 {
+  .larger\(end\:rowspan\)-5 {
     grid-row-end: 5;
   }
 
-  .larger\:end\:rowspan-6 {
+  .larger\(end\:rowspan\)-6 {
     grid-row-end: 6;
   }
 
-  .larger\:end\:rowspan-7 {
+  .larger\(end\:rowspan\)-7 {
     grid-row-end: 7;
   }
 
-  .larger\:end\:rowspan-8 {
+  .larger\(end\:rowspan\)-8 {
     grid-row-end: 8;
   }
 
-  .larger\:end\:rowspan-9 {
+  .larger\(end\:rowspan\)-9 {
     grid-row-end: 9;
   }
 
-  .larger\:end\:rowspan-10 {
+  .larger\(end\:rowspan\)-10 {
     grid-row-end: 10;
   }
 
-  .larger\:end\:rowspan-11 {
+  .larger\(end\:rowspan\)-11 {
     grid-row-end: 11;
   }
 
-  .larger\:end\:rowspan-12 {
+  .larger\(end\:rowspan\)-12 {
     grid-row-end: 12;
   }
 
-  .larger\:end\:rowspan-13 {
+  .larger\(end\:rowspan\)-13 {
     grid-row-end: 13;
   }
 
-  .larger\:gap-0 {
+  .larger\(gap\)-0 {
     gap: 0px;
   }
 
-  .larger\:gap-1 {
+  .larger\(gap\)-1 {
     gap: 0.125rem;
   }
 
-  .larger\:gap-2 {
+  .larger\(gap\)-2 {
     gap: 0.25rem;
   }
 
-  .larger\:gap-3 {
+  .larger\(gap\)-3 {
     gap: 0.375rem;
   }
 
-  .larger\:gap-4 {
+  .larger\(gap\)-4 {
     gap: 0.5rem;
   }
 
-  .larger\:gap-5 {
+  .larger\(gap\)-5 {
     gap: 0.625rem;
   }
 
-  .larger\:gap-6 {
+  .larger\(gap\)-6 {
     gap: 0.75rem;
   }
 
-  .larger\:gap-7 {
+  .larger\(gap\)-7 {
     gap: 0.875rem;
   }
 
-  .larger\:gap-8 {
+  .larger\(gap\)-8 {
     gap: 1rem;
   }
 
-  .larger\:gap-9 {
+  .larger\(gap\)-9 {
     gap: 1.25rem;
   }
 
-  .larger\:gap-10 {
+  .larger\(gap\)-10 {
     gap: 1.5rem;
   }
 
-  .larger\:gap-11 {
+  .larger\(gap\)-11 {
     gap: 1.75rem;
   }
 
-  .larger\:gap-12 {
+  .larger\(gap\)-12 {
     gap: 2rem;
   }
 
-  .larger\:gap-13 {
+  .larger\(gap\)-13 {
     gap: 2.25rem;
   }
 
-  .larger\:gap-14 {
+  .larger\(gap\)-14 {
     gap: 2.5rem;
   }
 
-  .larger\:gap-15 {
+  .larger\(gap\)-15 {
     gap: 2.75rem;
   }
 
-  .larger\:gap-15 {
+  .larger\(gap\)-15 {
     gap: 3rem;
   }
 
-  .larger\:gap-16 {
+  .larger\(gap\)-16 {
     gap: 3.25rem;
   }
 
-  .larger\:gap-17 {
+  .larger\(gap\)-17 {
     gap: 3.5rem;
   }
 
-  .larger\:gap-18 {
+  .larger\(gap\)-18 {
     gap: 3.75rem;
   }
 
-  .larger\:gap-19 {
+  .larger\(gap\)-19 {
     gap: 4rem;
   }
 
-  .larger\:gap-20 {
+  .larger\(gap\)-20 {
     gap: 4.25rem;
   }
 
-  .larger\:column\:gap-0 {
+  .larger\(column\:gap\)-0 {
     column-gap: 0px;
   }
 
-  .larger\:column\:gap-1 {
+  .larger\(column\:gap\)-1 {
     column-gap: 0.125rem;
   }
 
-  .larger\:column\:gap-2 {
+  .larger\(column\:gap\)-2 {
     column-gap: 0.25rem;
   }
 
-  .larger\:column\:gap-3 {
+  .larger\(column\:gap\)-3 {
     column-gap: 0.375rem;
   }
 
-  .larger\:column\:gap-4 {
+  .larger\(column\:gap\)-4 {
     column-gap: 0.5rem;
   }
 
-  .larger\:column\:gap-5 {
+  .larger\(column\:gap\)-5 {
     column-gap: 0.625rem;
   }
 
-  .larger\:column\:gap-6 {
+  .larger\(column\:gap\)-6 {
     column-gap: 0.75rem;
   }
 
-  .larger\:column\:gap-7 {
+  .larger\(column\:gap\)-7 {
     column-gap: 0.875rem;
   }
 
-  .larger\:column\:gap-8 {
+  .larger\(column\:gap\)-8 {
     column-gap: 1rem;
   }
 
-  .larger\:column\:gap-9 {
+  .larger\(column\:gap\)-9 {
     column-gap: 1.25rem;
   }
 
-  .larger\:column\:gap-10 {
+  .larger\(column\:gap\)-10 {
     column-gap: 1.5rem;
   }
 
-  .larger\:column\:gap-11 {
+  .larger\(column\:gap\)-11 {
     column-gap: 1.75rem;
   }
 
-  .larger\:column\:gap-12 {
+  .larger\(column\:gap\)-12 {
     column-gap: 2rem;
   }
 
-  .larger\:column\:gap-13 {
+  .larger\(column\:gap\)-13 {
     column-gap: 2.25rem;
   }
 
-  .larger\:column\:gap-14 {
+  .larger\(column\:gap\)-14 {
     column-gap: 2.5rem;
   }
 
-  .larger\:column\:gap-15 {
+  .larger\(column\:gap\)-15 {
     column-gap: 2.75rem;
   }
 
-  .larger\:column\:gap-15 {
+  .larger\(column\:gap\)-15 {
     column-gap: 3rem;
   }
 
-  .larger\:column\:gap-16 {
+  .larger\(column\:gap\)-16 {
     column-gap: 3.25rem;
   }
 
-  .larger\:column\:gap-17 {
+  .larger\(column\:gap\)-17 {
     column-gap: 3.5rem;
   }
 
-  .larger\:column\:gap-18 {
+  .larger\(column\:gap\)-18 {
     column-gap: 3.75rem;
   }
 
-  .larger\:column\:gap-19 {
+  .larger\(column\:gap\)-19 {
     column-gap: 4rem;
   }
 
-  .larger\:column\:gap-20 {
+  .larger\(column\:gap\)-20 {
     column-gap: 4.25rem;
   }
 
-  .larger\:row\:gap-0 {
+  .larger\(row\:gap\)-0 {
     row-gap: 0px;
   }
 
-  .larger\:row\:gap-1 {
+  .larger\(row\:gap\)-1 {
     row-gap: 0.125rem;
   }
 
-  .larger\:row\:gap-2 {
+  .larger\(row\:gap\)-2 {
     row-gap: 0.25rem;
   }
 
-  .larger\:row\:gap-3 {
+  .larger\(row\:gap\)-3 {
     row-gap: 0.375rem;
   }
 
-  .larger\:row\:gap-4 {
+  .larger\(row\:gap\)-4 {
     row-gap: 0.5rem;
   }
 
-  .larger\:row\:gap-5 {
+  .larger\(row\:gap\)-5 {
     row-gap: 0.625rem;
   }
 
-  .larger\:row\:gap-6 {
+  .larger\(row\:gap\)-6 {
     row-gap: 0.75rem;
   }
 
-  .larger\:row\:gap-7 {
+  .larger\(row\:gap\)-7 {
     row-gap: 0.875rem;
   }
 
-  .larger\:row\:gap-8 {
+  .larger\(row\:gap\)-8 {
     row-gap: 1rem;
   }
 
-  .larger\:row\:gap-9 {
+  .larger\(row\:gap\)-9 {
     row-gap: 1.25rem;
   }
 
-  .larger\:row\:gap-10 {
+  .larger\(row\:gap\)-10 {
     row-gap: 1.5rem;
   }
 
-  .larger\:row\:gap-11 {
+  .larger\(row\:gap\)-11 {
     row-gap: 1.75rem;
   }
 
-  .larger\:row\:gap-12 {
+  .larger\(row\:gap\)-12 {
     row-gap: 2rem;
   }
 
-  .larger\:row\:gap-13 {
+  .larger\(row\:gap\)-13 {
     row-gap: 2.25rem;
   }
 
-  .larger\:row\:gap-14 {
+  .larger\(row\:gap\)-14 {
     row-gap: 2.5rem;
   }
 
-  .larger\:row\:gap-15 {
+  .larger\(row\:gap\)-15 {
     row-gap: 2.75rem;
   }
 
-  .larger\:row\:gap-15 {
+  .larger\(row\:gap\)-15 {
     row-gap: 3rem;
   }
 
-  .larger\:row\:gap-16 {
+  .larger\(row\:gap\)-16 {
     row-gap: 3.25rem;
   }
 
-  .larger\:row\:gap-17 {
+  .larger\(row\:gap\)-17 {
     row-gap: 3.5rem;
   }
 
-  .larger\:row\:gap-18 {
+  .larger\(row\:gap\)-18 {
     row-gap: 3.75rem;
   }
 
-  .larger\:row\:gap-19 {
+  .larger\(row\:gap\)-19 {
     row-gap: 4rem;
   }
 
-  .larger\:row\:gap-20 {
+  .larger\(row\:gap\)-20 {
     row-gap: 4.25rem;
   }
 }
 
 @media (min-width: 1536px) {
-  .largest\:grid {
+  .largest\(grid\) {
     display: grid;
   }
 
-  .largest\:column\:grid-1 {
+  .largest\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-2 {
+  .largest\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-3 {
+  .largest\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-4 {
+  .largest\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-5 {
+  .largest\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-6 {
+  .largest\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-7 {
+  .largest\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-8 {
+  .largest\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-9 {
+  .largest\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-10 {
+  .largest\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-11 {
+  .largest\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-12 {
+  .largest\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .largest\:column\:grid-none {
+  .largest\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .largest\:grid-columns-1 {
+  .largest\(grid-columns\)-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-2 {
+  .largest\(grid-columns\)-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-3 {
+  .largest\(grid-columns\)-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-4 {
+  .largest\(grid-columns\)-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-5 {
+  .largest\(grid-columns\)-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-6 {
+  .largest\(grid-columns\)-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-7 {
+  .largest\(grid-columns\)-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-8 {
+  .largest\(grid-columns\)-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-9 {
+  .largest\(grid-columns\)-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-10 {
+  .largest\(grid-columns\)-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-11 {
+  .largest\(grid-columns\)-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-12 {
+  .largest\(grid-columns\)-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .largest\:grid-columns-none {
+  .largest\(grid-columns\)-none {
     grid-template-columns: none;
   }
 
-  .largest\:auto\:grid-columns {
+  .largest\(auto\:grid-columns\) {
     grid-auto-columns: auto;
   }
 
-  .largest\:min\:grid-columns {
+  .largest\(min\:grid-columns\) {
     grid-auto-columns: min-content;
   }
 
-  .largest\:max\:grid-columns {
+  .largest\(max\:grid-columns\) {
     grid-auto-columns: max-content;
   }
 
-  .largest\:fr\:grid-columns {
+  .largest\(fr\:grid-columns\) {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .largest\:flow\:grid-columns {
+  .largest\(flow\:grid-columns\) {
     grid-auto-flow: column;
   }
 
-  .largest\:dense\:grid-columns {
+  .largest\(dense\:grid-columns\) {
     grid-auto-flow: column dense;
   }
 
-  .largest\:row\:grid-1 {
+  .largest\(row\:grid\)-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-2 {
+  .largest\(row\:grid\)-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-3 {
+  .largest\(row\:grid\)-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-4 {
+  .largest\(row\:grid\)-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-5 {
+  .largest\(row\:grid\)-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-6 {
+  .largest\(row\:grid\)-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-7 {
+  .largest\(row\:grid\)-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-8 {
+  .largest\(row\:grid\)-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-9 {
+  .largest\(row\:grid\)-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-10 {
+  .largest\(row\:grid\)-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-11 {
+  .largest\(row\:grid\)-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-12 {
+  .largest\(row\:grid\)-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .largest\:row\:grid-none {
+  .largest\(row\:grid\)-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .largest\:grid-rows-1 {
+  .largest\(grid-rows\)-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-2 {
+  .largest\(grid-rows\)-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-3 {
+  .largest\(grid-rows\)-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-4 {
+  .largest\(grid-rows\)-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-5 {
+  .largest\(grid-rows\)-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-6 {
+  .largest\(grid-rows\)-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-7 {
+  .largest\(grid-rows\)-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-8 {
+  .largest\(grid-rows\)-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-9 {
+  .largest\(grid-rows\)-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-10 {
+  .largest\(grid-rows\)-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-11 {
+  .largest\(grid-rows\)-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-12 {
+  .largest\(grid-rows\)-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .largest\:grid-rows-none {
+  .largest\(grid-rows\)-none {
     grid-template-rows: none;
   }
 
-  .largest\:auto\:grid-rows {
+  .largest\(auto\:grid-rows\) {
     grid-auto-rows: auto;
   }
 
-  .largest\:min\:grid-rows {
+  .largest\(min\:grid-rows\) {
     grid-auto-rows: min-content;
   }
 
-  .largest\:max\:grid-rows {
+  .largest\(max\:grid-rows\) {
     grid-auto-rows: max-content;
   }
 
-  .largest\:fr\:grid-rows {
+  .largest\(fr\:grid-rows\) {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .largest\:flow\:grid-rows {
+  .largest\(flow\:grid-rows\) {
     grid-auto-flow: row;
   }
 
-  .largest\:dense\:grid-rows {
+  .largest\(dense\:grid-rows\) {
     grid-auto-flow: row dense;
   }
 
-  .largest\:colspan-auto {
+  .largest\(colspan\)-auto {
     grid-column: auto;
   }
 
-  .largest\:colspan-1 {
+  .largest\(colspan\)-1 {
     grid-column: span 1 / span 1;
   }
 
-  .largest\:colspan-2 {
+  .largest\(colspan\)-2 {
     grid-column: span 2 / span 2;
   }
 
-  .largest\:colspan-3 {
+  .largest\(colspan\)-3 {
     grid-column: span 3 / span 3;
   }
 
-  .largest\:colspan-4 {
+  .largest\(colspan\)-4 {
     grid-column: span 4 / span 4;
   }
 
-  .largest\:colspan-5 {
+  .largest\(colspan\)-5 {
     grid-column: span 5 / span 5;
   }
 
-  .largest\:colspan-6 {
+  .largest\(colspan\)-6 {
     grid-column: span 6 / span 6;
   }
 
-  .largest\:colspan-7 {
+  .largest\(colspan\)-7 {
     grid-column: span 7 / span 7;
   }
 
-  .largest\:colspan-8 {
+  .largest\(colspan\)-8 {
     grid-column: span 8 / span 8;
   }
 
-  .largest\:colspan-9 {
+  .largest\(colspan\)-9 {
     grid-column: span 9 / span 9;
   }
 
-  .largest\:colspan-10 {
+  .largest\(colspan\)-10 {
     grid-column: span 10 / span 10;
   }
 
-  .largest\:colspan-11 {
+  .largest\(colspan\)-11 {
     grid-column: span 11 / span 11;
   }
 
-  .largest\:colspan-12 {
+  .largest\(colspan\)-12 {
     grid-column: span 12 / span 12;
   }
 
-  .largest\:colspan-full {
+  .largest\(colspan\)-full {
     grid-column: 1 / -1;
   }
 
-  .largest\:start\:colspan-auto {
+  .largest\(start\:colspan\)-auto {
     grid-column-start: auto;
   }
 
-  .largest\:start\:colspan-1 {
+  .largest\(start\:colspan\)-1 {
     grid-column-start: 1;
   }
 
-  .largest\:start\:colspan-2 {
+  .largest\(start\:colspan\)-2 {
     grid-column-start: 2;
   }
 
-  .largest\:start\:colspan-3 {
+  .largest\(start\:colspan\)-3 {
     grid-column-start: 3;
   }
 
-  .largest\:start\:colspan-4 {
+  .largest\(start\:colspan\)-4 {
     grid-column-start: 4;
   }
 
-  .largest\:start\:colspan-5 {
+  .largest\(start\:colspan\)-5 {
     grid-column-start: 5;
   }
 
-  .largest\:start\:colspan-6 {
+  .largest\(start\:colspan\)-6 {
     grid-column-start: 6;
   }
 
-  .largest\:start\:colspan-7 {
+  .largest\(start\:colspan\)-7 {
     grid-column-start: 7;
   }
 
-  .largest\:start\:colspan-8 {
+  .largest\(start\:colspan\)-8 {
     grid-column-start: 8;
   }
 
-  .largest\:start\:colspan-9 {
+  .largest\(start\:colspan\)-9 {
     grid-column-start: 9;
   }
 
-  .largest\:start\:colspan-10 {
+  .largest\(start\:colspan\)-10 {
     grid-column-start: 10;
   }
 
-  .largest\:start\:colspan-11 {
+  .largest\(start\:colspan\)-11 {
     grid-column-start: 11;
   }
 
-  .largest\:start\:colspan-12 {
+  .largest\(start\:colspan\)-12 {
     grid-column-start: 12;
   }
 
-  .largest\:start\:colspan-13 {
+  .largest\(start\:colspan\)-13 {
     grid-column-start: 13;
   }
 
-  .largest\:end\:colspan-auto {
+  .largest\(end\:colspan\)-auto {
     grid-column-end: auto;
   }
 
-  .largest\:end\:colspan-1 {
+  .largest\(end\:colspan\)-1 {
     grid-column-end: 1;
   }
 
-  .largest\:end\:colspan-2 {
+  .largest\(end\:colspan\)-2 {
     grid-column-end: 2;
   }
 
-  .largest\:end\:colspan-3 {
+  .largest\(end\:colspan\)-3 {
     grid-column-end: 3;
   }
 
-  .largest\:end\:colspan-4 {
+  .largest\(end\:colspan\)-4 {
     grid-column-end: 4;
   }
 
-  .largest\:end\:colspan-5 {
+  .largest\(end\:colspan\)-5 {
     grid-column-end: 5;
   }
 
-  .largest\:end\:colspan-6 {
+  .largest\(end\:colspan\)-6 {
     grid-column-end: 6;
   }
 
-  .largest\:end\:colspan-7 {
+  .largest\(end\:colspan\)-7 {
     grid-column-end: 7;
   }
 
-  .largest\:end\:colspan-8 {
+  .largest\(end\:colspan\)-8 {
     grid-column-end: 8;
   }
 
-  .largest\:end\:colspan-9 {
+  .largest\(end\:colspan\)-9 {
     grid-column-end: 9;
   }
 
-  .largest\:end\:colspan-10 {
+  .largest\(end\:colspan\)-10 {
     grid-column-end: 10;
   }
 
-  .largest\:end\:colspan-11 {
+  .largest\(end\:colspan\)-11 {
     grid-column-end: 11;
   }
 
-  .largest\:end\:colspan-12 {
+  .largest\(end\:colspan\)-12 {
     grid-column-end: 12;
   }
 
-  .largest\:end\:colspan-13 {
+  .largest\(end\:colspan\)-13 {
     grid-column-end: 13;
   }
 
-  .largest\:rowspan-auto {
+  .largest\(rowspan\)-auto {
     grid-row: auto;
   }
 
-  .largest\:rowspan-1 {
+  .largest\(rowspan\)-1 {
     grid-row: span 1 / span 1;
   }
 
-  .largest\:rowspan-2 {
+  .largest\(rowspan\)-2 {
     grid-row: span 2 / span 2;
   }
 
-  .largest\:rowspan-3 {
+  .largest\(rowspan\)-3 {
     grid-row: span 3 / span 3;
   }
 
-  .largest\:rowspan-4 {
+  .largest\(rowspan\)-4 {
     grid-row: span 4 / span 4;
   }
 
-  .largest\:rowspan-5 {
+  .largest\(rowspan\)-5 {
     grid-row: span 5 / span 5;
   }
 
-  .largest\:rowspan-6 {
+  .largest\(rowspan\)-6 {
     grid-row: span 6 / span 6;
   }
 
-  .largest\:rowspan-7 {
+  .largest\(rowspan\)-7 {
     grid-row: span 7 / span 7;
   }
 
-  .largest\:rowspan-8 {
+  .largest\(rowspan\)-8 {
     grid-row: span 8 / span 8;
   }
 
-  .largest\:rowspan-9 {
+  .largest\(rowspan\)-9 {
     grid-row: span 9 / span 9;
   }
 
-  .largest\:rowspan-10 {
+  .largest\(rowspan\)-10 {
     grid-row: span 10 / span 10;
   }
 
-  .largest\:rowspan-11 {
+  .largest\(rowspan\)-11 {
     grid-row: span 11 / span 11;
   }
 
-  .largest\:rowspan-12 {
+  .largest\(rowspan\)-12 {
     grid-row: span 12 / span 12;
   }
 
-  .largest\:rowspan-full {
+  .largest\(rowspan\)-full {
     grid-row: 1 / -1;
   }
 
-  .largest\:start\:rowspan-auto {
+  .largest\(start\:rowspan\)-auto {
     grid-row-start: auto;
   }
 
-  .largest\:start\:rowspan-1 {
+  .largest\(start\:rowspan\)-1 {
     grid-row-start: 1;
   }
 
-  .largest\:start\:rowspan-2 {
+  .largest\(start\:rowspan\)-2 {
     grid-row-start: 2;
   }
 
-  .largest\:start\:rowspan-3 {
+  .largest\(start\:rowspan\)-3 {
     grid-row-start: 3;
   }
 
-  .largest\:start\:rowspan-4 {
+  .largest\(start\:rowspan\)-4 {
     grid-row-start: 4;
   }
 
-  .largest\:start\:rowspan-5 {
+  .largest\(start\:rowspan\)-5 {
     grid-row-start: 5;
   }
 
-  .largest\:start\:rowspan-6 {
+  .largest\(start\:rowspan\)-6 {
     grid-row-start: 6;
   }
 
-  .largest\:start\:rowspan-7 {
+  .largest\(start\:rowspan\)-7 {
     grid-row-start: 7;
   }
 
-  .largest\:start\:rowspan-8 {
+  .largest\(start\:rowspan\)-8 {
     grid-row-start: 8;
   }
 
-  .largest\:start\:rowspan-9 {
+  .largest\(start\:rowspan\)-9 {
     grid-row-start: 9;
   }
 
-  .largest\:start\:rowspan-10 {
+  .largest\(start\:rowspan\)-10 {
     grid-row-start: 10;
   }
 
-  .largest\:start\:rowspan-11 {
+  .largest\(start\:rowspan\)-11 {
     grid-row-start: 11;
   }
 
-  .largest\:start\:rowspan-12 {
+  .largest\(start\:rowspan\)-12 {
     grid-row-start: 12;
   }
 
-  .largest\:start\:rowspan-13 {
+  .largest\(start\:rowspan\)-13 {
     grid-row-start: 13;
   }
 
-  .largest\:end\:rowspan-auto {
+  .largest\(end\:rowspan\)-auto {
     grid-row-end: auto;
   }
 
-  .largest\:end\:rowspan-1 {
+  .largest\(end\:rowspan\)-1 {
     grid-row-end: 1;
   }
 
-  .largest\:end\:rowspan-2 {
+  .largest\(end\:rowspan\)-2 {
     grid-row-end: 2;
   }
 
-  .largest\:end\:rowspan-3 {
+  .largest\(end\:rowspan\)-3 {
     grid-row-end: 3;
   }
 
-  .largest\:end\:rowspan-4 {
+  .largest\(end\:rowspan\)-4 {
     grid-row-end: 4;
   }
 
-  .largest\:end\:rowspan-5 {
+  .largest\(end\:rowspan\)-5 {
     grid-row-end: 5;
   }
 
-  .largest\:end\:rowspan-6 {
+  .largest\(end\:rowspan\)-6 {
     grid-row-end: 6;
   }
 
-  .largest\:end\:rowspan-7 {
+  .largest\(end\:rowspan\)-7 {
     grid-row-end: 7;
   }
 
-  .largest\:end\:rowspan-8 {
+  .largest\(end\:rowspan\)-8 {
     grid-row-end: 8;
   }
 
-  .largest\:end\:rowspan-9 {
+  .largest\(end\:rowspan\)-9 {
     grid-row-end: 9;
   }
 
-  .largest\:end\:rowspan-10 {
+  .largest\(end\:rowspan\)-10 {
     grid-row-end: 10;
   }
 
-  .largest\:end\:rowspan-11 {
+  .largest\(end\:rowspan\)-11 {
     grid-row-end: 11;
   }
 
-  .largest\:end\:rowspan-12 {
+  .largest\(end\:rowspan\)-12 {
     grid-row-end: 12;
   }
 
-  .largest\:end\:rowspan-13 {
+  .largest\(end\:rowspan\)-13 {
     grid-row-end: 13;
   }
 
-  .largest\:gap-0 {
+  .largest\(gap\)-0 {
     gap: 0px;
   }
 
-  .largest\:gap-1 {
+  .largest\(gap\)-1 {
     gap: 0.125rem;
   }
 
-  .largest\:gap-2 {
+  .largest\(gap\)-2 {
     gap: 0.25rem;
   }
 
-  .largest\:gap-3 {
+  .largest\(gap\)-3 {
     gap: 0.375rem;
   }
 
-  .largest\:gap-4 {
+  .largest\(gap\)-4 {
     gap: 0.5rem;
   }
 
-  .largest\:gap-5 {
+  .largest\(gap\)-5 {
     gap: 0.625rem;
   }
 
-  .largest\:gap-6 {
+  .largest\(gap\)-6 {
     gap: 0.75rem;
   }
 
-  .largest\:gap-7 {
+  .largest\(gap\)-7 {
     gap: 0.875rem;
   }
 
-  .largest\:gap-8 {
+  .largest\(gap\)-8 {
     gap: 1rem;
   }
 
-  .largest\:gap-9 {
+  .largest\(gap\)-9 {
     gap: 1.25rem;
   }
 
-  .largest\:gap-10 {
+  .largest\(gap\)-10 {
     gap: 1.5rem;
   }
 
-  .largest\:gap-11 {
+  .largest\(gap\)-11 {
     gap: 1.75rem;
   }
 
-  .largest\:gap-12 {
+  .largest\(gap\)-12 {
     gap: 2rem;
   }
 
-  .largest\:gap-13 {
+  .largest\(gap\)-13 {
     gap: 2.25rem;
   }
 
-  .largest\:gap-14 {
+  .largest\(gap\)-14 {
     gap: 2.5rem;
   }
 
-  .largest\:gap-15 {
+  .largest\(gap\)-15 {
     gap: 2.75rem;
   }
 
-  .largest\:gap-15 {
+  .largest\(gap\)-15 {
     gap: 3rem;
   }
 
-  .largest\:gap-16 {
+  .largest\(gap\)-16 {
     gap: 3.25rem;
   }
 
-  .largest\:gap-17 {
+  .largest\(gap\)-17 {
     gap: 3.5rem;
   }
 
-  .largest\:gap-18 {
+  .largest\(gap\)-18 {
     gap: 3.75rem;
   }
 
-  .largest\:gap-19 {
+  .largest\(gap\)-19 {
     gap: 4rem;
   }
 
-  .largest\:gap-20 {
+  .largest\(gap\)-20 {
     gap: 4.25rem;
   }
 
-  .largest\:column\:gap-0 {
+  .largest\(column\:gap\)-0 {
     column-gap: 0px;
   }
 
-  .largest\:column\:gap-1 {
+  .largest\(column\:gap\)-1 {
     column-gap: 0.125rem;
   }
 
-  .largest\:column\:gap-2 {
+  .largest\(column\:gap\)-2 {
     column-gap: 0.25rem;
   }
 
-  .largest\:column\:gap-3 {
+  .largest\(column\:gap\)-3 {
     column-gap: 0.375rem;
   }
 
-  .largest\:column\:gap-4 {
+  .largest\(column\:gap\)-4 {
     column-gap: 0.5rem;
   }
 
-  .largest\:column\:gap-5 {
+  .largest\(column\:gap\)-5 {
     column-gap: 0.625rem;
   }
 
-  .largest\:column\:gap-6 {
+  .largest\(column\:gap\)-6 {
     column-gap: 0.75rem;
   }
 
-  .largest\:column\:gap-7 {
+  .largest\(column\:gap\)-7 {
     column-gap: 0.875rem;
   }
 
-  .largest\:column\:gap-8 {
+  .largest\(column\:gap\)-8 {
     column-gap: 1rem;
   }
 
-  .largest\:column\:gap-9 {
+  .largest\(column\:gap\)-9 {
     column-gap: 1.25rem;
   }
 
-  .largest\:column\:gap-10 {
+  .largest\(column\:gap\)-10 {
     column-gap: 1.5rem;
   }
 
-  .largest\:column\:gap-11 {
+  .largest\(column\:gap\)-11 {
     column-gap: 1.75rem;
   }
 
-  .largest\:column\:gap-12 {
+  .largest\(column\:gap\)-12 {
     column-gap: 2rem;
   }
 
-  .largest\:column\:gap-13 {
+  .largest\(column\:gap\)-13 {
     column-gap: 2.25rem;
   }
 
-  .largest\:column\:gap-14 {
+  .largest\(column\:gap\)-14 {
     column-gap: 2.5rem;
   }
 
-  .largest\:column\:gap-15 {
+  .largest\(column\:gap\)-15 {
     column-gap: 2.75rem;
   }
 
-  .largest\:column\:gap-15 {
+  .largest\(column\:gap\)-15 {
     column-gap: 3rem;
   }
 
-  .largest\:column\:gap-16 {
+  .largest\(column\:gap\)-16 {
     column-gap: 3.25rem;
   }
 
-  .largest\:column\:gap-17 {
+  .largest\(column\:gap\)-17 {
     column-gap: 3.5rem;
   }
 
-  .largest\:column\:gap-18 {
+  .largest\(column\:gap\)-18 {
     column-gap: 3.75rem;
   }
 
-  .largest\:column\:gap-19 {
+  .largest\(column\:gap\)-19 {
     column-gap: 4rem;
   }
 
-  .largest\:column\:gap-20 {
+  .largest\(column\:gap\)-20 {
     column-gap: 4.25rem;
   }
 
-  .largest\:row\:gap-0 {
+  .largest\(row\:gap\)-0 {
     row-gap: 0px;
   }
 
-  .largest\:row\:gap-1 {
+  .largest\(row\:gap\)-1 {
     row-gap: 0.125rem;
   }
 
-  .largest\:row\:gap-2 {
+  .largest\(row\:gap\)-2 {
     row-gap: 0.25rem;
   }
 
-  .largest\:row\:gap-3 {
+  .largest\(row\:gap\)-3 {
     row-gap: 0.375rem;
   }
 
-  .largest\:row\:gap-4 {
+  .largest\(row\:gap\)-4 {
     row-gap: 0.5rem;
   }
 
-  .largest\:row\:gap-5 {
+  .largest\(row\:gap\)-5 {
     row-gap: 0.625rem;
   }
 
-  .largest\:row\:gap-6 {
+  .largest\(row\:gap\)-6 {
     row-gap: 0.75rem;
   }
 
-  .largest\:row\:gap-7 {
+  .largest\(row\:gap\)-7 {
     row-gap: 0.875rem;
   }
 
-  .largest\:row\:gap-8 {
+  .largest\(row\:gap\)-8 {
     row-gap: 1rem;
   }
 
-  .largest\:row\:gap-9 {
+  .largest\(row\:gap\)-9 {
     row-gap: 1.25rem;
   }
 
-  .largest\:row\:gap-10 {
+  .largest\(row\:gap\)-10 {
     row-gap: 1.5rem;
   }
 
-  .largest\:row\:gap-11 {
+  .largest\(row\:gap\)-11 {
     row-gap: 1.75rem;
   }
 
-  .largest\:row\:gap-12 {
+  .largest\(row\:gap\)-12 {
     row-gap: 2rem;
   }
 
-  .largest\:row\:gap-13 {
+  .largest\(row\:gap\)-13 {
     row-gap: 2.25rem;
   }
 
-  .largest\:row\:gap-14 {
+  .largest\(row\:gap\)-14 {
     row-gap: 2.5rem;
   }
 
-  .largest\:row\:gap-15 {
+  .largest\(row\:gap\)-15 {
     row-gap: 2.75rem;
   }
 
-  .largest\:row\:gap-15 {
+  .largest\(row\:gap\)-15 {
     row-gap: 3rem;
   }
 
-  .largest\:row\:gap-16 {
+  .largest\(row\:gap\)-16 {
     row-gap: 3.25rem;
   }
 
-  .largest\:row\:gap-17 {
+  .largest\(row\:gap\)-17 {
     row-gap: 3.5rem;
   }
 
-  .largest\:row\:gap-18 {
+  .largest\(row\:gap\)-18 {
     row-gap: 3.75rem;
   }
 
-  .largest\:row\:gap-19 {
+  .largest\(row\:gap\)-19 {
     row-gap: 4rem;
   }
 
-  .largest\:row\:gap-20 {
+  .largest\(row\:gap\)-20 {
     row-gap: 4.25rem;
   }
 }
@@ -66715,66 +66715,66 @@ textarea.large\:input {
 }
 
 @media (min-width: 640px) {
-  .small\:overflow,
-  .small\:auto\:overflow {
+  .small\(overflow\),
+  .small\(auto\:overflow\) {
     overflow: auto !important;
   }
-    .small\:overflow-x, .small\:auto\:overflow-x {
+    .small\(overflow\)-x, .small\(auto\:overflow\)-x {
       overflow-x: auto !important;
     }
-    .small\:overflow-y, .small\:auto\:overflow-y {
+    .small\(overflow\)-y, .small\(auto\:overflow\)-y {
       overflow-y: auto !important;
     }
 
-  .small\:hidden\:overflow {
+  .small\(hidden\:overflow\) {
     overflow: hidden !important;
   }
-    .small\:hidden\:overflow-x {
+    .small\(hidden\:overflow\)-x {
       overflow-x: hidden !important;
     }
-    .small\:hidden\:overflow-y {
+    .small\(hidden\:overflow\)-y {
       overflow-y: hidden !important;
     }
 
-  .small\:visible\:overflow {
+  .small\(visible\:overflow\) {
     overflow: visible !important;
   }
-    .small\:visible\:overflow-x {
+    .small\(visible\:overflow\)-x {
       overflow-x: visible !important;
     }
-    .small\:visible\:overflow-y {
+    .small\(visible\:overflow\)-y {
       overflow-y: visible !important;
     }
 
-  .small\:scroll\:overflow {
+  .small\(scroll\:overflow\) {
     overflow: scroll !important;
   }
-    .small\:scroll\:overflow-x {
+    .small\(scroll\:overflow\)-x {
       overflow-x: scroll !important;
     }
-    .small\:scroll\:overflow-y {
+    .small\(scroll\:overflow\)-y {
       overflow-y: scroll !important;
     }
 
-  .small\:clip\:text {
+  .small\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .small\:truncate\:text {
+  .small\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .small\:less\:text {
+  .small\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .small\:more\:text {
+  .small\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -66782,66 +66782,66 @@ textarea.large\:input {
 }
 
 @media (min-width: 768px) {
-  .medium\:overflow,
-  .medium\:auto\:overflow {
+  .medium\(overflow\),
+  .medium\(auto\:overflow\) {
     overflow: auto !important;
   }
-    .medium\:overflow-x, .medium\:auto\:overflow-x {
+    .medium\(overflow\)-x, .medium\(auto\:overflow\)-x {
       overflow-x: auto !important;
     }
-    .medium\:overflow-y, .medium\:auto\:overflow-y {
+    .medium\(overflow\)-y, .medium\(auto\:overflow\)-y {
       overflow-y: auto !important;
     }
 
-  .medium\:hidden\:overflow {
+  .medium\(hidden\:overflow\) {
     overflow: hidden !important;
   }
-    .medium\:hidden\:overflow-x {
+    .medium\(hidden\:overflow\)-x {
       overflow-x: hidden !important;
     }
-    .medium\:hidden\:overflow-y {
+    .medium\(hidden\:overflow\)-y {
       overflow-y: hidden !important;
     }
 
-  .medium\:visible\:overflow {
+  .medium\(visible\:overflow\) {
     overflow: visible !important;
   }
-    .medium\:visible\:overflow-x {
+    .medium\(visible\:overflow\)-x {
       overflow-x: visible !important;
     }
-    .medium\:visible\:overflow-y {
+    .medium\(visible\:overflow\)-y {
       overflow-y: visible !important;
     }
 
-  .medium\:scroll\:overflow {
+  .medium\(scroll\:overflow\) {
     overflow: scroll !important;
   }
-    .medium\:scroll\:overflow-x {
+    .medium\(scroll\:overflow\)-x {
       overflow-x: scroll !important;
     }
-    .medium\:scroll\:overflow-y {
+    .medium\(scroll\:overflow\)-y {
       overflow-y: scroll !important;
     }
 
-  .medium\:clip\:text {
+  .medium\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .medium\:truncate\:text {
+  .medium\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .medium\:less\:text {
+  .medium\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .medium\:more\:text {
+  .medium\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -66849,66 +66849,66 @@ textarea.large\:input {
 }
 
 @media (min-width: 1024px) {
-  .large\:overflow,
-  .large\:auto\:overflow {
+  .large\(overflow\),
+  .large\(auto\:overflow\) {
     overflow: auto !important;
   }
-    .large\:overflow-x, .large\:auto\:overflow-x {
+    .large\(overflow\)-x, .large\(auto\:overflow\)-x {
       overflow-x: auto !important;
     }
-    .large\:overflow-y, .large\:auto\:overflow-y {
+    .large\(overflow\)-y, .large\(auto\:overflow\)-y {
       overflow-y: auto !important;
     }
 
-  .large\:hidden\:overflow {
+  .large\(hidden\:overflow\) {
     overflow: hidden !important;
   }
-    .large\:hidden\:overflow-x {
+    .large\(hidden\:overflow\)-x {
       overflow-x: hidden !important;
     }
-    .large\:hidden\:overflow-y {
+    .large\(hidden\:overflow\)-y {
       overflow-y: hidden !important;
     }
 
-  .large\:visible\:overflow {
+  .large\(visible\:overflow\) {
     overflow: visible !important;
   }
-    .large\:visible\:overflow-x {
+    .large\(visible\:overflow\)-x {
       overflow-x: visible !important;
     }
-    .large\:visible\:overflow-y {
+    .large\(visible\:overflow\)-y {
       overflow-y: visible !important;
     }
 
-  .large\:scroll\:overflow {
+  .large\(scroll\:overflow\) {
     overflow: scroll !important;
   }
-    .large\:scroll\:overflow-x {
+    .large\(scroll\:overflow\)-x {
       overflow-x: scroll !important;
     }
-    .large\:scroll\:overflow-y {
+    .large\(scroll\:overflow\)-y {
       overflow-y: scroll !important;
     }
 
-  .large\:clip\:text {
+  .large\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .large\:truncate\:text {
+  .large\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .large\:less\:text {
+  .large\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .large\:more\:text {
+  .large\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -66916,66 +66916,66 @@ textarea.large\:input {
 }
 
 @media (min-width: 1280px) {
-  .larger\:overflow,
-  .larger\:auto\:overflow {
+  .larger\(overflow\),
+  .larger\(auto\:overflow\) {
     overflow: auto !important;
   }
-    .larger\:overflow-x, .larger\:auto\:overflow-x {
+    .larger\(overflow\)-x, .larger\(auto\:overflow\)-x {
       overflow-x: auto !important;
     }
-    .larger\:overflow-y, .larger\:auto\:overflow-y {
+    .larger\(overflow\)-y, .larger\(auto\:overflow\)-y {
       overflow-y: auto !important;
     }
 
-  .larger\:hidden\:overflow {
+  .larger\(hidden\:overflow\) {
     overflow: hidden !important;
   }
-    .larger\:hidden\:overflow-x {
+    .larger\(hidden\:overflow\)-x {
       overflow-x: hidden !important;
     }
-    .larger\:hidden\:overflow-y {
+    .larger\(hidden\:overflow\)-y {
       overflow-y: hidden !important;
     }
 
-  .larger\:visible\:overflow {
+  .larger\(visible\:overflow\) {
     overflow: visible !important;
   }
-    .larger\:visible\:overflow-x {
+    .larger\(visible\:overflow\)-x {
       overflow-x: visible !important;
     }
-    .larger\:visible\:overflow-y {
+    .larger\(visible\:overflow\)-y {
       overflow-y: visible !important;
     }
 
-  .larger\:scroll\:overflow {
+  .larger\(scroll\:overflow\) {
     overflow: scroll !important;
   }
-    .larger\:scroll\:overflow-x {
+    .larger\(scroll\:overflow\)-x {
       overflow-x: scroll !important;
     }
-    .larger\:scroll\:overflow-y {
+    .larger\(scroll\:overflow\)-y {
       overflow-y: scroll !important;
     }
 
-  .larger\:clip\:text {
+  .larger\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .larger\:truncate\:text {
+  .larger\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .larger\:less\:text {
+  .larger\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .larger\:more\:text {
+  .larger\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -66983,66 +66983,66 @@ textarea.large\:input {
 }
 
 @media (min-width: 1536px) {
-  .largest\:overflow,
-  .largest\:auto\:overflow {
+  .largest\(overflow\),
+  .largest\(auto\:overflow\) {
     overflow: auto !important;
   }
-    .largest\:overflow-x, .largest\:auto\:overflow-x {
+    .largest\(overflow\)-x, .largest\(auto\:overflow\)-x {
       overflow-x: auto !important;
     }
-    .largest\:overflow-y, .largest\:auto\:overflow-y {
+    .largest\(overflow\)-y, .largest\(auto\:overflow\)-y {
       overflow-y: auto !important;
     }
 
-  .largest\:hidden\:overflow {
+  .largest\(hidden\:overflow\) {
     overflow: hidden !important;
   }
-    .largest\:hidden\:overflow-x {
+    .largest\(hidden\:overflow\)-x {
       overflow-x: hidden !important;
     }
-    .largest\:hidden\:overflow-y {
+    .largest\(hidden\:overflow\)-y {
       overflow-y: hidden !important;
     }
 
-  .largest\:visible\:overflow {
+  .largest\(visible\:overflow\) {
     overflow: visible !important;
   }
-    .largest\:visible\:overflow-x {
+    .largest\(visible\:overflow\)-x {
       overflow-x: visible !important;
     }
-    .largest\:visible\:overflow-y {
+    .largest\(visible\:overflow\)-y {
       overflow-y: visible !important;
     }
 
-  .largest\:scroll\:overflow {
+  .largest\(scroll\:overflow\) {
     overflow: scroll !important;
   }
-    .largest\:scroll\:overflow-x {
+    .largest\(scroll\:overflow\)-x {
       overflow-x: scroll !important;
     }
-    .largest\:scroll\:overflow-y {
+    .largest\(scroll\:overflow\)-y {
       overflow-y: scroll !important;
     }
 
-  .largest\:clip\:text {
+  .largest\(clip\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .largest\:truncate\:text {
+  .largest\(truncate\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .largest\:less\:text {
+  .largest\(less\:text\) {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .largest\:more\:text {
+  .largest\(more\:text\) {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
