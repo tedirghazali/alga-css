@@ -19,6 +19,10 @@
 .uppercase\:text { text-transform: uppercase !important; }
 .capitalize\:text { text-transform: capitalize !important; }
 
+.underline\:text { text-decoration: underline !important; }
+.overline\:text { text-decoration: overline !important; }
+.strikethrough\:text { text-decoration: line-through !important; }
+
 @mixin text-size .text;
 @mixin text-double .thin\:text, font-weight, 100;
 @mixin text-double .ultralight\:text, font-weight, 200;
@@ -40,6 +44,10 @@
 @mixin text-double .lowercase\:text, text-transform, lowercase;
 @mixin text-double .uppercase\:text, text-transform, uppercase;
 @mixin text-double .capitalize\:text, text-transform, capitalize;
+
+@mixin text-double .underline\:text, text-decoration, underline;
+@mixin text-double .overline\:text, text-decoration, overline;
+@mixin text-double .strikethrough\:text, text-decoration, line-through;
 
 @media (min-width: 640px) {
   .small\(thin\:text\) { font-weight: 100 !important; }
@@ -63,6 +71,10 @@
   .small\(uppercase\:text\) { text-transform: uppercase !important; }
   .small\(capitalize\:text\) { text-transform: capitalize !important; }
 
+  .small\(underline\:text\) { text-decoration: underline !important; }
+  .small\(overline\:text\) { text-decoration: overline !important; }
+  .small\(strikethrough\:text\) { text-decoration: line-through !important; }
+
   @mixin text-size .small\(text\);
   @mixin text-double .small\(thin\:text\), font-weight, 100;
   @mixin text-double .small\(ultralight\:text\), font-weight, 200;
@@ -84,6 +96,10 @@
   @mixin text-double .small\(lowercase\:text\), text-transform, lowercase;
   @mixin text-double .small\(uppercase\:text\), text-transform, uppercase;
   @mixin text-double .small\(capitalize\:text\), text-transform, capitalize;
+  
+  @mixin text-double .small\(underline\:text\), text-decoration, underline;
+  @mixin text-double .small\(overline\:text\), text-decoration, overline;
+  @mixin text-double .small\(strikethrough\:text\), text-decoration, line-through;
 }
 
 @media (min-width: 768px) {
@@ -108,6 +124,10 @@
   .medium\(uppercase\:text\) { text-transform: uppercase !important; }
   .medium\(capitalize\:text\) { text-transform: capitalize !important; }
 
+  .medium\(underline\:text\) { text-decoration: underline !important; }
+  .medium\(overline\:text\) { text-decoration: overline !important; }
+  .medium\(strikethrough\:text\) { text-decoration: line-through !important; }
+
   @mixin text-size .medium\(text\);
   @mixin text-double .medium\(thin\:text\), font-weight, 100;
   @mixin text-double .medium\(ultralight\:text\), font-weight, 200;
@@ -129,6 +149,10 @@
   @mixin text-double .medium\(lowercase\:text\), text-transform, lowercase;
   @mixin text-double .medium\(uppercase\:text\), text-transform, uppercase;
   @mixin text-double .medium\(capitalize\:text\), text-transform, capitalize;
+  
+  @mixin text-double .medium\(underline\:text\), text-decoration, underline;
+  @mixin text-double .medium\(overline\:text\), text-decoration, overline;
+  @mixin text-double .medium\(strikethrough\:text\), text-decoration, line-through;
 }
 
 @media (min-width: 1024px) {
@@ -153,6 +177,10 @@
   .large\(uppercase\:text\) { text-transform: uppercase !important; }
   .large\(capitalize\:text\) { text-transform: capitalize !important; }
 
+  .large\(underline\:text\) { text-decoration: underline !important; }
+  .large\(overline\:text\) { text-decoration: overline !important; }
+  .large\(strikethrough\:text\) { text-decoration: line-through !important; }
+
   @mixin text-size .large\(text\);
   @mixin text-double .large\(thin\:text\), font-weight, 100;
   @mixin text-double .large\(ultralight\:text\), font-weight, 200;
@@ -174,6 +202,10 @@
   @mixin text-double .large\(lowercase\:text\), text-transform, lowercase;
   @mixin text-double .large\(uppercase\:text\), text-transform, uppercase;
   @mixin text-double .large\(capitalize\:text\), text-transform, capitalize;
+  
+  @mixin text-double .large\(underline\:text\), text-decoration, underline;
+  @mixin text-double .large\(overline\:text\), text-decoration, overline;
+  @mixin text-double .large\(strikethrough\:text\), text-decoration, line-through;
 }
 
 @media (min-width: 1280px) {
@@ -198,6 +230,10 @@
   .larger\(uppercase\:text\) { text-transform: uppercase !important; }
   .larger\(capitalize\:text\) { text-transform: capitalize !important; }
 
+  .larger\(underline\:text\) { text-decoration: underline !important; }
+  .larger\(overline\:text\) { text-decoration: overline !important; }
+  .larger\(strikethrough\:text\) { text-decoration: line-through !important; }
+
   @mixin text-size .larger\(text\);
   @mixin text-double .larger\(thin\:text\), font-weight, 100;
   @mixin text-double .larger\(ultralight\:text\), font-weight, 200;
@@ -219,6 +255,10 @@
   @mixin text-double .larger\(lowercase\:text\), text-transform, lowercase;
   @mixin text-double .larger\(uppercase\:text\), text-transform, uppercase;
   @mixin text-double .larger\(capitalize\:text\), text-transform, capitalize;
+  
+  @mixin text-double .larger\(underline\:text\), text-decoration, underline;
+  @mixin text-double .larger\(overline\:text\), text-decoration, overline;
+  @mixin text-double .larger\(strikethrough\:text\), text-decoration, line-through;
 }
 
 @media (min-width: 1536px) {
@@ -243,6 +283,10 @@
   .largest\(uppercase\:text\) { text-transform: uppercase !important; }
   .largest\(capitalize\:text\) { text-transform: capitalize !important; }
 
+  .largest\(underline\:text\) { text-decoration: underline !important; }
+  .largest\(overline\:text\) { text-decoration: overline !important; }
+  .largest\(strikethrough\:text\) { text-decoration: line-through !important; }
+
   @mixin text-size .largest\(text\);
   @mixin text-double .largest\(thin\:text\), font-weight, 100;
   @mixin text-double .largest\(ultralight\:text\), font-weight, 200;
@@ -264,4 +308,8 @@
   @mixin text-double .largest\(lowercase\:text\), text-transform, lowercase;
   @mixin text-double .largest\(uppercase\:text\), text-transform, uppercase;
   @mixin text-double .largest\(capitalize\:text\), text-transform, capitalize;
+  
+  @mixin text-double .largest\(underline\:text\), text-decoration, underline;
+  @mixin text-double .largest\(overline\:text\), text-decoration, overline;
+  @mixin text-double .largest\(strikethrough\:text\), text-decoration, line-through;
 }

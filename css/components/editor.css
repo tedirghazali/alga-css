@@ -29,7 +29,7 @@
   }
   
   & .editor-content {
-    padding: 1rem;
+    padding: 0.25rem 1rem;
     overflow-y: auto;
     overflow-x: hidden;
   }

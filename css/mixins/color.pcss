@@ -54,138 +54,178 @@
   $(class)\:stroke {
     stroke: var(--alga-$(main));
   }
-    
-  $(class)\:alert {
-    color: var(--alga-$(main));
-    background-color: var(--alga-$(main)-opacity);
-    border-color: var(--alga-$(main)-opacity);
-  }
 }
 
-@define-mixin color-hover $class, $main, $text {
+@define-mixin color-hover $class, $red, $green, $blue, $alpha, $text {
   $(class):hover {
     color: var(--alga-$(text));
-    background-color: var(--alga-$(main));
-    border-color: var(--alga-$(main));
+    background-color: rgba($red, $green, $blue, $alpha);
+    border-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:outlined:hover {
-    color: var(--alga-$(main));
+    color: rgba($red, $green, $blue, $alpha);
     background-color: var(--alga-transparent);
-    border-color: var(--alga-$(main));
+    border-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:background:hover {
-    background-color: var(--alga-$(main));
+    background-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:text:hover {
-    color: var(--alga-$(main));
+    color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:border:hover {
-    border-color: var(--alga-$(main));
+    border-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)-top\:border:hover {
-    border-top-color: var(--alga-$(main));
+    border-top-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)-right\:border:hover {
-    border-right-color: var(--alga-$(main));
+    border-right-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)-bottom\:border:hover {
-    border-bottom-color: var(--alga-$(main));
+    border-bottom-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)-left\:border:hover {
-    border-left-color: var(--alga-$(main));
+    border-left-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:caret:hover {
-    caret-color: var(--alga-$(main));
+    caret-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:outline:hover {
-    outline-color: var(--alga-$(main));
+    outline-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:fill:hover {
-    fill: var(--alga-$(main));
+    fill: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:stroke:hover {
-    stroke: var(--alga-$(main));
-  }
-    
-  $(class)\:alert:hover {
-    color: var(--alga-$(main));
-    background-color: var(--alga-$(main)-opacity);
-    border-color: var(--alga-$(main)-opacity);
+    stroke: rgba($red, $green, $blue, $alpha);
   }
 }
 
-@define-mixin color-focus $class, $main, $text {
+@define-mixin color-focus $class, $red, $green, $blue, $alpha, $text {
   $(class):focus {
     color: var(--alga-$(text));
-    background-color: var(--alga-$(main));
-    border-color: var(--alga-$(main));
+    background-color: rgba($red, $green, $blue, $alpha);
+    border-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:outlined:focus {
-    color: var(--alga-$(main));
+    color: rgba($red, $green, $blue, $alpha);
     background-color: var(--alga-transparent);
-    border-color: var(--alga-$(main));
+    border-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:background:focus {
-    background-color: var(--alga-$(main));
+    background-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:text:focus {
-    color: var(--alga-$(main));
+    color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:border:focus {
-    border-color: var(--alga-$(main));
+    border-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)-top\:border:focus {
-    border-top-color: var(--alga-$(main));
+    border-top-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)-right\:border:focus {
-    border-right-color: var(--alga-$(main));
+    border-right-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)-bottom\:border:focus {
-    border-bottom-color: var(--alga-$(main));
+    border-bottom-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)-left\:border:focus {
-    border-left-color: var(--alga-$(main));
+    border-left-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:caret:focus {
-    caret-color: var(--alga-$(main));
+    caret-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:outline:focus {
-    outline-color: var(--alga-$(main));
+    outline-color: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:fill:focus {
-    fill: var(--alga-$(main));
+    fill: rgba($red, $green, $blue, $alpha);
   }
     
   $(class)\:stroke:focus {
-    stroke: var(--alga-$(main));
+    stroke: rgba($red, $green, $blue, $alpha);
+  }
+}
+
+@define-mixin color-opacity $class, $red, $green, $blue, $alpha, $text {
+  $class {
+    color: var(--alga-$(text));
+    background-color: rgba($red, $green, $blue, $alpha);
+    border-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:alert:focus {
-    color: var(--alga-$(main));
-    background-color: var(--alga-$(main)-opacity);
-    border-color: var(--alga-$(main)-opacity);
+  $(class)\:outlined {
+    color: rgba($red, $green, $blue, $alpha);
+    background-color: var(--alga-transparent);
+    border-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:background {
+    background-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:text {
+    color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:border {
+    border-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)-top\:border {
+    border-top-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)-right\:border {
+    border-right-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)-bottom\:border {
+    border-bottom-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)-left\:border {
+    border-left-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:caret {
+    caret-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:outline {
+    outline-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:fill {
+    fill: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:stroke {
+    stroke: rgba($red, $green, $blue, $alpha);
   }
 }
