@@ -76,9 +76,26 @@
 @mixin color-opacity .danger-1, 220, 53, 69, 0.1, white;
 
 @mixin color-mixin .black, black, white;
+@mixin color-opacity .black-9, 0, 0, 0, 0.9, white;
+@mixin color-opacity .black-8, 0, 0, 0, 0.8, white;
+@mixin color-opacity .black-7, 0, 0, 0, 0.7, white;
+@mixin color-opacity .black-6, 0, 0, 0, 0.6, white;
+@mixin color-opacity .black-5, 0, 0, 0, 0.5, white;
+@mixin color-opacity .black-4, 0, 0, 0, 0.4, white;
+@mixin color-opacity .black-3, 0, 0, 0, 0.3, white;
+@mixin color-opacity .black-2, 0, 0, 0, 0.2, white;
+@mixin color-opacity .black-1, 0, 0, 0, 0.1, white;
+
 @mixin color-mixin .white, white, black;
-@mixin color-mixin .dark, dark, white;
-@mixin color-mixin .light, light, black;
+@mixin color-opacity .white-9, 255, 255, 255, 0.9, black;
+@mixin color-opacity .white-8, 255, 255, 255, 0.8, black;
+@mixin color-opacity .white-7, 255, 255, 255, 0.7, black;
+@mixin color-opacity .white-6, 255, 255, 255, 0.6, black;
+@mixin color-opacity .white-5, 255, 255, 255, 0.5, black;
+@mixin color-opacity .white-4, 255, 255, 255, 0.4, black;
+@mixin color-opacity .white-3, 255, 255, 255, 0.3, black;
+@mixin color-opacity .white-2, 255, 255, 255, 0.2, black;
+@mixin color-opacity .white-1, 255, 255, 255, 0.1, black;
 
 @mixin color-mixin .blue, blue, white;
 @mixin color-opacity .blue-9, 13, 110, 253, 0.9, white;
@@ -238,14 +255,72 @@
 @mixin color-hover .hover\?accent-2, 179, 27, 148, 0.2, white;
 @mixin color-hover .hover\?accent-1, 179, 27, 148, 0.1, white;
 
-@mixin color-mixin .hover\?success, success, white;
-@mixin color-mixin .hover\?info, info, white;
-@mixin color-mixin .hover\?warning, warning, black;
-@mixin color-mixin .hover\?danger, danger, white;
-@mixin color-mixin .hover\?black, black, white;
-@mixin color-mixin .hover\?white, white, black;
-@mixin color-mixin .hover\?dark, dark, white;
-@mixin color-mixin .hover\?light, light, black;
+@mixin color-hover .hover\?success, 25, 135, 84, 1, white;
+@mixin color-hover .hover\?success-9, 25, 135, 84, 0.9, white;
+@mixin color-hover .hover\?success-8, 25, 135, 84, 0.8, white;
+@mixin color-hover .hover\?success-7, 25, 135, 84, 0.7, white;
+@mixin color-hover .hover\?success-6, 25, 135, 84, 0.6, white;
+@mixin color-hover .hover\?success-5, 25, 135, 84, 0.5, white;
+@mixin color-hover .hover\?success-4, 25, 135, 84, 0.4, white;
+@mixin color-hover .hover\?success-3, 25, 135, 84, 0.3, white;
+@mixin color-hover .hover\?success-2, 25, 135, 84, 0.2, white;
+@mixin color-hover .hover\?success-1, 25, 135, 84, 0.1, white;
+
+@mixin color-hover .hover\?info, 13, 202, 240, 1, white;
+@mixin color-hover .hover\?info-9, 13, 202, 240, 0.9, white;
+@mixin color-hover .hover\?info-8, 13, 202, 240, 0.8, white;
+@mixin color-hover .hover\?info-7, 13, 202, 240, 0.7, white;
+@mixin color-hover .hover\?info-6, 13, 202, 240, 0.6, white;
+@mixin color-hover .hover\?info-5, 13, 202, 240, 0.5, white;
+@mixin color-hover .hover\?info-4, 13, 202, 240, 0.4, white;
+@mixin color-hover .hover\?info-3, 13, 202, 240, 0.3, white;
+@mixin color-hover .hover\?info-2, 13, 202, 240, 0.2, white;
+@mixin color-hover .hover\?info-1, 13, 202, 240, 0.1, white;
+
+@mixin color-hover .hover\?warning, 255, 193, 7, 1, black;
+@mixin color-hover .hover\?warning-9, 255, 193, 7, 0.9, black;
+@mixin color-hover .hover\?warning-8, 255, 193, 7, 0.8, black;
+@mixin color-hover .hover\?warning-7, 255, 193, 7, 0.7, black;
+@mixin color-hover .hover\?warning-6, 255, 193, 7, 0.6, black;
+@mixin color-hover .hover\?warning-5, 255, 193, 7, 0.5, black;
+@mixin color-hover .hover\?warning-4, 255, 193, 7, 0.4, black;
+@mixin color-hover .hover\?warning-3, 255, 193, 7, 0.3, black;
+@mixin color-hover .hover\?warning-2, 255, 193, 7, 0.2, black;
+@mixin color-hover .hover\?warning-1, 255, 193, 7, 0.1, black;
+
+@mixin color-hover .hover\?danger, 220, 53, 69, 1, white;
+@mixin color-hover .hover\?danger-9, 220, 53, 69, 0.9, white;
+@mixin color-hover .hover\?danger-8, 220, 53, 69, 0.8, white;
+@mixin color-hover .hover\?danger-7, 220, 53, 69, 0.7, white;
+@mixin color-hover .hover\?danger-6, 220, 53, 69, 0.6, white;
+@mixin color-hover .hover\?danger-5, 220, 53, 69, 0.5, white;
+@mixin color-hover .hover\?danger-4, 220, 53, 69, 0.4, white;
+@mixin color-hover .hover\?danger-3, 220, 53, 69, 0.3, white;
+@mixin color-hover .hover\?danger-2, 220, 53, 69, 0.2, white;
+@mixin color-hover .hover\?danger-1, 220, 53, 69, 0.1, white;
+
+@mixin color-hover .hover\?black, 0, 0, 0, 1, white;
+@mixin color-hover .hover\?black-9, 0, 0, 0, 0.9, white;
+@mixin color-hover .hover\?black-8, 0, 0, 0, 0.8, white;
+@mixin color-hover .hover\?black-7, 0, 0, 0, 0.7, white;
+@mixin color-hover .hover\?black-6, 0, 0, 0, 0.6, white;
+@mixin color-hover .hover\?black-5, 0, 0, 0, 0.5, white;
+@mixin color-hover .hover\?black-4, 0, 0, 0, 0.4, white;
+@mixin color-hover .hover\?black-3, 0, 0, 0, 0.3, white;
+@mixin color-hover .hover\?black-2, 0, 0, 0, 0.2, white;
+@mixin color-hover .hover\?black-1, 0, 0, 0, 0.1, white;
+
+@mixin color-hover .hover\?white, 255, 255, 255, 1, black;
+@mixin color-hover .hover\?white-9, 255, 255, 255, 0.9, black;
+@mixin color-hover .hover\?white-8, 255, 255, 255, 0.8, black;
+@mixin color-hover .hover\?white-7, 255, 255, 255, 0.7, black;
+@mixin color-hover .hover\?white-6, 255, 255, 255, 0.6, black;
+@mixin color-hover .hover\?white-5, 255, 255, 255, 0.5, black;
+@mixin color-hover .hover\?white-4, 255, 255, 255, 0.4, black;
+@mixin color-hover .hover\?white-3, 255, 255, 255, 0.3, black;
+@mixin color-hover .hover\?white-2, 255, 255, 255, 0.2, black;
+@mixin color-hover .hover\?white-1, 255, 255, 255, 0.1, black;
+
 @mixin color-mixin .hover\?blue, blue, white;
 @mixin color-mixin .hover\?indigo, indigo, white;
 @mixin color-mixin .hover\?purple, purple, white;
@@ -295,14 +370,72 @@
 @mixin color-focus .focus\?accent-2, 179, 27, 148, 0.2, white;
 @mixin color-focus .focus\?accent-1, 179, 27, 148, 0.1, white;
 
-@mixin color-mixin .focus\?success, success, white;
-@mixin color-mixin .focus\?info, info, white;
-@mixin color-mixin .focus\?warning, warning, black;
-@mixin color-mixin .focus\?danger, danger, white;
-@mixin color-mixin .focus\?black, black, white;
-@mixin color-mixin .focus\?white, white, black;
-@mixin color-mixin .focus\?dark, dark, white;
-@mixin color-mixin .focus\?light, light, black;
+@mixin color-focus .focus\?success, 25, 135, 84, 1, white;
+@mixin color-focus .focus\?success-9, 25, 135, 84, 0.9, white;
+@mixin color-focus .focus\?success-8, 25, 135, 84, 0.8, white;
+@mixin color-focus .focus\?success-7, 25, 135, 84, 0.7, white;
+@mixin color-focus .focus\?success-6, 25, 135, 84, 0.6, white;
+@mixin color-focus .focus\?success-5, 25, 135, 84, 0.5, white;
+@mixin color-focus .focus\?success-4, 25, 135, 84, 0.4, white;
+@mixin color-focus .focus\?success-3, 25, 135, 84, 0.3, white;
+@mixin color-focus .focus\?success-2, 25, 135, 84, 0.2, white;
+@mixin color-focus .focus\?success-1, 25, 135, 84, 0.1, white;
+
+@mixin color-focus .focus\?info, 13, 202, 240, 1, white;
+@mixin color-focus .focus\?info-9, 13, 202, 240, 0.9, white;
+@mixin color-focus .focus\?info-8, 13, 202, 240, 0.8, white;
+@mixin color-focus .focus\?info-7, 13, 202, 240, 0.7, white;
+@mixin color-focus .focus\?info-6, 13, 202, 240, 0.6, white;
+@mixin color-focus .focus\?info-5, 13, 202, 240, 0.5, white;
+@mixin color-focus .focus\?info-4, 13, 202, 240, 0.4, white;
+@mixin color-focus .focus\?info-3, 13, 202, 240, 0.3, white;
+@mixin color-focus .focus\?info-2, 13, 202, 240, 0.2, white;
+@mixin color-focus .focus\?info-1, 13, 202, 240, 0.1, white;
+
+@mixin color-focus .focus\?warning, 255, 193, 7, 1, black;
+@mixin color-focus .focus\?warning-9, 255, 193, 7, 0.9, black;
+@mixin color-focus .focus\?warning-8, 255, 193, 7, 0.8, black;
+@mixin color-focus .focus\?warning-7, 255, 193, 7, 0.7, black;
+@mixin color-focus .focus\?warning-6, 255, 193, 7, 0.6, black;
+@mixin color-focus .focus\?warning-5, 255, 193, 7, 0.5, black;
+@mixin color-focus .focus\?warning-4, 255, 193, 7, 0.4, black;
+@mixin color-focus .focus\?warning-3, 255, 193, 7, 0.3, black;
+@mixin color-focus .focus\?warning-2, 255, 193, 7, 0.2, black;
+@mixin color-focus .focus\?warning-1, 255, 193, 7, 0.1, black;
+
+@mixin color-focus .focus\?danger, 220, 53, 69, 1, white;
+@mixin color-focus .focus\?danger-9, 220, 53, 69, 0.9, white;
+@mixin color-focus .focus\?danger-8, 220, 53, 69, 0.8, white;
+@mixin color-focus .focus\?danger-7, 220, 53, 69, 0.7, white;
+@mixin color-focus .focus\?danger-6, 220, 53, 69, 0.6, white;
+@mixin color-focus .focus\?danger-5, 220, 53, 69, 0.5, white;
+@mixin color-focus .focus\?danger-4, 220, 53, 69, 0.4, white;
+@mixin color-focus .focus\?danger-3, 220, 53, 69, 0.3, white;
+@mixin color-focus .focus\?danger-2, 220, 53, 69, 0.2, white;
+@mixin color-focus .focus\?danger-1, 220, 53, 69, 0.1, white;
+
+@mixin color-focus .focus\?black, 0, 0, 0, 1, white;
+@mixin color-focus .focus\?black-9, 0, 0, 0, 0.9, white;
+@mixin color-focus .focus\?black-8, 0, 0, 0, 0.8, white;
+@mixin color-focus .focus\?black-7, 0, 0, 0, 0.7, white;
+@mixin color-focus .focus\?black-6, 0, 0, 0, 0.6, white;
+@mixin color-focus .focus\?black-5, 0, 0, 0, 0.5, white;
+@mixin color-focus .focus\?black-4, 0, 0, 0, 0.4, white;
+@mixin color-focus .focus\?black-3, 0, 0, 0, 0.3, white;
+@mixin color-focus .focus\?black-2, 0, 0, 0, 0.2, white;
+@mixin color-focus .focus\?black-1, 0, 0, 0, 0.1, white;
+
+@mixin color-focus .focus\?white, 255, 255, 255, 1, black;
+@mixin color-focus .focus\?white-9, 255, 255, 255, 0.9, black;
+@mixin color-focus .focus\?white-8, 255, 255, 255, 0.8, black;
+@mixin color-focus .focus\?white-7, 255, 255, 255, 0.7, black;
+@mixin color-focus .focus\?white-6, 255, 255, 255, 0.6, black;
+@mixin color-focus .focus\?white-5, 255, 255, 255, 0.5, black;
+@mixin color-focus .focus\?white-4, 255, 255, 255, 0.4, black;
+@mixin color-focus .focus\?white-3, 255, 255, 255, 0.3, black;
+@mixin color-focus .focus\?white-2, 255, 255, 255, 0.2, black;
+@mixin color-focus .focus\?white-1, 255, 255, 255, 0.1, black;
+
 @mixin color-mixin .focus\?blue, blue, white;
 @mixin color-mixin .focus\?indigo, indigo, white;
 @mixin color-mixin .focus\?purple, purple, white;
@@ -318,4 +451,28 @@
 @mixin color-mixin .focus\?transparent, transparent, black;
 @mixin color-mixin .focus\?current, currentColor, black;
 @mixin color-mixin .focus\?custom, background, color;
+
+@media(prefers-color-scheme: dark) {
+  @mixin color-mixin .dark, dark, white;
+  @mixin color-opacity .dark-9, 33, 37, 41, 0.9, black;
+  @mixin color-opacity .dark-8, 33, 37, 41, 0.8, black;
+  @mixin color-opacity .dark-7, 33, 37, 41, 0.7, black;
+  @mixin color-opacity .dark-6, 33, 37, 41, 0.6, black;
+  @mixin color-opacity .dark-5, 33, 37, 41, 0.5, black;
+  @mixin color-opacity .dark-4, 33, 37, 41, 0.4, black;
+  @mixin color-opacity .dark-3, 33, 37, 41, 0.3, black;
+  @mixin color-opacity .dark-2, 33, 37, 41, 0.2, black;
+  @mixin color-opacity .dark-1, 33, 37, 41, 0.1, black;
+
+  @mixin color-mixin [data-mode='dark'] .toggle\?dark, dark, white;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-9, 33, 37, 41, 0.9, black;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-8, 33, 37, 41, 0.8, black;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-7, 33, 37, 41, 0.7, black;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-6, 33, 37, 41, 0.6, black;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-5, 33, 37, 41, 0.5, black;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-4, 33, 37, 41, 0.4, black;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-3, 33, 37, 41, 0.3, black;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-2, 33, 37, 41, 0.2, black;
+  @mixin color-opacity [data-mode='dark'] .toggle\?dark-1, 33, 37, 41, 0.1, black;
+}
 
