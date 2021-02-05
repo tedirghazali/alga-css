@@ -11,6 +11,12 @@
     border-color: var(--alga-$(main));
   }
     
+  $(class)\:filled {
+    color: var(--alga-$(text));
+    background-color: var(--alga-$(main));
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+    
   $(class)\:background {
     background-color: var(--alga-$(main));
   }
@@ -67,6 +73,12 @@
     color: rgba($red, $green, $blue, $alpha);
     background-color: var(--alga-transparent);
     border-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:filled:hover {
+    color: var(--alga-$(text));
+    background-color: rgba($red, $green, $blue, $alpha);
+    border-color: rgba(0, 0, 0, 0.15);
   }
     
   $(class)\:background:hover {
@@ -127,6 +139,12 @@
     border-color: rgba($red, $green, $blue, $alpha);
   }
     
+  $(class)\:filled:focus {
+    color: var(--alga-$(text));
+    background-color: rgba($red, $green, $blue, $alpha);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+    
   $(class)\:background:focus {
     background-color: rgba($red, $green, $blue, $alpha);
   }
@@ -183,6 +201,12 @@
     color: rgba($red, $green, $blue, $alpha);
     background-color: var(--alga-transparent);
     border-color: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:filled {
+    color: var(--alga-$(text));
+    background-color: rgba($red, $green, $blue, $alpha);
+    border-color: rgba(0, 0, 0, 0.15);
   }
     
   $(class)\:background {
