@@ -4,8 +4,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   
   & > * {
     display: flex;

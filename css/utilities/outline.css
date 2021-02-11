@@ -1,0 +1,117 @@
+@mixin outline-mixin .outline, outline;
+
+@mixin outline-offset .offset\:outline, outline;
+
+@mixin outline-style .auto\:outline, auto;
+@mixin outline-style .none\:outline, none;
+@mixin outline-style .dotted\:outline, dotted;
+@mixin outline-style .dashed\:outline, dashed;
+@mixin outline-style .solid\:outline, solid;
+@mixin outline-style .double\:outline, double;
+@mixin outline-style .groove\:outline, groove;
+@mixin outline-style .ridge\:outline, ridge;
+@mixin outline-style .inset\:outline, inset;
+@mixin outline-style .outset\:outline, outset;
+@mixin outline-style .inherit\:outline, inherit;
+
+@mixin outline-double .auto\:outline, outline, auto;
+@mixin outline-double .none\:outline, outline, none;
+@mixin outline-double .dotted\:outline, outline, dotted;
+@mixin outline-double .dashed\:outline, outline, dashed;
+@mixin outline-double .solid\:outline, outline, solid;
+@mixin outline-double .double\:outline, outline, double;
+@mixin outline-double .groove\:outline, outline, groove;
+@mixin outline-double .ridge\:outline, outline, ridge;
+@mixin outline-double .inset\:outline, outline, inset;
+@mixin outline-double .outset\:outline, outline, outset;
+@mixin outline-double .inherit\:outline, outline, inherit;
+
+@media (min-width: 640px) {
+  @mixin outline-mixin .small\(outline\), outline;
+
+  @mixin outline-offset .small\(offset\:outline\), outline;
+
+  @mixin outline-style .small\(auto\:outline\), auto;
+  @mixin outline-style .small\(none\:outline\), none;
+  @mixin outline-style .small\(dotted\:outline\), dotted;
+  @mixin outline-style .small\(dashed\:outline\), dashed;
+  @mixin outline-style .small\(solid\:outline\), solid;
+  @mixin outline-style .small\(double\:outline\), double;
+  @mixin outline-style .small\(groove\:outline\), groove;
+  @mixin outline-style .small\(ridge\:outline\), ridge;
+  @mixin outline-style .small\(inset\:outline\), inset;
+  @mixin outline-style .small\(outset\:outline\), outset;
+  @mixin outline-style .small\(inherit\:outline\), inherit;
+}
+
+@media (min-width: 768px) {
+  @mixin outline-mixin .medium\(outline\), outline;
+
+  @mixin outline-offset .medium\(offset\:outline\), outline;
+
+  @mixin outline-style .medium\(auto\:outline\), hidden;
+  @mixin outline-style .medium\(none\:outline\), none;
+  @mixin outline-style .medium\(dotted\:outline\), dotted;
+  @mixin outline-style .medium\(dashed\:outline\), dashed;
+  @mixin outline-style .medium\(solid\:outline\), solid;
+  @mixin outline-style .medium\(double\:outline\), double;
+  @mixin outline-style .medium\(groove\:outline\), groove;
+  @mixin outline-style .medium\(ridge\:outline\), ridge;
+  @mixin outline-style .medium\(inset\:outline\), inset;
+  @mixin outline-style .medium\(outset\:outline\), outset;
+  @mixin outline-style .medium\(inherit\:outline\), hidden;
+}
+
+@media (min-width: 1024px) {
+  @mixin outline-mixin .large\(outline\), outline;
+
+  @mixin outline-offset .large\(offset\:outline\), outline;
+
+  @mixin outline-style .large\(auto\:outline\), hidden;
+  @mixin outline-style .large\(none\:outline\), none;
+  @mixin outline-style .large\(dotted\:outline\), dotted;
+  @mixin outline-style .large\(dashed\:outline\), dashed;
+  @mixin outline-style .large\(solid\:outline\), solid;
+  @mixin outline-style .large\(double\:outline\), double;
+  @mixin outline-style .large\(groove\:outline\), groove;
+  @mixin outline-style .large\(ridge\:outline\), ridge;
+  @mixin outline-style .large\(inset\:outline\), inset;
+  @mixin outline-style .large\(outset\:outline\), outset;
+  @mixin outline-style .large\(inherit\:outline\), hidden;
+}
+
+@media (min-width: 1280px) {
+  @mixin outline-mixin .larger\(outline\), outline;
+
+  @mixin outline-offset .larger\(offset\:outline\), outline;
+
+  @mixin outline-style .larger\(auto\:outline\), hidden;
+  @mixin outline-style .larger\(none\:outline\), none;
+  @mixin outline-style .larger\(dotted\:outline\), dotted;
+  @mixin outline-style .larger\(dashed\:outline\), dashed;
+  @mixin outline-style .larger\(solid\:outline\), solid;
+  @mixin outline-style .larger\(double\:outline\), double;
+  @mixin outline-style .larger\(groove\:outline\), groove;
+  @mixin outline-style .larger\(ridge\:outline\), ridge;
+  @mixin outline-style .larger\(inset\:outline\), inset;
+  @mixin outline-style .larger\(outset\:outline\), outset;
+  @mixin outline-style .larger\(inherit\:outline\), hidden;
+}
+
+@media (min-width: 1536px) {
+  @mixin outline-mixin .largest\(outline\), outline;
+
+  @mixin outline-offset .largest\(offset\:outline\), outline;
+
+  @mixin outline-style .largest\(auto\:outline\), hidden;
+  @mixin outline-style .largest\(none\:outline\), none;
+  @mixin outline-style .largest\(dotted\:outline\), dotted;
+  @mixin outline-style .largest\(dashed\:outline\), dashed;
+  @mixin outline-style .largest\(solid\:outline\), solid;
+  @mixin outline-style .largest\(double\:outline\), double;
+  @mixin outline-style .largest\(groove\:outline\), groove;
+  @mixin outline-style .largest\(ridge\:outline\), ridge;
+  @mixin outline-style .largest\(inset\:outline\), inset;
+  @mixin outline-style .largest\(outset\:outline\), outset;
+  @mixin outline-style .largest\(inherit\:outline\), hidden;
+}

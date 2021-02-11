@@ -32,6 +32,7 @@
     padding: 0.25rem 1rem;
     overflow-y: auto;
     overflow-x: hidden;
+    max-height: 450px;
   }
   
   & .editor-statusbar {
@@ -54,14 +55,38 @@
   border: 1px solid rgba(0, 0, 0, 0.125);
   
   & .editor-toolbar {
-    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
   }
   
   & .editor-content {
-  
+    padding: 0.25rem 1rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
   
   & .editor-mover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
   
+  & .editor-breadcrumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
+  
+  & .editor-inserter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
   }
 }

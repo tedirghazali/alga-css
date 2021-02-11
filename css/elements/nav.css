@@ -50,6 +50,11 @@
   text-align: center;
 }
 
+.navbar .nav-link {
+  padding: 1rem .5rem;
+  color: inherit;
+}
+
 .brand\:nav-item {
   font-size: 1.25rem;
   text-decoration: none;
@@ -58,15 +63,13 @@
   flex: 1 1 auto;
 }
 
+.brand\:nav-item .nav-link {
+  padding: 0;
+}
+
 .mobile\:nav-item {
   display: block;
   flex: none;
-}
-
-.navbar .nav-link {
-  padding-right: .5rem;
-  padding-left: .5rem;
-  color: inherit;
 }
 
 @media (min-width: 640px) {

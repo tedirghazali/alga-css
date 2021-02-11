@@ -35,7 +35,7 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Calibri, Arial, sans-serif;
 }
 
 a {
@@ -621,8 +621,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .navbar > * {
@@ -6479,7 +6477,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   color: #212529;
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7208,7 +7205,7 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   display: flex;
   flex-direction: column;
   padding-left: 0;
-  margin-bottom: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -7367,6 +7364,11 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   text-align: center;
 }
 
+.navbar .nav-link {
+  padding: 1rem .5rem;
+  color: inherit;
+}
+
 .brand\:nav-item {
   font-size: 1.25rem;
   text-decoration: none;
@@ -7375,15 +7377,13 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   flex: 1 1 auto;
 }
 
+.brand\:nav-item .nav-link {
+  padding: 0;
+}
+
 .mobile\:nav-item {
   display: block;
   flex: none;
-}
-
-.navbar .nav-link {
-  padding-right: .5rem;
-  padding-left: .5rem;
-  color: inherit;
 }
 
 @media (min-width: 640px) {
@@ -8462,7 +8462,7 @@ textarea.large\:input {
   }
 
 .tag-delete::before, 
-    .tag-delete::after{
+  .tag-delete::after{
     content: "";
     left: 50%;
     top: 50%;
@@ -8481,7 +8481,7 @@ textarea.large\:input {
   }
 
 .tag-delete:hover, 
-    .tag-delete:focus {
+  .tag-delete:focus {
     background-color: #e8e8e8;
   }
 
@@ -8539,7 +8539,7 @@ textarea.large\:input {
   }
 
 .tags-input.is-valid,
-  .was-validated .tags-input:valid {
+.was-validated .tags-input:valid {
   border-color: #28a745;
 }
 
@@ -9823,6 +9823,7 @@ textarea.large\:input {
     padding: 0.25rem 1rem;
     overflow-y: auto;
     overflow-x: hidden;
+    max-height: 450px;
   }
 
 .text\:editor .editor-statusbar {
@@ -9845,12 +9846,39 @@ textarea.large\:input {
 }
 
 .block\:editor .editor-toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
   }
 
 .block\:editor .editor-content {
+    padding: 0.25rem 1rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
 .block\:editor .editor-mover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
+
+.block\:editor .editor-breadcrumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
+
+.block\:editor .editor-inserter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
   }
 
 .tooltip {
@@ -116020,6 +116048,1726 @@ textarea.large\:input {
 
   .largest\(outset\)-left\:border {
     border-left-style: outset;
+  }
+}
+
+.outline {
+    outline: 1px solid rgba(0, 0, 0, 0.125);
+  }
+
+.outline-1 {
+    outline-width: 1px;
+  }
+
+.outline-2 {
+    outline-width: 2px;
+  }
+
+.outline-3 {
+    outline-width: 3px;
+  }
+
+.outline-4 {
+    outline-width: 4px;
+  }
+
+.outline-5 {
+    outline-width: 5px;
+  }
+
+.outline-6 {
+    outline-width: 6px;
+  }
+
+.outline-7 {
+    outline-width: 7px;
+  }
+
+.outline-8 {
+    outline-width: 8px;
+  }
+
+.outline-9 {
+    outline-width: 9px;
+  }
+
+.outline-10 {
+    outline-width: 10px;
+  }
+
+.outline-11 {
+    outline-width: 11px;
+  }
+
+.outline-12 {
+    outline-width: 12px;
+  }
+
+.outline-thin {
+    outline-width: thin;
+  }
+
+.outline-medium {
+    outline-width: medium;
+  }
+
+.outline-thick {
+    outline-width: thick;
+  }
+
+.offset\:outline-0 {
+    outline-offset: 0px;
+  }
+
+.offset\:outline-1 {
+    outline-offset: 1px;
+  }
+
+.offset\:outline-2 {
+    outline-offset: 2px;
+  }
+
+.offset\:outline-3 {
+    outline-offset: 3px;
+  }
+
+.offset\:outline-4 {
+    outline-offset: 4px;
+  }
+
+.offset\:outline-5 {
+    outline-offset: 5px;
+  }
+
+.offset\:outline-6 {
+    outline-offset: 6px;
+  }
+
+.offset\:outline-7 {
+    outline-offset: 7px;
+  }
+
+.offset\:outline-8 {
+    outline-offset: 8px;
+  }
+
+.offset\:outline-9 {
+    outline-width: 9px;
+  }
+
+.offset\:outline-10 {
+    outline-offset: 10px;
+  }
+
+.offset\:outline-11 {
+    outline-offset: 11px;
+  }
+
+.offset\:outline-12 {
+    outline-offset: 12px;
+  }
+
+.auto\:outline {
+    outline-style: auto;
+  }
+
+.none\:outline {
+    outline-style: none;
+  }
+
+.dotted\:outline {
+    outline-style: dotted;
+  }
+
+.dashed\:outline {
+    outline-style: dashed;
+  }
+
+.solid\:outline {
+    outline-style: solid;
+  }
+
+.double\:outline {
+    outline-style: double;
+  }
+
+.groove\:outline {
+    outline-style: groove;
+  }
+
+.ridge\:outline {
+    outline-style: ridge;
+  }
+
+.inset\:outline {
+    outline-style: inset;
+  }
+
+.outset\:outline {
+    outline-style: outset;
+  }
+
+.inherit\:outline {
+    outline-style: inherit;
+  }
+
+.auto\:outline-1 {
+    outline-width: 1px;
+    outline-style: auto;
+  }
+
+.auto\:outline-2 {
+    outline-width: 2px;
+    outline-style: auto;
+  }
+
+.auto\:outline-3 {
+    outline-width: 3px;
+    outline-style: auto;
+  }
+
+.auto\:outline-4 {
+    outline-width: 4px;
+    outline-style: auto;
+  }
+
+.auto\:outline-5 {
+    outline-width: 5px;
+    outline-style: auto;
+  }
+
+.auto\:outline-6 {
+    outline-width: 6px;
+    outline-style: auto;
+  }
+
+.auto\:outline-7 {
+    outline-width: 7px;
+    outline-style: auto;
+  }
+
+.auto\:outline-8 {
+    outline-width: 8px;
+    outline-style: auto;
+  }
+
+.auto\:outline-9 {
+    outline-width: 9px;
+    outline-style: auto;
+  }
+
+.auto\:outline-10 {
+    outline-width: 10px;
+    outline-style: auto;
+  }
+
+.auto\:outline-11 {
+    outline-width: 11px;
+    outline-style: auto;
+  }
+
+.auto\:outline-12 {
+    outline-width: 12px;
+    outline-style: auto;
+  }
+
+.auto\:outline-thin {
+    outline-width: thin;
+    outline-style: auto;
+  }
+
+.auto\:outline-medium {
+    outline-width: medium;
+    outline-style: auto;
+  }
+
+.auto\:outline-thick {
+    outline-width: thick;
+    outline-style: auto;
+  }
+
+.none\:outline-1 {
+    outline-width: 1px;
+    outline-style: none;
+  }
+
+.none\:outline-2 {
+    outline-width: 2px;
+    outline-style: none;
+  }
+
+.none\:outline-3 {
+    outline-width: 3px;
+    outline-style: none;
+  }
+
+.none\:outline-4 {
+    outline-width: 4px;
+    outline-style: none;
+  }
+
+.none\:outline-5 {
+    outline-width: 5px;
+    outline-style: none;
+  }
+
+.none\:outline-6 {
+    outline-width: 6px;
+    outline-style: none;
+  }
+
+.none\:outline-7 {
+    outline-width: 7px;
+    outline-style: none;
+  }
+
+.none\:outline-8 {
+    outline-width: 8px;
+    outline-style: none;
+  }
+
+.none\:outline-9 {
+    outline-width: 9px;
+    outline-style: none;
+  }
+
+.none\:outline-10 {
+    outline-width: 10px;
+    outline-style: none;
+  }
+
+.none\:outline-11 {
+    outline-width: 11px;
+    outline-style: none;
+  }
+
+.none\:outline-12 {
+    outline-width: 12px;
+    outline-style: none;
+  }
+
+.none\:outline-thin {
+    outline-width: thin;
+    outline-style: none;
+  }
+
+.none\:outline-medium {
+    outline-width: medium;
+    outline-style: none;
+  }
+
+.none\:outline-thick {
+    outline-width: thick;
+    outline-style: none;
+  }
+
+.dotted\:outline-1 {
+    outline-width: 1px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-2 {
+    outline-width: 2px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-3 {
+    outline-width: 3px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-4 {
+    outline-width: 4px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-5 {
+    outline-width: 5px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-6 {
+    outline-width: 6px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-7 {
+    outline-width: 7px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-8 {
+    outline-width: 8px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-9 {
+    outline-width: 9px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-10 {
+    outline-width: 10px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-11 {
+    outline-width: 11px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-12 {
+    outline-width: 12px;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-thin {
+    outline-width: thin;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-medium {
+    outline-width: medium;
+    outline-style: dotted;
+  }
+
+.dotted\:outline-thick {
+    outline-width: thick;
+    outline-style: dotted;
+  }
+
+.dashed\:outline-1 {
+    outline-width: 1px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-2 {
+    outline-width: 2px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-3 {
+    outline-width: 3px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-4 {
+    outline-width: 4px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-5 {
+    outline-width: 5px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-6 {
+    outline-width: 6px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-7 {
+    outline-width: 7px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-8 {
+    outline-width: 8px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-9 {
+    outline-width: 9px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-10 {
+    outline-width: 10px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-11 {
+    outline-width: 11px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-12 {
+    outline-width: 12px;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-thin {
+    outline-width: thin;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-medium {
+    outline-width: medium;
+    outline-style: dashed;
+  }
+
+.dashed\:outline-thick {
+    outline-width: thick;
+    outline-style: dashed;
+  }
+
+.solid\:outline-1 {
+    outline-width: 1px;
+    outline-style: solid;
+  }
+
+.solid\:outline-2 {
+    outline-width: 2px;
+    outline-style: solid;
+  }
+
+.solid\:outline-3 {
+    outline-width: 3px;
+    outline-style: solid;
+  }
+
+.solid\:outline-4 {
+    outline-width: 4px;
+    outline-style: solid;
+  }
+
+.solid\:outline-5 {
+    outline-width: 5px;
+    outline-style: solid;
+  }
+
+.solid\:outline-6 {
+    outline-width: 6px;
+    outline-style: solid;
+  }
+
+.solid\:outline-7 {
+    outline-width: 7px;
+    outline-style: solid;
+  }
+
+.solid\:outline-8 {
+    outline-width: 8px;
+    outline-style: solid;
+  }
+
+.solid\:outline-9 {
+    outline-width: 9px;
+    outline-style: solid;
+  }
+
+.solid\:outline-10 {
+    outline-width: 10px;
+    outline-style: solid;
+  }
+
+.solid\:outline-11 {
+    outline-width: 11px;
+    outline-style: solid;
+  }
+
+.solid\:outline-12 {
+    outline-width: 12px;
+    outline-style: solid;
+  }
+
+.solid\:outline-thin {
+    outline-width: thin;
+    outline-style: solid;
+  }
+
+.solid\:outline-medium {
+    outline-width: medium;
+    outline-style: solid;
+  }
+
+.solid\:outline-thick {
+    outline-width: thick;
+    outline-style: solid;
+  }
+
+.double\:outline-1 {
+    outline-width: 1px;
+    outline-style: double;
+  }
+
+.double\:outline-2 {
+    outline-width: 2px;
+    outline-style: double;
+  }
+
+.double\:outline-3 {
+    outline-width: 3px;
+    outline-style: double;
+  }
+
+.double\:outline-4 {
+    outline-width: 4px;
+    outline-style: double;
+  }
+
+.double\:outline-5 {
+    outline-width: 5px;
+    outline-style: double;
+  }
+
+.double\:outline-6 {
+    outline-width: 6px;
+    outline-style: double;
+  }
+
+.double\:outline-7 {
+    outline-width: 7px;
+    outline-style: double;
+  }
+
+.double\:outline-8 {
+    outline-width: 8px;
+    outline-style: double;
+  }
+
+.double\:outline-9 {
+    outline-width: 9px;
+    outline-style: double;
+  }
+
+.double\:outline-10 {
+    outline-width: 10px;
+    outline-style: double;
+  }
+
+.double\:outline-11 {
+    outline-width: 11px;
+    outline-style: double;
+  }
+
+.double\:outline-12 {
+    outline-width: 12px;
+    outline-style: double;
+  }
+
+.double\:outline-thin {
+    outline-width: thin;
+    outline-style: double;
+  }
+
+.double\:outline-medium {
+    outline-width: medium;
+    outline-style: double;
+  }
+
+.double\:outline-thick {
+    outline-width: thick;
+    outline-style: double;
+  }
+
+.groove\:outline-1 {
+    outline-width: 1px;
+    outline-style: groove;
+  }
+
+.groove\:outline-2 {
+    outline-width: 2px;
+    outline-style: groove;
+  }
+
+.groove\:outline-3 {
+    outline-width: 3px;
+    outline-style: groove;
+  }
+
+.groove\:outline-4 {
+    outline-width: 4px;
+    outline-style: groove;
+  }
+
+.groove\:outline-5 {
+    outline-width: 5px;
+    outline-style: groove;
+  }
+
+.groove\:outline-6 {
+    outline-width: 6px;
+    outline-style: groove;
+  }
+
+.groove\:outline-7 {
+    outline-width: 7px;
+    outline-style: groove;
+  }
+
+.groove\:outline-8 {
+    outline-width: 8px;
+    outline-style: groove;
+  }
+
+.groove\:outline-9 {
+    outline-width: 9px;
+    outline-style: groove;
+  }
+
+.groove\:outline-10 {
+    outline-width: 10px;
+    outline-style: groove;
+  }
+
+.groove\:outline-11 {
+    outline-width: 11px;
+    outline-style: groove;
+  }
+
+.groove\:outline-12 {
+    outline-width: 12px;
+    outline-style: groove;
+  }
+
+.groove\:outline-thin {
+    outline-width: thin;
+    outline-style: groove;
+  }
+
+.groove\:outline-medium {
+    outline-width: medium;
+    outline-style: groove;
+  }
+
+.groove\:outline-thick {
+    outline-width: thick;
+    outline-style: groove;
+  }
+
+.ridge\:outline-1 {
+    outline-width: 1px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-2 {
+    outline-width: 2px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-3 {
+    outline-width: 3px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-4 {
+    outline-width: 4px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-5 {
+    outline-width: 5px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-6 {
+    outline-width: 6px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-7 {
+    outline-width: 7px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-8 {
+    outline-width: 8px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-9 {
+    outline-width: 9px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-10 {
+    outline-width: 10px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-11 {
+    outline-width: 11px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-12 {
+    outline-width: 12px;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-thin {
+    outline-width: thin;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-medium {
+    outline-width: medium;
+    outline-style: ridge;
+  }
+
+.ridge\:outline-thick {
+    outline-width: thick;
+    outline-style: ridge;
+  }
+
+.inset\:outline-1 {
+    outline-width: 1px;
+    outline-style: inset;
+  }
+
+.inset\:outline-2 {
+    outline-width: 2px;
+    outline-style: inset;
+  }
+
+.inset\:outline-3 {
+    outline-width: 3px;
+    outline-style: inset;
+  }
+
+.inset\:outline-4 {
+    outline-width: 4px;
+    outline-style: inset;
+  }
+
+.inset\:outline-5 {
+    outline-width: 5px;
+    outline-style: inset;
+  }
+
+.inset\:outline-6 {
+    outline-width: 6px;
+    outline-style: inset;
+  }
+
+.inset\:outline-7 {
+    outline-width: 7px;
+    outline-style: inset;
+  }
+
+.inset\:outline-8 {
+    outline-width: 8px;
+    outline-style: inset;
+  }
+
+.inset\:outline-9 {
+    outline-width: 9px;
+    outline-style: inset;
+  }
+
+.inset\:outline-10 {
+    outline-width: 10px;
+    outline-style: inset;
+  }
+
+.inset\:outline-11 {
+    outline-width: 11px;
+    outline-style: inset;
+  }
+
+.inset\:outline-12 {
+    outline-width: 12px;
+    outline-style: inset;
+  }
+
+.inset\:outline-thin {
+    outline-width: thin;
+    outline-style: inset;
+  }
+
+.inset\:outline-medium {
+    outline-width: medium;
+    outline-style: inset;
+  }
+
+.inset\:outline-thick {
+    outline-width: thick;
+    outline-style: inset;
+  }
+
+.outset\:outline-1 {
+    outline-width: 1px;
+    outline-style: outset;
+  }
+
+.outset\:outline-2 {
+    outline-width: 2px;
+    outline-style: outset;
+  }
+
+.outset\:outline-3 {
+    outline-width: 3px;
+    outline-style: outset;
+  }
+
+.outset\:outline-4 {
+    outline-width: 4px;
+    outline-style: outset;
+  }
+
+.outset\:outline-5 {
+    outline-width: 5px;
+    outline-style: outset;
+  }
+
+.outset\:outline-6 {
+    outline-width: 6px;
+    outline-style: outset;
+  }
+
+.outset\:outline-7 {
+    outline-width: 7px;
+    outline-style: outset;
+  }
+
+.outset\:outline-8 {
+    outline-width: 8px;
+    outline-style: outset;
+  }
+
+.outset\:outline-9 {
+    outline-width: 9px;
+    outline-style: outset;
+  }
+
+.outset\:outline-10 {
+    outline-width: 10px;
+    outline-style: outset;
+  }
+
+.outset\:outline-11 {
+    outline-width: 11px;
+    outline-style: outset;
+  }
+
+.outset\:outline-12 {
+    outline-width: 12px;
+    outline-style: outset;
+  }
+
+.outset\:outline-thin {
+    outline-width: thin;
+    outline-style: outset;
+  }
+
+.outset\:outline-medium {
+    outline-width: medium;
+    outline-style: outset;
+  }
+
+.outset\:outline-thick {
+    outline-width: thick;
+    outline-style: outset;
+  }
+
+.inherit\:outline-1 {
+    outline-width: 1px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-2 {
+    outline-width: 2px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-3 {
+    outline-width: 3px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-4 {
+    outline-width: 4px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-5 {
+    outline-width: 5px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-6 {
+    outline-width: 6px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-7 {
+    outline-width: 7px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-8 {
+    outline-width: 8px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-9 {
+    outline-width: 9px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-10 {
+    outline-width: 10px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-11 {
+    outline-width: 11px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-12 {
+    outline-width: 12px;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-thin {
+    outline-width: thin;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-medium {
+    outline-width: medium;
+    outline-style: inherit;
+  }
+
+.inherit\:outline-thick {
+    outline-width: thick;
+    outline-style: inherit;
+  }
+
+@media (min-width: 640px) {
+  .small\(outline\) {
+    outline: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .small\(outline\)-1 {
+    outline-width: 1px;
+  }
+  .small\(outline\)-2 {
+    outline-width: 2px;
+  }
+  .small\(outline\)-3 {
+    outline-width: 3px;
+  }
+  .small\(outline\)-4 {
+    outline-width: 4px;
+  }
+  .small\(outline\)-5 {
+    outline-width: 5px;
+  }
+  .small\(outline\)-6 {
+    outline-width: 6px;
+  }
+  .small\(outline\)-7 {
+    outline-width: 7px;
+  }
+  .small\(outline\)-8 {
+    outline-width: 8px;
+  }
+  .small\(outline\)-9 {
+    outline-width: 9px;
+  }
+  .small\(outline\)-10 {
+    outline-width: 10px;
+  }
+  .small\(outline\)-11 {
+    outline-width: 11px;
+  }
+  .small\(outline\)-12 {
+    outline-width: 12px;
+  }
+  .small\(outline\)-thin {
+    outline-width: thin;
+  }
+  .small\(outline\)-medium {
+    outline-width: medium;
+  }
+  .small\(outline\)-thick {
+    outline-width: thick;
+  }
+
+  .small\(offset\:outline\)-0 {
+    outline-offset: 0px;
+  }
+
+  .small\(offset\:outline\)-1 {
+    outline-offset: 1px;
+  }
+
+  .small\(offset\:outline\)-2 {
+    outline-offset: 2px;
+  }
+
+  .small\(offset\:outline\)-3 {
+    outline-offset: 3px;
+  }
+
+  .small\(offset\:outline\)-4 {
+    outline-offset: 4px;
+  }
+
+  .small\(offset\:outline\)-5 {
+    outline-offset: 5px;
+  }
+
+  .small\(offset\:outline\)-6 {
+    outline-offset: 6px;
+  }
+
+  .small\(offset\:outline\)-7 {
+    outline-offset: 7px;
+  }
+
+  .small\(offset\:outline\)-8 {
+    outline-offset: 8px;
+  }
+
+  .small\(offset\:outline\)-9 {
+    outline-width: 9px;
+  }
+
+  .small\(offset\:outline\)-10 {
+    outline-offset: 10px;
+  }
+
+  .small\(offset\:outline\)-11 {
+    outline-offset: 11px;
+  }
+
+  .small\(offset\:outline\)-12 {
+    outline-offset: 12px;
+  }
+
+  .small\(auto\:outline\) {
+    outline-style: auto;
+  }
+
+  .small\(none\:outline\) {
+    outline-style: none;
+  }
+
+  .small\(dotted\:outline\) {
+    outline-style: dotted;
+  }
+
+  .small\(dashed\:outline\) {
+    outline-style: dashed;
+  }
+
+  .small\(solid\:outline\) {
+    outline-style: solid;
+  }
+
+  .small\(double\:outline\) {
+    outline-style: double;
+  }
+
+  .small\(groove\:outline\) {
+    outline-style: groove;
+  }
+
+  .small\(ridge\:outline\) {
+    outline-style: ridge;
+  }
+
+  .small\(inset\:outline\) {
+    outline-style: inset;
+  }
+
+  .small\(outset\:outline\) {
+    outline-style: outset;
+  }
+
+  .small\(inherit\:outline\) {
+    outline-style: inherit;
+  }
+}
+
+@media (min-width: 768px) {
+  .medium\(outline\) {
+    outline: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .medium\(outline\)-1 {
+    outline-width: 1px;
+  }
+  .medium\(outline\)-2 {
+    outline-width: 2px;
+  }
+  .medium\(outline\)-3 {
+    outline-width: 3px;
+  }
+  .medium\(outline\)-4 {
+    outline-width: 4px;
+  }
+  .medium\(outline\)-5 {
+    outline-width: 5px;
+  }
+  .medium\(outline\)-6 {
+    outline-width: 6px;
+  }
+  .medium\(outline\)-7 {
+    outline-width: 7px;
+  }
+  .medium\(outline\)-8 {
+    outline-width: 8px;
+  }
+  .medium\(outline\)-9 {
+    outline-width: 9px;
+  }
+  .medium\(outline\)-10 {
+    outline-width: 10px;
+  }
+  .medium\(outline\)-11 {
+    outline-width: 11px;
+  }
+  .medium\(outline\)-12 {
+    outline-width: 12px;
+  }
+  .medium\(outline\)-thin {
+    outline-width: thin;
+  }
+  .medium\(outline\)-medium {
+    outline-width: medium;
+  }
+  .medium\(outline\)-thick {
+    outline-width: thick;
+  }
+
+  .medium\(offset\:outline\)-0 {
+    outline-offset: 0px;
+  }
+
+  .medium\(offset\:outline\)-1 {
+    outline-offset: 1px;
+  }
+
+  .medium\(offset\:outline\)-2 {
+    outline-offset: 2px;
+  }
+
+  .medium\(offset\:outline\)-3 {
+    outline-offset: 3px;
+  }
+
+  .medium\(offset\:outline\)-4 {
+    outline-offset: 4px;
+  }
+
+  .medium\(offset\:outline\)-5 {
+    outline-offset: 5px;
+  }
+
+  .medium\(offset\:outline\)-6 {
+    outline-offset: 6px;
+  }
+
+  .medium\(offset\:outline\)-7 {
+    outline-offset: 7px;
+  }
+
+  .medium\(offset\:outline\)-8 {
+    outline-offset: 8px;
+  }
+
+  .medium\(offset\:outline\)-9 {
+    outline-width: 9px;
+  }
+
+  .medium\(offset\:outline\)-10 {
+    outline-offset: 10px;
+  }
+
+  .medium\(offset\:outline\)-11 {
+    outline-offset: 11px;
+  }
+
+  .medium\(offset\:outline\)-12 {
+    outline-offset: 12px;
+  }
+
+  .medium\(auto\:outline\) {
+    outline-style: hidden;
+  }
+
+  .medium\(none\:outline\) {
+    outline-style: none;
+  }
+
+  .medium\(dotted\:outline\) {
+    outline-style: dotted;
+  }
+
+  .medium\(dashed\:outline\) {
+    outline-style: dashed;
+  }
+
+  .medium\(solid\:outline\) {
+    outline-style: solid;
+  }
+
+  .medium\(double\:outline\) {
+    outline-style: double;
+  }
+
+  .medium\(groove\:outline\) {
+    outline-style: groove;
+  }
+
+  .medium\(ridge\:outline\) {
+    outline-style: ridge;
+  }
+
+  .medium\(inset\:outline\) {
+    outline-style: inset;
+  }
+
+  .medium\(outset\:outline\) {
+    outline-style: outset;
+  }
+
+  .medium\(inherit\:outline\) {
+    outline-style: hidden;
+  }
+}
+
+@media (min-width: 1024px) {
+  .large\(outline\) {
+    outline: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .large\(outline\)-1 {
+    outline-width: 1px;
+  }
+  .large\(outline\)-2 {
+    outline-width: 2px;
+  }
+  .large\(outline\)-3 {
+    outline-width: 3px;
+  }
+  .large\(outline\)-4 {
+    outline-width: 4px;
+  }
+  .large\(outline\)-5 {
+    outline-width: 5px;
+  }
+  .large\(outline\)-6 {
+    outline-width: 6px;
+  }
+  .large\(outline\)-7 {
+    outline-width: 7px;
+  }
+  .large\(outline\)-8 {
+    outline-width: 8px;
+  }
+  .large\(outline\)-9 {
+    outline-width: 9px;
+  }
+  .large\(outline\)-10 {
+    outline-width: 10px;
+  }
+  .large\(outline\)-11 {
+    outline-width: 11px;
+  }
+  .large\(outline\)-12 {
+    outline-width: 12px;
+  }
+  .large\(outline\)-thin {
+    outline-width: thin;
+  }
+  .large\(outline\)-medium {
+    outline-width: medium;
+  }
+  .large\(outline\)-thick {
+    outline-width: thick;
+  }
+
+  .large\(offset\:outline\)-0 {
+    outline-offset: 0px;
+  }
+
+  .large\(offset\:outline\)-1 {
+    outline-offset: 1px;
+  }
+
+  .large\(offset\:outline\)-2 {
+    outline-offset: 2px;
+  }
+
+  .large\(offset\:outline\)-3 {
+    outline-offset: 3px;
+  }
+
+  .large\(offset\:outline\)-4 {
+    outline-offset: 4px;
+  }
+
+  .large\(offset\:outline\)-5 {
+    outline-offset: 5px;
+  }
+
+  .large\(offset\:outline\)-6 {
+    outline-offset: 6px;
+  }
+
+  .large\(offset\:outline\)-7 {
+    outline-offset: 7px;
+  }
+
+  .large\(offset\:outline\)-8 {
+    outline-offset: 8px;
+  }
+
+  .large\(offset\:outline\)-9 {
+    outline-width: 9px;
+  }
+
+  .large\(offset\:outline\)-10 {
+    outline-offset: 10px;
+  }
+
+  .large\(offset\:outline\)-11 {
+    outline-offset: 11px;
+  }
+
+  .large\(offset\:outline\)-12 {
+    outline-offset: 12px;
+  }
+
+  .large\(auto\:outline\) {
+    outline-style: hidden;
+  }
+
+  .large\(none\:outline\) {
+    outline-style: none;
+  }
+
+  .large\(dotted\:outline\) {
+    outline-style: dotted;
+  }
+
+  .large\(dashed\:outline\) {
+    outline-style: dashed;
+  }
+
+  .large\(solid\:outline\) {
+    outline-style: solid;
+  }
+
+  .large\(double\:outline\) {
+    outline-style: double;
+  }
+
+  .large\(groove\:outline\) {
+    outline-style: groove;
+  }
+
+  .large\(ridge\:outline\) {
+    outline-style: ridge;
+  }
+
+  .large\(inset\:outline\) {
+    outline-style: inset;
+  }
+
+  .large\(outset\:outline\) {
+    outline-style: outset;
+  }
+
+  .large\(inherit\:outline\) {
+    outline-style: hidden;
+  }
+}
+
+@media (min-width: 1280px) {
+  .larger\(outline\) {
+    outline: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .larger\(outline\)-1 {
+    outline-width: 1px;
+  }
+  .larger\(outline\)-2 {
+    outline-width: 2px;
+  }
+  .larger\(outline\)-3 {
+    outline-width: 3px;
+  }
+  .larger\(outline\)-4 {
+    outline-width: 4px;
+  }
+  .larger\(outline\)-5 {
+    outline-width: 5px;
+  }
+  .larger\(outline\)-6 {
+    outline-width: 6px;
+  }
+  .larger\(outline\)-7 {
+    outline-width: 7px;
+  }
+  .larger\(outline\)-8 {
+    outline-width: 8px;
+  }
+  .larger\(outline\)-9 {
+    outline-width: 9px;
+  }
+  .larger\(outline\)-10 {
+    outline-width: 10px;
+  }
+  .larger\(outline\)-11 {
+    outline-width: 11px;
+  }
+  .larger\(outline\)-12 {
+    outline-width: 12px;
+  }
+  .larger\(outline\)-thin {
+    outline-width: thin;
+  }
+  .larger\(outline\)-medium {
+    outline-width: medium;
+  }
+  .larger\(outline\)-thick {
+    outline-width: thick;
+  }
+
+  .larger\(offset\:outline\)-0 {
+    outline-offset: 0px;
+  }
+
+  .larger\(offset\:outline\)-1 {
+    outline-offset: 1px;
+  }
+
+  .larger\(offset\:outline\)-2 {
+    outline-offset: 2px;
+  }
+
+  .larger\(offset\:outline\)-3 {
+    outline-offset: 3px;
+  }
+
+  .larger\(offset\:outline\)-4 {
+    outline-offset: 4px;
+  }
+
+  .larger\(offset\:outline\)-5 {
+    outline-offset: 5px;
+  }
+
+  .larger\(offset\:outline\)-6 {
+    outline-offset: 6px;
+  }
+
+  .larger\(offset\:outline\)-7 {
+    outline-offset: 7px;
+  }
+
+  .larger\(offset\:outline\)-8 {
+    outline-offset: 8px;
+  }
+
+  .larger\(offset\:outline\)-9 {
+    outline-width: 9px;
+  }
+
+  .larger\(offset\:outline\)-10 {
+    outline-offset: 10px;
+  }
+
+  .larger\(offset\:outline\)-11 {
+    outline-offset: 11px;
+  }
+
+  .larger\(offset\:outline\)-12 {
+    outline-offset: 12px;
+  }
+
+  .larger\(auto\:outline\) {
+    outline-style: hidden;
+  }
+
+  .larger\(none\:outline\) {
+    outline-style: none;
+  }
+
+  .larger\(dotted\:outline\) {
+    outline-style: dotted;
+  }
+
+  .larger\(dashed\:outline\) {
+    outline-style: dashed;
+  }
+
+  .larger\(solid\:outline\) {
+    outline-style: solid;
+  }
+
+  .larger\(double\:outline\) {
+    outline-style: double;
+  }
+
+  .larger\(groove\:outline\) {
+    outline-style: groove;
+  }
+
+  .larger\(ridge\:outline\) {
+    outline-style: ridge;
+  }
+
+  .larger\(inset\:outline\) {
+    outline-style: inset;
+  }
+
+  .larger\(outset\:outline\) {
+    outline-style: outset;
+  }
+
+  .larger\(inherit\:outline\) {
+    outline-style: hidden;
+  }
+}
+
+@media (min-width: 1536px) {
+  .largest\(outline\) {
+    outline: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .largest\(outline\)-1 {
+    outline-width: 1px;
+  }
+  .largest\(outline\)-2 {
+    outline-width: 2px;
+  }
+  .largest\(outline\)-3 {
+    outline-width: 3px;
+  }
+  .largest\(outline\)-4 {
+    outline-width: 4px;
+  }
+  .largest\(outline\)-5 {
+    outline-width: 5px;
+  }
+  .largest\(outline\)-6 {
+    outline-width: 6px;
+  }
+  .largest\(outline\)-7 {
+    outline-width: 7px;
+  }
+  .largest\(outline\)-8 {
+    outline-width: 8px;
+  }
+  .largest\(outline\)-9 {
+    outline-width: 9px;
+  }
+  .largest\(outline\)-10 {
+    outline-width: 10px;
+  }
+  .largest\(outline\)-11 {
+    outline-width: 11px;
+  }
+  .largest\(outline\)-12 {
+    outline-width: 12px;
+  }
+  .largest\(outline\)-thin {
+    outline-width: thin;
+  }
+  .largest\(outline\)-medium {
+    outline-width: medium;
+  }
+  .largest\(outline\)-thick {
+    outline-width: thick;
+  }
+
+  .largest\(offset\:outline\)-0 {
+    outline-offset: 0px;
+  }
+
+  .largest\(offset\:outline\)-1 {
+    outline-offset: 1px;
+  }
+
+  .largest\(offset\:outline\)-2 {
+    outline-offset: 2px;
+  }
+
+  .largest\(offset\:outline\)-3 {
+    outline-offset: 3px;
+  }
+
+  .largest\(offset\:outline\)-4 {
+    outline-offset: 4px;
+  }
+
+  .largest\(offset\:outline\)-5 {
+    outline-offset: 5px;
+  }
+
+  .largest\(offset\:outline\)-6 {
+    outline-offset: 6px;
+  }
+
+  .largest\(offset\:outline\)-7 {
+    outline-offset: 7px;
+  }
+
+  .largest\(offset\:outline\)-8 {
+    outline-offset: 8px;
+  }
+
+  .largest\(offset\:outline\)-9 {
+    outline-width: 9px;
+  }
+
+  .largest\(offset\:outline\)-10 {
+    outline-offset: 10px;
+  }
+
+  .largest\(offset\:outline\)-11 {
+    outline-offset: 11px;
+  }
+
+  .largest\(offset\:outline\)-12 {
+    outline-offset: 12px;
+  }
+
+  .largest\(auto\:outline\) {
+    outline-style: hidden;
+  }
+
+  .largest\(none\:outline\) {
+    outline-style: none;
+  }
+
+  .largest\(dotted\:outline\) {
+    outline-style: dotted;
+  }
+
+  .largest\(dashed\:outline\) {
+    outline-style: dashed;
+  }
+
+  .largest\(solid\:outline\) {
+    outline-style: solid;
+  }
+
+  .largest\(double\:outline\) {
+    outline-style: double;
+  }
+
+  .largest\(groove\:outline\) {
+    outline-style: groove;
+  }
+
+  .largest\(ridge\:outline\) {
+    outline-style: ridge;
+  }
+
+  .largest\(inset\:outline\) {
+    outline-style: inset;
+  }
+
+  .largest\(outset\:outline\) {
+    outline-style: outset;
+  }
+
+  .largest\(inherit\:outline\) {
+    outline-style: hidden;
   }
 }
 
