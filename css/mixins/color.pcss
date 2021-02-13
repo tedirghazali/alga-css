@@ -60,6 +60,10 @@
   $(class)\:stroke {
     stroke: var(--alga-$(main));
   }
+    
+  $(class)\:placeholder::placeholder {
+    color: var(--alga-$(main));
+  }
 }
 
 @define-mixin color-hover $class, $red, $green, $blue, $alpha, $text {
@@ -123,6 +127,10 @@
     
   $(class)\:stroke:hover {
     stroke: rgba($red, $green, $blue, $alpha);
+  }  
+  
+  $(class)\:placeholder:hover::placeholder {
+    color: rgba($red, $green, $blue, $alpha);
   }
 }
 
@@ -188,6 +196,10 @@
   $(class)\:stroke:focus {
     stroke: rgba($red, $green, $blue, $alpha);
   }
+    
+  $(class)\:placeholder:focus::placeholder {
+    color: rgba($red, $green, $blue, $alpha);
+  }
 }
 
 @define-mixin color-opacity $class, $red, $green, $blue, $alpha, $text {
@@ -251,5 +263,9 @@
     
   $(class)\:stroke {
     stroke: rgba($red, $green, $blue, $alpha);
+  }
+    
+  $(class)\:placeholder::placeholder {
+    color: rgba($red, $green, $blue, $alpha);
   }
 }

@@ -8300,26 +8300,50 @@ textarea.large\:input {
 
 /* Components */
 
-.tags, .tag-group {
+.tags,
+.left\:tags,
+.center\:tags,
+.right\:tags,
+.tag-group {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: flex-start;
 }
 
+.left\:tags {
+  justify-content: flex-start;
+}
+
+.center\:tags {
+  justify-content: center;
+}
+
+.right\:tags {
+  justify-content: flex-end;
+}
+
+.right\:tags .tag:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.right\:tags .tag:not(:last-child) {
+  margin-right: 0;
+}
+
 .tag-group:not(:last-child) {
-  margin-right: 0.5rem;
+  margin: 0.5rem;
 }
 
 .tag-group .tag:not(:first-child) {
+  margin-left: 0;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
-  margin-left: 0px;
 }
 
 .tag-group .tag:not(:last-child) {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .tag {
@@ -8327,7 +8351,6 @@ textarea.large\:input {
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
-  line-height: 1rem;
   line-height: 1.5;
   white-space: nowrap;
   background-color: whitesmoke;
@@ -8338,98 +8361,8 @@ textarea.large\:input {
   padding-right: 0.75em;
 }
 
-.tag:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
-.tag-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.tag-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.tag-success {
-  --tw-bg-opacity: 1;
-  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.tag-danger {
-  --tw-bg-opacity: 1;
-  background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.tag-warning {
-  --tw-bg-opacity: 1;
-  background-color: rgba(217, 119, 6, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
-}
-
-.tag-info {
-  --tw-bg-opacity: 1;
-  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.tag-light {
-  --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
-}
-
-.tag-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.tag-large {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.tag-small {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.tags-left {
-  justify-content: flex-start;
-}
-
-.tags-center {
-  justify-content: center;
-}
-
-.tags-right {
-  justify-content: flex-end;
-}
-
-.tags-right .tag:not(:first-child) {
-  margin-left: 0.5rem;
-}
-
-.tags-right .tag:not(:last-child) {
-  margin-right: 0px;
-}
-
 .tag-group .tag {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .tag-icon:first-child:not(:last-child) {
@@ -8449,20 +8382,17 @@ textarea.large\:input {
 
 .tag-delete {
   margin-left: 0.25rem;
-  padding: 0px;
-  position: relative; position: relative;
+  padding: 0;
+  position: relative;
   margin-right: -0.375rem;
   width: 2em;
 }
 
-.tag-delete::before, .tag-delete::after{
-    background-color: currentColor;
-    display: block;
-    position: absolute; position: absolute; display: block;
-  }
-
 .tag-delete::before, 
-  .tag-delete::after{
+  .tag-delete::after {
+    display: block;
+    position: absolute;
+    background: currentColor;
     content: "";
     left: 50%;
     top: 50%;
@@ -8489,32 +8419,25 @@ textarea.large\:input {
     background-color: #dbdbdb;
   }
 
-.tag-rounded {
-  border-radius: 290486px;
-}
-
-.tag-hover {
+.hover\?tag:hover {
   text-decoration: underline;
 }
 
-.tags-input {
+.tag\:input {
   display: flex;
   flex-wrap: wrap;
-  font-weight: 400;
-  height: auto;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  line-height: 1.5;
-  overflow: hidden;
   position: relative;
-  width: 100%; position: relative;
+  overflow: hidden;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #fff;
+  background: var(--alga-white);
+  background-clip: padding-box;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-clip: padding-box;
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  border-radius: 0.25rem;
   padding: calc(0.375rem - 2px) calc(0.75rem - 2px);
   cursor: text;
   min-height: calc(1.5em + .75rem + 2px);
@@ -8523,28 +8446,28 @@ textarea.large\:input {
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.tags-input.focus {
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+.tag\:input:focus {
+    background: #fff;
+    background: var(--alga-white);
     color: #495057;
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
 
-.tags-input .tag-group {
+.tag\:input .tag-group {
     cursor: pointer;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
   }
 
-.tags-input.is-valid,
-.was-validated .tags-input:valid {
+.tag\:input.is-valid,
+.was-validated .tag\:input:valid {
   border-color: #28a745;
 }
 
-.tag-control {
-  background-color: transparent;
+.tag\:input-control {
+  background: transparent;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   outline: 0;
@@ -8554,11 +8477,11 @@ textarea.large\:input {
   color: #495057;
 }
 
-.tag-control-hidden {
-  overflow: hidden;
+.hidden\?tag\:input-control {
   position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
   visibility: hidden;
-  white-space: nowrap; position: absolute; visibility: hidden;
   top: 0;
   left: -9999px;
 }
@@ -10040,6 +9963,10 @@ textarea.large\:input {
     stroke: var(--alga-primary);
   }
 
+.primary\:placeholder::placeholder {
+    color: var(--alga-primary);
+  }
+
 .primary-9 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.9);
@@ -10100,6 +10027,10 @@ textarea.large\:input {
 
 .primary-9\:stroke {
     stroke: rgba(13, 110, 253, 0.9);
+  }
+
+.primary-9\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.9);
   }
 
 .primary-8 {
@@ -10164,6 +10095,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.8);
   }
 
+.primary-8\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.8);
+  }
+
 .primary-7 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.7);
@@ -10224,6 +10159,10 @@ textarea.large\:input {
 
 .primary-7\:stroke {
     stroke: rgba(13, 110, 253, 0.7);
+  }
+
+.primary-7\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.7);
   }
 
 .primary-6 {
@@ -10288,6 +10227,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.6);
   }
 
+.primary-6\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.6);
+  }
+
 .primary-5 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.5);
@@ -10348,6 +10291,10 @@ textarea.large\:input {
 
 .primary-5\:stroke {
     stroke: rgba(13, 110, 253, 0.5);
+  }
+
+.primary-5\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.5);
   }
 
 .primary-4 {
@@ -10412,6 +10359,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.4);
   }
 
+.primary-4\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.4);
+  }
+
 .primary-3 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.3);
@@ -10472,6 +10423,10 @@ textarea.large\:input {
 
 .primary-3\:stroke {
     stroke: rgba(13, 110, 253, 0.3);
+  }
+
+.primary-3\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.3);
   }
 
 .primary-2 {
@@ -10536,6 +10491,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.2);
   }
 
+.primary-2\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.2);
+  }
+
 .primary-1 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.1);
@@ -10596,6 +10555,10 @@ textarea.large\:input {
 
 .primary-1\:stroke {
     stroke: rgba(13, 110, 253, 0.1);
+  }
+
+.primary-1\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.1);
   }
 
 .secondary {
@@ -10660,6 +10623,10 @@ textarea.large\:input {
     stroke: var(--alga-secondary);
   }
 
+.secondary\:placeholder::placeholder {
+    color: var(--alga-secondary);
+  }
+
 .secondary-9 {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.9);
@@ -10720,6 +10687,10 @@ textarea.large\:input {
 
 .secondary-9\:stroke {
     stroke: rgba(108, 117, 125, 0.9);
+  }
+
+.secondary-9\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.9);
   }
 
 .secondary-8 {
@@ -10784,6 +10755,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.8);
   }
 
+.secondary-8\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.8);
+  }
+
 .secondary-7 {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.7);
@@ -10844,6 +10819,10 @@ textarea.large\:input {
 
 .secondary-7\:stroke {
     stroke: rgba(108, 117, 125, 0.7);
+  }
+
+.secondary-7\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.7);
   }
 
 .secondary-6 {
@@ -10908,6 +10887,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.6);
   }
 
+.secondary-6\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.6);
+  }
+
 .secondary-5 {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.5);
@@ -10968,6 +10951,10 @@ textarea.large\:input {
 
 .secondary-5\:stroke {
     stroke: rgba(108, 117, 125, 0.5);
+  }
+
+.secondary-5\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.5);
   }
 
 .secondary-4 {
@@ -11032,6 +11019,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.4);
   }
 
+.secondary-4\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.4);
+  }
+
 .secondary-3 {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.3);
@@ -11092,6 +11083,10 @@ textarea.large\:input {
 
 .secondary-3\:stroke {
     stroke: rgba(108, 117, 125, 0.3);
+  }
+
+.secondary-3\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.3);
   }
 
 .secondary-2 {
@@ -11156,6 +11151,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.2);
   }
 
+.secondary-2\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.2);
+  }
+
 .secondary-1 {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.1);
@@ -11216,6 +11215,10 @@ textarea.large\:input {
 
 .secondary-1\:stroke {
     stroke: rgba(108, 117, 125, 0.1);
+  }
+
+.secondary-1\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.1);
   }
 
 .accent {
@@ -11280,6 +11283,10 @@ textarea.large\:input {
     stroke: var(--alga-accent);
   }
 
+.accent\:placeholder::placeholder {
+    color: var(--alga-accent);
+  }
+
 .accent-9 {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.9);
@@ -11340,6 +11347,10 @@ textarea.large\:input {
 
 .accent-9\:stroke {
     stroke: rgba(179, 27, 148, 0.9);
+  }
+
+.accent-9\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.9);
   }
 
 .accent-8 {
@@ -11404,6 +11415,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.8);
   }
 
+.accent-8\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.8);
+  }
+
 .accent-7 {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.7);
@@ -11464,6 +11479,10 @@ textarea.large\:input {
 
 .accent-7\:stroke {
     stroke: rgba(179, 27, 148, 0.7);
+  }
+
+.accent-7\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.7);
   }
 
 .accent-6 {
@@ -11528,6 +11547,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.6);
   }
 
+.accent-6\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.6);
+  }
+
 .accent-5 {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.5);
@@ -11588,6 +11611,10 @@ textarea.large\:input {
 
 .accent-5\:stroke {
     stroke: rgba(179, 27, 148, 0.5);
+  }
+
+.accent-5\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.5);
   }
 
 .accent-4 {
@@ -11652,6 +11679,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.4);
   }
 
+.accent-4\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.4);
+  }
+
 .accent-3 {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.3);
@@ -11712,6 +11743,10 @@ textarea.large\:input {
 
 .accent-3\:stroke {
     stroke: rgba(179, 27, 148, 0.3);
+  }
+
+.accent-3\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.3);
   }
 
 .accent-2 {
@@ -11776,6 +11811,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.2);
   }
 
+.accent-2\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.2);
+  }
+
 .accent-1 {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.1);
@@ -11836,6 +11875,10 @@ textarea.large\:input {
 
 .accent-1\:stroke {
     stroke: rgba(179, 27, 148, 0.1);
+  }
+
+.accent-1\:placeholder::placeholder {
+    color: rgba(179, 27, 148, 0.1);
   }
 
 .success {
@@ -11900,6 +11943,10 @@ textarea.large\:input {
     stroke: var(--alga-success);
   }
 
+.success\:placeholder::placeholder {
+    color: var(--alga-success);
+  }
+
 .success-9 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.9);
@@ -11960,6 +12007,10 @@ textarea.large\:input {
 
 .success-9\:stroke {
     stroke: rgba(25, 135, 84, 0.9);
+  }
+
+.success-9\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.9);
   }
 
 .success-8 {
@@ -12024,6 +12075,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.8);
   }
 
+.success-8\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.8);
+  }
+
 .success-7 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.7);
@@ -12084,6 +12139,10 @@ textarea.large\:input {
 
 .success-7\:stroke {
     stroke: rgba(25, 135, 84, 0.7);
+  }
+
+.success-7\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.7);
   }
 
 .success-6 {
@@ -12148,6 +12207,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.6);
   }
 
+.success-6\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.6);
+  }
+
 .success-5 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.5);
@@ -12208,6 +12271,10 @@ textarea.large\:input {
 
 .success-5\:stroke {
     stroke: rgba(25, 135, 84, 0.5);
+  }
+
+.success-5\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.5);
   }
 
 .success-4 {
@@ -12272,6 +12339,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.4);
   }
 
+.success-4\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.4);
+  }
+
 .success-3 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.3);
@@ -12332,6 +12403,10 @@ textarea.large\:input {
 
 .success-3\:stroke {
     stroke: rgba(25, 135, 84, 0.3);
+  }
+
+.success-3\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.3);
   }
 
 .success-2 {
@@ -12396,6 +12471,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.2);
   }
 
+.success-2\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.2);
+  }
+
 .success-1 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.1);
@@ -12456,6 +12535,10 @@ textarea.large\:input {
 
 .success-1\:stroke {
     stroke: rgba(25, 135, 84, 0.1);
+  }
+
+.success-1\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.1);
   }
 
 .info {
@@ -12520,6 +12603,10 @@ textarea.large\:input {
     stroke: var(--alga-info);
   }
 
+.info\:placeholder::placeholder {
+    color: var(--alga-info);
+  }
+
 .info-9 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.9);
@@ -12580,6 +12667,10 @@ textarea.large\:input {
 
 .info-9\:stroke {
     stroke: rgba(13, 202, 240, 0.9);
+  }
+
+.info-9\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.9);
   }
 
 .info-8 {
@@ -12644,6 +12735,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.8);
   }
 
+.info-8\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.8);
+  }
+
 .info-7 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.7);
@@ -12704,6 +12799,10 @@ textarea.large\:input {
 
 .info-7\:stroke {
     stroke: rgba(13, 202, 240, 0.7);
+  }
+
+.info-7\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.7);
   }
 
 .info-6 {
@@ -12768,6 +12867,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.6);
   }
 
+.info-6\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.6);
+  }
+
 .info-5 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.5);
@@ -12828,6 +12931,10 @@ textarea.large\:input {
 
 .info-5\:stroke {
     stroke: rgba(13, 202, 240, 0.5);
+  }
+
+.info-5\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.5);
   }
 
 .info-4 {
@@ -12892,6 +12999,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.4);
   }
 
+.info-4\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.4);
+  }
+
 .info-3 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.3);
@@ -12952,6 +13063,10 @@ textarea.large\:input {
 
 .info-3\:stroke {
     stroke: rgba(13, 202, 240, 0.3);
+  }
+
+.info-3\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.3);
   }
 
 .info-2 {
@@ -13016,6 +13131,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.2);
   }
 
+.info-2\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.2);
+  }
+
 .info-1 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.1);
@@ -13076,6 +13195,10 @@ textarea.large\:input {
 
 .info-1\:stroke {
     stroke: rgba(13, 202, 240, 0.1);
+  }
+
+.info-1\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.1);
   }
 
 .warning {
@@ -13140,6 +13263,10 @@ textarea.large\:input {
     stroke: var(--alga-warning);
   }
 
+.warning\:placeholder::placeholder {
+    color: var(--alga-warning);
+  }
+
 .warning-9 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.9);
@@ -13200,6 +13327,10 @@ textarea.large\:input {
 
 .warning-9\:stroke {
     stroke: rgba(255, 193, 7, 0.9);
+  }
+
+.warning-9\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.9);
   }
 
 .warning-8 {
@@ -13264,6 +13395,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.8);
   }
 
+.warning-8\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.8);
+  }
+
 .warning-7 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.7);
@@ -13324,6 +13459,10 @@ textarea.large\:input {
 
 .warning-7\:stroke {
     stroke: rgba(255, 193, 7, 0.7);
+  }
+
+.warning-7\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.7);
   }
 
 .warning-6 {
@@ -13388,6 +13527,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.6);
   }
 
+.warning-6\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.6);
+  }
+
 .warning-5 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.5);
@@ -13448,6 +13591,10 @@ textarea.large\:input {
 
 .warning-5\:stroke {
     stroke: rgba(255, 193, 7, 0.5);
+  }
+
+.warning-5\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.5);
   }
 
 .warning-4 {
@@ -13512,6 +13659,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.4);
   }
 
+.warning-4\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.4);
+  }
+
 .warning-3 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.3);
@@ -13572,6 +13723,10 @@ textarea.large\:input {
 
 .warning-3\:stroke {
     stroke: rgba(255, 193, 7, 0.3);
+  }
+
+.warning-3\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.3);
   }
 
 .warning-2 {
@@ -13636,6 +13791,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.2);
   }
 
+.warning-2\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.2);
+  }
+
 .warning-1 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.1);
@@ -13696,6 +13855,10 @@ textarea.large\:input {
 
 .warning-1\:stroke {
     stroke: rgba(255, 193, 7, 0.1);
+  }
+
+.warning-1\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.1);
   }
 
 .danger {
@@ -13760,6 +13923,10 @@ textarea.large\:input {
     stroke: var(--alga-danger);
   }
 
+.danger\:placeholder::placeholder {
+    color: var(--alga-danger);
+  }
+
 .danger-9 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.9);
@@ -13820,6 +13987,10 @@ textarea.large\:input {
 
 .danger-9\:stroke {
     stroke: rgba(220, 53, 69, 0.9);
+  }
+
+.danger-9\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.9);
   }
 
 .danger-8 {
@@ -13884,6 +14055,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.8);
   }
 
+.danger-8\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.8);
+  }
+
 .danger-7 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.7);
@@ -13944,6 +14119,10 @@ textarea.large\:input {
 
 .danger-7\:stroke {
     stroke: rgba(220, 53, 69, 0.7);
+  }
+
+.danger-7\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.7);
   }
 
 .danger-6 {
@@ -14008,6 +14187,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.6);
   }
 
+.danger-6\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.6);
+  }
+
 .danger-5 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.5);
@@ -14068,6 +14251,10 @@ textarea.large\:input {
 
 .danger-5\:stroke {
     stroke: rgba(220, 53, 69, 0.5);
+  }
+
+.danger-5\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.5);
   }
 
 .danger-4 {
@@ -14132,6 +14319,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.4);
   }
 
+.danger-4\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.4);
+  }
+
 .danger-3 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.3);
@@ -14192,6 +14383,10 @@ textarea.large\:input {
 
 .danger-3\:stroke {
     stroke: rgba(220, 53, 69, 0.3);
+  }
+
+.danger-3\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.3);
   }
 
 .danger-2 {
@@ -14256,6 +14451,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.2);
   }
 
+.danger-2\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.2);
+  }
+
 .danger-1 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.1);
@@ -14316,6 +14515,10 @@ textarea.large\:input {
 
 .danger-1\:stroke {
     stroke: rgba(220, 53, 69, 0.1);
+  }
+
+.danger-1\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.1);
   }
 
 .black {
@@ -14380,6 +14583,10 @@ textarea.large\:input {
     stroke: var(--alga-black);
   }
 
+.black\:placeholder::placeholder {
+    color: var(--alga-black);
+  }
+
 .black-9 {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.9);
@@ -14440,6 +14647,10 @@ textarea.large\:input {
 
 .black-9\:stroke {
     stroke: rgba(0, 0, 0, 0.9);
+  }
+
+.black-9\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.9);
   }
 
 .black-8 {
@@ -14504,6 +14715,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.8);
   }
 
+.black-8\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
 .black-7 {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.7);
@@ -14564,6 +14779,10 @@ textarea.large\:input {
 
 .black-7\:stroke {
     stroke: rgba(0, 0, 0, 0.7);
+  }
+
+.black-7\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.7);
   }
 
 .black-6 {
@@ -14628,6 +14847,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.6);
   }
 
+.black-6\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
 .black-5 {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.5);
@@ -14688,6 +14911,10 @@ textarea.large\:input {
 
 .black-5\:stroke {
     stroke: rgba(0, 0, 0, 0.5);
+  }
+
+.black-5\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.5);
   }
 
 .black-4 {
@@ -14752,6 +14979,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.4);
   }
 
+.black-4\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
 .black-3 {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.3);
@@ -14812,6 +15043,10 @@ textarea.large\:input {
 
 .black-3\:stroke {
     stroke: rgba(0, 0, 0, 0.3);
+  }
+
+.black-3\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.3);
   }
 
 .black-2 {
@@ -14876,6 +15111,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.2);
   }
 
+.black-2\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+  }
+
 .black-1 {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.1);
@@ -14936,6 +15175,10 @@ textarea.large\:input {
 
 .black-1\:stroke {
     stroke: rgba(0, 0, 0, 0.1);
+  }
+
+.black-1\:placeholder::placeholder {
+    color: rgba(0, 0, 0, 0.1);
   }
 
 .white {
@@ -15000,6 +15243,10 @@ textarea.large\:input {
     stroke: var(--alga-white);
   }
 
+.white\:placeholder::placeholder {
+    color: var(--alga-white);
+  }
+
 .white-9 {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.9);
@@ -15060,6 +15307,10 @@ textarea.large\:input {
 
 .white-9\:stroke {
     stroke: rgba(255, 255, 255, 0.9);
+  }
+
+.white-9\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.9);
   }
 
 .white-8 {
@@ -15124,6 +15375,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.8);
   }
 
+.white-8\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
 .white-7 {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.7);
@@ -15184,6 +15439,10 @@ textarea.large\:input {
 
 .white-7\:stroke {
     stroke: rgba(255, 255, 255, 0.7);
+  }
+
+.white-7\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.7);
   }
 
 .white-6 {
@@ -15248,6 +15507,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.6);
   }
 
+.white-6\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
 .white-5 {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.5);
@@ -15308,6 +15571,10 @@ textarea.large\:input {
 
 .white-5\:stroke {
     stroke: rgba(255, 255, 255, 0.5);
+  }
+
+.white-5\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.5);
   }
 
 .white-4 {
@@ -15372,6 +15639,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.4);
   }
 
+.white-4\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
 .white-3 {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.3);
@@ -15432,6 +15703,10 @@ textarea.large\:input {
 
 .white-3\:stroke {
     stroke: rgba(255, 255, 255, 0.3);
+  }
+
+.white-3\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.3);
   }
 
 .white-2 {
@@ -15496,6 +15771,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.2);
   }
 
+.white-2\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+  }
+
 .white-1 {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.1);
@@ -15556,6 +15835,10 @@ textarea.large\:input {
 
 .white-1\:stroke {
     stroke: rgba(255, 255, 255, 0.1);
+  }
+
+.white-1\:placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.1);
   }
 
 .blue {
@@ -15620,6 +15903,10 @@ textarea.large\:input {
     stroke: var(--alga-blue);
   }
 
+.blue\:placeholder::placeholder {
+    color: var(--alga-blue);
+  }
+
 .blue-9 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.9);
@@ -15680,6 +15967,10 @@ textarea.large\:input {
 
 .blue-9\:stroke {
     stroke: rgba(13, 110, 253, 0.9);
+  }
+
+.blue-9\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.9);
   }
 
 .blue-8 {
@@ -15744,6 +16035,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.8);
   }
 
+.blue-8\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.8);
+  }
+
 .blue-7 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.7);
@@ -15804,6 +16099,10 @@ textarea.large\:input {
 
 .blue-7\:stroke {
     stroke: rgba(13, 110, 253, 0.7);
+  }
+
+.blue-7\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.7);
   }
 
 .blue-6 {
@@ -15868,6 +16167,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.6);
   }
 
+.blue-6\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.6);
+  }
+
 .blue-5 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.5);
@@ -15928,6 +16231,10 @@ textarea.large\:input {
 
 .blue-5\:stroke {
     stroke: rgba(13, 110, 253, 0.5);
+  }
+
+.blue-5\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.5);
   }
 
 .blue-4 {
@@ -15992,6 +16299,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.4);
   }
 
+.blue-4\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.4);
+  }
+
 .blue-3 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.3);
@@ -16052,6 +16363,10 @@ textarea.large\:input {
 
 .blue-3\:stroke {
     stroke: rgba(13, 110, 253, 0.3);
+  }
+
+.blue-3\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.3);
   }
 
 .blue-2 {
@@ -16116,6 +16431,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.2);
   }
 
+.blue-2\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.2);
+  }
+
 .blue-1 {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.1);
@@ -16176,6 +16495,10 @@ textarea.large\:input {
 
 .blue-1\:stroke {
     stroke: rgba(13, 110, 253, 0.1);
+  }
+
+.blue-1\:placeholder::placeholder {
+    color: rgba(13, 110, 253, 0.1);
   }
 
 .indigo {
@@ -16240,6 +16563,10 @@ textarea.large\:input {
     stroke: var(--alga-indigo);
   }
 
+.indigo\:placeholder::placeholder {
+    color: var(--alga-indigo);
+  }
+
 .indigo-9 {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.9);
@@ -16300,6 +16627,10 @@ textarea.large\:input {
 
 .indigo-9\:stroke {
     stroke: rgba(102, 16, 242, 0.9);
+  }
+
+.indigo-9\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.9);
   }
 
 .indigo-8 {
@@ -16364,6 +16695,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.8);
   }
 
+.indigo-8\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.8);
+  }
+
 .indigo-7 {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.7);
@@ -16424,6 +16759,10 @@ textarea.large\:input {
 
 .indigo-7\:stroke {
     stroke: rgba(102, 16, 242, 0.7);
+  }
+
+.indigo-7\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.7);
   }
 
 .indigo-6 {
@@ -16488,6 +16827,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.6);
   }
 
+.indigo-6\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.6);
+  }
+
 .indigo-5 {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.5);
@@ -16548,6 +16891,10 @@ textarea.large\:input {
 
 .indigo-5\:stroke {
     stroke: rgba(102, 16, 242, 0.5);
+  }
+
+.indigo-5\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.5);
   }
 
 .indigo-4 {
@@ -16612,6 +16959,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.4);
   }
 
+.indigo-4\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.4);
+  }
+
 .indigo-3 {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.3);
@@ -16672,6 +17023,10 @@ textarea.large\:input {
 
 .indigo-3\:stroke {
     stroke: rgba(102, 16, 242, 0.3);
+  }
+
+.indigo-3\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.3);
   }
 
 .indigo-2 {
@@ -16736,6 +17091,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.2);
   }
 
+.indigo-2\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.2);
+  }
+
 .indigo-1 {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.1);
@@ -16796,6 +17155,10 @@ textarea.large\:input {
 
 .indigo-1\:stroke {
     stroke: rgba(102, 16, 242, 0.1);
+  }
+
+.indigo-1\:placeholder::placeholder {
+    color: rgba(102, 16, 242, 0.1);
   }
 
 .purple {
@@ -16860,6 +17223,10 @@ textarea.large\:input {
     stroke: var(--alga-purple);
   }
 
+.purple\:placeholder::placeholder {
+    color: var(--alga-purple);
+  }
+
 .purple-9 {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.9);
@@ -16920,6 +17287,10 @@ textarea.large\:input {
 
 .purple-9\:stroke {
     stroke: rgba(111, 66, 193, 0.9);
+  }
+
+.purple-9\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.9);
   }
 
 .purple-8 {
@@ -16984,6 +17355,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.8);
   }
 
+.purple-8\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.8);
+  }
+
 .purple-7 {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.7);
@@ -17044,6 +17419,10 @@ textarea.large\:input {
 
 .purple-7\:stroke {
     stroke: rgba(111, 66, 193, 0.7);
+  }
+
+.purple-7\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.7);
   }
 
 .purple-6 {
@@ -17108,6 +17487,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.6);
   }
 
+.purple-6\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.6);
+  }
+
 .purple-5 {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.5);
@@ -17168,6 +17551,10 @@ textarea.large\:input {
 
 .purple-5\:stroke {
     stroke: rgba(111, 66, 193, 0.5);
+  }
+
+.purple-5\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.5);
   }
 
 .purple-4 {
@@ -17232,6 +17619,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.4);
   }
 
+.purple-4\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.4);
+  }
+
 .purple-3 {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.3);
@@ -17292,6 +17683,10 @@ textarea.large\:input {
 
 .purple-3\:stroke {
     stroke: rgba(111, 66, 193, 0.3);
+  }
+
+.purple-3\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.3);
   }
 
 .purple-2 {
@@ -17356,6 +17751,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.2);
   }
 
+.purple-2\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.2);
+  }
+
 .purple-1 {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.1);
@@ -17416,6 +17815,10 @@ textarea.large\:input {
 
 .purple-1\:stroke {
     stroke: rgba(111, 66, 193, 0.1);
+  }
+
+.purple-1\:placeholder::placeholder {
+    color: rgba(111, 66, 193, 0.1);
   }
 
 .pink {
@@ -17480,6 +17883,10 @@ textarea.large\:input {
     stroke: var(--alga-pink);
   }
 
+.pink\:placeholder::placeholder {
+    color: var(--alga-pink);
+  }
+
 .pink-9 {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.9);
@@ -17540,6 +17947,10 @@ textarea.large\:input {
 
 .pink-9\:stroke {
     stroke: rgba(214, 51, 132, 0.9);
+  }
+
+.pink-9\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.9);
   }
 
 .pink-8 {
@@ -17604,6 +18015,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.8);
   }
 
+.pink-8\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.8);
+  }
+
 .pink-7 {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.7);
@@ -17664,6 +18079,10 @@ textarea.large\:input {
 
 .pink-7\:stroke {
     stroke: rgba(214, 51, 132, 0.7);
+  }
+
+.pink-7\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.7);
   }
 
 .pink-6 {
@@ -17728,6 +18147,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.6);
   }
 
+.pink-6\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.6);
+  }
+
 .pink-5 {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.5);
@@ -17788,6 +18211,10 @@ textarea.large\:input {
 
 .pink-5\:stroke {
     stroke: rgba(214, 51, 132, 0.5);
+  }
+
+.pink-5\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.5);
   }
 
 .pink-4 {
@@ -17852,6 +18279,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.4);
   }
 
+.pink-4\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.4);
+  }
+
 .pink-3 {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.3);
@@ -17912,6 +18343,10 @@ textarea.large\:input {
 
 .pink-3\:stroke {
     stroke: rgba(214, 51, 132, 0.3);
+  }
+
+.pink-3\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.3);
   }
 
 .pink-2 {
@@ -17976,6 +18411,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.2);
   }
 
+.pink-2\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.2);
+  }
+
 .pink-1 {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.1);
@@ -18036,6 +18475,10 @@ textarea.large\:input {
 
 .pink-1\:stroke {
     stroke: rgba(214, 51, 132, 0.1);
+  }
+
+.pink-1\:placeholder::placeholder {
+    color: rgba(214, 51, 132, 0.1);
   }
 
 .red {
@@ -18100,6 +18543,10 @@ textarea.large\:input {
     stroke: var(--alga-red);
   }
 
+.red\:placeholder::placeholder {
+    color: var(--alga-red);
+  }
+
 .red-9 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.9);
@@ -18160,6 +18607,10 @@ textarea.large\:input {
 
 .red-9\:stroke {
     stroke: rgba(220, 53, 69, 0.9);
+  }
+
+.red-9\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.9);
   }
 
 .red-8 {
@@ -18224,6 +18675,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.8);
   }
 
+.red-8\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.8);
+  }
+
 .red-7 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.7);
@@ -18284,6 +18739,10 @@ textarea.large\:input {
 
 .red-7\:stroke {
     stroke: rgba(220, 53, 69, 0.7);
+  }
+
+.red-7\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.7);
   }
 
 .red-6 {
@@ -18348,6 +18807,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.6);
   }
 
+.red-6\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.6);
+  }
+
 .red-5 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.5);
@@ -18408,6 +18871,10 @@ textarea.large\:input {
 
 .red-5\:stroke {
     stroke: rgba(220, 53, 69, 0.5);
+  }
+
+.red-5\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.5);
   }
 
 .red-4 {
@@ -18472,6 +18939,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.4);
   }
 
+.red-4\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.4);
+  }
+
 .red-3 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.3);
@@ -18532,6 +19003,10 @@ textarea.large\:input {
 
 .red-3\:stroke {
     stroke: rgba(220, 53, 69, 0.3);
+  }
+
+.red-3\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.3);
   }
 
 .red-2 {
@@ -18596,6 +19071,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.2);
   }
 
+.red-2\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.2);
+  }
+
 .red-1 {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.1);
@@ -18656,6 +19135,10 @@ textarea.large\:input {
 
 .red-1\:stroke {
     stroke: rgba(220, 53, 69, 0.1);
+  }
+
+.red-1\:placeholder::placeholder {
+    color: rgba(220, 53, 69, 0.1);
   }
 
 .orange {
@@ -18720,6 +19203,10 @@ textarea.large\:input {
     stroke: var(--alga-orange);
   }
 
+.orange\:placeholder::placeholder {
+    color: var(--alga-orange);
+  }
+
 .orange-9 {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.9);
@@ -18780,6 +19267,10 @@ textarea.large\:input {
 
 .orange-9\:stroke {
     stroke: rgba(253, 126, 20, 0.9);
+  }
+
+.orange-9\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.9);
   }
 
 .orange-8 {
@@ -18844,6 +19335,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.8);
   }
 
+.orange-8\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.8);
+  }
+
 .orange-7 {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.7);
@@ -18904,6 +19399,10 @@ textarea.large\:input {
 
 .orange-7\:stroke {
     stroke: rgba(253, 126, 20, 0.7);
+  }
+
+.orange-7\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.7);
   }
 
 .orange-6 {
@@ -18968,6 +19467,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.6);
   }
 
+.orange-6\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.6);
+  }
+
 .orange-5 {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.5);
@@ -19028,6 +19531,10 @@ textarea.large\:input {
 
 .orange-5\:stroke {
     stroke: rgba(253, 126, 20, 0.5);
+  }
+
+.orange-5\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.5);
   }
 
 .orange-4 {
@@ -19092,6 +19599,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.4);
   }
 
+.orange-4\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.4);
+  }
+
 .orange-3 {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.3);
@@ -19152,6 +19663,10 @@ textarea.large\:input {
 
 .orange-3\:stroke {
     stroke: rgba(253, 126, 20, 0.3);
+  }
+
+.orange-3\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.3);
   }
 
 .orange-2 {
@@ -19216,6 +19731,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.2);
   }
 
+.orange-2\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.2);
+  }
+
 .orange-1 {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.1);
@@ -19276,6 +19795,10 @@ textarea.large\:input {
 
 .orange-1\:stroke {
     stroke: rgba(253, 126, 20, 0.1);
+  }
+
+.orange-1\:placeholder::placeholder {
+    color: rgba(253, 126, 20, 0.1);
   }
 
 .yellow {
@@ -19340,6 +19863,10 @@ textarea.large\:input {
     stroke: var(--alga-yellow);
   }
 
+.yellow\:placeholder::placeholder {
+    color: var(--alga-yellow);
+  }
+
 .yellow-9 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.9);
@@ -19400,6 +19927,10 @@ textarea.large\:input {
 
 .yellow-9\:stroke {
     stroke: rgba(255, 193, 7, 0.9);
+  }
+
+.yellow-9\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.9);
   }
 
 .yellow-8 {
@@ -19464,6 +19995,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.8);
   }
 
+.yellow-8\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.8);
+  }
+
 .yellow-7 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.7);
@@ -19524,6 +20059,10 @@ textarea.large\:input {
 
 .yellow-7\:stroke {
     stroke: rgba(255, 193, 7, 0.7);
+  }
+
+.yellow-7\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.7);
   }
 
 .yellow-6 {
@@ -19588,6 +20127,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.6);
   }
 
+.yellow-6\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.6);
+  }
+
 .yellow-5 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.5);
@@ -19648,6 +20191,10 @@ textarea.large\:input {
 
 .yellow-5\:stroke {
     stroke: rgba(255, 193, 7, 0.5);
+  }
+
+.yellow-5\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.5);
   }
 
 .yellow-4 {
@@ -19712,6 +20259,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.4);
   }
 
+.yellow-4\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.4);
+  }
+
 .yellow-3 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.3);
@@ -19772,6 +20323,10 @@ textarea.large\:input {
 
 .yellow-3\:stroke {
     stroke: rgba(255, 193, 7, 0.3);
+  }
+
+.yellow-3\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.3);
   }
 
 .yellow-2 {
@@ -19836,6 +20391,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.2);
   }
 
+.yellow-2\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.2);
+  }
+
 .yellow-1 {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.1);
@@ -19896,6 +20455,10 @@ textarea.large\:input {
 
 .yellow-1\:stroke {
     stroke: rgba(255, 193, 7, 0.1);
+  }
+
+.yellow-1\:placeholder::placeholder {
+    color: rgba(255, 193, 7, 0.1);
   }
 
 .green {
@@ -19960,6 +20523,10 @@ textarea.large\:input {
     stroke: var(--alga-green);
   }
 
+.green\:placeholder::placeholder {
+    color: var(--alga-green);
+  }
+
 .green-9 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.9);
@@ -20020,6 +20587,10 @@ textarea.large\:input {
 
 .green-9\:stroke {
     stroke: rgba(25, 135, 84, 0.9);
+  }
+
+.green-9\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.9);
   }
 
 .green-8 {
@@ -20084,6 +20655,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.8);
   }
 
+.green-8\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.8);
+  }
+
 .green-7 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.7);
@@ -20144,6 +20719,10 @@ textarea.large\:input {
 
 .green-7\:stroke {
     stroke: rgba(25, 135, 84, 0.7);
+  }
+
+.green-7\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.7);
   }
 
 .green-6 {
@@ -20208,6 +20787,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.6);
   }
 
+.green-6\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.6);
+  }
+
 .green-5 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.5);
@@ -20268,6 +20851,10 @@ textarea.large\:input {
 
 .green-5\:stroke {
     stroke: rgba(25, 135, 84, 0.5);
+  }
+
+.green-5\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.5);
   }
 
 .green-4 {
@@ -20332,6 +20919,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.4);
   }
 
+.green-4\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.4);
+  }
+
 .green-3 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.3);
@@ -20392,6 +20983,10 @@ textarea.large\:input {
 
 .green-3\:stroke {
     stroke: rgba(25, 135, 84, 0.3);
+  }
+
+.green-3\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.3);
   }
 
 .green-2 {
@@ -20456,6 +21051,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.2);
   }
 
+.green-2\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.2);
+  }
+
 .green-1 {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.1);
@@ -20516,6 +21115,10 @@ textarea.large\:input {
 
 .green-1\:stroke {
     stroke: rgba(25, 135, 84, 0.1);
+  }
+
+.green-1\:placeholder::placeholder {
+    color: rgba(25, 135, 84, 0.1);
   }
 
 .teal {
@@ -20580,6 +21183,10 @@ textarea.large\:input {
     stroke: var(--alga-teal);
   }
 
+.teal\:placeholder::placeholder {
+    color: var(--alga-teal);
+  }
+
 .teal-9 {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.9);
@@ -20640,6 +21247,10 @@ textarea.large\:input {
 
 .teal-9\:stroke {
     stroke: rgba(32, 201, 151, 0.9);
+  }
+
+.teal-9\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.9);
   }
 
 .teal-8 {
@@ -20704,6 +21315,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.8);
   }
 
+.teal-8\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.8);
+  }
+
 .teal-7 {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.7);
@@ -20764,6 +21379,10 @@ textarea.large\:input {
 
 .teal-7\:stroke {
     stroke: rgba(32, 201, 151, 0.7);
+  }
+
+.teal-7\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.7);
   }
 
 .teal-6 {
@@ -20828,6 +21447,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.6);
   }
 
+.teal-6\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.6);
+  }
+
 .teal-5 {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.5);
@@ -20888,6 +21511,10 @@ textarea.large\:input {
 
 .teal-5\:stroke {
     stroke: rgba(32, 201, 151, 0.5);
+  }
+
+.teal-5\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.5);
   }
 
 .teal-4 {
@@ -20952,6 +21579,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.4);
   }
 
+.teal-4\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.4);
+  }
+
 .teal-3 {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.3);
@@ -21012,6 +21643,10 @@ textarea.large\:input {
 
 .teal-3\:stroke {
     stroke: rgba(32, 201, 151, 0.3);
+  }
+
+.teal-3\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.3);
   }
 
 .teal-2 {
@@ -21076,6 +21711,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.2);
   }
 
+.teal-2\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.2);
+  }
+
 .teal-1 {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.1);
@@ -21136,6 +21775,10 @@ textarea.large\:input {
 
 .teal-1\:stroke {
     stroke: rgba(32, 201, 151, 0.1);
+  }
+
+.teal-1\:placeholder::placeholder {
+    color: rgba(32, 201, 151, 0.1);
   }
 
 .cyan {
@@ -21200,6 +21843,10 @@ textarea.large\:input {
     stroke: var(--alga-cyan);
   }
 
+.cyan\:placeholder::placeholder {
+    color: var(--alga-cyan);
+  }
+
 .cyan-9 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.9);
@@ -21260,6 +21907,10 @@ textarea.large\:input {
 
 .cyan-9\:stroke {
     stroke: rgba(13, 202, 240, 0.9);
+  }
+
+.cyan-9\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.9);
   }
 
 .cyan-8 {
@@ -21324,6 +21975,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.8);
   }
 
+.cyan-8\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.8);
+  }
+
 .cyan-7 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.7);
@@ -21384,6 +22039,10 @@ textarea.large\:input {
 
 .cyan-7\:stroke {
     stroke: rgba(13, 202, 240, 0.7);
+  }
+
+.cyan-7\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.7);
   }
 
 .cyan-6 {
@@ -21448,6 +22107,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.6);
   }
 
+.cyan-6\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.6);
+  }
+
 .cyan-5 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.5);
@@ -21508,6 +22171,10 @@ textarea.large\:input {
 
 .cyan-5\:stroke {
     stroke: rgba(13, 202, 240, 0.5);
+  }
+
+.cyan-5\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.5);
   }
 
 .cyan-4 {
@@ -21572,6 +22239,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.4);
   }
 
+.cyan-4\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.4);
+  }
+
 .cyan-3 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.3);
@@ -21632,6 +22303,10 @@ textarea.large\:input {
 
 .cyan-3\:stroke {
     stroke: rgba(13, 202, 240, 0.3);
+  }
+
+.cyan-3\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.3);
   }
 
 .cyan-2 {
@@ -21696,6 +22371,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.2);
   }
 
+.cyan-2\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.2);
+  }
+
 .cyan-1 {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.1);
@@ -21756,6 +22435,10 @@ textarea.large\:input {
 
 .cyan-1\:stroke {
     stroke: rgba(13, 202, 240, 0.1);
+  }
+
+.cyan-1\:placeholder::placeholder {
+    color: rgba(13, 202, 240, 0.1);
   }
 
 .gray {
@@ -21820,6 +22503,10 @@ textarea.large\:input {
     stroke: var(--alga-gray);
   }
 
+.gray\:placeholder::placeholder {
+    color: var(--alga-gray);
+  }
+
 .gray-9 {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.9);
@@ -21880,6 +22567,10 @@ textarea.large\:input {
 
 .gray-9\:stroke {
     stroke: rgba(108, 117, 125, 0.9);
+  }
+
+.gray-9\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.9);
   }
 
 .gray-8 {
@@ -21944,6 +22635,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.8);
   }
 
+.gray-8\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.8);
+  }
+
 .gray-7 {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.7);
@@ -22004,6 +22699,10 @@ textarea.large\:input {
 
 .gray-7\:stroke {
     stroke: rgba(108, 117, 125, 0.7);
+  }
+
+.gray-7\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.7);
   }
 
 .gray-6 {
@@ -22068,6 +22767,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.6);
   }
 
+.gray-6\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.6);
+  }
+
 .gray-5 {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.5);
@@ -22128,6 +22831,10 @@ textarea.large\:input {
 
 .gray-5\:stroke {
     stroke: rgba(108, 117, 125, 0.5);
+  }
+
+.gray-5\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.5);
   }
 
 .gray-4 {
@@ -22192,6 +22899,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.4);
   }
 
+.gray-4\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.4);
+  }
+
 .gray-3 {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.3);
@@ -22252,6 +22963,10 @@ textarea.large\:input {
 
 .gray-3\:stroke {
     stroke: rgba(108, 117, 125, 0.3);
+  }
+
+.gray-3\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.3);
   }
 
 .gray-2 {
@@ -22316,6 +23031,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.2);
   }
 
+.gray-2\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.2);
+  }
+
 .gray-1 {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.1);
@@ -22376,6 +23095,10 @@ textarea.large\:input {
 
 .gray-1\:stroke {
     stroke: rgba(108, 117, 125, 0.1);
+  }
+
+.gray-1\:placeholder::placeholder {
+    color: rgba(108, 117, 125, 0.1);
   }
 
 .transparent {
@@ -22440,6 +23163,10 @@ textarea.large\:input {
     stroke: var(--alga-transparent);
   }
 
+.transparent\:placeholder::placeholder {
+    color: var(--alga-transparent);
+  }
+
 .current {
     color: var(--alga-black);
     background-color: var(--alga-currentColor);
@@ -22500,6 +23227,10 @@ textarea.large\:input {
 
 .current\:stroke {
     stroke: var(--alga-currentColor);
+  }
+
+.current\:placeholder::placeholder {
+    color: var(--alga-currentColor);
   }
 
 .custom {
@@ -22564,6 +23295,10 @@ textarea.large\:input {
     stroke: var(--alga-background);
   }
 
+.custom\:placeholder::placeholder {
+    color: var(--alga-background);
+  }
+
 .hover\?primary:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 1);
@@ -22624,6 +23359,10 @@ textarea.large\:input {
 
 .hover\?primary\:stroke:hover {
     stroke: rgba(13, 110, 253, 1);
+  }
+
+.hover\?primary\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 1);
   }
 
 .hover\?primary-9:hover {
@@ -22688,6 +23427,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.9);
   }
 
+.hover\?primary-9\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.9);
+  }
+
 .hover\?primary-8:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.8);
@@ -22748,6 +23491,10 @@ textarea.large\:input {
 
 .hover\?primary-8\:stroke:hover {
     stroke: rgba(13, 110, 253, 0.8);
+  }
+
+.hover\?primary-8\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.8);
   }
 
 .hover\?primary-7:hover {
@@ -22812,6 +23559,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.7);
   }
 
+.hover\?primary-7\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.7);
+  }
+
 .hover\?primary-6:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.6);
@@ -22872,6 +23623,10 @@ textarea.large\:input {
 
 .hover\?primary-6\:stroke:hover {
     stroke: rgba(13, 110, 253, 0.6);
+  }
+
+.hover\?primary-6\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.6);
   }
 
 .hover\?primary-5:hover {
@@ -22936,6 +23691,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.5);
   }
 
+.hover\?primary-5\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.5);
+  }
+
 .hover\?primary-4:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.4);
@@ -22996,6 +23755,10 @@ textarea.large\:input {
 
 .hover\?primary-4\:stroke:hover {
     stroke: rgba(13, 110, 253, 0.4);
+  }
+
+.hover\?primary-4\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.4);
   }
 
 .hover\?primary-3:hover {
@@ -23060,6 +23823,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.3);
   }
 
+.hover\?primary-3\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.3);
+  }
+
 .hover\?primary-2:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.2);
@@ -23120,6 +23887,10 @@ textarea.large\:input {
 
 .hover\?primary-2\:stroke:hover {
     stroke: rgba(13, 110, 253, 0.2);
+  }
+
+.hover\?primary-2\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.2);
   }
 
 .hover\?primary-1:hover {
@@ -23184,6 +23955,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.1);
   }
 
+.hover\?primary-1\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.1);
+  }
+
 .hover\?secondary:hover {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 1);
@@ -23244,6 +24019,10 @@ textarea.large\:input {
 
 .hover\?secondary\:stroke:hover {
     stroke: rgba(108, 117, 125, 1);
+  }
+
+.hover\?secondary\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 1);
   }
 
 .hover\?secondary-9:hover {
@@ -23308,6 +24087,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.9);
   }
 
+.hover\?secondary-9\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.9);
+  }
+
 .hover\?secondary-8:hover {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.8);
@@ -23368,6 +24151,10 @@ textarea.large\:input {
 
 .hover\?secondary-8\:stroke:hover {
     stroke: rgba(108, 117, 125, 0.8);
+  }
+
+.hover\?secondary-8\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.8);
   }
 
 .hover\?secondary-7:hover {
@@ -23432,6 +24219,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.7);
   }
 
+.hover\?secondary-7\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.7);
+  }
+
 .hover\?secondary-6:hover {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.6);
@@ -23492,6 +24283,10 @@ textarea.large\:input {
 
 .hover\?secondary-6\:stroke:hover {
     stroke: rgba(108, 117, 125, 0.6);
+  }
+
+.hover\?secondary-6\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.6);
   }
 
 .hover\?secondary-5:hover {
@@ -23556,6 +24351,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.5);
   }
 
+.hover\?secondary-5\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.5);
+  }
+
 .hover\?secondary-4:hover {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.4);
@@ -23616,6 +24415,10 @@ textarea.large\:input {
 
 .hover\?secondary-4\:stroke:hover {
     stroke: rgba(108, 117, 125, 0.4);
+  }
+
+.hover\?secondary-4\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.4);
   }
 
 .hover\?secondary-3:hover {
@@ -23680,6 +24483,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.3);
   }
 
+.hover\?secondary-3\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.3);
+  }
+
 .hover\?secondary-2:hover {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.2);
@@ -23740,6 +24547,10 @@ textarea.large\:input {
 
 .hover\?secondary-2\:stroke:hover {
     stroke: rgba(108, 117, 125, 0.2);
+  }
+
+.hover\?secondary-2\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.2);
   }
 
 .hover\?secondary-1:hover {
@@ -23804,6 +24615,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.1);
   }
 
+.hover\?secondary-1\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.1);
+  }
+
 .hover\?accent:hover {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 1);
@@ -23864,6 +24679,10 @@ textarea.large\:input {
 
 .hover\?accent\:stroke:hover {
     stroke: rgba(179, 27, 148, 1);
+  }
+
+.hover\?accent\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 1);
   }
 
 .hover\?accent-9:hover {
@@ -23928,6 +24747,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.9);
   }
 
+.hover\?accent-9\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.9);
+  }
+
 .hover\?accent-8:hover {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.8);
@@ -23988,6 +24811,10 @@ textarea.large\:input {
 
 .hover\?accent-8\:stroke:hover {
     stroke: rgba(179, 27, 148, 0.8);
+  }
+
+.hover\?accent-8\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.8);
   }
 
 .hover\?accent-7:hover {
@@ -24052,6 +24879,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.7);
   }
 
+.hover\?accent-7\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.7);
+  }
+
 .hover\?accent-6:hover {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.6);
@@ -24112,6 +24943,10 @@ textarea.large\:input {
 
 .hover\?accent-6\:stroke:hover {
     stroke: rgba(179, 27, 148, 0.6);
+  }
+
+.hover\?accent-6\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.6);
   }
 
 .hover\?accent-5:hover {
@@ -24176,6 +25011,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.5);
   }
 
+.hover\?accent-5\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.5);
+  }
+
 .hover\?accent-4:hover {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.4);
@@ -24236,6 +25075,10 @@ textarea.large\:input {
 
 .hover\?accent-4\:stroke:hover {
     stroke: rgba(179, 27, 148, 0.4);
+  }
+
+.hover\?accent-4\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.4);
   }
 
 .hover\?accent-3:hover {
@@ -24300,6 +25143,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.3);
   }
 
+.hover\?accent-3\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.3);
+  }
+
 .hover\?accent-2:hover {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.2);
@@ -24360,6 +25207,10 @@ textarea.large\:input {
 
 .hover\?accent-2\:stroke:hover {
     stroke: rgba(179, 27, 148, 0.2);
+  }
+
+.hover\?accent-2\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.2);
   }
 
 .hover\?accent-1:hover {
@@ -24424,6 +25275,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.1);
   }
 
+.hover\?accent-1\:placeholder:hover::placeholder {
+    color: rgba(179, 27, 148, 0.1);
+  }
+
 .hover\?success:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 1);
@@ -24484,6 +25339,10 @@ textarea.large\:input {
 
 .hover\?success\:stroke:hover {
     stroke: rgba(25, 135, 84, 1);
+  }
+
+.hover\?success\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 1);
   }
 
 .hover\?success-9:hover {
@@ -24548,6 +25407,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.9);
   }
 
+.hover\?success-9\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.9);
+  }
+
 .hover\?success-8:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.8);
@@ -24608,6 +25471,10 @@ textarea.large\:input {
 
 .hover\?success-8\:stroke:hover {
     stroke: rgba(25, 135, 84, 0.8);
+  }
+
+.hover\?success-8\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.8);
   }
 
 .hover\?success-7:hover {
@@ -24672,6 +25539,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.7);
   }
 
+.hover\?success-7\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.7);
+  }
+
 .hover\?success-6:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.6);
@@ -24732,6 +25603,10 @@ textarea.large\:input {
 
 .hover\?success-6\:stroke:hover {
     stroke: rgba(25, 135, 84, 0.6);
+  }
+
+.hover\?success-6\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.6);
   }
 
 .hover\?success-5:hover {
@@ -24796,6 +25671,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.5);
   }
 
+.hover\?success-5\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.5);
+  }
+
 .hover\?success-4:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.4);
@@ -24856,6 +25735,10 @@ textarea.large\:input {
 
 .hover\?success-4\:stroke:hover {
     stroke: rgba(25, 135, 84, 0.4);
+  }
+
+.hover\?success-4\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.4);
   }
 
 .hover\?success-3:hover {
@@ -24920,6 +25803,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.3);
   }
 
+.hover\?success-3\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.3);
+  }
+
 .hover\?success-2:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.2);
@@ -24980,6 +25867,10 @@ textarea.large\:input {
 
 .hover\?success-2\:stroke:hover {
     stroke: rgba(25, 135, 84, 0.2);
+  }
+
+.hover\?success-2\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.2);
   }
 
 .hover\?success-1:hover {
@@ -25044,6 +25935,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.1);
   }
 
+.hover\?success-1\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.1);
+  }
+
 .hover\?info:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 1);
@@ -25104,6 +25999,10 @@ textarea.large\:input {
 
 .hover\?info\:stroke:hover {
     stroke: rgba(13, 202, 240, 1);
+  }
+
+.hover\?info\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 1);
   }
 
 .hover\?info-9:hover {
@@ -25168,6 +26067,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.9);
   }
 
+.hover\?info-9\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.9);
+  }
+
 .hover\?info-8:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.8);
@@ -25228,6 +26131,10 @@ textarea.large\:input {
 
 .hover\?info-8\:stroke:hover {
     stroke: rgba(13, 202, 240, 0.8);
+  }
+
+.hover\?info-8\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.8);
   }
 
 .hover\?info-7:hover {
@@ -25292,6 +26199,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.7);
   }
 
+.hover\?info-7\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.7);
+  }
+
 .hover\?info-6:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.6);
@@ -25352,6 +26263,10 @@ textarea.large\:input {
 
 .hover\?info-6\:stroke:hover {
     stroke: rgba(13, 202, 240, 0.6);
+  }
+
+.hover\?info-6\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.6);
   }
 
 .hover\?info-5:hover {
@@ -25416,6 +26331,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.5);
   }
 
+.hover\?info-5\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.5);
+  }
+
 .hover\?info-4:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.4);
@@ -25476,6 +26395,10 @@ textarea.large\:input {
 
 .hover\?info-4\:stroke:hover {
     stroke: rgba(13, 202, 240, 0.4);
+  }
+
+.hover\?info-4\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.4);
   }
 
 .hover\?info-3:hover {
@@ -25540,6 +26463,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.3);
   }
 
+.hover\?info-3\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.3);
+  }
+
 .hover\?info-2:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.2);
@@ -25600,6 +26527,10 @@ textarea.large\:input {
 
 .hover\?info-2\:stroke:hover {
     stroke: rgba(13, 202, 240, 0.2);
+  }
+
+.hover\?info-2\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.2);
   }
 
 .hover\?info-1:hover {
@@ -25664,6 +26595,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.1);
   }
 
+.hover\?info-1\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.1);
+  }
+
 .hover\?warning:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 1);
@@ -25724,6 +26659,10 @@ textarea.large\:input {
 
 .hover\?warning\:stroke:hover {
     stroke: rgba(255, 193, 7, 1);
+  }
+
+.hover\?warning\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 1);
   }
 
 .hover\?warning-9:hover {
@@ -25788,6 +26727,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.9);
   }
 
+.hover\?warning-9\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.9);
+  }
+
 .hover\?warning-8:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.8);
@@ -25848,6 +26791,10 @@ textarea.large\:input {
 
 .hover\?warning-8\:stroke:hover {
     stroke: rgba(255, 193, 7, 0.8);
+  }
+
+.hover\?warning-8\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.8);
   }
 
 .hover\?warning-7:hover {
@@ -25912,6 +26859,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.7);
   }
 
+.hover\?warning-7\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.7);
+  }
+
 .hover\?warning-6:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.6);
@@ -25972,6 +26923,10 @@ textarea.large\:input {
 
 .hover\?warning-6\:stroke:hover {
     stroke: rgba(255, 193, 7, 0.6);
+  }
+
+.hover\?warning-6\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.6);
   }
 
 .hover\?warning-5:hover {
@@ -26036,6 +26991,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.5);
   }
 
+.hover\?warning-5\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.5);
+  }
+
 .hover\?warning-4:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.4);
@@ -26096,6 +27055,10 @@ textarea.large\:input {
 
 .hover\?warning-4\:stroke:hover {
     stroke: rgba(255, 193, 7, 0.4);
+  }
+
+.hover\?warning-4\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.4);
   }
 
 .hover\?warning-3:hover {
@@ -26160,6 +27123,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.3);
   }
 
+.hover\?warning-3\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.3);
+  }
+
 .hover\?warning-2:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.2);
@@ -26220,6 +27187,10 @@ textarea.large\:input {
 
 .hover\?warning-2\:stroke:hover {
     stroke: rgba(255, 193, 7, 0.2);
+  }
+
+.hover\?warning-2\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.2);
   }
 
 .hover\?warning-1:hover {
@@ -26284,6 +27255,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.1);
   }
 
+.hover\?warning-1\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.1);
+  }
+
 .hover\?danger:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 1);
@@ -26344,6 +27319,10 @@ textarea.large\:input {
 
 .hover\?danger\:stroke:hover {
     stroke: rgba(220, 53, 69, 1);
+  }
+
+.hover\?danger\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 1);
   }
 
 .hover\?danger-9:hover {
@@ -26408,6 +27387,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.9);
   }
 
+.hover\?danger-9\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.9);
+  }
+
 .hover\?danger-8:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.8);
@@ -26468,6 +27451,10 @@ textarea.large\:input {
 
 .hover\?danger-8\:stroke:hover {
     stroke: rgba(220, 53, 69, 0.8);
+  }
+
+.hover\?danger-8\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.8);
   }
 
 .hover\?danger-7:hover {
@@ -26532,6 +27519,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.7);
   }
 
+.hover\?danger-7\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.7);
+  }
+
 .hover\?danger-6:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.6);
@@ -26592,6 +27583,10 @@ textarea.large\:input {
 
 .hover\?danger-6\:stroke:hover {
     stroke: rgba(220, 53, 69, 0.6);
+  }
+
+.hover\?danger-6\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.6);
   }
 
 .hover\?danger-5:hover {
@@ -26656,6 +27651,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.5);
   }
 
+.hover\?danger-5\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.5);
+  }
+
 .hover\?danger-4:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.4);
@@ -26716,6 +27715,10 @@ textarea.large\:input {
 
 .hover\?danger-4\:stroke:hover {
     stroke: rgba(220, 53, 69, 0.4);
+  }
+
+.hover\?danger-4\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.4);
   }
 
 .hover\?danger-3:hover {
@@ -26780,6 +27783,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.3);
   }
 
+.hover\?danger-3\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.3);
+  }
+
 .hover\?danger-2:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.2);
@@ -26840,6 +27847,10 @@ textarea.large\:input {
 
 .hover\?danger-2\:stroke:hover {
     stroke: rgba(220, 53, 69, 0.2);
+  }
+
+.hover\?danger-2\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.2);
   }
 
 .hover\?danger-1:hover {
@@ -26904,6 +27915,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.1);
   }
 
+.hover\?danger-1\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.1);
+  }
+
 .hover\?black:hover {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 1);
@@ -26964,6 +27979,10 @@ textarea.large\:input {
 
 .hover\?black\:stroke:hover {
     stroke: rgba(0, 0, 0, 1);
+  }
+
+.hover\?black\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 1);
   }
 
 .hover\?black-9:hover {
@@ -27028,6 +28047,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.9);
   }
 
+.hover\?black-9\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.9);
+  }
+
 .hover\?black-8:hover {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.8);
@@ -27088,6 +28111,10 @@ textarea.large\:input {
 
 .hover\?black-8\:stroke:hover {
     stroke: rgba(0, 0, 0, 0.8);
+  }
+
+.hover\?black-8\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.8);
   }
 
 .hover\?black-7:hover {
@@ -27152,6 +28179,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.7);
   }
 
+.hover\?black-7\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
 .hover\?black-6:hover {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.6);
@@ -27212,6 +28243,10 @@ textarea.large\:input {
 
 .hover\?black-6\:stroke:hover {
     stroke: rgba(0, 0, 0, 0.6);
+  }
+
+.hover\?black-6\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.6);
   }
 
 .hover\?black-5:hover {
@@ -27276,6 +28311,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.5);
   }
 
+.hover\?black-5\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
 .hover\?black-4:hover {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.4);
@@ -27336,6 +28375,10 @@ textarea.large\:input {
 
 .hover\?black-4\:stroke:hover {
     stroke: rgba(0, 0, 0, 0.4);
+  }
+
+.hover\?black-4\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.4);
   }
 
 .hover\?black-3:hover {
@@ -27400,6 +28443,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.3);
   }
 
+.hover\?black-3\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
 .hover\?black-2:hover {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.2);
@@ -27460,6 +28507,10 @@ textarea.large\:input {
 
 .hover\?black-2\:stroke:hover {
     stroke: rgba(0, 0, 0, 0.2);
+  }
+
+.hover\?black-2\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.2);
   }
 
 .hover\?black-1:hover {
@@ -27524,6 +28575,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.1);
   }
 
+.hover\?black-1\:placeholder:hover::placeholder {
+    color: rgba(0, 0, 0, 0.1);
+  }
+
 .hover\?white:hover {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 1);
@@ -27584,6 +28639,10 @@ textarea.large\:input {
 
 .hover\?white\:stroke:hover {
     stroke: rgba(255, 255, 255, 1);
+  }
+
+.hover\?white\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 1);
   }
 
 .hover\?white-9:hover {
@@ -27648,6 +28707,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.9);
   }
 
+.hover\?white-9\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
 .hover\?white-8:hover {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.8);
@@ -27708,6 +28771,10 @@ textarea.large\:input {
 
 .hover\?white-8\:stroke:hover {
     stroke: rgba(255, 255, 255, 0.8);
+  }
+
+.hover\?white-8\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.8);
   }
 
 .hover\?white-7:hover {
@@ -27772,6 +28839,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.7);
   }
 
+.hover\?white-7\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
 .hover\?white-6:hover {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.6);
@@ -27832,6 +28903,10 @@ textarea.large\:input {
 
 .hover\?white-6\:stroke:hover {
     stroke: rgba(255, 255, 255, 0.6);
+  }
+
+.hover\?white-6\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.6);
   }
 
 .hover\?white-5:hover {
@@ -27896,6 +28971,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.5);
   }
 
+.hover\?white-5\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
 .hover\?white-4:hover {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.4);
@@ -27956,6 +29035,10 @@ textarea.large\:input {
 
 .hover\?white-4\:stroke:hover {
     stroke: rgba(255, 255, 255, 0.4);
+  }
+
+.hover\?white-4\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.4);
   }
 
 .hover\?white-3:hover {
@@ -28020,6 +29103,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.3);
   }
 
+.hover\?white-3\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
 .hover\?white-2:hover {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.2);
@@ -28080,6 +29167,10 @@ textarea.large\:input {
 
 .hover\?white-2\:stroke:hover {
     stroke: rgba(255, 255, 255, 0.2);
+  }
+
+.hover\?white-2\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.2);
   }
 
 .hover\?white-1:hover {
@@ -28144,6 +29235,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.1);
   }
 
+.hover\?white-1\:placeholder:hover::placeholder {
+    color: rgba(255, 255, 255, 0.1);
+  }
+
 .hover\?blue:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 1);
@@ -28204,6 +29299,10 @@ textarea.large\:input {
 
 .hover\?blue\:stroke:hover {
     stroke: rgba(13, 110, 253, 1);
+  }
+
+.hover\?blue\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 1);
   }
 
 .hover\?blue-9:hover {
@@ -28268,6 +29367,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.9);
   }
 
+.hover\?blue-9\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.9);
+  }
+
 .hover\?blue-8:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.8);
@@ -28328,6 +29431,10 @@ textarea.large\:input {
 
 .hover\?blue-8\:stroke:hover {
     stroke: rgba(13, 110, 253, 0.8);
+  }
+
+.hover\?blue-8\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.8);
   }
 
 .hover\?blue-7:hover {
@@ -28392,6 +29499,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.7);
   }
 
+.hover\?blue-7\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.7);
+  }
+
 .hover\?blue-6:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.6);
@@ -28452,6 +29563,10 @@ textarea.large\:input {
 
 .hover\?blue-6\:stroke:hover {
     stroke: rgba(13, 110, 253, 0.6);
+  }
+
+.hover\?blue-6\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.6);
   }
 
 .hover\?blue-5:hover {
@@ -28516,6 +29631,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.5);
   }
 
+.hover\?blue-5\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.5);
+  }
+
 .hover\?blue-4:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.4);
@@ -28576,6 +29695,10 @@ textarea.large\:input {
 
 .hover\?blue-4\:stroke:hover {
     stroke: rgba(13, 110, 253, 0.4);
+  }
+
+.hover\?blue-4\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.4);
   }
 
 .hover\?blue-3:hover {
@@ -28640,6 +29763,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.3);
   }
 
+.hover\?blue-3\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.3);
+  }
+
 .hover\?blue-2:hover {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.2);
@@ -28700,6 +29827,10 @@ textarea.large\:input {
 
 .hover\?blue-2\:stroke:hover {
     stroke: rgba(13, 110, 253, 0.2);
+  }
+
+.hover\?blue-2\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.2);
   }
 
 .hover\?blue-1:hover {
@@ -28764,6 +29895,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.1);
   }
 
+.hover\?blue-1\:placeholder:hover::placeholder {
+    color: rgba(13, 110, 253, 0.1);
+  }
+
 .hover\?indigo:hover {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 1);
@@ -28824,6 +29959,10 @@ textarea.large\:input {
 
 .hover\?indigo\:stroke:hover {
     stroke: rgba(102, 16, 242, 1);
+  }
+
+.hover\?indigo\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 1);
   }
 
 .hover\?indigo-9:hover {
@@ -28888,6 +30027,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.9);
   }
 
+.hover\?indigo-9\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.9);
+  }
+
 .hover\?indigo-8:hover {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.8);
@@ -28948,6 +30091,10 @@ textarea.large\:input {
 
 .hover\?indigo-8\:stroke:hover {
     stroke: rgba(102, 16, 242, 0.8);
+  }
+
+.hover\?indigo-8\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.8);
   }
 
 .hover\?indigo-7:hover {
@@ -29012,6 +30159,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.7);
   }
 
+.hover\?indigo-7\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.7);
+  }
+
 .hover\?indigo-6:hover {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.6);
@@ -29072,6 +30223,10 @@ textarea.large\:input {
 
 .hover\?indigo-6\:stroke:hover {
     stroke: rgba(102, 16, 242, 0.6);
+  }
+
+.hover\?indigo-6\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.6);
   }
 
 .hover\?indigo-5:hover {
@@ -29136,6 +30291,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.5);
   }
 
+.hover\?indigo-5\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.5);
+  }
+
 .hover\?indigo-4:hover {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.4);
@@ -29196,6 +30355,10 @@ textarea.large\:input {
 
 .hover\?indigo-4\:stroke:hover {
     stroke: rgba(102, 16, 242, 0.4);
+  }
+
+.hover\?indigo-4\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.4);
   }
 
 .hover\?indigo-3:hover {
@@ -29260,6 +30423,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.3);
   }
 
+.hover\?indigo-3\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.3);
+  }
+
 .hover\?indigo-2:hover {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.2);
@@ -29320,6 +30487,10 @@ textarea.large\:input {
 
 .hover\?indigo-2\:stroke:hover {
     stroke: rgba(102, 16, 242, 0.2);
+  }
+
+.hover\?indigo-2\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.2);
   }
 
 .hover\?indigo-1:hover {
@@ -29384,6 +30555,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.1);
   }
 
+.hover\?indigo-1\:placeholder:hover::placeholder {
+    color: rgba(102, 16, 242, 0.1);
+  }
+
 .hover\?purple:hover {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 1);
@@ -29444,6 +30619,10 @@ textarea.large\:input {
 
 .hover\?purple\:stroke:hover {
     stroke: rgba(111, 66, 193, 1);
+  }
+
+.hover\?purple\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 1);
   }
 
 .hover\?purple-9:hover {
@@ -29508,6 +30687,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.9);
   }
 
+.hover\?purple-9\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.9);
+  }
+
 .hover\?purple-8:hover {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.8);
@@ -29568,6 +30751,10 @@ textarea.large\:input {
 
 .hover\?purple-8\:stroke:hover {
     stroke: rgba(111, 66, 193, 0.8);
+  }
+
+.hover\?purple-8\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.8);
   }
 
 .hover\?purple-7:hover {
@@ -29632,6 +30819,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.7);
   }
 
+.hover\?purple-7\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.7);
+  }
+
 .hover\?purple-6:hover {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.6);
@@ -29692,6 +30883,10 @@ textarea.large\:input {
 
 .hover\?purple-6\:stroke:hover {
     stroke: rgba(111, 66, 193, 0.6);
+  }
+
+.hover\?purple-6\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.6);
   }
 
 .hover\?purple-5:hover {
@@ -29756,6 +30951,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.5);
   }
 
+.hover\?purple-5\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.5);
+  }
+
 .hover\?purple-4:hover {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.4);
@@ -29816,6 +31015,10 @@ textarea.large\:input {
 
 .hover\?purple-4\:stroke:hover {
     stroke: rgba(111, 66, 193, 0.4);
+  }
+
+.hover\?purple-4\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.4);
   }
 
 .hover\?purple-3:hover {
@@ -29880,6 +31083,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.3);
   }
 
+.hover\?purple-3\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.3);
+  }
+
 .hover\?purple-2:hover {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.2);
@@ -29940,6 +31147,10 @@ textarea.large\:input {
 
 .hover\?purple-2\:stroke:hover {
     stroke: rgba(111, 66, 193, 0.2);
+  }
+
+.hover\?purple-2\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.2);
   }
 
 .hover\?purple-1:hover {
@@ -30004,6 +31215,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.1);
   }
 
+.hover\?purple-1\:placeholder:hover::placeholder {
+    color: rgba(111, 66, 193, 0.1);
+  }
+
 .hover\?pink:hover {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 1);
@@ -30064,6 +31279,10 @@ textarea.large\:input {
 
 .hover\?pink\:stroke:hover {
     stroke: rgba(214, 51, 132, 1);
+  }
+
+.hover\?pink\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 1);
   }
 
 .hover\?pink-9:hover {
@@ -30128,6 +31347,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.9);
   }
 
+.hover\?pink-9\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.9);
+  }
+
 .hover\?pink-8:hover {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.8);
@@ -30188,6 +31411,10 @@ textarea.large\:input {
 
 .hover\?pink-8\:stroke:hover {
     stroke: rgba(214, 51, 132, 0.8);
+  }
+
+.hover\?pink-8\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.8);
   }
 
 .hover\?pink-7:hover {
@@ -30252,6 +31479,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.7);
   }
 
+.hover\?pink-7\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.7);
+  }
+
 .hover\?pink-6:hover {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.6);
@@ -30312,6 +31543,10 @@ textarea.large\:input {
 
 .hover\?pink-6\:stroke:hover {
     stroke: rgba(214, 51, 132, 0.6);
+  }
+
+.hover\?pink-6\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.6);
   }
 
 .hover\?pink-5:hover {
@@ -30376,6 +31611,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.5);
   }
 
+.hover\?pink-5\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.5);
+  }
+
 .hover\?pink-4:hover {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.4);
@@ -30436,6 +31675,10 @@ textarea.large\:input {
 
 .hover\?pink-4\:stroke:hover {
     stroke: rgba(214, 51, 132, 0.4);
+  }
+
+.hover\?pink-4\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.4);
   }
 
 .hover\?pink-3:hover {
@@ -30500,6 +31743,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.3);
   }
 
+.hover\?pink-3\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.3);
+  }
+
 .hover\?pink-2:hover {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.2);
@@ -30560,6 +31807,10 @@ textarea.large\:input {
 
 .hover\?pink-2\:stroke:hover {
     stroke: rgba(214, 51, 132, 0.2);
+  }
+
+.hover\?pink-2\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.2);
   }
 
 .hover\?pink-1:hover {
@@ -30624,6 +31875,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.1);
   }
 
+.hover\?pink-1\:placeholder:hover::placeholder {
+    color: rgba(214, 51, 132, 0.1);
+  }
+
 .hover\?red:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 1);
@@ -30684,6 +31939,10 @@ textarea.large\:input {
 
 .hover\?red\:stroke:hover {
     stroke: rgba(220, 53, 69, 1);
+  }
+
+.hover\?red\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 1);
   }
 
 .hover\?red-9:hover {
@@ -30748,6 +32007,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.9);
   }
 
+.hover\?red-9\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.9);
+  }
+
 .hover\?red-8:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.8);
@@ -30808,6 +32071,10 @@ textarea.large\:input {
 
 .hover\?red-8\:stroke:hover {
     stroke: rgba(220, 53, 69, 0.8);
+  }
+
+.hover\?red-8\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.8);
   }
 
 .hover\?red-7:hover {
@@ -30872,6 +32139,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.7);
   }
 
+.hover\?red-7\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.7);
+  }
+
 .hover\?red-6:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.6);
@@ -30932,6 +32203,10 @@ textarea.large\:input {
 
 .hover\?red-6\:stroke:hover {
     stroke: rgba(220, 53, 69, 0.6);
+  }
+
+.hover\?red-6\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.6);
   }
 
 .hover\?red-5:hover {
@@ -30996,6 +32271,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.5);
   }
 
+.hover\?red-5\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.5);
+  }
+
 .hover\?red-4:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.4);
@@ -31056,6 +32335,10 @@ textarea.large\:input {
 
 .hover\?red-4\:stroke:hover {
     stroke: rgba(220, 53, 69, 0.4);
+  }
+
+.hover\?red-4\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.4);
   }
 
 .hover\?red-3:hover {
@@ -31120,6 +32403,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.3);
   }
 
+.hover\?red-3\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.3);
+  }
+
 .hover\?red-2:hover {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.2);
@@ -31180,6 +32467,10 @@ textarea.large\:input {
 
 .hover\?red-2\:stroke:hover {
     stroke: rgba(220, 53, 69, 0.2);
+  }
+
+.hover\?red-2\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.2);
   }
 
 .hover\?red-1:hover {
@@ -31244,6 +32535,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.1);
   }
 
+.hover\?red-1\:placeholder:hover::placeholder {
+    color: rgba(220, 53, 69, 0.1);
+  }
+
 .hover\?orange:hover {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 1);
@@ -31304,6 +32599,10 @@ textarea.large\:input {
 
 .hover\?orange\:stroke:hover {
     stroke: rgba(253, 126, 20, 1);
+  }
+
+.hover\?orange\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 1);
   }
 
 .hover\?orange-9:hover {
@@ -31368,6 +32667,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.9);
   }
 
+.hover\?orange-9\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.9);
+  }
+
 .hover\?orange-8:hover {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.8);
@@ -31428,6 +32731,10 @@ textarea.large\:input {
 
 .hover\?orange-8\:stroke:hover {
     stroke: rgba(253, 126, 20, 0.8);
+  }
+
+.hover\?orange-8\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.8);
   }
 
 .hover\?orange-7:hover {
@@ -31492,6 +32799,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.7);
   }
 
+.hover\?orange-7\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.7);
+  }
+
 .hover\?orange-6:hover {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.6);
@@ -31552,6 +32863,10 @@ textarea.large\:input {
 
 .hover\?orange-6\:stroke:hover {
     stroke: rgba(253, 126, 20, 0.6);
+  }
+
+.hover\?orange-6\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.6);
   }
 
 .hover\?orange-5:hover {
@@ -31616,6 +32931,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.5);
   }
 
+.hover\?orange-5\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.5);
+  }
+
 .hover\?orange-4:hover {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.4);
@@ -31676,6 +32995,10 @@ textarea.large\:input {
 
 .hover\?orange-4\:stroke:hover {
     stroke: rgba(253, 126, 20, 0.4);
+  }
+
+.hover\?orange-4\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.4);
   }
 
 .hover\?orange-3:hover {
@@ -31740,6 +33063,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.3);
   }
 
+.hover\?orange-3\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.3);
+  }
+
 .hover\?orange-2:hover {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.2);
@@ -31800,6 +33127,10 @@ textarea.large\:input {
 
 .hover\?orange-2\:stroke:hover {
     stroke: rgba(253, 126, 20, 0.2);
+  }
+
+.hover\?orange-2\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.2);
   }
 
 .hover\?orange-1:hover {
@@ -31864,6 +33195,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.1);
   }
 
+.hover\?orange-1\:placeholder:hover::placeholder {
+    color: rgba(253, 126, 20, 0.1);
+  }
+
 .hover\?yellow:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 1);
@@ -31924,6 +33259,10 @@ textarea.large\:input {
 
 .hover\?yellow\:stroke:hover {
     stroke: rgba(255, 193, 7, 1);
+  }
+
+.hover\?yellow\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 1);
   }
 
 .hover\?yellow-9:hover {
@@ -31988,6 +33327,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.9);
   }
 
+.hover\?yellow-9\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.9);
+  }
+
 .hover\?yellow-8:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.8);
@@ -32048,6 +33391,10 @@ textarea.large\:input {
 
 .hover\?yellow-8\:stroke:hover {
     stroke: rgba(255, 193, 7, 0.8);
+  }
+
+.hover\?yellow-8\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.8);
   }
 
 .hover\?yellow-7:hover {
@@ -32112,6 +33459,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.7);
   }
 
+.hover\?yellow-7\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.7);
+  }
+
 .hover\?yellow-6:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.6);
@@ -32172,6 +33523,10 @@ textarea.large\:input {
 
 .hover\?yellow-6\:stroke:hover {
     stroke: rgba(255, 193, 7, 0.6);
+  }
+
+.hover\?yellow-6\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.6);
   }
 
 .hover\?yellow-5:hover {
@@ -32236,6 +33591,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.5);
   }
 
+.hover\?yellow-5\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.5);
+  }
+
 .hover\?yellow-4:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.4);
@@ -32296,6 +33655,10 @@ textarea.large\:input {
 
 .hover\?yellow-4\:stroke:hover {
     stroke: rgba(255, 193, 7, 0.4);
+  }
+
+.hover\?yellow-4\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.4);
   }
 
 .hover\?yellow-3:hover {
@@ -32360,6 +33723,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.3);
   }
 
+.hover\?yellow-3\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.3);
+  }
+
 .hover\?yellow-2:hover {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.2);
@@ -32420,6 +33787,10 @@ textarea.large\:input {
 
 .hover\?yellow-2\:stroke:hover {
     stroke: rgba(255, 193, 7, 0.2);
+  }
+
+.hover\?yellow-2\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.2);
   }
 
 .hover\?yellow-1:hover {
@@ -32484,6 +33855,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.1);
   }
 
+.hover\?yellow-1\:placeholder:hover::placeholder {
+    color: rgba(255, 193, 7, 0.1);
+  }
+
 .hover\?green:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 1);
@@ -32544,6 +33919,10 @@ textarea.large\:input {
 
 .hover\?green\:stroke:hover {
     stroke: rgba(25, 135, 84, 1);
+  }
+
+.hover\?green\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 1);
   }
 
 .hover\?green-9:hover {
@@ -32608,6 +33987,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.9);
   }
 
+.hover\?green-9\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.9);
+  }
+
 .hover\?green-8:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.8);
@@ -32668,6 +34051,10 @@ textarea.large\:input {
 
 .hover\?green-8\:stroke:hover {
     stroke: rgba(25, 135, 84, 0.8);
+  }
+
+.hover\?green-8\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.8);
   }
 
 .hover\?green-7:hover {
@@ -32732,6 +34119,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.7);
   }
 
+.hover\?green-7\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.7);
+  }
+
 .hover\?green-6:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.6);
@@ -32792,6 +34183,10 @@ textarea.large\:input {
 
 .hover\?green-6\:stroke:hover {
     stroke: rgba(25, 135, 84, 0.6);
+  }
+
+.hover\?green-6\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.6);
   }
 
 .hover\?green-5:hover {
@@ -32856,6 +34251,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.5);
   }
 
+.hover\?green-5\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.5);
+  }
+
 .hover\?green-4:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.4);
@@ -32916,6 +34315,10 @@ textarea.large\:input {
 
 .hover\?green-4\:stroke:hover {
     stroke: rgba(25, 135, 84, 0.4);
+  }
+
+.hover\?green-4\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.4);
   }
 
 .hover\?green-3:hover {
@@ -32980,6 +34383,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.3);
   }
 
+.hover\?green-3\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.3);
+  }
+
 .hover\?green-2:hover {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.2);
@@ -33040,6 +34447,10 @@ textarea.large\:input {
 
 .hover\?green-2\:stroke:hover {
     stroke: rgba(25, 135, 84, 0.2);
+  }
+
+.hover\?green-2\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.2);
   }
 
 .hover\?green-1:hover {
@@ -33104,6 +34515,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.1);
   }
 
+.hover\?green-1\:placeholder:hover::placeholder {
+    color: rgba(25, 135, 84, 0.1);
+  }
+
 .hover\?teal:hover {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 1);
@@ -33164,6 +34579,10 @@ textarea.large\:input {
 
 .hover\?teal\:stroke:hover {
     stroke: rgba(32, 201, 151, 1);
+  }
+
+.hover\?teal\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 1);
   }
 
 .hover\?teal-9:hover {
@@ -33228,6 +34647,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.9);
   }
 
+.hover\?teal-9\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.9);
+  }
+
 .hover\?teal-8:hover {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.8);
@@ -33288,6 +34711,10 @@ textarea.large\:input {
 
 .hover\?teal-8\:stroke:hover {
     stroke: rgba(32, 201, 151, 0.8);
+  }
+
+.hover\?teal-8\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.8);
   }
 
 .hover\?teal-7:hover {
@@ -33352,6 +34779,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.7);
   }
 
+.hover\?teal-7\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.7);
+  }
+
 .hover\?teal-6:hover {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.6);
@@ -33412,6 +34843,10 @@ textarea.large\:input {
 
 .hover\?teal-6\:stroke:hover {
     stroke: rgba(32, 201, 151, 0.6);
+  }
+
+.hover\?teal-6\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.6);
   }
 
 .hover\?teal-5:hover {
@@ -33476,6 +34911,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.5);
   }
 
+.hover\?teal-5\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.5);
+  }
+
 .hover\?teal-4:hover {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.4);
@@ -33536,6 +34975,10 @@ textarea.large\:input {
 
 .hover\?teal-4\:stroke:hover {
     stroke: rgba(32, 201, 151, 0.4);
+  }
+
+.hover\?teal-4\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.4);
   }
 
 .hover\?teal-3:hover {
@@ -33600,6 +35043,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.3);
   }
 
+.hover\?teal-3\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.3);
+  }
+
 .hover\?teal-2:hover {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.2);
@@ -33660,6 +35107,10 @@ textarea.large\:input {
 
 .hover\?teal-2\:stroke:hover {
     stroke: rgba(32, 201, 151, 0.2);
+  }
+
+.hover\?teal-2\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.2);
   }
 
 .hover\?teal-1:hover {
@@ -33724,6 +35175,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.1);
   }
 
+.hover\?teal-1\:placeholder:hover::placeholder {
+    color: rgba(32, 201, 151, 0.1);
+  }
+
 .hover\?cyan:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 1);
@@ -33784,6 +35239,10 @@ textarea.large\:input {
 
 .hover\?cyan\:stroke:hover {
     stroke: rgba(13, 202, 240, 1);
+  }
+
+.hover\?cyan\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 1);
   }
 
 .hover\?cyan-9:hover {
@@ -33848,6 +35307,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.9);
   }
 
+.hover\?cyan-9\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.9);
+  }
+
 .hover\?cyan-8:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.8);
@@ -33908,6 +35371,10 @@ textarea.large\:input {
 
 .hover\?cyan-8\:stroke:hover {
     stroke: rgba(13, 202, 240, 0.8);
+  }
+
+.hover\?cyan-8\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.8);
   }
 
 .hover\?cyan-7:hover {
@@ -33972,6 +35439,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.7);
   }
 
+.hover\?cyan-7\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.7);
+  }
+
 .hover\?cyan-6:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.6);
@@ -34032,6 +35503,10 @@ textarea.large\:input {
 
 .hover\?cyan-6\:stroke:hover {
     stroke: rgba(13, 202, 240, 0.6);
+  }
+
+.hover\?cyan-6\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.6);
   }
 
 .hover\?cyan-5:hover {
@@ -34096,6 +35571,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.5);
   }
 
+.hover\?cyan-5\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.5);
+  }
+
 .hover\?cyan-4:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.4);
@@ -34156,6 +35635,10 @@ textarea.large\:input {
 
 .hover\?cyan-4\:stroke:hover {
     stroke: rgba(13, 202, 240, 0.4);
+  }
+
+.hover\?cyan-4\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.4);
   }
 
 .hover\?cyan-3:hover {
@@ -34220,6 +35703,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.3);
   }
 
+.hover\?cyan-3\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.3);
+  }
+
 .hover\?cyan-2:hover {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.2);
@@ -34280,6 +35767,10 @@ textarea.large\:input {
 
 .hover\?cyan-2\:stroke:hover {
     stroke: rgba(13, 202, 240, 0.2);
+  }
+
+.hover\?cyan-2\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.2);
   }
 
 .hover\?cyan-1:hover {
@@ -34344,6 +35835,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.1);
   }
 
+.hover\?cyan-1\:placeholder:hover::placeholder {
+    color: rgba(13, 202, 240, 0.1);
+  }
+
 .hover\?gray:hover {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 1);
@@ -34404,6 +35899,10 @@ textarea.large\:input {
 
 .hover\?gray\:stroke:hover {
     stroke: rgba(108, 117, 125, 1);
+  }
+
+.hover\?gray\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 1);
   }
 
 .hover\?gray-9:hover {
@@ -34468,6 +35967,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.9);
   }
 
+.hover\?gray-9\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.9);
+  }
+
 .hover\?gray-8:hover {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.8);
@@ -34528,6 +36031,10 @@ textarea.large\:input {
 
 .hover\?gray-8\:stroke:hover {
     stroke: rgba(108, 117, 125, 0.8);
+  }
+
+.hover\?gray-8\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.8);
   }
 
 .hover\?gray-7:hover {
@@ -34592,6 +36099,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.7);
   }
 
+.hover\?gray-7\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.7);
+  }
+
 .hover\?gray-6:hover {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.6);
@@ -34652,6 +36163,10 @@ textarea.large\:input {
 
 .hover\?gray-6\:stroke:hover {
     stroke: rgba(108, 117, 125, 0.6);
+  }
+
+.hover\?gray-6\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.6);
   }
 
 .hover\?gray-5:hover {
@@ -34716,6 +36231,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.5);
   }
 
+.hover\?gray-5\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.5);
+  }
+
 .hover\?gray-4:hover {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.4);
@@ -34776,6 +36295,10 @@ textarea.large\:input {
 
 .hover\?gray-4\:stroke:hover {
     stroke: rgba(108, 117, 125, 0.4);
+  }
+
+.hover\?gray-4\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.4);
   }
 
 .hover\?gray-3:hover {
@@ -34840,6 +36363,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.3);
   }
 
+.hover\?gray-3\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.3);
+  }
+
 .hover\?gray-2:hover {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.2);
@@ -34900,6 +36427,10 @@ textarea.large\:input {
 
 .hover\?gray-2\:stroke:hover {
     stroke: rgba(108, 117, 125, 0.2);
+  }
+
+.hover\?gray-2\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.2);
   }
 
 .hover\?gray-1:hover {
@@ -34964,6 +36495,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.1);
   }
 
+.hover\?gray-1\:placeholder:hover::placeholder {
+    color: rgba(108, 117, 125, 0.1);
+  }
+
 .hover\?transparent {
     color: var(--alga-black);
     background-color: var(--alga-transparent);
@@ -35024,6 +36559,10 @@ textarea.large\:input {
 
 .hover\?transparent\:stroke {
     stroke: var(--alga-transparent);
+  }
+
+.hover\?transparent\:placeholder::placeholder {
+    color: var(--alga-transparent);
   }
 
 .hover\?current {
@@ -35088,6 +36627,10 @@ textarea.large\:input {
     stroke: var(--alga-currentColor);
   }
 
+.hover\?current\:placeholder::placeholder {
+    color: var(--alga-currentColor);
+  }
+
 .hover\?custom {
     color: var(--alga-color);
     background-color: var(--alga-background);
@@ -35148,6 +36691,10 @@ textarea.large\:input {
 
 .hover\?custom\:stroke {
     stroke: var(--alga-background);
+  }
+
+.hover\?custom\:placeholder::placeholder {
+    color: var(--alga-background);
   }
 
 .focus\?primary:focus {
@@ -35212,6 +36759,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 1);
   }
 
+.focus\?primary\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 1);
+  }
+
 .focus\?primary-9:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.9);
@@ -35272,6 +36823,10 @@ textarea.large\:input {
 
 .focus\?primary-9\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.9);
+  }
+
+.focus\?primary-9\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.9);
   }
 
 .focus\?primary-8:focus {
@@ -35336,6 +36891,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.8);
   }
 
+.focus\?primary-8\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.8);
+  }
+
 .focus\?primary-7:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.7);
@@ -35396,6 +36955,10 @@ textarea.large\:input {
 
 .focus\?primary-7\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.7);
+  }
+
+.focus\?primary-7\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.7);
   }
 
 .focus\?primary-6:focus {
@@ -35460,6 +37023,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.6);
   }
 
+.focus\?primary-6\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.6);
+  }
+
 .focus\?primary-5:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.5);
@@ -35520,6 +37087,10 @@ textarea.large\:input {
 
 .focus\?primary-5\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.5);
+  }
+
+.focus\?primary-5\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.5);
   }
 
 .focus\?primary-4:focus {
@@ -35584,6 +37155,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.4);
   }
 
+.focus\?primary-4\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.4);
+  }
+
 .focus\?primary-3:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.3);
@@ -35644,6 +37219,10 @@ textarea.large\:input {
 
 .focus\?primary-3\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.3);
+  }
+
+.focus\?primary-3\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.3);
   }
 
 .focus\?primary-2:focus {
@@ -35708,6 +37287,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.2);
   }
 
+.focus\?primary-2\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.2);
+  }
+
 .focus\?primary-1:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.1);
@@ -35768,6 +37351,10 @@ textarea.large\:input {
 
 .focus\?primary-1\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.1);
+  }
+
+.focus\?primary-1\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.1);
   }
 
 .focus\?secondary:focus {
@@ -35832,6 +37419,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 1);
   }
 
+.focus\?secondary\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 1);
+  }
+
 .focus\?secondary-9:focus {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.9);
@@ -35892,6 +37483,10 @@ textarea.large\:input {
 
 .focus\?secondary-9\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.9);
+  }
+
+.focus\?secondary-9\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.9);
   }
 
 .focus\?secondary-8:focus {
@@ -35956,6 +37551,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.8);
   }
 
+.focus\?secondary-8\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.8);
+  }
+
 .focus\?secondary-7:focus {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.7);
@@ -36016,6 +37615,10 @@ textarea.large\:input {
 
 .focus\?secondary-7\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.7);
+  }
+
+.focus\?secondary-7\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.7);
   }
 
 .focus\?secondary-6:focus {
@@ -36080,6 +37683,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.6);
   }
 
+.focus\?secondary-6\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.6);
+  }
+
 .focus\?secondary-5:focus {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.5);
@@ -36140,6 +37747,10 @@ textarea.large\:input {
 
 .focus\?secondary-5\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.5);
+  }
+
+.focus\?secondary-5\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.5);
   }
 
 .focus\?secondary-4:focus {
@@ -36204,6 +37815,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.4);
   }
 
+.focus\?secondary-4\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.4);
+  }
+
 .focus\?secondary-3:focus {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.3);
@@ -36264,6 +37879,10 @@ textarea.large\:input {
 
 .focus\?secondary-3\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.3);
+  }
+
+.focus\?secondary-3\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.3);
   }
 
 .focus\?secondary-2:focus {
@@ -36328,6 +37947,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.2);
   }
 
+.focus\?secondary-2\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.2);
+  }
+
 .focus\?secondary-1:focus {
     color: var(--alga-white);
     background-color: rgba(108, 117, 125, 0.1);
@@ -36388,6 +38011,10 @@ textarea.large\:input {
 
 .focus\?secondary-1\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.1);
+  }
+
+.focus\?secondary-1\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.1);
   }
 
 .focus\?accent:focus {
@@ -36452,6 +38079,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 1);
   }
 
+.focus\?accent\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 1);
+  }
+
 .focus\?accent-9:focus {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.9);
@@ -36512,6 +38143,10 @@ textarea.large\:input {
 
 .focus\?accent-9\:stroke:focus {
     stroke: rgba(179, 27, 148, 0.9);
+  }
+
+.focus\?accent-9\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.9);
   }
 
 .focus\?accent-8:focus {
@@ -36576,6 +38211,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.8);
   }
 
+.focus\?accent-8\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.8);
+  }
+
 .focus\?accent-7:focus {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.7);
@@ -36636,6 +38275,10 @@ textarea.large\:input {
 
 .focus\?accent-7\:stroke:focus {
     stroke: rgba(179, 27, 148, 0.7);
+  }
+
+.focus\?accent-7\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.7);
   }
 
 .focus\?accent-6:focus {
@@ -36700,6 +38343,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.6);
   }
 
+.focus\?accent-6\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.6);
+  }
+
 .focus\?accent-5:focus {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.5);
@@ -36760,6 +38407,10 @@ textarea.large\:input {
 
 .focus\?accent-5\:stroke:focus {
     stroke: rgba(179, 27, 148, 0.5);
+  }
+
+.focus\?accent-5\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.5);
   }
 
 .focus\?accent-4:focus {
@@ -36824,6 +38475,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.4);
   }
 
+.focus\?accent-4\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.4);
+  }
+
 .focus\?accent-3:focus {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.3);
@@ -36884,6 +38539,10 @@ textarea.large\:input {
 
 .focus\?accent-3\:stroke:focus {
     stroke: rgba(179, 27, 148, 0.3);
+  }
+
+.focus\?accent-3\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.3);
   }
 
 .focus\?accent-2:focus {
@@ -36948,6 +38607,10 @@ textarea.large\:input {
     stroke: rgba(179, 27, 148, 0.2);
   }
 
+.focus\?accent-2\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.2);
+  }
+
 .focus\?accent-1:focus {
     color: var(--alga-white);
     background-color: rgba(179, 27, 148, 0.1);
@@ -37008,6 +38671,10 @@ textarea.large\:input {
 
 .focus\?accent-1\:stroke:focus {
     stroke: rgba(179, 27, 148, 0.1);
+  }
+
+.focus\?accent-1\:placeholder:focus::placeholder {
+    color: rgba(179, 27, 148, 0.1);
   }
 
 .focus\?success:focus {
@@ -37072,6 +38739,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 1);
   }
 
+.focus\?success\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 1);
+  }
+
 .focus\?success-9:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.9);
@@ -37132,6 +38803,10 @@ textarea.large\:input {
 
 .focus\?success-9\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.9);
+  }
+
+.focus\?success-9\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.9);
   }
 
 .focus\?success-8:focus {
@@ -37196,6 +38871,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.8);
   }
 
+.focus\?success-8\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.8);
+  }
+
 .focus\?success-7:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.7);
@@ -37256,6 +38935,10 @@ textarea.large\:input {
 
 .focus\?success-7\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.7);
+  }
+
+.focus\?success-7\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.7);
   }
 
 .focus\?success-6:focus {
@@ -37320,6 +39003,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.6);
   }
 
+.focus\?success-6\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.6);
+  }
+
 .focus\?success-5:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.5);
@@ -37380,6 +39067,10 @@ textarea.large\:input {
 
 .focus\?success-5\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.5);
+  }
+
+.focus\?success-5\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.5);
   }
 
 .focus\?success-4:focus {
@@ -37444,6 +39135,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.4);
   }
 
+.focus\?success-4\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.4);
+  }
+
 .focus\?success-3:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.3);
@@ -37504,6 +39199,10 @@ textarea.large\:input {
 
 .focus\?success-3\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.3);
+  }
+
+.focus\?success-3\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.3);
   }
 
 .focus\?success-2:focus {
@@ -37568,6 +39267,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.2);
   }
 
+.focus\?success-2\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.2);
+  }
+
 .focus\?success-1:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.1);
@@ -37628,6 +39331,10 @@ textarea.large\:input {
 
 .focus\?success-1\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.1);
+  }
+
+.focus\?success-1\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.1);
   }
 
 .focus\?info:focus {
@@ -37692,6 +39399,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 1);
   }
 
+.focus\?info\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 1);
+  }
+
 .focus\?info-9:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.9);
@@ -37752,6 +39463,10 @@ textarea.large\:input {
 
 .focus\?info-9\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.9);
+  }
+
+.focus\?info-9\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.9);
   }
 
 .focus\?info-8:focus {
@@ -37816,6 +39531,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.8);
   }
 
+.focus\?info-8\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.8);
+  }
+
 .focus\?info-7:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.7);
@@ -37876,6 +39595,10 @@ textarea.large\:input {
 
 .focus\?info-7\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.7);
+  }
+
+.focus\?info-7\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.7);
   }
 
 .focus\?info-6:focus {
@@ -37940,6 +39663,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.6);
   }
 
+.focus\?info-6\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.6);
+  }
+
 .focus\?info-5:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.5);
@@ -38000,6 +39727,10 @@ textarea.large\:input {
 
 .focus\?info-5\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.5);
+  }
+
+.focus\?info-5\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.5);
   }
 
 .focus\?info-4:focus {
@@ -38064,6 +39795,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.4);
   }
 
+.focus\?info-4\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.4);
+  }
+
 .focus\?info-3:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.3);
@@ -38124,6 +39859,10 @@ textarea.large\:input {
 
 .focus\?info-3\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.3);
+  }
+
+.focus\?info-3\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.3);
   }
 
 .focus\?info-2:focus {
@@ -38188,6 +39927,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.2);
   }
 
+.focus\?info-2\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.2);
+  }
+
 .focus\?info-1:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.1);
@@ -38248,6 +39991,10 @@ textarea.large\:input {
 
 .focus\?info-1\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.1);
+  }
+
+.focus\?info-1\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.1);
   }
 
 .focus\?warning:focus {
@@ -38312,6 +40059,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 1);
   }
 
+.focus\?warning\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 1);
+  }
+
 .focus\?warning-9:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.9);
@@ -38372,6 +40123,10 @@ textarea.large\:input {
 
 .focus\?warning-9\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.9);
+  }
+
+.focus\?warning-9\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.9);
   }
 
 .focus\?warning-8:focus {
@@ -38436,6 +40191,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.8);
   }
 
+.focus\?warning-8\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.8);
+  }
+
 .focus\?warning-7:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.7);
@@ -38496,6 +40255,10 @@ textarea.large\:input {
 
 .focus\?warning-7\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.7);
+  }
+
+.focus\?warning-7\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.7);
   }
 
 .focus\?warning-6:focus {
@@ -38560,6 +40323,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.6);
   }
 
+.focus\?warning-6\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.6);
+  }
+
 .focus\?warning-5:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.5);
@@ -38620,6 +40387,10 @@ textarea.large\:input {
 
 .focus\?warning-5\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.5);
+  }
+
+.focus\?warning-5\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.5);
   }
 
 .focus\?warning-4:focus {
@@ -38684,6 +40455,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.4);
   }
 
+.focus\?warning-4\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.4);
+  }
+
 .focus\?warning-3:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.3);
@@ -38744,6 +40519,10 @@ textarea.large\:input {
 
 .focus\?warning-3\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.3);
+  }
+
+.focus\?warning-3\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.3);
   }
 
 .focus\?warning-2:focus {
@@ -38808,6 +40587,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.2);
   }
 
+.focus\?warning-2\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.2);
+  }
+
 .focus\?warning-1:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.1);
@@ -38868,6 +40651,10 @@ textarea.large\:input {
 
 .focus\?warning-1\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.1);
+  }
+
+.focus\?warning-1\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.1);
   }
 
 .focus\?danger:focus {
@@ -38932,6 +40719,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 1);
   }
 
+.focus\?danger\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 1);
+  }
+
 .focus\?danger-9:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.9);
@@ -38992,6 +40783,10 @@ textarea.large\:input {
 
 .focus\?danger-9\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.9);
+  }
+
+.focus\?danger-9\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.9);
   }
 
 .focus\?danger-8:focus {
@@ -39056,6 +40851,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.8);
   }
 
+.focus\?danger-8\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.8);
+  }
+
 .focus\?danger-7:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.7);
@@ -39116,6 +40915,10 @@ textarea.large\:input {
 
 .focus\?danger-7\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.7);
+  }
+
+.focus\?danger-7\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.7);
   }
 
 .focus\?danger-6:focus {
@@ -39180,6 +40983,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.6);
   }
 
+.focus\?danger-6\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.6);
+  }
+
 .focus\?danger-5:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.5);
@@ -39240,6 +41047,10 @@ textarea.large\:input {
 
 .focus\?danger-5\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.5);
+  }
+
+.focus\?danger-5\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.5);
   }
 
 .focus\?danger-4:focus {
@@ -39304,6 +41115,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.4);
   }
 
+.focus\?danger-4\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.4);
+  }
+
 .focus\?danger-3:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.3);
@@ -39364,6 +41179,10 @@ textarea.large\:input {
 
 .focus\?danger-3\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.3);
+  }
+
+.focus\?danger-3\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.3);
   }
 
 .focus\?danger-2:focus {
@@ -39428,6 +41247,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.2);
   }
 
+.focus\?danger-2\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.2);
+  }
+
 .focus\?danger-1:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.1);
@@ -39488,6 +41311,10 @@ textarea.large\:input {
 
 .focus\?danger-1\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.1);
+  }
+
+.focus\?danger-1\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.1);
   }
 
 .focus\?black:focus {
@@ -39552,6 +41379,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 1);
   }
 
+.focus\?black\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 1);
+  }
+
 .focus\?black-9:focus {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.9);
@@ -39612,6 +41443,10 @@ textarea.large\:input {
 
 .focus\?black-9\:stroke:focus {
     stroke: rgba(0, 0, 0, 0.9);
+  }
+
+.focus\?black-9\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.9);
   }
 
 .focus\?black-8:focus {
@@ -39676,6 +41511,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.8);
   }
 
+.focus\?black-8\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
 .focus\?black-7:focus {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.7);
@@ -39736,6 +41575,10 @@ textarea.large\:input {
 
 .focus\?black-7\:stroke:focus {
     stroke: rgba(0, 0, 0, 0.7);
+  }
+
+.focus\?black-7\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.7);
   }
 
 .focus\?black-6:focus {
@@ -39800,6 +41643,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.6);
   }
 
+.focus\?black-6\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
 .focus\?black-5:focus {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.5);
@@ -39860,6 +41707,10 @@ textarea.large\:input {
 
 .focus\?black-5\:stroke:focus {
     stroke: rgba(0, 0, 0, 0.5);
+  }
+
+.focus\?black-5\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.5);
   }
 
 .focus\?black-4:focus {
@@ -39924,6 +41775,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.4);
   }
 
+.focus\?black-4\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
 .focus\?black-3:focus {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.3);
@@ -39984,6 +41839,10 @@ textarea.large\:input {
 
 .focus\?black-3\:stroke:focus {
     stroke: rgba(0, 0, 0, 0.3);
+  }
+
+.focus\?black-3\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.3);
   }
 
 .focus\?black-2:focus {
@@ -40048,6 +41907,10 @@ textarea.large\:input {
     stroke: rgba(0, 0, 0, 0.2);
   }
 
+.focus\?black-2\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+  }
+
 .focus\?black-1:focus {
     color: var(--alga-white);
     background-color: rgba(0, 0, 0, 0.1);
@@ -40108,6 +41971,10 @@ textarea.large\:input {
 
 .focus\?black-1\:stroke:focus {
     stroke: rgba(0, 0, 0, 0.1);
+  }
+
+.focus\?black-1\:placeholder:focus::placeholder {
+    color: rgba(0, 0, 0, 0.1);
   }
 
 .focus\?white:focus {
@@ -40172,6 +42039,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 1);
   }
 
+.focus\?white\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 1);
+  }
+
 .focus\?white-9:focus {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.9);
@@ -40232,6 +42103,10 @@ textarea.large\:input {
 
 .focus\?white-9\:stroke:focus {
     stroke: rgba(255, 255, 255, 0.9);
+  }
+
+.focus\?white-9\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.9);
   }
 
 .focus\?white-8:focus {
@@ -40296,6 +42171,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.8);
   }
 
+.focus\?white-8\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
 .focus\?white-7:focus {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.7);
@@ -40356,6 +42235,10 @@ textarea.large\:input {
 
 .focus\?white-7\:stroke:focus {
     stroke: rgba(255, 255, 255, 0.7);
+  }
+
+.focus\?white-7\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.7);
   }
 
 .focus\?white-6:focus {
@@ -40420,6 +42303,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.6);
   }
 
+.focus\?white-6\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
 .focus\?white-5:focus {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.5);
@@ -40480,6 +42367,10 @@ textarea.large\:input {
 
 .focus\?white-5\:stroke:focus {
     stroke: rgba(255, 255, 255, 0.5);
+  }
+
+.focus\?white-5\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.5);
   }
 
 .focus\?white-4:focus {
@@ -40544,6 +42435,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.4);
   }
 
+.focus\?white-4\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
 .focus\?white-3:focus {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.3);
@@ -40604,6 +42499,10 @@ textarea.large\:input {
 
 .focus\?white-3\:stroke:focus {
     stroke: rgba(255, 255, 255, 0.3);
+  }
+
+.focus\?white-3\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.3);
   }
 
 .focus\?white-2:focus {
@@ -40668,6 +42567,10 @@ textarea.large\:input {
     stroke: rgba(255, 255, 255, 0.2);
   }
 
+.focus\?white-2\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+  }
+
 .focus\?white-1:focus {
     color: var(--alga-black);
     background-color: rgba(255, 255, 255, 0.1);
@@ -40728,6 +42631,10 @@ textarea.large\:input {
 
 .focus\?white-1\:stroke:focus {
     stroke: rgba(255, 255, 255, 0.1);
+  }
+
+.focus\?white-1\:placeholder:focus::placeholder {
+    color: rgba(255, 255, 255, 0.1);
   }
 
 .focus\?blue:focus {
@@ -40792,6 +42699,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 1);
   }
 
+.focus\?blue\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 1);
+  }
+
 .focus\?blue-9:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.9);
@@ -40852,6 +42763,10 @@ textarea.large\:input {
 
 .focus\?blue-9\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.9);
+  }
+
+.focus\?blue-9\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.9);
   }
 
 .focus\?blue-8:focus {
@@ -40916,6 +42831,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.8);
   }
 
+.focus\?blue-8\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.8);
+  }
+
 .focus\?blue-7:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.7);
@@ -40976,6 +42895,10 @@ textarea.large\:input {
 
 .focus\?blue-7\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.7);
+  }
+
+.focus\?blue-7\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.7);
   }
 
 .focus\?blue-6:focus {
@@ -41040,6 +42963,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.6);
   }
 
+.focus\?blue-6\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.6);
+  }
+
 .focus\?blue-5:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.5);
@@ -41100,6 +43027,10 @@ textarea.large\:input {
 
 .focus\?blue-5\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.5);
+  }
+
+.focus\?blue-5\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.5);
   }
 
 .focus\?blue-4:focus {
@@ -41164,6 +43095,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.4);
   }
 
+.focus\?blue-4\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.4);
+  }
+
 .focus\?blue-3:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.3);
@@ -41224,6 +43159,10 @@ textarea.large\:input {
 
 .focus\?blue-3\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.3);
+  }
+
+.focus\?blue-3\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.3);
   }
 
 .focus\?blue-2:focus {
@@ -41288,6 +43227,10 @@ textarea.large\:input {
     stroke: rgba(13, 110, 253, 0.2);
   }
 
+.focus\?blue-2\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.2);
+  }
+
 .focus\?blue-1:focus {
     color: var(--alga-white);
     background-color: rgba(13, 110, 253, 0.1);
@@ -41348,6 +43291,10 @@ textarea.large\:input {
 
 .focus\?blue-1\:stroke:focus {
     stroke: rgba(13, 110, 253, 0.1);
+  }
+
+.focus\?blue-1\:placeholder:focus::placeholder {
+    color: rgba(13, 110, 253, 0.1);
   }
 
 .focus\?indigo:focus {
@@ -41412,6 +43359,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 1);
   }
 
+.focus\?indigo\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 1);
+  }
+
 .focus\?indigo-9:focus {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.9);
@@ -41472,6 +43423,10 @@ textarea.large\:input {
 
 .focus\?indigo-9\:stroke:focus {
     stroke: rgba(102, 16, 242, 0.9);
+  }
+
+.focus\?indigo-9\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.9);
   }
 
 .focus\?indigo-8:focus {
@@ -41536,6 +43491,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.8);
   }
 
+.focus\?indigo-8\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.8);
+  }
+
 .focus\?indigo-7:focus {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.7);
@@ -41596,6 +43555,10 @@ textarea.large\:input {
 
 .focus\?indigo-7\:stroke:focus {
     stroke: rgba(102, 16, 242, 0.7);
+  }
+
+.focus\?indigo-7\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.7);
   }
 
 .focus\?indigo-6:focus {
@@ -41660,6 +43623,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.6);
   }
 
+.focus\?indigo-6\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.6);
+  }
+
 .focus\?indigo-5:focus {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.5);
@@ -41720,6 +43687,10 @@ textarea.large\:input {
 
 .focus\?indigo-5\:stroke:focus {
     stroke: rgba(102, 16, 242, 0.5);
+  }
+
+.focus\?indigo-5\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.5);
   }
 
 .focus\?indigo-4:focus {
@@ -41784,6 +43755,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.4);
   }
 
+.focus\?indigo-4\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.4);
+  }
+
 .focus\?indigo-3:focus {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.3);
@@ -41844,6 +43819,10 @@ textarea.large\:input {
 
 .focus\?indigo-3\:stroke:focus {
     stroke: rgba(102, 16, 242, 0.3);
+  }
+
+.focus\?indigo-3\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.3);
   }
 
 .focus\?indigo-2:focus {
@@ -41908,6 +43887,10 @@ textarea.large\:input {
     stroke: rgba(102, 16, 242, 0.2);
   }
 
+.focus\?indigo-2\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.2);
+  }
+
 .focus\?indigo-1:focus {
     color: var(--alga-white);
     background-color: rgba(102, 16, 242, 0.1);
@@ -41968,6 +43951,10 @@ textarea.large\:input {
 
 .focus\?indigo-1\:stroke:focus {
     stroke: rgba(102, 16, 242, 0.1);
+  }
+
+.focus\?indigo-1\:placeholder:focus::placeholder {
+    color: rgba(102, 16, 242, 0.1);
   }
 
 .focus\?purple:focus {
@@ -42032,6 +44019,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 1);
   }
 
+.focus\?purple\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 1);
+  }
+
 .focus\?purple-9:focus {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.9);
@@ -42092,6 +44083,10 @@ textarea.large\:input {
 
 .focus\?purple-9\:stroke:focus {
     stroke: rgba(111, 66, 193, 0.9);
+  }
+
+.focus\?purple-9\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.9);
   }
 
 .focus\?purple-8:focus {
@@ -42156,6 +44151,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.8);
   }
 
+.focus\?purple-8\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.8);
+  }
+
 .focus\?purple-7:focus {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.7);
@@ -42216,6 +44215,10 @@ textarea.large\:input {
 
 .focus\?purple-7\:stroke:focus {
     stroke: rgba(111, 66, 193, 0.7);
+  }
+
+.focus\?purple-7\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.7);
   }
 
 .focus\?purple-6:focus {
@@ -42280,6 +44283,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.6);
   }
 
+.focus\?purple-6\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.6);
+  }
+
 .focus\?purple-5:focus {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.5);
@@ -42340,6 +44347,10 @@ textarea.large\:input {
 
 .focus\?purple-5\:stroke:focus {
     stroke: rgba(111, 66, 193, 0.5);
+  }
+
+.focus\?purple-5\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.5);
   }
 
 .focus\?purple-4:focus {
@@ -42404,6 +44415,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.4);
   }
 
+.focus\?purple-4\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.4);
+  }
+
 .focus\?purple-3:focus {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.3);
@@ -42464,6 +44479,10 @@ textarea.large\:input {
 
 .focus\?purple-3\:stroke:focus {
     stroke: rgba(111, 66, 193, 0.3);
+  }
+
+.focus\?purple-3\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.3);
   }
 
 .focus\?purple-2:focus {
@@ -42528,6 +44547,10 @@ textarea.large\:input {
     stroke: rgba(111, 66, 193, 0.2);
   }
 
+.focus\?purple-2\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.2);
+  }
+
 .focus\?purple-1:focus {
     color: var(--alga-white);
     background-color: rgba(111, 66, 193, 0.1);
@@ -42588,6 +44611,10 @@ textarea.large\:input {
 
 .focus\?purple-1\:stroke:focus {
     stroke: rgba(111, 66, 193, 0.1);
+  }
+
+.focus\?purple-1\:placeholder:focus::placeholder {
+    color: rgba(111, 66, 193, 0.1);
   }
 
 .focus\?pink:focus {
@@ -42652,6 +44679,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 1);
   }
 
+.focus\?pink\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 1);
+  }
+
 .focus\?pink-9:focus {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.9);
@@ -42712,6 +44743,10 @@ textarea.large\:input {
 
 .focus\?pink-9\:stroke:focus {
     stroke: rgba(214, 51, 132, 0.9);
+  }
+
+.focus\?pink-9\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.9);
   }
 
 .focus\?pink-8:focus {
@@ -42776,6 +44811,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.8);
   }
 
+.focus\?pink-8\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.8);
+  }
+
 .focus\?pink-7:focus {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.7);
@@ -42836,6 +44875,10 @@ textarea.large\:input {
 
 .focus\?pink-7\:stroke:focus {
     stroke: rgba(214, 51, 132, 0.7);
+  }
+
+.focus\?pink-7\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.7);
   }
 
 .focus\?pink-6:focus {
@@ -42900,6 +44943,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.6);
   }
 
+.focus\?pink-6\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.6);
+  }
+
 .focus\?pink-5:focus {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.5);
@@ -42960,6 +45007,10 @@ textarea.large\:input {
 
 .focus\?pink-5\:stroke:focus {
     stroke: rgba(214, 51, 132, 0.5);
+  }
+
+.focus\?pink-5\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.5);
   }
 
 .focus\?pink-4:focus {
@@ -43024,6 +45075,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.4);
   }
 
+.focus\?pink-4\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.4);
+  }
+
 .focus\?pink-3:focus {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.3);
@@ -43084,6 +45139,10 @@ textarea.large\:input {
 
 .focus\?pink-3\:stroke:focus {
     stroke: rgba(214, 51, 132, 0.3);
+  }
+
+.focus\?pink-3\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.3);
   }
 
 .focus\?pink-2:focus {
@@ -43148,6 +45207,10 @@ textarea.large\:input {
     stroke: rgba(214, 51, 132, 0.2);
   }
 
+.focus\?pink-2\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.2);
+  }
+
 .focus\?pink-1:focus {
     color: var(--alga-black);
     background-color: rgba(214, 51, 132, 0.1);
@@ -43208,6 +45271,10 @@ textarea.large\:input {
 
 .focus\?pink-1\:stroke:focus {
     stroke: rgba(214, 51, 132, 0.1);
+  }
+
+.focus\?pink-1\:placeholder:focus::placeholder {
+    color: rgba(214, 51, 132, 0.1);
   }
 
 .focus\?red:focus {
@@ -43272,6 +45339,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 1);
   }
 
+.focus\?red\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 1);
+  }
+
 .focus\?red-9:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.9);
@@ -43332,6 +45403,10 @@ textarea.large\:input {
 
 .focus\?red-9\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.9);
+  }
+
+.focus\?red-9\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.9);
   }
 
 .focus\?red-8:focus {
@@ -43396,6 +45471,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.8);
   }
 
+.focus\?red-8\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.8);
+  }
+
 .focus\?red-7:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.7);
@@ -43456,6 +45535,10 @@ textarea.large\:input {
 
 .focus\?red-7\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.7);
+  }
+
+.focus\?red-7\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.7);
   }
 
 .focus\?red-6:focus {
@@ -43520,6 +45603,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.6);
   }
 
+.focus\?red-6\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.6);
+  }
+
 .focus\?red-5:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.5);
@@ -43580,6 +45667,10 @@ textarea.large\:input {
 
 .focus\?red-5\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.5);
+  }
+
+.focus\?red-5\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.5);
   }
 
 .focus\?red-4:focus {
@@ -43644,6 +45735,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.4);
   }
 
+.focus\?red-4\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.4);
+  }
+
 .focus\?red-3:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.3);
@@ -43704,6 +45799,10 @@ textarea.large\:input {
 
 .focus\?red-3\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.3);
+  }
+
+.focus\?red-3\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.3);
   }
 
 .focus\?red-2:focus {
@@ -43768,6 +45867,10 @@ textarea.large\:input {
     stroke: rgba(220, 53, 69, 0.2);
   }
 
+.focus\?red-2\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.2);
+  }
+
 .focus\?red-1:focus {
     color: var(--alga-white);
     background-color: rgba(220, 53, 69, 0.1);
@@ -43828,6 +45931,10 @@ textarea.large\:input {
 
 .focus\?red-1\:stroke:focus {
     stroke: rgba(220, 53, 69, 0.1);
+  }
+
+.focus\?red-1\:placeholder:focus::placeholder {
+    color: rgba(220, 53, 69, 0.1);
   }
 
 .focus\?orange:focus {
@@ -43892,6 +45999,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 1);
   }
 
+.focus\?orange\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 1);
+  }
+
 .focus\?orange-9:focus {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.9);
@@ -43952,6 +46063,10 @@ textarea.large\:input {
 
 .focus\?orange-9\:stroke:focus {
     stroke: rgba(253, 126, 20, 0.9);
+  }
+
+.focus\?orange-9\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.9);
   }
 
 .focus\?orange-8:focus {
@@ -44016,6 +46131,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.8);
   }
 
+.focus\?orange-8\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.8);
+  }
+
 .focus\?orange-7:focus {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.7);
@@ -44076,6 +46195,10 @@ textarea.large\:input {
 
 .focus\?orange-7\:stroke:focus {
     stroke: rgba(253, 126, 20, 0.7);
+  }
+
+.focus\?orange-7\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.7);
   }
 
 .focus\?orange-6:focus {
@@ -44140,6 +46263,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.6);
   }
 
+.focus\?orange-6\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.6);
+  }
+
 .focus\?orange-5:focus {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.5);
@@ -44200,6 +46327,10 @@ textarea.large\:input {
 
 .focus\?orange-5\:stroke:focus {
     stroke: rgba(253, 126, 20, 0.5);
+  }
+
+.focus\?orange-5\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.5);
   }
 
 .focus\?orange-4:focus {
@@ -44264,6 +46395,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.4);
   }
 
+.focus\?orange-4\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.4);
+  }
+
 .focus\?orange-3:focus {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.3);
@@ -44324,6 +46459,10 @@ textarea.large\:input {
 
 .focus\?orange-3\:stroke:focus {
     stroke: rgba(253, 126, 20, 0.3);
+  }
+
+.focus\?orange-3\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.3);
   }
 
 .focus\?orange-2:focus {
@@ -44388,6 +46527,10 @@ textarea.large\:input {
     stroke: rgba(253, 126, 20, 0.2);
   }
 
+.focus\?orange-2\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.2);
+  }
+
 .focus\?orange-1:focus {
     color: var(--alga-white);
     background-color: rgba(253, 126, 20, 0.1);
@@ -44448,6 +46591,10 @@ textarea.large\:input {
 
 .focus\?orange-1\:stroke:focus {
     stroke: rgba(253, 126, 20, 0.1);
+  }
+
+.focus\?orange-1\:placeholder:focus::placeholder {
+    color: rgba(253, 126, 20, 0.1);
   }
 
 .focus\?yellow:focus {
@@ -44512,6 +46659,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 1);
   }
 
+.focus\?yellow\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 1);
+  }
+
 .focus\?yellow-9:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.9);
@@ -44572,6 +46723,10 @@ textarea.large\:input {
 
 .focus\?yellow-9\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.9);
+  }
+
+.focus\?yellow-9\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.9);
   }
 
 .focus\?yellow-8:focus {
@@ -44636,6 +46791,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.8);
   }
 
+.focus\?yellow-8\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.8);
+  }
+
 .focus\?yellow-7:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.7);
@@ -44696,6 +46855,10 @@ textarea.large\:input {
 
 .focus\?yellow-7\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.7);
+  }
+
+.focus\?yellow-7\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.7);
   }
 
 .focus\?yellow-6:focus {
@@ -44760,6 +46923,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.6);
   }
 
+.focus\?yellow-6\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.6);
+  }
+
 .focus\?yellow-5:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.5);
@@ -44820,6 +46987,10 @@ textarea.large\:input {
 
 .focus\?yellow-5\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.5);
+  }
+
+.focus\?yellow-5\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.5);
   }
 
 .focus\?yellow-4:focus {
@@ -44884,6 +47055,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.4);
   }
 
+.focus\?yellow-4\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.4);
+  }
+
 .focus\?yellow-3:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.3);
@@ -44944,6 +47119,10 @@ textarea.large\:input {
 
 .focus\?yellow-3\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.3);
+  }
+
+.focus\?yellow-3\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.3);
   }
 
 .focus\?yellow-2:focus {
@@ -45008,6 +47187,10 @@ textarea.large\:input {
     stroke: rgba(255, 193, 7, 0.2);
   }
 
+.focus\?yellow-2\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.2);
+  }
+
 .focus\?yellow-1:focus {
     color: var(--alga-black);
     background-color: rgba(255, 193, 7, 0.1);
@@ -45068,6 +47251,10 @@ textarea.large\:input {
 
 .focus\?yellow-1\:stroke:focus {
     stroke: rgba(255, 193, 7, 0.1);
+  }
+
+.focus\?yellow-1\:placeholder:focus::placeholder {
+    color: rgba(255, 193, 7, 0.1);
   }
 
 .focus\?green:focus {
@@ -45132,6 +47319,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 1);
   }
 
+.focus\?green\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 1);
+  }
+
 .focus\?green-9:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.9);
@@ -45192,6 +47383,10 @@ textarea.large\:input {
 
 .focus\?green-9\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.9);
+  }
+
+.focus\?green-9\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.9);
   }
 
 .focus\?green-8:focus {
@@ -45256,6 +47451,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.8);
   }
 
+.focus\?green-8\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.8);
+  }
+
 .focus\?green-7:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.7);
@@ -45316,6 +47515,10 @@ textarea.large\:input {
 
 .focus\?green-7\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.7);
+  }
+
+.focus\?green-7\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.7);
   }
 
 .focus\?green-6:focus {
@@ -45380,6 +47583,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.6);
   }
 
+.focus\?green-6\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.6);
+  }
+
 .focus\?green-5:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.5);
@@ -45440,6 +47647,10 @@ textarea.large\:input {
 
 .focus\?green-5\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.5);
+  }
+
+.focus\?green-5\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.5);
   }
 
 .focus\?green-4:focus {
@@ -45504,6 +47715,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.4);
   }
 
+.focus\?green-4\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.4);
+  }
+
 .focus\?green-3:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.3);
@@ -45564,6 +47779,10 @@ textarea.large\:input {
 
 .focus\?green-3\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.3);
+  }
+
+.focus\?green-3\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.3);
   }
 
 .focus\?green-2:focus {
@@ -45628,6 +47847,10 @@ textarea.large\:input {
     stroke: rgba(25, 135, 84, 0.2);
   }
 
+.focus\?green-2\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.2);
+  }
+
 .focus\?green-1:focus {
     color: var(--alga-white);
     background-color: rgba(25, 135, 84, 0.1);
@@ -45688,6 +47911,10 @@ textarea.large\:input {
 
 .focus\?green-1\:stroke:focus {
     stroke: rgba(25, 135, 84, 0.1);
+  }
+
+.focus\?green-1\:placeholder:focus::placeholder {
+    color: rgba(25, 135, 84, 0.1);
   }
 
 .focus\?teal:focus {
@@ -45752,6 +47979,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 1);
   }
 
+.focus\?teal\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 1);
+  }
+
 .focus\?teal-9:focus {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.9);
@@ -45812,6 +48043,10 @@ textarea.large\:input {
 
 .focus\?teal-9\:stroke:focus {
     stroke: rgba(32, 201, 151, 0.9);
+  }
+
+.focus\?teal-9\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.9);
   }
 
 .focus\?teal-8:focus {
@@ -45876,6 +48111,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.8);
   }
 
+.focus\?teal-8\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.8);
+  }
+
 .focus\?teal-7:focus {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.7);
@@ -45936,6 +48175,10 @@ textarea.large\:input {
 
 .focus\?teal-7\:stroke:focus {
     stroke: rgba(32, 201, 151, 0.7);
+  }
+
+.focus\?teal-7\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.7);
   }
 
 .focus\?teal-6:focus {
@@ -46000,6 +48243,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.6);
   }
 
+.focus\?teal-6\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.6);
+  }
+
 .focus\?teal-5:focus {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.5);
@@ -46060,6 +48307,10 @@ textarea.large\:input {
 
 .focus\?teal-5\:stroke:focus {
     stroke: rgba(32, 201, 151, 0.5);
+  }
+
+.focus\?teal-5\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.5);
   }
 
 .focus\?teal-4:focus {
@@ -46124,6 +48375,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.4);
   }
 
+.focus\?teal-4\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.4);
+  }
+
 .focus\?teal-3:focus {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.3);
@@ -46184,6 +48439,10 @@ textarea.large\:input {
 
 .focus\?teal-3\:stroke:focus {
     stroke: rgba(32, 201, 151, 0.3);
+  }
+
+.focus\?teal-3\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.3);
   }
 
 .focus\?teal-2:focus {
@@ -46248,6 +48507,10 @@ textarea.large\:input {
     stroke: rgba(32, 201, 151, 0.2);
   }
 
+.focus\?teal-2\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.2);
+  }
+
 .focus\?teal-1:focus {
     color: var(--alga-white);
     background-color: rgba(32, 201, 151, 0.1);
@@ -46308,6 +48571,10 @@ textarea.large\:input {
 
 .focus\?teal-1\:stroke:focus {
     stroke: rgba(32, 201, 151, 0.1);
+  }
+
+.focus\?teal-1\:placeholder:focus::placeholder {
+    color: rgba(32, 201, 151, 0.1);
   }
 
 .focus\?cyan:focus {
@@ -46372,6 +48639,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 1);
   }
 
+.focus\?cyan\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 1);
+  }
+
 .focus\?cyan-9:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.9);
@@ -46432,6 +48703,10 @@ textarea.large\:input {
 
 .focus\?cyan-9\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.9);
+  }
+
+.focus\?cyan-9\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.9);
   }
 
 .focus\?cyan-8:focus {
@@ -46496,6 +48771,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.8);
   }
 
+.focus\?cyan-8\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.8);
+  }
+
 .focus\?cyan-7:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.7);
@@ -46556,6 +48835,10 @@ textarea.large\:input {
 
 .focus\?cyan-7\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.7);
+  }
+
+.focus\?cyan-7\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.7);
   }
 
 .focus\?cyan-6:focus {
@@ -46620,6 +48903,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.6);
   }
 
+.focus\?cyan-6\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.6);
+  }
+
 .focus\?cyan-5:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.5);
@@ -46680,6 +48967,10 @@ textarea.large\:input {
 
 .focus\?cyan-5\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.5);
+  }
+
+.focus\?cyan-5\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.5);
   }
 
 .focus\?cyan-4:focus {
@@ -46744,6 +49035,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.4);
   }
 
+.focus\?cyan-4\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.4);
+  }
+
 .focus\?cyan-3:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.3);
@@ -46804,6 +49099,10 @@ textarea.large\:input {
 
 .focus\?cyan-3\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.3);
+  }
+
+.focus\?cyan-3\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.3);
   }
 
 .focus\?cyan-2:focus {
@@ -46868,6 +49167,10 @@ textarea.large\:input {
     stroke: rgba(13, 202, 240, 0.2);
   }
 
+.focus\?cyan-2\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.2);
+  }
+
 .focus\?cyan-1:focus {
     color: var(--alga-white);
     background-color: rgba(13, 202, 240, 0.1);
@@ -46928,6 +49231,10 @@ textarea.large\:input {
 
 .focus\?cyan-1\:stroke:focus {
     stroke: rgba(13, 202, 240, 0.1);
+  }
+
+.focus\?cyan-1\:placeholder:focus::placeholder {
+    color: rgba(13, 202, 240, 0.1);
   }
 
 .focus\?gray:focus {
@@ -46992,6 +49299,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 1);
   }
 
+.focus\?gray\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 1);
+  }
+
 .focus\?gray-9:focus {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.9);
@@ -47052,6 +49363,10 @@ textarea.large\:input {
 
 .focus\?gray-9\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.9);
+  }
+
+.focus\?gray-9\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.9);
   }
 
 .focus\?gray-8:focus {
@@ -47116,6 +49431,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.8);
   }
 
+.focus\?gray-8\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.8);
+  }
+
 .focus\?gray-7:focus {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.7);
@@ -47176,6 +49495,10 @@ textarea.large\:input {
 
 .focus\?gray-7\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.7);
+  }
+
+.focus\?gray-7\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.7);
   }
 
 .focus\?gray-6:focus {
@@ -47240,6 +49563,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.6);
   }
 
+.focus\?gray-6\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.6);
+  }
+
 .focus\?gray-5:focus {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.5);
@@ -47300,6 +49627,10 @@ textarea.large\:input {
 
 .focus\?gray-5\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.5);
+  }
+
+.focus\?gray-5\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.5);
   }
 
 .focus\?gray-4:focus {
@@ -47364,6 +49695,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.4);
   }
 
+.focus\?gray-4\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.4);
+  }
+
 .focus\?gray-3:focus {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.3);
@@ -47424,6 +49759,10 @@ textarea.large\:input {
 
 .focus\?gray-3\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.3);
+  }
+
+.focus\?gray-3\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.3);
   }
 
 .focus\?gray-2:focus {
@@ -47488,6 +49827,10 @@ textarea.large\:input {
     stroke: rgba(108, 117, 125, 0.2);
   }
 
+.focus\?gray-2\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.2);
+  }
+
 .focus\?gray-1:focus {
     color: var(--alga-black);
     background-color: rgba(108, 117, 125, 0.1);
@@ -47548,6 +49891,10 @@ textarea.large\:input {
 
 .focus\?gray-1\:stroke:focus {
     stroke: rgba(108, 117, 125, 0.1);
+  }
+
+.focus\?gray-1\:placeholder:focus::placeholder {
+    color: rgba(108, 117, 125, 0.1);
   }
 
 .focus\?transparent {
@@ -47612,6 +49959,10 @@ textarea.large\:input {
     stroke: var(--alga-transparent);
   }
 
+.focus\?transparent\:placeholder::placeholder {
+    color: var(--alga-transparent);
+  }
+
 .focus\?current {
     color: var(--alga-black);
     background-color: var(--alga-currentColor);
@@ -47672,6 +50023,10 @@ textarea.large\:input {
 
 .focus\?current\:stroke {
     stroke: var(--alga-currentColor);
+  }
+
+.focus\?current\:placeholder::placeholder {
+    color: var(--alga-currentColor);
   }
 
 .focus\?custom {
@@ -47736,6 +50091,10 @@ textarea.large\:input {
     stroke: var(--alga-background);
   }
 
+.focus\?custom\:placeholder::placeholder {
+    color: var(--alga-background);
+  }
+
 @media(prefers-color-scheme: dark) {
   .dark {
     color: var(--alga-white);
@@ -47784,6 +50143,9 @@ textarea.large\:input {
   }
   .dark\:stroke {
     stroke: var(--alga-dark);
+  }
+  .dark\:placeholder::placeholder {
+    color: var(--alga-dark);
   }
 
   .dark-9 {
@@ -47848,6 +50210,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.9);
   }
 
+  .dark-9\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.9);
+  }
+
   .dark-8 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.8);
@@ -47908,6 +50274,10 @@ textarea.large\:input {
 
   .dark-8\:stroke {
     stroke: rgba(33, 37, 41, 0.8);
+  }
+
+  .dark-8\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.8);
   }
 
   .dark-7 {
@@ -47972,6 +50342,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.7);
   }
 
+  .dark-7\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.7);
+  }
+
   .dark-6 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.6);
@@ -48032,6 +50406,10 @@ textarea.large\:input {
 
   .dark-6\:stroke {
     stroke: rgba(33, 37, 41, 0.6);
+  }
+
+  .dark-6\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.6);
   }
 
   .dark-5 {
@@ -48096,6 +50474,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.5);
   }
 
+  .dark-5\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.5);
+  }
+
   .dark-4 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.4);
@@ -48156,6 +50538,10 @@ textarea.large\:input {
 
   .dark-4\:stroke {
     stroke: rgba(33, 37, 41, 0.4);
+  }
+
+  .dark-4\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.4);
   }
 
   .dark-3 {
@@ -48220,6 +50606,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.3);
   }
 
+  .dark-3\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.3);
+  }
+
   .dark-2 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.2);
@@ -48280,6 +50670,10 @@ textarea.large\:input {
 
   .dark-2\:stroke {
     stroke: rgba(33, 37, 41, 0.2);
+  }
+
+  .dark-2\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.2);
   }
 
   .dark-1 {
@@ -48344,6 +50738,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.1);
   }
 
+  .dark-1\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.1);
+  }
+
   [data-mode='dark'] .toggle\?dark {
     color: var(--alga-white);
     background-color: var(--alga-dark);
@@ -48404,6 +50802,10 @@ textarea.large\:input {
 
   [data-mode='dark'] .toggle\?dark\:stroke {
     stroke: var(--alga-dark);
+  }
+
+  [data-mode='dark'] .toggle\?dark\:placeholder::placeholder {
+    color: var(--alga-dark);
   }
 
   [data-mode='dark'] .toggle\?dark-9 {
@@ -48468,6 +50870,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.9);
   }
 
+  [data-mode='dark'] .toggle\?dark-9\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.9);
+  }
+
   [data-mode='dark'] .toggle\?dark-8 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.8);
@@ -48528,6 +50934,10 @@ textarea.large\:input {
 
   [data-mode='dark'] .toggle\?dark-8\:stroke {
     stroke: rgba(33, 37, 41, 0.8);
+  }
+
+  [data-mode='dark'] .toggle\?dark-8\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.8);
   }
 
   [data-mode='dark'] .toggle\?dark-7 {
@@ -48592,6 +51002,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.7);
   }
 
+  [data-mode='dark'] .toggle\?dark-7\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.7);
+  }
+
   [data-mode='dark'] .toggle\?dark-6 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.6);
@@ -48652,6 +51066,10 @@ textarea.large\:input {
 
   [data-mode='dark'] .toggle\?dark-6\:stroke {
     stroke: rgba(33, 37, 41, 0.6);
+  }
+
+  [data-mode='dark'] .toggle\?dark-6\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.6);
   }
 
   [data-mode='dark'] .toggle\?dark-5 {
@@ -48716,6 +51134,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.5);
   }
 
+  [data-mode='dark'] .toggle\?dark-5\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.5);
+  }
+
   [data-mode='dark'] .toggle\?dark-4 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.4);
@@ -48776,6 +51198,10 @@ textarea.large\:input {
 
   [data-mode='dark'] .toggle\?dark-4\:stroke {
     stroke: rgba(33, 37, 41, 0.4);
+  }
+
+  [data-mode='dark'] .toggle\?dark-4\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.4);
   }
 
   [data-mode='dark'] .toggle\?dark-3 {
@@ -48840,6 +51266,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.3);
   }
 
+  [data-mode='dark'] .toggle\?dark-3\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.3);
+  }
+
   [data-mode='dark'] .toggle\?dark-2 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.2);
@@ -48902,6 +51332,10 @@ textarea.large\:input {
     stroke: rgba(33, 37, 41, 0.2);
   }
 
+  [data-mode='dark'] .toggle\?dark-2\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.2);
+  }
+
   [data-mode='dark'] .toggle\?dark-1 {
     color: var(--alga-black);
     background-color: rgba(33, 37, 41, 0.1);
@@ -48962,6 +51396,10 @@ textarea.large\:input {
 
   [data-mode='dark'] .toggle\?dark-1\:stroke {
     stroke: rgba(33, 37, 41, 0.1);
+  }
+
+  [data-mode='dark'] .toggle\?dark-1\:placeholder::placeholder {
+    color: rgba(33, 37, 41, 0.1);
   }
 }
 
@@ -51863,67 +54301,130 @@ textarea.large\:input {
 .layer-auto { z-index: auto;
   }
 
-.overlay\:layer-0 { position: absolute; z-index: 0;
+.relative\:layer-0 { position: relative; z-index: 0;
   }
 
-.overlay\:layer-1 { position: absolute; z-index: 1;
+.relative\:layer-1 { position: relative; z-index: 1;
   }
 
-.overlay\:layer-2 { position: absolute; z-index: 2;
+.relative\:layer-2 { position: relative; z-index: 2;
   }
 
-.overlay\:layer-3 { position: absolute; z-index: 3;
+.relative\:layer-3 { position: relative; z-index: 3;
   }
 
-.overlay\:layer-4 { position: absolute; z-index: 4;
+.relative\:layer-4 { position: relative; z-index: 4;
   }
 
-.overlay\:layer-5 { position: absolute; z-index: 5;
+.relative\:layer-5 { position: relative; z-index: 5;
   }
 
-.overlay\:layer-6 { position: absolute; z-index: 6;
+.relative\:layer-6 { position: relative; z-index: 6;
   }
 
-.overlay\:layer-7 { position: absolute; z-index: 7;
+.relative\:layer-7 { position: relative; z-index: 7;
   }
 
-.overlay\:layer-9 { position: absolute; z-index: 9;
+.relative\:layer-9 { position: relative; z-index: 9;
   }
 
-.overlay\:layer-10 { position: absolute; z-index: 10;
+.relative\:layer-10 { position: relative; z-index: 10;
   }
 
-.overlay\:layer-11 { position: absolute; z-index: 11;
+.relative\:layer-11 { position: relative; z-index: 11;
   }
 
-.overlay\:layer-12 { position: absolute; z-index: 12;
+.relative\:layer-12 { position: relative; z-index: 12;
   }
 
-.overlay\:layer-13 { position: absolute; z-index: 13;
+.relative\:layer-13 { position: relative; z-index: 13;
   }
 
-.overlay\:layer-14 { position: absolute; z-index: 14;
+.relative\:layer-14 { position: relative; z-index: 14;
   }
 
-.overlay\:layer-15 { position: absolute; z-index: 15;
+.relative\:layer-15 { position: relative; z-index: 15;
   }
 
-.overlay\:layer-16 { position: absolute; z-index: 16;
+.relative\:layer-16 { position: relative; z-index: 16;
   }
 
-.overlay\:layer-17 { position: absolute; z-index: 17;
+.relative\:layer-17 { position: relative; z-index: 17;
   }
 
-.overlay\:layer-18 { position: absolute; z-index: 18;
+.relative\:layer-18 { position: relative; z-index: 18;
   }
 
-.overlay\:layer-19 { position: absolute; z-index: 19;
+.relative\:layer-19 { position: relative; z-index: 19;
   }
 
-.overlay\:layer-20 { position: absolute; z-index: 20;
+.relative\:layer-20 { position: relative; z-index: 20;
   }
 
-.overlay\:layer-auto { position: absolute; z-index: auto;
+.relative\:layer-auto { position: relative; z-index: auto;
+  }
+
+.absolute\:layer-0 { position: absolute; z-index: 0;
+  }
+
+.absolute\:layer-1 { position: absolute; z-index: 1;
+  }
+
+.absolute\:layer-2 { position: absolute; z-index: 2;
+  }
+
+.absolute\:layer-3 { position: absolute; z-index: 3;
+  }
+
+.absolute\:layer-4 { position: absolute; z-index: 4;
+  }
+
+.absolute\:layer-5 { position: absolute; z-index: 5;
+  }
+
+.absolute\:layer-6 { position: absolute; z-index: 6;
+  }
+
+.absolute\:layer-7 { position: absolute; z-index: 7;
+  }
+
+.absolute\:layer-9 { position: absolute; z-index: 9;
+  }
+
+.absolute\:layer-10 { position: absolute; z-index: 10;
+  }
+
+.absolute\:layer-11 { position: absolute; z-index: 11;
+  }
+
+.absolute\:layer-12 { position: absolute; z-index: 12;
+  }
+
+.absolute\:layer-13 { position: absolute; z-index: 13;
+  }
+
+.absolute\:layer-14 { position: absolute; z-index: 14;
+  }
+
+.absolute\:layer-15 { position: absolute; z-index: 15;
+  }
+
+.absolute\:layer-16 { position: absolute; z-index: 16;
+  }
+
+.absolute\:layer-17 { position: absolute; z-index: 17;
+  }
+
+.absolute\:layer-18 { position: absolute; z-index: 18;
+  }
+
+.absolute\:layer-19 { position: absolute; z-index: 19;
+  }
+
+.absolute\:layer-20 { position: absolute; z-index: 20;
+  }
+
+.absolute\:layer-auto { position: absolute; z-index: auto;
   }
 
 @media (min-width: 640px) {
@@ -51969,47 +54470,89 @@ textarea.large\:input {
     }
     .small\(layer\)-auto { z-index: auto;
     }
-    .small\(overlay\:layer\)-0 { position: absolute; z-index: 0;
+    .small\(relative\:layer\)-0 { position: relative; z-index: 0;
     }
-    .small\(overlay\:layer\)-1 { position: absolute; z-index: 1;
+    .small\(relative\:layer\)-1 { position: relative; z-index: 1;
     }
-    .small\(overlay\:layer\)-2 { position: absolute; z-index: 2;
+    .small\(relative\:layer\)-2 { position: relative; z-index: 2;
     }
-    .small\(overlay\:layer\)-3 { position: absolute; z-index: 3;
+    .small\(relative\:layer\)-3 { position: relative; z-index: 3;
     }
-    .small\(overlay\:layer\)-4 { position: absolute; z-index: 4;
+    .small\(relative\:layer\)-4 { position: relative; z-index: 4;
     }
-    .small\(overlay\:layer\)-5 { position: absolute; z-index: 5;
+    .small\(relative\:layer\)-5 { position: relative; z-index: 5;
     }
-    .small\(overlay\:layer\)-6 { position: absolute; z-index: 6;
+    .small\(relative\:layer\)-6 { position: relative; z-index: 6;
     }
-    .small\(overlay\:layer\)-7 { position: absolute; z-index: 7;
+    .small\(relative\:layer\)-7 { position: relative; z-index: 7;
     }
-    .small\(overlay\:layer\)-9 { position: absolute; z-index: 9;
+    .small\(relative\:layer\)-9 { position: relative; z-index: 9;
     }
-    .small\(overlay\:layer\)-10 { position: absolute; z-index: 10;
+    .small\(relative\:layer\)-10 { position: relative; z-index: 10;
     }
-    .small\(overlay\:layer\)-11 { position: absolute; z-index: 11;
+    .small\(relative\:layer\)-11 { position: relative; z-index: 11;
     }
-    .small\(overlay\:layer\)-12 { position: absolute; z-index: 12;
+    .small\(relative\:layer\)-12 { position: relative; z-index: 12;
     }
-    .small\(overlay\:layer\)-13 { position: absolute; z-index: 13;
+    .small\(relative\:layer\)-13 { position: relative; z-index: 13;
     }
-    .small\(overlay\:layer\)-14 { position: absolute; z-index: 14;
+    .small\(relative\:layer\)-14 { position: relative; z-index: 14;
     }
-    .small\(overlay\:layer\)-15 { position: absolute; z-index: 15;
+    .small\(relative\:layer\)-15 { position: relative; z-index: 15;
     }
-    .small\(overlay\:layer\)-16 { position: absolute; z-index: 16;
+    .small\(relative\:layer\)-16 { position: relative; z-index: 16;
     }
-    .small\(overlay\:layer\)-17 { position: absolute; z-index: 17;
+    .small\(relative\:layer\)-17 { position: relative; z-index: 17;
     }
-    .small\(overlay\:layer\)-18 { position: absolute; z-index: 18;
+    .small\(relative\:layer\)-18 { position: relative; z-index: 18;
     }
-    .small\(overlay\:layer\)-19 { position: absolute; z-index: 19;
+    .small\(relative\:layer\)-19 { position: relative; z-index: 19;
     }
-    .small\(overlay\:layer\)-20 { position: absolute; z-index: 20;
+    .small\(relative\:layer\)-20 { position: relative; z-index: 20;
     }
-    .small\(overlay\:layer\)-auto { position: absolute; z-index: auto;
+    .small\(relative\:layer\)-auto { position: relative; z-index: auto;
+    }
+    .small\(absolute\:layer\)-0 { position: absolute; z-index: 0;
+    }
+    .small\(absolute\:layer\)-1 { position: absolute; z-index: 1;
+    }
+    .small\(absolute\:layer\)-2 { position: absolute; z-index: 2;
+    }
+    .small\(absolute\:layer\)-3 { position: absolute; z-index: 3;
+    }
+    .small\(absolute\:layer\)-4 { position: absolute; z-index: 4;
+    }
+    .small\(absolute\:layer\)-5 { position: absolute; z-index: 5;
+    }
+    .small\(absolute\:layer\)-6 { position: absolute; z-index: 6;
+    }
+    .small\(absolute\:layer\)-7 { position: absolute; z-index: 7;
+    }
+    .small\(absolute\:layer\)-9 { position: absolute; z-index: 9;
+    }
+    .small\(absolute\:layer\)-10 { position: absolute; z-index: 10;
+    }
+    .small\(absolute\:layer\)-11 { position: absolute; z-index: 11;
+    }
+    .small\(absolute\:layer\)-12 { position: absolute; z-index: 12;
+    }
+    .small\(absolute\:layer\)-13 { position: absolute; z-index: 13;
+    }
+    .small\(absolute\:layer\)-14 { position: absolute; z-index: 14;
+    }
+    .small\(absolute\:layer\)-15 { position: absolute; z-index: 15;
+    }
+    .small\(absolute\:layer\)-16 { position: absolute; z-index: 16;
+    }
+    .small\(absolute\:layer\)-17 { position: absolute; z-index: 17;
+    }
+    .small\(absolute\:layer\)-18 { position: absolute; z-index: 18;
+    }
+    .small\(absolute\:layer\)-19 { position: absolute; z-index: 19;
+    }
+    .small\(absolute\:layer\)-20 { position: absolute; z-index: 20;
+    }
+    .small\(absolute\:layer\)-auto { position: absolute; z-index: auto;
     }
 }
 
@@ -52056,47 +54599,89 @@ textarea.large\:input {
     }
     .medium\(layer\)-auto { z-index: auto;
     }
-    .medium\(overlay\:layer\)-0 { position: absolute; z-index: 0;
+    .medium\(relative\:layer\)-0 { position: relative; z-index: 0;
     }
-    .medium\(overlay\:layer\)-1 { position: absolute; z-index: 1;
+    .medium\(relative\:layer\)-1 { position: relative; z-index: 1;
     }
-    .medium\(overlay\:layer\)-2 { position: absolute; z-index: 2;
+    .medium\(relative\:layer\)-2 { position: relative; z-index: 2;
     }
-    .medium\(overlay\:layer\)-3 { position: absolute; z-index: 3;
+    .medium\(relative\:layer\)-3 { position: relative; z-index: 3;
     }
-    .medium\(overlay\:layer\)-4 { position: absolute; z-index: 4;
+    .medium\(relative\:layer\)-4 { position: relative; z-index: 4;
     }
-    .medium\(overlay\:layer\)-5 { position: absolute; z-index: 5;
+    .medium\(relative\:layer\)-5 { position: relative; z-index: 5;
     }
-    .medium\(overlay\:layer\)-6 { position: absolute; z-index: 6;
+    .medium\(relative\:layer\)-6 { position: relative; z-index: 6;
     }
-    .medium\(overlay\:layer\)-7 { position: absolute; z-index: 7;
+    .medium\(relative\:layer\)-7 { position: relative; z-index: 7;
     }
-    .medium\(overlay\:layer\)-9 { position: absolute; z-index: 9;
+    .medium\(relative\:layer\)-9 { position: relative; z-index: 9;
     }
-    .medium\(overlay\:layer\)-10 { position: absolute; z-index: 10;
+    .medium\(relative\:layer\)-10 { position: relative; z-index: 10;
     }
-    .medium\(overlay\:layer\)-11 { position: absolute; z-index: 11;
+    .medium\(relative\:layer\)-11 { position: relative; z-index: 11;
     }
-    .medium\(overlay\:layer\)-12 { position: absolute; z-index: 12;
+    .medium\(relative\:layer\)-12 { position: relative; z-index: 12;
     }
-    .medium\(overlay\:layer\)-13 { position: absolute; z-index: 13;
+    .medium\(relative\:layer\)-13 { position: relative; z-index: 13;
     }
-    .medium\(overlay\:layer\)-14 { position: absolute; z-index: 14;
+    .medium\(relative\:layer\)-14 { position: relative; z-index: 14;
     }
-    .medium\(overlay\:layer\)-15 { position: absolute; z-index: 15;
+    .medium\(relative\:layer\)-15 { position: relative; z-index: 15;
     }
-    .medium\(overlay\:layer\)-16 { position: absolute; z-index: 16;
+    .medium\(relative\:layer\)-16 { position: relative; z-index: 16;
     }
-    .medium\(overlay\:layer\)-17 { position: absolute; z-index: 17;
+    .medium\(relative\:layer\)-17 { position: relative; z-index: 17;
     }
-    .medium\(overlay\:layer\)-18 { position: absolute; z-index: 18;
+    .medium\(relative\:layer\)-18 { position: relative; z-index: 18;
     }
-    .medium\(overlay\:layer\)-19 { position: absolute; z-index: 19;
+    .medium\(relative\:layer\)-19 { position: relative; z-index: 19;
     }
-    .medium\(overlay\:layer\)-20 { position: absolute; z-index: 20;
+    .medium\(relative\:layer\)-20 { position: relative; z-index: 20;
     }
-    .medium\(overlay\:layer\)-auto { position: absolute; z-index: auto;
+    .medium\(relative\:layer\)-auto { position: relative; z-index: auto;
+    }
+    .medium\(absolute\:layer\)-0 { position: absolute; z-index: 0;
+    }
+    .medium\(absolute\:layer\)-1 { position: absolute; z-index: 1;
+    }
+    .medium\(absolute\:layer\)-2 { position: absolute; z-index: 2;
+    }
+    .medium\(absolute\:layer\)-3 { position: absolute; z-index: 3;
+    }
+    .medium\(absolute\:layer\)-4 { position: absolute; z-index: 4;
+    }
+    .medium\(absolute\:layer\)-5 { position: absolute; z-index: 5;
+    }
+    .medium\(absolute\:layer\)-6 { position: absolute; z-index: 6;
+    }
+    .medium\(absolute\:layer\)-7 { position: absolute; z-index: 7;
+    }
+    .medium\(absolute\:layer\)-9 { position: absolute; z-index: 9;
+    }
+    .medium\(absolute\:layer\)-10 { position: absolute; z-index: 10;
+    }
+    .medium\(absolute\:layer\)-11 { position: absolute; z-index: 11;
+    }
+    .medium\(absolute\:layer\)-12 { position: absolute; z-index: 12;
+    }
+    .medium\(absolute\:layer\)-13 { position: absolute; z-index: 13;
+    }
+    .medium\(absolute\:layer\)-14 { position: absolute; z-index: 14;
+    }
+    .medium\(absolute\:layer\)-15 { position: absolute; z-index: 15;
+    }
+    .medium\(absolute\:layer\)-16 { position: absolute; z-index: 16;
+    }
+    .medium\(absolute\:layer\)-17 { position: absolute; z-index: 17;
+    }
+    .medium\(absolute\:layer\)-18 { position: absolute; z-index: 18;
+    }
+    .medium\(absolute\:layer\)-19 { position: absolute; z-index: 19;
+    }
+    .medium\(absolute\:layer\)-20 { position: absolute; z-index: 20;
+    }
+    .medium\(absolute\:layer\)-auto { position: absolute; z-index: auto;
     }
 }
 
@@ -52143,47 +54728,89 @@ textarea.large\:input {
     }
     .large\(layer\)-auto { z-index: auto;
     }
-    .large\(overlay\:layer\)-0 { position: absolute; z-index: 0;
+    .large\(relative\:layer\)-0 { position: relative; z-index: 0;
     }
-    .large\(overlay\:layer\)-1 { position: absolute; z-index: 1;
+    .large\(relative\:layer\)-1 { position: relative; z-index: 1;
     }
-    .large\(overlay\:layer\)-2 { position: absolute; z-index: 2;
+    .large\(relative\:layer\)-2 { position: relative; z-index: 2;
     }
-    .large\(overlay\:layer\)-3 { position: absolute; z-index: 3;
+    .large\(relative\:layer\)-3 { position: relative; z-index: 3;
     }
-    .large\(overlay\:layer\)-4 { position: absolute; z-index: 4;
+    .large\(relative\:layer\)-4 { position: relative; z-index: 4;
     }
-    .large\(overlay\:layer\)-5 { position: absolute; z-index: 5;
+    .large\(relative\:layer\)-5 { position: relative; z-index: 5;
     }
-    .large\(overlay\:layer\)-6 { position: absolute; z-index: 6;
+    .large\(relative\:layer\)-6 { position: relative; z-index: 6;
     }
-    .large\(overlay\:layer\)-7 { position: absolute; z-index: 7;
+    .large\(relative\:layer\)-7 { position: relative; z-index: 7;
     }
-    .large\(overlay\:layer\)-9 { position: absolute; z-index: 9;
+    .large\(relative\:layer\)-9 { position: relative; z-index: 9;
     }
-    .large\(overlay\:layer\)-10 { position: absolute; z-index: 10;
+    .large\(relative\:layer\)-10 { position: relative; z-index: 10;
     }
-    .large\(overlay\:layer\)-11 { position: absolute; z-index: 11;
+    .large\(relative\:layer\)-11 { position: relative; z-index: 11;
     }
-    .large\(overlay\:layer\)-12 { position: absolute; z-index: 12;
+    .large\(relative\:layer\)-12 { position: relative; z-index: 12;
     }
-    .large\(overlay\:layer\)-13 { position: absolute; z-index: 13;
+    .large\(relative\:layer\)-13 { position: relative; z-index: 13;
     }
-    .large\(overlay\:layer\)-14 { position: absolute; z-index: 14;
+    .large\(relative\:layer\)-14 { position: relative; z-index: 14;
     }
-    .large\(overlay\:layer\)-15 { position: absolute; z-index: 15;
+    .large\(relative\:layer\)-15 { position: relative; z-index: 15;
     }
-    .large\(overlay\:layer\)-16 { position: absolute; z-index: 16;
+    .large\(relative\:layer\)-16 { position: relative; z-index: 16;
     }
-    .large\(overlay\:layer\)-17 { position: absolute; z-index: 17;
+    .large\(relative\:layer\)-17 { position: relative; z-index: 17;
     }
-    .large\(overlay\:layer\)-18 { position: absolute; z-index: 18;
+    .large\(relative\:layer\)-18 { position: relative; z-index: 18;
     }
-    .large\(overlay\:layer\)-19 { position: absolute; z-index: 19;
+    .large\(relative\:layer\)-19 { position: relative; z-index: 19;
     }
-    .large\(overlay\:layer\)-20 { position: absolute; z-index: 20;
+    .large\(relative\:layer\)-20 { position: relative; z-index: 20;
     }
-    .large\(overlay\:layer\)-auto { position: absolute; z-index: auto;
+    .large\(relative\:layer\)-auto { position: relative; z-index: auto;
+    }
+    .large\(absolute\:layer\)-0 { position: absolute; z-index: 0;
+    }
+    .large\(absolute\:layer\)-1 { position: absolute; z-index: 1;
+    }
+    .large\(absolute\:layer\)-2 { position: absolute; z-index: 2;
+    }
+    .large\(absolute\:layer\)-3 { position: absolute; z-index: 3;
+    }
+    .large\(absolute\:layer\)-4 { position: absolute; z-index: 4;
+    }
+    .large\(absolute\:layer\)-5 { position: absolute; z-index: 5;
+    }
+    .large\(absolute\:layer\)-6 { position: absolute; z-index: 6;
+    }
+    .large\(absolute\:layer\)-7 { position: absolute; z-index: 7;
+    }
+    .large\(absolute\:layer\)-9 { position: absolute; z-index: 9;
+    }
+    .large\(absolute\:layer\)-10 { position: absolute; z-index: 10;
+    }
+    .large\(absolute\:layer\)-11 { position: absolute; z-index: 11;
+    }
+    .large\(absolute\:layer\)-12 { position: absolute; z-index: 12;
+    }
+    .large\(absolute\:layer\)-13 { position: absolute; z-index: 13;
+    }
+    .large\(absolute\:layer\)-14 { position: absolute; z-index: 14;
+    }
+    .large\(absolute\:layer\)-15 { position: absolute; z-index: 15;
+    }
+    .large\(absolute\:layer\)-16 { position: absolute; z-index: 16;
+    }
+    .large\(absolute\:layer\)-17 { position: absolute; z-index: 17;
+    }
+    .large\(absolute\:layer\)-18 { position: absolute; z-index: 18;
+    }
+    .large\(absolute\:layer\)-19 { position: absolute; z-index: 19;
+    }
+    .large\(absolute\:layer\)-20 { position: absolute; z-index: 20;
+    }
+    .large\(absolute\:layer\)-auto { position: absolute; z-index: auto;
     }
 }
 
@@ -52230,47 +54857,89 @@ textarea.large\:input {
     }
     .larger\(layer\)-auto { z-index: auto;
     }
-    .larger\(overlay\:layer\)-0 { position: absolute; z-index: 0;
+    .larger\(relative\:layer\)-0 { position: relative; z-index: 0;
     }
-    .larger\(overlay\:layer\)-1 { position: absolute; z-index: 1;
+    .larger\(relative\:layer\)-1 { position: relative; z-index: 1;
     }
-    .larger\(overlay\:layer\)-2 { position: absolute; z-index: 2;
+    .larger\(relative\:layer\)-2 { position: relative; z-index: 2;
     }
-    .larger\(overlay\:layer\)-3 { position: absolute; z-index: 3;
+    .larger\(relative\:layer\)-3 { position: relative; z-index: 3;
     }
-    .larger\(overlay\:layer\)-4 { position: absolute; z-index: 4;
+    .larger\(relative\:layer\)-4 { position: relative; z-index: 4;
     }
-    .larger\(overlay\:layer\)-5 { position: absolute; z-index: 5;
+    .larger\(relative\:layer\)-5 { position: relative; z-index: 5;
     }
-    .larger\(overlay\:layer\)-6 { position: absolute; z-index: 6;
+    .larger\(relative\:layer\)-6 { position: relative; z-index: 6;
     }
-    .larger\(overlay\:layer\)-7 { position: absolute; z-index: 7;
+    .larger\(relative\:layer\)-7 { position: relative; z-index: 7;
     }
-    .larger\(overlay\:layer\)-9 { position: absolute; z-index: 9;
+    .larger\(relative\:layer\)-9 { position: relative; z-index: 9;
     }
-    .larger\(overlay\:layer\)-10 { position: absolute; z-index: 10;
+    .larger\(relative\:layer\)-10 { position: relative; z-index: 10;
     }
-    .larger\(overlay\:layer\)-11 { position: absolute; z-index: 11;
+    .larger\(relative\:layer\)-11 { position: relative; z-index: 11;
     }
-    .larger\(overlay\:layer\)-12 { position: absolute; z-index: 12;
+    .larger\(relative\:layer\)-12 { position: relative; z-index: 12;
     }
-    .larger\(overlay\:layer\)-13 { position: absolute; z-index: 13;
+    .larger\(relative\:layer\)-13 { position: relative; z-index: 13;
     }
-    .larger\(overlay\:layer\)-14 { position: absolute; z-index: 14;
+    .larger\(relative\:layer\)-14 { position: relative; z-index: 14;
     }
-    .larger\(overlay\:layer\)-15 { position: absolute; z-index: 15;
+    .larger\(relative\:layer\)-15 { position: relative; z-index: 15;
     }
-    .larger\(overlay\:layer\)-16 { position: absolute; z-index: 16;
+    .larger\(relative\:layer\)-16 { position: relative; z-index: 16;
     }
-    .larger\(overlay\:layer\)-17 { position: absolute; z-index: 17;
+    .larger\(relative\:layer\)-17 { position: relative; z-index: 17;
     }
-    .larger\(overlay\:layer\)-18 { position: absolute; z-index: 18;
+    .larger\(relative\:layer\)-18 { position: relative; z-index: 18;
     }
-    .larger\(overlay\:layer\)-19 { position: absolute; z-index: 19;
+    .larger\(relative\:layer\)-19 { position: relative; z-index: 19;
     }
-    .larger\(overlay\:layer\)-20 { position: absolute; z-index: 20;
+    .larger\(relative\:layer\)-20 { position: relative; z-index: 20;
     }
-    .larger\(overlay\:layer\)-auto { position: absolute; z-index: auto;
+    .larger\(relative\:layer\)-auto { position: relative; z-index: auto;
+    }
+    .larger\(absolute\:layer\)-0 { position: absolute; z-index: 0;
+    }
+    .larger\(absolute\:layer\)-1 { position: absolute; z-index: 1;
+    }
+    .larger\(absolute\:layer\)-2 { position: absolute; z-index: 2;
+    }
+    .larger\(absolute\:layer\)-3 { position: absolute; z-index: 3;
+    }
+    .larger\(absolute\:layer\)-4 { position: absolute; z-index: 4;
+    }
+    .larger\(absolute\:layer\)-5 { position: absolute; z-index: 5;
+    }
+    .larger\(absolute\:layer\)-6 { position: absolute; z-index: 6;
+    }
+    .larger\(absolute\:layer\)-7 { position: absolute; z-index: 7;
+    }
+    .larger\(absolute\:layer\)-9 { position: absolute; z-index: 9;
+    }
+    .larger\(absolute\:layer\)-10 { position: absolute; z-index: 10;
+    }
+    .larger\(absolute\:layer\)-11 { position: absolute; z-index: 11;
+    }
+    .larger\(absolute\:layer\)-12 { position: absolute; z-index: 12;
+    }
+    .larger\(absolute\:layer\)-13 { position: absolute; z-index: 13;
+    }
+    .larger\(absolute\:layer\)-14 { position: absolute; z-index: 14;
+    }
+    .larger\(absolute\:layer\)-15 { position: absolute; z-index: 15;
+    }
+    .larger\(absolute\:layer\)-16 { position: absolute; z-index: 16;
+    }
+    .larger\(absolute\:layer\)-17 { position: absolute; z-index: 17;
+    }
+    .larger\(absolute\:layer\)-18 { position: absolute; z-index: 18;
+    }
+    .larger\(absolute\:layer\)-19 { position: absolute; z-index: 19;
+    }
+    .larger\(absolute\:layer\)-20 { position: absolute; z-index: 20;
+    }
+    .larger\(absolute\:layer\)-auto { position: absolute; z-index: auto;
     }
 }
 
@@ -52317,47 +54986,89 @@ textarea.large\:input {
     }
     .largest\(layer\)-auto { z-index: auto;
     }
-    .largest\(overlay\:layer\)-0 { position: absolute; z-index: 0;
+    .largest\(relative\:layer\)-0 { position: relative; z-index: 0;
     }
-    .largest\(overlay\:layer\)-1 { position: absolute; z-index: 1;
+    .largest\(relative\:layer\)-1 { position: relative; z-index: 1;
     }
-    .largest\(overlay\:layer\)-2 { position: absolute; z-index: 2;
+    .largest\(relative\:layer\)-2 { position: relative; z-index: 2;
     }
-    .largest\(overlay\:layer\)-3 { position: absolute; z-index: 3;
+    .largest\(relative\:layer\)-3 { position: relative; z-index: 3;
     }
-    .largest\(overlay\:layer\)-4 { position: absolute; z-index: 4;
+    .largest\(relative\:layer\)-4 { position: relative; z-index: 4;
     }
-    .largest\(overlay\:layer\)-5 { position: absolute; z-index: 5;
+    .largest\(relative\:layer\)-5 { position: relative; z-index: 5;
     }
-    .largest\(overlay\:layer\)-6 { position: absolute; z-index: 6;
+    .largest\(relative\:layer\)-6 { position: relative; z-index: 6;
     }
-    .largest\(overlay\:layer\)-7 { position: absolute; z-index: 7;
+    .largest\(relative\:layer\)-7 { position: relative; z-index: 7;
     }
-    .largest\(overlay\:layer\)-9 { position: absolute; z-index: 9;
+    .largest\(relative\:layer\)-9 { position: relative; z-index: 9;
     }
-    .largest\(overlay\:layer\)-10 { position: absolute; z-index: 10;
+    .largest\(relative\:layer\)-10 { position: relative; z-index: 10;
     }
-    .largest\(overlay\:layer\)-11 { position: absolute; z-index: 11;
+    .largest\(relative\:layer\)-11 { position: relative; z-index: 11;
     }
-    .largest\(overlay\:layer\)-12 { position: absolute; z-index: 12;
+    .largest\(relative\:layer\)-12 { position: relative; z-index: 12;
     }
-    .largest\(overlay\:layer\)-13 { position: absolute; z-index: 13;
+    .largest\(relative\:layer\)-13 { position: relative; z-index: 13;
     }
-    .largest\(overlay\:layer\)-14 { position: absolute; z-index: 14;
+    .largest\(relative\:layer\)-14 { position: relative; z-index: 14;
     }
-    .largest\(overlay\:layer\)-15 { position: absolute; z-index: 15;
+    .largest\(relative\:layer\)-15 { position: relative; z-index: 15;
     }
-    .largest\(overlay\:layer\)-16 { position: absolute; z-index: 16;
+    .largest\(relative\:layer\)-16 { position: relative; z-index: 16;
     }
-    .largest\(overlay\:layer\)-17 { position: absolute; z-index: 17;
+    .largest\(relative\:layer\)-17 { position: relative; z-index: 17;
     }
-    .largest\(overlay\:layer\)-18 { position: absolute; z-index: 18;
+    .largest\(relative\:layer\)-18 { position: relative; z-index: 18;
     }
-    .largest\(overlay\:layer\)-19 { position: absolute; z-index: 19;
+    .largest\(relative\:layer\)-19 { position: relative; z-index: 19;
     }
-    .largest\(overlay\:layer\)-20 { position: absolute; z-index: 20;
+    .largest\(relative\:layer\)-20 { position: relative; z-index: 20;
     }
-    .largest\(overlay\:layer\)-auto { position: absolute; z-index: auto;
+    .largest\(relative\:layer\)-auto { position: relative; z-index: auto;
+    }
+    .largest\(absolute\:layer\)-0 { position: absolute; z-index: 0;
+    }
+    .largest\(absolute\:layer\)-1 { position: absolute; z-index: 1;
+    }
+    .largest\(absolute\:layer\)-2 { position: absolute; z-index: 2;
+    }
+    .largest\(absolute\:layer\)-3 { position: absolute; z-index: 3;
+    }
+    .largest\(absolute\:layer\)-4 { position: absolute; z-index: 4;
+    }
+    .largest\(absolute\:layer\)-5 { position: absolute; z-index: 5;
+    }
+    .largest\(absolute\:layer\)-6 { position: absolute; z-index: 6;
+    }
+    .largest\(absolute\:layer\)-7 { position: absolute; z-index: 7;
+    }
+    .largest\(absolute\:layer\)-9 { position: absolute; z-index: 9;
+    }
+    .largest\(absolute\:layer\)-10 { position: absolute; z-index: 10;
+    }
+    .largest\(absolute\:layer\)-11 { position: absolute; z-index: 11;
+    }
+    .largest\(absolute\:layer\)-12 { position: absolute; z-index: 12;
+    }
+    .largest\(absolute\:layer\)-13 { position: absolute; z-index: 13;
+    }
+    .largest\(absolute\:layer\)-14 { position: absolute; z-index: 14;
+    }
+    .largest\(absolute\:layer\)-15 { position: absolute; z-index: 15;
+    }
+    .largest\(absolute\:layer\)-16 { position: absolute; z-index: 16;
+    }
+    .largest\(absolute\:layer\)-17 { position: absolute; z-index: 17;
+    }
+    .largest\(absolute\:layer\)-18 { position: absolute; z-index: 18;
+    }
+    .largest\(absolute\:layer\)-19 { position: absolute; z-index: 19;
+    }
+    .largest\(absolute\:layer\)-20 { position: absolute; z-index: 20;
+    }
+    .largest\(absolute\:layer\)-auto { position: absolute; z-index: auto;
     }
 }
 

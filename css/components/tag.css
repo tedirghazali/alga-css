@@ -1,21 +1,56 @@
-.tags, .tag-group {
-  @apply flex items-center flex-wrap justify-start;
+.tags,
+.left\:tags,
+.center\:tags,
+.right\:tags,
+.tag-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.left\:tags {
+  justify-content: flex-start;
+}
+
+.center\:tags {
+  justify-content: center;
+}
+
+.right\:tags {
+  justify-content: flex-end;
+}
+
+.right\:tags .tag:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.right\:tags .tag:not(:last-child) {
+  margin-right: 0;
 }
   
 .tag-group:not(:last-child) {
-  @apply mr-2;
+  margin: 0.5rem;
 }
   
 .tag-group .tag:not(:first-child) {
-  @apply ml-0 rounded-l-none;
+  margin-left: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .tag-group .tag:not(:last-child) {
-  @apply rounded-r-none;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
   
 .tag {
-  @apply items-center inline-flex text-xs justify-center leading-normal whitespace-nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  white-space: nowrap;
   background-color: whitesmoke;
   border-radius: 4px;
   color: #4a4a4a;
@@ -24,72 +59,8 @@
   padding-right: 0.75em;
 }
 
-.tag:not(:last-child) {
-  @apply mr-2;
-}
-
-.tag-primary {
-  @apply bg-blue-600 text-white;
-}
-
-.tag-secondary {
-  @apply bg-gray-500 text-white;
-}
-
-.tag-success {
-  @apply bg-green-600 text-white;
-}
-
-.tag-danger {
-  @apply bg-red-600 text-white;
-}
-
-.tag-warning {
-  @apply bg-yellow-600 text-gray-900;
-}
-
-.tag-info {
-  @apply bg-blue-400 text-white;
-}
-
-.tag-light {
-  @apply bg-gray-100 text-gray-900;
-}
-
-.tag-dark {
-  @apply bg-gray-900 text-white;
-}
-
-.tag-large {
-  @apply text-xl;
-}
-
-.tag-small {
-  @apply text-xs;
-}
-
-.tags-left {
-  @apply justify-start;
-}
-
-.tags-center {
-  @apply justify-center;
-}
-
-.tags-right {
-  @apply justify-end;
-}
-
-.tags-right .tag:not(:first-child) {
-  @apply ml-2;
-}
-
-.tags-right .tag:not(:last-child) {
-  @apply mr-0;
-}
-
 .tag-group .tag {
-  @apply mr-0;
+  margin-right: 0;
 }
 
 .tag-icon:first-child:not(:last-child) {
@@ -108,13 +79,17 @@
 }
    
 .tag-delete {
-  @apply ml-1 p-0 relative;
+  margin-left: 0.25rem;
+  padding: 0;
+  position: relative;
   margin-right: -0.375rem;
   width: 2em;
     
   &::before, 
   &::after {
-    @apply bg-current block absolute;
+    display: block;
+    position: absolute;
+    background: currentColor;
     content: "";
     left: 50%;
     top: 50%;
@@ -122,7 +97,7 @@
     transform-origin: center center;
   }
   &::before {
-    @apply w-1/2;
+    width: 50%;
     height: 1px;
   }
   &::after {
@@ -138,17 +113,22 @@
   }
 }
 
-.tag-rounded {
-  border-radius: 290486px;
-}
-
-.tag-hover {
-  @apply underline;
+.hover\?tag:hover {
+  text-decoration: underline;
 }
   
-.tags-input {
-  @apply flex flex-wrap h-auto relative overflow-hidden w-full text-base font-normal leading-normal;
-  @apply bg-white bg-clip-padding rounded appearance-none;
+.tag\:input {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  background: var(--alga-white);
+  background-clip: padding-box;
+  appearance: none;
   padding: calc(0.375rem - 2px) calc(0.75rem - 2px);
   cursor: text;
   min-height: calc(1.5em + .75rem + 2px);
@@ -156,25 +136,29 @@
   border: 1px solid #ced4da;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     
-  &.focus {
-    @apply bg-white;
+  &:focus {
+    background: var(--alga-white);
     color: #495057;
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
   & .tag-group {
-    @apply cursor-pointer my-1;
+    cursor: pointer;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
   }
 }
 
-.tags-input.is-valid,
-.was-validated .tags-input:valid {
+.tag\:input.is-valid,
+.was-validated .tag\:input:valid {
   border-color: #28a745;
 }
   
-.tag-control {
-  @apply bg-transparent my-1;
+.tag\:input-control {
+  background: transparent;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
   outline: 0;
   border-width: 0;
   padding: 0 2px 0 0;
@@ -182,8 +166,11 @@
   color: #495057;
 }
 
-.tag-control-hidden {
-  @apply absolute overflow-hidden invisible whitespace-nowrap;
+.hidden\?tag\:input-control {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
   top: 0;
   left: -9999px;
 }
