@@ -36,19 +36,36 @@ function cssMin() {
     .pipe(dest(dist.css))
 }
 
-/*function js() {
-  return src('./js/alga.js')
-    .pipe(dest(dist.js))
-    .pipe(terser())
+function cssSlim() {
+  return src('css/slim.css', { sourcemaps: true })
+    .pipe(postcss([
+      require('postcss-import'),
+      require('postcss-mixins')({
+        mixinsDir: path.join(__dirname, 'css/mixins')
+      }),
+      require('tailwindcss'),
+      //require("stylelint"),
+      require('postcss-custom-properties'),
+      require('postcss-simple-vars'),
+      require('postcss-nested'),
+      require('autoprefixer')
+    ]))
+    .pipe(rename("alga-slim.css"))
+    .pipe(dest(dist.css, { sourcemaps: '.' }))
+}
+
+function cssSlimMin() {
+  return src(`${dist.css}alga-slim.css`)
+    .pipe(cleanCSS({ level: { 1: { specialComments: 0 } } }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(dest(dist.js))
-}*/
+    .pipe(dest(dist.css))
+}
 
 function watchChanges() {
   watch('css/app.css', series(css, cssMin))
-  //watch('js/alga.js', js)
+  watch('css/slim.css', series(cssSlim, cssSlimMin))
 }
 
 exports.watch = watchChanges
-exports.build = series(css, cssMin) //, js
-exports.default = series(css, cssMin) //, js, watchChanges
+exports.build = series(css, cssMin, cssSlim, cssSlimMin)
+exports.default = series(css, cssMin, cssSlim, cssSlimMin) //watchChanges
