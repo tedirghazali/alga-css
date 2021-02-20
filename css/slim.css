@@ -20,10 +20,12 @@
 @import './utilities/width.css';
 @import './utilities/height.css';
 @import './utilities/visibility.css';
+@import './utilities/display.css';
 @import './utilities/align.css';
 @import './utilities/overflow.css';
 @import './utilities/overscroll.css';
 @import './utilities/shadow.css';
 @import './utilities/border.css';
 @import './utilities/outline.css';
+@import './utilities/list-style.css';
 

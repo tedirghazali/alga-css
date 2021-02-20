@@ -1,57 +1,57 @@
 @mixin margin-mixin .margin, margin;
-@mixin margin-double .start\:margin, margin-top, margin-bottom;
-@mixin margin-double .end\:margin, margin-right, margin-left;
+@mixin margin-double .y\:margin, margin-top, margin-bottom;
+@mixin margin-double .x\:margin, margin-right, margin-left;
 @mixin margin-mixin .top\:margin, margin-top;
 @mixin margin-mixin .right\:margin, margin-right;
 @mixin margin-mixin .bottom\:margin, margin-bottom;
 @mixin margin-mixin .left\:margin, margin-left;
 
 @media (min-width: 640px) {
-  @mixin margin-mixin .small\:margin, margin;
-  @mixin margin-double .small\:start\:margin, margin-top, margin-bottom;
-  @mixin margin-double .small\:end\:margin, margin-right, margin-left;
-  @mixin margin-mixin .small\:top\:margin, margin-top;
-  @mixin margin-mixin .small\:right\:margin, margin-right;
-  @mixin margin-mixin .small\:bottom\:margin, margin-bottom;
-  @mixin margin-mixin .small\:left\:margin, margin-left;
+  @mixin margin-mixin .small\(margin\), margin;
+  @mixin margin-double .small\(y\:margin\), margin-top, margin-bottom;
+  @mixin margin-double .small\(x\:margin\), margin-right, margin-left;
+  @mixin margin-mixin .small\(top\:margin\), margin-top;
+  @mixin margin-mixin .small\(right\:margin\), margin-right;
+  @mixin margin-mixin .small\(bottom\:margin\), margin-bottom;
+  @mixin margin-mixin .small\(left\:margin\), margin-left;
 }
 
 @media (min-width: 768px) {
-  @mixin margin-mixin .medium\:margin, margin;
-  @mixin margin-double .medium\:start\:margin, margin-top, margin-bottom;
-  @mixin margin-double .medium\:end\:margin, margin-right, margin-left;
-  @mixin margin-mixin .medium\:top\:margin, margin-top;
-  @mixin margin-mixin .medium\:right\:margin, margin-right;
-  @mixin margin-mixin .medium\:bottom\:margin, margin-bottom;
-  @mixin margin-mixin .medium\:left\:margin, margin-left;
+  @mixin margin-mixin .medium\(margin\), margin;
+  @mixin margin-double .medium\(y\:margin\), margin-top, margin-bottom;
+  @mixin margin-double .medium\(x\:margin\), margin-right, margin-left;
+  @mixin margin-mixin .medium\(top\:margin\), margin-top;
+  @mixin margin-mixin .medium\(right\:margin\), margin-right;
+  @mixin margin-mixin .medium\(bottom\:margin\), margin-bottom;
+  @mixin margin-mixin .medium\(left\:margin\), margin-left;
 }
 
 @media (min-width: 1024px) {
-  @mixin margin-mixin .large\:margin, margin;
-  @mixin margin-double .large\:start\:margin, margin-top, margin-bottom;
-  @mixin margin-double .large\:end\:margin, margin-right, margin-left;
-  @mixin margin-mixin .large\:top\:margin, margin-top;
-  @mixin margin-mixin .large\:right\:margin, margin-right;
-  @mixin margin-mixin .large\:bottom\:margin, margin-bottom;
-  @mixin margin-mixin .large\:left\:margin, margin-left;
+  @mixin margin-mixin .large\(margin\), margin;
+  @mixin margin-double .large\(y\:margin\), margin-top, margin-bottom;
+  @mixin margin-double .large\(x\:margin\), margin-right, margin-left;
+  @mixin margin-mixin .large\(top\:margin\), margin-top;
+  @mixin margin-mixin .large\(right\:margin\), margin-right;
+  @mixin margin-mixin .large\(bottom\:margin\), margin-bottom;
+  @mixin margin-mixin .large\(left\:margin\), margin-left;
 }
 
 @media (min-width: 1280px) {
-  @mixin margin-mixin .larger\:margin, margin;
-  @mixin margin-double .larger\:start\:margin, margin-top, margin-bottom;
-  @mixin margin-double .larger\:end\:margin, margin-right, margin-left;
-  @mixin margin-mixin .larger\:top\:margin, margin-top;
-  @mixin margin-mixin .larger\:right\:margin, margin-right;
-  @mixin margin-mixin .larger\:bottom\:margin, margin-bottom;
-  @mixin margin-mixin .larger\:left\:margin, margin-left;
+  @mixin margin-mixin .larger\(margin\), margin;
+  @mixin margin-double .larger\(y\:margin\), margin-top, margin-bottom;
+  @mixin margin-double .larger\(x\:margin\), margin-right, margin-left;
+  @mixin margin-mixin .larger\(top\:margin\), margin-top;
+  @mixin margin-mixin .larger\(right\:margin\), margin-right;
+  @mixin margin-mixin .larger\(bottom\:margin\), margin-bottom;
+  @mixin margin-mixin .larger\(left\:margin\), margin-left;
 }
 
 @media (min-width: 1536px) {
-  @mixin margin-mixin .largest\:margin, margin;
-  @mixin margin-double .largest\:start\:margin, margin-top, margin-bottom;
-  @mixin margin-double .largest\:end\:margin, margin-right, margin-left;
-  @mixin margin-mixin .largest\:top\:margin, margin-top;
-  @mixin margin-mixin .largest\:right\:margin, margin-right;
-  @mixin margin-mixin .largest\:bottom\:margin, margin-bottom;
-  @mixin margin-mixin .largest\:left\:margin, margin-left;
+  @mixin margin-mixin .largest\(margin\), margin;
+  @mixin margin-double .largest\(y\:margin\), margin-top, margin-bottom;
+  @mixin margin-double .largest\(x\:margin\), margin-right, margin-left;
+  @mixin margin-mixin .largest\(top\:margin\), margin-top;
+  @mixin margin-mixin .largest\(right\:margin\), margin-right;
+  @mixin margin-mixin .largest\(bottom\:margin\), margin-bottom;
+  @mixin margin-mixin .largest\(left\:margin\), margin-left;
 }

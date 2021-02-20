@@ -1,6 +1,6 @@
 {
   "name": "alga-css",
-  "version": "0.0.1-alpha1",
+  "version": "0.0.1-alpha2",
   "description": "Alga CSS is an alternative toolkit based on Tailwind CSS and Bootstrap 5",
   "main": "css/app.css",
   "unpkg": "dist/alga.min.css",

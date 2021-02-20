@@ -61166,10 +61166,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 
 /* Utilities */
 
-.flex {
-    display: flex !important;
-  }
-
 .start\:flex {
     display: flex !important;
     justify-content: flex-start !important;
@@ -61220,27 +61216,27 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-direction: column-reverse !important;
   }
 
-.start\:flex-align {
+.start\:flex-items {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-.end\:flex-align {
+.end\:flex-items {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-.center\:flex-align {
+.center\:flex-items {
     display: flex !important;
     align-items: center !important;
   }
 
-.baseline\:flex-align {
+.baseline\:flex-items {
     display: flex !important;
     align-items: baseline !important;
   }
 
-.stretch\:flex-align {
+.stretch\:flex-items {
     display: flex !important;
     align-items: stretch !important;
   }
@@ -61279,10 +61275,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
-  }
-
-.flex-inline {
-    display: inline-flex !important;
   }
 
 .flex-fill {
@@ -61345,95 +61337,95 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-wrap: wrap-reverse !important;
   }
 
-.start\:justify-content {
+.start\:justify {
     justify-content: flex-start !important;
   }
 
-.end\:justify-content {
+.end\:justify {
     justify-content: flex-end !important;
   }
 
-.center\:justify-content {
+.center\:justify {
     justify-content: center !important;
   }
 
-.between\:justify-content {
+.between\:justify {
     justify-content: space-between !important;
   }
 
-.around\:justify-content {
+.around\:justify {
     justify-content: space-around !important;
   }
 
-.evenly\:justify-content {
+.evenly\:justify {
     justify-content: space-evenly !important;
   }
 
-.start\:align-items {
+.start\:items {
     align-items: flex-start !important;
   }
 
-.end\:align-items {
+.end\:items {
     align-items: flex-end !important;
   }
 
-.center\:align-items {
+.center\:items {
     align-items: center !important;
   }
 
-.baseline\:align-items {
+.baseline\:items {
     align-items: baseline !important;
   }
 
-.stretch\:align-items {
+.stretch\:items {
     align-items: stretch !important;
   }
 
-.start\:align-content {
+.start\:content {
     align-content: flex-start !important;
   }
 
-.end\:align-content {
+.end\:content {
     align-content: flex-end !important;
   }
 
-.center\:align-content {
+.center\:content {
     align-content: center !important;
   }
 
-.between\:align-content {
+.between\:content {
     align-content: space-between !important;
   }
 
-.around\:align-content {
+.around\:content {
     align-content: space-around !important;
   }
 
-.stretch\:align-content {
+.stretch\:content {
     align-content: stretch !important;
   }
 
-.auto\:align-self {
+.auto\:self {
     align-self: auto !important;
   }
 
-.start\:align-self {
+.start\:self {
     align-self: flex-start !important;
   }
 
-.end\:align-self {
+.end\:self {
     align-self: flex-end !important;
   }
 
-.center\:align-self {
+.center\:self {
     align-self: center !important;
   }
 
-.baseline\:align-self {
+.baseline\:self {
     align-self: baseline !important;
   }
 
-.stretch\:align-self {
+.stretch\:self {
     align-self: stretch !important;
   }
 
@@ -61470,10 +61462,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   }
 
 @media (min-width: 640px) {
-  .small\(flex\) {
-    display: flex !important;
-  }
-
   .small\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
@@ -61524,27 +61512,27 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-direction: column-reverse !important;
   }
 
-  .small\(start\:flex-align\) {
+  .small\(start\:flex-items\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .small\(end\:flex-align\) {
+  .small\(end\:flex-items\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .small\(center\:flex-align\) {
+  .small\(center\:flex-items\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .small\(baseline\:flex-align\) {
+  .small\(baseline\:flex-items\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .small\(stretch\:flex-align\) {
+  .small\(stretch\:flex-items\) {
     display: flex !important;
     align-items: stretch !important;
   }
@@ -61583,10 +61571,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
-  }
-
-  .small\(flex-inline\) {
-    display: inline-flex !important;
   }
 
   .small\(flex-fill\) {
@@ -61649,95 +61633,95 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-wrap: wrap-reverse !important;
   }
 
-  .small\(start\:justify-content\) {
+  .small\(start\:justify\) {
     justify-content: flex-start !important;
   }
 
-  .small\(end\:justify-content\) {
+  .small\(end\:justify\) {
     justify-content: flex-end !important;
   }
 
-  .small\(center\:justify-content\) {
+  .small\(center\:justify\) {
     justify-content: center !important;
   }
 
-  .small\(between\:justify-content\) {
+  .small\(between\:justify\) {
     justify-content: space-between !important;
   }
 
-  .small\(around\:justify-content\) {
+  .small\(around\:justify\) {
     justify-content: space-around !important;
   }
 
-  .small\(evenly\:justify-content\) {
+  .small\(evenly\:justify\) {
     justify-content: space-evenly !important;
   }
 
-  .small\(start\:align-items\) {
+  .small\(start\:items\) {
     align-items: flex-start !important;
   }
 
-  .small\(end\:align-items\) {
+  .small\(end\:items\) {
     align-items: flex-end !important;
   }
 
-  .small\(center\:align-items\) {
+  .small\(center\:items\) {
     align-items: center !important;
   }
 
-  .small\(baseline\:align-items\) {
+  .small\(baseline\:items\) {
     align-items: baseline !important;
   }
 
-  .small\(stretch\:align-items\) {
+  .small\(stretch\:items\) {
     align-items: stretch !important;
   }
 
-  .small\(start\:align-content\) {
+  .small\(start\:content\) {
     align-content: flex-start !important;
   }
 
-  .small\(end\:align-content\) {
+  .small\(end\:content\) {
     align-content: flex-end !important;
   }
 
-  .small\(center\:align-content\) {
+  .small\(center\:content\) {
     align-content: center !important;
   }
 
-  .small\(between\:align-content\) {
+  .small\(between\:content\) {
     align-content: space-between !important;
   }
 
-  .small\(around\:align-content\) {
+  .small\(around\:content\) {
     align-content: space-around !important;
   }
 
-  .small\(stretch\:align-content\) {
+  .small\(stretch\:content\) {
     align-content: stretch !important;
   }
 
-  .small\(auto\:align-self\) {
+  .small\(auto\:self\) {
     align-self: auto !important;
   }
 
-  .small\(start\:align-self\) {
+  .small\(start\:self\) {
     align-self: flex-start !important;
   }
 
-  .small\(end\:align-self\) {
+  .small\(end\:self\) {
     align-self: flex-end !important;
   }
 
-  .small\(center\:align-self\) {
+  .small\(center\:self\) {
     align-self: center !important;
   }
 
-  .small\(baseline\:align-self\) {
+  .small\(baseline\:self\) {
     align-self: baseline !important;
   }
 
-  .small\(stretch\:align-self\) {
+  .small\(stretch\:self\) {
     align-self: stretch !important;
   }
 
@@ -61775,10 +61759,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 768px) {
-  .medium\(flex\) {
-    display: flex !important;
-  }
-
   .medium\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
@@ -61829,27 +61809,27 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-direction: column-reverse !important;
   }
 
-  .medium\(start\:flex-align\) {
+  .medium\(start\:flex-items\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .medium\(end\:flex-align\) {
+  .medium\(end\:flex-items\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .medium\(center\:flex-align\) {
+  .medium\(center\:flex-items\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .medium\(baseline\:flex-align\) {
+  .medium\(baseline\:flex-items\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .medium\(stretch\:flex-align\) {
+  .medium\(stretch\:flex-items\) {
     display: flex !important;
     align-items: stretch !important;
   }
@@ -61888,10 +61868,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
-  }
-
-  .medium\(flex-inline\) {
-    display: inline-flex !important;
   }
 
   .medium\(flex-fill\) {
@@ -61954,95 +61930,95 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-wrap: wrap-reverse !important;
   }
 
-  .medium\(start\:justify-content\) {
+  .medium\(start\:justify\) {
     justify-content: flex-start !important;
   }
 
-  .medium\(end\:justify-content\) {
+  .medium\(end\:justify\) {
     justify-content: flex-end !important;
   }
 
-  .medium\(center\:justify-content\) {
+  .medium\(center\:justify\) {
     justify-content: center !important;
   }
 
-  .medium\(between\:justify-content\) {
+  .medium\(between\:justify\) {
     justify-content: space-between !important;
   }
 
-  .medium\(around\:justify-content\) {
+  .medium\(around\:justify\) {
     justify-content: space-around !important;
   }
 
-  .medium\(evenly\:justify-content\) {
+  .medium\(evenly\:justify\) {
     justify-content: space-evenly !important;
   }
 
-  .medium\(start\:align-items\) {
+  .medium\(start\:items\) {
     align-items: flex-start !important;
   }
 
-  .medium\(end\:align-items\) {
+  .medium\(end\:items\) {
     align-items: flex-end !important;
   }
 
-  .medium\(center\:align-items\) {
+  .medium\(center\:items\) {
     align-items: center !important;
   }
 
-  .medium\(baseline\:align-items\) {
+  .medium\(baseline\:items\) {
     align-items: baseline !important;
   }
 
-  .medium\(stretch\:align-items\) {
+  .medium\(stretch\:items\) {
     align-items: stretch !important;
   }
 
-  .medium\(start\:align-content\) {
+  .medium\(start\:content\) {
     align-content: flex-start !important;
   }
 
-  .medium\(end\:align-content\) {
+  .medium\(end\:content\) {
     align-content: flex-end !important;
   }
 
-  .medium\(center\:align-content\) {
+  .medium\(center\:content\) {
     align-content: center !important;
   }
 
-  .medium\(between\:align-content\) {
+  .medium\(between\:content\) {
     align-content: space-between !important;
   }
 
-  .medium\(around\:align-content\) {
+  .medium\(around\:content\) {
     align-content: space-around !important;
   }
 
-  .medium\(stretch\:align-content\) {
+  .medium\(stretch\:content\) {
     align-content: stretch !important;
   }
 
-  .medium\(auto\:align-self\) {
+  .medium\(auto\:self\) {
     align-self: auto !important;
   }
 
-  .medium\(start\:align-self\) {
+  .medium\(start\:self\) {
     align-self: flex-start !important;
   }
 
-  .medium\(end\:align-self\) {
+  .medium\(end\:self\) {
     align-self: flex-end !important;
   }
 
-  .medium\(center\:align-self\) {
+  .medium\(center\:self\) {
     align-self: center !important;
   }
 
-  .medium\(baseline\:align-self\) {
+  .medium\(baseline\:self\) {
     align-self: baseline !important;
   }
 
-  .medium\(stretch\:align-self\) {
+  .medium\(stretch\:self\) {
     align-self: stretch !important;
   }
 
@@ -62080,10 +62056,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 1024px) {
-  .large\(flex\) {
-    display: flex !important;
-  }
-
   .large\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
@@ -62134,27 +62106,27 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-direction: column-reverse !important;
   }
 
-  .large\(start\:flex-align\) {
+  .large\(start\:flex-items\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .large\(end\:flex-align\) {
+  .large\(end\:flex-items\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .large\(center\:flex-align\) {
+  .large\(center\:flex-items\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .large\(baseline\:flex-align\) {
+  .large\(baseline\:flex-items\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .large\(stretch\:flex-align\) {
+  .large\(stretch\:flex-items\) {
     display: flex !important;
     align-items: stretch !important;
   }
@@ -62193,10 +62165,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
-  }
-
-  .large\(flex-inline\) {
-    display: inline-flex !important;
   }
 
   .large\(flex-fill\) {
@@ -62259,95 +62227,95 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-wrap: wrap-reverse !important;
   }
 
-  .large\(start\:justify-content\) {
+  .large\(start\:justify\) {
     justify-content: flex-start !important;
   }
 
-  .large\(end\:justify-content\) {
+  .large\(end\:justify\) {
     justify-content: flex-end !important;
   }
 
-  .large\(center\:justify-content\) {
+  .large\(center\:justify\) {
     justify-content: center !important;
   }
 
-  .large\(between\:justify-content\) {
+  .large\(between\:justify\) {
     justify-content: space-between !important;
   }
 
-  .large\(around\:justify-content\) {
+  .large\(around\:justify\) {
     justify-content: space-around !important;
   }
 
-  .large\(evenly\:justify-content\) {
+  .large\(evenly\:justify\) {
     justify-content: space-evenly !important;
   }
 
-  .large\(start\:align-items\) {
+  .large\(start\:items\) {
     align-items: flex-start !important;
   }
 
-  .large\(end\:align-items\) {
+  .large\(end\:items\) {
     align-items: flex-end !important;
   }
 
-  .large\(center\:align-items\) {
+  .large\(center\:items\) {
     align-items: center !important;
   }
 
-  .large\(baseline\:align-items\) {
+  .large\(baseline\:items\) {
     align-items: baseline !important;
   }
 
-  .large\(stretch\:align-items\) {
+  .large\(stretch\:items\) {
     align-items: stretch !important;
   }
 
-  .large\(start\:align-content\) {
+  .large\(start\:content\) {
     align-content: flex-start !important;
   }
 
-  .large\(end\:align-content\) {
+  .large\(end\:content\) {
     align-content: flex-end !important;
   }
 
-  .large\(center\:align-content\) {
+  .large\(center\:content\) {
     align-content: center !important;
   }
 
-  .large\(between\:align-content\) {
+  .large\(between\:content\) {
     align-content: space-between !important;
   }
 
-  .large\(around\:align-content\) {
+  .large\(around\:content\) {
     align-content: space-around !important;
   }
 
-  .large\(stretch\:align-content\) {
+  .large\(stretch\:content\) {
     align-content: stretch !important;
   }
 
-  .large\(auto\:align-self\) {
+  .large\(auto\:self\) {
     align-self: auto !important;
   }
 
-  .large\(start\:align-self\) {
+  .large\(start\:self\) {
     align-self: flex-start !important;
   }
 
-  .large\(end\:align-self\) {
+  .large\(end\:self\) {
     align-self: flex-end !important;
   }
 
-  .large\(center\:align-self\) {
+  .large\(center\:self\) {
     align-self: center !important;
   }
 
-  .large\(baseline\:align-self\) {
+  .large\(baseline\:self\) {
     align-self: baseline !important;
   }
 
-  .large\(stretch\:align-self\) {
+  .large\(stretch\:self\) {
     align-self: stretch !important;
   }
 
@@ -62385,10 +62353,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 1280px) {
-  .larger\(flex\) {
-    display: flex !important;
-  }
-
   .larger\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
@@ -62439,27 +62403,27 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-direction: column-reverse !important;
   }
 
-  .larger\(start\:flex-align\) {
+  .larger\(start\:flex-items\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .larger\(end\:flex-align\) {
+  .larger\(end\:flex-items\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .larger\(center\:flex-align\) {
+  .larger\(center\:flex-items\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .larger\(baseline\:flex-align\) {
+  .larger\(baseline\:flex-items\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .larger\(stretch\:flex-align\) {
+  .larger\(stretch\:flex-items\) {
     display: flex !important;
     align-items: stretch !important;
   }
@@ -62498,10 +62462,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
-  }
-
-  .larger\(flex-inline\) {
-    display: inline-flex !important;
   }
 
   .larger\(flex-fill\) {
@@ -62564,95 +62524,95 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-wrap: wrap-reverse !important;
   }
 
-  .larger\(start\:justify-content\) {
+  .larger\(start\:justify\) {
     justify-content: flex-start !important;
   }
 
-  .larger\(end\:justify-content\) {
+  .larger\(end\:justify\) {
     justify-content: flex-end !important;
   }
 
-  .larger\(center\:justify-content\) {
+  .larger\(center\:justify\) {
     justify-content: center !important;
   }
 
-  .larger\(between\:justify-content\) {
+  .larger\(between\:justify\) {
     justify-content: space-between !important;
   }
 
-  .larger\(around\:justify-content\) {
+  .larger\(around\:justify\) {
     justify-content: space-around !important;
   }
 
-  .larger\(evenly\:justify-content\) {
+  .larger\(evenly\:justify\) {
     justify-content: space-evenly !important;
   }
 
-  .larger\(start\:align-items\) {
+  .larger\(start\:items\) {
     align-items: flex-start !important;
   }
 
-  .larger\(end\:align-items\) {
+  .larger\(end\:items\) {
     align-items: flex-end !important;
   }
 
-  .larger\(center\:align-items\) {
+  .larger\(center\:items\) {
     align-items: center !important;
   }
 
-  .larger\(baseline\:align-items\) {
+  .larger\(baseline\:items\) {
     align-items: baseline !important;
   }
 
-  .larger\(stretch\:align-items\) {
+  .larger\(stretch\:items\) {
     align-items: stretch !important;
   }
 
-  .larger\(start\:align-content\) {
+  .larger\(start\:content\) {
     align-content: flex-start !important;
   }
 
-  .larger\(end\:align-content\) {
+  .larger\(end\:content\) {
     align-content: flex-end !important;
   }
 
-  .larger\(center\:align-content\) {
+  .larger\(center\:content\) {
     align-content: center !important;
   }
 
-  .larger\(between\:align-content\) {
+  .larger\(between\:content\) {
     align-content: space-between !important;
   }
 
-  .larger\(around\:align-content\) {
+  .larger\(around\:content\) {
     align-content: space-around !important;
   }
 
-  .larger\(stretch\:align-content\) {
+  .larger\(stretch\:content\) {
     align-content: stretch !important;
   }
 
-  .larger\(auto\:align-self\) {
+  .larger\(auto\:self\) {
     align-self: auto !important;
   }
 
-  .larger\(start\:align-self\) {
+  .larger\(start\:self\) {
     align-self: flex-start !important;
   }
 
-  .larger\(end\:align-self\) {
+  .larger\(end\:self\) {
     align-self: flex-end !important;
   }
 
-  .larger\(center\:align-self\) {
+  .larger\(center\:self\) {
     align-self: center !important;
   }
 
-  .larger\(baseline\:align-self\) {
+  .larger\(baseline\:self\) {
     align-self: baseline !important;
   }
 
-  .larger\(stretch\:align-self\) {
+  .larger\(stretch\:self\) {
     align-self: stretch !important;
   }
 
@@ -62690,10 +62650,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 1536px) {
-  .largest\(flex\) {
-    display: flex !important;
-  }
-
   .largest\(start\:flex\) {
     display: flex !important;
     justify-content: flex-start !important;
@@ -62744,27 +62700,27 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-direction: column-reverse !important;
   }
 
-  .largest\(start\:flex-align\) {
+  .largest\(start\:flex-items\) {
     display: flex !important;
     align-items: flex-start !important;
   }
 
-  .largest\(end\:flex-align\) {
+  .largest\(end\:flex-items\) {
     display: flex !important;
     align-items: flex-end !important;
   }
 
-  .largest\(center\:flex-align\) {
+  .largest\(center\:flex-items\) {
     display: flex !important;
     align-items: center !important;
   }
 
-  .largest\(baseline\:flex-align\) {
+  .largest\(baseline\:flex-items\) {
     display: flex !important;
     align-items: baseline !important;
   }
 
-  .largest\(stretch\:flex-align\) {
+  .largest\(stretch\:flex-items\) {
     display: flex !important;
     align-items: stretch !important;
   }
@@ -62803,10 +62759,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     display: flex !important;
     flex-wrap: wrap !important;
     align-content: stretch !important;
-  }
-
-  .largest\(flex-inline\) {
-    display: inline-flex !important;
   }
 
   .largest\(flex-fill\) {
@@ -62869,95 +62821,95 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     flex-wrap: wrap-reverse !important;
   }
 
-  .largest\(start\:justify-content\) {
+  .largest\(start\:justify\) {
     justify-content: flex-start !important;
   }
 
-  .largest\(end\:justify-content\) {
+  .largest\(end\:justify\) {
     justify-content: flex-end !important;
   }
 
-  .largest\(center\:justify-content\) {
+  .largest\(center\:justify\) {
     justify-content: center !important;
   }
 
-  .largest\(between\:justify-content\) {
+  .largest\(between\:justify\) {
     justify-content: space-between !important;
   }
 
-  .largest\(around\:justify-content\) {
+  .largest\(around\:justify\) {
     justify-content: space-around !important;
   }
 
-  .largest\(evenly\:justify-content\) {
+  .largest\(evenly\:justify\) {
     justify-content: space-evenly !important;
   }
 
-  .largest\(start\:align-items\) {
+  .largest\(start\:items\) {
     align-items: flex-start !important;
   }
 
-  .largest\(end\:align-items\) {
+  .largest\(end\:items\) {
     align-items: flex-end !important;
   }
 
-  .largest\(center\:align-items\) {
+  .largest\(center\:items\) {
     align-items: center !important;
   }
 
-  .largest\(baseline\:align-items\) {
+  .largest\(baseline\:items\) {
     align-items: baseline !important;
   }
 
-  .largest\(stretch\:align-items\) {
+  .largest\(stretch\:items\) {
     align-items: stretch !important;
   }
 
-  .largest\(start\:align-content\) {
+  .largest\(start\:content\) {
     align-content: flex-start !important;
   }
 
-  .largest\(end\:align-content\) {
+  .largest\(end\:content\) {
     align-content: flex-end !important;
   }
 
-  .largest\(center\:align-content\) {
+  .largest\(center\:content\) {
     align-content: center !important;
   }
 
-  .largest\(between\:align-content\) {
+  .largest\(between\:content\) {
     align-content: space-between !important;
   }
 
-  .largest\(around\:align-content\) {
+  .largest\(around\:content\) {
     align-content: space-around !important;
   }
 
-  .largest\(stretch\:align-content\) {
+  .largest\(stretch\:content\) {
     align-content: stretch !important;
   }
 
-  .largest\(auto\:align-self\) {
+  .largest\(auto\:self\) {
     align-self: auto !important;
   }
 
-  .largest\(start\:align-self\) {
+  .largest\(start\:self\) {
     align-self: flex-start !important;
   }
 
-  .largest\(end\:align-self\) {
+  .largest\(end\:self\) {
     align-self: flex-end !important;
   }
 
-  .largest\(center\:align-self\) {
+  .largest\(center\:self\) {
     align-self: center !important;
   }
 
-  .largest\(baseline\:align-self\) {
+  .largest\(baseline\:self\) {
     align-self: baseline !important;
   }
 
-  .largest\(stretch\:align-self\) {
+  .largest\(stretch\:self\) {
     align-self: stretch !important;
   }
 
@@ -62992,10 +62944,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   .largest\(order\)-last {
     order: 6 !important;
   }
-}
-
-.grid {
-  display: grid;
 }
 
 .column\:grid-1 {
@@ -63881,70 +63829,54 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   }
 
 @media (min-width: 640px) {
-  .small\(grid\) {
-    display: grid;
-  }
-
   .small\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-
   .small\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
@@ -64769,70 +64701,54 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 768px) {
-  .medium\(grid\) {
-    display: grid;
-  }
-
   .medium\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-
   .medium\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
@@ -65657,70 +65573,54 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 1024px) {
-  .large\(grid\) {
-    display: grid;
-  }
-
   .large\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-
   .large\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
@@ -66545,70 +66445,54 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 1280px) {
-  .larger\(grid\) {
-    display: grid;
-  }
-
   .larger\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-
   .larger\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
@@ -67433,70 +67317,54 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 }
 
 @media (min-width: 1536px) {
-  .largest\(grid\) {
-    display: grid;
-  }
-
   .largest\(column\:grid\)-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-
   .largest\(column\:grid\)-none {
     display: grid;
     grid-template-columns: none;
@@ -68412,232 +68280,232 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
     margin: auto !important;
   }
 
-.start\:margin {
+.y\:margin {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-.start\:margin-0 {
+.y\:margin-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
 
-.start\:margin-1 {
+.y\:margin-1 {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-.start\:margin-2 {
+.y\:margin-2 {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
 
-.start\:margin-3 {
+.y\:margin-3 {
     margin-top: 0.75rem !important;
     margin-bottom: 0.75rem !important;
   }
 
-.start\:margin-4 {
+.y\:margin-4 {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
 
-.start\:margin-5 {
+.y\:margin-5 {
     margin-top: 1.25rem !important;
     margin-bottom: 1.25rem !important;
   }
 
-.start\:margin-6 {
+.y\:margin-6 {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
   }
 
-.start\:margin-7 {
+.y\:margin-7 {
     margin-top: 1.75rem !important;
     margin-bottom: 1.75rem !important;
   }
 
-.start\:margin-8 {
+.y\:margin-8 {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
   }
 
-.start\:margin-9 {
+.y\:margin-9 {
     margin-top: 2.25rem !important;
     margin-bottom: 2.25rem !important;
   }
 
-.start\:margin-10 {
+.y\:margin-10 {
     margin-top: 2.5rem !important;
     margin-bottom: 2.5rem !important;
   }
 
-.start\:margin-11 {
+.y\:margin-11 {
     margin-top: 2.75rem !important;
     margin-bottom: 2.75rem !important;
   }
 
-.start\:margin-12 {
+.y\:margin-12 {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
   }
 
-.start\:margin-13 {
+.y\:margin-13 {
     margin-top: 3.25rem !important;
     margin-bottom: 3.25rem !important;
   }
 
-.start\:margin-14 {
+.y\:margin-14 {
     margin-top: 3.5rem !important;
     margin-bottom: 3.5rem !important;
   }
 
-.start\:margin-15 {
+.y\:margin-15 {
     margin-top: 3.75rem !important;
     margin-bottom: 3.75rem !important;
   }
 
-.start\:margin-16 {
+.y\:margin-16 {
     margin-top: 4rem !important;
     margin-bottom: 4rem !important;
   }
 
-.start\:margin-17 {
+.y\:margin-17 {
     margin-top: 4.25rem !important;
     margin-bottom: 4.25rem !important;
   }
 
-.start\:margin-18 {
+.y\:margin-18 {
     margin-top: 4.5rem !important;
     margin-bottom: 4.5rem !important;
   }
 
-.start\:margin-19 {
+.y\:margin-19 {
     margin-top: 4.75rem !important;
     margin-bottom: 4.75rem !important;
   }
 
-.start\:margin-20 {
+.y\:margin-20 {
     margin-top: 5rem !important;
     margin-bottom: 5rem !important;
   }
 
-.start\:margin-auto {
+.y\:margin-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
 
-.end\:margin {
+.x\:margin {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-.end\:margin-0 {
+.x\:margin-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 
-.end\:margin-1 {
+.x\:margin-1 {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-.end\:margin-2 {
+.x\:margin-2 {
     margin-right: 0.5rem !important;
     margin-left: 0.5rem !important;
   }
 
-.end\:margin-3 {
+.x\:margin-3 {
     margin-right: 0.75rem !important;
     margin-left: 0.75rem !important;
   }
 
-.end\:margin-4 {
+.x\:margin-4 {
     margin-right: 1rem !important;
     margin-left: 1rem !important;
   }
 
-.end\:margin-5 {
+.x\:margin-5 {
     margin-right: 1.25rem !important;
     margin-left: 1.25rem !important;
   }
 
-.end\:margin-6 {
+.x\:margin-6 {
     margin-right: 1.5rem !important;
     margin-left: 1.5rem !important;
   }
 
-.end\:margin-7 {
+.x\:margin-7 {
     margin-right: 1.75rem !important;
     margin-left: 1.75rem !important;
   }
 
-.end\:margin-8 {
+.x\:margin-8 {
     margin-right: 2rem !important;
     margin-left: 2rem !important;
   }
 
-.end\:margin-9 {
+.x\:margin-9 {
     margin-right: 2.25rem !important;
     margin-left: 2.25rem !important;
   }
 
-.end\:margin-10 {
+.x\:margin-10 {
     margin-right: 2.5rem !important;
     margin-left: 2.5rem !important;
   }
 
-.end\:margin-11 {
+.x\:margin-11 {
     margin-right: 2.75rem !important;
     margin-left: 2.75rem !important;
   }
 
-.end\:margin-12 {
+.x\:margin-12 {
     margin-right: 3rem !important;
     margin-left: 3rem !important;
   }
 
-.end\:margin-13 {
+.x\:margin-13 {
     margin-right: 3.25rem !important;
     margin-left: 3.25rem !important;
   }
 
-.end\:margin-14 {
+.x\:margin-14 {
     margin-right: 3.5rem !important;
     margin-left: 3.5rem !important;
   }
 
-.end\:margin-15 {
+.x\:margin-15 {
     margin-right: 3.75rem !important;
     margin-left: 3.75rem !important;
   }
 
-.end\:margin-16 {
+.x\:margin-16 {
     margin-right: 4rem !important;
     margin-left: 4rem !important;
   }
 
-.end\:margin-17 {
+.x\:margin-17 {
     margin-right: 4.25rem !important;
     margin-left: 4.25rem !important;
   }
 
-.end\:margin-18 {
+.x\:margin-18 {
     margin-right: 4.5rem !important;
     margin-left: 4.5rem !important;
   }
 
-.end\:margin-19 {
+.x\:margin-19 {
     margin-right: 4.75rem !important;
     margin-left: 4.75rem !important;
   }
 
-.end\:margin-20 {
+.x\:margin-20 {
     margin-right: 5rem !important;
     margin-left: 5rem !important;
   }
 
-.end\:margin-auto {
+.x\:margin-auto {
     margin-right: auto !important;
     margin-left: auto !important;
   }
@@ -69011,3351 +68879,3351 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   }
 
 @media (min-width: 640px) {
-  .small\:margin {
+  .small\(margin\) {
     margin: 0.25rem !important;
   }
-  .small\:margin-0 {
+  .small\(margin\)-0 {
     margin: 0 !important;
   }
-  .small\:margin-1 {
+  .small\(margin\)-1 {
     margin: 0.25rem !important;
   }
-  .small\:margin-2 {
+  .small\(margin\)-2 {
     margin: 0.5rem !important;
   }
-  .small\:margin-3 {
+  .small\(margin\)-3 {
     margin: 0.75rem !important;
   }
-  .small\:margin-4 {
+  .small\(margin\)-4 {
     margin: 1rem !important;
   }
-  .small\:margin-5 {
+  .small\(margin\)-5 {
     margin: 1.25rem !important;
   }
-  .small\:margin-6 {
+  .small\(margin\)-6 {
     margin: 1.5rem !important;
   }
-  .small\:margin-7 {
+  .small\(margin\)-7 {
     margin: 1.75rem !important;
   }
-  .small\:margin-8 {
+  .small\(margin\)-8 {
     margin: 2rem !important;
   }
-  .small\:margin-9 {
+  .small\(margin\)-9 {
     margin: 2.25rem !important;
   }
-  .small\:margin-10 {
+  .small\(margin\)-10 {
     margin: 2.5rem !important;
   }
-  .small\:margin-11 {
+  .small\(margin\)-11 {
     margin: 2.75rem !important;
   }
-  .small\:margin-12 {
+  .small\(margin\)-12 {
     margin: 3rem !important;
   }
-  .small\:margin-13 {
+  .small\(margin\)-13 {
     margin: 3.25rem !important;
   }
-  .small\:margin-14 {
+  .small\(margin\)-14 {
     margin: 3.5rem !important;
   }
-  .small\:margin-15 {
+  .small\(margin\)-15 {
     margin: 3.75rem !important;
   }
-  .small\:margin-16 {
+  .small\(margin\)-16 {
     margin: 4rem !important;
   }
-  .small\:margin-17 {
+  .small\(margin\)-17 {
     margin: 4.25rem !important;
   }
-  .small\:margin-18 {
+  .small\(margin\)-18 {
     margin: 4.5rem !important;
   }
-  .small\:margin-19 {
+  .small\(margin\)-19 {
     margin: 4.75rem !important;
   }
-  .small\:margin-20 {
+  .small\(margin\)-20 {
     margin: 5rem !important;
   }
-  .small\:margin-auto {
+  .small\(margin\)-auto {
     margin: auto !important;
   }
 
-  .small\:start\:margin {
+  .small\(y\:margin\) {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .small\:start\:margin-0 {
+  .small\(y\:margin\)-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
 
-  .small\:start\:margin-1 {
+  .small\(y\:margin\)-1 {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .small\:start\:margin-2 {
+  .small\(y\:margin\)-2 {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
 
-  .small\:start\:margin-3 {
+  .small\(y\:margin\)-3 {
     margin-top: 0.75rem !important;
     margin-bottom: 0.75rem !important;
   }
 
-  .small\:start\:margin-4 {
+  .small\(y\:margin\)-4 {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
 
-  .small\:start\:margin-5 {
+  .small\(y\:margin\)-5 {
     margin-top: 1.25rem !important;
     margin-bottom: 1.25rem !important;
   }
 
-  .small\:start\:margin-6 {
+  .small\(y\:margin\)-6 {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
   }
 
-  .small\:start\:margin-7 {
+  .small\(y\:margin\)-7 {
     margin-top: 1.75rem !important;
     margin-bottom: 1.75rem !important;
   }
 
-  .small\:start\:margin-8 {
+  .small\(y\:margin\)-8 {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
   }
 
-  .small\:start\:margin-9 {
+  .small\(y\:margin\)-9 {
     margin-top: 2.25rem !important;
     margin-bottom: 2.25rem !important;
   }
 
-  .small\:start\:margin-10 {
+  .small\(y\:margin\)-10 {
     margin-top: 2.5rem !important;
     margin-bottom: 2.5rem !important;
   }
 
-  .small\:start\:margin-11 {
+  .small\(y\:margin\)-11 {
     margin-top: 2.75rem !important;
     margin-bottom: 2.75rem !important;
   }
 
-  .small\:start\:margin-12 {
+  .small\(y\:margin\)-12 {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
   }
 
-  .small\:start\:margin-13 {
+  .small\(y\:margin\)-13 {
     margin-top: 3.25rem !important;
     margin-bottom: 3.25rem !important;
   }
 
-  .small\:start\:margin-14 {
+  .small\(y\:margin\)-14 {
     margin-top: 3.5rem !important;
     margin-bottom: 3.5rem !important;
   }
 
-  .small\:start\:margin-15 {
+  .small\(y\:margin\)-15 {
     margin-top: 3.75rem !important;
     margin-bottom: 3.75rem !important;
   }
 
-  .small\:start\:margin-16 {
+  .small\(y\:margin\)-16 {
     margin-top: 4rem !important;
     margin-bottom: 4rem !important;
   }
 
-  .small\:start\:margin-17 {
+  .small\(y\:margin\)-17 {
     margin-top: 4.25rem !important;
     margin-bottom: 4.25rem !important;
   }
 
-  .small\:start\:margin-18 {
+  .small\(y\:margin\)-18 {
     margin-top: 4.5rem !important;
     margin-bottom: 4.5rem !important;
   }
 
-  .small\:start\:margin-19 {
+  .small\(y\:margin\)-19 {
     margin-top: 4.75rem !important;
     margin-bottom: 4.75rem !important;
   }
 
-  .small\:start\:margin-20 {
+  .small\(y\:margin\)-20 {
     margin-top: 5rem !important;
     margin-bottom: 5rem !important;
   }
 
-  .small\:start\:margin-auto {
+  .small\(y\:margin\)-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
 
-  .small\:end\:margin {
+  .small\(x\:margin\) {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .small\:end\:margin-0 {
+  .small\(x\:margin\)-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 
-  .small\:end\:margin-1 {
+  .small\(x\:margin\)-1 {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .small\:end\:margin-2 {
+  .small\(x\:margin\)-2 {
     margin-right: 0.5rem !important;
     margin-left: 0.5rem !important;
   }
 
-  .small\:end\:margin-3 {
+  .small\(x\:margin\)-3 {
     margin-right: 0.75rem !important;
     margin-left: 0.75rem !important;
   }
 
-  .small\:end\:margin-4 {
+  .small\(x\:margin\)-4 {
     margin-right: 1rem !important;
     margin-left: 1rem !important;
   }
 
-  .small\:end\:margin-5 {
+  .small\(x\:margin\)-5 {
     margin-right: 1.25rem !important;
     margin-left: 1.25rem !important;
   }
 
-  .small\:end\:margin-6 {
+  .small\(x\:margin\)-6 {
     margin-right: 1.5rem !important;
     margin-left: 1.5rem !important;
   }
 
-  .small\:end\:margin-7 {
+  .small\(x\:margin\)-7 {
     margin-right: 1.75rem !important;
     margin-left: 1.75rem !important;
   }
 
-  .small\:end\:margin-8 {
+  .small\(x\:margin\)-8 {
     margin-right: 2rem !important;
     margin-left: 2rem !important;
   }
 
-  .small\:end\:margin-9 {
+  .small\(x\:margin\)-9 {
     margin-right: 2.25rem !important;
     margin-left: 2.25rem !important;
   }
 
-  .small\:end\:margin-10 {
+  .small\(x\:margin\)-10 {
     margin-right: 2.5rem !important;
     margin-left: 2.5rem !important;
   }
 
-  .small\:end\:margin-11 {
+  .small\(x\:margin\)-11 {
     margin-right: 2.75rem !important;
     margin-left: 2.75rem !important;
   }
 
-  .small\:end\:margin-12 {
+  .small\(x\:margin\)-12 {
     margin-right: 3rem !important;
     margin-left: 3rem !important;
   }
 
-  .small\:end\:margin-13 {
+  .small\(x\:margin\)-13 {
     margin-right: 3.25rem !important;
     margin-left: 3.25rem !important;
   }
 
-  .small\:end\:margin-14 {
+  .small\(x\:margin\)-14 {
     margin-right: 3.5rem !important;
     margin-left: 3.5rem !important;
   }
 
-  .small\:end\:margin-15 {
+  .small\(x\:margin\)-15 {
     margin-right: 3.75rem !important;
     margin-left: 3.75rem !important;
   }
 
-  .small\:end\:margin-16 {
+  .small\(x\:margin\)-16 {
     margin-right: 4rem !important;
     margin-left: 4rem !important;
   }
 
-  .small\:end\:margin-17 {
+  .small\(x\:margin\)-17 {
     margin-right: 4.25rem !important;
     margin-left: 4.25rem !important;
   }
 
-  .small\:end\:margin-18 {
+  .small\(x\:margin\)-18 {
     margin-right: 4.5rem !important;
     margin-left: 4.5rem !important;
   }
 
-  .small\:end\:margin-19 {
+  .small\(x\:margin\)-19 {
     margin-right: 4.75rem !important;
     margin-left: 4.75rem !important;
   }
 
-  .small\:end\:margin-20 {
+  .small\(x\:margin\)-20 {
     margin-right: 5rem !important;
     margin-left: 5rem !important;
   }
 
-  .small\:end\:margin-auto {
+  .small\(x\:margin\)-auto {
     margin-right: auto !important;
     margin-left: auto !important;
   }
 
-  .small\:top\:margin {
+  .small\(top\:margin\) {
     margin-top: 0.25rem !important;
   }
 
-  .small\:top\:margin-0 {
+  .small\(top\:margin\)-0 {
     margin-top: 0 !important;
   }
 
-  .small\:top\:margin-1 {
+  .small\(top\:margin\)-1 {
     margin-top: 0.25rem !important;
   }
 
-  .small\:top\:margin-2 {
+  .small\(top\:margin\)-2 {
     margin-top: 0.5rem !important;
   }
 
-  .small\:top\:margin-3 {
+  .small\(top\:margin\)-3 {
     margin-top: 0.75rem !important;
   }
 
-  .small\:top\:margin-4 {
+  .small\(top\:margin\)-4 {
     margin-top: 1rem !important;
   }
 
-  .small\:top\:margin-5 {
+  .small\(top\:margin\)-5 {
     margin-top: 1.25rem !important;
   }
 
-  .small\:top\:margin-6 {
+  .small\(top\:margin\)-6 {
     margin-top: 1.5rem !important;
   }
 
-  .small\:top\:margin-7 {
+  .small\(top\:margin\)-7 {
     margin-top: 1.75rem !important;
   }
 
-  .small\:top\:margin-8 {
+  .small\(top\:margin\)-8 {
     margin-top: 2rem !important;
   }
 
-  .small\:top\:margin-9 {
+  .small\(top\:margin\)-9 {
     margin-top: 2.25rem !important;
   }
 
-  .small\:top\:margin-10 {
+  .small\(top\:margin\)-10 {
     margin-top: 2.5rem !important;
   }
 
-  .small\:top\:margin-11 {
+  .small\(top\:margin\)-11 {
     margin-top: 2.75rem !important;
   }
 
-  .small\:top\:margin-12 {
+  .small\(top\:margin\)-12 {
     margin-top: 3rem !important;
   }
 
-  .small\:top\:margin-13 {
+  .small\(top\:margin\)-13 {
     margin-top: 3.25rem !important;
   }
 
-  .small\:top\:margin-14 {
+  .small\(top\:margin\)-14 {
     margin-top: 3.5rem !important;
   }
 
-  .small\:top\:margin-15 {
+  .small\(top\:margin\)-15 {
     margin-top: 3.75rem !important;
   }
 
-  .small\:top\:margin-16 {
+  .small\(top\:margin\)-16 {
     margin-top: 4rem !important;
   }
 
-  .small\:top\:margin-17 {
+  .small\(top\:margin\)-17 {
     margin-top: 4.25rem !important;
   }
 
-  .small\:top\:margin-18 {
+  .small\(top\:margin\)-18 {
     margin-top: 4.5rem !important;
   }
 
-  .small\:top\:margin-19 {
+  .small\(top\:margin\)-19 {
     margin-top: 4.75rem !important;
   }
 
-  .small\:top\:margin-20 {
+  .small\(top\:margin\)-20 {
     margin-top: 5rem !important;
   }
 
-  .small\:top\:margin-auto {
+  .small\(top\:margin\)-auto {
     margin-top: auto !important;
   }
 
-  .small\:right\:margin {
+  .small\(right\:margin\) {
     margin-right: 0.25rem !important;
   }
 
-  .small\:right\:margin-0 {
+  .small\(right\:margin\)-0 {
     margin-right: 0 !important;
   }
 
-  .small\:right\:margin-1 {
+  .small\(right\:margin\)-1 {
     margin-right: 0.25rem !important;
   }
 
-  .small\:right\:margin-2 {
+  .small\(right\:margin\)-2 {
     margin-right: 0.5rem !important;
   }
 
-  .small\:right\:margin-3 {
+  .small\(right\:margin\)-3 {
     margin-right: 0.75rem !important;
   }
 
-  .small\:right\:margin-4 {
+  .small\(right\:margin\)-4 {
     margin-right: 1rem !important;
   }
 
-  .small\:right\:margin-5 {
+  .small\(right\:margin\)-5 {
     margin-right: 1.25rem !important;
   }
 
-  .small\:right\:margin-6 {
+  .small\(right\:margin\)-6 {
     margin-right: 1.5rem !important;
   }
 
-  .small\:right\:margin-7 {
+  .small\(right\:margin\)-7 {
     margin-right: 1.75rem !important;
   }
 
-  .small\:right\:margin-8 {
+  .small\(right\:margin\)-8 {
     margin-right: 2rem !important;
   }
 
-  .small\:right\:margin-9 {
+  .small\(right\:margin\)-9 {
     margin-right: 2.25rem !important;
   }
 
-  .small\:right\:margin-10 {
+  .small\(right\:margin\)-10 {
     margin-right: 2.5rem !important;
   }
 
-  .small\:right\:margin-11 {
+  .small\(right\:margin\)-11 {
     margin-right: 2.75rem !important;
   }
 
-  .small\:right\:margin-12 {
+  .small\(right\:margin\)-12 {
     margin-right: 3rem !important;
   }
 
-  .small\:right\:margin-13 {
+  .small\(right\:margin\)-13 {
     margin-right: 3.25rem !important;
   }
 
-  .small\:right\:margin-14 {
+  .small\(right\:margin\)-14 {
     margin-right: 3.5rem !important;
   }
 
-  .small\:right\:margin-15 {
+  .small\(right\:margin\)-15 {
     margin-right: 3.75rem !important;
   }
 
-  .small\:right\:margin-16 {
+  .small\(right\:margin\)-16 {
     margin-right: 4rem !important;
   }
 
-  .small\:right\:margin-17 {
+  .small\(right\:margin\)-17 {
     margin-right: 4.25rem !important;
   }
 
-  .small\:right\:margin-18 {
+  .small\(right\:margin\)-18 {
     margin-right: 4.5rem !important;
   }
 
-  .small\:right\:margin-19 {
+  .small\(right\:margin\)-19 {
     margin-right: 4.75rem !important;
   }
 
-  .small\:right\:margin-20 {
+  .small\(right\:margin\)-20 {
     margin-right: 5rem !important;
   }
 
-  .small\:right\:margin-auto {
+  .small\(right\:margin\)-auto {
     margin-right: auto !important;
   }
 
-  .small\:bottom\:margin {
+  .small\(bottom\:margin\) {
     margin-bottom: 0.25rem !important;
   }
 
-  .small\:bottom\:margin-0 {
+  .small\(bottom\:margin\)-0 {
     margin-bottom: 0 !important;
   }
 
-  .small\:bottom\:margin-1 {
+  .small\(bottom\:margin\)-1 {
     margin-bottom: 0.25rem !important;
   }
 
-  .small\:bottom\:margin-2 {
+  .small\(bottom\:margin\)-2 {
     margin-bottom: 0.5rem !important;
   }
 
-  .small\:bottom\:margin-3 {
+  .small\(bottom\:margin\)-3 {
     margin-bottom: 0.75rem !important;
   }
 
-  .small\:bottom\:margin-4 {
+  .small\(bottom\:margin\)-4 {
     margin-bottom: 1rem !important;
   }
 
-  .small\:bottom\:margin-5 {
+  .small\(bottom\:margin\)-5 {
     margin-bottom: 1.25rem !important;
   }
 
-  .small\:bottom\:margin-6 {
+  .small\(bottom\:margin\)-6 {
     margin-bottom: 1.5rem !important;
   }
 
-  .small\:bottom\:margin-7 {
+  .small\(bottom\:margin\)-7 {
     margin-bottom: 1.75rem !important;
   }
 
-  .small\:bottom\:margin-8 {
+  .small\(bottom\:margin\)-8 {
     margin-bottom: 2rem !important;
   }
 
-  .small\:bottom\:margin-9 {
+  .small\(bottom\:margin\)-9 {
     margin-bottom: 2.25rem !important;
   }
 
-  .small\:bottom\:margin-10 {
+  .small\(bottom\:margin\)-10 {
     margin-bottom: 2.5rem !important;
   }
 
-  .small\:bottom\:margin-11 {
+  .small\(bottom\:margin\)-11 {
     margin-bottom: 2.75rem !important;
   }
 
-  .small\:bottom\:margin-12 {
+  .small\(bottom\:margin\)-12 {
     margin-bottom: 3rem !important;
   }
 
-  .small\:bottom\:margin-13 {
+  .small\(bottom\:margin\)-13 {
     margin-bottom: 3.25rem !important;
   }
 
-  .small\:bottom\:margin-14 {
+  .small\(bottom\:margin\)-14 {
     margin-bottom: 3.5rem !important;
   }
 
-  .small\:bottom\:margin-15 {
+  .small\(bottom\:margin\)-15 {
     margin-bottom: 3.75rem !important;
   }
 
-  .small\:bottom\:margin-16 {
+  .small\(bottom\:margin\)-16 {
     margin-bottom: 4rem !important;
   }
 
-  .small\:bottom\:margin-17 {
+  .small\(bottom\:margin\)-17 {
     margin-bottom: 4.25rem !important;
   }
 
-  .small\:bottom\:margin-18 {
+  .small\(bottom\:margin\)-18 {
     margin-bottom: 4.5rem !important;
   }
 
-  .small\:bottom\:margin-19 {
+  .small\(bottom\:margin\)-19 {
     margin-bottom: 4.75rem !important;
   }
 
-  .small\:bottom\:margin-20 {
+  .small\(bottom\:margin\)-20 {
     margin-bottom: 5rem !important;
   }
 
-  .small\:bottom\:margin-auto {
+  .small\(bottom\:margin\)-auto {
     margin-bottom: auto !important;
   }
 
-  .small\:left\:margin {
+  .small\(left\:margin\) {
     margin-left: 0.25rem !important;
   }
 
-  .small\:left\:margin-0 {
+  .small\(left\:margin\)-0 {
     margin-left: 0 !important;
   }
 
-  .small\:left\:margin-1 {
+  .small\(left\:margin\)-1 {
     margin-left: 0.25rem !important;
   }
 
-  .small\:left\:margin-2 {
+  .small\(left\:margin\)-2 {
     margin-left: 0.5rem !important;
   }
 
-  .small\:left\:margin-3 {
+  .small\(left\:margin\)-3 {
     margin-left: 0.75rem !important;
   }
 
-  .small\:left\:margin-4 {
+  .small\(left\:margin\)-4 {
     margin-left: 1rem !important;
   }
 
-  .small\:left\:margin-5 {
+  .small\(left\:margin\)-5 {
     margin-left: 1.25rem !important;
   }
 
-  .small\:left\:margin-6 {
+  .small\(left\:margin\)-6 {
     margin-left: 1.5rem !important;
   }
 
-  .small\:left\:margin-7 {
+  .small\(left\:margin\)-7 {
     margin-left: 1.75rem !important;
   }
 
-  .small\:left\:margin-8 {
+  .small\(left\:margin\)-8 {
     margin-left: 2rem !important;
   }
 
-  .small\:left\:margin-9 {
+  .small\(left\:margin\)-9 {
     margin-left: 2.25rem !important;
   }
 
-  .small\:left\:margin-10 {
+  .small\(left\:margin\)-10 {
     margin-left: 2.5rem !important;
   }
 
-  .small\:left\:margin-11 {
+  .small\(left\:margin\)-11 {
     margin-left: 2.75rem !important;
   }
 
-  .small\:left\:margin-12 {
+  .small\(left\:margin\)-12 {
     margin-left: 3rem !important;
   }
 
-  .small\:left\:margin-13 {
+  .small\(left\:margin\)-13 {
     margin-left: 3.25rem !important;
   }
 
-  .small\:left\:margin-14 {
+  .small\(left\:margin\)-14 {
     margin-left: 3.5rem !important;
   }
 
-  .small\:left\:margin-15 {
+  .small\(left\:margin\)-15 {
     margin-left: 3.75rem !important;
   }
 
-  .small\:left\:margin-16 {
+  .small\(left\:margin\)-16 {
     margin-left: 4rem !important;
   }
 
-  .small\:left\:margin-17 {
+  .small\(left\:margin\)-17 {
     margin-left: 4.25rem !important;
   }
 
-  .small\:left\:margin-18 {
+  .small\(left\:margin\)-18 {
     margin-left: 4.5rem !important;
   }
 
-  .small\:left\:margin-19 {
+  .small\(left\:margin\)-19 {
     margin-left: 4.75rem !important;
   }
 
-  .small\:left\:margin-20 {
+  .small\(left\:margin\)-20 {
     margin-left: 5rem !important;
   }
 
-  .small\:left\:margin-auto {
+  .small\(left\:margin\)-auto {
     margin-left: auto !important;
   }
 }
 
 @media (min-width: 768px) {
-  .medium\:margin {
+  .medium\(margin\) {
     margin: 0.25rem !important;
   }
-  .medium\:margin-0 {
+  .medium\(margin\)-0 {
     margin: 0 !important;
   }
-  .medium\:margin-1 {
+  .medium\(margin\)-1 {
     margin: 0.25rem !important;
   }
-  .medium\:margin-2 {
+  .medium\(margin\)-2 {
     margin: 0.5rem !important;
   }
-  .medium\:margin-3 {
+  .medium\(margin\)-3 {
     margin: 0.75rem !important;
   }
-  .medium\:margin-4 {
+  .medium\(margin\)-4 {
     margin: 1rem !important;
   }
-  .medium\:margin-5 {
+  .medium\(margin\)-5 {
     margin: 1.25rem !important;
   }
-  .medium\:margin-6 {
+  .medium\(margin\)-6 {
     margin: 1.5rem !important;
   }
-  .medium\:margin-7 {
+  .medium\(margin\)-7 {
     margin: 1.75rem !important;
   }
-  .medium\:margin-8 {
+  .medium\(margin\)-8 {
     margin: 2rem !important;
   }
-  .medium\:margin-9 {
+  .medium\(margin\)-9 {
     margin: 2.25rem !important;
   }
-  .medium\:margin-10 {
+  .medium\(margin\)-10 {
     margin: 2.5rem !important;
   }
-  .medium\:margin-11 {
+  .medium\(margin\)-11 {
     margin: 2.75rem !important;
   }
-  .medium\:margin-12 {
+  .medium\(margin\)-12 {
     margin: 3rem !important;
   }
-  .medium\:margin-13 {
+  .medium\(margin\)-13 {
     margin: 3.25rem !important;
   }
-  .medium\:margin-14 {
+  .medium\(margin\)-14 {
     margin: 3.5rem !important;
   }
-  .medium\:margin-15 {
+  .medium\(margin\)-15 {
     margin: 3.75rem !important;
   }
-  .medium\:margin-16 {
+  .medium\(margin\)-16 {
     margin: 4rem !important;
   }
-  .medium\:margin-17 {
+  .medium\(margin\)-17 {
     margin: 4.25rem !important;
   }
-  .medium\:margin-18 {
+  .medium\(margin\)-18 {
     margin: 4.5rem !important;
   }
-  .medium\:margin-19 {
+  .medium\(margin\)-19 {
     margin: 4.75rem !important;
   }
-  .medium\:margin-20 {
+  .medium\(margin\)-20 {
     margin: 5rem !important;
   }
-  .medium\:margin-auto {
+  .medium\(margin\)-auto {
     margin: auto !important;
   }
 
-  .medium\:start\:margin {
+  .medium\(y\:margin\) {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .medium\:start\:margin-0 {
+  .medium\(y\:margin\)-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
 
-  .medium\:start\:margin-1 {
+  .medium\(y\:margin\)-1 {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .medium\:start\:margin-2 {
+  .medium\(y\:margin\)-2 {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
 
-  .medium\:start\:margin-3 {
+  .medium\(y\:margin\)-3 {
     margin-top: 0.75rem !important;
     margin-bottom: 0.75rem !important;
   }
 
-  .medium\:start\:margin-4 {
+  .medium\(y\:margin\)-4 {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
 
-  .medium\:start\:margin-5 {
+  .medium\(y\:margin\)-5 {
     margin-top: 1.25rem !important;
     margin-bottom: 1.25rem !important;
   }
 
-  .medium\:start\:margin-6 {
+  .medium\(y\:margin\)-6 {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
   }
 
-  .medium\:start\:margin-7 {
+  .medium\(y\:margin\)-7 {
     margin-top: 1.75rem !important;
     margin-bottom: 1.75rem !important;
   }
 
-  .medium\:start\:margin-8 {
+  .medium\(y\:margin\)-8 {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
   }
 
-  .medium\:start\:margin-9 {
+  .medium\(y\:margin\)-9 {
     margin-top: 2.25rem !important;
     margin-bottom: 2.25rem !important;
   }
 
-  .medium\:start\:margin-10 {
+  .medium\(y\:margin\)-10 {
     margin-top: 2.5rem !important;
     margin-bottom: 2.5rem !important;
   }
 
-  .medium\:start\:margin-11 {
+  .medium\(y\:margin\)-11 {
     margin-top: 2.75rem !important;
     margin-bottom: 2.75rem !important;
   }
 
-  .medium\:start\:margin-12 {
+  .medium\(y\:margin\)-12 {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
   }
 
-  .medium\:start\:margin-13 {
+  .medium\(y\:margin\)-13 {
     margin-top: 3.25rem !important;
     margin-bottom: 3.25rem !important;
   }
 
-  .medium\:start\:margin-14 {
+  .medium\(y\:margin\)-14 {
     margin-top: 3.5rem !important;
     margin-bottom: 3.5rem !important;
   }
 
-  .medium\:start\:margin-15 {
+  .medium\(y\:margin\)-15 {
     margin-top: 3.75rem !important;
     margin-bottom: 3.75rem !important;
   }
 
-  .medium\:start\:margin-16 {
+  .medium\(y\:margin\)-16 {
     margin-top: 4rem !important;
     margin-bottom: 4rem !important;
   }
 
-  .medium\:start\:margin-17 {
+  .medium\(y\:margin\)-17 {
     margin-top: 4.25rem !important;
     margin-bottom: 4.25rem !important;
   }
 
-  .medium\:start\:margin-18 {
+  .medium\(y\:margin\)-18 {
     margin-top: 4.5rem !important;
     margin-bottom: 4.5rem !important;
   }
 
-  .medium\:start\:margin-19 {
+  .medium\(y\:margin\)-19 {
     margin-top: 4.75rem !important;
     margin-bottom: 4.75rem !important;
   }
 
-  .medium\:start\:margin-20 {
+  .medium\(y\:margin\)-20 {
     margin-top: 5rem !important;
     margin-bottom: 5rem !important;
   }
 
-  .medium\:start\:margin-auto {
+  .medium\(y\:margin\)-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
 
-  .medium\:end\:margin {
+  .medium\(x\:margin\) {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .medium\:end\:margin-0 {
+  .medium\(x\:margin\)-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 
-  .medium\:end\:margin-1 {
+  .medium\(x\:margin\)-1 {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .medium\:end\:margin-2 {
+  .medium\(x\:margin\)-2 {
     margin-right: 0.5rem !important;
     margin-left: 0.5rem !important;
   }
 
-  .medium\:end\:margin-3 {
+  .medium\(x\:margin\)-3 {
     margin-right: 0.75rem !important;
     margin-left: 0.75rem !important;
   }
 
-  .medium\:end\:margin-4 {
+  .medium\(x\:margin\)-4 {
     margin-right: 1rem !important;
     margin-left: 1rem !important;
   }
 
-  .medium\:end\:margin-5 {
+  .medium\(x\:margin\)-5 {
     margin-right: 1.25rem !important;
     margin-left: 1.25rem !important;
   }
 
-  .medium\:end\:margin-6 {
+  .medium\(x\:margin\)-6 {
     margin-right: 1.5rem !important;
     margin-left: 1.5rem !important;
   }
 
-  .medium\:end\:margin-7 {
+  .medium\(x\:margin\)-7 {
     margin-right: 1.75rem !important;
     margin-left: 1.75rem !important;
   }
 
-  .medium\:end\:margin-8 {
+  .medium\(x\:margin\)-8 {
     margin-right: 2rem !important;
     margin-left: 2rem !important;
   }
 
-  .medium\:end\:margin-9 {
+  .medium\(x\:margin\)-9 {
     margin-right: 2.25rem !important;
     margin-left: 2.25rem !important;
   }
 
-  .medium\:end\:margin-10 {
+  .medium\(x\:margin\)-10 {
     margin-right: 2.5rem !important;
     margin-left: 2.5rem !important;
   }
 
-  .medium\:end\:margin-11 {
+  .medium\(x\:margin\)-11 {
     margin-right: 2.75rem !important;
     margin-left: 2.75rem !important;
   }
 
-  .medium\:end\:margin-12 {
+  .medium\(x\:margin\)-12 {
     margin-right: 3rem !important;
     margin-left: 3rem !important;
   }
 
-  .medium\:end\:margin-13 {
+  .medium\(x\:margin\)-13 {
     margin-right: 3.25rem !important;
     margin-left: 3.25rem !important;
   }
 
-  .medium\:end\:margin-14 {
+  .medium\(x\:margin\)-14 {
     margin-right: 3.5rem !important;
     margin-left: 3.5rem !important;
   }
 
-  .medium\:end\:margin-15 {
+  .medium\(x\:margin\)-15 {
     margin-right: 3.75rem !important;
     margin-left: 3.75rem !important;
   }
 
-  .medium\:end\:margin-16 {
+  .medium\(x\:margin\)-16 {
     margin-right: 4rem !important;
     margin-left: 4rem !important;
   }
 
-  .medium\:end\:margin-17 {
+  .medium\(x\:margin\)-17 {
     margin-right: 4.25rem !important;
     margin-left: 4.25rem !important;
   }
 
-  .medium\:end\:margin-18 {
+  .medium\(x\:margin\)-18 {
     margin-right: 4.5rem !important;
     margin-left: 4.5rem !important;
   }
 
-  .medium\:end\:margin-19 {
+  .medium\(x\:margin\)-19 {
     margin-right: 4.75rem !important;
     margin-left: 4.75rem !important;
   }
 
-  .medium\:end\:margin-20 {
+  .medium\(x\:margin\)-20 {
     margin-right: 5rem !important;
     margin-left: 5rem !important;
   }
 
-  .medium\:end\:margin-auto {
+  .medium\(x\:margin\)-auto {
     margin-right: auto !important;
     margin-left: auto !important;
   }
 
-  .medium\:top\:margin {
+  .medium\(top\:margin\) {
     margin-top: 0.25rem !important;
   }
 
-  .medium\:top\:margin-0 {
+  .medium\(top\:margin\)-0 {
     margin-top: 0 !important;
   }
 
-  .medium\:top\:margin-1 {
+  .medium\(top\:margin\)-1 {
     margin-top: 0.25rem !important;
   }
 
-  .medium\:top\:margin-2 {
+  .medium\(top\:margin\)-2 {
     margin-top: 0.5rem !important;
   }
 
-  .medium\:top\:margin-3 {
+  .medium\(top\:margin\)-3 {
     margin-top: 0.75rem !important;
   }
 
-  .medium\:top\:margin-4 {
+  .medium\(top\:margin\)-4 {
     margin-top: 1rem !important;
   }
 
-  .medium\:top\:margin-5 {
+  .medium\(top\:margin\)-5 {
     margin-top: 1.25rem !important;
   }
 
-  .medium\:top\:margin-6 {
+  .medium\(top\:margin\)-6 {
     margin-top: 1.5rem !important;
   }
 
-  .medium\:top\:margin-7 {
+  .medium\(top\:margin\)-7 {
     margin-top: 1.75rem !important;
   }
 
-  .medium\:top\:margin-8 {
+  .medium\(top\:margin\)-8 {
     margin-top: 2rem !important;
   }
 
-  .medium\:top\:margin-9 {
+  .medium\(top\:margin\)-9 {
     margin-top: 2.25rem !important;
   }
 
-  .medium\:top\:margin-10 {
+  .medium\(top\:margin\)-10 {
     margin-top: 2.5rem !important;
   }
 
-  .medium\:top\:margin-11 {
+  .medium\(top\:margin\)-11 {
     margin-top: 2.75rem !important;
   }
 
-  .medium\:top\:margin-12 {
+  .medium\(top\:margin\)-12 {
     margin-top: 3rem !important;
   }
 
-  .medium\:top\:margin-13 {
+  .medium\(top\:margin\)-13 {
     margin-top: 3.25rem !important;
   }
 
-  .medium\:top\:margin-14 {
+  .medium\(top\:margin\)-14 {
     margin-top: 3.5rem !important;
   }
 
-  .medium\:top\:margin-15 {
+  .medium\(top\:margin\)-15 {
     margin-top: 3.75rem !important;
   }
 
-  .medium\:top\:margin-16 {
+  .medium\(top\:margin\)-16 {
     margin-top: 4rem !important;
   }
 
-  .medium\:top\:margin-17 {
+  .medium\(top\:margin\)-17 {
     margin-top: 4.25rem !important;
   }
 
-  .medium\:top\:margin-18 {
+  .medium\(top\:margin\)-18 {
     margin-top: 4.5rem !important;
   }
 
-  .medium\:top\:margin-19 {
+  .medium\(top\:margin\)-19 {
     margin-top: 4.75rem !important;
   }
 
-  .medium\:top\:margin-20 {
+  .medium\(top\:margin\)-20 {
     margin-top: 5rem !important;
   }
 
-  .medium\:top\:margin-auto {
+  .medium\(top\:margin\)-auto {
     margin-top: auto !important;
   }
 
-  .medium\:right\:margin {
+  .medium\(right\:margin\) {
     margin-right: 0.25rem !important;
   }
 
-  .medium\:right\:margin-0 {
+  .medium\(right\:margin\)-0 {
     margin-right: 0 !important;
   }
 
-  .medium\:right\:margin-1 {
+  .medium\(right\:margin\)-1 {
     margin-right: 0.25rem !important;
   }
 
-  .medium\:right\:margin-2 {
+  .medium\(right\:margin\)-2 {
     margin-right: 0.5rem !important;
   }
 
-  .medium\:right\:margin-3 {
+  .medium\(right\:margin\)-3 {
     margin-right: 0.75rem !important;
   }
 
-  .medium\:right\:margin-4 {
+  .medium\(right\:margin\)-4 {
     margin-right: 1rem !important;
   }
 
-  .medium\:right\:margin-5 {
+  .medium\(right\:margin\)-5 {
     margin-right: 1.25rem !important;
   }
 
-  .medium\:right\:margin-6 {
+  .medium\(right\:margin\)-6 {
     margin-right: 1.5rem !important;
   }
 
-  .medium\:right\:margin-7 {
+  .medium\(right\:margin\)-7 {
     margin-right: 1.75rem !important;
   }
 
-  .medium\:right\:margin-8 {
+  .medium\(right\:margin\)-8 {
     margin-right: 2rem !important;
   }
 
-  .medium\:right\:margin-9 {
+  .medium\(right\:margin\)-9 {
     margin-right: 2.25rem !important;
   }
 
-  .medium\:right\:margin-10 {
+  .medium\(right\:margin\)-10 {
     margin-right: 2.5rem !important;
   }
 
-  .medium\:right\:margin-11 {
+  .medium\(right\:margin\)-11 {
     margin-right: 2.75rem !important;
   }
 
-  .medium\:right\:margin-12 {
+  .medium\(right\:margin\)-12 {
     margin-right: 3rem !important;
   }
 
-  .medium\:right\:margin-13 {
+  .medium\(right\:margin\)-13 {
     margin-right: 3.25rem !important;
   }
 
-  .medium\:right\:margin-14 {
+  .medium\(right\:margin\)-14 {
     margin-right: 3.5rem !important;
   }
 
-  .medium\:right\:margin-15 {
+  .medium\(right\:margin\)-15 {
     margin-right: 3.75rem !important;
   }
 
-  .medium\:right\:margin-16 {
+  .medium\(right\:margin\)-16 {
     margin-right: 4rem !important;
   }
 
-  .medium\:right\:margin-17 {
+  .medium\(right\:margin\)-17 {
     margin-right: 4.25rem !important;
   }
 
-  .medium\:right\:margin-18 {
+  .medium\(right\:margin\)-18 {
     margin-right: 4.5rem !important;
   }
 
-  .medium\:right\:margin-19 {
+  .medium\(right\:margin\)-19 {
     margin-right: 4.75rem !important;
   }
 
-  .medium\:right\:margin-20 {
+  .medium\(right\:margin\)-20 {
     margin-right: 5rem !important;
   }
 
-  .medium\:right\:margin-auto {
+  .medium\(right\:margin\)-auto {
     margin-right: auto !important;
   }
 
-  .medium\:bottom\:margin {
+  .medium\(bottom\:margin\) {
     margin-bottom: 0.25rem !important;
   }
 
-  .medium\:bottom\:margin-0 {
+  .medium\(bottom\:margin\)-0 {
     margin-bottom: 0 !important;
   }
 
-  .medium\:bottom\:margin-1 {
+  .medium\(bottom\:margin\)-1 {
     margin-bottom: 0.25rem !important;
   }
 
-  .medium\:bottom\:margin-2 {
+  .medium\(bottom\:margin\)-2 {
     margin-bottom: 0.5rem !important;
   }
 
-  .medium\:bottom\:margin-3 {
+  .medium\(bottom\:margin\)-3 {
     margin-bottom: 0.75rem !important;
   }
 
-  .medium\:bottom\:margin-4 {
+  .medium\(bottom\:margin\)-4 {
     margin-bottom: 1rem !important;
   }
 
-  .medium\:bottom\:margin-5 {
+  .medium\(bottom\:margin\)-5 {
     margin-bottom: 1.25rem !important;
   }
 
-  .medium\:bottom\:margin-6 {
+  .medium\(bottom\:margin\)-6 {
     margin-bottom: 1.5rem !important;
   }
 
-  .medium\:bottom\:margin-7 {
+  .medium\(bottom\:margin\)-7 {
     margin-bottom: 1.75rem !important;
   }
 
-  .medium\:bottom\:margin-8 {
+  .medium\(bottom\:margin\)-8 {
     margin-bottom: 2rem !important;
   }
 
-  .medium\:bottom\:margin-9 {
+  .medium\(bottom\:margin\)-9 {
     margin-bottom: 2.25rem !important;
   }
 
-  .medium\:bottom\:margin-10 {
+  .medium\(bottom\:margin\)-10 {
     margin-bottom: 2.5rem !important;
   }
 
-  .medium\:bottom\:margin-11 {
+  .medium\(bottom\:margin\)-11 {
     margin-bottom: 2.75rem !important;
   }
 
-  .medium\:bottom\:margin-12 {
+  .medium\(bottom\:margin\)-12 {
     margin-bottom: 3rem !important;
   }
 
-  .medium\:bottom\:margin-13 {
+  .medium\(bottom\:margin\)-13 {
     margin-bottom: 3.25rem !important;
   }
 
-  .medium\:bottom\:margin-14 {
+  .medium\(bottom\:margin\)-14 {
     margin-bottom: 3.5rem !important;
   }
 
-  .medium\:bottom\:margin-15 {
+  .medium\(bottom\:margin\)-15 {
     margin-bottom: 3.75rem !important;
   }
 
-  .medium\:bottom\:margin-16 {
+  .medium\(bottom\:margin\)-16 {
     margin-bottom: 4rem !important;
   }
 
-  .medium\:bottom\:margin-17 {
+  .medium\(bottom\:margin\)-17 {
     margin-bottom: 4.25rem !important;
   }
 
-  .medium\:bottom\:margin-18 {
+  .medium\(bottom\:margin\)-18 {
     margin-bottom: 4.5rem !important;
   }
 
-  .medium\:bottom\:margin-19 {
+  .medium\(bottom\:margin\)-19 {
     margin-bottom: 4.75rem !important;
   }
 
-  .medium\:bottom\:margin-20 {
+  .medium\(bottom\:margin\)-20 {
     margin-bottom: 5rem !important;
   }
 
-  .medium\:bottom\:margin-auto {
+  .medium\(bottom\:margin\)-auto {
     margin-bottom: auto !important;
   }
 
-  .medium\:left\:margin {
+  .medium\(left\:margin\) {
     margin-left: 0.25rem !important;
   }
 
-  .medium\:left\:margin-0 {
+  .medium\(left\:margin\)-0 {
     margin-left: 0 !important;
   }
 
-  .medium\:left\:margin-1 {
+  .medium\(left\:margin\)-1 {
     margin-left: 0.25rem !important;
   }
 
-  .medium\:left\:margin-2 {
+  .medium\(left\:margin\)-2 {
     margin-left: 0.5rem !important;
   }
 
-  .medium\:left\:margin-3 {
+  .medium\(left\:margin\)-3 {
     margin-left: 0.75rem !important;
   }
 
-  .medium\:left\:margin-4 {
+  .medium\(left\:margin\)-4 {
     margin-left: 1rem !important;
   }
 
-  .medium\:left\:margin-5 {
+  .medium\(left\:margin\)-5 {
     margin-left: 1.25rem !important;
   }
 
-  .medium\:left\:margin-6 {
+  .medium\(left\:margin\)-6 {
     margin-left: 1.5rem !important;
   }
 
-  .medium\:left\:margin-7 {
+  .medium\(left\:margin\)-7 {
     margin-left: 1.75rem !important;
   }
 
-  .medium\:left\:margin-8 {
+  .medium\(left\:margin\)-8 {
     margin-left: 2rem !important;
   }
 
-  .medium\:left\:margin-9 {
+  .medium\(left\:margin\)-9 {
     margin-left: 2.25rem !important;
   }
 
-  .medium\:left\:margin-10 {
+  .medium\(left\:margin\)-10 {
     margin-left: 2.5rem !important;
   }
 
-  .medium\:left\:margin-11 {
+  .medium\(left\:margin\)-11 {
     margin-left: 2.75rem !important;
   }
 
-  .medium\:left\:margin-12 {
+  .medium\(left\:margin\)-12 {
     margin-left: 3rem !important;
   }
 
-  .medium\:left\:margin-13 {
+  .medium\(left\:margin\)-13 {
     margin-left: 3.25rem !important;
   }
 
-  .medium\:left\:margin-14 {
+  .medium\(left\:margin\)-14 {
     margin-left: 3.5rem !important;
   }
 
-  .medium\:left\:margin-15 {
+  .medium\(left\:margin\)-15 {
     margin-left: 3.75rem !important;
   }
 
-  .medium\:left\:margin-16 {
+  .medium\(left\:margin\)-16 {
     margin-left: 4rem !important;
   }
 
-  .medium\:left\:margin-17 {
+  .medium\(left\:margin\)-17 {
     margin-left: 4.25rem !important;
   }
 
-  .medium\:left\:margin-18 {
+  .medium\(left\:margin\)-18 {
     margin-left: 4.5rem !important;
   }
 
-  .medium\:left\:margin-19 {
+  .medium\(left\:margin\)-19 {
     margin-left: 4.75rem !important;
   }
 
-  .medium\:left\:margin-20 {
+  .medium\(left\:margin\)-20 {
     margin-left: 5rem !important;
   }
 
-  .medium\:left\:margin-auto {
+  .medium\(left\:margin\)-auto {
     margin-left: auto !important;
   }
 }
 
 @media (min-width: 1024px) {
-  .large\:margin {
+  .large\(margin\) {
     margin: 0.25rem !important;
   }
-  .large\:margin-0 {
+  .large\(margin\)-0 {
     margin: 0 !important;
   }
-  .large\:margin-1 {
+  .large\(margin\)-1 {
     margin: 0.25rem !important;
   }
-  .large\:margin-2 {
+  .large\(margin\)-2 {
     margin: 0.5rem !important;
   }
-  .large\:margin-3 {
+  .large\(margin\)-3 {
     margin: 0.75rem !important;
   }
-  .large\:margin-4 {
+  .large\(margin\)-4 {
     margin: 1rem !important;
   }
-  .large\:margin-5 {
+  .large\(margin\)-5 {
     margin: 1.25rem !important;
   }
-  .large\:margin-6 {
+  .large\(margin\)-6 {
     margin: 1.5rem !important;
   }
-  .large\:margin-7 {
+  .large\(margin\)-7 {
     margin: 1.75rem !important;
   }
-  .large\:margin-8 {
+  .large\(margin\)-8 {
     margin: 2rem !important;
   }
-  .large\:margin-9 {
+  .large\(margin\)-9 {
     margin: 2.25rem !important;
   }
-  .large\:margin-10 {
+  .large\(margin\)-10 {
     margin: 2.5rem !important;
   }
-  .large\:margin-11 {
+  .large\(margin\)-11 {
     margin: 2.75rem !important;
   }
-  .large\:margin-12 {
+  .large\(margin\)-12 {
     margin: 3rem !important;
   }
-  .large\:margin-13 {
+  .large\(margin\)-13 {
     margin: 3.25rem !important;
   }
-  .large\:margin-14 {
+  .large\(margin\)-14 {
     margin: 3.5rem !important;
   }
-  .large\:margin-15 {
+  .large\(margin\)-15 {
     margin: 3.75rem !important;
   }
-  .large\:margin-16 {
+  .large\(margin\)-16 {
     margin: 4rem !important;
   }
-  .large\:margin-17 {
+  .large\(margin\)-17 {
     margin: 4.25rem !important;
   }
-  .large\:margin-18 {
+  .large\(margin\)-18 {
     margin: 4.5rem !important;
   }
-  .large\:margin-19 {
+  .large\(margin\)-19 {
     margin: 4.75rem !important;
   }
-  .large\:margin-20 {
+  .large\(margin\)-20 {
     margin: 5rem !important;
   }
-  .large\:margin-auto {
+  .large\(margin\)-auto {
     margin: auto !important;
   }
 
-  .large\:start\:margin {
+  .large\(y\:margin\) {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .large\:start\:margin-0 {
+  .large\(y\:margin\)-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
 
-  .large\:start\:margin-1 {
+  .large\(y\:margin\)-1 {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .large\:start\:margin-2 {
+  .large\(y\:margin\)-2 {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
 
-  .large\:start\:margin-3 {
+  .large\(y\:margin\)-3 {
     margin-top: 0.75rem !important;
     margin-bottom: 0.75rem !important;
   }
 
-  .large\:start\:margin-4 {
+  .large\(y\:margin\)-4 {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
 
-  .large\:start\:margin-5 {
+  .large\(y\:margin\)-5 {
     margin-top: 1.25rem !important;
     margin-bottom: 1.25rem !important;
   }
 
-  .large\:start\:margin-6 {
+  .large\(y\:margin\)-6 {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
   }
 
-  .large\:start\:margin-7 {
+  .large\(y\:margin\)-7 {
     margin-top: 1.75rem !important;
     margin-bottom: 1.75rem !important;
   }
 
-  .large\:start\:margin-8 {
+  .large\(y\:margin\)-8 {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
   }
 
-  .large\:start\:margin-9 {
+  .large\(y\:margin\)-9 {
     margin-top: 2.25rem !important;
     margin-bottom: 2.25rem !important;
   }
 
-  .large\:start\:margin-10 {
+  .large\(y\:margin\)-10 {
     margin-top: 2.5rem !important;
     margin-bottom: 2.5rem !important;
   }
 
-  .large\:start\:margin-11 {
+  .large\(y\:margin\)-11 {
     margin-top: 2.75rem !important;
     margin-bottom: 2.75rem !important;
   }
 
-  .large\:start\:margin-12 {
+  .large\(y\:margin\)-12 {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
   }
 
-  .large\:start\:margin-13 {
+  .large\(y\:margin\)-13 {
     margin-top: 3.25rem !important;
     margin-bottom: 3.25rem !important;
   }
 
-  .large\:start\:margin-14 {
+  .large\(y\:margin\)-14 {
     margin-top: 3.5rem !important;
     margin-bottom: 3.5rem !important;
   }
 
-  .large\:start\:margin-15 {
+  .large\(y\:margin\)-15 {
     margin-top: 3.75rem !important;
     margin-bottom: 3.75rem !important;
   }
 
-  .large\:start\:margin-16 {
+  .large\(y\:margin\)-16 {
     margin-top: 4rem !important;
     margin-bottom: 4rem !important;
   }
 
-  .large\:start\:margin-17 {
+  .large\(y\:margin\)-17 {
     margin-top: 4.25rem !important;
     margin-bottom: 4.25rem !important;
   }
 
-  .large\:start\:margin-18 {
+  .large\(y\:margin\)-18 {
     margin-top: 4.5rem !important;
     margin-bottom: 4.5rem !important;
   }
 
-  .large\:start\:margin-19 {
+  .large\(y\:margin\)-19 {
     margin-top: 4.75rem !important;
     margin-bottom: 4.75rem !important;
   }
 
-  .large\:start\:margin-20 {
+  .large\(y\:margin\)-20 {
     margin-top: 5rem !important;
     margin-bottom: 5rem !important;
   }
 
-  .large\:start\:margin-auto {
+  .large\(y\:margin\)-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
 
-  .large\:end\:margin {
+  .large\(x\:margin\) {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .large\:end\:margin-0 {
+  .large\(x\:margin\)-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 
-  .large\:end\:margin-1 {
+  .large\(x\:margin\)-1 {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .large\:end\:margin-2 {
+  .large\(x\:margin\)-2 {
     margin-right: 0.5rem !important;
     margin-left: 0.5rem !important;
   }
 
-  .large\:end\:margin-3 {
+  .large\(x\:margin\)-3 {
     margin-right: 0.75rem !important;
     margin-left: 0.75rem !important;
   }
 
-  .large\:end\:margin-4 {
+  .large\(x\:margin\)-4 {
     margin-right: 1rem !important;
     margin-left: 1rem !important;
   }
 
-  .large\:end\:margin-5 {
+  .large\(x\:margin\)-5 {
     margin-right: 1.25rem !important;
     margin-left: 1.25rem !important;
   }
 
-  .large\:end\:margin-6 {
+  .large\(x\:margin\)-6 {
     margin-right: 1.5rem !important;
     margin-left: 1.5rem !important;
   }
 
-  .large\:end\:margin-7 {
+  .large\(x\:margin\)-7 {
     margin-right: 1.75rem !important;
     margin-left: 1.75rem !important;
   }
 
-  .large\:end\:margin-8 {
+  .large\(x\:margin\)-8 {
     margin-right: 2rem !important;
     margin-left: 2rem !important;
   }
 
-  .large\:end\:margin-9 {
+  .large\(x\:margin\)-9 {
     margin-right: 2.25rem !important;
     margin-left: 2.25rem !important;
   }
 
-  .large\:end\:margin-10 {
+  .large\(x\:margin\)-10 {
     margin-right: 2.5rem !important;
     margin-left: 2.5rem !important;
   }
 
-  .large\:end\:margin-11 {
+  .large\(x\:margin\)-11 {
     margin-right: 2.75rem !important;
     margin-left: 2.75rem !important;
   }
 
-  .large\:end\:margin-12 {
+  .large\(x\:margin\)-12 {
     margin-right: 3rem !important;
     margin-left: 3rem !important;
   }
 
-  .large\:end\:margin-13 {
+  .large\(x\:margin\)-13 {
     margin-right: 3.25rem !important;
     margin-left: 3.25rem !important;
   }
 
-  .large\:end\:margin-14 {
+  .large\(x\:margin\)-14 {
     margin-right: 3.5rem !important;
     margin-left: 3.5rem !important;
   }
 
-  .large\:end\:margin-15 {
+  .large\(x\:margin\)-15 {
     margin-right: 3.75rem !important;
     margin-left: 3.75rem !important;
   }
 
-  .large\:end\:margin-16 {
+  .large\(x\:margin\)-16 {
     margin-right: 4rem !important;
     margin-left: 4rem !important;
   }
 
-  .large\:end\:margin-17 {
+  .large\(x\:margin\)-17 {
     margin-right: 4.25rem !important;
     margin-left: 4.25rem !important;
   }
 
-  .large\:end\:margin-18 {
+  .large\(x\:margin\)-18 {
     margin-right: 4.5rem !important;
     margin-left: 4.5rem !important;
   }
 
-  .large\:end\:margin-19 {
+  .large\(x\:margin\)-19 {
     margin-right: 4.75rem !important;
     margin-left: 4.75rem !important;
   }
 
-  .large\:end\:margin-20 {
+  .large\(x\:margin\)-20 {
     margin-right: 5rem !important;
     margin-left: 5rem !important;
   }
 
-  .large\:end\:margin-auto {
+  .large\(x\:margin\)-auto {
     margin-right: auto !important;
     margin-left: auto !important;
   }
 
-  .large\:top\:margin {
+  .large\(top\:margin\) {
     margin-top: 0.25rem !important;
   }
 
-  .large\:top\:margin-0 {
+  .large\(top\:margin\)-0 {
     margin-top: 0 !important;
   }
 
-  .large\:top\:margin-1 {
+  .large\(top\:margin\)-1 {
     margin-top: 0.25rem !important;
   }
 
-  .large\:top\:margin-2 {
+  .large\(top\:margin\)-2 {
     margin-top: 0.5rem !important;
   }
 
-  .large\:top\:margin-3 {
+  .large\(top\:margin\)-3 {
     margin-top: 0.75rem !important;
   }
 
-  .large\:top\:margin-4 {
+  .large\(top\:margin\)-4 {
     margin-top: 1rem !important;
   }
 
-  .large\:top\:margin-5 {
+  .large\(top\:margin\)-5 {
     margin-top: 1.25rem !important;
   }
 
-  .large\:top\:margin-6 {
+  .large\(top\:margin\)-6 {
     margin-top: 1.5rem !important;
   }
 
-  .large\:top\:margin-7 {
+  .large\(top\:margin\)-7 {
     margin-top: 1.75rem !important;
   }
 
-  .large\:top\:margin-8 {
+  .large\(top\:margin\)-8 {
     margin-top: 2rem !important;
   }
 
-  .large\:top\:margin-9 {
+  .large\(top\:margin\)-9 {
     margin-top: 2.25rem !important;
   }
 
-  .large\:top\:margin-10 {
+  .large\(top\:margin\)-10 {
     margin-top: 2.5rem !important;
   }
 
-  .large\:top\:margin-11 {
+  .large\(top\:margin\)-11 {
     margin-top: 2.75rem !important;
   }
 
-  .large\:top\:margin-12 {
+  .large\(top\:margin\)-12 {
     margin-top: 3rem !important;
   }
 
-  .large\:top\:margin-13 {
+  .large\(top\:margin\)-13 {
     margin-top: 3.25rem !important;
   }
 
-  .large\:top\:margin-14 {
+  .large\(top\:margin\)-14 {
     margin-top: 3.5rem !important;
   }
 
-  .large\:top\:margin-15 {
+  .large\(top\:margin\)-15 {
     margin-top: 3.75rem !important;
   }
 
-  .large\:top\:margin-16 {
+  .large\(top\:margin\)-16 {
     margin-top: 4rem !important;
   }
 
-  .large\:top\:margin-17 {
+  .large\(top\:margin\)-17 {
     margin-top: 4.25rem !important;
   }
 
-  .large\:top\:margin-18 {
+  .large\(top\:margin\)-18 {
     margin-top: 4.5rem !important;
   }
 
-  .large\:top\:margin-19 {
+  .large\(top\:margin\)-19 {
     margin-top: 4.75rem !important;
   }
 
-  .large\:top\:margin-20 {
+  .large\(top\:margin\)-20 {
     margin-top: 5rem !important;
   }
 
-  .large\:top\:margin-auto {
+  .large\(top\:margin\)-auto {
     margin-top: auto !important;
   }
 
-  .large\:right\:margin {
+  .large\(right\:margin\) {
     margin-right: 0.25rem !important;
   }
 
-  .large\:right\:margin-0 {
+  .large\(right\:margin\)-0 {
     margin-right: 0 !important;
   }
 
-  .large\:right\:margin-1 {
+  .large\(right\:margin\)-1 {
     margin-right: 0.25rem !important;
   }
 
-  .large\:right\:margin-2 {
+  .large\(right\:margin\)-2 {
     margin-right: 0.5rem !important;
   }
 
-  .large\:right\:margin-3 {
+  .large\(right\:margin\)-3 {
     margin-right: 0.75rem !important;
   }
 
-  .large\:right\:margin-4 {
+  .large\(right\:margin\)-4 {
     margin-right: 1rem !important;
   }
 
-  .large\:right\:margin-5 {
+  .large\(right\:margin\)-5 {
     margin-right: 1.25rem !important;
   }
 
-  .large\:right\:margin-6 {
+  .large\(right\:margin\)-6 {
     margin-right: 1.5rem !important;
   }
 
-  .large\:right\:margin-7 {
+  .large\(right\:margin\)-7 {
     margin-right: 1.75rem !important;
   }
 
-  .large\:right\:margin-8 {
+  .large\(right\:margin\)-8 {
     margin-right: 2rem !important;
   }
 
-  .large\:right\:margin-9 {
+  .large\(right\:margin\)-9 {
     margin-right: 2.25rem !important;
   }
 
-  .large\:right\:margin-10 {
+  .large\(right\:margin\)-10 {
     margin-right: 2.5rem !important;
   }
 
-  .large\:right\:margin-11 {
+  .large\(right\:margin\)-11 {
     margin-right: 2.75rem !important;
   }
 
-  .large\:right\:margin-12 {
+  .large\(right\:margin\)-12 {
     margin-right: 3rem !important;
   }
 
-  .large\:right\:margin-13 {
+  .large\(right\:margin\)-13 {
     margin-right: 3.25rem !important;
   }
 
-  .large\:right\:margin-14 {
+  .large\(right\:margin\)-14 {
     margin-right: 3.5rem !important;
   }
 
-  .large\:right\:margin-15 {
+  .large\(right\:margin\)-15 {
     margin-right: 3.75rem !important;
   }
 
-  .large\:right\:margin-16 {
+  .large\(right\:margin\)-16 {
     margin-right: 4rem !important;
   }
 
-  .large\:right\:margin-17 {
+  .large\(right\:margin\)-17 {
     margin-right: 4.25rem !important;
   }
 
-  .large\:right\:margin-18 {
+  .large\(right\:margin\)-18 {
     margin-right: 4.5rem !important;
   }
 
-  .large\:right\:margin-19 {
+  .large\(right\:margin\)-19 {
     margin-right: 4.75rem !important;
   }
 
-  .large\:right\:margin-20 {
+  .large\(right\:margin\)-20 {
     margin-right: 5rem !important;
   }
 
-  .large\:right\:margin-auto {
+  .large\(right\:margin\)-auto {
     margin-right: auto !important;
   }
 
-  .large\:bottom\:margin {
+  .large\(bottom\:margin\) {
     margin-bottom: 0.25rem !important;
   }
 
-  .large\:bottom\:margin-0 {
+  .large\(bottom\:margin\)-0 {
     margin-bottom: 0 !important;
   }
 
-  .large\:bottom\:margin-1 {
+  .large\(bottom\:margin\)-1 {
     margin-bottom: 0.25rem !important;
   }
 
-  .large\:bottom\:margin-2 {
+  .large\(bottom\:margin\)-2 {
     margin-bottom: 0.5rem !important;
   }
 
-  .large\:bottom\:margin-3 {
+  .large\(bottom\:margin\)-3 {
     margin-bottom: 0.75rem !important;
   }
 
-  .large\:bottom\:margin-4 {
+  .large\(bottom\:margin\)-4 {
     margin-bottom: 1rem !important;
   }
 
-  .large\:bottom\:margin-5 {
+  .large\(bottom\:margin\)-5 {
     margin-bottom: 1.25rem !important;
   }
 
-  .large\:bottom\:margin-6 {
+  .large\(bottom\:margin\)-6 {
     margin-bottom: 1.5rem !important;
   }
 
-  .large\:bottom\:margin-7 {
+  .large\(bottom\:margin\)-7 {
     margin-bottom: 1.75rem !important;
   }
 
-  .large\:bottom\:margin-8 {
+  .large\(bottom\:margin\)-8 {
     margin-bottom: 2rem !important;
   }
 
-  .large\:bottom\:margin-9 {
+  .large\(bottom\:margin\)-9 {
     margin-bottom: 2.25rem !important;
   }
 
-  .large\:bottom\:margin-10 {
+  .large\(bottom\:margin\)-10 {
     margin-bottom: 2.5rem !important;
   }
 
-  .large\:bottom\:margin-11 {
+  .large\(bottom\:margin\)-11 {
     margin-bottom: 2.75rem !important;
   }
 
-  .large\:bottom\:margin-12 {
+  .large\(bottom\:margin\)-12 {
     margin-bottom: 3rem !important;
   }
 
-  .large\:bottom\:margin-13 {
+  .large\(bottom\:margin\)-13 {
     margin-bottom: 3.25rem !important;
   }
 
-  .large\:bottom\:margin-14 {
+  .large\(bottom\:margin\)-14 {
     margin-bottom: 3.5rem !important;
   }
 
-  .large\:bottom\:margin-15 {
+  .large\(bottom\:margin\)-15 {
     margin-bottom: 3.75rem !important;
   }
 
-  .large\:bottom\:margin-16 {
+  .large\(bottom\:margin\)-16 {
     margin-bottom: 4rem !important;
   }
 
-  .large\:bottom\:margin-17 {
+  .large\(bottom\:margin\)-17 {
     margin-bottom: 4.25rem !important;
   }
 
-  .large\:bottom\:margin-18 {
+  .large\(bottom\:margin\)-18 {
     margin-bottom: 4.5rem !important;
   }
 
-  .large\:bottom\:margin-19 {
+  .large\(bottom\:margin\)-19 {
     margin-bottom: 4.75rem !important;
   }
 
-  .large\:bottom\:margin-20 {
+  .large\(bottom\:margin\)-20 {
     margin-bottom: 5rem !important;
   }
 
-  .large\:bottom\:margin-auto {
+  .large\(bottom\:margin\)-auto {
     margin-bottom: auto !important;
   }
 
-  .large\:left\:margin {
+  .large\(left\:margin\) {
     margin-left: 0.25rem !important;
   }
 
-  .large\:left\:margin-0 {
+  .large\(left\:margin\)-0 {
     margin-left: 0 !important;
   }
 
-  .large\:left\:margin-1 {
+  .large\(left\:margin\)-1 {
     margin-left: 0.25rem !important;
   }
 
-  .large\:left\:margin-2 {
+  .large\(left\:margin\)-2 {
     margin-left: 0.5rem !important;
   }
 
-  .large\:left\:margin-3 {
+  .large\(left\:margin\)-3 {
     margin-left: 0.75rem !important;
   }
 
-  .large\:left\:margin-4 {
+  .large\(left\:margin\)-4 {
     margin-left: 1rem !important;
   }
 
-  .large\:left\:margin-5 {
+  .large\(left\:margin\)-5 {
     margin-left: 1.25rem !important;
   }
 
-  .large\:left\:margin-6 {
+  .large\(left\:margin\)-6 {
     margin-left: 1.5rem !important;
   }
 
-  .large\:left\:margin-7 {
+  .large\(left\:margin\)-7 {
     margin-left: 1.75rem !important;
   }
 
-  .large\:left\:margin-8 {
+  .large\(left\:margin\)-8 {
     margin-left: 2rem !important;
   }
 
-  .large\:left\:margin-9 {
+  .large\(left\:margin\)-9 {
     margin-left: 2.25rem !important;
   }
 
-  .large\:left\:margin-10 {
+  .large\(left\:margin\)-10 {
     margin-left: 2.5rem !important;
   }
 
-  .large\:left\:margin-11 {
+  .large\(left\:margin\)-11 {
     margin-left: 2.75rem !important;
   }
 
-  .large\:left\:margin-12 {
+  .large\(left\:margin\)-12 {
     margin-left: 3rem !important;
   }
 
-  .large\:left\:margin-13 {
+  .large\(left\:margin\)-13 {
     margin-left: 3.25rem !important;
   }
 
-  .large\:left\:margin-14 {
+  .large\(left\:margin\)-14 {
     margin-left: 3.5rem !important;
   }
 
-  .large\:left\:margin-15 {
+  .large\(left\:margin\)-15 {
     margin-left: 3.75rem !important;
   }
 
-  .large\:left\:margin-16 {
+  .large\(left\:margin\)-16 {
     margin-left: 4rem !important;
   }
 
-  .large\:left\:margin-17 {
+  .large\(left\:margin\)-17 {
     margin-left: 4.25rem !important;
   }
 
-  .large\:left\:margin-18 {
+  .large\(left\:margin\)-18 {
     margin-left: 4.5rem !important;
   }
 
-  .large\:left\:margin-19 {
+  .large\(left\:margin\)-19 {
     margin-left: 4.75rem !important;
   }
 
-  .large\:left\:margin-20 {
+  .large\(left\:margin\)-20 {
     margin-left: 5rem !important;
   }
 
-  .large\:left\:margin-auto {
+  .large\(left\:margin\)-auto {
     margin-left: auto !important;
   }
 }
 
 @media (min-width: 1280px) {
-  .larger\:margin {
+  .larger\(margin\) {
     margin: 0.25rem !important;
   }
-  .larger\:margin-0 {
+  .larger\(margin\)-0 {
     margin: 0 !important;
   }
-  .larger\:margin-1 {
+  .larger\(margin\)-1 {
     margin: 0.25rem !important;
   }
-  .larger\:margin-2 {
+  .larger\(margin\)-2 {
     margin: 0.5rem !important;
   }
-  .larger\:margin-3 {
+  .larger\(margin\)-3 {
     margin: 0.75rem !important;
   }
-  .larger\:margin-4 {
+  .larger\(margin\)-4 {
     margin: 1rem !important;
   }
-  .larger\:margin-5 {
+  .larger\(margin\)-5 {
     margin: 1.25rem !important;
   }
-  .larger\:margin-6 {
+  .larger\(margin\)-6 {
     margin: 1.5rem !important;
   }
-  .larger\:margin-7 {
+  .larger\(margin\)-7 {
     margin: 1.75rem !important;
   }
-  .larger\:margin-8 {
+  .larger\(margin\)-8 {
     margin: 2rem !important;
   }
-  .larger\:margin-9 {
+  .larger\(margin\)-9 {
     margin: 2.25rem !important;
   }
-  .larger\:margin-10 {
+  .larger\(margin\)-10 {
     margin: 2.5rem !important;
   }
-  .larger\:margin-11 {
+  .larger\(margin\)-11 {
     margin: 2.75rem !important;
   }
-  .larger\:margin-12 {
+  .larger\(margin\)-12 {
     margin: 3rem !important;
   }
-  .larger\:margin-13 {
+  .larger\(margin\)-13 {
     margin: 3.25rem !important;
   }
-  .larger\:margin-14 {
+  .larger\(margin\)-14 {
     margin: 3.5rem !important;
   }
-  .larger\:margin-15 {
+  .larger\(margin\)-15 {
     margin: 3.75rem !important;
   }
-  .larger\:margin-16 {
+  .larger\(margin\)-16 {
     margin: 4rem !important;
   }
-  .larger\:margin-17 {
+  .larger\(margin\)-17 {
     margin: 4.25rem !important;
   }
-  .larger\:margin-18 {
+  .larger\(margin\)-18 {
     margin: 4.5rem !important;
   }
-  .larger\:margin-19 {
+  .larger\(margin\)-19 {
     margin: 4.75rem !important;
   }
-  .larger\:margin-20 {
+  .larger\(margin\)-20 {
     margin: 5rem !important;
   }
-  .larger\:margin-auto {
+  .larger\(margin\)-auto {
     margin: auto !important;
   }
 
-  .larger\:start\:margin {
+  .larger\(y\:margin\) {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .larger\:start\:margin-0 {
+  .larger\(y\:margin\)-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
 
-  .larger\:start\:margin-1 {
+  .larger\(y\:margin\)-1 {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .larger\:start\:margin-2 {
+  .larger\(y\:margin\)-2 {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
 
-  .larger\:start\:margin-3 {
+  .larger\(y\:margin\)-3 {
     margin-top: 0.75rem !important;
     margin-bottom: 0.75rem !important;
   }
 
-  .larger\:start\:margin-4 {
+  .larger\(y\:margin\)-4 {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
 
-  .larger\:start\:margin-5 {
+  .larger\(y\:margin\)-5 {
     margin-top: 1.25rem !important;
     margin-bottom: 1.25rem !important;
   }
 
-  .larger\:start\:margin-6 {
+  .larger\(y\:margin\)-6 {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
   }
 
-  .larger\:start\:margin-7 {
+  .larger\(y\:margin\)-7 {
     margin-top: 1.75rem !important;
     margin-bottom: 1.75rem !important;
   }
 
-  .larger\:start\:margin-8 {
+  .larger\(y\:margin\)-8 {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
   }
 
-  .larger\:start\:margin-9 {
+  .larger\(y\:margin\)-9 {
     margin-top: 2.25rem !important;
     margin-bottom: 2.25rem !important;
   }
 
-  .larger\:start\:margin-10 {
+  .larger\(y\:margin\)-10 {
     margin-top: 2.5rem !important;
     margin-bottom: 2.5rem !important;
   }
 
-  .larger\:start\:margin-11 {
+  .larger\(y\:margin\)-11 {
     margin-top: 2.75rem !important;
     margin-bottom: 2.75rem !important;
   }
 
-  .larger\:start\:margin-12 {
+  .larger\(y\:margin\)-12 {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
   }
 
-  .larger\:start\:margin-13 {
+  .larger\(y\:margin\)-13 {
     margin-top: 3.25rem !important;
     margin-bottom: 3.25rem !important;
   }
 
-  .larger\:start\:margin-14 {
+  .larger\(y\:margin\)-14 {
     margin-top: 3.5rem !important;
     margin-bottom: 3.5rem !important;
   }
 
-  .larger\:start\:margin-15 {
+  .larger\(y\:margin\)-15 {
     margin-top: 3.75rem !important;
     margin-bottom: 3.75rem !important;
   }
 
-  .larger\:start\:margin-16 {
+  .larger\(y\:margin\)-16 {
     margin-top: 4rem !important;
     margin-bottom: 4rem !important;
   }
 
-  .larger\:start\:margin-17 {
+  .larger\(y\:margin\)-17 {
     margin-top: 4.25rem !important;
     margin-bottom: 4.25rem !important;
   }
 
-  .larger\:start\:margin-18 {
+  .larger\(y\:margin\)-18 {
     margin-top: 4.5rem !important;
     margin-bottom: 4.5rem !important;
   }
 
-  .larger\:start\:margin-19 {
+  .larger\(y\:margin\)-19 {
     margin-top: 4.75rem !important;
     margin-bottom: 4.75rem !important;
   }
 
-  .larger\:start\:margin-20 {
+  .larger\(y\:margin\)-20 {
     margin-top: 5rem !important;
     margin-bottom: 5rem !important;
   }
 
-  .larger\:start\:margin-auto {
+  .larger\(y\:margin\)-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
 
-  .larger\:end\:margin {
+  .larger\(x\:margin\) {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .larger\:end\:margin-0 {
+  .larger\(x\:margin\)-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 
-  .larger\:end\:margin-1 {
+  .larger\(x\:margin\)-1 {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .larger\:end\:margin-2 {
+  .larger\(x\:margin\)-2 {
     margin-right: 0.5rem !important;
     margin-left: 0.5rem !important;
   }
 
-  .larger\:end\:margin-3 {
+  .larger\(x\:margin\)-3 {
     margin-right: 0.75rem !important;
     margin-left: 0.75rem !important;
   }
 
-  .larger\:end\:margin-4 {
+  .larger\(x\:margin\)-4 {
     margin-right: 1rem !important;
     margin-left: 1rem !important;
   }
 
-  .larger\:end\:margin-5 {
+  .larger\(x\:margin\)-5 {
     margin-right: 1.25rem !important;
     margin-left: 1.25rem !important;
   }
 
-  .larger\:end\:margin-6 {
+  .larger\(x\:margin\)-6 {
     margin-right: 1.5rem !important;
     margin-left: 1.5rem !important;
   }
 
-  .larger\:end\:margin-7 {
+  .larger\(x\:margin\)-7 {
     margin-right: 1.75rem !important;
     margin-left: 1.75rem !important;
   }
 
-  .larger\:end\:margin-8 {
+  .larger\(x\:margin\)-8 {
     margin-right: 2rem !important;
     margin-left: 2rem !important;
   }
 
-  .larger\:end\:margin-9 {
+  .larger\(x\:margin\)-9 {
     margin-right: 2.25rem !important;
     margin-left: 2.25rem !important;
   }
 
-  .larger\:end\:margin-10 {
+  .larger\(x\:margin\)-10 {
     margin-right: 2.5rem !important;
     margin-left: 2.5rem !important;
   }
 
-  .larger\:end\:margin-11 {
+  .larger\(x\:margin\)-11 {
     margin-right: 2.75rem !important;
     margin-left: 2.75rem !important;
   }
 
-  .larger\:end\:margin-12 {
+  .larger\(x\:margin\)-12 {
     margin-right: 3rem !important;
     margin-left: 3rem !important;
   }
 
-  .larger\:end\:margin-13 {
+  .larger\(x\:margin\)-13 {
     margin-right: 3.25rem !important;
     margin-left: 3.25rem !important;
   }
 
-  .larger\:end\:margin-14 {
+  .larger\(x\:margin\)-14 {
     margin-right: 3.5rem !important;
     margin-left: 3.5rem !important;
   }
 
-  .larger\:end\:margin-15 {
+  .larger\(x\:margin\)-15 {
     margin-right: 3.75rem !important;
     margin-left: 3.75rem !important;
   }
 
-  .larger\:end\:margin-16 {
+  .larger\(x\:margin\)-16 {
     margin-right: 4rem !important;
     margin-left: 4rem !important;
   }
 
-  .larger\:end\:margin-17 {
+  .larger\(x\:margin\)-17 {
     margin-right: 4.25rem !important;
     margin-left: 4.25rem !important;
   }
 
-  .larger\:end\:margin-18 {
+  .larger\(x\:margin\)-18 {
     margin-right: 4.5rem !important;
     margin-left: 4.5rem !important;
   }
 
-  .larger\:end\:margin-19 {
+  .larger\(x\:margin\)-19 {
     margin-right: 4.75rem !important;
     margin-left: 4.75rem !important;
   }
 
-  .larger\:end\:margin-20 {
+  .larger\(x\:margin\)-20 {
     margin-right: 5rem !important;
     margin-left: 5rem !important;
   }
 
-  .larger\:end\:margin-auto {
+  .larger\(x\:margin\)-auto {
     margin-right: auto !important;
     margin-left: auto !important;
   }
 
-  .larger\:top\:margin {
+  .larger\(top\:margin\) {
     margin-top: 0.25rem !important;
   }
 
-  .larger\:top\:margin-0 {
+  .larger\(top\:margin\)-0 {
     margin-top: 0 !important;
   }
 
-  .larger\:top\:margin-1 {
+  .larger\(top\:margin\)-1 {
     margin-top: 0.25rem !important;
   }
 
-  .larger\:top\:margin-2 {
+  .larger\(top\:margin\)-2 {
     margin-top: 0.5rem !important;
   }
 
-  .larger\:top\:margin-3 {
+  .larger\(top\:margin\)-3 {
     margin-top: 0.75rem !important;
   }
 
-  .larger\:top\:margin-4 {
+  .larger\(top\:margin\)-4 {
     margin-top: 1rem !important;
   }
 
-  .larger\:top\:margin-5 {
+  .larger\(top\:margin\)-5 {
     margin-top: 1.25rem !important;
   }
 
-  .larger\:top\:margin-6 {
+  .larger\(top\:margin\)-6 {
     margin-top: 1.5rem !important;
   }
 
-  .larger\:top\:margin-7 {
+  .larger\(top\:margin\)-7 {
     margin-top: 1.75rem !important;
   }
 
-  .larger\:top\:margin-8 {
+  .larger\(top\:margin\)-8 {
     margin-top: 2rem !important;
   }
 
-  .larger\:top\:margin-9 {
+  .larger\(top\:margin\)-9 {
     margin-top: 2.25rem !important;
   }
 
-  .larger\:top\:margin-10 {
+  .larger\(top\:margin\)-10 {
     margin-top: 2.5rem !important;
   }
 
-  .larger\:top\:margin-11 {
+  .larger\(top\:margin\)-11 {
     margin-top: 2.75rem !important;
   }
 
-  .larger\:top\:margin-12 {
+  .larger\(top\:margin\)-12 {
     margin-top: 3rem !important;
   }
 
-  .larger\:top\:margin-13 {
+  .larger\(top\:margin\)-13 {
     margin-top: 3.25rem !important;
   }
 
-  .larger\:top\:margin-14 {
+  .larger\(top\:margin\)-14 {
     margin-top: 3.5rem !important;
   }
 
-  .larger\:top\:margin-15 {
+  .larger\(top\:margin\)-15 {
     margin-top: 3.75rem !important;
   }
 
-  .larger\:top\:margin-16 {
+  .larger\(top\:margin\)-16 {
     margin-top: 4rem !important;
   }
 
-  .larger\:top\:margin-17 {
+  .larger\(top\:margin\)-17 {
     margin-top: 4.25rem !important;
   }
 
-  .larger\:top\:margin-18 {
+  .larger\(top\:margin\)-18 {
     margin-top: 4.5rem !important;
   }
 
-  .larger\:top\:margin-19 {
+  .larger\(top\:margin\)-19 {
     margin-top: 4.75rem !important;
   }
 
-  .larger\:top\:margin-20 {
+  .larger\(top\:margin\)-20 {
     margin-top: 5rem !important;
   }
 
-  .larger\:top\:margin-auto {
+  .larger\(top\:margin\)-auto {
     margin-top: auto !important;
   }
 
-  .larger\:right\:margin {
+  .larger\(right\:margin\) {
     margin-right: 0.25rem !important;
   }
 
-  .larger\:right\:margin-0 {
+  .larger\(right\:margin\)-0 {
     margin-right: 0 !important;
   }
 
-  .larger\:right\:margin-1 {
+  .larger\(right\:margin\)-1 {
     margin-right: 0.25rem !important;
   }
 
-  .larger\:right\:margin-2 {
+  .larger\(right\:margin\)-2 {
     margin-right: 0.5rem !important;
   }
 
-  .larger\:right\:margin-3 {
+  .larger\(right\:margin\)-3 {
     margin-right: 0.75rem !important;
   }
 
-  .larger\:right\:margin-4 {
+  .larger\(right\:margin\)-4 {
     margin-right: 1rem !important;
   }
 
-  .larger\:right\:margin-5 {
+  .larger\(right\:margin\)-5 {
     margin-right: 1.25rem !important;
   }
 
-  .larger\:right\:margin-6 {
+  .larger\(right\:margin\)-6 {
     margin-right: 1.5rem !important;
   }
 
-  .larger\:right\:margin-7 {
+  .larger\(right\:margin\)-7 {
     margin-right: 1.75rem !important;
   }
 
-  .larger\:right\:margin-8 {
+  .larger\(right\:margin\)-8 {
     margin-right: 2rem !important;
   }
 
-  .larger\:right\:margin-9 {
+  .larger\(right\:margin\)-9 {
     margin-right: 2.25rem !important;
   }
 
-  .larger\:right\:margin-10 {
+  .larger\(right\:margin\)-10 {
     margin-right: 2.5rem !important;
   }
 
-  .larger\:right\:margin-11 {
+  .larger\(right\:margin\)-11 {
     margin-right: 2.75rem !important;
   }
 
-  .larger\:right\:margin-12 {
+  .larger\(right\:margin\)-12 {
     margin-right: 3rem !important;
   }
 
-  .larger\:right\:margin-13 {
+  .larger\(right\:margin\)-13 {
     margin-right: 3.25rem !important;
   }
 
-  .larger\:right\:margin-14 {
+  .larger\(right\:margin\)-14 {
     margin-right: 3.5rem !important;
   }
 
-  .larger\:right\:margin-15 {
+  .larger\(right\:margin\)-15 {
     margin-right: 3.75rem !important;
   }
 
-  .larger\:right\:margin-16 {
+  .larger\(right\:margin\)-16 {
     margin-right: 4rem !important;
   }
 
-  .larger\:right\:margin-17 {
+  .larger\(right\:margin\)-17 {
     margin-right: 4.25rem !important;
   }
 
-  .larger\:right\:margin-18 {
+  .larger\(right\:margin\)-18 {
     margin-right: 4.5rem !important;
   }
 
-  .larger\:right\:margin-19 {
+  .larger\(right\:margin\)-19 {
     margin-right: 4.75rem !important;
   }
 
-  .larger\:right\:margin-20 {
+  .larger\(right\:margin\)-20 {
     margin-right: 5rem !important;
   }
 
-  .larger\:right\:margin-auto {
+  .larger\(right\:margin\)-auto {
     margin-right: auto !important;
   }
 
-  .larger\:bottom\:margin {
+  .larger\(bottom\:margin\) {
     margin-bottom: 0.25rem !important;
   }
 
-  .larger\:bottom\:margin-0 {
+  .larger\(bottom\:margin\)-0 {
     margin-bottom: 0 !important;
   }
 
-  .larger\:bottom\:margin-1 {
+  .larger\(bottom\:margin\)-1 {
     margin-bottom: 0.25rem !important;
   }
 
-  .larger\:bottom\:margin-2 {
+  .larger\(bottom\:margin\)-2 {
     margin-bottom: 0.5rem !important;
   }
 
-  .larger\:bottom\:margin-3 {
+  .larger\(bottom\:margin\)-3 {
     margin-bottom: 0.75rem !important;
   }
 
-  .larger\:bottom\:margin-4 {
+  .larger\(bottom\:margin\)-4 {
     margin-bottom: 1rem !important;
   }
 
-  .larger\:bottom\:margin-5 {
+  .larger\(bottom\:margin\)-5 {
     margin-bottom: 1.25rem !important;
   }
 
-  .larger\:bottom\:margin-6 {
+  .larger\(bottom\:margin\)-6 {
     margin-bottom: 1.5rem !important;
   }
 
-  .larger\:bottom\:margin-7 {
+  .larger\(bottom\:margin\)-7 {
     margin-bottom: 1.75rem !important;
   }
 
-  .larger\:bottom\:margin-8 {
+  .larger\(bottom\:margin\)-8 {
     margin-bottom: 2rem !important;
   }
 
-  .larger\:bottom\:margin-9 {
+  .larger\(bottom\:margin\)-9 {
     margin-bottom: 2.25rem !important;
   }
 
-  .larger\:bottom\:margin-10 {
+  .larger\(bottom\:margin\)-10 {
     margin-bottom: 2.5rem !important;
   }
 
-  .larger\:bottom\:margin-11 {
+  .larger\(bottom\:margin\)-11 {
     margin-bottom: 2.75rem !important;
   }
 
-  .larger\:bottom\:margin-12 {
+  .larger\(bottom\:margin\)-12 {
     margin-bottom: 3rem !important;
   }
 
-  .larger\:bottom\:margin-13 {
+  .larger\(bottom\:margin\)-13 {
     margin-bottom: 3.25rem !important;
   }
 
-  .larger\:bottom\:margin-14 {
+  .larger\(bottom\:margin\)-14 {
     margin-bottom: 3.5rem !important;
   }
 
-  .larger\:bottom\:margin-15 {
+  .larger\(bottom\:margin\)-15 {
     margin-bottom: 3.75rem !important;
   }
 
-  .larger\:bottom\:margin-16 {
+  .larger\(bottom\:margin\)-16 {
     margin-bottom: 4rem !important;
   }
 
-  .larger\:bottom\:margin-17 {
+  .larger\(bottom\:margin\)-17 {
     margin-bottom: 4.25rem !important;
   }
 
-  .larger\:bottom\:margin-18 {
+  .larger\(bottom\:margin\)-18 {
     margin-bottom: 4.5rem !important;
   }
 
-  .larger\:bottom\:margin-19 {
+  .larger\(bottom\:margin\)-19 {
     margin-bottom: 4.75rem !important;
   }
 
-  .larger\:bottom\:margin-20 {
+  .larger\(bottom\:margin\)-20 {
     margin-bottom: 5rem !important;
   }
 
-  .larger\:bottom\:margin-auto {
+  .larger\(bottom\:margin\)-auto {
     margin-bottom: auto !important;
   }
 
-  .larger\:left\:margin {
+  .larger\(left\:margin\) {
     margin-left: 0.25rem !important;
   }
 
-  .larger\:left\:margin-0 {
+  .larger\(left\:margin\)-0 {
     margin-left: 0 !important;
   }
 
-  .larger\:left\:margin-1 {
+  .larger\(left\:margin\)-1 {
     margin-left: 0.25rem !important;
   }
 
-  .larger\:left\:margin-2 {
+  .larger\(left\:margin\)-2 {
     margin-left: 0.5rem !important;
   }
 
-  .larger\:left\:margin-3 {
+  .larger\(left\:margin\)-3 {
     margin-left: 0.75rem !important;
   }
 
-  .larger\:left\:margin-4 {
+  .larger\(left\:margin\)-4 {
     margin-left: 1rem !important;
   }
 
-  .larger\:left\:margin-5 {
+  .larger\(left\:margin\)-5 {
     margin-left: 1.25rem !important;
   }
 
-  .larger\:left\:margin-6 {
+  .larger\(left\:margin\)-6 {
     margin-left: 1.5rem !important;
   }
 
-  .larger\:left\:margin-7 {
+  .larger\(left\:margin\)-7 {
     margin-left: 1.75rem !important;
   }
 
-  .larger\:left\:margin-8 {
+  .larger\(left\:margin\)-8 {
     margin-left: 2rem !important;
   }
 
-  .larger\:left\:margin-9 {
+  .larger\(left\:margin\)-9 {
     margin-left: 2.25rem !important;
   }
 
-  .larger\:left\:margin-10 {
+  .larger\(left\:margin\)-10 {
     margin-left: 2.5rem !important;
   }
 
-  .larger\:left\:margin-11 {
+  .larger\(left\:margin\)-11 {
     margin-left: 2.75rem !important;
   }
 
-  .larger\:left\:margin-12 {
+  .larger\(left\:margin\)-12 {
     margin-left: 3rem !important;
   }
 
-  .larger\:left\:margin-13 {
+  .larger\(left\:margin\)-13 {
     margin-left: 3.25rem !important;
   }
 
-  .larger\:left\:margin-14 {
+  .larger\(left\:margin\)-14 {
     margin-left: 3.5rem !important;
   }
 
-  .larger\:left\:margin-15 {
+  .larger\(left\:margin\)-15 {
     margin-left: 3.75rem !important;
   }
 
-  .larger\:left\:margin-16 {
+  .larger\(left\:margin\)-16 {
     margin-left: 4rem !important;
   }
 
-  .larger\:left\:margin-17 {
+  .larger\(left\:margin\)-17 {
     margin-left: 4.25rem !important;
   }
 
-  .larger\:left\:margin-18 {
+  .larger\(left\:margin\)-18 {
     margin-left: 4.5rem !important;
   }
 
-  .larger\:left\:margin-19 {
+  .larger\(left\:margin\)-19 {
     margin-left: 4.75rem !important;
   }
 
-  .larger\:left\:margin-20 {
+  .larger\(left\:margin\)-20 {
     margin-left: 5rem !important;
   }
 
-  .larger\:left\:margin-auto {
+  .larger\(left\:margin\)-auto {
     margin-left: auto !important;
   }
 }
 
 @media (min-width: 1536px) {
-  .largest\:margin {
+  .largest\(margin\) {
     margin: 0.25rem !important;
   }
-  .largest\:margin-0 {
+  .largest\(margin\)-0 {
     margin: 0 !important;
   }
-  .largest\:margin-1 {
+  .largest\(margin\)-1 {
     margin: 0.25rem !important;
   }
-  .largest\:margin-2 {
+  .largest\(margin\)-2 {
     margin: 0.5rem !important;
   }
-  .largest\:margin-3 {
+  .largest\(margin\)-3 {
     margin: 0.75rem !important;
   }
-  .largest\:margin-4 {
+  .largest\(margin\)-4 {
     margin: 1rem !important;
   }
-  .largest\:margin-5 {
+  .largest\(margin\)-5 {
     margin: 1.25rem !important;
   }
-  .largest\:margin-6 {
+  .largest\(margin\)-6 {
     margin: 1.5rem !important;
   }
-  .largest\:margin-7 {
+  .largest\(margin\)-7 {
     margin: 1.75rem !important;
   }
-  .largest\:margin-8 {
+  .largest\(margin\)-8 {
     margin: 2rem !important;
   }
-  .largest\:margin-9 {
+  .largest\(margin\)-9 {
     margin: 2.25rem !important;
   }
-  .largest\:margin-10 {
+  .largest\(margin\)-10 {
     margin: 2.5rem !important;
   }
-  .largest\:margin-11 {
+  .largest\(margin\)-11 {
     margin: 2.75rem !important;
   }
-  .largest\:margin-12 {
+  .largest\(margin\)-12 {
     margin: 3rem !important;
   }
-  .largest\:margin-13 {
+  .largest\(margin\)-13 {
     margin: 3.25rem !important;
   }
-  .largest\:margin-14 {
+  .largest\(margin\)-14 {
     margin: 3.5rem !important;
   }
-  .largest\:margin-15 {
+  .largest\(margin\)-15 {
     margin: 3.75rem !important;
   }
-  .largest\:margin-16 {
+  .largest\(margin\)-16 {
     margin: 4rem !important;
   }
-  .largest\:margin-17 {
+  .largest\(margin\)-17 {
     margin: 4.25rem !important;
   }
-  .largest\:margin-18 {
+  .largest\(margin\)-18 {
     margin: 4.5rem !important;
   }
-  .largest\:margin-19 {
+  .largest\(margin\)-19 {
     margin: 4.75rem !important;
   }
-  .largest\:margin-20 {
+  .largest\(margin\)-20 {
     margin: 5rem !important;
   }
-  .largest\:margin-auto {
+  .largest\(margin\)-auto {
     margin: auto !important;
   }
 
-  .largest\:start\:margin {
+  .largest\(y\:margin\) {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .largest\:start\:margin-0 {
+  .largest\(y\:margin\)-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
 
-  .largest\:start\:margin-1 {
+  .largest\(y\:margin\)-1 {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
 
-  .largest\:start\:margin-2 {
+  .largest\(y\:margin\)-2 {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
 
-  .largest\:start\:margin-3 {
+  .largest\(y\:margin\)-3 {
     margin-top: 0.75rem !important;
     margin-bottom: 0.75rem !important;
   }
 
-  .largest\:start\:margin-4 {
+  .largest\(y\:margin\)-4 {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
 
-  .largest\:start\:margin-5 {
+  .largest\(y\:margin\)-5 {
     margin-top: 1.25rem !important;
     margin-bottom: 1.25rem !important;
   }
 
-  .largest\:start\:margin-6 {
+  .largest\(y\:margin\)-6 {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
   }
 
-  .largest\:start\:margin-7 {
+  .largest\(y\:margin\)-7 {
     margin-top: 1.75rem !important;
     margin-bottom: 1.75rem !important;
   }
 
-  .largest\:start\:margin-8 {
+  .largest\(y\:margin\)-8 {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
   }
 
-  .largest\:start\:margin-9 {
+  .largest\(y\:margin\)-9 {
     margin-top: 2.25rem !important;
     margin-bottom: 2.25rem !important;
   }
 
-  .largest\:start\:margin-10 {
+  .largest\(y\:margin\)-10 {
     margin-top: 2.5rem !important;
     margin-bottom: 2.5rem !important;
   }
 
-  .largest\:start\:margin-11 {
+  .largest\(y\:margin\)-11 {
     margin-top: 2.75rem !important;
     margin-bottom: 2.75rem !important;
   }
 
-  .largest\:start\:margin-12 {
+  .largest\(y\:margin\)-12 {
     margin-top: 3rem !important;
     margin-bottom: 3rem !important;
   }
 
-  .largest\:start\:margin-13 {
+  .largest\(y\:margin\)-13 {
     margin-top: 3.25rem !important;
     margin-bottom: 3.25rem !important;
   }
 
-  .largest\:start\:margin-14 {
+  .largest\(y\:margin\)-14 {
     margin-top: 3.5rem !important;
     margin-bottom: 3.5rem !important;
   }
 
-  .largest\:start\:margin-15 {
+  .largest\(y\:margin\)-15 {
     margin-top: 3.75rem !important;
     margin-bottom: 3.75rem !important;
   }
 
-  .largest\:start\:margin-16 {
+  .largest\(y\:margin\)-16 {
     margin-top: 4rem !important;
     margin-bottom: 4rem !important;
   }
 
-  .largest\:start\:margin-17 {
+  .largest\(y\:margin\)-17 {
     margin-top: 4.25rem !important;
     margin-bottom: 4.25rem !important;
   }
 
-  .largest\:start\:margin-18 {
+  .largest\(y\:margin\)-18 {
     margin-top: 4.5rem !important;
     margin-bottom: 4.5rem !important;
   }
 
-  .largest\:start\:margin-19 {
+  .largest\(y\:margin\)-19 {
     margin-top: 4.75rem !important;
     margin-bottom: 4.75rem !important;
   }
 
-  .largest\:start\:margin-20 {
+  .largest\(y\:margin\)-20 {
     margin-top: 5rem !important;
     margin-bottom: 5rem !important;
   }
 
-  .largest\:start\:margin-auto {
+  .largest\(y\:margin\)-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
 
-  .largest\:end\:margin {
+  .largest\(x\:margin\) {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .largest\:end\:margin-0 {
+  .largest\(x\:margin\)-0 {
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 
-  .largest\:end\:margin-1 {
+  .largest\(x\:margin\)-1 {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
 
-  .largest\:end\:margin-2 {
+  .largest\(x\:margin\)-2 {
     margin-right: 0.5rem !important;
     margin-left: 0.5rem !important;
   }
 
-  .largest\:end\:margin-3 {
+  .largest\(x\:margin\)-3 {
     margin-right: 0.75rem !important;
     margin-left: 0.75rem !important;
   }
 
-  .largest\:end\:margin-4 {
+  .largest\(x\:margin\)-4 {
     margin-right: 1rem !important;
     margin-left: 1rem !important;
   }
 
-  .largest\:end\:margin-5 {
+  .largest\(x\:margin\)-5 {
     margin-right: 1.25rem !important;
     margin-left: 1.25rem !important;
   }
 
-  .largest\:end\:margin-6 {
+  .largest\(x\:margin\)-6 {
     margin-right: 1.5rem !important;
     margin-left: 1.5rem !important;
   }
 
-  .largest\:end\:margin-7 {
+  .largest\(x\:margin\)-7 {
     margin-right: 1.75rem !important;
     margin-left: 1.75rem !important;
   }
 
-  .largest\:end\:margin-8 {
+  .largest\(x\:margin\)-8 {
     margin-right: 2rem !important;
     margin-left: 2rem !important;
   }
 
-  .largest\:end\:margin-9 {
+  .largest\(x\:margin\)-9 {
     margin-right: 2.25rem !important;
     margin-left: 2.25rem !important;
   }
 
-  .largest\:end\:margin-10 {
+  .largest\(x\:margin\)-10 {
     margin-right: 2.5rem !important;
     margin-left: 2.5rem !important;
   }
 
-  .largest\:end\:margin-11 {
+  .largest\(x\:margin\)-11 {
     margin-right: 2.75rem !important;
     margin-left: 2.75rem !important;
   }
 
-  .largest\:end\:margin-12 {
+  .largest\(x\:margin\)-12 {
     margin-right: 3rem !important;
     margin-left: 3rem !important;
   }
 
-  .largest\:end\:margin-13 {
+  .largest\(x\:margin\)-13 {
     margin-right: 3.25rem !important;
     margin-left: 3.25rem !important;
   }
 
-  .largest\:end\:margin-14 {
+  .largest\(x\:margin\)-14 {
     margin-right: 3.5rem !important;
     margin-left: 3.5rem !important;
   }
 
-  .largest\:end\:margin-15 {
+  .largest\(x\:margin\)-15 {
     margin-right: 3.75rem !important;
     margin-left: 3.75rem !important;
   }
 
-  .largest\:end\:margin-16 {
+  .largest\(x\:margin\)-16 {
     margin-right: 4rem !important;
     margin-left: 4rem !important;
   }
 
-  .largest\:end\:margin-17 {
+  .largest\(x\:margin\)-17 {
     margin-right: 4.25rem !important;
     margin-left: 4.25rem !important;
   }
 
-  .largest\:end\:margin-18 {
+  .largest\(x\:margin\)-18 {
     margin-right: 4.5rem !important;
     margin-left: 4.5rem !important;
   }
 
-  .largest\:end\:margin-19 {
+  .largest\(x\:margin\)-19 {
     margin-right: 4.75rem !important;
     margin-left: 4.75rem !important;
   }
 
-  .largest\:end\:margin-20 {
+  .largest\(x\:margin\)-20 {
     margin-right: 5rem !important;
     margin-left: 5rem !important;
   }
 
-  .largest\:end\:margin-auto {
+  .largest\(x\:margin\)-auto {
     margin-right: auto !important;
     margin-left: auto !important;
   }
 
-  .largest\:top\:margin {
+  .largest\(top\:margin\) {
     margin-top: 0.25rem !important;
   }
 
-  .largest\:top\:margin-0 {
+  .largest\(top\:margin\)-0 {
     margin-top: 0 !important;
   }
 
-  .largest\:top\:margin-1 {
+  .largest\(top\:margin\)-1 {
     margin-top: 0.25rem !important;
   }
 
-  .largest\:top\:margin-2 {
+  .largest\(top\:margin\)-2 {
     margin-top: 0.5rem !important;
   }
 
-  .largest\:top\:margin-3 {
+  .largest\(top\:margin\)-3 {
     margin-top: 0.75rem !important;
   }
 
-  .largest\:top\:margin-4 {
+  .largest\(top\:margin\)-4 {
     margin-top: 1rem !important;
   }
 
-  .largest\:top\:margin-5 {
+  .largest\(top\:margin\)-5 {
     margin-top: 1.25rem !important;
   }
 
-  .largest\:top\:margin-6 {
+  .largest\(top\:margin\)-6 {
     margin-top: 1.5rem !important;
   }
 
-  .largest\:top\:margin-7 {
+  .largest\(top\:margin\)-7 {
     margin-top: 1.75rem !important;
   }
 
-  .largest\:top\:margin-8 {
+  .largest\(top\:margin\)-8 {
     margin-top: 2rem !important;
   }
 
-  .largest\:top\:margin-9 {
+  .largest\(top\:margin\)-9 {
     margin-top: 2.25rem !important;
   }
 
-  .largest\:top\:margin-10 {
+  .largest\(top\:margin\)-10 {
     margin-top: 2.5rem !important;
   }
 
-  .largest\:top\:margin-11 {
+  .largest\(top\:margin\)-11 {
     margin-top: 2.75rem !important;
   }
 
-  .largest\:top\:margin-12 {
+  .largest\(top\:margin\)-12 {
     margin-top: 3rem !important;
   }
 
-  .largest\:top\:margin-13 {
+  .largest\(top\:margin\)-13 {
     margin-top: 3.25rem !important;
   }
 
-  .largest\:top\:margin-14 {
+  .largest\(top\:margin\)-14 {
     margin-top: 3.5rem !important;
   }
 
-  .largest\:top\:margin-15 {
+  .largest\(top\:margin\)-15 {
     margin-top: 3.75rem !important;
   }
 
-  .largest\:top\:margin-16 {
+  .largest\(top\:margin\)-16 {
     margin-top: 4rem !important;
   }
 
-  .largest\:top\:margin-17 {
+  .largest\(top\:margin\)-17 {
     margin-top: 4.25rem !important;
   }
 
-  .largest\:top\:margin-18 {
+  .largest\(top\:margin\)-18 {
     margin-top: 4.5rem !important;
   }
 
-  .largest\:top\:margin-19 {
+  .largest\(top\:margin\)-19 {
     margin-top: 4.75rem !important;
   }
 
-  .largest\:top\:margin-20 {
+  .largest\(top\:margin\)-20 {
     margin-top: 5rem !important;
   }
 
-  .largest\:top\:margin-auto {
+  .largest\(top\:margin\)-auto {
     margin-top: auto !important;
   }
 
-  .largest\:right\:margin {
+  .largest\(right\:margin\) {
     margin-right: 0.25rem !important;
   }
 
-  .largest\:right\:margin-0 {
+  .largest\(right\:margin\)-0 {
     margin-right: 0 !important;
   }
 
-  .largest\:right\:margin-1 {
+  .largest\(right\:margin\)-1 {
     margin-right: 0.25rem !important;
   }
 
-  .largest\:right\:margin-2 {
+  .largest\(right\:margin\)-2 {
     margin-right: 0.5rem !important;
   }
 
-  .largest\:right\:margin-3 {
+  .largest\(right\:margin\)-3 {
     margin-right: 0.75rem !important;
   }
 
-  .largest\:right\:margin-4 {
+  .largest\(right\:margin\)-4 {
     margin-right: 1rem !important;
   }
 
-  .largest\:right\:margin-5 {
+  .largest\(right\:margin\)-5 {
     margin-right: 1.25rem !important;
   }
 
-  .largest\:right\:margin-6 {
+  .largest\(right\:margin\)-6 {
     margin-right: 1.5rem !important;
   }
 
-  .largest\:right\:margin-7 {
+  .largest\(right\:margin\)-7 {
     margin-right: 1.75rem !important;
   }
 
-  .largest\:right\:margin-8 {
+  .largest\(right\:margin\)-8 {
     margin-right: 2rem !important;
   }
 
-  .largest\:right\:margin-9 {
+  .largest\(right\:margin\)-9 {
     margin-right: 2.25rem !important;
   }
 
-  .largest\:right\:margin-10 {
+  .largest\(right\:margin\)-10 {
     margin-right: 2.5rem !important;
   }
 
-  .largest\:right\:margin-11 {
+  .largest\(right\:margin\)-11 {
     margin-right: 2.75rem !important;
   }
 
-  .largest\:right\:margin-12 {
+  .largest\(right\:margin\)-12 {
     margin-right: 3rem !important;
   }
 
-  .largest\:right\:margin-13 {
+  .largest\(right\:margin\)-13 {
     margin-right: 3.25rem !important;
   }
 
-  .largest\:right\:margin-14 {
+  .largest\(right\:margin\)-14 {
     margin-right: 3.5rem !important;
   }
 
-  .largest\:right\:margin-15 {
+  .largest\(right\:margin\)-15 {
     margin-right: 3.75rem !important;
   }
 
-  .largest\:right\:margin-16 {
+  .largest\(right\:margin\)-16 {
     margin-right: 4rem !important;
   }
 
-  .largest\:right\:margin-17 {
+  .largest\(right\:margin\)-17 {
     margin-right: 4.25rem !important;
   }
 
-  .largest\:right\:margin-18 {
+  .largest\(right\:margin\)-18 {
     margin-right: 4.5rem !important;
   }
 
-  .largest\:right\:margin-19 {
+  .largest\(right\:margin\)-19 {
     margin-right: 4.75rem !important;
   }
 
-  .largest\:right\:margin-20 {
+  .largest\(right\:margin\)-20 {
     margin-right: 5rem !important;
   }
 
-  .largest\:right\:margin-auto {
+  .largest\(right\:margin\)-auto {
     margin-right: auto !important;
   }
 
-  .largest\:bottom\:margin {
+  .largest\(bottom\:margin\) {
     margin-bottom: 0.25rem !important;
   }
 
-  .largest\:bottom\:margin-0 {
+  .largest\(bottom\:margin\)-0 {
     margin-bottom: 0 !important;
   }
 
-  .largest\:bottom\:margin-1 {
+  .largest\(bottom\:margin\)-1 {
     margin-bottom: 0.25rem !important;
   }
 
-  .largest\:bottom\:margin-2 {
+  .largest\(bottom\:margin\)-2 {
     margin-bottom: 0.5rem !important;
   }
 
-  .largest\:bottom\:margin-3 {
+  .largest\(bottom\:margin\)-3 {
     margin-bottom: 0.75rem !important;
   }
 
-  .largest\:bottom\:margin-4 {
+  .largest\(bottom\:margin\)-4 {
     margin-bottom: 1rem !important;
   }
 
-  .largest\:bottom\:margin-5 {
+  .largest\(bottom\:margin\)-5 {
     margin-bottom: 1.25rem !important;
   }
 
-  .largest\:bottom\:margin-6 {
+  .largest\(bottom\:margin\)-6 {
     margin-bottom: 1.5rem !important;
   }
 
-  .largest\:bottom\:margin-7 {
+  .largest\(bottom\:margin\)-7 {
     margin-bottom: 1.75rem !important;
   }
 
-  .largest\:bottom\:margin-8 {
+  .largest\(bottom\:margin\)-8 {
     margin-bottom: 2rem !important;
   }
 
-  .largest\:bottom\:margin-9 {
+  .largest\(bottom\:margin\)-9 {
     margin-bottom: 2.25rem !important;
   }
 
-  .largest\:bottom\:margin-10 {
+  .largest\(bottom\:margin\)-10 {
     margin-bottom: 2.5rem !important;
   }
 
-  .largest\:bottom\:margin-11 {
+  .largest\(bottom\:margin\)-11 {
     margin-bottom: 2.75rem !important;
   }
 
-  .largest\:bottom\:margin-12 {
+  .largest\(bottom\:margin\)-12 {
     margin-bottom: 3rem !important;
   }
 
-  .largest\:bottom\:margin-13 {
+  .largest\(bottom\:margin\)-13 {
     margin-bottom: 3.25rem !important;
   }
 
-  .largest\:bottom\:margin-14 {
+  .largest\(bottom\:margin\)-14 {
     margin-bottom: 3.5rem !important;
   }
 
-  .largest\:bottom\:margin-15 {
+  .largest\(bottom\:margin\)-15 {
     margin-bottom: 3.75rem !important;
   }
 
-  .largest\:bottom\:margin-16 {
+  .largest\(bottom\:margin\)-16 {
     margin-bottom: 4rem !important;
   }
 
-  .largest\:bottom\:margin-17 {
+  .largest\(bottom\:margin\)-17 {
     margin-bottom: 4.25rem !important;
   }
 
-  .largest\:bottom\:margin-18 {
+  .largest\(bottom\:margin\)-18 {
     margin-bottom: 4.5rem !important;
   }
 
-  .largest\:bottom\:margin-19 {
+  .largest\(bottom\:margin\)-19 {
     margin-bottom: 4.75rem !important;
   }
 
-  .largest\:bottom\:margin-20 {
+  .largest\(bottom\:margin\)-20 {
     margin-bottom: 5rem !important;
   }
 
-  .largest\:bottom\:margin-auto {
+  .largest\(bottom\:margin\)-auto {
     margin-bottom: auto !important;
   }
 
-  .largest\:left\:margin {
+  .largest\(left\:margin\) {
     margin-left: 0.25rem !important;
   }
 
-  .largest\:left\:margin-0 {
+  .largest\(left\:margin\)-0 {
     margin-left: 0 !important;
   }
 
-  .largest\:left\:margin-1 {
+  .largest\(left\:margin\)-1 {
     margin-left: 0.25rem !important;
   }
 
-  .largest\:left\:margin-2 {
+  .largest\(left\:margin\)-2 {
     margin-left: 0.5rem !important;
   }
 
-  .largest\:left\:margin-3 {
+  .largest\(left\:margin\)-3 {
     margin-left: 0.75rem !important;
   }
 
-  .largest\:left\:margin-4 {
+  .largest\(left\:margin\)-4 {
     margin-left: 1rem !important;
   }
 
-  .largest\:left\:margin-5 {
+  .largest\(left\:margin\)-5 {
     margin-left: 1.25rem !important;
   }
 
-  .largest\:left\:margin-6 {
+  .largest\(left\:margin\)-6 {
     margin-left: 1.5rem !important;
   }
 
-  .largest\:left\:margin-7 {
+  .largest\(left\:margin\)-7 {
     margin-left: 1.75rem !important;
   }
 
-  .largest\:left\:margin-8 {
+  .largest\(left\:margin\)-8 {
     margin-left: 2rem !important;
   }
 
-  .largest\:left\:margin-9 {
+  .largest\(left\:margin\)-9 {
     margin-left: 2.25rem !important;
   }
 
-  .largest\:left\:margin-10 {
+  .largest\(left\:margin\)-10 {
     margin-left: 2.5rem !important;
   }
 
-  .largest\:left\:margin-11 {
+  .largest\(left\:margin\)-11 {
     margin-left: 2.75rem !important;
   }
 
-  .largest\:left\:margin-12 {
+  .largest\(left\:margin\)-12 {
     margin-left: 3rem !important;
   }
 
-  .largest\:left\:margin-13 {
+  .largest\(left\:margin\)-13 {
     margin-left: 3.25rem !important;
   }
 
-  .largest\:left\:margin-14 {
+  .largest\(left\:margin\)-14 {
     margin-left: 3.5rem !important;
   }
 
-  .largest\:left\:margin-15 {
+  .largest\(left\:margin\)-15 {
     margin-left: 3.75rem !important;
   }
 
-  .largest\:left\:margin-16 {
+  .largest\(left\:margin\)-16 {
     margin-left: 4rem !important;
   }
 
-  .largest\:left\:margin-17 {
+  .largest\(left\:margin\)-17 {
     margin-left: 4.25rem !important;
   }
 
-  .largest\:left\:margin-18 {
+  .largest\(left\:margin\)-18 {
     margin-left: 4.5rem !important;
   }
 
-  .largest\:left\:margin-19 {
+  .largest\(left\:margin\)-19 {
     margin-left: 4.75rem !important;
   }
 
-  .largest\:left\:margin-20 {
+  .largest\(left\:margin\)-20 {
     margin-left: 5rem !important;
   }
 
-  .largest\:left\:margin-auto {
+  .largest\(left\:margin\)-auto {
     margin-left: auto !important;
   }
 }
@@ -102415,141 +102283,741 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   }
 }
 
-.visible { visibility: visible !important;
+.visible {
+  visibility: visible !important;
 }
 
-.invisible { visibility: hidden !important;
-}
-
-.hidden { display: none !important;
-}
-
-.inline { display: inline !important;
-}
-
-.block { display: block !important;
-}
-
-.block-inline { display: inline-block !important;
+.invisible {
+  visibility: hidden !important;
 }
 
 @media (min-width: 640px) {
-  .small\(visible\) { visibility: visible !important;
+  .small\(visible\) {
+    visibility: visible !important;
   }
 
-  .small\(invisible\) { visibility: hidden !important;
-  }
-
-  .small\(hidden\) { display: none !important;
-  }
-
-  .small\(inline\) { display: inline !important;
-  }
-
-  .small\(block\) { display: block !important;
-  }
-
-  .small\(block-inline\) { display: inline-block !important;
+  .small\(invisible\) {
+    visibility: hidden !important;
   }
 }
 
 @media (min-width: 768px) {
-  .medium\(visible\) { visibility: visible !important;
+  .medium\(visible\) {
+    visibility: visible !important;
   }
 
-  .medium\(invisible\) { visibility: hidden !important;
-  }
-
-  .medium\(hidden\) { display: none !important;
-  }
-
-  .medium\(inline\) { display: inline !important;
-  }
-
-  .medium\(block\) { display: block !important;
-  }
-
-  .medium\(block-inline\) { display: inline-block !important;
+  .medium\(invisible\) {
+    visibility: hidden !important;
   }
 }
 
 @media (min-width: 1024px) {
-  .large\(visible\) { visibility: visible !important;
+  .large\(visible\) {
+    visibility: visible !important;
   }
 
-  .large\(invisible\) { visibility: hidden !important;
-  }
-
-  .large\(hidden\) { display: none !important;
-  }
-
-  .large\(inline\) { display: inline !important;
-  }
-
-  .large\(block\) { display: block !important;
-  }
-
-  .large\(block-inline\) { display: inline-block !important;
+  .large\(invisible\) {
+    visibility: hidden !important;
   }
 }
 
 @media (min-width: 1280px) {
-  .larger\(visible\) { visibility: visible !important;
+  .larger\(visible\) {
+    visibility: visible !important;
   }
 
-  .larger\(invisible\) { visibility: hidden !important;
-  }
-
-  .larger\(hidden\) { display: none !important;
-  }
-
-  .larger\(inline\) { display: inline !important;
-  }
-
-  .larger\(block\) { display: block !important;
-  }
-
-  .larger\(block-inline\) { display: inline-block !important;
+  .larger\(invisible\) {
+    visibility: hidden !important;
   }
 }
 
 @media (min-width: 1536px) {
-  .largest\(visible\) { visibility: visible !important;
+  .largest\(visible\) {
+    visibility: visible !important;
   }
 
-  .largest\(invisible\) { visibility: hidden !important;
-  }
-
-  .largest\(hidden\) { display: none !important;
-  }
-
-  .largest\(inline\) { display: inline !important;
-  }
-
-  .largest\(block\) { display: block !important;
-  }
-
-  .largest\(block-inline\) { display: inline-block !important;
+  .largest\(invisible\) {
+    visibility: hidden !important;
   }
 }
 
 @media print {
-  .print\(visible\) { visibility: visible !important;
+  .print\(visible\) {
+    visibility: visible !important;
   }
 
-  .print\(invisible\) { visibility: hidden !important;
+  .print\(invisible\) {
+    visibility: hidden !important;
+  }
+}
+
+.d\:none,
+.hidden {
+  display: none !important;
+}
+
+.d\:inline,
+.inline {
+  display: inline !important;
+}
+
+.d\:block,
+.block {
+  display: block !important;
+}
+
+.d\:inline-block,
+.inline\:block {
+  display: inline-block !important;
+}
+
+.d\:table {
+  display: table !important;
+}
+
+.d\:inline-table,
+.inline\:table {
+  display: inline-table !important;
+}
+
+.d\:table-body,
+.body\:table {
+  display: table-row-group !important;
+}
+
+.d\:table-header,
+.header\:table {
+  display: table-header-group !important;
+}
+
+.d\:table-footer,
+.footer\:table {
+  display: table-footer-group !important;
+}
+
+.d\:table-caption,
+.caption\:table {
+  display: table-caption !important;
+}
+
+.d\:table-row,
+.row\:table {
+  display: table-row !important;
+}
+
+.d\:table-cell,
+.cell\:table {
+  display: table-cell !important;
+}
+
+.d\:table-col,
+.col\:table {
+  display: table-column !important;
+}
+
+.d\:table-colgroup,
+.colgroup\:table {
+  display: table-column-group !important;
+}
+
+.d\:flex,
+.flex {
+  display: flex !important;
+}
+
+.d\:inline-flex,
+.inline\:flex {
+  display: inline-flex !important;
+}
+
+.d\:grid,
+.grid {
+  display: grid !important;
+}
+
+.d\:inline-grid,
+.inline\:grid {
+  display: inline-grid !important;
+}
+
+.d\:list-item,
+.list\:item {
+  display: list-item !important;
+}
+
+@media (min-width: 640px) {
+  .small\(d\:none\)
+  .small\(hidden\) {
+    display: none !important;
   }
 
-  .print\(hidden\) { display: none !important;
+  .small\(d\:inline\),
+  .small\(inline\) {
+    display: inline !important;
   }
 
-  .print\(inline\) { display: inline !important;
+  .small\(d\:block\),
+  .small\(block\) {
+    display: block !important;
   }
 
-  .print\(block\) { display: block !important;
+  .small\(d\:inline-block\),
+  .small\(inline\:block\) {
+    display: inline-block !important;
   }
 
-  .print\(block-inline\) { display: inline-block !important;
+  .small\(d\:table\) {
+    display: table !important;
+  }
+
+  .small\(d\:inline-table\),
+  .small\(inline\:table\) {
+    display: inline-table !important;
+  }
+
+  .small\(d\:table-body\),
+  .small\(body\:table\) {
+    display: table-row-group !important;
+  }
+
+  .small\(d\:table-header\),
+  .small\(header\:table\) {
+    display: table-header-group !important;
+  }
+
+  .small\(d\:table-footer\),
+  .small\(footer\:table\) {
+    display: table-footer-group !important;
+  }
+
+  .small\(d\:table-caption\),
+  .small\(caption\:table\) {
+    display: table-caption !important;
+  }
+
+  .small\(d\:table-row\),
+  .small\(row\:table\) {
+    display: table-row !important;
+  }
+
+  .small\(d\:table-cell\),
+  .small\(cell\:table\) {
+    display: table-cell !important;
+  }
+
+  .small\(d\:table-col\),
+  .small\(col\:table\) {
+    display: table-column !important;
+  }
+
+  .small\(d\:table-colgroup\),
+  .small\(colgroup\:table\) {
+    display: table-column-group !important;
+  }
+
+  .small\(d\:flex\),
+  .small\(flex\) {
+    display: flex !important;
+  }
+
+  .small\(d\:inline-flex\),
+  .small\(inline\:flex\) {
+    display: inline-flex !important;
+  }
+
+  .small\(d\:grid\),
+  .small\(grid\) {
+    display: grid !important;
+  }
+
+  .small\(d\:inline-grid\),
+  .small\(inline\:grid\) {
+    display: inline-grid !important;
+  }
+
+  .small\(d\:list-item\),
+  .small\(list\:item\) {
+    display: list-item !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .medium\(d\:none\)
+  .medium\(hidden\) {
+    display: none !important;
+  }
+
+  .medium\(d\:inline\),
+  .medium\(inline\) {
+    display: inline !important;
+  }
+
+  .medium\(d\:block\),
+  .medium\(block\) {
+    display: block !important;
+  }
+
+  .medium\(d\:inline-block\),
+  .medium\(inline\:block\) {
+    display: inline-block !important;
+  }
+
+  .medium\(d\:table\) {
+    display: table !important;
+  }
+
+  .medium\(d\:inline-table\),
+  .medium\(inline\:table\) {
+    display: inline-table !important;
+  }
+
+  .medium\(d\:table-body\),
+  .medium\(body\:table\) {
+    display: table-row-group !important;
+  }
+
+  .medium\(d\:table-header\),
+  .medium\(header\:table\) {
+    display: table-header-group !important;
+  }
+
+  .medium\(d\:table-footer\),
+  .medium\(footer\:table\) {
+    display: table-footer-group !important;
+  }
+
+  .medium\(d\:table-caption\),
+  .medium\(caption\:table\) {
+    display: table-caption !important;
+  }
+
+  .medium\(d\:table-row\),
+  .medium\(row\:table\) {
+    display: table-row !important;
+  }
+
+  .medium\(d\:table-cell\),
+  .medium\(cell\:table\) {
+    display: table-cell !important;
+  }
+
+  .medium\(d\:table-col\),
+  .medium\(col\:table\) {
+    display: table-column !important;
+  }
+
+  .medium\(d\:table-colgroup\),
+  .medium\(colgroup\:table\) {
+    display: table-column-group !important;
+  }
+
+  .medium\(d\:flex\),
+  .medium\(flex\) {
+    display: flex !important;
+  }
+
+  .medium\(d\:inline-flex\),
+  .medium\(inline\:flex\) {
+    display: inline-flex !important;
+  }
+
+  .medium\(d\:grid\),
+  .medium\(grid\) {
+    display: grid !important;
+  }
+
+  .medium\(d\:inline-grid\),
+  .medium\(inline\:grid\) {
+    display: inline-grid !important;
+  }
+
+  .medium\(d\:list-item\),
+  .medium\(list\:item\) {
+    display: list-item !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .large\(d\:none\)
+  .large\(hidden\) {
+    display: none !important;
+  }
+
+  .large\(d\:inline\),
+  .large\(inline\) {
+    display: inline !important;
+  }
+
+  .large\(d\:block\),
+  .large\(block\) {
+    display: block !important;
+  }
+
+  .large\(d\:inline-block\),
+  .large\(inline\:block\) {
+    display: inline-block !important;
+  }
+
+  .large\(d\:table\) {
+    display: table !important;
+  }
+
+  .large\(d\:inline-table\),
+  .large\(inline\:table\) {
+    display: inline-table !important;
+  }
+
+  .large\(d\:table-body\),
+  .large\(body\:table\) {
+    display: table-row-group !important;
+  }
+
+  .large\(d\:table-header\),
+  .large\(header\:table\) {
+    display: table-header-group !important;
+  }
+
+  .large\(d\:table-footer\),
+  .large\(footer\:table\) {
+    display: table-footer-group !important;
+  }
+
+  .large\(d\:table-caption\),
+  .large\(caption\:table\) {
+    display: table-caption !important;
+  }
+
+  .large\(d\:table-row\),
+  .large\(row\:table\) {
+    display: table-row !important;
+  }
+
+  .large\(d\:table-cell\),
+  .large\(cell\:table\) {
+    display: table-cell !important;
+  }
+
+  .large\(d\:table-col\),
+  .large\(col\:table\) {
+    display: table-column !important;
+  }
+
+  .large\(d\:table-colgroup\),
+  .large\(colgroup\:table\) {
+    display: table-column-group !important;
+  }
+
+  .large\(d\:flex\),
+  .large\(flex\) {
+    display: flex !important;
+  }
+
+  .large\(d\:inline-flex\),
+  .large\(inline\:flex\) {
+    display: inline-flex !important;
+  }
+
+  .large\(d\:grid\),
+  .large\(grid\) {
+    display: grid !important;
+  }
+
+  .large\(d\:inline-grid\),
+  .large\(inline\:grid\) {
+    display: inline-grid !important;
+  }
+
+  .large\(d\:list-item\),
+  .large\(list\:item\) {
+    display: list-item !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .larger\(d\:none\)
+  .larger\(hidden\) {
+    display: none !important;
+  }
+
+  .larger\(d\:inline\),
+  .larger\(inline\) {
+    display: inline !important;
+  }
+
+  .larger\(d\:block\),
+  .larger\(block\) {
+    display: block !important;
+  }
+
+  .larger\(d\:inline-block\),
+  .larger\(inline\:block\) {
+    display: inline-block !important;
+  }
+
+  .larger\(d\:table\) {
+    display: table !important;
+  }
+
+  .larger\(d\:inline-table\),
+  .larger\(inline\:table\) {
+    display: inline-table !important;
+  }
+
+  .larger\(d\:table-body\),
+  .larger\(body\:table\) {
+    display: table-row-group !important;
+  }
+
+  .larger\(d\:table-header\),
+  .larger\(header\:table\) {
+    display: table-header-group !important;
+  }
+
+  .larger\(d\:table-footer\),
+  .larger\(footer\:table\) {
+    display: table-footer-group !important;
+  }
+
+  .larger\(d\:table-caption\),
+  .larger\(caption\:table\) {
+    display: table-caption !important;
+  }
+
+  .larger\(d\:table-row\),
+  .larger\(row\:table\) {
+    display: table-row !important;
+  }
+
+  .larger\(d\:table-cell\),
+  .larger\(cell\:table\) {
+    display: table-cell !important;
+  }
+
+  .larger\(d\:table-col\),
+  .larger\(col\:table\) {
+    display: table-column !important;
+  }
+
+  .larger\(d\:table-colgroup\),
+  .larger\(colgroup\:table\) {
+    display: table-column-group !important;
+  }
+
+  .larger\(d\:flex\),
+  .larger\(flex\) {
+    display: flex !important;
+  }
+
+  .larger\(d\:inline-flex\),
+  .larger\(inline\:flex\) {
+    display: inline-flex !important;
+  }
+
+  .larger\(d\:grid\),
+  .larger\(grid\) {
+    display: grid !important;
+  }
+
+  .larger\(d\:inline-grid\),
+  .larger\(inline\:grid\) {
+    display: inline-grid !important;
+  }
+
+  .larger\(d\:list-item\),
+  .larger\(list\:item\) {
+    display: list-item !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .largest\(d\:none\)
+  .largest\(hidden\) {
+    display: none !important;
+  }
+
+  .largest\(d\:inline\),
+  .largest\(inline\) {
+    display: inline !important;
+  }
+
+  .largest\(d\:block\),
+  .largest\(block\) {
+    display: block !important;
+  }
+
+  .largest\(d\:inline-block\),
+  .largest\(inline\:block\) {
+    display: inline-block !important;
+  }
+
+  .largest\(d\:table\) {
+    display: table !important;
+  }
+
+  .largest\(d\:inline-table\),
+  .largest\(inline\:table\) {
+    display: inline-table !important;
+  }
+
+  .largest\(d\:table-body\),
+  .largest\(body\:table\) {
+    display: table-row-group !important;
+  }
+
+  .largest\(d\:table-header\),
+  .largest\(header\:table\) {
+    display: table-header-group !important;
+  }
+
+  .largest\(d\:table-footer\),
+  .largest\(footer\:table\) {
+    display: table-footer-group !important;
+  }
+
+  .largest\(d\:table-caption\),
+  .largest\(caption\:table\) {
+    display: table-caption !important;
+  }
+
+  .largest\(d\:table-row\),
+  .largest\(row\:table\) {
+    display: table-row !important;
+  }
+
+  .largest\(d\:table-cell\),
+  .largest\(cell\:table\) {
+    display: table-cell !important;
+  }
+
+  .largest\(d\:table-col\),
+  .largest\(col\:table\) {
+    display: table-column !important;
+  }
+
+  .largest\(d\:table-colgroup\),
+  .largest\(colgroup\:table\) {
+    display: table-column-group !important;
+  }
+
+  .largest\(d\:flex\),
+  .largest\(flex\) {
+    display: flex !important;
+  }
+
+  .largest\(d\:inline-flex\),
+  .largest\(inline\:flex\) {
+    display: inline-flex !important;
+  }
+
+  .largest\(d\:grid\),
+  .largest\(grid\) {
+    display: grid !important;
+  }
+
+  .largest\(d\:inline-grid\),
+  .largest\(inline\:grid\) {
+    display: inline-grid !important;
+  }
+
+  .largest\(d\:list-item\),
+  .largest\(list\:item\) {
+    display: list-item !important;
+  }
+}
+
+@media print {
+  .print\(d\:none\),
+  .print\(hidden\) {
+    display: none !important;
+  }
+
+  .print\(d\:inline\),
+  .print\(inline\) {
+    display: inline !important;
+  }
+
+  .print\(d\:block\),
+  .print\(block\) {
+    display: block !important;
+  }
+
+  .print\(d\:inline-block\),
+  .print\(inline\:block\) {
+    display: inline-block !important;
+  }
+
+  .print\(d\:table\) {
+    display: table !important;
+  }
+
+  .print\(d\:inline-table\),
+  .print\(inline\:table\) {
+    display: inline-table !important;
+  }
+
+  .print\(d\:table-body\),
+  .print\(body\:table\) {
+    display: table-row-group !important;
+  }
+
+  .print\(d\:table-header\),
+  .print\(header\:table\) {
+    display: table-header-group !important;
+  }
+
+  .print\(d\:table-footer\),
+  .print\(footer\:table\) {
+    display: table-footer-group !important;
+  }
+
+  .print\(d\:table-caption\),
+  .print\(caption\:table\) {
+    display: table-caption !important;
+  }
+
+  .print\(d\:table-row\),
+  .print\(row\:table\) {
+    display: table-row !important;
+  }
+
+  .print\(d\:table-cell\),
+  .print\(cell\:table\) {
+    display: table-cell !important;
+  }
+
+  .print\(d\:table-col\),
+  .print\(col\:table\) {
+    display: table-column !important;
+  }
+
+  .print\(d\:table-colgroup\),
+  .print\(colgroup\:table\) {
+    display: table-column-group !important;
+  }
+
+  .print\(d\:flex\),
+  .print\(flex\) {
+    display: flex !important;
+  }
+
+  .print\(d\:inline-flex\),
+  .print\(inline\:flex\) {
+    display: inline-flex !important;
+  }
+
+  .print\(d\:grid\),
+  .print\(grid\) {
+    display: grid !important;
+  }
+
+  .print\(d\:inline-grid\),
+  .print\(inline\:grid\) {
+    display: inline-grid !important;
+  }
+
+  .print\(d\:list-item\),
+  .print\(list\:item\) {
+    display: list-item !important;
   }
 }
 
@@ -110985,6 +111453,54 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   .largest\(inherit\:outline\) {
     outline-style: hidden;
   }
+}
+
+.none\:list-style {
+  list-style-type: none;
+}
+
+.dics\:list-style {
+  list-style-type: disc;
+}
+
+.circle\:list-style {
+  list-style-type: circle;
+}
+
+.square\:list-style {
+  list-style-type: square;
+}
+
+.decimal\:list-style {
+  list-style-type: decimal;
+}
+
+.dash\:list-style {
+  list-style-type: '-';
+}
+
+.lower-roman\:list-style {
+  list-style-type: lower-roman;
+}
+
+.upper-roman\:list-style {
+  list-style-type: upper-roman;
+}
+
+.lowercase\:list-style {
+  list-style-type: lower-alpha;
+}
+
+.uppercase\:list-style {
+  list-style-type: upper-alpha;
+}
+
+.inside\:list-style {
+  list-style-type: inside;
+}
+
+.outside\:list-style {
+  list-style-type: outside;
 }
 
 /*# sourceMappingURL=alga-slim.css.map */

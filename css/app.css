@@ -8,9 +8,9 @@
 @import './layouts/page.css';
 @import './layouts/navbar.css';
 @import './layouts/sidebar.css';
-@import './layouts/column.css';
 
 /* Columns */
+@import './layouts/column.css';
 
 /* Elements */
 @import './elements/button.css';
@@ -19,6 +19,9 @@
 @import './elements/tab.css';
 @import './elements/accordion.css';
 @import './elements/breadcrumb.css';
+@import './elements/pagination.css';
+@import './elements/table.css';
+@import './elements/details.css';
 
 /* Forms */
 @import './forms/label.css';
@@ -58,10 +61,12 @@
 @import './utilities/width.css';
 @import './utilities/height.css';
 @import './utilities/visibility.css';
+@import './utilities/display.css';
 @import './utilities/align.css';
 @import './utilities/overflow.css';
 @import './utilities/overscroll.css';
 @import './utilities/shadow.css';
 @import './utilities/border.css';
 @import './utilities/outline.css';
+@import './utilities/list-style.css';
 
