@@ -7615,11 +7615,13 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   .pagination\:nav .nav-item.active .nav-link {
     z-index: 3;
     color: #fff;
+    pointer-events: none;
     background-color: #0d6efd;
     border-color: #0d6efd;
   }
 
-.pagination\:nav .nav-item.disabled .nav-link {
+.pagination\:nav .nav-item.disabled .nav-link,
+  .pagination\:nav .nav-item.ellipsis .nav-link {
     color: #6c757d;
     pointer-events: none;
     background-color: #fff;
@@ -7639,7 +7641,7 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
 .pagination\:nav .nav-link {
     position: relative;
     display: block;
-    color: #0d6efd;
+    color: currentColor;
     text-decoration: none;
     padding: 0.575rem 0.75rem;
     background-color: #fff;
