@@ -44,7 +44,8 @@
   white-space: nowrap;
 }
 
-.truncate\:text {
+.truncate\:text,
+.ellipsis\:text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -109,7 +110,8 @@
     white-space: nowrap;
   }
 
-  .small\(truncate\:text\) {
+  .small\(truncate\:text\),
+  .small\(ellipsis\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -175,7 +177,8 @@
     white-space: nowrap;
   }
 
-  .medium\(truncate\:text\) {
+  .medium\(truncate\:text\),
+  .medium\(ellipsis\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -241,7 +244,8 @@
     white-space: nowrap;
   }
 
-  .large\(truncate\:text\) {
+  .large\(truncate\:text\),
+  .large\(ellipsis\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -307,7 +311,8 @@
     white-space: nowrap;
   }
 
-  .larger\(truncate\:text\) {
+  .larger\(truncate\:text\),
+  .larger\(ellipsis\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -373,7 +378,8 @@
     white-space: nowrap;
   }
 
-  .largest\(truncate\:text\) {
+  .largest\(truncate\:text\),
+  .largest\(ellipsis\:text\) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
