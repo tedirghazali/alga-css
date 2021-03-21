@@ -5,7 +5,8 @@
   "main": "dist/alga.min.css",
   "unpkg": "dist/alga.min.css",
   "scripts": {
-    "test": "gulp"
+    "build": "gulp",
+    "lint": "npx stylelint 'dist/*.css'"
   },
   "repository": {
     "type": "git",
@@ -35,11 +36,16 @@
     "gulp-terser": "^1.4.1",
     "postcss": "^8.1.7",
     "postcss-custom-properties": "^10.0.0",
+    "postcss-header": "^3.0.1",
     "postcss-import": "^13.0.0",
     "postcss-mixins": "^7.0.2",
     "postcss-nested": "^5.0.1",
     "postcss-simple-vars": "^6.0.2",
     "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
     "tailwindcss": "^2.0.1"
+  },
+  "dependencies": {
+    "postcss-selector-parser": "^6.0.4"
   }
 }

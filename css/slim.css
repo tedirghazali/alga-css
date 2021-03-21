@@ -1,15 +1,18 @@
-@charset "UTF-8";
 /* Basic */
 @import './base.css';
 @import './reset.css';
 
+/* Colors */
+@import './colors/color.css';
+@import './colors/gradient.css';
+
 /* Helpers */
-@import './helpers/color.css';
 @import './helpers/rounded.css';
 @import './helpers/layer.css';
 @import './helpers/text.css';
 @import './helpers/interaction.css';
 @import './helpers/overlay.css';
+@import './helpers/line.css';
 
 /* Utilities */
 @import './utilities/flex.css';

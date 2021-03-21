@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Basic */
 @import './base.css';
 @import './reset.css';
@@ -34,6 +33,7 @@
 @import './forms/input-group.css';
 
 /* Components */
+@import './components/box.css';
 @import './components/tag.css';
 @import './components/picker.css';
 @import './components/dropzone.css';
@@ -44,13 +44,17 @@
 @import './components/tooltip.css';
 @import './components/badge.css';
 
+/* Colors */
+@import './colors/color.css';
+@import './colors/gradient.css';
+
 /* Helpers */
-@import './helpers/color.css';
 @import './helpers/rounded.css';
 @import './helpers/layer.css';
 @import './helpers/text.css';
 @import './helpers/interaction.css';
 @import './helpers/overlay.css';
+@import './helpers/line.css';
 
 /* Utilities */
 @import './utilities/flex.css';

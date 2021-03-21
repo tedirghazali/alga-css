@@ -1,0 +1,4 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": ["dist/*.map", "dist/alga-animate.css", "dist/alga-animate.min.css"]
+}

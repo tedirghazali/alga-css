@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   
   & > * {
     display: flex;
@@ -39,9 +43,9 @@
   }
 }
 
-@media (max-width: 640px) {
-  .navbar-menu:not(:first-child),
-  .navbar-menu > *:not(:first-child),
+@media (max-width: 768px) {
+  .navbar:not(:first-child),
+  .navbar > *:not(:first-child),
   .fill\:navbar-menu,
   .center\:navbar-menu,
   .right\:navbar-menu {
@@ -53,3 +57,11 @@
     width: 100vw;
   }
 }
+
+
+@media (max-width: 1024px) {
+  .center\:navbar-menu {
+    display: none;
+  }
+}
+

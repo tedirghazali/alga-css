@@ -1,0 +1,42 @@
+.gradient,
+.linear\:gradient {
+  background-image: linear-gradient(var(--alga-gradient-position, to bottom), var(--alga-gradient-stops));
+}
+
+.radial\:gradient {
+  background-image: radial-gradient(var(--alga-gradient-position, circle at center), var(--alga-gradient-stops));
+}
+
+.conic\:gradient {
+  background-image: conic-gradient(var(--alga-gradient-position, from 0deg), var(--alga-gradient-stops));
+}
+
+@mixin gradient-to to;
+@mixin gradient-at circle;
+@mixin gradient-at ellipse;
+@mixin gradient-at farthest-corner;
+@mixin gradient-at farthest-side;
+@mixin gradient-from from;
+
+@mixin gradient-mixin primary;
+@mixin gradient-mixin secondary;
+@mixin gradient-mixin accent;
+@mixin gradient-mixin success;
+@mixin gradient-mixin info;
+@mixin gradient-mixin warning;
+@mixin gradient-mixin danger;
+@mixin gradient-mixin black;
+@mixin gradient-mixin white;
+@mixin gradient-mixin transparent;
+@mixin gradient-mixin blue;
+@mixin gradient-mixin indigo;
+@mixin gradient-mixin purple;
+@mixin gradient-mixin pink;
+@mixin gradient-mixin red;
+@mixin gradient-mixin orange;
+@mixin gradient-mixin yellow;
+@mixin gradient-mixin green;
+@mixin gradient-mixin teal;
+@mixin gradient-mixin cyan;
+@mixin gradient-mixin gray;
+

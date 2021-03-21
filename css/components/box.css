@@ -1,0 +1,41 @@
+.box,
+.alert\:box {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.box {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.alert\:box {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  
+  &-header {
+    color: inherit;
+  }
+
+  &-link {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  &-dismissible {
+    padding-right: 3rem;
+  }
+  &-dismissible .button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1.25rem 1rem;
+  }
+}

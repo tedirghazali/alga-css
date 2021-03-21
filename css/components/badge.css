@@ -1,38 +1,3 @@
-.callout {
-  padding: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  border: 1px solid #e9ecef;
-  border-left-width: .25rem;
-}
-
-.alert {
-  position: relative;
-  padding: 1rem 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  
-  &-heading {
-    color: inherit;
-  }
-
-  &-link {
-    font-weight: 700;
-    text-decoration: underline;
-  }
-
-  &-dismissible {
-    padding-right: 3rem;
-  }
-  &-dismissible .button-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    padding: 1.25rem 1rem;
-  }
-}
-
 .badge {
   display: inline-block;
   padding: 0.35em 0.65em;

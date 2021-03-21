@@ -26,7 +26,7 @@
 }
 
 .picker-menu,
-.picker-full {
+.full\:picker-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -43,7 +43,7 @@
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.picker-full {
+.full\:picker-menu {
   right: auto;
   width: 100% !important;
 }

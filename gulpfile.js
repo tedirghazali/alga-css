@@ -11,6 +11,15 @@ const dist = {
   js: './dist/',
 }
 
+const header = `@charset "UTF-8";
+
+/*!
+ * Alga CSS
+ * Tedir Ghazali
+ * licensed under Tedir license
+ */
+`;
+
 function css() {
   return src('css/app.css', { sourcemaps: true })
     .pipe(postcss([
@@ -21,9 +30,10 @@ function css() {
       require('tailwindcss'),
       //require("stylelint"),
       require('postcss-custom-properties'),
-      require('postcss-simple-vars'),
+      //require('postcss-simple-vars'),
       require('postcss-nested'),
-      require('autoprefixer')
+      require('autoprefixer'),
+      require('postcss-header')({ header })
     ]))
     .pipe(rename("alga.css"))
     .pipe(dest(dist.css, { sourcemaps: '.' }))
@@ -46,9 +56,10 @@ function cssSlim() {
       require('tailwindcss'),
       //require("stylelint"),
       require('postcss-custom-properties'),
-      require('postcss-simple-vars'),
+      //require('postcss-simple-vars'),
       require('postcss-nested'),
-      require('autoprefixer')
+      require('autoprefixer'),
+      require('postcss-header')({ header })
     ]))
     .pipe(rename("alga-slim.css"))
     .pipe(dest(dist.css, { sourcemaps: '.' }))
