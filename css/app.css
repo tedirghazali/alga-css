@@ -8,9 +8,6 @@
 @import './layouts/navbar.css';
 @import './layouts/sidebar.css';
 
-/* Columns */
-@import './layouts/column.css';
-
 /* Elements */
 @import './elements/button.css';
 @import './elements/list.css';

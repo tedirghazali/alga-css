@@ -28,7 +28,75 @@
 @mixin grid-gap .column\:gap, column-gap;
 @mixin grid-gap .row\:gap, row-gap;
 
+@mixin default-mixin .grid-items, justify-items, stretch;
+@mixin default-mixin .stretch\:grid-items, justify-items, stretch;
+@mixin default-mixin .center\:grid-items, justify-items, center;
+@mixin default-mixin .start\:grid-items, justify-items, start;
+@mixin default-mixin .end\:grid-items, justify-items, end;
+@mixin default-mixin .left\:grid-items, justify-items, left;
+@mixin default-mixin .right\:grid-items, justify-items, right;
+@mixin default-mixin .baseline\:grid-items, justify-items, baseline;
+
+@mixin default-mixin .grid-self, justify-self, stretch;
+@mixin default-mixin .stretch\:grid-self, justify-self, stretch;
+@mixin default-mixin .center\:grid-self, justify-self, center;
+@mixin default-mixin .start\:grid-self, justify-self, start;
+@mixin default-mixin .end\:grid-self, justify-self, end;
+@mixin default-mixin .left\:grid-self, justify-self, left;
+@mixin default-mixin .right\:grid-self, justify-self, right;
+@mixin default-mixin .baseline\:grid-self, justify-self, baseline;
+
 @media (min-width: 640px) {
+  @mixin grid-mixin .smaller\(column\:grid\), grid-template-columns;
+  @mixin grid-template .smaller\(grid-columns\), grid-template-columns;
+  @mixin grid-auto .smaller\(auto\:grid-columns\), grid-auto-columns, auto;
+  @mixin grid-auto .smaller\(min\:grid-columns\), grid-auto-columns, min-content;
+  @mixin grid-auto .smaller\(max\:grid-columns\), grid-auto-columns, max-content;
+  @mixin grid-auto .smaller\(fr\:grid-columns\), grid-auto-columns, minmax(0, 1fr);
+  @mixin grid-auto .smaller\(flow\:grid-columns\), grid-auto-flow, column;
+  @mixin grid-auto .smaller\(dense\:grid-columns\), grid-auto-flow, column dense;
+
+  @mixin grid-mixin .smaller\(row\:grid\), grid-template-rows;
+  @mixin grid-template .smaller\(grid-rows\), grid-template-rows;
+  @mixin grid-auto .smaller\(auto\:grid-rows\), grid-auto-rows, auto;
+  @mixin grid-auto .smaller\(min\:grid-rows\), grid-auto-rows, min-content;
+  @mixin grid-auto .smaller\(max\:grid-rows\), grid-auto-rows, max-content;
+  @mixin grid-auto .smaller\(fr\:grid-rows\), grid-auto-rows, minmax(0, 1fr);
+  @mixin grid-auto .smaller\(flow\:grid-rows\), grid-auto-flow, row;
+  @mixin grid-auto .smaller\(dense\:grid-rows\), grid-auto-flow, row dense;
+
+  @mixin grid-span .smaller\(colspan\), grid-column;
+  @mixin grid-line .smaller\(start\:colspan\), grid-column-start;
+  @mixin grid-line .smaller\(end\:colspan\), grid-column-end;
+
+  @mixin grid-span .smaller\(rowspan\), grid-row;
+  @mixin grid-line .smaller\(start\:rowspan\), grid-row-start;
+  @mixin grid-line .smaller\(end\:rowspan\), grid-row-end;
+
+  @mixin grid-gap .smaller\(gap\), gap;
+  @mixin grid-gap .smaller\(column\:gap\), column-gap;
+  @mixin grid-gap .smaller\(row\:gap\), row-gap;
+  
+  @mixin default-mixin .smaller\(grid-items\), justify-items, stretch;
+  @mixin default-mixin .smaller\(stretch\:grid-items\), justify-items, stretch;
+  @mixin default-mixin .smaller\(center\:grid-items\), justify-items, center;
+  @mixin default-mixin .smaller\(start\:grid-items\), justify-items, start;
+  @mixin default-mixin .smaller\(end\:grid-items\), justify-items, end;
+  @mixin default-mixin .smaller\(left\:grid-items\), justify-items, left;
+  @mixin default-mixin .smaller\(right\:grid-items\), justify-items, right;
+  @mixin default-mixin .smaller\(baseline\:grid-items\), justify-items, baseline;
+
+  @mixin default-mixin .smaller\(grid-self\), justify-self, stretch;
+  @mixin default-mixin .smaller\(stretch\:grid-self\), justify-self, stretch;
+  @mixin default-mixin .smaller\(center\:grid-self\), justify-self, center;
+  @mixin default-mixin .smaller\(start\:grid-self\), justify-self, start;
+  @mixin default-mixin .smaller\(end\:grid-self\), justify-self, end;
+  @mixin default-mixin .smaller\(left\:grid-self\), justify-self, left;
+  @mixin default-mixin .smaller\(right\:grid-self\), justify-self, right;
+  @mixin default-mixin .smaller\(baseline\:grid-self\), justify-self, baseline;
+}
+
+@media (min-width: 768px) {
   @mixin grid-mixin .small\(column\:grid\), grid-template-columns;
   @mixin grid-template .small\(grid-columns\), grid-template-columns;
   @mixin grid-auto .small\(auto\:grid-columns\), grid-auto-columns, auto;
@@ -58,9 +126,27 @@
   @mixin grid-gap .small\(gap\), gap;
   @mixin grid-gap .small\(column\:gap\), column-gap;
   @mixin grid-gap .small\(row\:gap\), row-gap;
+  
+  @mixin default-mixin .small\(grid-items\), justify-items, stretch;
+  @mixin default-mixin .small\(stretch\:grid-items\), justify-items, stretch;
+  @mixin default-mixin .small\(center\:grid-items\), justify-items, center;
+  @mixin default-mixin .small\(start\:grid-items\), justify-items, start;
+  @mixin default-mixin .small\(end\:grid-items\), justify-items, end;
+  @mixin default-mixin .small\(left\:grid-items\), justify-items, left;
+  @mixin default-mixin .small\(right\:grid-items\), justify-items, right;
+  @mixin default-mixin .small\(baseline\:grid-items\), justify-items, baseline;
+
+  @mixin default-mixin .small\(grid-self\), justify-self, stretch;
+  @mixin default-mixin .small\(stretch\:grid-self\), justify-self, stretch;
+  @mixin default-mixin .small\(center\:grid-self\), justify-self, center;
+  @mixin default-mixin .small\(start\:grid-self\), justify-self, start;
+  @mixin default-mixin .small\(end\:grid-self\), justify-self, end;
+  @mixin default-mixin .small\(left\:grid-self\), justify-self, left;
+  @mixin default-mixin .small\(right\:grid-self\), justify-self, right;
+  @mixin default-mixin .small\(baseline\:grid-self\), justify-self, baseline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   @mixin grid-mixin .medium\(column\:grid\), grid-template-columns;
   @mixin grid-template .medium\(grid-columns\), grid-template-columns;
   @mixin grid-auto .medium\(auto\:grid-columns\), grid-auto-columns, auto;
@@ -90,9 +176,27 @@
   @mixin grid-gap .medium\(gap\), gap;
   @mixin grid-gap .medium\(column\:gap\), column-gap;
   @mixin grid-gap .medium\(row\:gap\), row-gap;
+  
+  @mixin default-mixin .medium\(grid-items\), justify-items, stretch;
+  @mixin default-mixin .medium\(stretch\:grid-items\), justify-items, stretch;
+  @mixin default-mixin .medium\(center\:grid-items\), justify-items, center;
+  @mixin default-mixin .medium\(start\:grid-items\), justify-items, start;
+  @mixin default-mixin .medium\(end\:grid-items\), justify-items, end;
+  @mixin default-mixin .medium\(left\:grid-items\), justify-items, left;
+  @mixin default-mixin .medium\(right\:grid-items\), justify-items, right;
+  @mixin default-mixin .medium\(baseline\:grid-items\), justify-items, baseline;
+
+  @mixin default-mixin .medium\(grid-self\), justify-self, stretch;
+  @mixin default-mixin .medium\(stretch\:grid-self\), justify-self, stretch;
+  @mixin default-mixin .medium\(center\:grid-self\), justify-self, center;
+  @mixin default-mixin .medium\(start\:grid-self\), justify-self, start;
+  @mixin default-mixin .medium\(end\:grid-self\), justify-self, end;
+  @mixin default-mixin .medium\(left\:grid-self\), justify-self, left;
+  @mixin default-mixin .medium\(right\:grid-self\), justify-self, right;
+  @mixin default-mixin .medium\(baseline\:grid-self\), justify-self, baseline;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   @mixin grid-mixin .large\(column\:grid\), grid-template-columns;
   @mixin grid-template .large\(grid-columns\), grid-template-columns;
   @mixin grid-auto .large\(auto\:grid-columns\), grid-auto-columns, auto;
@@ -122,9 +226,27 @@
   @mixin grid-gap .large\(gap\), gap;
   @mixin grid-gap .large\(column\:gap\), column-gap;
   @mixin grid-gap .large\(row\:gap\), row-gap;
+  
+  @mixin default-mixin .large\(grid-items\), justify-items, stretch;
+  @mixin default-mixin .large\(stretch\:grid-items\), justify-items, stretch;
+  @mixin default-mixin .large\(center\:grid-items\), justify-items, center;
+  @mixin default-mixin .large\(start\:grid-items\), justify-items, start;
+  @mixin default-mixin .large\(end\:grid-items\), justify-items, end;
+  @mixin default-mixin .large\(left\:grid-items\), justify-items, left;
+  @mixin default-mixin .large\(right\:grid-items\), justify-items, right;
+  @mixin default-mixin .large\(baseline\:grid-items\), justify-items, baseline;
+
+  @mixin default-mixin .large\(grid-self\), justify-self, stretch;
+  @mixin default-mixin .large\(stretch\:grid-self\), justify-self, stretch;
+  @mixin default-mixin .large\(center\:grid-self\), justify-self, center;
+  @mixin default-mixin .large\(start\:grid-self\), justify-self, start;
+  @mixin default-mixin .large\(end\:grid-self\), justify-self, end;
+  @mixin default-mixin .large\(left\:grid-self\), justify-self, left;
+  @mixin default-mixin .large\(right\:grid-self\), justify-self, right;
+  @mixin default-mixin .large\(baseline\:grid-self\), justify-self, baseline;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   @mixin grid-mixin .larger\(column\:grid\), grid-template-columns;
   @mixin grid-template .larger\(grid-columns\), grid-template-columns;
   @mixin grid-auto .larger\(auto\:grid-columns\), grid-auto-columns, auto;
@@ -154,9 +276,27 @@
   @mixin grid-gap .larger\(gap\), gap;
   @mixin grid-gap .larger\(column\:gap\), column-gap;
   @mixin grid-gap .larger\(row\:gap\), row-gap;
+  
+  @mixin default-mixin .larger\(grid-items\), justify-items, stretch;
+  @mixin default-mixin .larger\(stretch\:grid-items\), justify-items, stretch;
+  @mixin default-mixin .larger\(center\:grid-items\), justify-items, center;
+  @mixin default-mixin .larger\(start\:grid-items\), justify-items, start;
+  @mixin default-mixin .larger\(end\:grid-items\), justify-items, end;
+  @mixin default-mixin .larger\(left\:grid-items\), justify-items, left;
+  @mixin default-mixin .larger\(right\:grid-items\), justify-items, right;
+  @mixin default-mixin .larger\(baseline\:grid-items\), justify-items, baseline;
+
+  @mixin default-mixin .larger\(grid-self\), justify-self, stretch;
+  @mixin default-mixin .larger\(stretch\:grid-self\), justify-self, stretch;
+  @mixin default-mixin .larger\(center\:grid-self\), justify-self, center;
+  @mixin default-mixin .larger\(start\:grid-self\), justify-self, start;
+  @mixin default-mixin .larger\(end\:grid-self\), justify-self, end;
+  @mixin default-mixin .larger\(left\:grid-self\), justify-self, left;
+  @mixin default-mixin .larger\(right\:grid-self\), justify-self, right;
+  @mixin default-mixin .larger\(baseline\:grid-self\), justify-self, baseline;
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1920px) {
   @mixin grid-mixin .largest\(column\:grid\), grid-template-columns;
   @mixin grid-template .largest\(grid-columns\), grid-template-columns;
   @mixin grid-auto .largest\(auto\:grid-columns\), grid-auto-columns, auto;
@@ -186,4 +326,22 @@
   @mixin grid-gap .largest\(gap\), gap;
   @mixin grid-gap .largest\(column\:gap\), column-gap;
   @mixin grid-gap .largest\(row\:gap\), row-gap;
+  
+  @mixin default-mixin .largest\(grid-items\), justify-items, stretch;
+  @mixin default-mixin .largest\(stretch\:grid-items\), justify-items, stretch;
+  @mixin default-mixin .largest\(center\:grid-items\), justify-items, center;
+  @mixin default-mixin .largest\(start\:grid-items\), justify-items, start;
+  @mixin default-mixin .largest\(end\:grid-items\), justify-items, end;
+  @mixin default-mixin .largest\(left\:grid-items\), justify-items, left;
+  @mixin default-mixin .largest\(right\:grid-items\), justify-items, right;
+  @mixin default-mixin .largest\(baseline\:grid-items\), justify-items, baseline;
+
+  @mixin default-mixin .largest\(grid-self\), justify-self, stretch;
+  @mixin default-mixin .largest\(stretch\:grid-self\), justify-self, stretch;
+  @mixin default-mixin .largest\(center\:grid-self\), justify-self, center;
+  @mixin default-mixin .largest\(start\:grid-self\), justify-self, start;
+  @mixin default-mixin .largest\(end\:grid-self\), justify-self, end;
+  @mixin default-mixin .largest\(left\:grid-self\), justify-self, left;
+  @mixin default-mixin .largest\(right\:grid-self\), justify-self, right;
+  @mixin default-mixin .largest\(baseline\:grid-self\), justify-self, baseline;
 }

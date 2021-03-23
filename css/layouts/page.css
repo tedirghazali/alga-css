@@ -2,6 +2,7 @@
     /* autoprefixer grid: no-autoplace */
     display: grid;
     width: 100%;
+    max-width: 100vw;
     
     &.page-navigation,
     &.top\:page-navigation {

@@ -5,9 +5,12 @@
   position: relative;
   min-width: 0;
   width: 100%;
-  background-color: var(--alga-white);
-  background-clip: border;
   overflow-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.75);
+  background-clip: border;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .text\:editor {

@@ -1,10 +1,11 @@
 .box,
 .alert\:box {
-  background: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
+  background-clip: border;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(0,0,0,.125);
 }
 
 .box {
