@@ -226,7 +226,14 @@
 }
 
 .picker-item {
-  @apply block w-full py-1 px-4 clear-both font-normal no-underline whitespace-nowrap bg-transparent;
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  clear: both;
+  white-space: nowrap;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 400;
   color: #212529;
   text-align: inherit;
   border: 0;
@@ -243,17 +250,32 @@
   }
   
   &.disabled, &:disabled {
-    @apply pointer-events-none bg-transparent;
+    pointer-events: none;
+    background: transparent;
     color: #6c757d;
   }
+}
+
+/*.picker-menu,
+.full\:picker-menu,
+.left\:picker-menu,
+.right\:picker-menu {
+  display: none;
 }
 
 .picker-menu.show {
   display: block;
 }
 
+.picker-menu.active {
+  display: block;
+}*/
+
 .picker-header {
-  @apply block py-2 px-4 mb-0 whitespace-nowrap;
+  display: block;
+  white-space: nowrap;
+  margin-bottom: 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   font-size: 0.875rem;
   color: #6c757d;
 }

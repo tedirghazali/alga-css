@@ -72,6 +72,81 @@
 @mixin flex-order .order, order;
 
 @media (min-width: 640px) {
+  @mixin flex-double .smaller\(start\:flex\), justify-content, flex-start;
+  @mixin flex-double .smaller\(end\:flex\), justify-content, flex-end;
+  @mixin flex-double .smaller\(center\:flex\), justify-content, center;
+  @mixin flex-double .smaller\(between\:flex\), justify-content, space-between;
+  @mixin flex-double .smaller\(around\:flex\), justify-content, space-around;
+  @mixin flex-double .smaller\(evenly\:flex\), justify-content, space-evenly;
+
+  @mixin flex-double .smaller\(row\:flex\), flex-direction, row;
+  @mixin flex-double .smaller\(column\:flex\), flex-direction, column;
+  @mixin flex-double .smaller\(row\:flex-reverse\), flex-direction, row-reverse;
+  @mixin flex-double .smaller\(column\:flex-reverse\), flex-direction, column-reverse;
+
+  @mixin flex-double .smaller\(start\:flex-items\), align-items, flex-start;
+  @mixin flex-double .smaller\(end\:flex-items\), align-items, flex-end;
+  @mixin flex-double .smaller\(center\:flex-items\), align-items, center;
+  @mixin flex-double .smaller\(baseline\:flex-items\), align-items, baseline;
+  @mixin flex-double .smaller\(stretch\:flex-items\), align-items, stretch;
+
+  @mixin flex-content .smaller\(start\:flex-content\), align-content, flex-start;
+  @mixin flex-content .smaller\(end\:flex-content\), align-content, flex-end;
+  @mixin flex-content .smaller\(center\:flex-content\), align-content, center;
+  @mixin flex-content .smaller\(between\:flex-content\), align-content, space-between;
+  @mixin flex-content .smaller\(around\:flex-content\), align-content, space-around;
+  @mixin flex-content .smaller\(stretch\:flex-content\), align-content, stretch;
+
+  @mixin flex-mixin .smaller\(flex-fill\), flex, 1 1 auto;
+  @mixin flex-mixin .smaller\(flex-item\), flex, 1 1 0%;
+  @mixin flex-mixin .smaller\(flex-base\), flex, 0 1 auto;
+  @mixin flex-mixin .smaller\(flex-none\), none;
+
+  @mixin flex-mixin .smaller\(flex-row\), flex-direction, row;
+  @mixin flex-mixin .smaller\(flex-column\), flex-direction, column;
+  @mixin flex-mixin .smaller\(flex-row-reverse\), flex-direction, row-reverse;
+  @mixin flex-mixin .smaller\(flex-column-reverse\), flex-direction, column-reverse;
+
+  @mixin flex-mixin .smaller\(flex-grow-0\), flex-grow, 0;
+  @mixin flex-mixin .smaller\(flex-grow-1\), flex-grow, 1;
+  @mixin flex-mixin .smaller\(flex-shrink-0\), flex-shrink, 0;
+  @mixin flex-mixin .smaller\(flex-shrink-1\), flex-shrink, 1;
+
+  @mixin flex-mixin .smaller\(flex-wrap\), flex-wrap, wrap;
+  @mixin flex-mixin .smaller\(flex-nowrap\), flex-wrap, nowrap;
+  @mixin flex-mixin .smaller\(flex-wrap-reverse\), flex-wrap, wrap-reverse;
+
+  @mixin flex-mixin .smaller\(start\:justify\), justify-content, flex-start;
+  @mixin flex-mixin .smaller\(end\:justify\), justify-content, flex-end;
+  @mixin flex-mixin .smaller\(center\:justify\), justify-content, center;
+  @mixin flex-mixin .smaller\(between\:justify\), justify-content, space-between;
+  @mixin flex-mixin .smaller\(around\:justify\), justify-content, space-around;
+  @mixin flex-mixin .smaller\(evenly\:justify\), justify-content, space-evenly;
+
+  @mixin flex-mixin .smaller\(start\:items\), align-items, flex-start;
+  @mixin flex-mixin .smaller\(end\:items\), align-items, flex-end;
+  @mixin flex-mixin .smaller\(center\:items\), align-items, center;
+  @mixin flex-mixin .smaller\(baseline\:items\), align-items, baseline;
+  @mixin flex-mixin .smaller\(stretch\:items\), align-items, stretch;
+
+  @mixin flex-mixin .smaller\(start\:content\), align-content, flex-start;
+  @mixin flex-mixin .smaller\(end\:content\), align-content, flex-end;
+  @mixin flex-mixin .smaller\(center\:content\), align-content, center;
+  @mixin flex-mixin .smaller\(between\:content\), align-content, space-between;
+  @mixin flex-mixin .smaller\(around\:content\), align-content, space-around;
+  @mixin flex-mixin .smaller\(stretch\:content\), align-content, stretch;
+
+  @mixin flex-mixin .smaller\(auto\:self\), align-self, auto;
+  @mixin flex-mixin .smaller\(start\:self\), align-self, flex-start;
+  @mixin flex-mixin .smaller\(end\:self\), align-self, flex-end;
+  @mixin flex-mixin .smaller\(center\:self\), align-self, center;
+  @mixin flex-mixin .smaller\(baseline\:self\), align-self, baseline;
+  @mixin flex-mixin .smaller\(stretch\:self\), align-self, stretch;
+
+  @mixin flex-order .smaller\(order\), order;
+}
+
+@media (min-width: 768px) {
   @mixin flex-double .small\(start\:flex\), justify-content, flex-start;
   @mixin flex-double .small\(end\:flex\), justify-content, flex-end;
   @mixin flex-double .small\(center\:flex\), justify-content, center;
@@ -146,7 +221,7 @@
   @mixin flex-order .small\(order\), order;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   @mixin flex-double .medium\(start\:flex\), justify-content, flex-start;
   @mixin flex-double .medium\(end\:flex\), justify-content, flex-end;
   @mixin flex-double .medium\(center\:flex\), justify-content, center;
@@ -221,7 +296,7 @@
   @mixin flex-order .medium\(order\), order;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   @mixin flex-double .large\(start\:flex\), justify-content, flex-start;
   @mixin flex-double .large\(end\:flex\), justify-content, flex-end;
   @mixin flex-double .large\(center\:flex\), justify-content, center;
@@ -296,7 +371,7 @@
   @mixin flex-order .large\(order\), order;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   @mixin flex-double .larger\(start\:flex\), justify-content, flex-start;
   @mixin flex-double .larger\(end\:flex\), justify-content, flex-end;
   @mixin flex-double .larger\(center\:flex\), justify-content, center;
@@ -371,7 +446,7 @@
   @mixin flex-order .larger\(order\), order;
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1920px) {
   @mixin flex-double .largest\(start\:flex\), justify-content, flex-start;
   @mixin flex-double .largest\(end\:flex\), justify-content, flex-end;
   @mixin flex-double .largest\(center\:flex\), justify-content, center;

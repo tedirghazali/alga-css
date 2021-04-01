@@ -5,13 +5,13 @@
 /* Layout */
 @import './layouts/container.css';
 @import './layouts/page.css';
-@import './layouts/navbar.css';
-@import './layouts/sidebar.css';
+@import './layouts/bar.css';
+@import './layouts/box.css';
+@import './layouts/nav.css';
+@import './layouts/list.css';
 
 /* Elements */
 @import './elements/button.css';
-@import './elements/list.css';
-@import './elements/nav.css';
 @import './elements/tab.css';
 @import './elements/accordion.css';
 @import './elements/breadcrumb.css';
@@ -30,7 +30,6 @@
 @import './forms/input-group.css';
 
 /* Components */
-@import './components/box.css';
 @import './components/tag.css';
 @import './components/picker.css';
 @import './components/dropzone.css';
@@ -40,6 +39,8 @@
 @import './components/editor.css';
 @import './components/tooltip.css';
 @import './components/badge.css';
+@import './components/navbar.css';
+@import './components/sidebar.css';
 
 /* Colors */
 @import './colors/color.css';
