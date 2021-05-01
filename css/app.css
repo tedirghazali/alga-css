@@ -7,11 +7,11 @@
 @import './layouts/page.css';
 @import './layouts/bar.css';
 @import './layouts/box.css';
-@import './layouts/nav.css';
-@import './layouts/list.css';
 
 /* Elements */
 @import './elements/button.css';
+@import './elements/nav.css';
+@import './elements/list.css';
 @import './elements/tab.css';
 @import './elements/accordion.css';
 @import './elements/breadcrumb.css';

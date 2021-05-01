@@ -4,168 +4,50 @@
 @mixin border-mixin .bottom\:border, border-bottom;
 @mixin border-mixin .left\:border, border-left;
 
-@mixin border-style .none, none;
-@mixin border-style .hidden, hidden;
-@mixin border-style .dotted, dotted;
-@mixin border-style .dashed, dashed;
-@mixin border-style .solid, solid;
-@mixin border-style .double, double;
-@mixin border-style .groove, groove;
-@mixin border-style .ridge, ridge;
-@mixin border-style .inset, inset;
-@mixin border-style .outset, outset;
-
-@mixin border-double .none\:border, border, none;
-@mixin border-double .none-top\:border, border-top, none;
-@mixin border-double .none-right\:border, border-right, none;
-@mixin border-double .none-bottom\:border, border-bottom, none;
-@mixin border-double .none-left\:border, border-left, none;
-
-@mixin border-double .hidden\:border, border, hidden;
-@mixin border-double .hidden-top\:border, border-top, hidden;
-@mixin border-double .hidden-right\:border, border-right, hidden;
-@mixin border-double .hidden-bottom\:border, border-bottom, hidden;
-@mixin border-double .hidden-left\:border, border-left, hidden;
-
-@mixin border-double .dotted\:border, border, dotted;
-@mixin border-double .dotted-top\:border, border-top, dotted;
-@mixin border-double .dotted-right\:border, border-right, dotted;
-@mixin border-double .dotted-bottom\:border, border-bottom, dotted;
-@mixin border-double .dotted-left\:border, border-left, dotted;
-
-@mixin border-double .dashed\:border, border, dashed;
-@mixin border-double .dashed-top\:border, border-top, dashed;
-@mixin border-double .dashed-right\:border, border-right, dashed;
-@mixin border-double .dashed-bottom\:border, border-bottom, dashed;
-@mixin border-double .dashed-left\:border, border-left, dashed;
-
-@mixin border-double .solid\:border, border, solid;
-@mixin border-double .solid-top\:border, border-top, solid;
-@mixin border-double .solid-right\:border, border-right, solid;
-@mixin border-double .solid-bottom\:border, border-bottom, solid;
-@mixin border-double .solid-left\:border, border-left, solid;
-
-@mixin border-double .double\:border, border, double;
-@mixin border-double .double-top\:border, border-top, double;
-@mixin border-double .double-right\:border, border-right, double;
-@mixin border-double .double-bottom\:border, border-bottom, double;
-@mixin border-double .double-left\:border, border-left, double;
-
-@mixin border-double .groove\:border, border, groove;
-@mixin border-double .groove-top\:border, border-top, groove;
-@mixin border-double .groove-right\:border, border-right, groove;
-@mixin border-double .groove-bottom\:border, border-bottom, groove;
-@mixin border-double .groove-left\:border, border-left, groove;
-
-@mixin border-double .ridge\:border, border, ridge;
-@mixin border-double .ridge-top\:border, border-top, ridge;
-@mixin border-double .ridge-right\:border, border-right, ridge;
-@mixin border-double .ridge-bottom\:border, border-bottom, ridge;
-@mixin border-double .ridge-left\:border, border-left, ridge;
-
-@mixin border-double .inset\:border, border, inset;
-@mixin border-double .inset-top\:border, border-top, inset;
-@mixin border-double .inset-right\:border, border-right, inset;
-@mixin border-double .inset-bottom\:border, border-bottom, inset;
-@mixin border-double .inset-left\:border, border-left, inset;
-
-@mixin border-double .outset\:border, border, outset;
-@mixin border-double .outset-top\:border, border-top, outset;
-@mixin border-double .outset-right\:border, border-right, outset;
-@mixin border-double .outset-bottom\:border, border-bottom, outset;
-@mixin border-double .outset-left\:border, border-left, outset;
-
 @media (min-width: 640px) {
+  @mixin border-mixin .smaller\(border\), border;
+  @mixin border-mixin .smaller\(top\:border\), border-top;
+  @mixin border-mixin .smaller\(right\:border\), border-right;
+  @mixin border-mixin .smaller\(bottom\:border\), border-bottom;
+  @mixin border-mixin .smaller\(left\:border\), border-left;
+}
+
+@media (min-width: 768px) {
   @mixin border-mixin .small\(border\), border;
   @mixin border-mixin .small\(top\:border\), border-top;
   @mixin border-mixin .small\(right\:border\), border-right;
   @mixin border-mixin .small\(bottom\:border\), border-bottom;
   @mixin border-mixin .small\(left\:border\), border-left;
-
-  @mixin border-style .small\(none\), none;
-  @mixin border-style .small\(hidden\), hidden;
-  @mixin border-style .small\(dotted\), dotted;
-  @mixin border-style .small\(dashed\), dashed;
-  @mixin border-style .small\(solid\), solid;
-  @mixin border-style .small\(double\), double;
-  @mixin border-style .small\(groove\), groove;
-  @mixin border-style .small\(ridge\), ridge;
-  @mixin border-style .small\(inset\), inset;
-  @mixin border-style .small\(outset\), outset;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   @mixin border-mixin .medium\(border\), border;
   @mixin border-mixin .medium\(top\:border\), border-top;
   @mixin border-mixin .medium\(right\:border\), border-right;
   @mixin border-mixin .medium\(bottom\:border\), border-bottom;
   @mixin border-mixin .medium\(left\:border\), border-left;
-
-  @mixin border-style .medium\(none\), none;
-  @mixin border-style .medium\(hidden\), hidden;
-  @mixin border-style .medium\(dotted\), dotted;
-  @mixin border-style .medium\(dashed\), dashed;
-  @mixin border-style .medium\(solid\), solid;
-  @mixin border-style .medium\(double\), double;
-  @mixin border-style .medium\(groove\), groove;
-  @mixin border-style .medium\(ridge\), ridge;
-  @mixin border-style .medium\(inset\), inset;
-  @mixin border-style .medium\(outset\), outset;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   @mixin border-mixin .large\(border\), border;
   @mixin border-mixin .large\(top\:border\), border-top;
   @mixin border-mixin .large\(right\:border\), border-right;
   @mixin border-mixin .large\(bottom\:border\), border-bottom;
   @mixin border-mixin .large\(left\:border\), border-left;
-
-  @mixin border-style .large\(none\), none;
-  @mixin border-style .large\(hidden\), hidden;
-  @mixin border-style .large\(dotted\), dotted;
-  @mixin border-style .large\(dashed\), dashed;
-  @mixin border-style .large\(solid\), solid;
-  @mixin border-style .large\(double\), double;
-  @mixin border-style .large\(groove\), groove;
-  @mixin border-style .large\(ridge\), ridge;
-  @mixin border-style .large\(inset\), inset;
-  @mixin border-style .large\(outset\), outset;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   @mixin border-mixin .larger\(border\), border;
   @mixin border-mixin .larger\(top\:border\), border-top;
   @mixin border-mixin .larger\(right\:border\), border-right;
   @mixin border-mixin .larger\(bottom\:border\), border-bottom;
   @mixin border-mixin .larger\(left\:border\), border-left;
-
-  @mixin border-style .larger\(none\), none;
-  @mixin border-style .larger\(hidden\), hidden;
-  @mixin border-style .larger\(dotted\), dotted;
-  @mixin border-style .larger\(dashed\), dashed;
-  @mixin border-style .larger\(solid\), solid;
-  @mixin border-style .larger\(double\), double;
-  @mixin border-style .larger\(groove\), groove;
-  @mixin border-style .larger\(ridge\), ridge;
-  @mixin border-style .larger\(inset\), inset;
-  @mixin border-style .larger\(outset\), outset;
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1920px) {
   @mixin border-mixin .largest\(border\), border;
   @mixin border-mixin .largest\(top\:border\), border-top;
   @mixin border-mixin .largest\(right\:border\), border-right;
   @mixin border-mixin .largest\(bottom\:border\), border-bottom;
   @mixin border-mixin .largest\(left\:border\), border-left;
-
-  @mixin border-style .largest\(none\), none;
-  @mixin border-style .largest\(hidden\), hidden;
-  @mixin border-style .largest\(dotted\), dotted;
-  @mixin border-style .largest\(dashed\), dashed;
-  @mixin border-style .largest\(solid\), solid;
-  @mixin border-style .largest\(double\), double;
-  @mixin border-style .largest\(groove\), groove;
-  @mixin border-style .largest\(ridge\), ridge;
-  @mixin border-style .largest\(inset\), inset;
-  @mixin border-style .largest\(outset\), outset;
 }

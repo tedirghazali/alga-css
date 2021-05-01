@@ -1,27 +1,20 @@
 .nav\:bar {
   align-items: center;
+  min-height: 50px;
+  padding: var(--navbar-padding, .75em);
   
-  & > * {
+  & > *,
+  & > .bar-wrapper > *,
+  & > .container > *,
+  & > .fluid\:container > *,
+  & > .small\:container > *,
+  & > .medium\:container > *,
+  & > .large\:container > *,
+  & > .larger\:container > *,
+  & > .largest\:container > * {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
-  }
-  
-  & .bar-menu,
-  & .left\:bar-menu {
-    justify-content: flex-start;
-  }
-    
-  & .fill\:bar-menu {
-    flex-grow: 1;
-  }
-    
-  & .center\:bar-menu {
-    justify-content: center;
-  }
-    
-  & .right\:bar-menu {
-    justify-content: flex-end;
   }
   
   & > .container,
@@ -33,27 +26,54 @@
   & > .largest\:container {
     justify-content: space-between;
   }
+  
+  & .bar-menu,
+  & .start\:bar-menu {
+    justify-content: flex-start;
+  }
+    
+  & .fill\:bar-menu {
+    flex-grow: 1;
+  }
+    
+  & .center\:bar-menu {
+    justify-content: center;
+  }
+    
+  & .end\:bar-menu {
+    justify-content: flex-end;
+  }
 }
 
 @media (max-width: 768px) {
-  .nav\:bar:not(:first-child),
-  .nav\:bar > *:not(:first-child),
-  .fill\:bar-menu,
-  .center\:bar-menu,
-  .right\:bar-menu {
+  .nav\:bar > *:not(.mobile),
+  .nav\:bar > * > *:not(.mobile) {
     display: none;
   }
   
-  .nav\:bar > .bar-menu:first-child > *,
-  .nav\:bar > .left\:bar-menu:first-child > * {
-    width: 100vw;
+  .nav\:bar .mobile {
+    display: block;
+  }
+  
+  .nav\:bar > .bar-menu:first-child,
+  .nav\:bar > .start\:bar-menu,
+  .nav\:bar > *:first-child > .bar-menu:first-child,
+  .nav\:bar > *:first-child > .start\:bar-menu {
+    min-width: 100vw;
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
 
-@media (max-width: 1024px) {
-  .center\:bar-menu {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav\:bar > *:nth-child(2):not(.tablet),
+  .nav\:bar > *:first-child > *:nth-child(2):not(.tablet) {
     display: none;
+  }
+  
+  .nav\:bar .tablet {
+    display: block;
   }
 }
 

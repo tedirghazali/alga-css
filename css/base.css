@@ -22,8 +22,11 @@
   --alga-teal: rgb(32, 201, 151);
   --alga-cyan: rgb(13, 202, 240);
   --alga-gray: rgb(108, 117, 125);
-  --alga-dark: #212529;
+  --alga-dark: rgb(51, 51, 51);
+  --alga-back-dark: rgb(28, 28, 28);
+  --alga-fore-dark: rgb(22, 22, 22);
   --alga-light: #f8f9fa;
+  /*--alga-border-style: hidden, dotted, dashed, solid, double, groove, ridge, inset, outset;*/
 }
 
 *, *::before, *::after {

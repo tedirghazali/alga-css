@@ -51,12 +51,16 @@
   font-size: 0.75rem;
   line-height: 1.5;
   white-space: nowrap;
-  background-color: whitesmoke;
-  border-radius: 4px;
-  color: #4a4a4a;
+  background-color: var(--background, #ebedf0);
+  border-radius: var(--rounded);
+  color: var(--text, #4a4a4a);
   height: 2em;
   padding-left: 0.75em;
   padding-right: 0.75em;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.125);
+  }
 }
 
 .tag-group .tag {
@@ -112,11 +116,7 @@
     background-color: #dbdbdb;
   }
 }
-
-.hover\?tag:hover {
-  text-decoration: underline;
-}
-  
+ 
 .tag\:input {
   display: flex;
   flex-wrap: wrap;
@@ -148,30 +148,32 @@
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
   }
-}
-
-.tag\:input.is-valid,
-.was-validated .tag\:input:valid {
-  border-color: #28a745;
-}
   
-.tag\:input-control {
-  background: transparent;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  outline: 0;
-  border-width: 0;
-  padding: 0 2px 0 0;
-  height: 24px;
-  color: #495057;
+  & .input-control,
+  &-hidden {
+    background: transparent;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    outline: 0;
+    border-width: 0;
+    padding: 0 2px 0 0;
+    height: 24px;
+    color: #495057;
+  }
 }
 
-.hidden\?tag\:input-control {
+.tag\:input-hidden {
+  width: max-content;
   position: absolute;
   overflow: hidden;
   white-space: nowrap;
   visibility: hidden;
   top: 0;
   left: -9999px;
+}
+
+.tag\:input.is-valid,
+.was-validated .tag\:input:valid {
+  border-color: #28a745;
 }
 

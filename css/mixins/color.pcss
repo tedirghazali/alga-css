@@ -67,137 +67,137 @@
 }
 
 @define-mixin color-hover $class, $red, $green, $blue, $alpha, $text {
-  $(class):hover {
+  $(class)\:hover:hover {
     color: var(--alga-$(text));
     background-color: rgba($red, $green, $blue, $alpha);
     border-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:outlined:hover {
+  $(class)\:outlined\:hover:hover {
     color: rgba($red, $green, $blue, $alpha);
     background-color: var(--alga-transparent);
     border-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:filled:hover {
+  $(class)\:filled\:hover:hover {
     color: var(--alga-$(text));
     background-color: rgba($red, $green, $blue, $alpha);
     border-color: rgba(0, 0, 0, 0.15);
   }
     
-  $(class)\:background:hover {
+  $(class)\:background\:hover:hover {
     background-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:text:hover {
+  $(class)\:text\:hover:hover {
     color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:border:hover {
+  $(class)\:border\:hover:hover {
     border-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)-top\:border:hover {
+  $(class)-top\:border\:hover:hover {
     border-top-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)-right\:border:hover {
+  $(class)-right\:border\:hover:hover {
     border-right-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)-bottom\:border:hover {
+  $(class)-bottom\:border\:hover:hover {
     border-bottom-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)-left\:border:hover {
+  $(class)-left\:border\:hover:hover {
     border-left-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:caret:hover {
+  $(class)\:caret\:hover:hover {
     caret-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:outline:hover {
+  $(class)\:outline\:hover:hover {
     outline-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:fill:hover {
+  $(class)\:fill\:hover:hover {
     fill: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:stroke:hover {
+  $(class)\:stroke\:hover:hover {
     stroke: rgba($red, $green, $blue, $alpha);
   }  
   
-  $(class)\:placeholder:hover::placeholder {
+  $(class)\:placeholder\:hover:hover::placeholder {
     color: rgba($red, $green, $blue, $alpha);
   }
 }
 
 @define-mixin color-focus $class, $red, $green, $blue, $alpha, $text {
-  $(class):focus {
+  $(class)\:focus:focus {
     color: var(--alga-$(text));
     background-color: rgba($red, $green, $blue, $alpha);
     border-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:outlined:focus {
+  $(class)\:outlined\:focus:focus {
     color: rgba($red, $green, $blue, $alpha);
     background-color: var(--alga-transparent);
     border-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:filled:focus {
+  $(class)\:filled\:focus:focus {
     color: var(--alga-$(text));
     background-color: rgba($red, $green, $blue, $alpha);
     border-color: rgba(0, 0, 0, 0.15);
   }
     
-  $(class)\:background:focus {
+  $(class)\:background\:focus:focus {
     background-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:text:focus {
+  $(class)\:text\:focus:focus {
     color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:border:focus {
+  $(class)\:border\:focus:focus {
     border-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)-top\:border:focus {
+  $(class)-top\:border\:focus:focus {
     border-top-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)-right\:border:focus {
+  $(class)-right\:border\:focus:focus {
     border-right-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)-bottom\:border:focus {
+  $(class)-bottom\:border\:focus:focus {
     border-bottom-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)-left\:border:focus {
+  $(class)-left\:border\:focus:focus {
     border-left-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:caret:focus {
+  $(class)\:caret\:focus:focus {
     caret-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:outline:focus {
+  $(class)\:outline\:focus:focus {
     outline-color: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:fill:focus {
+  $(class)\:fill\:focus:focus {
     fill: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:stroke:focus {
+  $(class)\:stroke\:focus:focus {
     stroke: rgba($red, $green, $blue, $alpha);
   }
     
-  $(class)\:placeholder:focus::placeholder {
+  $(class)\:placeholder\:focus:focus::placeholder {
     color: rgba($red, $green, $blue, $alpha);
   }
 }

@@ -1,5 +1,4 @@
-.side\:bar,
-.shrink-side\:bar {
+.side\:bar {
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
@@ -13,11 +12,11 @@
   }
   
   & .bar-menu,
-  & .top\:bar-menu {
+  & .start\:bar-menu {
     justify-content: flex-start;
   }
   
-  & .top\:bar-menu {
+  & .start\:bar-menu {
     overflow: hidden;
   }
     
@@ -27,13 +26,13 @@
     overflow-x: hidden;
   }
     
-  & .middle\:bar-menu {
+  & .center\:bar-menu {
     overflow-y: auto;
     overflow-x: hidden;
     justify-content: center;
   }
     
-  & .bottom\:bar-menu {
+  & .end\:bar-menu {
     overflow: hidden;
     justify-content: flex-end;
   }
@@ -41,6 +40,11 @@
   &.active,
   &.show {
     display: block;
+  }
+  
+  &.shrinkable {
+    min-width: 80px;
+    max-width: 80px;
   }
 }
 
