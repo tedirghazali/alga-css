@@ -666,70 +666,17 @@
 @mixin color-focus .gray-2, 108, 117, 125, 0.2, black;
 @mixin color-focus .gray-1, 108, 117, 125, 0.1, black;
 
+@mixin color-mixin .light, light, black;
+@mixin color-mixin .lighter, lighter, black;
+@mixin color-mixin .lightest, lightest, black;
+
 @media(prefers-color-scheme: dark) {
   @mixin color-mixin [data-dark='true'] .dark, dark, white;
-  @mixin color-opacity [data-dark='true'] .dark-9, 51, 51, 51, 0.9, black;
-  @mixin color-opacity [data-dark='true'] .dark-8, 51, 51, 51, 0.8, black;
-  @mixin color-opacity [data-dark='true'] .dark-7, 51, 51, 51, 0.7, black;
-  @mixin color-opacity [data-dark='true'] .dark-6, 51, 51, 51, 0.6, black;
-  @mixin color-opacity [data-dark='true'] .dark-5, 51, 51, 51, 0.5, black;
-  @mixin color-opacity [data-dark='true'] .dark-4, 51, 51, 51, 0.4, black;
-  @mixin color-opacity [data-dark='true'] .dark-3, 51, 51, 51, 0.3, black;
-  @mixin color-opacity [data-dark='true'] .dark-2, 51, 51, 51, 0.2, black;
-  @mixin color-opacity [data-dark='true'] .dark-1, 51, 51, 51, 0.1, black;
-
   @mixin color-mixin [data-dark='true'] .darker, darker, white;
-  @mixin color-opacity [data-dark='true'] .darker-9, 28, 28, 28, 0.9, black;
-  @mixin color-opacity [data-dark='true'] .darker-8, 28, 28, 28, 0.8, black;
-  @mixin color-opacity [data-dark='true'] .darker-7, 28, 28, 28, 0.7, black;
-  @mixin color-opacity [data-dark='true'] .darker-6, 28, 28, 28, 0.6, black;
-  @mixin color-opacity [data-dark='true'] .darker-5, 28, 28, 28, 0.5, black;
-  @mixin color-opacity [data-dark='true'] .darker-4, 28, 28, 28, 0.4, black;
-  @mixin color-opacity [data-dark='true'] .darker-3, 28, 28, 28, 0.3, black;
-  @mixin color-opacity [data-dark='true'] .darker-2, 28, 28, 28, 0.2, black;
-  @mixin color-opacity [data-dark='true'] .darker-1, 28, 28, 28, 0.1, black;
-  
   @mixin color-mixin [data-dark='true'] .darkest, darkest, white;
-  @mixin color-opacity [data-dark='true'] .darkest-9, 22, 22, 22, 0.9, black;
-  @mixin color-opacity [data-dark='true'] .darkest-8, 22, 22, 22, 0.8, black;
-  @mixin color-opacity [data-dark='true'] .darkest-7, 22, 22, 22, 0.7, black;
-  @mixin color-opacity [data-dark='true'] .darkest-6, 22, 22, 22, 0.6, black;
-  @mixin color-opacity [data-dark='true'] .darkest-5, 22, 22, 22, 0.5, black;
-  @mixin color-opacity [data-dark='true'] .darkest-4, 22, 22, 22, 0.4, black;
-  @mixin color-opacity [data-dark='true'] .darkest-3, 22, 22, 22, 0.3, black;
-  @mixin color-opacity [data-dark='true'] .darkest-2, 22, 22, 22, 0.2, black;
-  @mixin color-opacity [data-dark='true'] .darkest-1, 22, 22, 22, 0.1, black;
 }
 
 @mixin color-mixin [data-mode='dark'] .dark, dark, white;
-@mixin color-opacity [data-mode='dark'] .dark-9, 51, 51, 51, 0.9, black;
-@mixin color-opacity [data-mode='dark'] .dark-8, 51, 51, 51, 0.8, black;
-@mixin color-opacity [data-mode='dark'] .dark-7, 51, 51, 51, 0.7, black;
-@mixin color-opacity [data-mode='dark'] .dark-6, 51, 51, 51, 0.6, black;
-@mixin color-opacity [data-mode='dark'] .dark-5, 51, 51, 51, 0.5, black;
-@mixin color-opacity [data-mode='dark'] .dark-4, 51, 51, 51, 0.4, black;
-@mixin color-opacity [data-mode='dark'] .dark-3, 51, 51, 51, 0.3, black;
-@mixin color-opacity [data-mode='dark'] .dark-2, 51, 51, 51, 0.2, black;
-@mixin color-opacity [data-mode='dark'] .dark-1, 51, 51, 51, 0.1, black;
-
 @mixin color-mixin [data-mode='dark'] .darker, darker, white;
-@mixin color-opacity [data-mode='dark'] .darker-9, 28, 28, 28, 0.9, black;
-@mixin color-opacity [data-mode='dark'] .darker-8, 28, 28, 28, 0.8, black;
-@mixin color-opacity [data-mode='dark'] .darker-7, 28, 28, 28, 0.7, black;
-@mixin color-opacity [data-mode='dark'] .darker-6, 28, 28, 28, 0.6, black;
-@mixin color-opacity [data-mode='dark'] .darker-5, 28, 28, 28, 0.5, black;
-@mixin color-opacity [data-mode='dark'] .darker-4, 28, 28, 28, 0.4, black;
-@mixin color-opacity [data-mode='dark'] .darker-3, 28, 28, 28, 0.3, black;
-@mixin color-opacity [data-mode='dark'] .darker-2, 28, 28, 28, 0.2, black;
-@mixin color-opacity [data-mode='dark'] .darker-1, 28, 28, 28, 0.1, black;
-  
 @mixin color-mixin [data-mode='dark'] .darkest, darkest, white;
-@mixin color-opacity [data-mode='dark'] .darkest-9, 22, 22, 22, 0.9, black;
-@mixin color-opacity [data-mode='dark'] .darkest-8, 22, 22, 22, 0.8, black;
-@mixin color-opacity [data-mode='dark'] .darkest-7, 22, 22, 22, 0.7, black;
-@mixin color-opacity [data-mode='dark'] .darkest-6, 22, 22, 22, 0.6, black;
-@mixin color-opacity [data-mode='dark'] .darkest-5, 22, 22, 22, 0.5, black;
-@mixin color-opacity [data-mode='dark'] .darkest-4, 22, 22, 22, 0.4, black;
-@mixin color-opacity [data-mode='dark'] .darkest-3, 22, 22, 22, 0.3, black;
-@mixin color-opacity [data-mode='dark'] .darkest-2, 22, 22, 22, 0.2, black;
-@mixin color-opacity [data-mode='dark'] .darkest-1, 22, 22, 22, 0.1, black;
+

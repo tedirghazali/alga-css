@@ -1,7 +1,8 @@
 .nav,
 .tab\:nav,
 .pill\:nav,
-.breadcrumb\:nav {
+.breadcrumb\:nav,
+.menu\:nav {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -15,6 +16,7 @@
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    color: inherit;
   }
   @media (prefers-reduced-motion: reduce) {
     transition: none;
@@ -23,6 +25,15 @@
     color: #6c757d;
     pointer-events: none;
     cursor: default;
+  }
+}
+
+.menu\:nav {
+  flex-direction: column;
+  align-items: start;
+  
+  & .nav-item {
+    width: 100%;
   }
 }
 

@@ -6,13 +6,11 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid var(--alga-border-color);
 }
 
 .box {
   padding: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
 }
 
 .alert\:box {

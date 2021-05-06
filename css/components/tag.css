@@ -133,7 +133,7 @@
   cursor: text;
   min-height: calc(1.5em + .75rem + 2px);
   color: #495057;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--alga-border-color);
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     
   &:focus {

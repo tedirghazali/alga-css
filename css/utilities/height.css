@@ -13,6 +13,22 @@
 @mixin sizing-mixin .rem\:min-height, min-height;
 
 @media (min-height: 640px) {
+  @mixin sizing-percent .smaller\(height\), height;
+  @mixin sizing-vh .smaller\(vh\:height\), height;
+  @mixin sizing-pixel .smaller\(px\:height\), height;
+  @mixin sizing-mixin .smaller\(rem\:height\), height;
+
+  @mixin sizing-percent .smaller\(max-height\), max-height;
+  @mixin sizing-percent .smaller\(min-height\), min-height;
+  @mixin sizing-vh .smaller\(vh\:max-height\), max-height;
+  @mixin sizing-vh .smaller\(vh\:min-height\), min-height;
+  @mixin sizing-pixel .smaller\(px\:max-height\), max-height;
+  @mixin sizing-pixel .smaller\(px\:min-height\), min-height;
+  @mixin sizing-mixin .smaller\(rem\:max-height\), max-height;
+  @mixin sizing-mixin .smaller\(rem\:min-height\), min-height;
+}
+
+@media (min-height: 768px) {
   @mixin sizing-percent .small\(height\), height;
   @mixin sizing-vh .small\(vh\:height\), height;
   @mixin sizing-pixel .small\(px\:height\), height;
@@ -28,7 +44,7 @@
   @mixin sizing-mixin .small\(rem\:min-height\), min-height;
 }
 
-@media (min-height: 768px) {
+@media (min-height: 1024px) {
   @mixin sizing-percent .medium\(height\), height;
   @mixin sizing-vh .medium\(vh\:height\), height;
   @mixin sizing-pixel .medium\(px\:height\), height;
@@ -44,7 +60,7 @@
   @mixin sizing-mixin .medium\(rem\:min-height\), min-height;
 }
 
-@media (min-height: 1024px) {
+@media (min-height: 1280px) {
   @mixin sizing-percent .large\(height\), height;
   @mixin sizing-vh .large\(vh\:height\), height;
   @mixin sizing-pixel .large\(px\:height\), height;
@@ -60,7 +76,7 @@
   @mixin sizing-mixin .large\(rem\:min-height\), min-height;
 }
 
-@media (min-height: 1280px) {
+@media (min-height: 1536px) {
   @mixin sizing-percent .larger\(height\), height;
   @mixin sizing-vh .larger\(vh\:height\), height;
   @mixin sizing-pixel .larger\(px\:height\), height;
@@ -76,7 +92,7 @@
   @mixin sizing-mixin .larger\(rem\:min-height\), min-height;
 }
 
-@media (min-height: 1536px) {
+@media (min-height: 1920px) {
   @mixin sizing-percent .largest\(height\), height;
   @mixin sizing-vh .largest\(vh\:height\), height;
   @mixin sizing-pixel .largest\(px\:height\), height;

@@ -48,14 +48,14 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .side\:bar,
   .shrink-side\:bar {
     display: none;
   }
 }
 
-@media (min-width: 641px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .shrink-side\:bar {
     width: 40px;
     

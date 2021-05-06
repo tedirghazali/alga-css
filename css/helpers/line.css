@@ -1,15 +1,15 @@
 .line,
 .bottom\:line {
-  box-shadow: inset 0px -5px var(--alga-line, currentColor);
+  box-shadow: inset 0px -5px var(--line-color, currentColor);
 }
 .top\:line {
-  box-shadow: inset 0px 5px var(--alga-line, currentColor);
+  box-shadow: inset 0px 5px var(--line-color, currentColor);
 }
 .left\:line {
-  box-shadow: inset 5px 0px var(--alga-line, currentColor);
+  box-shadow: inset 5px 0px var(--line-color, currentColor);
 }
 .right\:line {
-  box-shadow: inset -5px 0px var(--alga-line, currentColor);
+  box-shadow: inset -5px 0px var(--line-color, currentColor);
 }
 
 @mixin line-mixin 1;
@@ -28,16 +28,16 @@
 @media (min-width: 640px) {
   .smaller\(line\),
   .smaller\(bottom\:line\) {
-    box-shadow: inset 0px -5px var(--alga-line, currentColor);
+    box-shadow: inset 0px -5px var(--line-color, currentColor);
   }
   .smaller\(top\:line\) {
-    box-shadow: inset 0px 5px var(--alga-line, currentColor);
+    box-shadow: inset 0px 5px var(--line-color, currentColor);
   }
   .smaller\(left\:line\) {
-    box-shadow: inset 5px 0px var(--alga-line, currentColor);
+    box-shadow: inset 5px 0px var(--line-color, currentColor);
   }
   .smaller\(right\:line\) {
-    box-shadow: inset -5px 0px var(--alga-line, currentColor);
+    box-shadow: inset -5px 0px var(--line-color, currentColor);
   }
 
   @mixin line-screen smaller, 1;
@@ -58,16 +58,16 @@
 @media (min-width: 768px) {
   .small\(line\),
   .small\(bottom\:line\) {
-    box-shadow: inset 0px -5px var(--alga-line, currentColor);
+    box-shadow: inset 0px -5px var(--line-color, currentColor);
   }
   .small\(top\:line\) {
-    box-shadow: inset 0px 5px var(--alga-line, currentColor);
+    box-shadow: inset 0px 5px var(--line-color, currentColor);
   }
   .small\(left\:line\) {
-    box-shadow: inset 5px 0px var(--alga-line, currentColor);
+    box-shadow: inset 5px 0px var(--line-color, currentColor);
   }
   .small\(right\:line\) {
-    box-shadow: inset -5px 0px var(--alga-line, currentColor);
+    box-shadow: inset -5px 0px var(--line-color, currentColor);
   }
 
   @mixin line-screen small, 1;
@@ -88,16 +88,16 @@
 @media (min-width: 1024px) {
   .medium\(line\),
   .medium\(bottom\:line\) {
-    box-shadow: inset 0px -5px var(--alga-line, currentColor);
+    box-shadow: inset 0px -5px var(--line-color, currentColor);
   }
   .medium\(top\:line\) {
-    box-shadow: inset 0px 5px var(--alga-line, currentColor);
+    box-shadow: inset 0px 5px var(--line-color, currentColor);
   }
   .medium\(left\:line\) {
-    box-shadow: inset 5px 0px var(--alga-line, currentColor);
+    box-shadow: inset 5px 0px var(--line-color, currentColor);
   }
   .medium\(right\:line\) {
-    box-shadow: inset -5px 0px var(--alga-line, currentColor);
+    box-shadow: inset -5px 0px var(--line-color, currentColor);
   }
 
   @mixin line-screen medium, 1;
@@ -118,16 +118,16 @@
 @media (min-width: 1280px) {
   .large\(line\),
   .large\(bottom\:line\) {
-    box-shadow: inset 0px -5px var(--alga-line, currentColor);
+    box-shadow: inset 0px -5px var(--line-color, currentColor);
   }
   .large\(top\:line\) {
-    box-shadow: inset 0px 5px var(--alga-line, currentColor);
+    box-shadow: inset 0px 5px var(--line-color, currentColor);
   }
   .large\(left\:line\) {
-    box-shadow: inset 5px 0px var(--alga-line, currentColor);
+    box-shadow: inset 5px 0px var(--line-color, currentColor);
   }
   .large\(right\:line\) {
-    box-shadow: inset -5px 0px var(--alga-line, currentColor);
+    box-shadow: inset -5px 0px var(--line-color, currentColor);
   }
 
   @mixin line-screen large, 1;
@@ -148,16 +148,16 @@
 @media (min-width: 1536px) {
   .larger\(line\),
   .larger\(bottom\:line\) {
-    box-shadow: inset 0px -5px var(--alga-line, currentColor);
+    box-shadow: inset 0px -5px var(--line-color, currentColor);
   }
   .larger\(top\:line\) {
-    box-shadow: inset 0px 5px var(--alga-line, currentColor);
+    box-shadow: inset 0px 5px var(--line-color, currentColor);
   }
   .larger\(left\:line\) {
-    box-shadow: inset 5px 0px var(--alga-line, currentColor);
+    box-shadow: inset 5px 0px var(--line-color, currentColor);
   }
   .larger\(right\:line\) {
-    box-shadow: inset -5px 0px var(--alga-line, currentColor);
+    box-shadow: inset -5px 0px var(--line-color, currentColor);
   }
 
   @mixin line-screen larger, 1;
@@ -178,16 +178,16 @@
 @media (min-width: 1920px) {
   .largest\(line\),
   .largest\(bottom\:line\) {
-    box-shadow: inset 0px -5px var(--alga-line, currentColor);
+    box-shadow: inset 0px -5px var(--line-color, currentColor);
   }
   .largest\(top\:line\) {
-    box-shadow: inset 0px 5px var(--alga-line, currentColor);
+    box-shadow: inset 0px 5px var(--line-color, currentColor);
   }
   .largest\(left\:line\) {
-    box-shadow: inset 5px 0px var(--alga-line, currentColor);
+    box-shadow: inset 5px 0px var(--line-color, currentColor);
   }
   .largest\(right\:line\) {
-    box-shadow: inset -5px 0px var(--alga-line, currentColor);
+    box-shadow: inset -5px 0px var(--line-color, currentColor);
   }
 
   @mixin line-screen largest, 1;

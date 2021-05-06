@@ -10,7 +10,7 @@
   color: #212529;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--alga-border-color);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   
   @media (prefers-reduced-motion: reduce) {

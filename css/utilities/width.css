@@ -13,6 +13,22 @@
 @mixin sizing-mixin .rem\:min-width, min-width;
 
 @media (min-width: 640px) {
+  @mixin sizing-percent .smaller\(width\), width;
+  @mixin sizing-vw .smaller\(vw\:width\), width;
+  @mixin sizing-pixel .smaller\(px\:width\), width;
+  @mixin sizing-mixin .smaller\(rem\:width\), width;
+
+  @mixin sizing-percent .smaller\(max-width\), max-width;
+  @mixin sizing-percent .smaller\(min-width\), min-width;
+  @mixin sizing-vw .smaller\(vw\:max-width\), max-width;
+  @mixin sizing-vw .smaller\(vw\:min-width\), min-width;
+  @mixin sizing-pixel .smaller\(px\:max-width\), max-width;
+  @mixin sizing-pixel .smaller\(px\:min-width\), min-width;
+  @mixin sizing-mixin .smaller\(rem\:max-width\), max-width;
+  @mixin sizing-mixin .smaller\(rem\:min-width\), min-width;
+}
+
+@media (min-width: 768px) {
   @mixin sizing-percent .small\(width\), width;
   @mixin sizing-vw .small\(vw\:width\), width;
   @mixin sizing-pixel .small\(px\:width\), width;
@@ -28,7 +44,7 @@
   @mixin sizing-mixin .small\(rem\:min-width\), min-width;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   @mixin sizing-percent .medium\(width\), width;
   @mixin sizing-vw .medium\(vw\:width\), width;
   @mixin sizing-pixel .medium\(px\:width\), width;
@@ -44,7 +60,7 @@
   @mixin sizing-mixin .medium\(rem\:min-width\), min-width;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   @mixin sizing-percent .large\(width\), width;
   @mixin sizing-vw .large\(vw\:width\), width;
   @mixin sizing-pixel .large\(px\:width\), width;
@@ -60,7 +76,7 @@
   @mixin sizing-mixin .large\(rem\:min-width\), min-width;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   @mixin sizing-percent .larger\:width, width;
   @mixin sizing-vw .larger\(vw\:width\), width;
   @mixin sizing-pixel .larger\(px\:width\), width;
@@ -76,7 +92,7 @@
   @mixin sizing-mixin .larger\(rem\:min-width\), min-width;
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1920px) {
   @mixin sizing-percent .largest\(width\), width;
   @mixin sizing-vw .largest\(vw\:width\), width;
   @mixin sizing-pixel .largest\(px\:width\), width;
