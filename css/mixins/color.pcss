@@ -17,7 +17,8 @@
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
     
-  $(class)\:background {
+  $(class)\:background, 
+  $(class)\:bg {
     background-color: var(--alga-$(main));
   }
     
@@ -87,7 +88,8 @@
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
     
-  $(class)\:background\:hover:hover {
+  $(class)\:background\:hover:hover, 
+  $(class)\:bg\:hover:hover {
     background-color: rgba($red, $green, $blue, $alpha);
   }
     
@@ -157,7 +159,8 @@
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
     
-  $(class)\:background\:focus:focus {
+  $(class)\:background\:focus:focus, 
+  $(class)\:bg\:focus:focus {
     background-color: rgba($red, $green, $blue, $alpha);
   }
     
@@ -227,7 +230,8 @@
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
     
-  $(class)\:background {
+  $(class)\:background, 
+  $(class)\:bg {
     background-color: rgba($red, $green, $blue, $alpha);
   }
     
@@ -275,5 +279,76 @@
   $(class)\:placeholder::placeholder {
     --text-color: rgba($red, $green, $blue, $alpha);
     color: var(--text-color);
+  }
+}
+
+@define-mixin color-dark $class, $main, $text {
+  $class {
+    color: var(--dark-text-color, $text);
+    background-color: var(--alga-$(main));
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)\:outlined {
+    color: var(--dark-text-color, $main);
+    background-color: var(--alga-transparent);
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)\:filled {
+    color: var(--dark-text-color, $text);
+    background-color: var(--alga-$(main));
+    border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
+  }
+    
+  $(class)\:background, 
+  $(class)\:bg {
+    background-color: var(--alga-$(main));
+  }
+    
+  $(class)\:text {
+    --dark-text-color: var(--alga-$(main));
+    color: var(--dark-text-color);
+  }
+    
+  $(class)\:border {
+    border-color: var(--alga-$(main));
+  }
+    
+  $(class)-top\:border {
+    border-top-color: var(--alga-$(main));
+  }
+    
+  $(class)-right\:border {
+    border-right-color: var(--alga-$(main));
+  }
+    
+  $(class)-bottom\:border {
+    border-bottom-color: var(--alga-$(main));
+  }
+    
+  $(class)-left\:border {
+    border-left-color: var(--alga-$(main));
+  }
+    
+  $(class)\:caret {
+    caret-color: var(--alga-$(main));
+  }
+    
+  $(class)\:outline {
+    outline-color: var(--alga-$(main));
+  }
+    
+  $(class)\:fill {
+    fill: var(--alga-$(main));
+  }
+    
+  $(class)\:stroke {
+    stroke: var(--alga-$(main));
+  }
+    
+  $(class)\:placeholder::placeholder {
+    --dark-text-color: var(--alga-$(main));
+    color: var(--dark-text-color);
   }
 }

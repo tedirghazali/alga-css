@@ -1,0 +1,162 @@
+.bg {
+  background: var(--bg, #fff) !important;
+
+  &-clip {
+    background-clip: var(--bg-clip, border-box) !important;
+  
+    &\:border {
+      background-clip: border-box !important;
+    }
+
+    &\:padding {
+      background-clip: padding-box !important;
+    }
+
+    &\:content {
+      background-clip: content-box !important;
+    }
+
+    &\:text {
+      background-clip: text !important;
+      -webkit-background-clip: text;
+      color: transparent !important;
+    }
+  }
+  
+  &-origin {
+    background-origin: var(--bg-origin, border-box) !important;
+
+    &\:border {
+      background-origin: border-box !important;
+    }
+
+    &\:padding {
+      background-origin: padding-box !important;
+    }
+
+    &\:content {
+      background-origin: content-box !important;
+    }
+  }
+
+  &-attach {
+    background-attachment: var(--bg-attach, scroll) !important;
+
+    &\:scroll {
+      background-attachment: scroll !important;
+    }
+
+    &\:fixed {
+      background-attachment: fixed !important;
+    }
+
+    &\:local {
+      background-attachment: local !important;
+    }
+  }
+
+  &-size {
+    background-size: var(--bg-size, 100%) !important;
+
+    &\:contain {
+      background-size: contain !important;
+    }
+
+    &\:cover {
+      background-size: cover !important;
+    }
+  }
+
+  &-image {
+    background-image: var(--bg-image) !important;
+  }
+
+  &-position {
+    background-position: var(--bg-x, 50%) var(--bg-y, 50%) !important;
+  }
+
+  &\:top {
+    background-position: top !important;
+    
+    &-left {
+      background-position: top var(--bg-y, 50%) left var(--bg-x, 50%) !important;
+    }
+    
+    &-right {
+      background-position: top var(--bg-y, 50%) right var(--bg-x, 50%) !important;
+    }
+  }
+
+  &\:left {
+    background-position: left !important;
+  }
+
+  &\:center {
+    background-position: center !important;
+  }
+
+  &\:right {
+    background-position: right !important;
+  }
+
+  &\:bottom {
+    background-position: bottom !important;
+    
+    &-left {
+      background-position: bottom var(--bg-y, 50%) left var(--bg-x, 50%) !important;
+    }
+    
+    &-right {
+      background-position: bottom var(--bg-y, 50%) right var(--bg-x, 50%) !important;
+    }
+  }
+
+  &-repeat {
+    background-repeat: repeat !important;
+
+    &\:x {
+      background-repeat: repeat-x !important;
+    }
+
+    &\:y {
+      background-repeat: repeat-y !important;
+    }
+
+    &\:no {
+      background-repeat: no-repeat !important;
+    }
+
+    &\:round {
+      background-repeat: round !important;
+    }
+
+    &\:2 {
+      background-repeat: var(--bg-start, repeat) var(--bg-end, repeat) !important;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  @mixin background-screen smaller, xs;
+}
+
+@media (min-width: 768px) {
+  @mixin background-screen small, sm;
+}
+
+@media (min-width: 1024px) {
+  @mixin background-screen medium, md;
+}
+
+@media (min-width: 1280px) { 
+  @mixin background-screen large, lg;
+}
+
+@media (min-width: 1536px) {  
+  @mixin background-screen larger, xl;
+}
+
+@media (min-width: 1920px) {   
+  @mixin background-screen largest, \2xl;
+}
+

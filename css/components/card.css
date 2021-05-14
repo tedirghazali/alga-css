@@ -27,12 +27,12 @@
   display: flex;
   min-width: 0;
   overflow-wrap: break-word;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, var(--opacity, 1));
   background-clip: border;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0,0,0,.125);
+  backdrop-filter: var(--filter, blur(10px));
+  -webkit-backdrop-filter: var(--filter, blur(10px));
+  border: 1px solid var(--alga-border-color, rgba(0, 0, 0, .125));
     
   &-image {
     width: 100%;

@@ -7,8 +7,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, var(--opacity, 1));
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: var(--filter, blur(10px));
+  -webkit-backdrop-filter: var(--filter, blur(10px));
 }

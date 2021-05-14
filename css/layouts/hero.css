@@ -1,0 +1,10 @@
+.hero {
+  min-width: 100%;
+  min-height: 100vh;
+  background: var(--hero-background, #fff);
+  background-origin: border-box;
+
+  &-clip {
+  
+  }
+}

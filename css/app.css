@@ -68,6 +68,7 @@
 @import './utilities/overflow.css';
 @import './utilities/overscroll.css';
 @import './utilities/shadow.css';
+@import './utilities/background.css';
 @import './utilities/border.css';
 @import './utilities/outline.css';
 @import './utilities/list-style.css';

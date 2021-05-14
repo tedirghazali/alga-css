@@ -51975,17 +51975,17 @@ textarea.large\:input {
 
 @media(prefers-color-scheme: dark) {
   [data-dark='true'] .dark {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-dark);
     border-color: var(--alga-dark);
   }
   [data-dark='true'] .dark\:outlined {
-    color: var(--text-color, dark);
+    color: var(--dark-text-color, dark);
     background-color: var(--alga-transparent);
     border-color: var(--alga-dark);
   }
   [data-dark='true'] .dark\:filled {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-dark);
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
@@ -51993,8 +51993,8 @@ textarea.large\:input {
     background-color: var(--alga-dark);
   }
   [data-dark='true'] .dark\:text {
-    --text-color: var(--alga-dark);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-dark);
+    color: var(--dark-text-color);
   }
   [data-dark='true'] .dark\:border {
     border-color: var(--alga-dark);
@@ -52024,32 +52024,32 @@ textarea.large\:input {
     stroke: var(--alga-dark);
   }
   [data-dark='true'] .dark\:placeholder::-moz-placeholder {
-    --text-color: var(--alga-dark);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-dark);
+    color: var(--dark-text-color);
   }
   [data-dark='true'] .dark\:placeholder:-ms-input-placeholder {
-    --text-color: var(--alga-dark);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-dark);
+    color: var(--dark-text-color);
   }
   [data-dark='true'] .dark\:placeholder::placeholder {
-    --text-color: var(--alga-dark);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-dark);
+    color: var(--dark-text-color);
   }
 
   [data-dark='true'] .darker {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-darker);
     border-color: var(--alga-darker);
   }
 
   [data-dark='true'] .darker\:outlined {
-    color: var(--text-color, darker);
+    color: var(--dark-text-color, darker);
     background-color: var(--alga-transparent);
     border-color: var(--alga-darker);
   }
 
   [data-dark='true'] .darker\:filled {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-darker);
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
@@ -52059,8 +52059,8 @@ textarea.large\:input {
   }
 
   [data-dark='true'] .darker\:text {
-    --text-color: var(--alga-darker);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darker);
+    color: var(--dark-text-color);
   }
 
   [data-dark='true'] .darker\:border {
@@ -52100,34 +52100,34 @@ textarea.large\:input {
   }
 
   [data-dark='true'] .darker\:placeholder::-moz-placeholder {
-    --text-color: var(--alga-darker);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darker);
+    color: var(--dark-text-color);
   }
 
   [data-dark='true'] .darker\:placeholder:-ms-input-placeholder {
-    --text-color: var(--alga-darker);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darker);
+    color: var(--dark-text-color);
   }
 
   [data-dark='true'] .darker\:placeholder::placeholder {
-    --text-color: var(--alga-darker);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darker);
+    color: var(--dark-text-color);
   }
 
   [data-dark='true'] .darkest {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-darkest);
     border-color: var(--alga-darkest);
   }
 
   [data-dark='true'] .darkest\:outlined {
-    color: var(--text-color, darkest);
+    color: var(--dark-text-color, darkest);
     background-color: var(--alga-transparent);
     border-color: var(--alga-darkest);
   }
 
   [data-dark='true'] .darkest\:filled {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-darkest);
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
@@ -52137,8 +52137,8 @@ textarea.large\:input {
   }
 
   [data-dark='true'] .darkest\:text {
-    --text-color: var(--alga-darkest);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darkest);
+    color: var(--dark-text-color);
   }
 
   [data-dark='true'] .darkest\:border {
@@ -52178,35 +52178,35 @@ textarea.large\:input {
   }
 
   [data-dark='true'] .darkest\:placeholder::-moz-placeholder {
-    --text-color: var(--alga-darkest);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darkest);
+    color: var(--dark-text-color);
   }
 
   [data-dark='true'] .darkest\:placeholder:-ms-input-placeholder {
-    --text-color: var(--alga-darkest);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darkest);
+    color: var(--dark-text-color);
   }
 
   [data-dark='true'] .darkest\:placeholder::placeholder {
-    --text-color: var(--alga-darkest);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darkest);
+    color: var(--dark-text-color);
   }
 }
 
 [data-mode='dark'] .dark {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-dark);
     border-color: var(--alga-dark);
   }
 
 [data-mode='dark'] .dark\:outlined {
-    color: var(--text-color, dark);
+    color: var(--dark-text-color, dark);
     background-color: var(--alga-transparent);
     border-color: var(--alga-dark);
   }
 
 [data-mode='dark'] .dark\:filled {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-dark);
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
@@ -52216,8 +52216,8 @@ textarea.large\:input {
   }
 
 [data-mode='dark'] .dark\:text {
-    --text-color: var(--alga-dark);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-dark);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .dark\:border {
@@ -52257,34 +52257,34 @@ textarea.large\:input {
   }
 
 [data-mode='dark'] .dark\:placeholder::-moz-placeholder {
-    --text-color: var(--alga-dark);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-dark);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .dark\:placeholder:-ms-input-placeholder {
-    --text-color: var(--alga-dark);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-dark);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .dark\:placeholder::placeholder {
-    --text-color: var(--alga-dark);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-dark);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .darker {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-darker);
     border-color: var(--alga-darker);
   }
 
 [data-mode='dark'] .darker\:outlined {
-    color: var(--text-color, darker);
+    color: var(--dark-text-color, darker);
     background-color: var(--alga-transparent);
     border-color: var(--alga-darker);
   }
 
 [data-mode='dark'] .darker\:filled {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-darker);
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
@@ -52294,8 +52294,8 @@ textarea.large\:input {
   }
 
 [data-mode='dark'] .darker\:text {
-    --text-color: var(--alga-darker);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darker);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .darker\:border {
@@ -52335,34 +52335,34 @@ textarea.large\:input {
   }
 
 [data-mode='dark'] .darker\:placeholder::-moz-placeholder {
-    --text-color: var(--alga-darker);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darker);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .darker\:placeholder:-ms-input-placeholder {
-    --text-color: var(--alga-darker);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darker);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .darker\:placeholder::placeholder {
-    --text-color: var(--alga-darker);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darker);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .darkest {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-darkest);
     border-color: var(--alga-darkest);
   }
 
 [data-mode='dark'] .darkest\:outlined {
-    color: var(--text-color, darkest);
+    color: var(--dark-text-color, darkest);
     background-color: var(--alga-transparent);
     border-color: var(--alga-darkest);
   }
 
 [data-mode='dark'] .darkest\:filled {
-    color: var(--text-color, white);
+    color: var(--dark-text-color, white);
     background-color: var(--alga-darkest);
     border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
   }
@@ -52372,8 +52372,8 @@ textarea.large\:input {
   }
 
 [data-mode='dark'] .darkest\:text {
-    --text-color: var(--alga-darkest);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darkest);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .darkest\:border {
@@ -52413,18 +52413,18 @@ textarea.large\:input {
   }
 
 [data-mode='dark'] .darkest\:placeholder::-moz-placeholder {
-    --text-color: var(--alga-darkest);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darkest);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .darkest\:placeholder:-ms-input-placeholder {
-    --text-color: var(--alga-darkest);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darkest);
+    color: var(--dark-text-color);
   }
 
 [data-mode='dark'] .darkest\:placeholder::placeholder {
-    --text-color: var(--alga-darkest);
-    color: var(--text-color);
+    --dark-text-color: var(--alga-darkest);
+    color: var(--dark-text-color);
   }
 
 .gradient,

@@ -671,12 +671,12 @@
 @mixin color-mixin .lightest, lightest, black;
 
 @media(prefers-color-scheme: dark) {
-  @mixin color-mixin [data-dark='true'] .dark, dark, white;
-  @mixin color-mixin [data-dark='true'] .darker, darker, white;
-  @mixin color-mixin [data-dark='true'] .darkest, darkest, white;
+  @mixin color-dark [data-dark='true'] .dark, dark, white;
+  @mixin color-dark [data-dark='true'] .darker, darker, white;
+  @mixin color-dark [data-dark='true'] .darkest, darkest, white;
 }
 
-@mixin color-mixin [data-mode='dark'] .dark, dark, white;
-@mixin color-mixin [data-mode='dark'] .darker, darker, white;
-@mixin color-mixin [data-mode='dark'] .darkest, darkest, white;
+@mixin color-dark [data-mode='dark'] .dark, dark, white;
+@mixin color-dark [data-mode='dark'] .darker, darker, white;
+@mixin color-dark [data-mode='dark'] .darkest, darkest, white;
 
