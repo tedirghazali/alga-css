@@ -1,173 +1,173 @@
 @define-mixin background-screen $screen1, $screen2 {
-  .$(screen1)\(bg\),
+  .$(screen1)\{bg\},
   .$(screen2)\.bg {
     background: var(--bg, #fff) !important;
   }
 
-  .$(screen1)\(bg-clip\),
-  .$(screen2)\.bg-clip {
-    background-clip: var(--bg-clip, border-box) !important;
+  .$(screen1)\{bgClip\},
+  .$(screen2)\.bgClip {
+    background-clip: var(--bgClip, border-box) !important;
   }
 
-  .$(screen1)\(bg-clip\:border\),
-  .$(screen2)\.bg-clip\:border {
+  .$(screen1)\{bgClipBorder\},
+  .$(screen2)\.bgClipBorder {
     background-clip: border-box !important;
   }
 
-  .$(screen1)\(bg-clip\:padding\),
-  .$(screen2)\.bg-clip\:padding {
+  .$(screen1)\{bgClipPadding\},
+  .$(screen2)\.bgClipPadding {
     background-clip: padding-box !important;
   }
 
-  .$(screen1)\(bg-clip\:content\),
-  .$(screen2)\.bg-clip\:content {
+  .$(screen1)\{bgClipContent\},
+  .$(screen2)\.bgClipContent {
     background-clip: content-box !important;
   }
 
-  .$(screen1)\(bg-clip\:text\),
-  .$(screen2)\.bg-clip\:text {
+  .$(screen1)\{bgClipText\},
+  .$(screen2)\.bgClipText {
     background-clip: text !important;
     -webkit-background-clip: text;
     color: transparent !important;
   }
 
-  .$(screen1)\(bg-origin\:border\),
-  .$(screen2)\.bg-origin\:border {
+  .$(screen1)\{bgOriginBorder\},
+  .$(screen2)\.bgOriginBorder {
     background-origin: border-box !important;
   }
 
-  .$(screen1)\(bg-origin\:padding\),
-  .$(screen2)\.bg-origin\:padding {
+  .$(screen1)\{bgOriginPadding\},
+  .$(screen2)\.bgOriginPadding {
     background-origin: padding-box !important;
   }
 
-  .$(screen1)\(bg-origin\:content\),
-  .$(screen2)\.bg-origin\:content {
+  .$(screen1)\{bgOriginContent\},
+  .$(screen2)\.bgOriginContent {
     background-origin: content-box !important;
   }
 
-  .$(screen1)\(origin\:background\),
-  .$(screen2)\.bg-origin {
-    background-origin: var(--bg-origin, border-box) !important; 
+  .$(screen1)\{bgOrigin\},
+  .$(screen2)\.bgOrigin {
+    background-origin: var(--bgOrigin, border-box) !important; 
   }
 
-  .$(screen1)\(bg-attach\),
-  .$(screen2)\.bg-attach {
-    background-attachment: var(--bg-attach, scroll) !important;
+  .$(screen1)\{bgAttach\},
+  .$(screen2)\.bgAttach {
+    background-attachment: var(--bgAttach, scroll) !important;
   }
 
-  .$(screen1)\(bg-attach\:scroll\),
-  .$(screen2)\.bg-attach\:scroll {
+  .$(screen1)\{bgAttachScroll\},
+  .$(screen2)\.bgAttachScroll {
     background-attachment: scroll !important;
   }
     
-  .$(screen1)\(bg-attach\:fixed\),
-  .$(screen2)\.bg-attach\:fixed {
+  .$(screen1)\{bgAttachFixed\},
+  .$(screen2)\.bgAttachFixed {
     background-attachment: fixed !important;
   }
     
-  .$(screen1)\(bg-attach\:local\),
-  .$(screen2)\.bg-attach\:local {
+  .$(screen1)\{bgAttachLocal\},
+  .$(screen2)\.bgAttachLocal {
     background-attachment: local !important;
   }
 
-  .$(screen1)\(bg-size\),
-  .$(screen2)\.bg-size {
-    background-size: var(--bg-size, 100%) !important;
+  .$(screen1)\{bgSize\},
+  .$(screen2)\.bgSize {
+    background-size: var(--bgSize, 100%) !important;
   }
 
-  .$(screen1)\(bg-size\:contain\),
-  .$(screen2)\.bg-size\:contain {
+  .$(screen1)\{bgSizeContain\},
+  .$(screen2)\.bgSizeContain {
     background-size: contain !important;
   }
 
-  .$(screen1)\(bg-size\:cover\),
-  .$(screen2)\.bg-size\:cover {
+  .$(screen1)\{bgSizeCover\},
+  .$(screen2)\.bgSizeCover {
     background-size: cover !important;
   }
 
-  .$(screen1)\(bg-image\),
-  .$(screen2)\.bg-image {
-    background-image: var(--bg-image) !important;
+  .$(screen1)\{bgImage\},
+  .$(screen2)\.bgImage {
+    background-image: var(--bgImage) !important;
   }
 
-  .$(screen1)\(bg-position\),
-  .$(screen2)\.bg-position {
-    background-position: var(--bg-x, 50%) var(--bg-y, 50%) !important;
+  .$(screen1)\{bgPosition\},
+  .$(screen2)\.bgPosition {
+    background-position: var(--bgPositionStart, 50%) var(--bgPositionStart, 50%) !important;
   }
 
-  .$(screen1)\(bg\:top\),
-  .$(screen2)\.bg\:top {
+  .$(screen1)\{bgTop\},
+  .$(screen2)\.bgTop {
     background-position: top !important;
   }
   
-  .$(screen1)\(bg\:top-left\),
-  .$(screen2)\.bg\:top-left {
-    background-position: top var(--bg-y, 50%) left var(--bg-x, 50%) !important;
+  .$(screen1)\{bgTopLeft\},
+  .$(screen2)\.bgTopLeft {
+    background-position: top var(--bgTop, 50%) left var(--bgLeft, 50%) !important;
   }
     
-  .$(screen1)\(bg\:top-right\),
-  .$(screen2)\.bg\:top-right {
-    background-position: top var(--bg-y, 50%) right var(--bg-x, 50%) !important;
+  .$(screen1)\{bgTopRight\},
+  .$(screen2)\.bgTopRight {
+    background-position: top var(--bgTop, 50%) right var(--bgRight, 50%) !important;
   }
 
-  .$(screen1)\(bg\:left\),
-  .$(screen2)\.bg\:left {
+  .$(screen1)\{bgLeft\},
+  .$(screen2)\.bgLeft {
     background-position: left !important;
   }
 
-  .$(screen1)\(bg\:center\),
-  .$(screen2)\.bg\:center {
+  .$(screen1)\{bgCenter\},
+  .$(screen2)\.bgCenter {
     background-position: center !important;
   }
 
-  .$(screen1)\(bg\:right\),
-  .$(screen2)\.bg\:right {
+  .$(screen1)\{bgRight\},
+  .$(screen2)\.bgRight {
     background-position: right !important;
   }
 
-  .$(screen1)\(bg\:bottom\),
-  .$(screen2)\.bg\:bottom {
+  .$(screen1)\{bgBottom\},
+  .$(screen2)\.bgBottom {
     background-position: bottom !important;
   }
   
-  .$(screen1)\(bg\:bottom-left\),
-  .$(screen2)\.bg\:bottom-left {
-    background-position: bottom var(--bg-y, 50%) left var(--bg-x, 50%) !important;
+  .$(screen1)\{bgBottomLeft\},
+  .$(screen2)\.bgBottomLeft {
+    background-position: bottom var(--bgBottom, 50%) left var(--bgLeft, 50%) !important;
   }
     
-  .$(screen1)\(bg\:bottom-right\),
-  .$(screen2)\.bg\:bottom-right {
-    background-position: bottom var(--bg-y, 50%) right var(--bg-x, 50%) !important;
+  .$(screen1)\{bgBottomRight\},
+  .$(screen2)\.bgBottomRight {
+    background-position: bottom var(--bgBottom, 50%) right var(--bgRight, 50%) !important;
   }
 
-  .$(screen1)\(bg-repeat\),
-  .$(screen2)\.bg-repeat {
+  .$(screen1)\{bgRepeat\},
+  .$(screen2)\.bgRepeat {
     background-repeat: repeat !important;
   }
 
-  .$(screen1)\(bg-repeat\:x\),
-  .$(screen2)\.bg-repeat\:x {
+  .$(screen1)\{bgRepeatX\},
+  .$(screen2)\.bgRepeatX {
     background-repeat: repeat-x !important;
   }
 
-  .$(screen1)\(bg-repeat\:y\),
-  .$(screen2)\.bg-repeat\:y {
+  .$(screen1)\{bgRepeatY\},
+  .$(screen2)\.bgRepeatY {
     background-repeat: repeat-y !important;
   }
 
-  .$(screen1)\(bg-repeat\:no\),
-  .$(screen2)\.bg-repeat\:no {
+  .$(screen1)\{bgRepeatNo\},
+  .$(screen2)\.bgRepeatNo {
     background-repeat: no-repeat !important;
   }
 
-  .$(screen1)\(bg-repeat\:round\),
-  .$(screen2)\.bg-repeat\:round {
+  .$(screen1)\{bgRepeatRound\},
+  .$(screen2)\.bgRepeatRound {
     background-repeat: round !important;
   }
 
-  .$(screen1)\(bg-repeat\:2\),
-  .$(screen2)\.bg-repeat\:2 {
-    background-repeat: var(--bg-start, repeat) var(--bg-end, repeat) !important;
+  .$(screen1)\{bgRepeatDuo\},
+  .$(screen2)\.bgRepeatDuo {
+    background-repeat: var(--bgRepeatStart, repeat) var(--bgRepeatEnd, repeat) !important;
   }
 }

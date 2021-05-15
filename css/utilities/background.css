@@ -1,137 +1,137 @@
 .bg {
   background: var(--bg, #fff) !important;
 
-  &-clip {
-    background-clip: var(--bg-clip, border-box) !important;
+  &Clip {
+    background-clip: var(--bgClip, border-box) !important;
   
-    &\:border {
+    &Border {
       background-clip: border-box !important;
     }
 
-    &\:padding {
+    &Padding {
       background-clip: padding-box !important;
     }
 
-    &\:content {
+    &Content {
       background-clip: content-box !important;
     }
 
-    &\:text {
+    &Text {
       background-clip: text !important;
       -webkit-background-clip: text;
       color: transparent !important;
     }
   }
   
-  &-origin {
-    background-origin: var(--bg-origin, border-box) !important;
+  &Origin {
+    background-origin: var(--bgOrigin, border-box) !important;
 
-    &\:border {
+    &Border {
       background-origin: border-box !important;
     }
 
-    &\:padding {
+    &Padding {
       background-origin: padding-box !important;
     }
 
-    &\:content {
+    &Content {
       background-origin: content-box !important;
     }
   }
 
-  &-attach {
-    background-attachment: var(--bg-attach, scroll) !important;
+  &Attach {
+    background-attachment: var(--bgAttach, scroll) !important;
 
-    &\:scroll {
+    &Scroll {
       background-attachment: scroll !important;
     }
 
-    &\:fixed {
+    &Fixed {
       background-attachment: fixed !important;
     }
 
-    &\:local {
+    &Local {
       background-attachment: local !important;
     }
   }
 
-  &-size {
-    background-size: var(--bg-size, 100%) !important;
+  &Size {
+    background-size: var(--bgSize, 100%) !important;
 
-    &\:contain {
+    &Contain {
       background-size: contain !important;
     }
 
-    &\:cover {
+    &Cover {
       background-size: cover !important;
     }
   }
 
-  &-image {
-    background-image: var(--bg-image) !important;
+  &Image {
+    background-image: var(--bgImage) !important;
   }
 
-  &-position {
-    background-position: var(--bg-x, 50%) var(--bg-y, 50%) !important;
+  &Position {
+    background-position: var(--bgPositionStart, 50%) var(--bgPositionEnd, 50%) !important;
   }
 
-  &\:top {
+  &Top {
     background-position: top !important;
     
-    &-left {
-      background-position: top var(--bg-y, 50%) left var(--bg-x, 50%) !important;
+    &Left {
+      background-position: top var(--bgTop, 50%) left var(--bgLeft, 50%) !important;
     }
     
-    &-right {
-      background-position: top var(--bg-y, 50%) right var(--bg-x, 50%) !important;
+    &Right {
+      background-position: top var(--bgTop, 50%) right var(--bgRight, 50%) !important;
     }
   }
 
-  &\:left {
+  &Left {
     background-position: left !important;
   }
 
-  &\:center {
+  &Center {
     background-position: center !important;
   }
 
-  &\:right {
+  &Right {
     background-position: right !important;
   }
 
-  &\:bottom {
+  &Bottom {
     background-position: bottom !important;
     
-    &-left {
-      background-position: bottom var(--bg-y, 50%) left var(--bg-x, 50%) !important;
+    &Left {
+      background-position: bottom var(--bgBottom, 50%) left var(--bgLeft, 50%) !important;
     }
     
-    &-right {
-      background-position: bottom var(--bg-y, 50%) right var(--bg-x, 50%) !important;
+    &Right {
+      background-position: bottom var(--bgBottom, 50%) right var(--bgRight, 50%) !important;
     }
   }
 
-  &-repeat {
+  &Repeat {
     background-repeat: repeat !important;
 
-    &\:x {
+    &X {
       background-repeat: repeat-x !important;
     }
 
-    &\:y {
+    &Y {
       background-repeat: repeat-y !important;
     }
 
-    &\:no {
+    &No {
       background-repeat: no-repeat !important;
     }
 
-    &\:round {
+    &Round {
       background-repeat: round !important;
     }
 
-    &\:2 {
-      background-repeat: var(--bg-start, repeat) var(--bg-end, repeat) !important;
+    &Duo {
+      background-repeat: var(--bgRepeatStart, repeat) var(--bgRepeatEnd, repeat) !important;
     }
   }
 }
