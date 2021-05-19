@@ -1,354 +1,209 @@
 @define-mixin color-mixin $class, $main, $text {
-  $class {
-    color: var(--text-color, $text);
-    background-color: var(--alga-$(main));
-    border-color: var(--alga-$(main));
+  .$(main) {
+    color: var(--txtColor, $text);
+    background-color: var(--$(main));
+    border-color: var(--$(main));
   }
     
-  $(class)\:outlined {
-    color: var(--text-color, $main);
-    background-color: var(--alga-transparent);
-    border-color: var(--alga-$(main));
+  .outlined$(class) {
+    color: var(--txtColor, $main);
+    background-color: var(--transparent);
+    border-color: var(--$(main));
   }
     
-  $(class)\:filled {
-    color: var(--text-color, $text);
-    background-color: var(--alga-$(main));
-    border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
+  .filled$(class) {
+    color: var(--txtColor, $text);
+    background-color: var(--$(main));
+    border-color: var(--$(main))
   }
     
-  $(class)\:background, 
-  $(class)\:bg {
-    background-color: var(--alga-$(main));
+  .bg$(class) {
+    background-color: var(--$(main));
   }
     
-  $(class)\:text {
-    --text-color: var(--alga-$(main));
-    color: var(--text-color);
+  .txt$(class) {
+    --txtColor: var(--$(main));
+    color: var(--txtColor);
   }
     
-  $(class)\:border {
-    border-color: var(--alga-$(main));
+  .bd$(class) {
+    border-color: var(--$(main));
   }
     
-  $(class)-top\:border {
-    border-top-color: var(--alga-$(main));
+  .bdTop$(class) {
+    border-top-color: var(--$(main));
   }
     
-  $(class)-right\:border {
-    border-right-color: var(--alga-$(main));
+  .bdRight$(class) {
+    border-right-color: var(--$(main));
   }
     
-  $(class)-bottom\:border {
-    border-bottom-color: var(--alga-$(main));
+  .bdBottom$(class) {
+    border-bottom-color: var(--$(main));
   }
     
-  $(class)-left\:border {
-    border-left-color: var(--alga-$(main));
+  .bdLeft$(class) {
+    border-left-color: var(--$(main));
   }
     
-  $(class)\:caret {
-    caret-color: var(--alga-$(main));
+  .caret$(class) {
+    caret-color: var(--$(main));
   }
     
-  $(class)\:outline {
-    outline-color: var(--alga-$(main));
+  .outline$(class) {
+    outline-color: var(--$(main));
   }
     
-  $(class)\:fill {
-    fill: var(--alga-$(main));
+  .fill$(class) {
+    fill: var(--$(main));
   }
     
-  $(class)\:stroke {
-    stroke: var(--alga-$(main));
+  .stroke$(class) {
+    stroke: var(--$(main));
   }
     
-  $(class)\:placeholder::placeholder {
-    --text-color: var(--alga-$(main));
-    color: var(--text-color);
+  .placeholder$(class)::placeholder {
+    --txtColor: var(--$(main));
+    color: var(--txtColor);
   }
 }
 
-@define-mixin color-hover $class, $red, $green, $blue, $alpha, $text {
-  $(class)\:hover:hover {
-    color: var(--text-color, $text);
-    background-color: rgba($red, $green, $blue, $alpha);
-    border-color: rgba($red, $green, $blue, $alpha);
+@define-mixin color-state $class, $state, $main, $text {
+  .$(main)\.$(state):$(state) {
+    color: var(--txtColor, $text);
+    background-color: var(--$(main));
+    border-color: var(--$(main));
   }
     
-  $(class)\:outlined\:hover:hover {
-    color: var(--text-color, rgba($red, $green, $blue, $alpha));
-    background-color: var(--alga-transparent);
-    border-color: rgba($red, $green, $blue, $alpha);
+  .outlined$(class)\.$(state):$(state) {
+    color: var(--txtColor, $main);
+    background-color: var(--transparent);
+    border-color: var(--$(main));
   }
     
-  $(class)\:filled\:hover:hover {
-    color: var(--text-color, $text);
-    background-color: rgba($red, $green, $blue, $alpha);
-    border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
+  .filled$(class)\.$(state):$(state) {
+    color: var(--txtColor, $text);
+    background-color: var(--$(main));
+    border-color: var(--$(main))
   }
     
-  $(class)\:background\:hover:hover, 
-  $(class)\:bg\:hover:hover {
-    background-color: rgba($red, $green, $blue, $alpha);
+  .bg$(class)\.$(state):$(state) {
+    background-color: var(--$(main));
   }
     
-  $(class)\:text\:hover:hover {
-    --text-color: rgba($red, $green, $blue, $alpha);
-    color: var(--text-color);
+  .txt$(class)\.$(state):$(state) {
+    --txtColor: var(--$(main));
+    color: var(--txtColor);
   }
     
-  $(class)\:border\:hover:hover {
-    border-color: rgba($red, $green, $blue, $alpha);
+  .bd$(class)\.$(state):$(state) {
+    border-color: var(--$(main));
   }
     
-  $(class)-top\:border\:hover:hover {
-    border-top-color: rgba($red, $green, $blue, $alpha);
+  .bdTop$(class)\.$(state):$(state) {
+    border-top-color: var(--$(main));
   }
     
-  $(class)-right\:border\:hover:hover {
-    border-right-color: rgba($red, $green, $blue, $alpha);
+  .bdRight$(class)\.$(state):$(state) {
+    border-right-color: var(--$(main));
   }
     
-  $(class)-bottom\:border\:hover:hover {
-    border-bottom-color: rgba($red, $green, $blue, $alpha);
+  .bdBottom$(class)\.$(state):$(state) {
+    border-bottom-color: var(--$(main));
   }
     
-  $(class)-left\:border\:hover:hover {
-    border-left-color: rgba($red, $green, $blue, $alpha);
+  .bdLeft$(class)\.$(state):$(state) {
+    border-left-color: var(--$(main));
   }
     
-  $(class)\:caret\:hover:hover {
-    caret-color: rgba($red, $green, $blue, $alpha);
+  .caret$(class)\.$(state):$(state) {
+    caret-color: var(--$(main));
   }
     
-  $(class)\:outline\:hover:hover {
-    outline-color: rgba($red, $green, $blue, $alpha);
+  .outline$(class)\.$(state):$(state) {
+    outline-color: var(--$(main));
   }
     
-  $(class)\:fill\:hover:hover {
-    fill: rgba($red, $green, $blue, $alpha);
+  .fill$(class)\.$(state):$(state) {
+    fill: var(--$(main));
   }
     
-  $(class)\:stroke\:hover:hover {
-    stroke: rgba($red, $green, $blue, $alpha);
-  }  
-  
-  $(class)\:placeholder\:hover:hover::placeholder {
-    --text-color: rgba($red, $green, $blue, $alpha);
-    color: var(--text-color);
-  }
-}
-
-@define-mixin color-focus $class, $red, $green, $blue, $alpha, $text {
-  $(class)\:focus:focus {
-    color: var(--text-color, $text);
-    background-color: rgba($red, $green, $blue, $alpha);
-    border-color: rgba($red, $green, $blue, $alpha);
+  .stroke$(class)\.$(state):$(state) {
+    stroke: var(--$(main));
   }
     
-  $(class)\:outlined\:focus:focus {
-    color: var(--text-color, rgba($red, $green, $blue, $alpha));
-    background-color: var(--alga-transparent);
-    border-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:filled\:focus:focus {
-    color: var(--text-color, $text);
-    background-color: rgba($red, $green, $blue, $alpha);
-    border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
-  }
-    
-  $(class)\:background\:focus:focus, 
-  $(class)\:bg\:focus:focus {
-    background-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:text\:focus:focus {
-    --text-color: rgba($red, $green, $blue, $alpha);
-    color: var(--text-color);
-  }
-    
-  $(class)\:border\:focus:focus {
-    border-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)-top\:border\:focus:focus {
-    border-top-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)-right\:border\:focus:focus {
-    border-right-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)-bottom\:border\:focus:focus {
-    border-bottom-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)-left\:border\:focus:focus {
-    border-left-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:caret\:focus:focus {
-    caret-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:outline\:focus:focus {
-    outline-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:fill\:focus:focus {
-    fill: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:stroke\:focus:focus {
-    stroke: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:placeholder\:focus:focus::placeholder {
-    --text-color: rgba($red, $green, $blue, $alpha);
-    color: var(--text-color);
-  }
-}
-
-@define-mixin color-opacity $class, $red, $green, $blue, $alpha, $text {
-  $class {
-    color: var(--text-color, $text);
-    background-color: rgba($red, $green, $blue, $alpha);
-    border-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:outlined {
-    color: var(--text-color, rgba($red, $green, $blue, $alpha));
-    background-color: var(--alga-transparent);
-    border-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:filled {
-    color: var(--text-color, $text);
-    background-color: rgba($red, $green, $blue, $alpha);
-    border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
-  }
-    
-  $(class)\:background, 
-  $(class)\:bg {
-    background-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:text {
-    --text-color: rgba($red, $green, $blue, $alpha);
-    color: var(--text-color);
-  }
-    
-  $(class)\:border {
-    border-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)-top\:border {
-    border-top-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)-right\:border {
-    border-right-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)-bottom\:border {
-    border-bottom-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)-left\:border {
-    border-left-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:caret {
-    caret-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:outline {
-    outline-color: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:fill {
-    fill: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:stroke {
-    stroke: rgba($red, $green, $blue, $alpha);
-  }
-    
-  $(class)\:placeholder::placeholder {
-    --text-color: rgba($red, $green, $blue, $alpha);
-    color: var(--text-color);
+  .placeholder$(class)\.$(state):$(state)::placeholder {
+    --txtColor: var(--$(main));
+    color: var(--txtColor);
   }
 }
 
 @define-mixin color-dark $class, $main, $text {
   $class {
-    color: var(--dark-text-color, $text);
-    background-color: var(--alga-$(main));
-    border-color: var(--alga-$(main));
+    color: var(--txtDarkColor, $text);
+    background-color: var(--$(main));
+    border-color: var(--$(main));
   }
     
-  $(class)\:outlined {
-    color: var(--dark-text-color, $main);
-    background-color: var(--alga-transparent);
-    border-color: var(--alga-$(main));
+  .outlined$(class) {
+    color: var(--txtDarkColor, $main);
+    background-color: var(--transparent);
+    border-color: var(--$(main));
   }
     
-  $(class)\:filled {
-    color: var(--dark-text-color, $text);
-    background-color: var(--alga-$(main));
-    border-color: rgba($red, $green, $blue, calc($alpha + 0.15));
+  .filled$(class) {
+    color: var(--txtDarkColor, $text);
+    background-color: var(--$(main));
+    border-color: var(--$(main));
   }
     
-  $(class)\:background, 
-  $(class)\:bg {
-    background-color: var(--alga-$(main));
+  .bg$(class) {
+    background-color: var(--$(main));
   }
     
-  $(class)\:text {
-    --dark-text-color: var(--alga-$(main));
-    color: var(--dark-text-color);
+  .txt$(class) {
+    --txtDarkColor: var(--$(main));
+    color: var(--txtDarkColor);
   }
     
-  $(class)\:border {
-    border-color: var(--alga-$(main));
+  .bd$(class) {
+    border-color: var(--$(main));
   }
     
-  $(class)-top\:border {
-    border-top-color: var(--alga-$(main));
+  ..bdTop$(class) {
+    border-top-color: var(--$(main));
   }
     
-  $(class)-right\:border {
-    border-right-color: var(--alga-$(main));
+  .bdRight$(class) {
+    border-right-color: var(--$(main));
   }
     
-  $(class)-bottom\:border {
-    border-bottom-color: var(--alga-$(main));
+  .bdBottom$(class) {
+    border-bottom-color: var(--$(main));
   }
     
-  $(class)-left\:border {
-    border-left-color: var(--alga-$(main));
+  .bdLeft$(class) {
+    border-left-color: var(--$(main));
   }
     
-  $(class)\:caret {
-    caret-color: var(--alga-$(main));
+  .caret$(class) {
+    caret-color: var(--$(main));
   }
     
-  $(class)\:outline {
-    outline-color: var(--alga-$(main));
+  .outline$(class) {
+    outline-color: var(--$(main));
   }
     
-  $(class)\:fill {
-    fill: var(--alga-$(main));
+  .fill$(class) {
+    fill: var(--$(main));
   }
     
-  $(class)\:stroke {
-    stroke: var(--alga-$(main));
+  .stroke$(class) {
+    stroke: var(--$(main));
   }
     
-  $(class)\:placeholder::placeholder {
-    --dark-text-color: var(--alga-$(main));
-    color: var(--dark-text-color);
+  .placeholder$(class)::placeholder {
+    --txtDarkColor: var(--$(main));
+    color: var(--txtDarkColor);
   }
 }

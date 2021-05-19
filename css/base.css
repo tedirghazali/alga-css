@@ -1,37 +1,37 @@
 :root {
   /* These colors are based on RGB version of Bootstrap 5 colors */
-  --alga-primary: rgb(13, 110, 253);
-  --alga-secondary: rgb(108, 117, 125);
-  --alga-accent: rgb(179, 27, 148);
-  --alga-success: rgb(25, 135, 84);
-  --alga-info: rgb(13, 202, 240);
-  --alga-warning: rgb(255, 193, 7);
-  --alga-danger: rgb(220, 53, 69);
-  --alga-black: rgb(0, 0, 0);
-  --alga-white: rgb(255, 255, 255);
-  --alga-transparent: transparent;
-  --alga-current: currentColor;
-  --alga-blue: rgb(13, 110, 253);
-  --alga-indigo: rgb(102, 16, 242);
-  --alga-purple: rgb(111, 66, 193);
-  --alga-pink: rgb(214, 51, 132);
-  --alga-red: rgb(220, 53, 69);
-  --alga-orange: rgb(253, 126, 20);
-  --alga-yellow: rgb(255, 193, 7);
-  --alga-green: rgb(25, 135, 84);
-  --alga-teal: rgb(32, 201, 151);
-  --alga-cyan: rgb(13, 202, 240);
-  --alga-gray: rgb(108, 117, 125);
-  --alga-dark: rgb(51, 51, 51);
-  --alga-darker: rgb(28, 28, 28);
-  --alga-darkest: rgb(22, 22, 22);
-  --alga-light: #fafafa;
-  --alga-lighter: #f8f9fa;
-  --alga-lightest: #efeff1;
-  /*--alga-text-color: var(--alga-black);
-  --alga-background-color: var(--alga-white);*/
-  --alga-border-color: rgba(0, 0, 0, .09);
-  /*--alga-border-style: hidden, dotted, dashed, solid, double, groove, ridge, inset, outset;*/
+  --primary: rgba(13, 110, 253, var(--bgOpacity, 1));
+  --secondary: rgba(108, 117, 125, var(--bgOpacity, 1));
+  --accent: rgba(179, 27, 148, var(--bgOpacity, 1));
+  --success: rgba(25, 135, 84, var(--bgOpacity, 1));
+  --info: rgba(13, 202, 240, var(--bgOpacity, 1));
+  --warning: rgba(255, 193, 7, var(--bgOpacity, 1));
+  --danger: rgba(220, 53, 69, var(--bgOpacity, 1));
+  --black: rgba(0, 0, 0, var(--bgOpacity, 1));
+  --white: rgba(255, 255, 255, var(--bgOpacity, 1));
+  --transparent: transparent;
+  --current: currentColor;
+  --blue: rgba(13, 110, 253, var(--bgOpacity, 1));
+  --indigo: rgba(102, 16, 242, var(--bgOpacity, 1));
+  --purple: rgba(111, 66, 193, var(--bgOpacity, 1));
+  --pink: rgba(214, 51, 132, var(--bgOpacity, 1));
+  --red: rgba(220, 53, 69, var(--bgOpacity, 1));
+  --orange: rgba(253, 126, 20, var(--bgOpacity, 1));
+  --yellow: rgba(255, 193, 7, var(--bgOpacity, 1));
+  --green: rgba(25, 135, 84, var(--bgOpacity, 1));
+  --teal: rgba(32, 201, 151, var(--bgOpacity, 1));
+  --cyan: rgba(13, 202, 240, var(--bgOpacity, 1));
+  --gray: rgba(108, 117, 125, var(--bgOpacity, 1));
+  --dark: rgba(51, 51, 51, var(--bgOpacity, 1));
+  --darker: rgba(28, 28, 28, var(--bgOpacity, 1));
+  --darkest: rgba(22, 22, 22, var(--bgOpacity, 1));
+  --light: #fafafa;
+  --lighter: #f8f9fa;
+  --lightest: #efeff1;
+  /*--txtColor: var(--black);
+  --bgColor: var(--white);*/
+  --bdColor: rgba(0, 0, 0, .09);
+  /*--bdStyle: hidden, dotted, dashed, solid, double, groove, ridge, inset, outset;*/
 }
 
 *, *::before, *::after {

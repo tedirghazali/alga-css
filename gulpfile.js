@@ -30,12 +30,12 @@ function css() {
       require('autoprefixer'),
       require('postcss-header')({ header })
     ]))
-    .pipe(rename("alga.css"))
+    .pipe(rename("alga-v1.css"))
     .pipe(dest('./dist/', { sourcemaps: '.' }))
 }
 
 function cssMin() {
-  return src('dist/alga.css')
+  return src('dist/alga-v1.css')
     .pipe(cleanCSS({ level: { 1: { specialComments: 0 } } }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(dest('./dist/'))

@@ -1,57 +1,67 @@
-@mixin padding-mixin .padding, padding;
-@mixin padding-double .y\:padding, padding-top, padding-bottom;
-@mixin padding-double .x\:padding, padding-right, padding-left;
-@mixin padding-mixin .top\:padding, padding-top;
-@mixin padding-mixin .right\:padding, padding-right;
-@mixin padding-mixin .bottom\:padding, padding-bottom;
-@mixin padding-mixin .left\:padding, padding-left;
+@mixin padding-mixin .pd, padding;
+@mixin padding-double .pdY, padding-top, padding-bottom;
+@mixin padding-double .pdX, padding-right, padding-left;
+@mixin padding-mixin .pdTop, padding-top;
+@mixin padding-mixin .pdRight, padding-right;
+@mixin padding-mixin .pdBottom, padding-bottom;
+@mixin padding-mixin .pdLeft, padding-left;
 
 @media (min-width: 640px) {
-  @mixin padding-mixin .small\(padding\), padding;
-  @mixin padding-double .small\(y\:padding\), padding-top, padding-bottom;
-  @mixin padding-double .small\(x\:padding\), padding-right, padding-left;
-  @mixin padding-mixin .small\(top\:padding\), padding-top;
-  @mixin padding-mixin .small\(right\:padding\), padding-right;
-  @mixin padding-mixin .small\(bottom\:padding\), padding-bottom;
-  @mixin padding-mixin .small\(left\:padding\), padding-left;
+  @mixin padding-mixin .xs\.pd, padding;
+  @mixin padding-double .xs\.pdY, padding-top, padding-bottom;
+  @mixin padding-double .xs\.pdX, padding-right, padding-left;
+  @mixin padding-mixin .xs\.pdTop, padding-top;
+  @mixin padding-mixin .xs\.pdRight, padding-right;
+  @mixin padding-mixin .xs\.pdBottom, padding-bottom;
+  @mixin padding-mixin .xs\.pdLeft, padding-left;
 }
 
 @media (min-width: 768px) {
-  @mixin padding-mixin .medium\(padding\), padding;
-  @mixin padding-double .medium\(y\:padding\), padding-top, padding-bottom;
-  @mixin padding-double .medium\(x\:padding\), padding-right, padding-left;
-  @mixin padding-mixin .medium\(top\:padding\), padding-top;
-  @mixin padding-mixin .medium\(right\:padding\), padding-right;
-  @mixin padding-mixin .medium\(bottom\:padding\), padding-bottom;
-  @mixin padding-mixin .medium\(left\:padding\), padding-left;
+  @mixin padding-mixin .sm\.pd, padding;
+  @mixin padding-double .sm\.pdY, padding-top, padding-bottom;
+  @mixin padding-double .sm\.pdX, padding-right, padding-left;
+  @mixin padding-mixin .sm\.pdTop, padding-top;
+  @mixin padding-mixin .sm\.pdRight, padding-right;
+  @mixin padding-mixin .sm\.pdBottom, padding-bottom;
+  @mixin padding-mixin .sm\.pdLeft, padding-left;
 }
 
 @media (min-width: 1024px) {
-  @mixin padding-mixin .large\(padding\), padding;
-  @mixin padding-double .large\(y\:padding\), padding-top, padding-bottom;
-  @mixin padding-double .large\(x\:padding\), padding-right, padding-left;
-  @mixin padding-mixin .large\(top\:padding\), padding-top;
-  @mixin padding-mixin .large\(right\:padding\), padding-right;
-  @mixin padding-mixin .large\(bottom\:padding\), padding-bottom;
-  @mixin padding-mixin .large\(left\:padding\), padding-left;
+  @mixin padding-mixin .md\.pd, padding;
+  @mixin padding-double .md\.pdY, padding-top, padding-bottom;
+  @mixin padding-double .md\.pdX, padding-right, padding-left;
+  @mixin padding-mixin .md\.pdTop, padding-top;
+  @mixin padding-mixin .md\.pdRight, padding-right;
+  @mixin padding-mixin .md\.pdBottom, padding-bottom;
+  @mixin padding-mixin .md\.pdLeft, padding-left;
 }
 
 @media (min-width: 1280px) {
-  @mixin padding-mixin .larger\(padding\), padding;
-  @mixin padding-double .larger\(y\:padding\), padding-top, padding-bottom;
-  @mixin padding-double .larger\(x\:padding\), padding-right, padding-left;
-  @mixin padding-mixin .larger\(top\:padding\), padding-top;
-  @mixin padding-mixin .larger\(right\:padding\), padding-right;
-  @mixin padding-mixin .larger\(bottom\:padding\), padding-bottom;
-  @mixin padding-mixin .larger\(left\:padding\), padding-left;
+  @mixin padding-mixin .lg\.pd, padding;
+  @mixin padding-double .lg\.pdY, padding-top, padding-bottom;
+  @mixin padding-double .lg\.pdX, padding-right, padding-left;
+  @mixin padding-mixin .lg\.pdTop, padding-top;
+  @mixin padding-mixin .lg\.pdRight, padding-right;
+  @mixin padding-mixin .lg\.pdBottom, padding-bottom;
+  @mixin padding-mixin .lg\.pdLeft, padding-left;
 }
 
 @media (min-width: 1536px) {
-  @mixin padding-mixin .largest\(padding\), padding;
-  @mixin padding-double .largest\(y\:padding\), padding-top, padding-bottom;
-  @mixin padding-double .largest\(x\:padding\), padding-right, padding-left;
-  @mixin padding-mixin .largest\(top\:padding\), padding-top;
-  @mixin padding-mixin .largest\(right\:padding\), padding-right;
-  @mixin padding-mixin .largest\(bottom\:padding\), padding-bottom;
-  @mixin padding-mixin .largest\(left\:padding\), padding-left;
+  @mixin padding-mixin .xl\.pd, padding;
+  @mixin padding-double .xl\.pdY, padding-top, padding-bottom;
+  @mixin padding-double .xl\.pdX, padding-right, padding-left;
+  @mixin padding-mixin .xl\.pdTop, padding-top;
+  @mixin padding-mixin .xl\.pdRight, padding-right;
+  @mixin padding-mixin .xl\.pdBottom, padding-bottom;
+  @mixin padding-mixin .xl\.pdLeft, padding-left;
+}
+
+@media (min-width: 1920px) {
+  @mixin padding-mixin .\2xl\.pd, padding;
+  @mixin padding-double .\2xl\.pdY, padding-top, padding-bottom;
+  @mixin padding-double .\2xl\.pdX, padding-right, padding-left;
+  @mixin padding-mixin .\2xl\.pdTop, padding-top;
+  @mixin padding-mixin .\2xl\.pdRight, padding-right;
+  @mixin padding-mixin .\2xl\.pdBottom, padding-bottom;
+  @mixin padding-mixin .\2xl\.pdLeft, padding-left;
 }

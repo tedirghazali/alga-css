@@ -5,221 +5,259 @@
 .sticky { position: relative; will-change: transform; }
 
 @mixin position-percent .left, left;
-@mixin position-pixel .px\:left, left;
-@mixin position-mixin .rem\:left, left;
+@mixin position-pixel .pxLeft, left;
+@mixin position-mixin .remLeft, left;
 
 @mixin position-percent .right, right;
-@mixin position-pixel .px\:right, right;
-@mixin position-mixin .rem\:right, right;
+@mixin position-pixel .pxRight, right;
+@mixin position-mixin .remRight, right;
 
 @mixin position-percent .top, top;
-@mixin position-pixel .px\:top, top;
-@mixin position-mixin .rem\:top, top;
+@mixin position-pixel .pxTop, top;
+@mixin position-mixin .remTop, top;
 
 @mixin position-percent .bottom, bottom;
-@mixin position-pixel .px\:bottom, bottom;
-@mixin position-mixin .rem\:bottom, bottom;
+@mixin position-pixel .pxBottom, bottom;
+@mixin position-mixin .remBottom, bottom;
 
-@mixin position-double .start-top, top, left;
-@mixin position-pixels .px\:start-top, top, left;
-@mixin position-rems .rem\:start-top, top, left;
-@mixin position-double .start-bottom, bottom, left;
-@mixin position-pixels .px\:start-bottom, bottom, left;
-@mixin position-rems .rem\:start-bottom, bottom, left;
+@mixin position-double .topLeft, top, left;
+@mixin position-pixels .pxTopLeft, top, left;
+@mixin position-rems .remTopLeft, top, left;
+@mixin position-double .bottomLeft, bottom, left;
+@mixin position-pixels .pxBottomLeft, bottom, left;
+@mixin position-rems .remBottomLeft, bottom, left;
 
-@mixin position-double .end-top, top, right;
-@mixin position-pixels .px\:end-top, top, right;
-@mixin position-rems .rem\:end-top, top, right;
-@mixin position-double .end-bottom, bottom, right;
-@mixin position-pixels .px\:end-bottom, bottom, right;
-@mixin position-rems .rem\:end-bottom, bottom, right;
+@mixin position-double .topRight, top, right;
+@mixin position-pixels .pxTopRight, top, right;
+@mixin position-rems .remTopRight, top, right;
+@mixin position-double .bottomRight, bottom, right;
+@mixin position-pixels .pxBottomRight, bottom, right;
+@mixin position-rems .remBottomRight, bottom, right;
 
 @media (min-width: 640px) {
-  .small\(absolute\) { position: absolute; }
-  .small\(relative\) { position: relative; }
-  .small\(static\) { position: static; }
-  .small\(fixed\) { position: fixed; will-change: transform; }
-  .small\(sticky\) { position: relative; will-change: transform; }
+  .xs\.absolute { position: absolute; }
+  .xs\.relative { position: relative; }
+  .xs\.static { position: static; }
+  .xs\.fixed { position: fixed; will-change: transform; }
+  .xs\.sticky { position: relative; will-change: transform; }
 
-  @mixin position-percent .small\(left\), left;
-  @mixin position-pixel .small\(px\:left\), left;
-  @mixin position-mixin .small\(rem\:left\), left;
+  @mixin position-percent .xs\.left, left;
+  @mixin position-pixel .xs\.pxLeft, left;
+  @mixin position-mixin .xs\.remLeft, left;
 
-  @mixin position-percent .small\(right\), right;
-  @mixin position-pixel .small\(px\:right\), right;
-  @mixin position-mixin .small\(rem\:right\), right;
+  @mixin position-percent .xs\.right, right;
+  @mixin position-pixel .xs\.pxRight, right;
+  @mixin position-mixin .xs\.remRight, right;
 
-  @mixin position-percent .small\(top\), top;
-  @mixin position-pixel .small\(px\:top\), top;
-  @mixin position-mixin .small\(rem\:top\), top;
+  @mixin position-percent .xs\.top, top;
+  @mixin position-pixel .xs\.pxTop, top;
+  @mixin position-mixin .xs\.remTop, top;
 
-  @mixin position-percent .small\(bottom\), bottom;
-  @mixin position-pixel .small\(px\:bottom\), bottom;
-  @mixin position-mixin .small\(rem\:bottom\), bottom;
+  @mixin position-percent .xs\.bottom, bottom;
+  @mixin position-pixel .xs\.pxBottom, bottom;
+  @mixin position-mixin .xs\.remBottom, bottom;
 
-  @mixin position-double .small\(start-top\), top, left;
-  @mixin position-pixels .small\(px\:start-top\), top, left;
-  @mixin position-rems .small\(rem\:start-top\), top, left;
-  @mixin position-double .small\(start-bottom\), bottom, left;
-  @mixin position-pixels .small\(px\:start-bottom\), bottom, left;
-  @mixin position-rems .small\(rem\:start-bottom\), bottom, left;
+  @mixin position-double .xs\.topLeft, top, left;
+  @mixin position-pixels .xs\.pxTopLeft, top, left;
+  @mixin position-rems .xs\.remTopLeft, top, left;
+  @mixin position-double .xs\.bottomLeft, bottom, left;
+  @mixin position-pixels .xs\.pxBottomLeft, bottom, left;
+  @mixin position-rems .xs\.remBottomLeft, bottom, left;
 
-  @mixin position-double .small\(end-top\), top, right;
-  @mixin position-pixels .small\(px\:end-top\), top, right;
-  @mixin position-rems .small\(rem\:end-top\), top, right;
-  @mixin position-double .small\(end-bottom\), bottom, right;
-  @mixin position-pixels .small\(px\:end-bottom\), bottom, right;
-  @mixin position-rems .small\(rem\:end-bottom\), bottom, right;
+  @mixin position-double .xs\.topRight, top, right;
+  @mixin position-pixels .xs\.pxTopRight, top, right;
+  @mixin position-rems .xs\.remTopRight, top, right;
+  @mixin position-double .xs\.bottomRight, bottom, right;
+  @mixin position-pixels .xs\.pxBottomRight, bottom, right;
+  @mixin position-rems .xs\.remBottomRight, bottom, right;
 }
 
 @media (min-width: 768px) {
-  .medium\(absolute\) { position: absolute; }
-  .medium\(relative\) { position: relative; }
-  .medium\(static\) { position: static; }
-  .medium\(fixed\) { position: fixed; will-change: transform; }
-  .medium\(sticky\) { position: relative; will-change: transform; }
+  .sm\.absolute { position: absolute; }
+  .sm\.relative { position: relative; }
+  .sm\.static { position: static; }
+  .sm\.fixed { position: fixed; will-change: transform; }
+  .sm\.sticky { position: relative; will-change: transform; }
 
-  @mixin position-percent .medium\(left\), left;
-  @mixin position-pixel .medium\(px\:left\), left;
-  @mixin position-mixin .medium\(rem\:left\), left;
+  @mixin position-percent .sm\.left, left;
+  @mixin position-pixel .sm\.pxLeft, left;
+  @mixin position-mixin .sm\.remLeft, left;
 
-  @mixin position-percent .medium\(right\), right;
-  @mixin position-pixel .medium\(px\:right\), right;
-  @mixin position-mixin .medium\(rem\:right\), right;
+  @mixin position-percent .sm\.right, right;
+  @mixin position-pixel .sm\.pxRight, right;
+  @mixin position-mixin .sm\.remRight, right;
 
-  @mixin position-percent .medium\(top\), top;
-  @mixin position-pixel .medium\(px\:top\), top;
-  @mixin position-mixin .medium\(rem\:top\), top;
+  @mixin position-percent .sm\.top, top;
+  @mixin position-pixel .sm\.pxTop, top;
+  @mixin position-mixin .sm\.remTop, top;
 
-  @mixin position-percent .medium\(bottom\), bottom;
-  @mixin position-pixel .medium\(px\:bottom\), bottom;
-  @mixin position-mixin .medium\(rem\:bottom\), bottom;
+  @mixin position-percent .sm\.bottom, bottom;
+  @mixin position-pixel .sm\.pxBottom, bottom;
+  @mixin position-mixin .sm\.remBottom, bottom;
 
-  @mixin position-double .medium\(start-top\), top, left;
-  @mixin position-pixels .medium\(px\:start-top\), top, left;
-  @mixin position-rems .medium\(rem\:start-top\), top, left;
-  @mixin position-double .medium\(start-bottom\), bottom, left;
-  @mixin position-pixels .medium\(px\:start-bottom\), bottom, left;
-  @mixin position-rems .medium\(rem\:start-bottom\), bottom, left;
+  @mixin position-double .sm\.topLeft, top, left;
+  @mixin position-pixels .sm\.pxTopLeft, top, left;
+  @mixin position-rems .sm\.remTopLeft, top, left;
+  @mixin position-double .sm\.bottomLeft, bottom, left;
+  @mixin position-pixels .sm\.pxBottomLeft, bottom, left;
+  @mixin position-rems .sm\.remBottomLeft, bottom, left;
 
-  @mixin position-double .medium\(end-top\), top, right;
-  @mixin position-pixels .medium\(px\:end-top\), top, right;
-  @mixin position-rems .medium\(rem\:end-top\), top, right;
-  @mixin position-double .medium\(end-bottom\), bottom, right;
-  @mixin position-pixels .medium\(px\:end-bottom\), bottom, right;
-  @mixin position-rems .medium\(rem\:end-bottom\), bottom, right;
+  @mixin position-double .sm\.topRight, top, right;
+  @mixin position-pixels .sm\.pxTopRight, top, right;
+  @mixin position-rems .sm\.remTopRight, top, right;
+  @mixin position-double .sm\.bottomRight, bottom, right;
+  @mixin position-pixels .sm\.pxBottomRight, bottom, right;
+  @mixin position-rems .sm\.remBottomRight, bottom, right;
 }
 
 @media (min-width: 1024px) {
-  .large\(absolute\) { position: absolute; }
-  .large\(relative\) { position: relative; }
-  .large\(static\) { position: static; }
-  .large\(fixed\) { position: fixed; will-change: transform; }
-  .large\(sticky\) { position: relative; will-change: transform; }
+  .md\.absolute { position: absolute; }
+  .md\.relative { position: relative; }
+  .md\.static { position: static; }
+  .md\.fixed { position: fixed; will-change: transform; }
+  .md\.sticky { position: relative; will-change: transform; }
 
-  @mixin position-percent .large\(left\), left;
-  @mixin position-pixel .large\(px\:left\), left;
-  @mixin position-mixin .large\(rem\:left\), left;
+  @mixin position-percent .md\.left, left;
+  @mixin position-pixel .md\.pxLeft, left;
+  @mixin position-mixin .md\.remLeft, left;
 
-  @mixin position-percent .large\(right\), right;
-  @mixin position-pixel .large\(px\:right\), right;
-  @mixin position-mixin .large\(rem\:right\), right;
+  @mixin position-percent .md\.right, right;
+  @mixin position-pixel .md\.pxRight, right;
+  @mixin position-mixin .md\.remRight, right;
 
-  @mixin position-percent .large\(top\), top;
-  @mixin position-pixel .large\(px\:top\), top;
-  @mixin position-mixin .large\(rem\:top\), top;
+  @mixin position-percent .md\.top, top;
+  @mixin position-pixel .md\.pxTop, top;
+  @mixin position-mixin .md\.remTop, top;
 
-  @mixin position-percent .large\(bottom\), bottom;
-  @mixin position-pixel .large\(px\:bottom\), bottom;
-  @mixin position-mixin .large\(rem\:bottom\), bottom;
+  @mixin position-percent .md\.bottom, bottom;
+  @mixin position-pixel .md\.pxBottom, bottom;
+  @mixin position-mixin .md\.remBottom, bottom;
 
-  @mixin position-double .large\(start-top\), top, left;
-  @mixin position-pixels .large\(px\:start-top\), top, left;
-  @mixin position-rems .large\(rem\:start-top\), top, left;
-  @mixin position-double .large\(start-bottom\), bottom, left;
-  @mixin position-pixels .large\(px\:start-bottom\), bottom, left;
-  @mixin position-rems .large\(rem\:start-bottom\), bottom, left;
+  @mixin position-double .md\.topLeft, top, left;
+  @mixin position-pixels .md\.pxTopLeft, top, left;
+  @mixin position-rems .md\.remTopLeft, top, left;
+  @mixin position-double .md\.bottomLeft, bottom, left;
+  @mixin position-pixels .md\.pxBottomLeft, bottom, left;
+  @mixin position-rems .md\.remBottomLeft, bottom, left;
 
-  @mixin position-double .large\(end-top\), top, right;
-  @mixin position-pixels .large\(px\:end-top\), top, right;
-  @mixin position-rems .large\(rem\:end-top\), top, right;
-  @mixin position-double .large\(end-bottom\), bottom, right;
-  @mixin position-pixels .large\(px\:end-bottom\), bottom, right;
-  @mixin position-rems .large\(rem\:end-bottom\), bottom, right;
+  @mixin position-double .md\.topRight, top, right;
+  @mixin position-pixels .md\.pxTopRight, top, right;
+  @mixin position-rems .md\.remTopRight, top, right;
+  @mixin position-double .md\.bottomRight, bottom, right;
+  @mixin position-pixels .md\.pxBottomRight, bottom, right;
+  @mixin position-rems .md\.remBottomRight, bottom, right;
 }
 
 @media (min-width: 1280px) {
-  .larger\(absolute\) { position: absolute; }
-  .larger\(relative\) { position: relative; }
-  .larger\(static\) { position: static; }
-  .larger\(fixed\) { position: fixed; will-change: transform; }
-  .larger\(sticky\) { position: relative; will-change: transform; }
+  .lg\.absolute { position: absolute; }
+  .lg\.relative { position: relative; }
+  .lg\.static { position: static; }
+  .lg\.fixed { position: fixed; will-change: transform; }
+  .lg\.sticky { position: relative; will-change: transform; }
 
-  @mixin position-percent .larger\(left\), left;
-  @mixin position-pixel .larger\(px\:left\), left;
-  @mixin position-mixin .larger\(rem\:left\), left;
+  @mixin position-percent .lg\.left, left;
+  @mixin position-pixel .lg\.pxLeft, left;
+  @mixin position-mixin .lg\.remLeft, left;
 
-  @mixin position-percent .larger\(right\), right;
-  @mixin position-pixel .larger\(px\:right\), right;
-  @mixin position-mixin .larger\(rem\:right\), right;
+  @mixin position-percent .lg\.right, right;
+  @mixin position-pixel .lg\.pxRight, right;
+  @mixin position-mixin .lg\.remRight, right;
 
-  @mixin position-percent .larger\(top\), top;
-  @mixin position-pixel .larger\(px\:top\), top;
-  @mixin position-mixin .larger\(rem\:top\), top;
+  @mixin position-percent .lg\.top, top;
+  @mixin position-pixel .lg\.pxTop, top;
+  @mixin position-mixin .lg\.remTop, top;
 
-  @mixin position-percent .larger\(bottom\), bottom;
-  @mixin position-pixel .larger\(px\:bottom\), bottom;
-  @mixin position-mixin .larger\(rem\:bottom\), bottom;
+  @mixin position-percent .lg\.bottom, bottom;
+  @mixin position-pixel .lg\.pxBottom, bottom;
+  @mixin position-mixin .lg\.remBottom, bottom;
 
-  @mixin position-double .larger\(start-top\), top, left;
-  @mixin position-pixels .larger\(px\:start-top\), top, left;
-  @mixin position-rems .larger\(rem\:start-top\), top, left;
-  @mixin position-double .larger\(start-bottom\), bottom, left;
-  @mixin position-pixels .larger\(px\:start-bottom\), bottom, left;
-  @mixin position-rems .larger\(rem\:start-bottom\), bottom, left;
+  @mixin position-double .lg\.topLeft, top, left;
+  @mixin position-pixels .lg\.pxTopLeft, top, left;
+  @mixin position-rems .lg\.remTopLeft, top, left;
+  @mixin position-double .lg\.bottomLeft, bottom, left;
+  @mixin position-pixels .lg\.pxBottomLeft, bottom, left;
+  @mixin position-rems .lg\.remBottomLeft, bottom, left;
 
-  @mixin position-double .larger\(end-top\), top, right;
-  @mixin position-pixels .larger\(px\:end-top\), top, right;
-  @mixin position-rems .larger\(rem\:end-top\), top, right;
-  @mixin position-double .larger\(end-bottom\), bottom, right;
-  @mixin position-pixels .larger\(px\:end-bottom\), bottom, right;
-  @mixin position-rems .larger\(rem\:end-bottom\), bottom, right;
+  @mixin position-double .lg\.topRight, top, right;
+  @mixin position-pixels .lg\.pxTopRight, top, right;
+  @mixin position-rems .lg\.remTopRight, top, right;
+  @mixin position-double .lg\.bottomRight, bottom, right;
+  @mixin position-pixels .lg\.pxBottomRight, bottom, right;
+  @mixin position-rems .lg\.remBottomRight, bottom, right;
 }
 
 @media (min-width: 1536px) {
-  .largest\(absolute\) { position: absolute; }
-  .largest\(relative\) { position: relative; }
-  .largest\(static\) { position: static; }
-  .largest\(fixed\) { position: fixed; will-change: transform; }
-  .largest\(sticky\) { position: relative; will-change: transform; }
+  .xl\.absolute { position: absolute; }
+  .xl\.relative { position: relative; }
+  .xl\.static { position: static; }
+  .xl\.fixed { position: fixed; will-change: transform; }
+  .xl\.sticky { position: relative; will-change: transform; }
 
-  @mixin position-percent .largest\(left\), left;
-  @mixin position-pixel .largest\(px\:left\), left;
-  @mixin position-mixin .largest\(rem\:left\), left;
+  @mixin position-percent .xl\.left, left;
+  @mixin position-pixel .xl\.pxLeft, left;
+  @mixin position-mixin .xl\.remLeft, left;
 
-  @mixin position-percent .largest\(right\), right;
-  @mixin position-pixel .largest\(px\:right\), right;
-  @mixin position-mixin .largest\(rem\:right\), right;
+  @mixin position-percent .xl\.right, right;
+  @mixin position-pixel .xl\.pxRight, right;
+  @mixin position-mixin .xl\.remRight, right;
 
-  @mixin position-percent .largest\(top\), top;
-  @mixin position-pixel .largest\(px\:top\), top;
-  @mixin position-mixin .largest\(rem\:top\), top;
+  @mixin position-percent .xl\.top, top;
+  @mixin position-pixel .xl\.pxTop, top;
+  @mixin position-mixin .xl\.remTop, top;
 
-  @mixin position-percent .largest\(bottom\), bottom;
-  @mixin position-pixel .largest\(px\:bottom\), bottom;
-  @mixin position-mixin .largest\(rem\:bottom\), bottom;
+  @mixin position-percent .xl\.bottom, bottom;
+  @mixin position-pixel .xl\.pxBottom, bottom;
+  @mixin position-mixin .xl\.remBottom, bottom;
 
-  @mixin position-double .largest\(start-top\), top, left;
-  @mixin position-pixels .largest\(px\:start-top\), top, left;
-  @mixin position-rems .largest\(rem\:start-top\), top, left;
-  @mixin position-double .largest\(start-bottom\), bottom, left;
-  @mixin position-pixels .largest\(px\:start-bottom\), bottom, left;
-  @mixin position-rems .largest\(rem\:start-bottom\), bottom, left;
+  @mixin position-double .xl\.topLeft, top, left;
+  @mixin position-pixels .xl\.pxTopLeft, top, left;
+  @mixin position-rems .xl\.remTopLeft, top, left;
+  @mixin position-double .xl\.bottomLeft, bottom, left;
+  @mixin position-pixels .xl\.pxBottomLeft, bottom, left;
+  @mixin position-rems .xl\.remBottomLeft, bottom, left;
 
-  @mixin position-double .largest\(end-top\), top, right;
-  @mixin position-pixels .largest\(px\:end-top\), top, right;
-  @mixin position-rems .largest\(rem\:end-top\), top, right;
-  @mixin position-double .largest\(end-bottom\), bottom, right;
-  @mixin position-pixels .largest\(px\:end-bottom\), bottom, right;
-  @mixin position-rems .largest\(rem\:end-bottom\), bottom, right;
+  @mixin position-double .xl\.topRight, top, right;
+  @mixin position-pixels .xl\.pxTopRight, top, right;
+  @mixin position-rems .xl\.remTopRight, top, right;
+  @mixin position-double .xl\.bottomRight, bottom, right;
+  @mixin position-pixels .xl\.pxBottomRight, bottom, right;
+  @mixin position-rems .xl\.remBottomRight, bottom, right;
+}
+
+@media (min-width: 1920px) {
+  .\2xl\.absolute { position: absolute; }
+  .\2xl\.relative { position: relative; }
+  .\2xl\.static { position: static; }
+  .\2xl\.fixed { position: fixed; will-change: transform; }
+  .\2xl\.sticky { position: relative; will-change: transform; }
+
+  @mixin position-percent .\2xl\.left, left;
+  @mixin position-pixel .\2xl\.pxLeft, left;
+  @mixin position-mixin .\2xl\.remLeft, left;
+
+  @mixin position-percent .\2xl\.right, right;
+  @mixin position-pixel .\2xl\.pxRight, right;
+  @mixin position-mixin .\2xl\.remRight, right;
+
+  @mixin position-percent .\2xl\.top, top;
+  @mixin position-pixel .\2xl\.pxTop, top;
+  @mixin position-mixin .\2xl\.remTop, top;
+
+  @mixin position-percent .\2xl\.bottom, bottom;
+  @mixin position-pixel .\2xl\.pxBottom, bottom;
+  @mixin position-mixin .\2xl\.remBottom, bottom;
+
+  @mixin position-double .\2xl\.topLeft, top, left;
+  @mixin position-pixels .\2xl\.pxTopLeft, top, left;
+  @mixin position-rems .\2xl\.remTopLeft, top, left;
+  @mixin position-double .\2xl\.bottomLeft, bottom, left;
+  @mixin position-pixels .\2xl\.pxBottomLeft, bottom, left;
+  @mixin position-rems .\2xl\.remBottomLeft, bottom, left;
+
+  @mixin position-double .\2xl\.topRight, top, right;
+  @mixin position-pixels .\2xl\.pxTopRight, top, right;
+  @mixin position-rems .\2xl\.remTopRight, top, right;
+  @mixin position-double .\2xl\.bottomRight, bottom, right;
+  @mixin position-pixels .\2xl\.pxBottomRight, bottom, right;
+  @mixin position-rems .\2xl\.remBottomRight, bottom, right;
 }

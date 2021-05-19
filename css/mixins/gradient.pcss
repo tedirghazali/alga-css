@@ -1,121 +1,121 @@
 @define-mixin gradient-mixin $color {
-  .start\:$(color) {
-    --alga-gradient-start: var(--alga-$(color));
-    --alga-gradient-stops: var(--alga-gradient-start), var(--alga-gradient-end, transparent)
+  .$(color)Start {
+    --gradient-start: var(--$(color));
+    --gradient-stops: var(--gradient-start), var(--gradient-end);
   }
   
-  .center\:$(color) {
-    --alga-gradient-center: var(--alga-$(color));
-    --alga-gradient-stops: var(--alga-gradient-start), var(--alga-gradient-center), var(--alga-gradient-end, transparent)
+  .$(color)Center {
+    --gradient-center: var(--$(color));
+    --gradient-stops: var(--gradient-start), var(--gradient-center), var(--gradient-end);
   }
   
-  .end\:$(color) {
-    --alga-gradient-end: var(--alga-$(color));
+  .$(color)End {
+    --gradient-end: var(--$(color));
   }
 }
 
 @define-mixin gradient-to $var {
-  .$(var)\:top {
-    --alga-gradient-position: $(var) top;
+  .$(var)Top {
+    --gradient-position: $(var) top;
   }
   
-  .$(var)\:top-right {
-    --alga-gradient-position: $(var) top right;
+  .$(var)TopRight {
+    --gradient-position: $(var) top right;
   }
   
-  .$(var)\:top-left {
-    --alga-gradient-position: $(var) top left;
+  .$(var)TopLeft {
+    --gradient-position: $(var) top left;
   }
   
-  .$(var)\:right {
-    --alga-gradient-position: $(var) right;
+  .$(var)Right {
+    --gradient-position: $(var) right;
   }
   
-  .$(var)\:bottom {
-    --alga-gradient-position: $(var) bottom;
+  .$(var)Bottom {
+    --gradient-position: $(var) bottom;
   }
   
-  .$(var)\:bottom-right {
-    --alga-gradient-position: $(var) bottom right;
+  .$(var)BottomRight {
+    --gradient-position: $(var) bottom right;
   }
   
-  .$(var)\:bottom-left {
-    --alga-gradient-position: $(var) bottom left;
+  .$(var)BottomLeft {
+    --gradient-position: $(var) bottom left;
   }
   
-  .$(var)\:left {
-    --alga-gradient-position: $(var) left;
+  .$(var)Left {
+    --gradient-position: $(var) left;
   }
 }
 
 @define-mixin gradient-at $var {
-  .$(var)\:top {
-    --alga-gradient-position: $(var) at top;
+  .$(var)Top {
+    --gradient-position: $(var) at top;
   }
   
-  .$(var)\:top-right {
-    --alga-gradient-position: $(var) at top right;
+  .$(var)TopRight {
+    --gradient-position: $(var) at top right;
   }
   
-  .$(var)\:top-left {
-    --alga-gradient-position: $(var) at top left;
+  .$(var)TopLeft {
+    --gradient-position: $(var) at top left;
   }
   
-  .$(var)\:right {
-    --alga-gradient-position: $(var) at right;
+  .$(var)Right {
+    --gradient-position: $(var) at right;
   }
   
-  .$(var)\:bottom {
-    --alga-gradient-position: $(var) at bottom;
+  .$(var)Bottom {
+    --gradient-position: $(var) at bottom;
   }
   
-  .$(var)\:bottom-right {
-    --alga-gradient-position: $(var) at bottom right;
+  .$(var)BottomRight {
+    --gradient-position: $(var) at bottom right;
   }
   
-  .$(var)\:bottom-left {
-    --alga-gradient-position: $(var) at bottom left;
+  .$(var)BottomLeft {
+    --gradient-position: $(var) at bottom left;
   }
   
-  .$(var)\:left {
-    --alga-gradient-position: $(var) at left;
+  .$(var)Left {
+    --gradient-position: $(var) at left;
   }
   
-  .$(var)\:center {
-    --alga-gradient-position: $(var) at center;
+  .$(var)Center {
+    --gradient-position: $(var) at center;
   }
 }
 
 @define-mixin gradient-from $var {
-  .$(var)\:top {
-    --alga-gradient-position: $(var) 0deg;
+  .$(var)Top {
+    --gradient-position: $(var) 0deg;
   }
   
-  .$(var)\:top-right {
-    --alga-gradient-position: $(var) 45deg;
+  .$(var)TopRight {
+    --gradient-position: $(var) 45deg;
   }
   
-  .$(var)\:top-left {
-    --alga-gradient-position: $(var) 90deg;
+  .$(var)TopLeft {
+    --gradient-position: $(var) 90deg;
   }
   
-  .$(var)\:right {
-    --alga-gradient-position: $(var) 135deg;
+  .$(var)Right {
+    --gradient-position: $(var) 135deg;
   }
   
-  .$(var)\:bottom {
-    --alga-gradient-position: $(var) 180deg;
+  .$(var)Bottom {
+    --gradient-position: $(var) 180deg;
   }
   
-  .$(var)\:bottom-right {
-    --alga-gradient-position: $(var) 125deg;
+  .$(var)BottomRight {
+    --gradient-position: $(var) 125deg;
   }
   
-  .$(var)\:bottom-left {
-    --alga-gradient-position: $(var) 270deg;
+  .$(var)BottomLeft {
+    --gradient-position: $(var) 270deg;
   }
   
-  .$(var)\:left {
-    --alga-gradient-position: $(var) 315deg;
+  .$(var)Left {
+    --gradient-position: $(var) 315deg;
   }
 }

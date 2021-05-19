@@ -1,0 +1,14 @@
+.shape {
+  
+  &Outside {
+    shape-outside: var(--shapeOutside);
+  }
+  
+  &Margin {
+    shape-margin: var(--shapeMargin);
+  }
+  
+  &Threshold {
+    shape-image-threshold: var(--shapeThreshold);
+  }
+}

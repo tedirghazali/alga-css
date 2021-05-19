@@ -1,4 +1,4 @@
-.side\:bar {
+.sideBar {
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
@@ -11,28 +11,28 @@
     flex-direction: column;
   }
   
-  & .bar-menu,
-  & .start\:bar-menu {
+  & .sideMenu,
+  & .sideMenuStart {
     justify-content: flex-start;
   }
   
-  & .start\:bar-menu {
+  & .sideMenuStart {
     overflow: hidden;
   }
     
-  & .fill\:bar-menu {
+  & .sideMenuFill {
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
   }
     
-  & .center\:bar-menu {
+  & .sideMenuCenter {
     overflow-y: auto;
     overflow-x: hidden;
     justify-content: center;
   }
     
-  & .end\:bar-menu {
+  & .sideMenuEnd {
     overflow: hidden;
     justify-content: flex-end;
   }
@@ -42,33 +42,33 @@
     display: block;
   }
   
-  &.shrinkable {
+  &.shrink {
     min-width: 80px;
     max-width: 80px;
   }
 }
 
 @media (max-width: 768px) {
-  .side\:bar,
-  .shrink-side\:bar {
+  .sideBar,
+  .sideBar\.shrink {
     display: none;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .shrink-side\:bar {
+  .sideBar\.shrink {
     width: 40px;
     
-    & .bar-feature,
-    & .bar-form,
-    & .bar-title,
-    & .bar-text {
+    & .side-feature,
+    & .side-form,
+    & .side-title,
+    & .side-text {
       display: none;
     }
     
-    & .bar-icon,
-    & .bar-icon i,
-    & .bar-icon svg {
+    & .side-icon,
+    & .side-icon i,
+    & .side-icon svg {
       width: 24px;
       height: 24px;
     }

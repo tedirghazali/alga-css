@@ -1,64 +1,109 @@
-.nav\:bar {
+.navBar {
+  min-width: 100vw;
+  width: 100%;
   align-items: center;
   min-height: 50px;
   padding: var(--navbar-padding, .75em);
+  z-index: 4;
   
-  & > *,
-  & > .bar-wrapper > *,
+  & > .navWrap > *,
   & > .container > *,
-  & > .fluid\:container > *,
-  & > .small\:container > *,
-  & > .medium\:container > *,
-  & > .large\:container > *,
-  & > .larger\:container > *,
-  & > .largest\:container > * {
+  & > .containerFluid > *,
+  & > .xs\.container > *,
+  & > .sm\.container > *,
+  & > .md\.container > *,
+  & > .lg\.container > *,
+  & > .xl\.container > *,
+  & > .\2xl\.container > * {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
   }
   
+  & > .navWrap,
   & > .container,
-  & > .fluid\:container,
-  & > .small\:container,
-  & > .medium\:container,
-  & > .large\:container,
-  & > .larger\:container,
-  & > .largest\:container {
+  & > .containerFluid,
+  & > .xs\.container,
+  & > .sm\.container,
+  & > .md\.container,
+  & > .lg\.container,
+  & > .xl\.container,
+  & > .\2xl\.container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
     justify-content: space-between;
   }
   
-  & .bar-menu,
-  & .start\:bar-menu {
+  & .navMenu {
+    justify-content: var(--navMenuJustify);
+  }
+  
+  & .navMenuStart {
     justify-content: flex-start;
   }
     
-  & .fill\:bar-menu {
+  & .navMenuFill {
     flex-grow: 1;
   }
     
-  & .center\:bar-menu {
+  & .navMenuCenter {
     justify-content: center;
   }
     
-  & .end\:bar-menu {
+  & .navMenuEnd {
     justify-content: flex-end;
+  }
+  
+  & .navIcon,
+  & .navText,
+  & .navToggler,
+  & .navBrand {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    color: inherit;
+  }
+  
+  & .navToggler {
+    display: none;
+  }
+  
+  & .navBrand {
+    flex-grow: 1;
   }
 }
 
 @media (max-width: 768px) {
-  .nav\:bar > *:not(.mobile),
-  .nav\:bar > * > *:not(.mobile) {
+  .navBar > *:not(:first-child),
+  .navBar > .navWrap > *:not(:first-child),
+  .navBar > .container > *:not(:first-child),
+  .navBar > .containerFluid > *:not(:first-child),
+  .navBar > .xs\.container > *:not(:first-child),
+  .navBar > .sm\.container > *:not(:first-child),
+  .navBar > .md\.container > *:not(:first-child),
+  .navBar > .lg\.container > *:not(:first-child),
+  .navBar > .xl\.container > *:not(:first-child),
+  .navBar > .\2xl\.container > *:not(:first-child) {
     display: none;
   }
   
-  .nav\:bar .mobile {
+  .navBar .navToggler {
     display: block;
   }
   
-  .nav\:bar > .bar-menu:first-child,
-  .nav\:bar > .start\:bar-menu,
-  .nav\:bar > *:first-child > .bar-menu:first-child,
-  .nav\:bar > *:first-child > .start\:bar-menu {
+  .navBar > .navMenu:first-child,
+  .navBar > .navMenuStart,
+  .navBar > .navWrap > *:first-child,
+  .navBar > .container > *:first-child,
+  .navBar > .containerFluid > *:first-child,
+  .navBar > .xs\.container > *:first-child,
+  .navBar > .sm\.container > *:first-child,
+  .navBar > .md\.container > *:first-child,
+  .navBar > .lg\.container > *:first-child,
+  .navBar > .xl\.container > *:first-child,
+  .navBar > .\2xl\.container > *:first-child {
     min-width: 100vw;
     width: 100%;
     justify-content: space-between;
@@ -67,13 +112,37 @@
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .nav\:bar > *:nth-child(2):not(.tablet),
-  .nav\:bar > *:first-child > *:nth-child(2):not(.tablet) {
+  .navBar > .navMenu:nth-child(2),
+  .navBar > .navMenuFill,
+  .navBar > .navMenuCenter,
+  .navBar > .navWrap > .navMenu:nth-child(2),
+  .navBar > .navWrap > .navMenuFill,
+  .navBar > .navWrap > .navMenuCenter,
+  .navBar > .container > .navMenu:nth-child(2),
+  .navBar > .container > .navMenuFill,
+  .navBar > .container > .navMenuCenter,
+  .navBar > .containerFluid > .navMenu:nth-child(2),
+  .navBar > .containerFluid > .navMenuFill,
+  .navBar > .containerFluid > .navMenuCenter,
+  .navBar > .xs\.container > .navMenu:nth-child(2),
+  .navBar > .xs\.container > .navMenuFill,
+  .navBar > .xs\.container > .navMenuCenter,
+  .navBar > .sm\.container > .navMenu:nth-child(2),
+  .navBar > .sm\.container > .navMenuFill,
+  .navBar > .sm\.container > .navMenuCenter,
+  .navBar > .md\.container > .navMenu:nth-child(2),
+  .navBar > .md\.container > .navMenuFill,
+  .navBar > .md\.container > .navMenuCenter,
+  .navBar > .lg\.container > .navMenu:nth-child(2),
+  .navBar > .lg\.container > .navMenuFill,
+  .navBar > .lg\.container > .navMenuCenter,
+  .navBar > .xl\.container > .navMenu:nth-child(2),
+  .navBar > .xl\.container > .navMenuFill,
+  .navBar > .xl\.container > .navMenuCenter,
+  .navBar > .\2xl\.container > .navMenu:nth-child(2),
+  .navBar > .\2xl\.container > .navMenuFill,
+  .navBar > .\2xl\.container > .navMenuCenter {
     display: none;
-  }
-  
-  .nav\:bar .tablet {
-    display: block;
   }
 }
 

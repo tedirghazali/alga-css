@@ -1,10 +1,23 @@
 .hero {
+  position: relative;
   min-width: 100%;
   min-height: 100vh;
-  background: var(--hero-background, #fff);
+  background: var(--hero, #fff);
   background-origin: border-box;
+  overflow: hidden;
+  z-index: 1;
 
-  &-clip {
+  &Clip {
+    position: absolute;
+    z-index: 1;
+    min-width: inherit;
+    min-height: inherit;
+    clip-path: var(--heroClip);
+  }
   
+  &Body {
+    position: relative;
+    z-index: 2;
+    overflow: inherit;
   }
 }

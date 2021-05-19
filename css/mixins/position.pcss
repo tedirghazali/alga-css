@@ -85,6 +85,10 @@
 }
 
 @define-mixin position-percent $class, $rule {
+  $(class) {
+    $(rule): var(--$(rule)) !important;
+  }
+  
   $(class)-0 {
     $(rule): 0px !important;
   }

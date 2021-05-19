@@ -7,6 +7,7 @@
 @import './layouts/page.css';
 @import './layouts/bar.css';
 @import './layouts/box.css';
+@import './layouts/hero.css';
 
 /* Elements */
 @import './elements/button.css';
@@ -72,4 +73,6 @@
 @import './utilities/border.css';
 @import './utilities/outline.css';
 @import './utilities/list-style.css';
+@import './utilities/clip.css';
+@import './utilities/shape.css';
 

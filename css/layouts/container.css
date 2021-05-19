@@ -1,10 +1,11 @@
 .container,
-.fluid\:container,
-.largest\(container\),
-.larger\(container\),
-.large\(container\),
-.medium\(container\),
-.small\(container\) {
+.containerFluid,
+.\2xl\.container,
+.xl\.container,
+.lg\.container,
+.md\.container,
+.sm\.container,
+.xs\.container {
   width: 100%;
   padding-right: 0.875rem;
   padding-left: 0.875rem;
@@ -13,32 +14,39 @@
 }
 
 @media (min-width: 640px) {
-  .small\(container\), .container {
+  .xs\.container, .container {
     max-width: 620px;
   }
 }
 
 @media (min-width: 768px) {
-  .medium\(container\), .small\(container\), .container {
+  .sm\.container, .xs\.container, .container {
     max-width: 748px;
   }
 }
 
 @media (min-width: 1024px) {
-  .large\(container\), .medium\(container\), .small\(container\), .container {
+  .md\.container, .sm\.container, .xs\.container, .container {
     max-width: 1004px;
   }
 }
 
 @media (min-width: 1280px) {
-  .larger\(container\), .large\(container\), .medium\(container\), .small\(container\), .container {
+  .lg\.container, .md\.container, .sm\.container, .xs\.container, .container {
     max-width: 1260px;
   }
 }
 
 @media (min-width: 1536px) {
-  .largest\(container\), .larger\(container\), .large\(container\), 
-  .medium\(container\), .small\(container\), .container {
+  .xl\.container, .lg\.container, .md\.container, 
+  .sm\.container, .xs\.container, .container {
     max-width: 1346px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .\2xl\.container, .xl\.container, .lg\.container, .md\.container, 
+  .sm\.container, .xs\.container, .container {
+    max-width: 1600px;
   }
 }

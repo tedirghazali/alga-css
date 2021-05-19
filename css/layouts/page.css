@@ -1,183 +1,20 @@
-.page {
-  /* autoprefixer grid: no-autoplace */
-  display: grid;
-  width: 100%;
-  max-width: 100vw;
-  
-  &.page-navigation,
-  &.top\:page-navigation {
-    grid-template:  [nav-left] "nav nav" auto [nav-right]
-            [main-left] "main main" 1fr [main-right]
-            / auto 1fr;
-  }
-  
-  &.bottom\:page-navigation {
-    grid-template:  [main-left] "main main" 1fr [main-right]
-            [nav-left] "nav nav" auto [nav-right]
-            / auto 1fr;
-  }
-  
-  &.page-header {
-    grid-template:  [head-left] "head head" auto [head-right]
-            [main-left] "main main" 1fr [main-right]
-            / auto 1fr;
-  }
-  
-  &.page-sidebar,
-  &.left\:page-sidebar {
-    grid-template:  [side-left] "side main" auto [main-right]
-            [side-left] "side main" 1fr [main-right]
-            / auto 1fr;
-  }
-  
-  &.right\:page-sidebar {
-    grid-template:  [main-left] "main side" auto [side-right]
-            [main-left] "main side" 1fr [side-right]
-            / 1fr auto;
-  }
-  
-  &.head-sidebar,
-  &.left\:head-sidebar {
-    grid-template:  [head-left] "head head" auto [head-right]
-            [side-left] "side main" 1fr [main-right]
-            / auto 1fr;
-  }
-  
-  &.right\:head-sidebar {
-    grid-template:  [head-left] "head head" auto [head-right]
-            [main-left] "main side" 1fr [side-right]
-            / 1fr auto;
-  }
-  
-  &.start\:nav-sidebar {
-    grid-template:  [nav-left] "side nav" auto [nav-right]
-            [side-left] "side main" 1fr [main-right]
-            / auto 1fr;
-  }
-  
-  &.nav-sidebar,
-  &.left\:nav-sidebar {
-    grid-template:  [nav-left] "nav nav" auto [nav-right]
-            [side-left] "side main" 1fr [main-right]
-            / auto 1fr;
-  }
-  
-  &.right\:nav-sidebar {
-    grid-template:  [nav-left] "nav nav" auto [nav-right]
-            [main-left] "main side" 1fr [side-right]
-            / 1fr auto;
-  }
-  
-  &.end\:nav-sidebar {
-    grid-template:  [nav-left] "nav side" auto [nav-right]
-            [main-left] "main side" 1fr [side-right]
-            / 1fr auto;
-  }
-  
-  &.page-pancake {
-    grid-template:  [head-left] "head head" auto [head-right]
-            [main-left] "main  main" 1fr [main-right]
-            [foot-left] "foot  foot" auto [foot-right]
-            / auto 1fr;
-  }
-  
-  &.side-pancake,
-  &.left\:side-pancake {
-    grid-template:  [head-left] "head head" auto [head-right]
-            [side-left] "side main" 1fr [main-right]
-            [foot-left] "foot foot" auto [foot-right]
-            / auto 1fr;
-  }
-  
-  &.right\:side-pancake {
-    grid-template:  [head-left] "head head" auto [head-right]
-            [main-left] "main side" 1fr [side-right]
-            [foot-left] "foot foot" auto [foot-right]
-            / 1fr auto;
-  }
-  
-  &.left\:nav-pancake {
-    grid-template:  [nav-left] "nav nav" auto [nav-right]
-            [side-left] "side main" 1fr [main-right]
-            [foot-left] "foot foot" auto [foot-right]
-            / auto 1fr;
-  }
-  
-  &.right\:nav-pancake {
-    grid-template:  [nav-left] "nav nav" auto [nav-right]
-            [main-left] "main side" 1fr [side-right]
-            [foot-left] "foot foot" auto [foot-right]
-            / 1fr auto;
-  }
-  
-  &.page-holy-grail {
-    grid-template:  [head-left] "head head head" auto [head-right]
-            [side-left] "side main side-right" 1fr [side-right]
-            [foot-left] "foot foot foot" auto [foot-right]
-            / auto 1fr auto;
-  }
-  
-  &.page-classic-header {
-    grid-template:  [head-left] "head head head" auto [head-right]
-            [side-left] "side main side-right" 1fr [side-right]
-            / auto 1fr auto;
-  }
-  
-  &.nav-holy-grail {
-    grid-template:  [nav-left] "nav nav nav" auto [nav-right]
-            [side-left] "side main side-right" 1fr [side-right]
-            [foot-left] "foot foot foot" auto [foot-right]
-            / auto 1fr auto;
-  }
-  
-  &.nav-classic {
-    grid-template:  [nav-left] "nav nav nav" auto [nav-right]
-            [side-left] "side main side-right" 1fr [side-right]
-            / auto 1fr auto;
-  }
-  
-  & .nav\:page-section {
-    grid-area: nav;
-  }
-
-  & .head\:page-section {
-    grid-area: head;
-  }
-
-  & .side\:page-section,
-  & .leftside\:page-section {
-    grid-area: side;
-  }
-
-  & .main\:page-section {
-    grid-area: main;
-  }
-
-  & .rightside\:page-section {
-    grid-area: side-right;
-  }
-
-  & .foot\:page-section {
-    grid-area: foot;
-  }
-}
-
-.top\:page,
-.left\:page,
-.right\:page,
-.bottom\:page,
-.top-left\:page,
-.top-right\:page,
-.bottom-left\:page,
-.bottom-right\:page,
-.top-both\:page,
-.bottom-both\:page,
-.vertical\:page,
-.horizontal\:page,
-.side-left\:page,
-.side-right\:page,
-.full\:page,
-.center\:page {
+.page,
+.pageTop,
+.pageLeft,
+.pageRight,
+.pageBottom,
+.pageTopLeft,
+.pageTopRight,
+.pageBottomLeft,
+.pageBottomRight,
+.pageTopBoth,
+.pageBottomBoth,
+.pageVertical,
+.pageHorizontal,
+.pageSideLeft,
+.pageSideRight,
+.pageFull,
+.pageCenter {
   /* autoprefixer grid: no-autoplace */
   display: grid;
   width: 100%;
@@ -188,77 +25,77 @@
   grid-template: var(--page-layout);
 }
 
-.top\:page {
+.pageTop {
   --page-layout:  [top-section-left] "top-section top-section" auto [top-section-right]
                   [main-section-left] "main-section main-section" 1fr [main-section-right]
                   / auto 1fr;
   grid-template: var(--page-layout);
 }
   
-.left\:page {
+.pageLeft {
   --page-layout:  [left-section-left] "left-section main-section" auto [main-section-right]
                   [left-section-left] "left-section main-section" 1fr [main-section-right]
                   / auto 1fr;
   grid-template: var(--page-layout);
 }
   
-.right\:page {
+.pageRight {
   --page-layout:  [main-section-left] "main-section right-section" auto [right-section-right]
                   [main-section-left] "main-section right-section" 1fr [right-section-right]
                   / auto 1fr;
   grid-template: var(--page-layout);
 }
   
-.bottom\:page {
+.pageBottom {
   --page-layout:  [main-section-left] "main-section main-section" 1fr [main-section-right]
                   [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
                   / auto 1fr;
   grid-template: var(--page-layout);
 }
 
-.top-left\:page {
+.pageTopLeft {
   --page-layout:  [top-section-left] "top-section top-section" auto [top-section-right]
                   [left-section-left] "left-section main-section" 1fr [main-section-right]
                   / auto 1fr;
   grid-template: var(--page-layout);
 }
 
-.top-right\:page {
+.pageTopRight {
   --page-layout:  [top-section-left] "top-section top-section" auto [top-section-right]
                   [main-section-left] "main-section right-section" 1fr [right-section-right]
                   / auto 1fr;
   grid-template: var(--page-layout);
 }
   
-.bottom-left\:page {
+.pageBottomLeft {
   --page-layout:  [left-section-left] "left-section main-section" 1fr [main-section-right]
                   [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
                   / auto 1fr;
   grid-template: var(--page-layout);
 }
   
-.bottom-right\:page {
+.pageBottomRight {
   --page-layout:  [main-section-left] "main-section right-section" 1fr [right-section-right]
                   [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
                   / auto 1fr;
   grid-template: var(--page-layout);
 }
   
-.top-both\:page {
+.pageTopBoth {
   --page-layout:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                   [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                   / auto 1fr auto;
   grid-template: var(--page-layout);
 }
   
-.bottom-both\:page {
+.pageBottomBoth {
   --page-layout:  [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                   [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
                   / auto 1fr auto;
   grid-template: var(--page-layout);
 }
   
-.vertical\:page {
+.pageVertical {
   --page-layout:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                   [main-section-left] "main-section main-section main-section" 1fr [main-section-right]
                   [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
@@ -266,7 +103,7 @@
   grid-template: var(--page-layout);
 }
   
-.horizontal\:page {
+.pageHorizontal {
   --page-layout:  [left-section-left] "left-section main-section right-section" auto [right-section-right]
                   [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                   [left-section-left] "left-section main-section right-section" auto [right-section-right]
@@ -274,7 +111,7 @@
   grid-template: var(--page-layout);
 }
   
-.side-left\:page {
+.pageSideLeft {
   --page-layout:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                   [left-section-left] "left-section main-section main-section" 1fr [main-section-right]
                   [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
@@ -282,7 +119,7 @@
   grid-template: var(--page-layout);
 }
   
-.side-right\:page {
+.pageSideRight {
   --page-layout:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                   [main-section-left] "main-section main-section right-section" 1fr [right-section-right]
                   [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
@@ -290,7 +127,7 @@
   grid-template: var(--page-layout);
 }
   
-.full\:page {
+.pageFull {
   --page-layout:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                   [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                   [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
@@ -298,7 +135,7 @@
   grid-template: var(--page-layout);
 }
 
-.center\:page {
+.pageCenter {
   place-items: center;
 }
 
@@ -306,22 +143,22 @@
   grid-area: var(--page-section);
 }
 
-.top\:section {
+.sectionTop {
   grid-area: top-section;
 }
   
-.left\:section {
+.sectionLeft {
   grid-area: left-section;
 }
   
-.main\:section {
+.sectionMain {
   grid-area: main-section;
 }
   
-.right\:section {
+.sectionRight {
   grid-area: right-section;
 }
   
-.bottom\:section {
+.sectionBottom {
   grid-area: bottom-section;
 }

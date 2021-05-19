@@ -1,14 +1,14 @@
 .gradient,
-.linear\:gradient {
-  background-image: linear-gradient(var(--alga-gradient-position, to bottom), var(--alga-gradient-stops));
+.gradientLinear {
+  background-image: linear-gradient(var(--gradient-position, to bottom), var(--gradient-stops));
 }
 
-.radial\:gradient {
-  background-image: radial-gradient(var(--alga-gradient-position, circle at center), var(--alga-gradient-stops));
+.gradientRadial {
+  background-image: radial-gradient(var(--gradient-position, circle at center), var(--gradient-stops));
 }
 
-.conic\:gradient {
-  background-image: conic-gradient(var(--alga-gradient-position, from 0deg), var(--alga-gradient-stops));
+.gradientConic {
+  background-image: conic-gradient(var(--gradient-position, from 0deg), var(--gradient-stops));
 }
 
 @mixin gradient-to to;

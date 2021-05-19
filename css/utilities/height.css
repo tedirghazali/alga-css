@@ -1,109 +1,88 @@
-@mixin sizing-percent .height, height;
-@mixin sizing-vh .vh\:height, height;
-@mixin sizing-pixel .px\:height, height;
-@mixin sizing-mixin .rem\:height, height;
+@mixin sizing-percent .hg, height;
+@mixin sizing-vh .vh, height;
+@mixin sizing-pixel .ph, height;
 
-@mixin sizing-percent .max-height, max-height;
-@mixin sizing-percent .min-height, min-height;
-@mixin sizing-vh .vh\:max-height, max-height;
-@mixin sizing-vh .vh\:min-height, min-height;
-@mixin sizing-pixel .px\:max-height, max-height;
-@mixin sizing-pixel .px\:min-height, min-height;
-@mixin sizing-mixin .rem\:max-height, max-height;
-@mixin sizing-mixin .rem\:min-height, min-height;
+@mixin sizing-percent .hgMax, max-height;
+@mixin sizing-percent .hgMin, min-height;
+@mixin sizing-vh .vhMax, max-height;
+@mixin sizing-vh .vhMin, min-height;
+@mixin sizing-pixel .phMax, max-height;
+@mixin sizing-pixel .phMin, min-height;
 
 @media (min-height: 640px) {
-  @mixin sizing-percent .smaller\(height\), height;
-  @mixin sizing-vh .smaller\(vh\:height\), height;
-  @mixin sizing-pixel .smaller\(px\:height\), height;
-  @mixin sizing-mixin .smaller\(rem\:height\), height;
+  @mixin sizing-percent .xs\.hg, height;
+  @mixin sizing-vh .xs\.vh, height;
+  @mixin sizing-pixel .xs\.ph, height;
 
-  @mixin sizing-percent .smaller\(max-height\), max-height;
-  @mixin sizing-percent .smaller\(min-height\), min-height;
-  @mixin sizing-vh .smaller\(vh\:max-height\), max-height;
-  @mixin sizing-vh .smaller\(vh\:min-height\), min-height;
-  @mixin sizing-pixel .smaller\(px\:max-height\), max-height;
-  @mixin sizing-pixel .smaller\(px\:min-height\), min-height;
-  @mixin sizing-mixin .smaller\(rem\:max-height\), max-height;
-  @mixin sizing-mixin .smaller\(rem\:min-height\), min-height;
+  @mixin sizing-percent .xs\.hgMax, max-height;
+  @mixin sizing-percent .xs\.hgMin, min-height;
+  @mixin sizing-vh .xs\.vhMax, max-height;
+  @mixin sizing-vh .xs\.vhMin, min-height;
+  @mixin sizing-pixel .xs\.phMax, max-height;
+  @mixin sizing-pixel .xs\.phMin, min-height;
 }
 
 @media (min-height: 768px) {
-  @mixin sizing-percent .small\(height\), height;
-  @mixin sizing-vh .small\(vh\:height\), height;
-  @mixin sizing-pixel .small\(px\:height\), height;
-  @mixin sizing-mixin .small\(rem\:height\), height;
+  @mixin sizing-percent .sm\.hg, height;
+  @mixin sizing-vh .sm\.vh, height;
+  @mixin sizing-pixel .sm\.ph, height;
 
-  @mixin sizing-percent .small\(max-height\), max-height;
-  @mixin sizing-percent .small\(min-height\), min-height;
-  @mixin sizing-vh .small\(vh\:max-height\), max-height;
-  @mixin sizing-vh .small\(vh\:min-height\), min-height;
-  @mixin sizing-pixel .small\(px\:max-height\), max-height;
-  @mixin sizing-pixel .small\(px\:min-height\), min-height;
-  @mixin sizing-mixin .small\(rem\:max-height\), max-height;
-  @mixin sizing-mixin .small\(rem\:min-height\), min-height;
+  @mixin sizing-percent .sm\.hgMax, max-height;
+  @mixin sizing-percent .sm\.hgMin, min-height;
+  @mixin sizing-vh .sm\.vhMax, max-height;
+  @mixin sizing-vh .sm\.vhMin, min-height;
+  @mixin sizing-pixel .sm\.phMax, max-height;
+  @mixin sizing-pixel .sm\.phMin, min-height;
 }
 
 @media (min-height: 1024px) {
-  @mixin sizing-percent .medium\(height\), height;
-  @mixin sizing-vh .medium\(vh\:height\), height;
-  @mixin sizing-pixel .medium\(px\:height\), height;
-  @mixin sizing-mixin .medium\(rem\:height\), height;
+  @mixin sizing-percent .md\.hg, height;
+  @mixin sizing-vh .md\.vh, height;
+  @mixin sizing-pixel .md\.ph, height;
 
-  @mixin sizing-percent .medium\(max-height\), max-height;
-  @mixin sizing-percent .medium\(min-height\), min-height;
-  @mixin sizing-vh .medium\(vh\:max-height\), max-height;
-  @mixin sizing-vh .medium\(vh\:min-height\), min-height;
-  @mixin sizing-pixel .medium\(px\:max-height\), max-height;
-  @mixin sizing-pixel .medium\(px\:min-height\), min-height;
-  @mixin sizing-mixin .medium\(rem\:max-height\), max-height;
-  @mixin sizing-mixin .medium\(rem\:min-height\), min-height;
+  @mixin sizing-percent .md\.hgMax, max-height;
+  @mixin sizing-percent .md\.hgMin, min-height;
+  @mixin sizing-vh .md\.vhMax, max-height;
+  @mixin sizing-vh .md\.vhMin, min-height;
+  @mixin sizing-pixel .md\.phMax, max-height;
+  @mixin sizing-pixel .md\.phMin, min-height;
 }
 
 @media (min-height: 1280px) {
-  @mixin sizing-percent .large\(height\), height;
-  @mixin sizing-vh .large\(vh\:height\), height;
-  @mixin sizing-pixel .large\(px\:height\), height;
-  @mixin sizing-mixin .large\(rem\:height\), height;
+  @mixin sizing-percent .lg\.hg, height;
+  @mixin sizing-vh .lg\.vh, height;
+  @mixin sizing-pixel .lg\.ph, height;
 
-  @mixin sizing-percent .large\(max-height\), max-height;
-  @mixin sizing-percent .large\(min-height\), min-height;
-  @mixin sizing-vh .large\(vh\:max-height\), max-height;
-  @mixin sizing-vh .large\(vh\:min-height\), min-height;
-  @mixin sizing-pixel .large\(px\:max-height\), max-height;
-  @mixin sizing-pixel .large\(px\:min-height\), min-height;
-  @mixin sizing-mixin .large\(rem\:max-height\), max-height;
-  @mixin sizing-mixin .large\(rem\:min-height\), min-height;
+  @mixin sizing-percent .lg\.hgMax, max-height;
+  @mixin sizing-percent .lg\.hgMin, min-height;
+  @mixin sizing-vh .lg\.vhMax, max-height;
+  @mixin sizing-vh .lg\.vhMin, min-height;
+  @mixin sizing-pixel .lg\.phMax, max-height;
+  @mixin sizing-pixel .lg\.phMin, min-height;
 }
 
 @media (min-height: 1536px) {
-  @mixin sizing-percent .larger\(height\), height;
-  @mixin sizing-vh .larger\(vh\:height\), height;
-  @mixin sizing-pixel .larger\(px\:height\), height;
-  @mixin sizing-mixin .larger\(rem\:height\), height;
+  @mixin sizing-percent .xl\.hg, height;
+  @mixin sizing-vh .xl\.vh, height;
+  @mixin sizing-pixel .xl\.ph, height;
 
-  @mixin sizing-percent .larger\(max-height\), max-height;
-  @mixin sizing-percent .larger\(min-height\), min-height;
-  @mixin sizing-vh .larger\(vh\:max-height\), max-height;
-  @mixin sizing-vh .larger\(vh\:min-height\), min-height;
-  @mixin sizing-pixel .larger\(px\:max-height\), max-height;
-  @mixin sizing-pixel .larger\(px\:min-height\), min-height;
-  @mixin sizing-mixin .larger\(rem\:max-height\), max-height;
-  @mixin sizing-mixin .larger\(rem\:min-height\), min-height;
+  @mixin sizing-percent .xl\.hgMax, max-height;
+  @mixin sizing-percent .xl\.hgMin, min-height;
+  @mixin sizing-vh .xl\.vhMax, max-height;
+  @mixin sizing-vh .xl\.vhMin, min-height;
+  @mixin sizing-pixel .xl\.phMax, max-height;
+  @mixin sizing-pixel .xl\.phMin, min-height;
 }
 
 @media (min-height: 1920px) {
-  @mixin sizing-percent .largest\(height\), height;
-  @mixin sizing-vh .largest\(vh\:height\), height;
-  @mixin sizing-pixel .largest\(px\:height\), height;
-  @mixin sizing-mixin .largest\(rem\:height\), height;
+  @mixin sizing-percent .\2xl\.hg, height;
+  @mixin sizing-vh .\2xl\.vh, height;
+  @mixin sizing-pixel .\2xl\.ph, height;
 
-  @mixin sizing-percent .largest\(max-height\), max-height;
-  @mixin sizing-percent .largest\(min-height\), min-height;
-  @mixin sizing-vh .largest\(vh\:max-height\), max-height;
-  @mixin sizing-vh .largest\(vh\:min-height\), min-height;
-  @mixin sizing-pixel .largest\(px\:max-height\), max-height;
-  @mixin sizing-pixel .largest\(px\:min-height\), min-height;
-  @mixin sizing-mixin .largest\(rem\:max-height\), max-height;
-  @mixin sizing-mixin .largest\(rem\:min-height\), min-height;
+  @mixin sizing-percent .\2xl\.hgMax, max-height;
+  @mixin sizing-percent .\2xl\.hgMin, min-height;
+  @mixin sizing-vh .\2xl\.vhMax, max-height;
+  @mixin sizing-vh .\2xl\.vhMin, min-height;
+  @mixin sizing-pixel .\2xl\.phMax, max-height;
+  @mixin sizing-pixel .\2xl\.phMin, min-height;
 }
