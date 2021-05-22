@@ -1,53 +1,95 @@
-@mixin border-mixin .border, border;
-@mixin border-mixin .top\:border, border-top;
-@mixin border-mixin .right\:border, border-right;
-@mixin border-mixin .bottom\:border, border-bottom;
-@mixin border-mixin .left\:border, border-left;
+@mixin border-mixin .bd, border;
+@mixin border-mixin .bdTop, border-top;
+@mixin border-mixin .bdRight, border-right;
+@mixin border-mixin .bdBottom, border-bottom;
+@mixin border-mixin .bdLeft, border-left;
+
+@mixin border-style .bd, border;
+@mixin border-style .bdTop, border-top;
+@mixin border-style .bdRight, border-right;
+@mixin border-style .bdBottom, border-bottom;
+@mixin border-style .bdLeft, border-left;
 
 @media (min-width: 640px) {
-  @mixin border-mixin .smaller\(border\), border;
-  @mixin border-mixin .smaller\(top\:border\), border-top;
-  @mixin border-mixin .smaller\(right\:border\), border-right;
-  @mixin border-mixin .smaller\(bottom\:border\), border-bottom;
-  @mixin border-mixin .smaller\(left\:border\), border-left;
+  @mixin border-mixin .xs\.bd, border;
+  @mixin border-mixin .xs\.bdTop, border-top;
+  @mixin border-mixin .xs\.bdRight, border-right;
+  @mixin border-mixin .xs\.bdBottom, border-bottom;
+  @mixin border-mixin .xs\.bdLeft, border-left;
+  
+  @mixin border-style .xs\.bd, border;
+  @mixin border-style .xs\.bdTop, border-top;
+  @mixin border-style .xs\.bdRight, border-right;
+  @mixin border-style .xs\.bdBottom, border-bottom;
+  @mixin border-style .xs\.bdLeft, border-left;
 }
 
 @media (min-width: 768px) {
-  @mixin border-mixin .small\(border\), border;
-  @mixin border-mixin .small\(top\:border\), border-top;
-  @mixin border-mixin .small\(right\:border\), border-right;
-  @mixin border-mixin .small\(bottom\:border\), border-bottom;
-  @mixin border-mixin .small\(left\:border\), border-left;
+  @mixin border-mixin .sm\.bd, border;
+  @mixin border-mixin .sm\.bdTop, border-top;
+  @mixin border-mixin .sm\.bdRight, border-right;
+  @mixin border-mixin .sm\.bdBottom, border-bottom;
+  @mixin border-mixin .sm\.bdLeft, border-left;
+  
+  @mixin border-style .sm\.bd, border;
+  @mixin border-style .sm\.bdTop, border-top;
+  @mixin border-style .sm\.bdRight, border-right;
+  @mixin border-style .sm\.bdBottom, border-bottom;
+  @mixin border-style .sm\.bdLeft, border-left;
 }
 
 @media (min-width: 1024px) {
-  @mixin border-mixin .medium\(border\), border;
-  @mixin border-mixin .medium\(top\:border\), border-top;
-  @mixin border-mixin .medium\(right\:border\), border-right;
-  @mixin border-mixin .medium\(bottom\:border\), border-bottom;
-  @mixin border-mixin .medium\(left\:border\), border-left;
+  @mixin border-mixin .md\.bd, border;
+  @mixin border-mixin .md\.bdTop, border-top;
+  @mixin border-mixin .md\.bdRight, border-right;
+  @mixin border-mixin .md\.bdBottom, border-bottom;
+  @mixin border-mixin .md\.bdLeft, border-left;
+  
+  @mixin border-style .md\.bd, border;
+  @mixin border-style .md\.bdTop, border-top;
+  @mixin border-style .md\.bdRight, border-right;
+  @mixin border-style .md\.bdBottom, border-bottom;
+  @mixin border-style .md\.bdLeft, border-left;
 }
 
 @media (min-width: 1280px) {
-  @mixin border-mixin .large\(border\), border;
-  @mixin border-mixin .large\(top\:border\), border-top;
-  @mixin border-mixin .large\(right\:border\), border-right;
-  @mixin border-mixin .large\(bottom\:border\), border-bottom;
-  @mixin border-mixin .large\(left\:border\), border-left;
+  @mixin border-mixin .lg\.bd, border;
+  @mixin border-mixin .lg\.bdTop, border-top;
+  @mixin border-mixin .lg\.bdRight, border-right;
+  @mixin border-mixin .lg\.bdBottom, border-bottom;
+  @mixin border-mixin .lg\.bdLeft, border-left;
+  
+  @mixin border-style .lg\.bd, border;
+  @mixin border-style .lg\.bdTop, border-top;
+  @mixin border-style .lg\.bdRight, border-right;
+  @mixin border-style .lg\.bdBottom, border-bottom;
+  @mixin border-style .lg\.bdLeft, border-left;
 }
 
 @media (min-width: 1536px) {
-  @mixin border-mixin .larger\(border\), border;
-  @mixin border-mixin .larger\(top\:border\), border-top;
-  @mixin border-mixin .larger\(right\:border\), border-right;
-  @mixin border-mixin .larger\(bottom\:border\), border-bottom;
-  @mixin border-mixin .larger\(left\:border\), border-left;
+  @mixin border-mixin .xl\.bd, border;
+  @mixin border-mixin .xl\.bdTop, border-top;
+  @mixin border-mixin .xl\.bdRight, border-right;
+  @mixin border-mixin .xl\.bdBottom, border-bottom;
+  @mixin border-mixin .xl\.bdLeft, border-left;
+  
+  @mixin border-style .xl\.bd, border;
+  @mixin border-style .xl\.bdTop, border-top;
+  @mixin border-style .xl\.bdRight, border-right;
+  @mixin border-style .xl\.bdBottom, border-bottom;
+  @mixin border-style .xl\.bdLeft, border-left;
 }
 
 @media (min-width: 1920px) {
-  @mixin border-mixin .largest\(border\), border;
-  @mixin border-mixin .largest\(top\:border\), border-top;
-  @mixin border-mixin .largest\(right\:border\), border-right;
-  @mixin border-mixin .largest\(bottom\:border\), border-bottom;
-  @mixin border-mixin .largest\(left\:border\), border-left;
+  @mixin border-mixin .\2xl\.bd, border;
+  @mixin border-mixin .\2xl\.bdTop, border-top;
+  @mixin border-mixin .\2xl\.bdRight, border-right;
+  @mixin border-mixin .\2xl\.bdBottom, border-bottom;
+  @mixin border-mixin .\2xl\.bdLeft, border-left;
+  
+  @mixin border-style .\2xl\.bd, border;
+  @mixin border-style .\2xl\.bdTop, border-top;
+  @mixin border-style .\2xl\.bdRight, border-right;
+  @mixin border-style .\2xl\.bdBottom, border-bottom;
+  @mixin border-style .\2xl\.bdLeft, border-left;
 }

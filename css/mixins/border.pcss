@@ -1,70 +1,95 @@
 @define-mixin border-mixin $class, $rule {
   $class {
-    $(rule): var(--border, 1px) var(--border-style, solid) var(--border-color, rgba(0, 0, 0, 0.125));
+    $(rule): var(--bd, 1px) var(--bdStyle, solid) var(--bdColor, rgba(0, 0, 0, 0.125));
   }
 
   $(class)-0 {
     $(rule)-width: 0;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-1 {
     $(rule)-width: 1px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-2 {
     $(rule)-width: 2px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-3 {
     $(rule)-width: 3px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-4 {
     $(rule)-width: 4px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-5 {
     $(rule)-width: 5px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-6 {
     $(rule)-width: 6px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-7 {
     $(rule)-width: 7px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-8 {
     $(rule)-width: 8px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-9 {
     $(rule)-width: 9px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-10 {
     $(rule)-width: 10px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-11 {
     $(rule)-width: 11px;
-    $(rule)-style: var(--border-style, solid);
   }
   
   $(class)-12 {
     $(rule)-width: 12px;
-    $(rule)-style: var(--border-style, solid);
+  }
+}
+
+@define-mixin border-style $class, $rule {
+  $(class)Hidden {
+    $(rule)-style: hidden;
+  }
+  
+  $(class)Dotted {
+    $(rule)-style: dotted;
+  }
+  
+  $(class)Dashed {
+    $(rule)-style: dashed;
+  }
+  
+  $(class)Solid {
+    $(rule)-style: solid;
+  }
+  
+  $(class)Double {
+    $(rule)-style: double;
+  }
+  
+  $(class)Groove {
+    $(rule)-style: groove;
+  }
+  
+  $(class)Ridge {
+    $(rule)-style: ridge;
+  }
+  
+  $(class)Inset {
+    $(rule)-style: inset;
+  }
+  
+  $(class)Outset {
+    $(rule)-style: outset;
   }
 }

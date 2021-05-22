@@ -1,69 +1,69 @@
 @define-mixin color-mixin $class, $main, $text {
   .$(main) {
     color: var(--txtColor, $text);
-    background-color: var(--$(main));
-    border-color: var(--$(main));
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .outlined$(class) {
     color: var(--txtColor, $main);
     background-color: var(--transparent);
-    border-color: var(--$(main));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .filled$(class) {
     color: var(--txtColor, $text);
-    background-color: var(--$(main));
-    border-color: var(--$(main))
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1))
   }
     
   .bg$(class) {
-    background-color: var(--$(main));
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .txt$(class) {
-    --txtColor: var(--$(main));
+    --txtColor: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
     color: var(--txtColor);
   }
     
   .bd$(class) {
-    border-color: var(--$(main));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .bdTop$(class) {
-    border-top-color: var(--$(main));
+    border-top-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .bdRight$(class) {
-    border-right-color: var(--$(main));
+    border-right-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .bdBottom$(class) {
-    border-bottom-color: var(--$(main));
+    border-bottom-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .bdLeft$(class) {
-    border-left-color: var(--$(main));
+    border-left-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .caret$(class) {
-    caret-color: var(--$(main));
+    caret-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .outline$(class) {
-    outline-color: var(--$(main));
+    outline-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .fill$(class) {
-    fill: var(--$(main));
+    fill: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .stroke$(class) {
-    stroke: var(--$(main));
+    stroke: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .placeholder$(class)::placeholder {
-    --placeholderColor: var(--$(main));
+    --placeholderColor: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
     color: var(--placeholderColor);
   }
 }
@@ -71,139 +71,139 @@
 @define-mixin color-state $class, $state, $main, $text {
   .$(main)\.$(state):$(state) {
     color: var(--txtColor, $text);
-    background-color: var(--$(main));
-    border-color: var(--$(main));
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .outlined$(class)\.$(state):$(state) {
     color: var(--txtColor, $main);
     background-color: var(--transparent);
-    border-color: var(--$(main));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .filled$(class)\.$(state):$(state) {
     color: var(--txtColor, $text);
-    background-color: var(--$(main));
-    border-color: var(--$(main))
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1))
   }
     
   .bg$(class)\.$(state):$(state) {
-    background-color: var(--$(main));
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .txt$(class)\.$(state):$(state) {
-    --txtColor: var(--$(main));
+    --txtColor: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
     color: var(--txtColor);
   }
     
   .bd$(class)\.$(state):$(state) {
-    border-color: var(--$(main));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .bdTop$(class)\.$(state):$(state) {
-    border-top-color: var(--$(main));
+    border-top-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .bdRight$(class)\.$(state):$(state) {
-    border-right-color: var(--$(main));
+    border-right-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .bdBottom$(class)\.$(state):$(state) {
-    border-bottom-color: var(--$(main));
+    border-bottom-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .bdLeft$(class)\.$(state):$(state) {
-    border-left-color: var(--$(main));
+    border-left-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .caret$(class)\.$(state):$(state) {
-    caret-color: var(--$(main));
+    caret-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .outline$(class)\.$(state):$(state) {
-    outline-color: var(--$(main));
+    outline-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .fill$(class)\.$(state):$(state) {
-    fill: var(--$(main));
+    fill: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .stroke$(class)\.$(state):$(state) {
-    stroke: var(--$(main));
+    stroke: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
   .placeholder$(class)\.$(state):$(state)::placeholder {
-    --placeholderColor: var(--$(main));
+    --placeholderColor: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
     color: var(--placeholderColor);
   }
 }
 
 @define-mixin color-dark $dark, $class, $main, $text {
-  .$(dark) .$(main) {
+  $(dark) .$(main) {
     color: var(--txtDarkColor, $text);
-    background-color: var(--$(main));
-    border-color: var(--$(main));
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .outlined$(class) {
+  $(dark) .outlined$(class) {
     color: var(--txtDarkColor, $main);
     background-color: var(--transparent);
-    border-color: var(--$(main));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .filled$(class) {
+  $(dark) .filled$(class) {
     color: var(--txtDarkColor, $text);
-    background-color: var(--$(main));
-    border-color: var(--$(main));
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .bg$(class) {
-    background-color: var(--$(main));
+  $(dark) .bg$(class) {
+    background-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .txt$(class) {
-    --txtDarkColor: var(--$(main));
+  $(dark) .txt$(class) {
+    --txtDarkColor: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
     color: var(--txtDarkColor);
   }
     
-  .$(dark) .bd$(class) {
-    border-color: var(--$(main));
+  $(dark) .bd$(class) {
+    border-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .bdTop$(class) {
-    border-top-color: var(--$(main));
+  $(dark) .bdTop$(class) {
+    border-top-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .bdRight$(class) {
-    border-right-color: var(--$(main));
+  $(dark) .bdRight$(class) {
+    border-right-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .bdBottom$(class) {
-    border-bottom-color: var(--$(main));
+  $(dark) .bdBottom$(class) {
+    border-bottom-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .bdLeft$(class) {
-    border-left-color: var(--$(main));
+  $(dark) .bdLeft$(class) {
+    border-left-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .caret$(class) {
-    caret-color: var(--$(main));
+  $(dark) .caret$(class) {
+    caret-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .outline$(class) {
-    outline-color: var(--$(main));
+  $(dark) .outline$(class) {
+    outline-color: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .fill$(class) {
-    fill: var(--$(main));
+  $(dark) .fill$(class) {
+    fill: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .stroke$(class) {
-    stroke: var(--$(main));
+  $(dark) .stroke$(class) {
+    stroke: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
   }
     
-  .$(dark) .placeholder$(class)::placeholder {
-    --placeholderDarkColor: var(--$(main));
+  $(dark) .placeholder$(class)::placeholder {
+    --placeholderDarkColor: rgba(var(--rgb$(class)), var(--bgOpacity, 1));
     color: var(--placeholderDarkColor);
   }
 }
