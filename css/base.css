@@ -25,9 +25,9 @@
   --dark: rgba(51, 51, 51, var(--bgOpacity, 1));
   --darker: rgba(28, 28, 28, var(--bgOpacity, 1));
   --darkest: rgba(22, 22, 22, var(--bgOpacity, 1));
-  --light: #fafafa;
-  --lighter: #f8f9fa;
-  --lightest: #efeff1;
+  --bright: #fafafa;
+  --brighter: #f8f9fa;
+  --brightest: #efeff1;
   /*--txtColor: var(--black);
   --bgColor: var(--white);*/
   --bdColor: rgba(0, 0, 0, .09);

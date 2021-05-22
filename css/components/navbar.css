@@ -6,7 +6,7 @@
   padding: var(--navbar-padding, .75em);
   z-index: 4;
   
-  & > .navWrap > *,
+  & > .navWrapper > *,
   & > .container > *,
   & > .containerFluid > *,
   & > .xs\.container > *,
@@ -20,7 +20,7 @@
     align-items: center;
   }
   
-  & > .navWrap,
+  & > .navWrapper,
   & > .container,
   & > .containerFluid,
   & > .xs\.container,
@@ -77,7 +77,7 @@
 
 @media (max-width: 768px) {
   .navBar > *:not(:first-child),
-  .navBar > .navWrap > *:not(:first-child),
+  .navBar > .navWrapper > *:not(:first-child),
   .navBar > .container > *:not(:first-child),
   .navBar > .containerFluid > *:not(:first-child),
   .navBar > .xs\.container > *:not(:first-child),
@@ -95,7 +95,7 @@
   
   .navBar > .navMenu:first-child,
   .navBar > .navMenuStart,
-  .navBar > .navWrap > *:first-child,
+  .navBar > .navWrapper > *:first-child,
   .navBar > .container > *:first-child,
   .navBar > .containerFluid > *:first-child,
   .navBar > .xs\.container > *:first-child,
@@ -115,9 +115,9 @@
   .navBar > .navMenu:nth-child(2),
   .navBar > .navMenuFill,
   .navBar > .navMenuCenter,
-  .navBar > .navWrap > .navMenu:nth-child(2),
-  .navBar > .navWrap > .navMenuFill,
-  .navBar > .navWrap > .navMenuCenter,
+  .navBar > .navWrapper > .navMenu:nth-child(2),
+  .navBar > .navWrapper > .navMenuFill,
+  .navBar > .navWrapper > .navMenuCenter,
   .navBar > .container > .navMenu:nth-child(2),
   .navBar > .container > .navMenuFill,
   .navBar > .container > .navMenuCenter,

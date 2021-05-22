@@ -6,7 +6,7 @@
   margin-bottom: 0;
   list-style: none;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   
   & .menuItem {
     width: 100%;

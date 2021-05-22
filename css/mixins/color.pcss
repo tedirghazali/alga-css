@@ -63,8 +63,8 @@
   }
     
   .placeholder$(class)::placeholder {
-    --txtColor: var(--$(main));
-    color: var(--txtColor);
+    --placeholderColor: var(--$(main));
+    color: var(--placeholderColor);
   }
 }
 
@@ -133,77 +133,77 @@
   }
     
   .placeholder$(class)\.$(state):$(state)::placeholder {
-    --txtColor: var(--$(main));
-    color: var(--txtColor);
+    --placeholderColor: var(--$(main));
+    color: var(--placeholderColor);
   }
 }
 
-@define-mixin color-dark $class, $main, $text {
-  $class {
+@define-mixin color-dark $dark, $class, $main, $text {
+  .$(dark) .$(main) {
     color: var(--txtDarkColor, $text);
     background-color: var(--$(main));
     border-color: var(--$(main));
   }
     
-  .outlined$(class) {
+  .$(dark) .outlined$(class) {
     color: var(--txtDarkColor, $main);
     background-color: var(--transparent);
     border-color: var(--$(main));
   }
     
-  .filled$(class) {
+  .$(dark) .filled$(class) {
     color: var(--txtDarkColor, $text);
     background-color: var(--$(main));
     border-color: var(--$(main));
   }
     
-  .bg$(class) {
+  .$(dark) .bg$(class) {
     background-color: var(--$(main));
   }
     
-  .txt$(class) {
+  .$(dark) .txt$(class) {
     --txtDarkColor: var(--$(main));
     color: var(--txtDarkColor);
   }
     
-  .bd$(class) {
+  .$(dark) .bd$(class) {
     border-color: var(--$(main));
   }
     
-  ..bdTop$(class) {
+  .$(dark) .bdTop$(class) {
     border-top-color: var(--$(main));
   }
     
-  .bdRight$(class) {
+  .$(dark) .bdRight$(class) {
     border-right-color: var(--$(main));
   }
     
-  .bdBottom$(class) {
+  .$(dark) .bdBottom$(class) {
     border-bottom-color: var(--$(main));
   }
     
-  .bdLeft$(class) {
+  .$(dark) .bdLeft$(class) {
     border-left-color: var(--$(main));
   }
     
-  .caret$(class) {
+  .$(dark) .caret$(class) {
     caret-color: var(--$(main));
   }
     
-  .outline$(class) {
+  .$(dark) .outline$(class) {
     outline-color: var(--$(main));
   }
     
-  .fill$(class) {
+  .$(dark) .fill$(class) {
     fill: var(--$(main));
   }
     
-  .stroke$(class) {
+  .$(dark) .stroke$(class) {
     stroke: var(--$(main));
   }
     
-  .placeholder$(class)::placeholder {
-    --txtDarkColor: var(--$(main));
-    color: var(--txtDarkColor);
+  .$(dark) .placeholder$(class)::placeholder {
+    --placeholderDarkColor: var(--$(main));
+    color: var(--placeholderDarkColor);
   }
 }

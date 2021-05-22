@@ -122,17 +122,17 @@
       background-repeat: repeat-y !important;
     }
 
-    &No {
-      background-repeat: no-repeat !important;
-    }
-
     &Round {
       background-repeat: round !important;
     }
-
-    &Duo {
-      background-repeat: var(--bgRepeatStart, repeat) var(--bgRepeatEnd, repeat) !important;
-    }
+  }
+  
+  &NoRepeat {
+    background-repeat: no-repeat !important;
+  }
+  
+  &TwoRepeat {
+    background-repeat: var(--bgRepeatStart, repeat) var(--bgRepeatEnd, repeat) !important;
   }
 }
 

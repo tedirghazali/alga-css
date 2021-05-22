@@ -1,22 +1,22 @@
-.left\:align, .left\:text { text-align: left !important; }
-.right\:align, .right\:text { text-align: right !important; }
-.center\:align, .center\:text { text-align: center !important; }
-.justify\:align, .justify\:text { text-align: justify !important; }
-.justify-all\:align, .justify-all\:text { text-align: justify-all !important; }
-.start\:align, .start\:text { text-align: start !important; }
-.end\:align, .end\:text { text-align: end !important; }
-.match-parent\:align, .match-parent\:text { text-align: match-parent !important; }
-.inherit\:align, .inherit\:text { text-align: inherit !important; }
+.alignLeft, .txtLeft { text-align: left !important; }
+.alignRight, .txtRight { text-align: right !important; }
+.alignCenter, .txtCenter { text-align: center !important; }
+.alignJustify, .txtJustify { text-align: justify !important; }
+.alignJustifyAll, .txtJustifyAll { text-align: justify-all !important; }
+.alignStart, .txtStart { text-align: start !important; }
+.alignEnd, .txtEnd { text-align: end !important; }
+.alignMatchParent, .txtMatchParent { text-align: match-parent !important; }
+.alignInherit, .txtInherit { text-align: inherit !important; }
 
-.top\:align { vertical-align: top !important; }
-.middle\:align { vertical-align: middle !important; }
-.bottom\:align { vertical-align: bottom !important; }
-.top\:text { vertical-align: text-top !important; }
-.bottom\:text { vertical-align: text-bottom !important; }
+.alignTop { vertical-align: top !important; }
+.alignMiddle { vertical-align: middle !important; }
+.alignBottom { vertical-align: bottom !important; }
+.txtTop { vertical-align: text-top !important; }
+.txtBottom { vertical-align: text-bottom !important; }
 
-.left\:float { float: left !important; }
-.right\:float { float: right !important; }
-.none\:float { float: none !important; }
+.floatLeft { float: left !important; }
+.floatRight { float: right !important; }
+.floatNone { float: none !important; }
 
 .clearfix::after {
   display: block;
@@ -25,27 +25,27 @@
 }
 
 @media (min-width: 640px) {
-  .small\(left\:align\), .small\(left\:text\) { text-align: left !important; }
-  .small\(right\:align\), .small\(right\:text\) { text-align: right !important; }
-  .small\(center\:align\), .small\(center\:text\) { text-align: center !important; }
-  .small\(justify\:align\), .small\(justify\:text\) { text-align: justify !important; }
-  .small\(justify-all\:align\), .small\(justify-all\:text\) { text-align: justify-all !important; }
-  .small\(start\:align\), .small\(start\:text\) { text-align: start !important; }
-  .small\(end\:align\), .small\(end\:text\) { text-align: end !important; }
-  .small\(match-parent\:align\), .small\(match-parent\:text\) { text-align: match-parent !important; }
-  .small\(inherit\:align\), .small\(inherit\:text\) { text-align: inherit !important; }
+  .xs\.alignLeft, .xs\.txtLeft { text-align: left !important; }
+  .xs\.alignRight, .xs\.txtRight { text-align: right !important; }
+  .xs\.alignCenter, .xs\.txtCenter { text-align: center !important; }
+  .xs\.alignJustify, .xs\.txtJustify { text-align: justify !important; }
+  .xs\.alignJustifyAll, .xs\.txtJustifyAll { text-align: justify-all !important; }
+  .xs\.alignStart, .xs\.txtStart { text-align: start !important; }
+  .xs\.alignEnd, .xs\.txtEnd { text-align: end !important; }
+  .xs\.alignMatchParent, .xs\.txtMatchParent { text-align: match-parent !important; }
+  .xs\.alignInherit, .xs\.txtInherit { text-align: inherit !important; }
   
-  .small\(top\:align\) { vertical-align: top !important; }
-  .small\(middle\:align\) { vertical-align: middle !important; }
-  .small\(bottom\:align\) { vertical-align: bottom !important; }
-  .small\(top\:text\) { vertical-align: text-top !important; }
-  .small\(bottom\:text\) { vertical-align: text-bottom !important; }
+  .xs\.alignTop { vertical-align: top !important; }
+  .xs\.alignMiddle { vertical-align: middle !important; }
+  .xs\.alignBottom { vertical-align: bottom !important; }
+  .xs\.txtTop { vertical-align: text-top !important; }
+  .xs\.txtBottom { vertical-align: text-bottom !important; }
 
-  .small\(left\:float\) { float: left !important; }
-  .small\(right\:float\) { float: right !important; }
-  .small\(none\:float\) { float: none !important; }
+  .xs\.floatLeft { float: left !important; }
+  .xs\.floatRight { float: right !important; }
+  .xs\.floatNone { float: none !important; }
   
-  .small\(clearfix\)::after {
+  .xs\.clearfix::after {
     display: block;
     clear: both;
     content: "";
@@ -53,27 +53,27 @@
 }
 
 @media (min-width: 768px) {
-  .medium\(left\:align\), .medium\(left\:text\) { text-align: left !important; }
-  .medium\(right\:align\), .medium\(right\:text\) { text-align: right !important; }
-  .medium\(center\:align\), .medium\(center\:text\) { text-align: center !important; }
-  .medium\(justify\:align\), .medium\(justify\:text\) { text-align: justify !important; }
-  .medium\(justify-all\:align\), .medium\(justify-all\:text\) { text-align: justify-all !important; }
-  .medium\(start\:align\), .medium\(start\:text\) { text-align: start !important; }
-  .medium\(end\:align\), .medium\(end\:text\) { text-align: end !important; }
-  .medium\(match-parent\:align\), .medium\(match-parent\:text\) { text-align: match-parent !important; }
-  .medium\(inherit\:align\), .medium\(inherit\:text\) { text-align: inherit !important; }
+  .sm\.alignLeft, .sm\.txtLeft { text-align: left !important; }
+  .sm\.alignRight, .sm\.txtRight { text-align: right !important; }
+  .sm\.alignCenter, .sm\.txtCenter { text-align: center !important; }
+  .sm\.alignJustify, .sm\.txtJustify { text-align: justify !important; }
+  .sm\.alignJustifyAll, .sm\.txtJustifyAll { text-align: justify-all !important; }
+  .sm\.alignStart, .sm\.txtStart { text-align: start !important; }
+  .sm\.alignEnd, .sm\.txtEnd { text-align: end !important; }
+  .sm\.alignMatchParent, .sm\.txtMatchParent { text-align: match-parent !important; }
+  .sm\.alignInherit, .sm\.txtInherit { text-align: inherit !important; }
   
-  .medium\(top\:align\) { vertical-align: top !important; }
-  .medium\(middle\:align\) { vertical-align: middle !important; }
-  .medium\(bottom\:align\) { vertical-align: bottom !important; }
-  .medium\(top\:text\) { vertical-align: text-top !important; }
-  .medium\(bottom\:text\) { vertical-align: text-bottom !important; }
+  .sm\.alignTop { vertical-align: top !important; }
+  .sm\.alignMiddle { vertical-align: middle !important; }
+  .sm\.alignBottom { vertical-align: bottom !important; }
+  .sm\.txtTop { vertical-align: text-top !important; }
+  .sm\.txtBottom { vertical-align: text-bottom !important; }
 
-  .medium\(left\:float\) { float: left !important; }
-  .medium\(right\:float\) { float: right !important; }
-  .medium\(none\:float\) { float: none !important; }
+  .sm\.floatLeft { float: left !important; }
+  .sm\.floatRight { float: right !important; }
+  .sm\.floatNone { float: none !important; }
   
-  .medium\(clearfix\)::after {
+  .sm\.clearfix::after {
     display: block;
     clear: both;
     content: "";
@@ -81,27 +81,27 @@
 }
 
 @media (min-width: 1024px) {
-  .large\(left\:align\), .large\(left\:text\) { text-align: left !important; }
-  .large\(right\:align\), .large\(right\:text\) { text-align: right !important; }
-  .large\(center\:align\), .large\(center\:text\) { text-align: center !important; }
-  .large\(justify\:align\), .large\(justify\:text\) { text-align: justify !important; }
-  .large\(justify-all\:align\), .large\(justify-all\:text\) { text-align: justify-all !important; }
-  .large\(start\:align\), .large\(start\:text\) { text-align: start !important; }
-  .large\(end\:align\), .large\(end\:text\) { text-align: end !important; }
-  .large\(match-parent\:align\), .large\(match-parent\:text\) { text-align: match-parent !important; }
-  .large\(inherit\:align\), .large\(inherit\:text\) { text-align: inherit !important; }
+  .md\.alignLeft, .md\.txtLeft { text-align: left !important; }
+  .md\.alignRight, .md\.txtRight { text-align: right !important; }
+  .md\.alignCenter, .md\.txtCenter { text-align: center !important; }
+  .md\.alignJustify, .md\.txtJustify { text-align: justify !important; }
+  .md\.alignJustifyAll, .md\.txtJustifyAll { text-align: justify-all !important; }
+  .md\.alignStart, .md\.txtStart { text-align: start !important; }
+  .md\.alignEnd, .md\.txtEnd { text-align: end !important; }
+  .md\.alignMatchParent, .md\.txtMatchParent { text-align: match-parent !important; }
+  .md\.alignInherit, .md\.txtInherit { text-align: inherit !important; }
   
-  .large\(top\:align\) { vertical-align: top !important; }
-  .large\(middle\:align\) { vertical-align: middle !important; }
-  .large\(bottom\:align\) { vertical-align: bottom !important; }
-  .large\(top\:text\) { vertical-align: text-top !important; }
-  .large\(bottom\:text\) { vertical-align: text-bottom !important; }
+  .md\.alignTop { vertical-align: top !important; }
+  .md\.alignMiddle { vertical-align: middle !important; }
+  .md\.alignBottom { vertical-align: bottom !important; }
+  .md\.txtTop { vertical-align: text-top !important; }
+  .md\.txtBottom { vertical-align: text-bottom !important; }
 
-  .large\(left\:float\) { float: left !important; }
-  .large\(right\:float\) { float: right !important; }
-  .large\(none\:float\) { float: none !important; }
+  .md\.floatLeft { float: left !important; }
+  .md\.floatRight { float: right !important; }
+  .md\.floatNone { float: none !important; }
   
-  .large\(clearfix\)::after {
+  .md\.clearfix::after {
     display: block;
     clear: both;
     content: "";
@@ -109,27 +109,27 @@
 }
 
 @media (min-width: 1280px) {
-  .larger\(left\:align\), .larger\(left\:text\) { text-align: left !important; }
-  .larger\(right\:align\), .larger\(right\:text\) { text-align: right !important; }
-  .larger\(center\:align\), .larger\(center\:text\) { text-align: center !important; }
-  .larger\(justify\:align\), .larger\(justify\:text\) { text-align: justify !important; }
-  .larger\(justify-all\:align\), .larger\(justify-all\:text\) { text-align: justify-all !important; }
-  .larger\(start\:align\), .larger\(start\:text\) { text-align: start !important; }
-  .larger\(end\:align\), .larger\(end\:text\) { text-align: end !important; }
-  .larger\(match-parent\:align\), .larger\(match-parent\:text\) { text-align: match-parent !important; }
-  .larger\(inherit\:align\), .larger\(inherit\:text\) { text-align: inherit !important; }
+  .lg\.alignLeft, .lg\.txtLeft { text-align: left !important; }
+  .lg\.alignRight, .lg\.txtRight { text-align: right !important; }
+  .lg\.alignCenter, .lg\.txtCenter { text-align: center !important; }
+  .lg\.alignJustify, .lg\.txtJustify { text-align: justify !important; }
+  .lg\.alignJustifyAll, .lg\.txtJustifyAll { text-align: justify-all !important; }
+  .lg\.alignStart, .lg\.txtStart { text-align: start !important; }
+  .lg\.alignEnd, .lg\.txtEnd { text-align: end !important; }
+  .lg\.alignMatchParent, .lg\.txtMatchParent { text-align: match-parent !important; }
+  .lg\.alignInherit, .lg\.txtInherit { text-align: inherit !important; }
   
-  .larger\(top\:align\) { vertical-align: top !important; }
-  .larger\(middle\:align\) { vertical-align: middle !important; }
-  .larger\(bottom\:align\) { vertical-align: bottom !important; }
-  .larger\(top\:text\) { vertical-align: text-top !important; }
-  .larger\(bottom\:text\) { vertical-align: text-bottom !important; }
+  .lg\.alignTop { vertical-align: top !important; }
+  .lg\.alignMiddle { vertical-align: middle !important; }
+  .lg\.alignBottom { vertical-align: bottom !important; }
+  .lg\.txtTop { vertical-align: text-top !important; }
+  .lg\.txtBottom { vertical-align: text-bottom !important; }
 
-  .larger\(left\:float\) { float: left !important; }
-  .larger\(right\:float\) { float: right !important; }
-  .larger\(none\:float\) { float: none !important; }
+  .lg\.floatLeft { float: left !important; }
+  .lg\.floatRight { float: right !important; }
+  .lg\.floatNone { float: none !important; }
   
-  .larger\(clearfix\)::after {
+  .lg\.clearfix::after {
     display: block;
     clear: both;
     content: "";
@@ -137,27 +137,55 @@
 }
 
 @media (min-width: 1536px) {
-  .largest\(left\:align\), .largest\(left\:text\) { text-align: left !important; }
-  .largest\(right\:align\), .largest\(right\:text\) { text-align: right !important; }
-  .largest\(center\:align\), .largest\(center\:text\) { text-align: center !important; }
-  .largest\(justify\:align\), .largest\(justify\:text\) { text-align: justify !important; }
-  .largest\(justify-all\:align\), .largest\(justify-all\:text\) { text-align: justify-all !important; }
-  .largest\(start\:align\), .largest\(start\:text\) { text-align: start !important; }
-  .largest\(end\:align\), .largest\(end\:text\) { text-align: end !important; }
-  .largest\(match-parent\:align\), .largest\(match-parent\:text\) { text-align: match-parent !important; }
-  .largest\(inherit\:align\), .largest\(inherit\:text\) { text-align: inherit !important; }
+  .xl\.alignLeft, .xl\.txtLeft { text-align: left !important; }
+  .xl\.alignRight, .xl\.txtRight { text-align: right !important; }
+  .xl\.alignCenter, .xl\.txtCenter { text-align: center !important; }
+  .xl\.alignJustify, .xl\.txtJustify { text-align: justify !important; }
+  .xl\.alignJustifyAll, .xl\.txtJustifyAll { text-align: justify-all !important; }
+  .xl\.alignStart, .xl\.txtStart { text-align: start !important; }
+  .xl\.alignEnd, .xl\.txtEnd { text-align: end !important; }
+  .xl\.alignMatchParent, .xl\.txtMatchParent { text-align: match-parent !important; }
+  .xl\.alignInherit, .xl\.txtInherit { text-align: inherit !important; }
   
-  .largest\(top\:align\) { vertical-align: top !important; }
-  .largest\(middle\:align\) { vertical-align: middle !important; }
-  .largest\(bottom\:align\) { vertical-align: bottom !important; }
-  .largest\(top\:text\) { vertical-align: text-top !important; }
-  .largest\(bottom\:text\) { vertical-align: text-bottom !important; }
+  .xl\.alignTop { vertical-align: top !important; }
+  .xl\.alignMiddle { vertical-align: middle !important; }
+  .xl\.alignBottom { vertical-align: bottom !important; }
+  .xl\.txtTop { vertical-align: text-top !important; }
+  .xl\.txtBottom { vertical-align: text-bottom !important; }
 
-  .largest\(left\:float\) { float: left !important; }
-  .largest\(right\:float\) { float: right !important; }
-  .largest\(none\:float\) { float: none !important; }
+  .xl\.floatLeft { float: left !important; }
+  .xl\.floatRight { float: right !important; }
+  .xl\.floatNone { float: none !important; }
   
-  .largest\(clearfix\)::after {
+  .xl\.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@media (min-width: 1920px) {
+  .\2xl\.alignLeft, .\2xl\.txtLeft { text-align: left !important; }
+  .\2xl\.alignRight, .\2xl\.txtRight { text-align: right !important; }
+  .\2xl\.alignCenter, .\2xl\.txtCenter { text-align: center !important; }
+  .\2xl\.alignJustify, .\2xl\.txtJustify { text-align: justify !important; }
+  .\2xl\.alignJustifyAll, .\2xl\.txtJustifyAll { text-align: justify-all !important; }
+  .\2xl\.alignStart, .\2xl\.txtStart { text-align: start !important; }
+  .\2xl\.alignEnd, .\2xl\.txtEnd { text-align: end !important; }
+  .\2xl\.alignMatchParent, .\2xl\.txtMatchParent { text-align: match-parent !important; }
+  .\2xl\.alignInherit, .\2xl\.txtInherit { text-align: inherit !important; }
+  
+  .\2xl\.alignTop { vertical-align: top !important; }
+  .\2xl\.alignMiddle { vertical-align: middle !important; }
+  .\2xl\.alignBottom { vertical-align: bottom !important; }
+  .\2xl\.txtTop { vertical-align: text-top !important; }
+  .\2xl\.txtBottom { vertical-align: text-bottom !important; }
+
+  .\2xl\.floatLeft { float: left !important; }
+  .\2xl\.floatRight { float: right !important; }
+  .\2xl\.floatNone { float: none !important; }
+  
+  .\2xl\.clearfix::after {
     display: block;
     clear: both;
     content: "";

@@ -1,315 +1,200 @@
-.thin\:text { font-weight: 100 !important; }
-.ultralight\:text { font-weight: 200 !important; }
-.light\:text { font-weight: 300 !important; }
-.regular\:text { font-weight: 400 !important; }
-.medium\:text { font-weight: 500 !important; }
-.semibold\:text { font-weight: 600 !important; }
-.bold\:text { font-weight: 700 !important; }
-.ultrabold\:text { font-weight: 800 !important; }
-.heavy\:text { font-weight: 900 !important; }
-.ultraheavy\:text { font-weight: 950 !important; }
+.txtThin { font-weight: 100 !important; }
+.txtExtraLight { font-weight: 200 !important; }
+.txtLight { font-weight: 300 !important; }
+.txtRegular { font-weight: 400 !important; }
+.txtMedium { font-weight: 500 !important; }
+.txtSemiBold { font-weight: 600 !important; }
+.txtBold { font-weight: 700 !important; }
+.txtExtraBold { font-weight: 800 !important; }
+.txtHeavy { font-weight: 900 !important; }
+.txtExtraHeavy { font-weight: 950 !important; }
 
-.lighter\:text { font-weight: lighter !important; }
-.bolder\:text { font-weight: bolder !important; }
+.txtLighter { font-weight: lighter !important; }
+.txtBolder { font-weight: bolder !important; }
 
-.italic\:text { font-style: italic !important; }
-.normal\:text { font-style: normal !important; }
+.txtItalic { font-style: italic !important; }
+.txtNormal { font-style: normal !important; }
 
-.lowercase\:text { text-transform: lowercase !important; }
-.uppercase\:text { text-transform: uppercase !important; }
-.capitalize\:text { text-transform: capitalize !important; }
+.txtLowerCase { text-transform: lowercase !important; }
+.txtUpperCase { text-transform: uppercase !important; }
+.txtCapitalize { text-transform: capitalize !important; }
 
-.underline\:text { text-decoration: underline !important; }
-.overline\:text { text-decoration: overline !important; }
-.strikethrough\:text { text-decoration: line-through !important; }
+.txtUnderLine { text-decoration: underline !important; }
+.txtOverLine { text-decoration: overline !important; }
+.txtStrikeThrough { text-decoration: line-through !important; }
 
-@mixin text-size .text;
-@mixin text-double .thin\:text, font-weight, 100;
-@mixin text-double .ultralight\:text, font-weight, 200;
-@mixin text-double .light\:text, font-weight, 300;
-@mixin text-double .regular\:text, font-weight, 400;
-@mixin text-double .medium\:text, font-weight, 500;
-@mixin text-double .semibold\:text, font-weight, 600;
-@mixin text-double .bold\:text, font-weight, 700;
-@mixin text-double .ultrabold\:text, font-weight, 800;
-@mixin text-double .heavy\:text, font-weight, 900;
-@mixin text-double .ultraheavy\:text, font-weight, 950;
-
-@mixin text-double .lighter\:text, font-weight, lighter;
-@mixin text-double .bolder\:text, font-weight, bolder;
-
-@mixin text-double .italic\:text, font-style, italic;
-@mixin text-double .normal\:text, font-style, normal;
-
-@mixin text-double .lowercase\:text, text-transform, lowercase;
-@mixin text-double .uppercase\:text, text-transform, uppercase;
-@mixin text-double .capitalize\:text, text-transform, capitalize;
-
-@mixin text-double .underline\:text, text-decoration, underline;
-@mixin text-double .overline\:text, text-decoration, overline;
-@mixin text-double .strikethrough\:text, text-decoration, line-through;
+@mixin text-size .txt;
 
 @media (min-width: 640px) {
-  .small\(thin\:text\) { font-weight: 100 !important; }
-  .small\(ultralight\:text\) { font-weight: 200 !important; }
-  .small\(light\:text\) { font-weight: 300 !important; }
-  .small\(regular\:text\) { font-weight: 400 !important; }
-  .small\(medium\:text\) { font-weight: 500 !important; }
-  .small\(semibold\:text\) { font-weight: 600 !important; }
-  .small\(bold\:text\) { font-weight: 700 !important; }
-  .small\(ultrabold\:text\) { font-weight: 800 !important; }
-  .small\(heavy\:text\) { font-weight: 900 !important; }
-  .small\(ultraheavy\:text\) { font-weight: 950 !important; }
+  .xs\.txtThin { font-weight: 100 !important; }
+  .xs\.txtExtraLight { font-weight: 200 !important; }
+  .xs\.txtLight { font-weight: 300 !important; }
+  .xs\.txtRegular { font-weight: 400 !important; }
+  .xs\.txtMedium { font-weight: 500 !important; }
+  .xs\.txtSemiBold { font-weight: 600 !important; }
+  .xs\.txtBold { font-weight: 700 !important; }
+  .xs\.txtExtraBold { font-weight: 800 !important; }
+  .xs\.txtHeavy { font-weight: 900 !important; }
+  .xs\.txtExtraHeavy { font-weight: 950 !important; }
 
-  .small\(lighter\:text\) { font-weight: lighter !important; }
-  .small\(bolder\:text\) { font-weight: bolder !important; }
+  .xs\.txtLighter { font-weight: lighter !important; }
+  .xs\.txtBolder { font-weight: bolder !important; }
 
-  .small\(italic\:text\) { font-style: italic !important; }
-  .small\(normal\:text\) { font-style: normal !important; }
+  .xs\.txtItalic { font-style: italic !important; }
+  .xs\.txtNormal { font-style: normal !important; }
 
-  .small\(lowercase\:text\) { text-transform: lowercase !important; }
-  .small\(uppercase\:text\) { text-transform: uppercase !important; }
-  .small\(capitalize\:text\) { text-transform: capitalize !important; }
+  .xs\.txtLowerCase { text-transform: lowercase !important; }
+  .xs\.txtUpperCase { text-transform: uppercase !important; }
+  .xs\.txtCapitalize { text-transform: capitalize !important; }
 
-  .small\(underline\:text\) { text-decoration: underline !important; }
-  .small\(overline\:text\) { text-decoration: overline !important; }
-  .small\(strikethrough\:text\) { text-decoration: line-through !important; }
+  .xs\.txtUnderLine { text-decoration: underline !important; }
+  .xs\.txtOverLine { text-decoration: overline !important; }
+  .xs\.txtStrikeThrough { text-decoration: line-through !important; }
 
-  @mixin text-size .small\(text\);
-  @mixin text-double .small\(thin\:text\), font-weight, 100;
-  @mixin text-double .small\(ultralight\:text\), font-weight, 200;
-  @mixin text-double .small\(light\:text\), font-weight, 300;
-  @mixin text-double .small\(regular\:text\), font-weight, 400;
-  @mixin text-double .small\(medium\:text\), font-weight, 500;
-  @mixin text-double .small\(semibold\:text\), font-weight, 600;
-  @mixin text-double .small\(bold\:text\), font-weight, 700;
-  @mixin text-double .small\(ultrabold\:text\), font-weight, 800;
-  @mixin text-double .small\(heavy\:text\), font-weight, 900;
-  @mixin text-double .small\(ultraheavy\:text\), font-weight, 950;
-
-  @mixin text-double .small\(lighter\:text\), font-weight, lighter;
-  @mixin text-double .small\(bolder\:text\), font-weight, bolder;
-
-  @mixin text-double .small\(italic\:text\), font-style, italic;
-  @mixin text-double .small\(normal\:text\), font-style, normal;
-
-  @mixin text-double .small\(lowercase\:text\), text-transform, lowercase;
-  @mixin text-double .small\(uppercase\:text\), text-transform, uppercase;
-  @mixin text-double .small\(capitalize\:text\), text-transform, capitalize;
-  
-  @mixin text-double .small\(underline\:text\), text-decoration, underline;
-  @mixin text-double .small\(overline\:text\), text-decoration, overline;
-  @mixin text-double .small\(strikethrough\:text\), text-decoration, line-through;
+  @mixin text-size .sm\.text;
 }
 
 @media (min-width: 768px) {
-  .medium\(thin\:text\) { font-weight: 100 !important; }
-  .medium\(ultralight\:text\) { font-weight: 200 !important; }
-  .medium\(light\:text\) { font-weight: 300 !important; }
-  .medium\(regular\:text\) { font-weight: 400 !important; }
-  .medium\(medium\:text\) { font-weight: 500 !important; }
-  .medium\(semibold\:text\) { font-weight: 600 !important; }
-  .medium\(bold\:text\) { font-weight: 700 !important; }
-  .medium\(ultrabold\:text\) { font-weight: 800 !important; }
-  .medium\(heavy\:text\) { font-weight: 900 !important; }
-  .medium\(ultraheavy\:text\) { font-weight: 950 !important; }
+  .sm\.txtThin { font-weight: 100 !important; }
+  .sm\.txtExtraLight { font-weight: 200 !important; }
+  .sm\.txtLight { font-weight: 300 !important; }
+  .sm\.txtRegular { font-weight: 400 !important; }
+  .sm\.txtMedium { font-weight: 500 !important; }
+  .sm\.txtSemiBold { font-weight: 600 !important; }
+  .sm\.txtBold { font-weight: 700 !important; }
+  .sm\.txtExtraBold { font-weight: 800 !important; }
+  .sm\.txtHeavy { font-weight: 900 !important; }
+  .sm\.txtExtraHeavy { font-weight: 950 !important; }
 
-  .medium\(lighter\:text\) { font-weight: lighter !important; }
-  .medium\(bolder\:text\) { font-weight: bolder !important; }
+  .sm\.txtLighter { font-weight: lighter !important; }
+  .sm\.txtBolder { font-weight: bolder !important; }
 
-  .medium\(italic\:text\) { font-style: italic !important; }
-  .medium\(normal\:text\) { font-style: normal !important; }
+  .sm\.txtItalic { font-style: italic !important; }
+  .sm\.txtNormal { font-style: normal !important; }
 
-  .medium\(lowercase\:text\) { text-transform: lowercase !important; }
-  .medium\(uppercase\:text\) { text-transform: uppercase !important; }
-  .medium\(capitalize\:text\) { text-transform: capitalize !important; }
+  .sm\.txtLowerCase { text-transform: lowercase !important; }
+  .sm\.txtUpperCase { text-transform: uppercase !important; }
+  .sm\.txtCapitalize { text-transform: capitalize !important; }
 
-  .medium\(underline\:text\) { text-decoration: underline !important; }
-  .medium\(overline\:text\) { text-decoration: overline !important; }
-  .medium\(strikethrough\:text\) { text-decoration: line-through !important; }
+  .sm\.txtUnderLine { text-decoration: underline !important; }
+  .sm\.txtOverLine { text-decoration: overline !important; }
+  .sm\.txtStrikeThrough { text-decoration: line-through !important; }
 
-  @mixin text-size .medium\(text\);
-  @mixin text-double .medium\(thin\:text\), font-weight, 100;
-  @mixin text-double .medium\(ultralight\:text\), font-weight, 200;
-  @mixin text-double .medium\(light\:text\), font-weight, 300;
-  @mixin text-double .medium\(regular\:text\), font-weight, 400;
-  @mixin text-double .medium\(medium\:text\), font-weight, 500;
-  @mixin text-double .medium\(semibold\:text\), font-weight, 600;
-  @mixin text-double .medium\(bold\:text\), font-weight, 700;
-  @mixin text-double .medium\(ultrabold\:text\), font-weight, 800;
-  @mixin text-double .medium\(heavy\:text\), font-weight, 900;
-  @mixin text-double .medium\(ultraheavy\:text\), font-weight, 950;
-
-  @mixin text-double .medium\(lighter\:text\), font-weight, lighter;
-  @mixin text-double .medium\(bolder\:text\), font-weight, bolder;
-
-  @mixin text-double .medium\(italic\:text\), font-style, italic;
-  @mixin text-double .medium\(normal\:text\), font-style, normal;
-
-  @mixin text-double .medium\(lowercase\:text\), text-transform, lowercase;
-  @mixin text-double .medium\(uppercase\:text\), text-transform, uppercase;
-  @mixin text-double .medium\(capitalize\:text\), text-transform, capitalize;
-  
-  @mixin text-double .medium\(underline\:text\), text-decoration, underline;
-  @mixin text-double .medium\(overline\:text\), text-decoration, overline;
-  @mixin text-double .medium\(strikethrough\:text\), text-decoration, line-through;
+  @mixin text-size .sm\.text;
 }
 
 @media (min-width: 1024px) {
-  .large\(thin\:text\) { font-weight: 100 !important; }
-  .large\(ultralight\:text\) { font-weight: 200 !important; }
-  .large\(light\:text\) { font-weight: 300 !important; }
-  .large\(regular\:text\) { font-weight: 400 !important; }
-  .large\(medium\:text\) { font-weight: 500 !important; }
-  .large\(semibold\:text\) { font-weight: 600 !important; }
-  .large\(bold\:text\) { font-weight: 700 !important; }
-  .large\(ultrabold\:text\) { font-weight: 800 !important; }
-  .large\(heavy\:text\) { font-weight: 900 !important; }
-  .large\(ultraheavy\:text\) { font-weight: 950 !important; }
+  .md\.txtThin { font-weight: 100 !important; }
+  .md\.txtExtraLight { font-weight: 200 !important; }
+  .md\.txtLight { font-weight: 300 !important; }
+  .md\.txtRegular { font-weight: 400 !important; }
+  .md\.txtMedium { font-weight: 500 !important; }
+  .md\.txtSemiBold { font-weight: 600 !important; }
+  .md\.txtBold { font-weight: 700 !important; }
+  .md\.txtExtraBold { font-weight: 800 !important; }
+  .md\.txtHeavy { font-weight: 900 !important; }
+  .md\.txtExtraHeavy { font-weight: 950 !important; }
 
-  .large\(lighter\:text\) { font-weight: lighter !important; }
-  .large\(bolder\:text\) { font-weight: bolder !important; }
+  .md\.txtLighter { font-weight: lighter !important; }
+  .md\.txtBolder { font-weight: bolder !important; }
 
-  .large\(italic\:text\) { font-style: italic !important; }
-  .large\(normal\:text\) { font-style: normal !important; }
+  .md\.txtItalic { font-style: italic !important; }
+  .md\.txtNormal { font-style: normal !important; }
 
-  .large\(lowercase\:text\) { text-transform: lowercase !important; }
-  .large\(uppercase\:text\) { text-transform: uppercase !important; }
-  .large\(capitalize\:text\) { text-transform: capitalize !important; }
+  .md\.txtLowerCase { text-transform: lowercase !important; }
+  .md\.txtUpperCase { text-transform: uppercase !important; }
+  .md\.txtCapitalize { text-transform: capitalize !important; }
 
-  .large\(underline\:text\) { text-decoration: underline !important; }
-  .large\(overline\:text\) { text-decoration: overline !important; }
-  .large\(strikethrough\:text\) { text-decoration: line-through !important; }
+  .md\.txtUnderLine { text-decoration: underline !important; }
+  .md\.txtOverLine { text-decoration: overline !important; }
+  .md\.txtStrikeThrough { text-decoration: line-through !important; }
 
-  @mixin text-size .large\(text\);
-  @mixin text-double .large\(thin\:text\), font-weight, 100;
-  @mixin text-double .large\(ultralight\:text\), font-weight, 200;
-  @mixin text-double .large\(light\:text\), font-weight, 300;
-  @mixin text-double .large\(regular\:text\), font-weight, 400;
-  @mixin text-double .large\(medium\:text\), font-weight, 500;
-  @mixin text-double .large\(semibold\:text\), font-weight, 600;
-  @mixin text-double .large\(bold\:text\), font-weight, 700;
-  @mixin text-double .large\(ultrabold\:text\), font-weight, 800;
-  @mixin text-double .large\(heavy\:text\), font-weight, 900;
-  @mixin text-double .large\(ultraheavy\:text\), font-weight, 950;
-
-  @mixin text-double .large\(lighter\:text\), font-weight, lighter;
-  @mixin text-double .large\(bolder\:text\), font-weight, bolder;
-
-  @mixin text-double .large\(italic\:text\), font-style, italic;
-  @mixin text-double .large\(normal\:text\), font-style, normal;
-
-  @mixin text-double .large\(lowercase\:text\), text-transform, lowercase;
-  @mixin text-double .large\(uppercase\:text\), text-transform, uppercase;
-  @mixin text-double .large\(capitalize\:text\), text-transform, capitalize;
-  
-  @mixin text-double .large\(underline\:text\), text-decoration, underline;
-  @mixin text-double .large\(overline\:text\), text-decoration, overline;
-  @mixin text-double .large\(strikethrough\:text\), text-decoration, line-through;
+  @mixin text-size .md\.text;
 }
 
 @media (min-width: 1280px) {
-  .larger\(thin\:text\) { font-weight: 100 !important; }
-  .larger\(ultralight\:text\) { font-weight: 200 !important; }
-  .larger\(light\:text\) { font-weight: 300 !important; }
-  .larger\(regular\:text\) { font-weight: 400 !important; }
-  .larger\(medium\:text\) { font-weight: 500 !important; }
-  .larger\(semibold\:text\) { font-weight: 600 !important; }
-  .larger\(bold\:text\) { font-weight: 700 !important; }
-  .larger\(ultrabold\:text\) { font-weight: 800 !important; }
-  .larger\(heavy\:text\) { font-weight: 900 !important; }
-  .larger\(ultraheavy\:text\) { font-weight: 950 !important; }
+  .lg\.txtThin { font-weight: 100 !important; }
+  .lg\.txtExtraLight { font-weight: 200 !important; }
+  .lg\.txtLight { font-weight: 300 !important; }
+  .lg\.txtRegular { font-weight: 400 !important; }
+  .lg\.txtMedium { font-weight: 500 !important; }
+  .lg\.txtSemiBold { font-weight: 600 !important; }
+  .lg\.txtBold { font-weight: 700 !important; }
+  .lg\.txtExtraBold { font-weight: 800 !important; }
+  .lg\.txtHeavy { font-weight: 900 !important; }
+  .lg\.txtExtraHeavy { font-weight: 950 !important; }
 
-  .larger\(lighter\:text\) { font-weight: lighter !important; }
-  .larger\(bolder\:text\) { font-weight: bolder !important; }
+  .lg\.txtLighter { font-weight: lighter !important; }
+  .lg\.txtBolder { font-weight: bolder !important; }
 
-  .larger\(italic\:text\) { font-style: italic !important; }
-  .larger\(normal\:text\) { font-style: normal !important; }
+  .lg\.txtItalic { font-style: italic !important; }
+  .lg\.txtNormal { font-style: normal !important; }
 
-  .larger\(lowercase\:text\) { text-transform: lowercase !important; }
-  .larger\(uppercase\:text\) { text-transform: uppercase !important; }
-  .larger\(capitalize\:text\) { text-transform: capitalize !important; }
+  .lg\.txtLowerCase { text-transform: lowercase !important; }
+  .lg\.txtUpperCase { text-transform: uppercase !important; }
+  .lg\.txtCapitalize { text-transform: capitalize !important; }
 
-  .larger\(underline\:text\) { text-decoration: underline !important; }
-  .larger\(overline\:text\) { text-decoration: overline !important; }
-  .larger\(strikethrough\:text\) { text-decoration: line-through !important; }
+  .lg\.txtUnderLine { text-decoration: underline !important; }
+  .lg\.txtOverLine { text-decoration: overline !important; }
+  .lg\.txtStrikeThrough { text-decoration: line-through !important; }
 
-  @mixin text-size .larger\(text\);
-  @mixin text-double .larger\(thin\:text\), font-weight, 100;
-  @mixin text-double .larger\(ultralight\:text\), font-weight, 200;
-  @mixin text-double .larger\(light\:text\), font-weight, 300;
-  @mixin text-double .larger\(regular\:text\), font-weight, 400;
-  @mixin text-double .larger\(medium\:text\), font-weight, 500;
-  @mixin text-double .larger\(semibold\:text\), font-weight, 600;
-  @mixin text-double .larger\(bold\:text\), font-weight, 700;
-  @mixin text-double .larger\(ultrabold\:text\), font-weight, 800;
-  @mixin text-double .larger\(heavy\:text\), font-weight, 900;
-  @mixin text-double .larger\(ultraheavy\:text\), font-weight, 950;
-
-  @mixin text-double .larger\(lighter\:text\), font-weight, lighter;
-  @mixin text-double .larger\(bolder\:text\), font-weight, bolder;
-
-  @mixin text-double .larger\(italic\:text\), font-style, italic;
-  @mixin text-double .larger\(normal\:text\), font-style, normal;
-
-  @mixin text-double .larger\(lowercase\:text\), text-transform, lowercase;
-  @mixin text-double .larger\(uppercase\:text\), text-transform, uppercase;
-  @mixin text-double .larger\(capitalize\:text\), text-transform, capitalize;
-  
-  @mixin text-double .larger\(underline\:text\), text-decoration, underline;
-  @mixin text-double .larger\(overline\:text\), text-decoration, overline;
-  @mixin text-double .larger\(strikethrough\:text\), text-decoration, line-through;
+  @mixin text-size .lg\.text;
 }
 
 @media (min-width: 1536px) {
-  .largest\(thin\:text\) { font-weight: 100 !important; }
-  .largest\(ultralight\:text\) { font-weight: 200 !important; }
-  .largest\(light\:text\) { font-weight: 300 !important; }
-  .largest\(regular\:text\) { font-weight: 400 !important; }
-  .largest\(medium\:text\) { font-weight: 500 !important; }
-  .largest\(semibold\:text\) { font-weight: 600 !important; }
-  .largest\(bold\:text\) { font-weight: 700 !important; }
-  .largest\(ultrabold\:text\) { font-weight: 800 !important; }
-  .largest\(heavy\:text\) { font-weight: 900 !important; }
-  .largest\(ultraheavy\:text\) { font-weight: 950 !important; }
+  .xl\.txtThin { font-weight: 100 !important; }
+  .xl\.txtExtraLight { font-weight: 200 !important; }
+  .xl\.txtLight { font-weight: 300 !important; }
+  .xl\.txtRegular { font-weight: 400 !important; }
+  .xl\.txtMedium { font-weight: 500 !important; }
+  .xl\.txtSemiBold { font-weight: 600 !important; }
+  .xl\.txtBold { font-weight: 700 !important; }
+  .xl\.txtExtraBold { font-weight: 800 !important; }
+  .xl\.txtHeavy { font-weight: 900 !important; }
+  .xl\.txtExtraHeavy { font-weight: 950 !important; }
 
-  .largest\(lighter\:text\) { font-weight: lighter !important; }
-  .largest\(bolder\:text\) { font-weight: bolder !important; }
+  .xl\.txtLighter { font-weight: lighter !important; }
+  .xl\.txtBolder { font-weight: bolder !important; }
 
-  .largest\(italic\:text\) { font-style: italic !important; }
-  .largest\(normal\:text\) { font-style: normal !important; }
+  .xl\.txtItalic { font-style: italic !important; }
+  .xl\.txtNormal { font-style: normal !important; }
 
-  .largest\(lowercase\:text\) { text-transform: lowercase !important; }
-  .largest\(uppercase\:text\) { text-transform: uppercase !important; }
-  .largest\(capitalize\:text\) { text-transform: capitalize !important; }
+  .xl\.txtLowerCase { text-transform: lowercase !important; }
+  .xl\.txtUpperCase { text-transform: uppercase !important; }
+  .xl\.txtCapitalize { text-transform: capitalize !important; }
 
-  .largest\(underline\:text\) { text-decoration: underline !important; }
-  .largest\(overline\:text\) { text-decoration: overline !important; }
-  .largest\(strikethrough\:text\) { text-decoration: line-through !important; }
+  .xl\.txtUnderLine { text-decoration: underline !important; }
+  .xl\.txtOverLine { text-decoration: overline !important; }
+  .xl\.txtStrikeThrough { text-decoration: line-through !important; }
 
-  @mixin text-size .largest\(text\);
-  @mixin text-double .largest\(thin\:text\), font-weight, 100;
-  @mixin text-double .largest\(ultralight\:text\), font-weight, 200;
-  @mixin text-double .largest\(light\:text\), font-weight, 300;
-  @mixin text-double .largest\(regular\:text\), font-weight, 400;
-  @mixin text-double .largest\(medium\:text\), font-weight, 500;
-  @mixin text-double .largest\(semibold\:text\), font-weight, 600;
-  @mixin text-double .largest\(bold\:text\), font-weight, 700;
-  @mixin text-double .largest\(ultrabold\:text\), font-weight, 800;
-  @mixin text-double .largest\(heavy\:text\), font-weight, 900;
-  @mixin text-double .largest\(ultraheavy\:text\), font-weight, 950;
+  @mixin text-size .xl\.text;
+}
 
-  @mixin text-double .largest\(lighter\:text\), font-weight, lighter;
-  @mixin text-double .largest\(bolder\:text\), font-weight, bolder;
+@media (min-width: 1920px) {
+  .\2xl\.txtThin { font-weight: 100 !important; }
+  .\2xl\.txtExtraLight { font-weight: 200 !important; }
+  .\2xl\.txtLight { font-weight: 300 !important; }
+  .\2xl\.txtRegular { font-weight: 400 !important; }
+  .\2xl\.txtMedium { font-weight: 500 !important; }
+  .\2xl\.txtSemiBold { font-weight: 600 !important; }
+  .\2xl\.txtBold { font-weight: 700 !important; }
+  .\2xl\.txtExtraBold { font-weight: 800 !important; }
+  .\2xl\.txtHeavy { font-weight: 900 !important; }
+  .\2xl\.txtExtraHeavy { font-weight: 950 !important; }
 
-  @mixin text-double .largest\(italic\:text\), font-style, italic;
-  @mixin text-double .largest\(normal\:text\), font-style, normal;
+  .\2xl\.txtLighter { font-weight: lighter !important; }
+  .\2xl\.txtBolder { font-weight: bolder !important; }
 
-  @mixin text-double .largest\(lowercase\:text\), text-transform, lowercase;
-  @mixin text-double .largest\(uppercase\:text\), text-transform, uppercase;
-  @mixin text-double .largest\(capitalize\:text\), text-transform, capitalize;
-  
-  @mixin text-double .largest\(underline\:text\), text-decoration, underline;
-  @mixin text-double .largest\(overline\:text\), text-decoration, overline;
-  @mixin text-double .largest\(strikethrough\:text\), text-decoration, line-through;
+  .\2xl\.txtItalic { font-style: italic !important; }
+  .\2xl\.txtNormal { font-style: normal !important; }
+
+  .\2xl\.txtLowerCase { text-transform: lowercase !important; }
+  .\2xl\.txtUpperCase { text-transform: uppercase !important; }
+  .\2xl\.txtCapitalize { text-transform: capitalize !important; }
+
+  .\2xl\.txtUnderLine { text-decoration: underline !important; }
+  .\2xl\.txtOverLine { text-decoration: overline !important; }
+  .\2xl\.txtStrikeThrough { text-decoration: line-through !important; }
+
+  @mixin text-size .\2xl\.text;
 }

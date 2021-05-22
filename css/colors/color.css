@@ -74,17 +74,17 @@
 @mixin color-state Current, focus, current, black;
 @mixin color-state Color, focus, color, color;
 
-@mixin color-mixin .light, light, black;
-@mixin color-mixin .lighter, lighter, black;
-@mixin color-mixin .lightest, lightest, black;
+@mixin color-mixin Bright, bright, black;
+@mixin color-mixin Brighter, brighter, black;
+@mixin color-mixin Brightest, brightest, black;
 
 @media(prefers-color-scheme: dark) {
-  @mixin color-dark [data-dark='true'] .dark, dark, white;
-  @mixin color-dark [data-dark='true'] .darker, darker, white;
-  @mixin color-dark [data-dark='true'] .darkest, darkest, white;
+  @mixin color-dark [data-dark='true'], Dark, dark, white;
+  @mixin color-dark [data-dark='true'], Darker, darker, white;
+  @mixin color-dark [data-dark='true'], Darkest, darkest, white;
 }
 
-@mixin color-dark [data-mode='dark'] .dark, dark, white;
-@mixin color-dark [data-mode='dark'] .darker, darker, white;
-@mixin color-dark [data-mode='dark'] .darkest, darkest, white;
+@mixin color-dark [data-mode='dark'], Dark, dark, white;
+@mixin color-dark [data-mode='dark'], Darker, darker, white;
+@mixin color-dark [data-mode='dark'], Darkest, darkest, white;
 

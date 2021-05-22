@@ -1,522 +1,396 @@
-@mixin flex-double .start\:flex, justify-content, flex-start;
-@mixin flex-double .end\:flex, justify-content, flex-end;
-@mixin flex-double .center\:flex, justify-content, center;
-@mixin flex-double .between\:flex, justify-content, space-between;
-@mixin flex-double .around\:flex, justify-content, space-around;
-@mixin flex-double .evenly\:flex, justify-content, space-evenly;
+@mixin flex-double .flexStart, justify-content, flex-start;
+@mixin flex-double .flexEnd, justify-content, flex-end;
+@mixin flex-double .flexCenter, justify-content, center;
+@mixin flex-double .flexBetween, justify-content, space-between;
+@mixin flex-double .flexAround, justify-content, space-around;
+@mixin flex-double .flexEvenly, justify-content, space-evenly;
 
-@mixin flex-double .row\:flex, flex-direction, row;
-@mixin flex-double .column\:flex, flex-direction, column;
-@mixin flex-double .row\:flex-reverse, flex-direction, row-reverse;
-@mixin flex-double .column\:flex-reverse, flex-direction, column-reverse;
+@mixin flex-mixin .flexFill, flex, 1 1 auto;
+@mixin flex-mixin .flexItem, flex, 1 1 0%;
+@mixin flex-mixin .flexBase, flex, 0 1 auto;
+@mixin flex-mixin .flexNone, none;
 
-@mixin flex-double .start\:flex-items, align-items, flex-start;
-@mixin flex-double .end\:flex-items, align-items, flex-end;
-@mixin flex-double .center\:flex-items, align-items, center;
-@mixin flex-double .baseline\:flex-items, align-items, baseline;
-@mixin flex-double .stretch\:flex-items, align-items, stretch;
+@mixin flex-mixin .flexRow, flex-direction, row;
+@mixin flex-mixin .flexColumn, flex-direction, column;
+@mixin flex-mixin .flexRowReverse, flex-direction, row-reverse;
+@mixin flex-mixin .flexColumnReverse, flex-direction, column-reverse;
 
-@mixin flex-content .start\:flex-content, align-content, flex-start;
-@mixin flex-content .end\:flex-content, align-content, flex-end;
-@mixin flex-content .center\:flex-content, align-content, center;
-@mixin flex-content .between\:flex-content, align-content, space-between;
-@mixin flex-content .around\:flex-content, align-content, space-around;
-@mixin flex-content .stretch\:flex-content, align-content, stretch;
+@mixin flex-mixin .flexGrow-0, flexGrow, 0;
+@mixin flex-mixin .flexGrow-1, flexGrow, 1;
+@mixin flex-mixin .flexShrink-0, flexShrink, 0;
+@mixin flex-mixin .flexShrink-1, flexShrink, 1;
 
-@mixin flex-mixin .flex-fill, flex, 1 1 auto;
-@mixin flex-mixin .flex-item, flex, 1 1 0%;
-@mixin flex-mixin .flex-base, flex, 0 1 auto;
-@mixin flex-mixin .flex-none, none;
+@mixin flex-mixin .flexWrap, flexWrap, wrap;
+@mixin flex-mixin .flexNoWrap, flexWrap, nowrap;
+@mixin flex-mixin .flexWrapReverse, flexWrap, wrap-reverse;
 
-@mixin flex-mixin .flex-row, flex-direction, row;
-@mixin flex-mixin .flex-column, flex-direction, column;
-@mixin flex-mixin .flex-row-reverse, flex-direction, row-reverse;
-@mixin flex-mixin .flex-column-reverse, flex-direction, column-reverse;
+@mixin flex-mixin .justifyStart, justify-content, flex-start;
+@mixin flex-mixin .justifyEnd, justify-content, flex-end;
+@mixin flex-mixin .justifyCenter, justify-content, center;
+@mixin flex-mixin .justifyBetween, justify-content, space-between;
+@mixin flex-mixin .justifyAround, justify-content, space-around;
+@mixin flex-mixin .justifyEvenly, justify-content, space-evenly;
 
-@mixin flex-mixin .flex-grow-0, flex-grow, 0;
-@mixin flex-mixin .flex-grow-1, flex-grow, 1;
-@mixin flex-mixin .flex-shrink-0, flex-shrink, 0;
-@mixin flex-mixin .flex-shrink-1, flex-shrink, 1;
+@mixin flex-mixin .itemsStart, align-items, flex-start;
+@mixin flex-mixin .itemsEnd, align-items, flex-end;
+@mixin flex-mixin .itemsCenter, align-items, center;
+@mixin flex-mixin .itemsBaseline, align-items, baseline;
+@mixin flex-mixin .itemsStretch, align-items, stretch;
 
-@mixin flex-mixin .flex-wrap, flex-wrap, wrap;
-@mixin flex-mixin .flex-nowrap, flex-wrap, nowrap;
-@mixin flex-mixin .flex-wrap-reverse, flex-wrap, wrap-reverse;
+@mixin flex-mixin .contentStart, align-content, flex-start;
+@mixin flex-mixin .contentEnd, align-content, flex-end;
+@mixin flex-mixin .contentCenter, align-content, center;
+@mixin flex-mixin .contentBetween, align-content, space-between;
+@mixin flex-mixin .contentAround, align-content, space-around;
+@mixin flex-mixin .contentStretch, align-content, stretch;
 
-@mixin flex-mixin .start\:justify, justify-content, flex-start;
-@mixin flex-mixin .end\:justify, justify-content, flex-end;
-@mixin flex-mixin .center\:justify, justify-content, center;
-@mixin flex-mixin .between\:justify, justify-content, space-between;
-@mixin flex-mixin .around\:justify, justify-content, space-around;
-@mixin flex-mixin .evenly\:justify, justify-content, space-evenly;
-
-@mixin flex-mixin .start\:items, align-items, flex-start;
-@mixin flex-mixin .end\:items, align-items, flex-end;
-@mixin flex-mixin .center\:items, align-items, center;
-@mixin flex-mixin .baseline\:items, align-items, baseline;
-@mixin flex-mixin .stretch\:items, align-items, stretch;
-
-@mixin flex-mixin .start\:content, align-content, flex-start;
-@mixin flex-mixin .end\:content, align-content, flex-end;
-@mixin flex-mixin .center\:content, align-content, center;
-@mixin flex-mixin .between\:content, align-content, space-between;
-@mixin flex-mixin .around\:content, align-content, space-around;
-@mixin flex-mixin .stretch\:content, align-content, stretch;
-
-@mixin flex-mixin .auto\:self, align-self, auto;
-@mixin flex-mixin .start\:self, align-self, flex-start;
-@mixin flex-mixin .end\:self, align-self, flex-end;
-@mixin flex-mixin .center\:self, align-self, center;
-@mixin flex-mixin .baseline\:self, align-self, baseline;
-@mixin flex-mixin .stretch\:self, align-self, stretch;
+@mixin flex-mixin .selfAuto, align-self, auto;
+@mixin flex-mixin .selfStart, align-self, flex-start;
+@mixin flex-mixin .selfEnd, align-self, flex-end;
+@mixin flex-mixin .selfCenter, align-self, center;
+@mixin flex-mixin .selfBaseline, align-self, baseline;
+@mixin flex-mixin .selfStretch, align-self, stretch;
 
 @mixin flex-order .order, order;
 
 @media (min-width: 640px) {
-  @mixin flex-double .smaller\(start\:flex\), justify-content, flex-start;
-  @mixin flex-double .smaller\(end\:flex\), justify-content, flex-end;
-  @mixin flex-double .smaller\(center\:flex\), justify-content, center;
-  @mixin flex-double .smaller\(between\:flex\), justify-content, space-between;
-  @mixin flex-double .smaller\(around\:flex\), justify-content, space-around;
-  @mixin flex-double .smaller\(evenly\:flex\), justify-content, space-evenly;
+  @mixin flex-double .xs\.flexStart, justify-content, flex-start;
+  @mixin flex-double .xs\.flexEnd, justify-content, flex-end;
+  @mixin flex-double .xs\.flexCenter, justify-content, center;
+  @mixin flex-double .xs\.flexBetween, justify-content, space-between;
+  @mixin flex-double .xs\.flexAround, justify-content, space-around;
+  @mixin flex-double .xs\.flexEvenly, justify-content, space-evenly;
 
-  @mixin flex-double .smaller\(row\:flex\), flex-direction, row;
-  @mixin flex-double .smaller\(column\:flex\), flex-direction, column;
-  @mixin flex-double .smaller\(row\:flex-reverse\), flex-direction, row-reverse;
-  @mixin flex-double .smaller\(column\:flex-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .xs\.flexFill, flex, 1 1 auto;
+  @mixin flex-mixin .xs\.flexItem, flex, 1 1 0%;
+  @mixin flex-mixin .xs\.flexBase, flex, 0 1 auto;
+  @mixin flex-mixin .xs\.flexNone, none;
 
-  @mixin flex-double .smaller\(start\:flex-items\), align-items, flex-start;
-  @mixin flex-double .smaller\(end\:flex-items\), align-items, flex-end;
-  @mixin flex-double .smaller\(center\:flex-items\), align-items, center;
-  @mixin flex-double .smaller\(baseline\:flex-items\), align-items, baseline;
-  @mixin flex-double .smaller\(stretch\:flex-items\), align-items, stretch;
+  @mixin flex-mixin .xs\.flexRow, flex-direction, row;
+  @mixin flex-mixin .xs\.flexColumn, flex-direction, column;
+  @mixin flex-mixin .xs\.flexRowReverse, flex-direction, row-reverse;
+  @mixin flex-mixin .xs\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-content .smaller\(start\:flex-content\), align-content, flex-start;
-  @mixin flex-content .smaller\(end\:flex-content\), align-content, flex-end;
-  @mixin flex-content .smaller\(center\:flex-content\), align-content, center;
-  @mixin flex-content .smaller\(between\:flex-content\), align-content, space-between;
-  @mixin flex-content .smaller\(around\:flex-content\), align-content, space-around;
-  @mixin flex-content .smaller\(stretch\:flex-content\), align-content, stretch;
+  @mixin flex-mixin .xs\.flexGrow-0, flexGrow, 0;
+  @mixin flex-mixin .xs\.flexGrow-1, flexGrow, 1;
+  @mixin flex-mixin .xs\.flexShrink-0, flexShrink, 0;
+  @mixin flex-mixin .xs\.flexShrink-1, flexShrink, 1;
 
-  @mixin flex-mixin .smaller\(flex-fill\), flex, 1 1 auto;
-  @mixin flex-mixin .smaller\(flex-item\), flex, 1 1 0%;
-  @mixin flex-mixin .smaller\(flex-base\), flex, 0 1 auto;
-  @mixin flex-mixin .smaller\(flex-none\), none;
+  @mixin flex-mixin .xs\.flexWrap, flexWrap, wrap;
+  @mixin flex-mixin .xs\.flexNoWrap, flexWrap, nowrap;
+  @mixin flex-mixin .xs\.flexWrapReverse, flexWrap, wrap-reverse;
 
-  @mixin flex-mixin .smaller\(flex-row\), flex-direction, row;
-  @mixin flex-mixin .smaller\(flex-column\), flex-direction, column;
-  @mixin flex-mixin .smaller\(flex-row-reverse\), flex-direction, row-reverse;
-  @mixin flex-mixin .smaller\(flex-column-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .xs\.justifyStart, justify-content, flex-start;
+  @mixin flex-mixin .xs\.justifyEnd, justify-content, flex-end;
+  @mixin flex-mixin .xs\.justifyCenter, justify-content, center;
+  @mixin flex-mixin .xs\.justifyBetween, justify-content, space-between;
+  @mixin flex-mixin .xs\.justifyAround, justify-content, space-around;
+  @mixin flex-mixin .xs\.justifyEvenly, justify-content, space-evenly;
 
-  @mixin flex-mixin .smaller\(flex-grow-0\), flex-grow, 0;
-  @mixin flex-mixin .smaller\(flex-grow-1\), flex-grow, 1;
-  @mixin flex-mixin .smaller\(flex-shrink-0\), flex-shrink, 0;
-  @mixin flex-mixin .smaller\(flex-shrink-1\), flex-shrink, 1;
+  @mixin flex-mixin .xs\.itemsStart, align-items, flex-start;
+  @mixin flex-mixin .xs\.itemsEnd, align-items, flex-end;
+  @mixin flex-mixin .xs\.itemsCenter, align-items, center;
+  @mixin flex-mixin .xs\.itemsBaseline, align-items, baseline;
+  @mixin flex-mixin .xs\.itemsStretch, align-items, stretch;
 
-  @mixin flex-mixin .smaller\(flex-wrap\), flex-wrap, wrap;
-  @mixin flex-mixin .smaller\(flex-nowrap\), flex-wrap, nowrap;
-  @mixin flex-mixin .smaller\(flex-wrap-reverse\), flex-wrap, wrap-reverse;
+  @mixin flex-mixin .xs\.contentStart, align-content, flex-start;
+  @mixin flex-mixin .xs\.contentEnd, align-content, flex-end;
+  @mixin flex-mixin .xs\.contentCenter, align-content, center;
+  @mixin flex-mixin .xs\.contentBetween, align-content, space-between;
+  @mixin flex-mixin .xs\.contentAround, align-content, space-around;
+  @mixin flex-mixin .xs\.contentStretch, align-content, stretch;
 
-  @mixin flex-mixin .smaller\(start\:justify\), justify-content, flex-start;
-  @mixin flex-mixin .smaller\(end\:justify\), justify-content, flex-end;
-  @mixin flex-mixin .smaller\(center\:justify\), justify-content, center;
-  @mixin flex-mixin .smaller\(between\:justify\), justify-content, space-between;
-  @mixin flex-mixin .smaller\(around\:justify\), justify-content, space-around;
-  @mixin flex-mixin .smaller\(evenly\:justify\), justify-content, space-evenly;
+  @mixin flex-mixin .xs\.selfAuto, align-self, auto;
+  @mixin flex-mixin .xs\.selfStart, align-self, flex-start;
+  @mixin flex-mixin .xs\.selfEnd, align-self, flex-end;
+  @mixin flex-mixin .xs\.selfCenter, align-self, center;
+  @mixin flex-mixin .xs\.selfBaseline, align-self, baseline;
+  @mixin flex-mixin .xs\.selfStretch, align-self, stretch;
 
-  @mixin flex-mixin .smaller\(start\:items\), align-items, flex-start;
-  @mixin flex-mixin .smaller\(end\:items\), align-items, flex-end;
-  @mixin flex-mixin .smaller\(center\:items\), align-items, center;
-  @mixin flex-mixin .smaller\(baseline\:items\), align-items, baseline;
-  @mixin flex-mixin .smaller\(stretch\:items\), align-items, stretch;
-
-  @mixin flex-mixin .smaller\(start\:content\), align-content, flex-start;
-  @mixin flex-mixin .smaller\(end\:content\), align-content, flex-end;
-  @mixin flex-mixin .smaller\(center\:content\), align-content, center;
-  @mixin flex-mixin .smaller\(between\:content\), align-content, space-between;
-  @mixin flex-mixin .smaller\(around\:content\), align-content, space-around;
-  @mixin flex-mixin .smaller\(stretch\:content\), align-content, stretch;
-
-  @mixin flex-mixin .smaller\(auto\:self\), align-self, auto;
-  @mixin flex-mixin .smaller\(start\:self\), align-self, flex-start;
-  @mixin flex-mixin .smaller\(end\:self\), align-self, flex-end;
-  @mixin flex-mixin .smaller\(center\:self\), align-self, center;
-  @mixin flex-mixin .smaller\(baseline\:self\), align-self, baseline;
-  @mixin flex-mixin .smaller\(stretch\:self\), align-self, stretch;
-
-  @mixin flex-order .smaller\(order\), order;
+  @mixin flex-order .xs\.order, order;
 }
 
 @media (min-width: 768px) {
-  @mixin flex-double .small\(start\:flex\), justify-content, flex-start;
-  @mixin flex-double .small\(end\:flex\), justify-content, flex-end;
-  @mixin flex-double .small\(center\:flex\), justify-content, center;
-  @mixin flex-double .small\(between\:flex\), justify-content, space-between;
-  @mixin flex-double .small\(around\:flex\), justify-content, space-around;
-  @mixin flex-double .small\(evenly\:flex\), justify-content, space-evenly;
+  @mixin flex-double .sm\.flexStart, justify-content, flex-start;
+  @mixin flex-double .sm\.flexEnd, justify-content, flex-end;
+  @mixin flex-double .sm\.flexCenter, justify-content, center;
+  @mixin flex-double .sm\.flexBetween, justify-content, space-between;
+  @mixin flex-double .sm\.flexAround, justify-content, space-around;
+  @mixin flex-double .sm\.flexEvenly, justify-content, space-evenly;
 
-  @mixin flex-double .small\(row\:flex\), flex-direction, row;
-  @mixin flex-double .small\(column\:flex\), flex-direction, column;
-  @mixin flex-double .small\(row\:flex-reverse\), flex-direction, row-reverse;
-  @mixin flex-double .small\(column\:flex-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .sm\.flexFill, flex, 1 1 auto;
+  @mixin flex-mixin .sm\.flexItem, flex, 1 1 0%;
+  @mixin flex-mixin .sm\.flexBase, flex, 0 1 auto;
+  @mixin flex-mixin .sm\.flexNone, none;
 
-  @mixin flex-double .small\(start\:flex-items\), align-items, flex-start;
-  @mixin flex-double .small\(end\:flex-items\), align-items, flex-end;
-  @mixin flex-double .small\(center\:flex-items\), align-items, center;
-  @mixin flex-double .small\(baseline\:flex-items\), align-items, baseline;
-  @mixin flex-double .small\(stretch\:flex-items\), align-items, stretch;
+  @mixin flex-mixin .sm\.flexRow, flex-direction, row;
+  @mixin flex-mixin .sm\.flexColumn, flex-direction, column;
+  @mixin flex-mixin .sm\.flexRowReverse, flex-direction, row-reverse;
+  @mixin flex-mixin .sm\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-content .small\(start\:flex-content\), align-content, flex-start;
-  @mixin flex-content .small\(end\:flex-content\), align-content, flex-end;
-  @mixin flex-content .small\(center\:flex-content\), align-content, center;
-  @mixin flex-content .small\(between\:flex-content\), align-content, space-between;
-  @mixin flex-content .small\(around\:flex-content\), align-content, space-around;
-  @mixin flex-content .small\(stretch\:flex-content\), align-content, stretch;
+  @mixin flex-mixin .sm\.flexGrow-0, flexGrow, 0;
+  @mixin flex-mixin .sm\.flexGrow-1, flexGrow, 1;
+  @mixin flex-mixin .sm\.flexShrink-0, flexShrink, 0;
+  @mixin flex-mixin .sm\.flexShrink-1, flexShrink, 1;
 
-  @mixin flex-mixin .small\(flex-fill\), flex, 1 1 auto;
-  @mixin flex-mixin .small\(flex-item\), flex, 1 1 0%;
-  @mixin flex-mixin .small\(flex-base\), flex, 0 1 auto;
-  @mixin flex-mixin .small\(flex-none\), none;
+  @mixin flex-mixin .sm\.flexWrap, flexWrap, wrap;
+  @mixin flex-mixin .sm\.flexNoWrap, flexWrap, nowrap;
+  @mixin flex-mixin .sm\.flexWrapReverse, flexWrap, wrap-reverse;
 
-  @mixin flex-mixin .small\(flex-row\), flex-direction, row;
-  @mixin flex-mixin .small\(flex-column\), flex-direction, column;
-  @mixin flex-mixin .small\(flex-row-reverse\), flex-direction, row-reverse;
-  @mixin flex-mixin .small\(flex-column-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .sm\.justifyStart, justify-content, flex-start;
+  @mixin flex-mixin .sm\.justifyEnd, justify-content, flex-end;
+  @mixin flex-mixin .sm\.justifyCenter, justify-content, center;
+  @mixin flex-mixin .sm\.justifyBetween, justify-content, space-between;
+  @mixin flex-mixin .sm\.justifyAround, justify-content, space-around;
+  @mixin flex-mixin .sm\.justifyEvenly, justify-content, space-evenly;
 
-  @mixin flex-mixin .small\(flex-grow-0\), flex-grow, 0;
-  @mixin flex-mixin .small\(flex-grow-1\), flex-grow, 1;
-  @mixin flex-mixin .small\(flex-shrink-0\), flex-shrink, 0;
-  @mixin flex-mixin .small\(flex-shrink-1\), flex-shrink, 1;
+  @mixin flex-mixin .sm\.itemsStart, align-items, flex-start;
+  @mixin flex-mixin .sm\.itemsEnd, align-items, flex-end;
+  @mixin flex-mixin .sm\.itemsCenter, align-items, center;
+  @mixin flex-mixin .sm\.itemsBaseline, align-items, baseline;
+  @mixin flex-mixin .sm\.itemsStretch, align-items, stretch;
 
-  @mixin flex-mixin .small\(flex-wrap\), flex-wrap, wrap;
-  @mixin flex-mixin .small\(flex-nowrap\), flex-wrap, nowrap;
-  @mixin flex-mixin .small\(flex-wrap-reverse\), flex-wrap, wrap-reverse;
+  @mixin flex-mixin .sm\.contentStart, align-content, flex-start;
+  @mixin flex-mixin .sm\.contentEnd, align-content, flex-end;
+  @mixin flex-mixin .sm\.contentCenter, align-content, center;
+  @mixin flex-mixin .sm\.contentBetween, align-content, space-between;
+  @mixin flex-mixin .sm\.contentAround, align-content, space-around;
+  @mixin flex-mixin .sm\.contentStretch, align-content, stretch;
 
-  @mixin flex-mixin .small\(start\:justify\), justify-content, flex-start;
-  @mixin flex-mixin .small\(end\:justify\), justify-content, flex-end;
-  @mixin flex-mixin .small\(center\:justify\), justify-content, center;
-  @mixin flex-mixin .small\(between\:justify\), justify-content, space-between;
-  @mixin flex-mixin .small\(around\:justify\), justify-content, space-around;
-  @mixin flex-mixin .small\(evenly\:justify\), justify-content, space-evenly;
+  @mixin flex-mixin .sm\.selfAuto, align-self, auto;
+  @mixin flex-mixin .sm\.selfStart, align-self, flex-start;
+  @mixin flex-mixin .sm\.selfEnd, align-self, flex-end;
+  @mixin flex-mixin .sm\.selfCenter, align-self, center;
+  @mixin flex-mixin .sm\.selfBaseline, align-self, baseline;
+  @mixin flex-mixin .sm\.selfStretch, align-self, stretch;
 
-  @mixin flex-mixin .small\(start\:items\), align-items, flex-start;
-  @mixin flex-mixin .small\(end\:items\), align-items, flex-end;
-  @mixin flex-mixin .small\(center\:items\), align-items, center;
-  @mixin flex-mixin .small\(baseline\:items\), align-items, baseline;
-  @mixin flex-mixin .small\(stretch\:items\), align-items, stretch;
-
-  @mixin flex-mixin .small\(start\:content\), align-content, flex-start;
-  @mixin flex-mixin .small\(end\:content\), align-content, flex-end;
-  @mixin flex-mixin .small\(center\:content\), align-content, center;
-  @mixin flex-mixin .small\(between\:content\), align-content, space-between;
-  @mixin flex-mixin .small\(around\:content\), align-content, space-around;
-  @mixin flex-mixin .small\(stretch\:content\), align-content, stretch;
-
-  @mixin flex-mixin .small\(auto\:self\), align-self, auto;
-  @mixin flex-mixin .small\(start\:self\), align-self, flex-start;
-  @mixin flex-mixin .small\(end\:self\), align-self, flex-end;
-  @mixin flex-mixin .small\(center\:self\), align-self, center;
-  @mixin flex-mixin .small\(baseline\:self\), align-self, baseline;
-  @mixin flex-mixin .small\(stretch\:self\), align-self, stretch;
-
-  @mixin flex-order .small\(order\), order;
+  @mixin flex-order .sm\.order, order;
 }
 
 @media (min-width: 1024px) {
-  @mixin flex-double .medium\(start\:flex\), justify-content, flex-start;
-  @mixin flex-double .medium\(end\:flex\), justify-content, flex-end;
-  @mixin flex-double .medium\(center\:flex\), justify-content, center;
-  @mixin flex-double .medium\(between\:flex\), justify-content, space-between;
-  @mixin flex-double .medium\(around\:flex\), justify-content, space-around;
-  @mixin flex-double .medium\(evenly\:flex\), justify-content, space-evenly;
+  @mixin flex-double .md\.flexStart, justify-content, flex-start;
+  @mixin flex-double .md\.flexEnd, justify-content, flex-end;
+  @mixin flex-double .md\.flexCenter, justify-content, center;
+  @mixin flex-double .md\.flexBetween, justify-content, space-between;
+  @mixin flex-double .md\.flexAround, justify-content, space-around;
+  @mixin flex-double .md\.flexEvenly, justify-content, space-evenly;
 
-  @mixin flex-double .medium\(row\:flex\), flex-direction, row;
-  @mixin flex-double .medium\(column\:flex\), flex-direction, column;
-  @mixin flex-double .medium\(row\:flex-reverse\), flex-direction, row-reverse;
-  @mixin flex-double .medium\(column\:flex-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .md\.flexFill, flex, 1 1 auto;
+  @mixin flex-mixin .md\.flexItem, flex, 1 1 0%;
+  @mixin flex-mixin .md\.flexBase, flex, 0 1 auto;
+  @mixin flex-mixin .md\.flexNone, none;
 
-  @mixin flex-double .medium\(start\:flex-items\), align-items, flex-start;
-  @mixin flex-double .medium\(end\:flex-items\), align-items, flex-end;
-  @mixin flex-double .medium\(center\:flex-items\), align-items, center;
-  @mixin flex-double .medium\(baseline\:flex-items\), align-items, baseline;
-  @mixin flex-double .medium\(stretch\:flex-items\), align-items, stretch;
+  @mixin flex-mixin .md\.flexRow, flex-direction, row;
+  @mixin flex-mixin .md\.flexColumn, flex-direction, column;
+  @mixin flex-mixin .md\.flexRowReverse, flex-direction, row-reverse;
+  @mixin flex-mixin .md\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-content .medium\(start\:flex-content\), align-content, flex-start;
-  @mixin flex-content .medium\(end\:flex-content\), align-content, flex-end;
-  @mixin flex-content .medium\(center\:flex-content\), align-content, center;
-  @mixin flex-content .medium\(between\:flex-content\), align-content, space-between;
-  @mixin flex-content .medium\(around\:flex-content\), align-content, space-around;
-  @mixin flex-content .medium\(stretch\:flex-content\), align-content, stretch;
+  @mixin flex-mixin .md\.flexGrow-0, flexGrow, 0;
+  @mixin flex-mixin .md\.flexGrow-1, flexGrow, 1;
+  @mixin flex-mixin .md\.flexShrink-0, flexShrink, 0;
+  @mixin flex-mixin .md\.flexShrink-1, flexShrink, 1;
 
-  @mixin flex-mixin .medium\(flex-fill\), flex, 1 1 auto;
-  @mixin flex-mixin .medium\(flex-item\), flex, 1 1 0%;
-  @mixin flex-mixin .medium\(flex-base\), flex, 0 1 auto;
-  @mixin flex-mixin .medium\(flex-none\), none;
+  @mixin flex-mixin .md\.flexWrap, flexWrap, wrap;
+  @mixin flex-mixin .md\.flexNoWrap, flexWrap, nowrap;
+  @mixin flex-mixin .md\.flexWrapReverse, flexWrap, wrap-reverse;
 
-  @mixin flex-mixin .medium\(flex-row\), flex-direction, row;
-  @mixin flex-mixin .medium\(flex-column\), flex-direction, column;
-  @mixin flex-mixin .medium\(flex-row-reverse\), flex-direction, row-reverse;
-  @mixin flex-mixin .medium\(flex-column-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .md\.justifyStart, justify-content, flex-start;
+  @mixin flex-mixin .md\.justifyEnd, justify-content, flex-end;
+  @mixin flex-mixin .md\.justifyCenter, justify-content, center;
+  @mixin flex-mixin .md\.justifyBetween, justify-content, space-between;
+  @mixin flex-mixin .md\.justifyAround, justify-content, space-around;
+  @mixin flex-mixin .md\.justifyEvenly, justify-content, space-evenly;
 
-  @mixin flex-mixin .medium\(flex-grow-0\), flex-grow, 0;
-  @mixin flex-mixin .medium\(flex-grow-1\), flex-grow, 1;
-  @mixin flex-mixin .medium\(flex-shrink-0\), flex-shrink, 0;
-  @mixin flex-mixin .medium\(flex-shrink-1\), flex-shrink, 1;
+  @mixin flex-mixin .md\.itemsStart, align-items, flex-start;
+  @mixin flex-mixin .md\.itemsEnd, align-items, flex-end;
+  @mixin flex-mixin .md\.itemsCenter, align-items, center;
+  @mixin flex-mixin .md\.itemsBaseline, align-items, baseline;
+  @mixin flex-mixin .md\.itemsStretch, align-items, stretch;
 
-  @mixin flex-mixin .medium\(flex-wrap\), flex-wrap, wrap;
-  @mixin flex-mixin .medium\(flex-nowrap\), flex-wrap, nowrap;
-  @mixin flex-mixin .medium\(flex-wrap-reverse\), flex-wrap, wrap-reverse;
+  @mixin flex-mixin .md\.contentStart, align-content, flex-start;
+  @mixin flex-mixin .md\.contentEnd, align-content, flex-end;
+  @mixin flex-mixin .md\.contentCenter, align-content, center;
+  @mixin flex-mixin .md\.contentBetween, align-content, space-between;
+  @mixin flex-mixin .md\.contentAround, align-content, space-around;
+  @mixin flex-mixin .md\.contentStretch, align-content, stretch;
 
-  @mixin flex-mixin .medium\(start\:justify\), justify-content, flex-start;
-  @mixin flex-mixin .medium\(end\:justify\), justify-content, flex-end;
-  @mixin flex-mixin .medium\(center\:justify\), justify-content, center;
-  @mixin flex-mixin .medium\(between\:justify\), justify-content, space-between;
-  @mixin flex-mixin .medium\(around\:justify\), justify-content, space-around;
-  @mixin flex-mixin .medium\(evenly\:justify\), justify-content, space-evenly;
+  @mixin flex-mixin .md\.selfAuto, align-self, auto;
+  @mixin flex-mixin .md\.selfStart, align-self, flex-start;
+  @mixin flex-mixin .md\.selfEnd, align-self, flex-end;
+  @mixin flex-mixin .md\.selfCenter, align-self, center;
+  @mixin flex-mixin .md\.selfBaseline, align-self, baseline;
+  @mixin flex-mixin .md\.selfStretch, align-self, stretch;
 
-  @mixin flex-mixin .medium\(start\:items\), align-items, flex-start;
-  @mixin flex-mixin .medium\(end\:items\), align-items, flex-end;
-  @mixin flex-mixin .medium\(center\:items\), align-items, center;
-  @mixin flex-mixin .medium\(baseline\:items\), align-items, baseline;
-  @mixin flex-mixin .medium\(stretch\:items\), align-items, stretch;
-
-  @mixin flex-mixin .medium\(start\:content\), align-content, flex-start;
-  @mixin flex-mixin .medium\(end\:content\), align-content, flex-end;
-  @mixin flex-mixin .medium\(center\:content\), align-content, center;
-  @mixin flex-mixin .medium\(between\:content\), align-content, space-between;
-  @mixin flex-mixin .medium\(around\:content\), align-content, space-around;
-  @mixin flex-mixin .medium\(stretch\:content\), align-content, stretch;
-
-  @mixin flex-mixin .medium\(auto\:self\), align-self, auto;
-  @mixin flex-mixin .medium\(start\:self\), align-self, flex-start;
-  @mixin flex-mixin .medium\(end\:self\), align-self, flex-end;
-  @mixin flex-mixin .medium\(center\:self\), align-self, center;
-  @mixin flex-mixin .medium\(baseline\:self\), align-self, baseline;
-  @mixin flex-mixin .medium\(stretch\:self\), align-self, stretch;
-
-  @mixin flex-order .medium\(order\), order;
+  @mixin flex-order .md\.order, order;
 }
 
 @media (min-width: 1280px) {
-  @mixin flex-double .large\(start\:flex\), justify-content, flex-start;
-  @mixin flex-double .large\(end\:flex\), justify-content, flex-end;
-  @mixin flex-double .large\(center\:flex\), justify-content, center;
-  @mixin flex-double .large\(between\:flex\), justify-content, space-between;
-  @mixin flex-double .large\(around\:flex\), justify-content, space-around;
-  @mixin flex-double .large\(evenly\:flex\), justify-content, space-evenly;
+  @mixin flex-double .lg\.flexStart, justify-content, flex-start;
+  @mixin flex-double .lg\.flexEnd, justify-content, flex-end;
+  @mixin flex-double .lg\.flexCenter, justify-content, center;
+  @mixin flex-double .lg\.flexBetween, justify-content, space-between;
+  @mixin flex-double .lg\.flexAround, justify-content, space-around;
+  @mixin flex-double .lg\.flexEvenly, justify-content, space-evenly;
 
-  @mixin flex-double .large\(row\:flex\), flex-direction, row;
-  @mixin flex-double .large\(column\:flex\), flex-direction, column;
-  @mixin flex-double .large\(row\:flex-reverse\), flex-direction, row-reverse;
-  @mixin flex-double .large\(column\:flex-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .lg\.flexFill, flex, 1 1 auto;
+  @mixin flex-mixin .lg\.flexItem, flex, 1 1 0%;
+  @mixin flex-mixin .lg\.flexBase, flex, 0 1 auto;
+  @mixin flex-mixin .lg\.flexNone, none;
 
-  @mixin flex-double .large\(start\:flex-items\), align-items, flex-start;
-  @mixin flex-double .large\(end\:flex-items\), align-items, flex-end;
-  @mixin flex-double .large\(center\:flex-items\), align-items, center;
-  @mixin flex-double .large\(baseline\:flex-items\), align-items, baseline;
-  @mixin flex-double .large\(stretch\:flex-items\), align-items, stretch;
+  @mixin flex-mixin .lg\.flexRow, flex-direction, row;
+  @mixin flex-mixin .lg\.flexColumn, flex-direction, column;
+  @mixin flex-mixin .lg\.flexRowReverse, flex-direction, row-reverse;
+  @mixin flex-mixin .lg\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-content .large\(start\:flex-content\), align-content, flex-start;
-  @mixin flex-content .large\(end\:flex-content\), align-content, flex-end;
-  @mixin flex-content .large\(center\:flex-content\), align-content, center;
-  @mixin flex-content .large\(between\:flex-content\), align-content, space-between;
-  @mixin flex-content .large\(around\:flex-content\), align-content, space-around;
-  @mixin flex-content .large\(stretch\:flex-content\), align-content, stretch;
+  @mixin flex-mixin .lg\.flexGrow-0, flexGrow, 0;
+  @mixin flex-mixin .lg\.flexGrow-1, flexGrow, 1;
+  @mixin flex-mixin .lg\.flexShrink-0, flexShrink, 0;
+  @mixin flex-mixin .lg\.flexShrink-1, flexShrink, 1;
 
-  @mixin flex-mixin .large\(flex-fill\), flex, 1 1 auto;
-  @mixin flex-mixin .large\(flex-item\), flex, 1 1 0%;
-  @mixin flex-mixin .large\(flex-base\), flex, 0 1 auto;
-  @mixin flex-mixin .large\(flex-none\), none;
+  @mixin flex-mixin .lg\.flexWrap, flexWrap, wrap;
+  @mixin flex-mixin .lg\.flexNoWrap, flexWrap, nowrap;
+  @mixin flex-mixin .lg\.flexWrapReverse, flexWrap, wrap-reverse;
 
-  @mixin flex-mixin .large\(flex-row\), flex-direction, row;
-  @mixin flex-mixin .large\(flex-column\), flex-direction, column;
-  @mixin flex-mixin .large\(flex-row-reverse\), flex-direction, row-reverse;
-  @mixin flex-mixin .large\(flex-column-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .lg\.justifyStart, justify-content, flex-start;
+  @mixin flex-mixin .lg\.justifyEnd, justify-content, flex-end;
+  @mixin flex-mixin .lg\.justifyCenter, justify-content, center;
+  @mixin flex-mixin .lg\.justifyBetween, justify-content, space-between;
+  @mixin flex-mixin .lg\.justifyAround, justify-content, space-around;
+  @mixin flex-mixin .lg\.justifyEvenly, justify-content, space-evenly;
 
-  @mixin flex-mixin .large\(flex-grow-0\), flex-grow, 0;
-  @mixin flex-mixin .large\(flex-grow-1\), flex-grow, 1;
-  @mixin flex-mixin .large\(flex-shrink-0\), flex-shrink, 0;
-  @mixin flex-mixin .large\(flex-shrink-1\), flex-shrink, 1;
+  @mixin flex-mixin .lg\.itemsStart, align-items, flex-start;
+  @mixin flex-mixin .lg\.itemsEnd, align-items, flex-end;
+  @mixin flex-mixin .lg\.itemsCenter, align-items, center;
+  @mixin flex-mixin .lg\.itemsBaseline, align-items, baseline;
+  @mixin flex-mixin .lg\.itemsStretch, align-items, stretch;
 
-  @mixin flex-mixin .large\(flex-wrap\), flex-wrap, wrap;
-  @mixin flex-mixin .large\(flex-nowrap\), flex-wrap, nowrap;
-  @mixin flex-mixin .large\(flex-wrap-reverse\), flex-wrap, wrap-reverse;
+  @mixin flex-mixin .lg\.contentStart, align-content, flex-start;
+  @mixin flex-mixin .lg\.contentEnd, align-content, flex-end;
+  @mixin flex-mixin .lg\.contentCenter, align-content, center;
+  @mixin flex-mixin .lg\.contentBetween, align-content, space-between;
+  @mixin flex-mixin .lg\.contentAround, align-content, space-around;
+  @mixin flex-mixin .lg\.contentStretch, align-content, stretch;
 
-  @mixin flex-mixin .large\(start\:justify\), justify-content, flex-start;
-  @mixin flex-mixin .large\(end\:justify\), justify-content, flex-end;
-  @mixin flex-mixin .large\(center\:justify\), justify-content, center;
-  @mixin flex-mixin .large\(between\:justify\), justify-content, space-between;
-  @mixin flex-mixin .large\(around\:justify\), justify-content, space-around;
-  @mixin flex-mixin .large\(evenly\:justify\), justify-content, space-evenly;
+  @mixin flex-mixin .lg\.selfAuto, align-self, auto;
+  @mixin flex-mixin .lg\.selfStart, align-self, flex-start;
+  @mixin flex-mixin .lg\.selfEnd, align-self, flex-end;
+  @mixin flex-mixin .lg\.selfCenter, align-self, center;
+  @mixin flex-mixin .lg\.selfBaseline, align-self, baseline;
+  @mixin flex-mixin .lg\.selfStretch, align-self, stretch;
 
-  @mixin flex-mixin .large\(start\:items\), align-items, flex-start;
-  @mixin flex-mixin .large\(end\:items\), align-items, flex-end;
-  @mixin flex-mixin .large\(center\:items\), align-items, center;
-  @mixin flex-mixin .large\(baseline\:items\), align-items, baseline;
-  @mixin flex-mixin .large\(stretch\:items\), align-items, stretch;
-
-  @mixin flex-mixin .large\(start\:content\), align-content, flex-start;
-  @mixin flex-mixin .large\(end\:content\), align-content, flex-end;
-  @mixin flex-mixin .large\(center\:content\), align-content, center;
-  @mixin flex-mixin .large\(between\:content\), align-content, space-between;
-  @mixin flex-mixin .large\(around\:content\), align-content, space-around;
-  @mixin flex-mixin .large\(stretch\:content\), align-content, stretch;
-
-  @mixin flex-mixin .large\(auto\:self\), align-self, auto;
-  @mixin flex-mixin .large\(start\:self\), align-self, flex-start;
-  @mixin flex-mixin .large\(end\:self\), align-self, flex-end;
-  @mixin flex-mixin .large\(center\:self\), align-self, center;
-  @mixin flex-mixin .large\(baseline\:self\), align-self, baseline;
-  @mixin flex-mixin .large\(stretch\:self\), align-self, stretch;
-
-  @mixin flex-order .large\(order\), order;
+  @mixin flex-order .lg\.order, order;
 }
 
 @media (min-width: 1536px) {
-  @mixin flex-double .larger\(start\:flex\), justify-content, flex-start;
-  @mixin flex-double .larger\(end\:flex\), justify-content, flex-end;
-  @mixin flex-double .larger\(center\:flex\), justify-content, center;
-  @mixin flex-double .larger\(between\:flex\), justify-content, space-between;
-  @mixin flex-double .larger\(around\:flex\), justify-content, space-around;
-  @mixin flex-double .larger\(evenly\:flex\), justify-content, space-evenly;
+  @mixin flex-double .xl\.flexStart, justify-content, flex-start;
+  @mixin flex-double .xl\.flexEnd, justify-content, flex-end;
+  @mixin flex-double .xl\.flexCenter, justify-content, center;
+  @mixin flex-double .xl\.flexBetween, justify-content, space-between;
+  @mixin flex-double .xl\.flexAround, justify-content, space-around;
+  @mixin flex-double .xl\.flexEvenly, justify-content, space-evenly;
 
-  @mixin flex-double .larger\(row\:flex\), flex-direction, row;
-  @mixin flex-double .larger\(column\:flex\), flex-direction, column;
-  @mixin flex-double .larger\(row\:flex-reverse\), flex-direction, row-reverse;
-  @mixin flex-double .larger\(column\:flex-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .xl\.flexFill, flex, 1 1 auto;
+  @mixin flex-mixin .xl\.flexItem, flex, 1 1 0%;
+  @mixin flex-mixin .xl\.flexBase, flex, 0 1 auto;
+  @mixin flex-mixin .xl\.flexNone, none;
 
-  @mixin flex-double .larger\(start\:flex-items\), align-items, flex-start;
-  @mixin flex-double .larger\(end\:flex-items\), align-items, flex-end;
-  @mixin flex-double .larger\(center\:flex-items\), align-items, center;
-  @mixin flex-double .larger\(baseline\:flex-items\), align-items, baseline;
-  @mixin flex-double .larger\(stretch\:flex-items\), align-items, stretch;
+  @mixin flex-mixin .xl\.flexRow, flex-direction, row;
+  @mixin flex-mixin .xl\.flexColumn, flex-direction, column;
+  @mixin flex-mixin .xl\.flexRowReverse, flex-direction, row-reverse;
+  @mixin flex-mixin .xl\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-content .larger\(start\:flex-content\), align-content, flex-start;
-  @mixin flex-content .larger\(end\:flex-content\), align-content, flex-end;
-  @mixin flex-content .larger\(center\:flex-content\), align-content, center;
-  @mixin flex-content .larger\(between\:flex-content\), align-content, space-between;
-  @mixin flex-content .larger\(around\:flex-content\), align-content, space-around;
-  @mixin flex-content .larger\(stretch\:flex-content\), align-content, stretch;
+  @mixin flex-mixin .xl\.flexGrow-0, flexGrow, 0;
+  @mixin flex-mixin .xl\.flexGrow-1, flexGrow, 1;
+  @mixin flex-mixin .xl\.flexShrink-0, flexShrink, 0;
+  @mixin flex-mixin .xl\.flexShrink-1, flexShrink, 1;
 
-  @mixin flex-mixin .larger\(flex-fill\), flex, 1 1 auto;
-  @mixin flex-mixin .larger\(flex-item\), flex, 1 1 0%;
-  @mixin flex-mixin .larger\(flex-base\), flex, 0 1 auto;
-  @mixin flex-mixin .larger\(flex-none\), none;
+  @mixin flex-mixin .xl\.flexWrap, flexWrap, wrap;
+  @mixin flex-mixin .xl\.flexNoWrap, flexWrap, nowrap;
+  @mixin flex-mixin .xl\.flexWrapReverse, flexWrap, wrap-reverse;
 
-  @mixin flex-mixin .larger\(flex-row\), flex-direction, row;
-  @mixin flex-mixin .larger\(flex-column\), flex-direction, column;
-  @mixin flex-mixin .larger\(flex-row-reverse\), flex-direction, row-reverse;
-  @mixin flex-mixin .larger\(flex-column-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .xl\.justifyStart, justify-content, flex-start;
+  @mixin flex-mixin .xl\.justifyEnd, justify-content, flex-end;
+  @mixin flex-mixin .xl\.justifyCenter, justify-content, center;
+  @mixin flex-mixin .xl\.justifyBetween, justify-content, space-between;
+  @mixin flex-mixin .xl\.justifyAround, justify-content, space-around;
+  @mixin flex-mixin .xl\.justifyEvenly, justify-content, space-evenly;
 
-  @mixin flex-mixin .larger\(flex-grow-0\), flex-grow, 0;
-  @mixin flex-mixin .larger\(flex-grow-1\), flex-grow, 1;
-  @mixin flex-mixin .larger\(flex-shrink-0\), flex-shrink, 0;
-  @mixin flex-mixin .larger\(flex-shrink-1\), flex-shrink, 1;
+  @mixin flex-mixin .xl\.itemsStart, align-items, flex-start;
+  @mixin flex-mixin .xl\.itemsEnd, align-items, flex-end;
+  @mixin flex-mixin .xl\.itemsCenter, align-items, center;
+  @mixin flex-mixin .xl\.itemsBaseline, align-items, baseline;
+  @mixin flex-mixin .xl\.itemsStretch, align-items, stretch;
 
-  @mixin flex-mixin .larger\(flex-wrap\), flex-wrap, wrap;
-  @mixin flex-mixin .larger\(flex-nowrap\), flex-wrap, nowrap;
-  @mixin flex-mixin .larger\(flex-wrap-reverse\), flex-wrap, wrap-reverse;
+  @mixin flex-mixin .xl\.contentStart, align-content, flex-start;
+  @mixin flex-mixin .xl\.contentEnd, align-content, flex-end;
+  @mixin flex-mixin .xl\.contentCenter, align-content, center;
+  @mixin flex-mixin .xl\.contentBetween, align-content, space-between;
+  @mixin flex-mixin .xl\.contentAround, align-content, space-around;
+  @mixin flex-mixin .xl\.contentStretch, align-content, stretch;
 
-  @mixin flex-mixin .larger\(start\:justify\), justify-content, flex-start;
-  @mixin flex-mixin .larger\(end\:justify\), justify-content, flex-end;
-  @mixin flex-mixin .larger\(center\:justify\), justify-content, center;
-  @mixin flex-mixin .larger\(between\:justify\), justify-content, space-between;
-  @mixin flex-mixin .larger\(around\:justify\), justify-content, space-around;
-  @mixin flex-mixin .larger\(evenly\:justify\), justify-content, space-evenly;
+  @mixin flex-mixin .xl\.selfAuto, align-self, auto;
+  @mixin flex-mixin .xl\.selfStart, align-self, flex-start;
+  @mixin flex-mixin .xl\.selfEnd, align-self, flex-end;
+  @mixin flex-mixin .xl\.selfCenter, align-self, center;
+  @mixin flex-mixin .xl\.selfBaseline, align-self, baseline;
+  @mixin flex-mixin .xl\.selfStretch, align-self, stretch;
 
-  @mixin flex-mixin .larger\(start\:items\), align-items, flex-start;
-  @mixin flex-mixin .larger\(end\:items\), align-items, flex-end;
-  @mixin flex-mixin .larger\(center\:items\), align-items, center;
-  @mixin flex-mixin .larger\(baseline\:items\), align-items, baseline;
-  @mixin flex-mixin .larger\(stretch\:items\), align-items, stretch;
-
-  @mixin flex-mixin .larger\(start\:content\), align-content, flex-start;
-  @mixin flex-mixin .larger\(end\:content\), align-content, flex-end;
-  @mixin flex-mixin .larger\(center\:content\), align-content, center;
-  @mixin flex-mixin .larger\(between\:content\), align-content, space-between;
-  @mixin flex-mixin .larger\(around\:content\), align-content, space-around;
-  @mixin flex-mixin .larger\(stretch\:content\), align-content, stretch;
-
-  @mixin flex-mixin .larger\(auto\:self\), align-self, auto;
-  @mixin flex-mixin .larger\(start\:self\), align-self, flex-start;
-  @mixin flex-mixin .larger\(end\:self\), align-self, flex-end;
-  @mixin flex-mixin .larger\(center\:self\), align-self, center;
-  @mixin flex-mixin .larger\(baseline\:self\), align-self, baseline;
-  @mixin flex-mixin .larger\(stretch\:self\), align-self, stretch;
-
-  @mixin flex-order .larger\(order\), order;
+  @mixin flex-order .xl\.order, order;
 }
 
 @media (min-width: 1920px) {
-  @mixin flex-double .largest\(start\:flex\), justify-content, flex-start;
-  @mixin flex-double .largest\(end\:flex\), justify-content, flex-end;
-  @mixin flex-double .largest\(center\:flex\), justify-content, center;
-  @mixin flex-double .largest\(between\:flex\), justify-content, space-between;
-  @mixin flex-double .largest\(around\:flex\), justify-content, space-around;
-  @mixin flex-double .largest\(evenly\:flex\), justify-content, space-evenly;
+  @mixin flex-double .\2xl\.flexStart, justify-content, flex-start;
+  @mixin flex-double .\2xl\.flexEnd, justify-content, flex-end;
+  @mixin flex-double .\2xl\.flexCenter, justify-content, center;
+  @mixin flex-double .\2xl\.flexBetween, justify-content, space-between;
+  @mixin flex-double .\2xl\.flexAround, justify-content, space-around;
+  @mixin flex-double .\2xl\.flexEvenly, justify-content, space-evenly;
 
-  @mixin flex-double .largest\(row\:flex\), flex-direction, row;
-  @mixin flex-double .largest\(column\:flex\), flex-direction, column;
-  @mixin flex-double .largest\(row\:flex-reverse\), flex-direction, row-reverse;
-  @mixin flex-double .largest\(column\:flex-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .\2xl\.flexFill, flex, 1 1 auto;
+  @mixin flex-mixin .\2xl\.flexItem, flex, 1 1 0%;
+  @mixin flex-mixin .\2xl\.flexBase, flex, 0 1 auto;
+  @mixin flex-mixin .\2xl\.flexNone, none;
 
-  @mixin flex-double .largest\(start\:flex-items\), align-items, flex-start;
-  @mixin flex-double .largest\(end\:flex-items\), align-items, flex-end;
-  @mixin flex-double .largest\(center\:flex-items\), align-items, center;
-  @mixin flex-double .largest\(baseline\:flex-items\), align-items, baseline;
-  @mixin flex-double .largest\(stretch\:flex-items\), align-items, stretch;
+  @mixin flex-mixin .\2xl\.flexRow, flex-direction, row;
+  @mixin flex-mixin .\2xl\.flexColumn, flex-direction, column;
+  @mixin flex-mixin .\2xl\.flexRowReverse, flex-direction, row-reverse;
+  @mixin flex-mixin .\2xl\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-content .largest\(start\:flex-content\), align-content, flex-start;
-  @mixin flex-content .largest\(end\:flex-content\), align-content, flex-end;
-  @mixin flex-content .largest\(center\:flex-content\), align-content, center;
-  @mixin flex-content .largest\(between\:flex-content\), align-content, space-between;
-  @mixin flex-content .largest\(around\:flex-content\), align-content, space-around;
-  @mixin flex-content .largest\(stretch\:flex-content\), align-content, stretch;
+  @mixin flex-mixin .\2xl\.flexGrow-0, flexGrow, 0;
+  @mixin flex-mixin .\2xl\.flexGrow-1, flexGrow, 1;
+  @mixin flex-mixin .\2xl\.flexShrink-0, flexShrink, 0;
+  @mixin flex-mixin .\2xl\.flexShrink-1, flexShrink, 1;
 
-  @mixin flex-mixin .largest\(flex-fill\), flex, 1 1 auto;
-  @mixin flex-mixin .largest\(flex-item\), flex, 1 1 0%;
-  @mixin flex-mixin .largest\(flex-base\), flex, 0 1 auto;
-  @mixin flex-mixin .largest\(flex-none\), none;
+  @mixin flex-mixin .\2xl\.flexWrap, flexWrap, wrap;
+  @mixin flex-mixin .\2xl\.flexNoWrap, flexWrap, nowrap;
+  @mixin flex-mixin .\2xl\.flexWrapReverse, flexWrap, wrap-reverse;
 
-  @mixin flex-mixin .largest\(flex-row\), flex-direction, row;
-  @mixin flex-mixin .largest\(flex-column\), flex-direction, column;
-  @mixin flex-mixin .largest\(flex-row-reverse\), flex-direction, row-reverse;
-  @mixin flex-mixin .largest\(flex-column-reverse\), flex-direction, column-reverse;
+  @mixin flex-mixin .\2xl\.justifyStart, justify-content, flex-start;
+  @mixin flex-mixin .\2xl\.justifyEnd, justify-content, flex-end;
+  @mixin flex-mixin .\2xl\.justifyCenter, justify-content, center;
+  @mixin flex-mixin .\2xl\.justifyBetween, justify-content, space-between;
+  @mixin flex-mixin .\2xl\.justifyAround, justify-content, space-around;
+  @mixin flex-mixin .\2xl\.justifyEvenly, justify-content, space-evenly;
 
-  @mixin flex-mixin .largest\(flex-grow-0\), flex-grow, 0;
-  @mixin flex-mixin .largest\(flex-grow-1\), flex-grow, 1;
-  @mixin flex-mixin .largest\(flex-shrink-0\), flex-shrink, 0;
-  @mixin flex-mixin .largest\(flex-shrink-1\), flex-shrink, 1;
+  @mixin flex-mixin .\2xl\.itemsStart, align-items, flex-start;
+  @mixin flex-mixin .\2xl\.itemsEnd, align-items, flex-end;
+  @mixin flex-mixin .\2xl\.itemsCenter, align-items, center;
+  @mixin flex-mixin .\2xl\.itemsBaseline, align-items, baseline;
+  @mixin flex-mixin .\2xl\.itemsStretch, align-items, stretch;
 
-  @mixin flex-mixin .largest\(flex-wrap\), flex-wrap, wrap;
-  @mixin flex-mixin .largest\(flex-nowrap\), flex-wrap, nowrap;
-  @mixin flex-mixin .largest\(flex-wrap-reverse\), flex-wrap, wrap-reverse;
+  @mixin flex-mixin .\2xl\.contentStart, align-content, flex-start;
+  @mixin flex-mixin .\2xl\.contentEnd, align-content, flex-end;
+  @mixin flex-mixin .\2xl\.contentCenter, align-content, center;
+  @mixin flex-mixin .\2xl\.contentBetween, align-content, space-between;
+  @mixin flex-mixin .\2xl\.contentAround, align-content, space-around;
+  @mixin flex-mixin .\2xl\.contentStretch, align-content, stretch;
 
-  @mixin flex-mixin .largest\(start\:justify\), justify-content, flex-start;
-  @mixin flex-mixin .largest\(end\:justify\), justify-content, flex-end;
-  @mixin flex-mixin .largest\(center\:justify\), justify-content, center;
-  @mixin flex-mixin .largest\(between\:justify\), justify-content, space-between;
-  @mixin flex-mixin .largest\(around\:justify\), justify-content, space-around;
-  @mixin flex-mixin .largest\(evenly\:justify\), justify-content, space-evenly;
+  @mixin flex-mixin .\2xl\.selfAuto, align-self, auto;
+  @mixin flex-mixin .\2xl\.selfStart, align-self, flex-start;
+  @mixin flex-mixin .\2xl\.selfEnd, align-self, flex-end;
+  @mixin flex-mixin .\2xl\.selfCenter, align-self, center;
+  @mixin flex-mixin .\2xl\.selfBaseline, align-self, baseline;
+  @mixin flex-mixin .\2xl\.selfStretch, align-self, stretch;
 
-  @mixin flex-mixin .largest\(start\:items\), align-items, flex-start;
-  @mixin flex-mixin .largest\(end\:items\), align-items, flex-end;
-  @mixin flex-mixin .largest\(center\:items\), align-items, center;
-  @mixin flex-mixin .largest\(baseline\:items\), align-items, baseline;
-  @mixin flex-mixin .largest\(stretch\:items\), align-items, stretch;
-
-  @mixin flex-mixin .largest\(start\:content\), align-content, flex-start;
-  @mixin flex-mixin .largest\(end\:content\), align-content, flex-end;
-  @mixin flex-mixin .largest\(center\:content\), align-content, center;
-  @mixin flex-mixin .largest\(between\:content\), align-content, space-between;
-  @mixin flex-mixin .largest\(around\:content\), align-content, space-around;
-  @mixin flex-mixin .largest\(stretch\:content\), align-content, stretch;
-
-  @mixin flex-mixin .largest\(auto\:self\), align-self, auto;
-  @mixin flex-mixin .largest\(start\:self\), align-self, flex-start;
-  @mixin flex-mixin .largest\(end\:self\), align-self, flex-end;
-  @mixin flex-mixin .largest\(center\:self\), align-self, center;
-  @mixin flex-mixin .largest\(baseline\:self\), align-self, baseline;
-  @mixin flex-mixin .largest\(stretch\:self\), align-self, stretch;
-
-  @mixin flex-order .largest\(order\), order;
+  @mixin flex-order .\2xl\.order, order;
 }

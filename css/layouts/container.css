@@ -1,11 +1,11 @@
 .container,
 .containerFluid,
-.\2xl\.container,
-.xl\.container,
-.lg\.container,
-.md\.container,
-.sm\.container,
-.xs\.container {
+.containerLargest,
+.containerLarger,
+.containerLarge,
+.containerMedium,
+.containerSmall,
+.containerSmaller {
   width: 100%;
   padding-right: 0.875rem;
   padding-left: 0.875rem;
@@ -14,39 +14,39 @@
 }
 
 @media (min-width: 640px) {
-  .xs\.container, .container {
+  .containerSmaller, .container {
     max-width: 620px;
   }
 }
 
 @media (min-width: 768px) {
-  .sm\.container, .xs\.container, .container {
+  .containerSmall, .containerSmaller, .container {
     max-width: 748px;
   }
 }
 
 @media (min-width: 1024px) {
-  .md\.container, .sm\.container, .xs\.container, .container {
+  .containerMedium, .containerSmall, .containerSmaller, .container {
     max-width: 1004px;
   }
 }
 
 @media (min-width: 1280px) {
-  .lg\.container, .md\.container, .sm\.container, .xs\.container, .container {
+  .containerLarge, .containerMedium, .containerSmall, .containerSmaller, .container {
     max-width: 1260px;
   }
 }
 
 @media (min-width: 1536px) {
-  .xl\.container, .lg\.container, .md\.container, 
-  .sm\.container, .xs\.container, .container {
+  .containerLarger, .containerLarge, .containerMedium, 
+  .containerSmall, .containerSmaller, .container {
     max-width: 1346px;
   }
 }
 
 @media (min-width: 1920px) {
-  .\2xl\.container, .xl\.container, .lg\.container, .md\.container, 
-  .sm\.container, .xs\.container, .container {
+  .containerLargest, .containerLarger, .containerLarge, .containerMedium, 
+  .containerSmall, .containerSmaller, .container {
     max-width: 1600px;
   }
 }
