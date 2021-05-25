@@ -19,8 +19,8 @@
 .txtUpperCase { text-transform: uppercase !important; }
 .txtCapitalize { text-transform: capitalize !important; }
 
-.txtUnderLine { text-decoration: underline !important; }
-.txtOverLine { text-decoration: overline !important; }
+.txtUnderline { text-decoration: underline !important; }
+.txtOverline { text-decoration: overline !important; }
 .txtStrikeThrough { text-decoration: line-through !important; }
 
 @mixin text-size .txt;
@@ -47,8 +47,8 @@
   .xs\.txtUpperCase { text-transform: uppercase !important; }
   .xs\.txtCapitalize { text-transform: capitalize !important; }
 
-  .xs\.txtUnderLine { text-decoration: underline !important; }
-  .xs\.txtOverLine { text-decoration: overline !important; }
+  .xs\.txtUnderline { text-decoration: underline !important; }
+  .xs\.txtOverline { text-decoration: overline !important; }
   .xs\.txtStrikeThrough { text-decoration: line-through !important; }
 
   @mixin text-size .sm\.text;
@@ -76,8 +76,8 @@
   .sm\.txtUpperCase { text-transform: uppercase !important; }
   .sm\.txtCapitalize { text-transform: capitalize !important; }
 
-  .sm\.txtUnderLine { text-decoration: underline !important; }
-  .sm\.txtOverLine { text-decoration: overline !important; }
+  .sm\.txtUnderline { text-decoration: underline !important; }
+  .sm\.txtOverline { text-decoration: overline !important; }
   .sm\.txtStrikeThrough { text-decoration: line-through !important; }
 
   @mixin text-size .sm\.text;
@@ -105,8 +105,8 @@
   .md\.txtUpperCase { text-transform: uppercase !important; }
   .md\.txtCapitalize { text-transform: capitalize !important; }
 
-  .md\.txtUnderLine { text-decoration: underline !important; }
-  .md\.txtOverLine { text-decoration: overline !important; }
+  .md\.txtUnderline { text-decoration: underline !important; }
+  .md\.txtOverline { text-decoration: overline !important; }
   .md\.txtStrikeThrough { text-decoration: line-through !important; }
 
   @mixin text-size .md\.text;
@@ -134,8 +134,8 @@
   .lg\.txtUpperCase { text-transform: uppercase !important; }
   .lg\.txtCapitalize { text-transform: capitalize !important; }
 
-  .lg\.txtUnderLine { text-decoration: underline !important; }
-  .lg\.txtOverLine { text-decoration: overline !important; }
+  .lg\.txtUnderline { text-decoration: underline !important; }
+  .lg\.txtOverline { text-decoration: overline !important; }
   .lg\.txtStrikeThrough { text-decoration: line-through !important; }
 
   @mixin text-size .lg\.text;
@@ -163,8 +163,8 @@
   .xl\.txtUpperCase { text-transform: uppercase !important; }
   .xl\.txtCapitalize { text-transform: capitalize !important; }
 
-  .xl\.txtUnderLine { text-decoration: underline !important; }
-  .xl\.txtOverLine { text-decoration: overline !important; }
+  .xl\.txtUnderline { text-decoration: underline !important; }
+  .xl\.txtOverline { text-decoration: overline !important; }
   .xl\.txtStrikeThrough { text-decoration: line-through !important; }
 
   @mixin text-size .xl\.text;
@@ -192,8 +192,8 @@
   .\2xl\.txtUpperCase { text-transform: uppercase !important; }
   .\2xl\.txtCapitalize { text-transform: capitalize !important; }
 
-  .\2xl\.txtUnderLine { text-decoration: underline !important; }
-  .\2xl\.txtOverLine { text-decoration: overline !important; }
+  .\2xl\.txtUnderline { text-decoration: underline !important; }
+  .\2xl\.txtOverline { text-decoration: overline !important; }
   .\2xl\.txtStrikeThrough { text-decoration: line-through !important; }
 
   @mixin text-size .\2xl\.text;

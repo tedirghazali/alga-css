@@ -11,14 +11,6 @@
   }
 }
 
-@define-mixin flex-content $class, $rule, $value {
-  $class {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    $(rule): $value !important;
-  }
-}
-
 @define-mixin flex-order $class, $rule {
   $(class)-first {
     $(class): -1 !important;

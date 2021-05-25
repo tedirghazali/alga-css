@@ -15,14 +15,14 @@
 @mixin flex-mixin .flexRowReverse, flex-direction, row-reverse;
 @mixin flex-mixin .flexColumnReverse, flex-direction, column-reverse;
 
-@mixin flex-mixin .flexGrow-0, flexGrow, 0;
-@mixin flex-mixin .flexGrow-1, flexGrow, 1;
-@mixin flex-mixin .flexShrink-0, flexShrink, 0;
-@mixin flex-mixin .flexShrink-1, flexShrink, 1;
+@mixin flex-mixin .flexGrow-0, flex-grow, 0;
+@mixin flex-mixin .flexGrow-1, flex-grow, 1;
+@mixin flex-mixin .flexShrink-0, flex-shrink, 0;
+@mixin flex-mixin .flexShrink-1, flex-shrink, 1;
 
-@mixin flex-mixin .flexWrap, flexWrap, wrap;
-@mixin flex-mixin .flexNoWrap, flexWrap, nowrap;
-@mixin flex-mixin .flexWrapReverse, flexWrap, wrap-reverse;
+@mixin flex-mixin .flexWrap, flex-wrap, wrap;
+@mixin flex-mixin .flexNoWrap, flex-wrap, nowrap;
+@mixin flex-mixin .flexWrapReverse, flex-wrap, wrap-reverse;
 
 @mixin flex-mixin .justifyStart, justify-content, flex-start;
 @mixin flex-mixin .justifyEnd, justify-content, flex-end;
@@ -71,14 +71,14 @@
   @mixin flex-mixin .xs\.flexRowReverse, flex-direction, row-reverse;
   @mixin flex-mixin .xs\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-mixin .xs\.flexGrow-0, flexGrow, 0;
-  @mixin flex-mixin .xs\.flexGrow-1, flexGrow, 1;
-  @mixin flex-mixin .xs\.flexShrink-0, flexShrink, 0;
-  @mixin flex-mixin .xs\.flexShrink-1, flexShrink, 1;
+  @mixin flex-mixin .xs\.flexGrow-0, flex-grow, 0;
+  @mixin flex-mixin .xs\.flexGrow-1, flex-grow, 1;
+  @mixin flex-mixin .xs\.flexShrink-0, flex-shrink, 0;
+  @mixin flex-mixin .xs\.flexShrink-1, flex-shrink, 1;
 
-  @mixin flex-mixin .xs\.flexWrap, flexWrap, wrap;
-  @mixin flex-mixin .xs\.flexNoWrap, flexWrap, nowrap;
-  @mixin flex-mixin .xs\.flexWrapReverse, flexWrap, wrap-reverse;
+  @mixin flex-mixin .xs\.flexWrap, flex-wrap, wrap;
+  @mixin flex-mixin .xs\.flexNoWrap, flex-wrap, nowrap;
+  @mixin flex-mixin .xs\.flexWrapReverse, flex-wrap, wrap-reverse;
 
   @mixin flex-mixin .xs\.justifyStart, justify-content, flex-start;
   @mixin flex-mixin .xs\.justifyEnd, justify-content, flex-end;
@@ -128,14 +128,14 @@
   @mixin flex-mixin .sm\.flexRowReverse, flex-direction, row-reverse;
   @mixin flex-mixin .sm\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-mixin .sm\.flexGrow-0, flexGrow, 0;
-  @mixin flex-mixin .sm\.flexGrow-1, flexGrow, 1;
-  @mixin flex-mixin .sm\.flexShrink-0, flexShrink, 0;
-  @mixin flex-mixin .sm\.flexShrink-1, flexShrink, 1;
+  @mixin flex-mixin .sm\.flexGrow-0, flex-grow, 0;
+  @mixin flex-mixin .sm\.flexGrow-1, flex-grow, 1;
+  @mixin flex-mixin .sm\.flexShrink-0, flex-shrink, 0;
+  @mixin flex-mixin .sm\.flexShrink-1, flex-shrink, 1;
 
-  @mixin flex-mixin .sm\.flexWrap, flexWrap, wrap;
-  @mixin flex-mixin .sm\.flexNoWrap, flexWrap, nowrap;
-  @mixin flex-mixin .sm\.flexWrapReverse, flexWrap, wrap-reverse;
+  @mixin flex-mixin .sm\.flexWrap, flex-wrap, wrap;
+  @mixin flex-mixin .sm\.flexNoWrap, flex-wrap, nowrap;
+  @mixin flex-mixin .sm\.flexWrapReverse, flex-wrap, wrap-reverse;
 
   @mixin flex-mixin .sm\.justifyStart, justify-content, flex-start;
   @mixin flex-mixin .sm\.justifyEnd, justify-content, flex-end;
@@ -185,14 +185,14 @@
   @mixin flex-mixin .md\.flexRowReverse, flex-direction, row-reverse;
   @mixin flex-mixin .md\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-mixin .md\.flexGrow-0, flexGrow, 0;
-  @mixin flex-mixin .md\.flexGrow-1, flexGrow, 1;
-  @mixin flex-mixin .md\.flexShrink-0, flexShrink, 0;
-  @mixin flex-mixin .md\.flexShrink-1, flexShrink, 1;
+  @mixin flex-mixin .md\.flexGrow-0, flex-grow, 0;
+  @mixin flex-mixin .md\.flexGrow-1, flex-grow, 1;
+  @mixin flex-mixin .md\.flexShrink-0, flex-shrink, 0;
+  @mixin flex-mixin .md\.flexShrink-1, flex-shrink, 1;
 
-  @mixin flex-mixin .md\.flexWrap, flexWrap, wrap;
-  @mixin flex-mixin .md\.flexNoWrap, flexWrap, nowrap;
-  @mixin flex-mixin .md\.flexWrapReverse, flexWrap, wrap-reverse;
+  @mixin flex-mixin .md\.flexWrap, flex-wrap, wrap;
+  @mixin flex-mixin .md\.flexNoWrap, flex-wrap, nowrap;
+  @mixin flex-mixin .md\.flexWrapReverse, flex-wrap, wrap-reverse;
 
   @mixin flex-mixin .md\.justifyStart, justify-content, flex-start;
   @mixin flex-mixin .md\.justifyEnd, justify-content, flex-end;
@@ -242,14 +242,14 @@
   @mixin flex-mixin .lg\.flexRowReverse, flex-direction, row-reverse;
   @mixin flex-mixin .lg\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-mixin .lg\.flexGrow-0, flexGrow, 0;
-  @mixin flex-mixin .lg\.flexGrow-1, flexGrow, 1;
-  @mixin flex-mixin .lg\.flexShrink-0, flexShrink, 0;
-  @mixin flex-mixin .lg\.flexShrink-1, flexShrink, 1;
+  @mixin flex-mixin .lg\.flexGrow-0, flex-grow, 0;
+  @mixin flex-mixin .lg\.flexGrow-1, flex-grow, 1;
+  @mixin flex-mixin .lg\.flexShrink-0, flex-shrink, 0;
+  @mixin flex-mixin .lg\.flexShrink-1, flex-shrink, 1;
 
-  @mixin flex-mixin .lg\.flexWrap, flexWrap, wrap;
-  @mixin flex-mixin .lg\.flexNoWrap, flexWrap, nowrap;
-  @mixin flex-mixin .lg\.flexWrapReverse, flexWrap, wrap-reverse;
+  @mixin flex-mixin .lg\.flexWrap, flex-wrap, wrap;
+  @mixin flex-mixin .lg\.flexNoWrap, flex-wrap, nowrap;
+  @mixin flex-mixin .lg\.flexWrapReverse, flex-wrap, wrap-reverse;
 
   @mixin flex-mixin .lg\.justifyStart, justify-content, flex-start;
   @mixin flex-mixin .lg\.justifyEnd, justify-content, flex-end;
@@ -299,14 +299,14 @@
   @mixin flex-mixin .xl\.flexRowReverse, flex-direction, row-reverse;
   @mixin flex-mixin .xl\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-mixin .xl\.flexGrow-0, flexGrow, 0;
-  @mixin flex-mixin .xl\.flexGrow-1, flexGrow, 1;
-  @mixin flex-mixin .xl\.flexShrink-0, flexShrink, 0;
-  @mixin flex-mixin .xl\.flexShrink-1, flexShrink, 1;
+  @mixin flex-mixin .xl\.flexGrow-0, flex-grow, 0;
+  @mixin flex-mixin .xl\.flexGrow-1, flex-grow, 1;
+  @mixin flex-mixin .xl\.flexShrink-0, flex-shrink, 0;
+  @mixin flex-mixin .xl\.flexShrink-1, flex-shrink, 1;
 
-  @mixin flex-mixin .xl\.flexWrap, flexWrap, wrap;
-  @mixin flex-mixin .xl\.flexNoWrap, flexWrap, nowrap;
-  @mixin flex-mixin .xl\.flexWrapReverse, flexWrap, wrap-reverse;
+  @mixin flex-mixin .xl\.flexWrap, flex-wrap, wrap;
+  @mixin flex-mixin .xl\.flexNoWrap, flex-wrap, nowrap;
+  @mixin flex-mixin .xl\.flexWrapReverse, flex-wrap, wrap-reverse;
 
   @mixin flex-mixin .xl\.justifyStart, justify-content, flex-start;
   @mixin flex-mixin .xl\.justifyEnd, justify-content, flex-end;
@@ -356,14 +356,14 @@
   @mixin flex-mixin .\2xl\.flexRowReverse, flex-direction, row-reverse;
   @mixin flex-mixin .\2xl\.flexColumnReverse, flex-direction, column-reverse;
 
-  @mixin flex-mixin .\2xl\.flexGrow-0, flexGrow, 0;
-  @mixin flex-mixin .\2xl\.flexGrow-1, flexGrow, 1;
-  @mixin flex-mixin .\2xl\.flexShrink-0, flexShrink, 0;
-  @mixin flex-mixin .\2xl\.flexShrink-1, flexShrink, 1;
+  @mixin flex-mixin .\2xl\.flexGrow-0, flex-grow, 0;
+  @mixin flex-mixin .\2xl\.flexGrow-1, flex-grow, 1;
+  @mixin flex-mixin .\2xl\.flexShrink-0, flex-shrink, 0;
+  @mixin flex-mixin .\2xl\.flexShrink-1, flex-shrink, 1;
 
-  @mixin flex-mixin .\2xl\.flexWrap, flexWrap, wrap;
-  @mixin flex-mixin .\2xl\.flexNoWrap, flexWrap, nowrap;
-  @mixin flex-mixin .\2xl\.flexWrapReverse, flexWrap, wrap-reverse;
+  @mixin flex-mixin .\2xl\.flexWrap, flex-wrap, wrap;
+  @mixin flex-mixin .\2xl\.flexNoWrap, flex-wrap, nowrap;
+  @mixin flex-mixin .\2xl\.flexWrapReverse, flex-wrap, wrap-reverse;
 
   @mixin flex-mixin .\2xl\.justifyStart, justify-content, flex-start;
   @mixin flex-mixin .\2xl\.justifyEnd, justify-content, flex-end;

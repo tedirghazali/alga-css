@@ -1,22 +1,54 @@
-.all\:selection { user-select: all !important; }
-.auto\:selection { user-select: auto !important; }
-.none\:selection { user-select: none !important; }
-.text\:selection { user-select: none !important; }
+.selection { user-select: var(--selection, all) !important; }
+.selectionAll { user-select: all !important; }
+.selectionAuto { user-select: auto !important; }
+.selectionNone { user-select: none !important; }
+.selectionText { user-select: text !important; }
+.selectionContain { user-select: contain !important; }
 
-.none\:event { pointer-events: none !important; }
-.auto\:event { pointer-events: auto !important; }
+.event { pointer-events: var(--event, auto) !important; }
+.eventNone { pointer-events: none !important; }
+.eventAuto { pointer-events: auto !important; }
 
-.cursor { cursor: default; }
-.auto\:cursor { cursor: auto; }
-.pointer\:cursor { cursor: pointer; }
-.wait\:cursor { cursor: wait; }
-.text\:cursor { cursor: text; }
-.move\:cursor { cursor: move; }
-.cursor-disabled { cursor: not-allowed; }
+.cursor { cursor: var(--cursor, default); }
+.cursorAuto { cursor: auto; }
+.cursorPointer { cursor: pointer; }
+.cursorWait { cursor: wait; }
+.cursorText { cursor: text; }
+.cursorMove { cursor: move; }
+.cursorDisabled { cursor: not-allowed; }
 
-.none\:appearance {	appearance: none; }
+.appearance {	appearance: var(--appearance, auto); }
+.appearanceMoz {	-moz-appearance: var(--appearanceMoz, auto); }
+.appearanceWebKit {	-webkit-appearance: var(--appearanceWebKit, auto); }
+.appearanceAuto {	appearance: auto; }
+.appearanceNone {	appearance: none; }
 
-.resize { resize: both; }
-.none\:resize { resize: none; }
-.start\:resize { resize: vertical; }
-.end\:resize { resize: horizontal; }
+.resize { resize: var(--resize, both); }
+.resizeBoth { resize: both; }
+.resizeNone { resize: none; }
+.resizeStart { resize: vertical; }
+.resizeEnd { resize: horizontal; }
+
+@media (min-width: 640px) {
+  @mixin interaction-mixin .xs;
+}
+
+@media (min-width: 768px) {
+  @mixin interaction-mixin .sm;
+}
+
+@media (min-width: 1024px) {
+  @mixin interaction-mixin .md;
+}
+
+@media (min-width: 1280px) {
+  @mixin interaction-mixin .lg;
+}
+
+@media (min-width: 1536px) {
+  @mixin interaction-mixin .xl;
+}
+
+@media (min-width: 1920px) {
+  @mixin interaction-mixin .\2xl;
+}

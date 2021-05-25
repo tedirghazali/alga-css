@@ -518,7 +518,6 @@ input:focus, input:active, select:focus, select:active, textarea:focus, textarea
   display: grid;
   width: 100%;
   max-width: 100vw;
-  overflow: hidden;
 }
 
 .page {
@@ -4503,7 +4502,7 @@ textarea.large\:input {
   }
 
 .navBar {
-  min-width: 100vw;
+  max-width: 100vw;
   width: 100%;
   align-items: center;
   min-height: 50px;
@@ -14207,10 +14206,10 @@ textarea.large\:input {
 .txtCapitalize { text-transform: capitalize !important;
 }
 
-.txtUnderLine { text-decoration: underline !important;
+.txtUnderline { text-decoration: underline !important;
 }
 
-.txtOverLine { text-decoration: overline !important;
+.txtOverline { text-decoration: overline !important;
 }
 
 .txtStrikeThrough { text-decoration: line-through !important;
@@ -14372,10 +14371,10 @@ textarea.large\:input {
   .xs\.txtCapitalize { text-transform: capitalize !important;
   }
 
-  .xs\.txtUnderLine { text-decoration: underline !important;
+  .xs\.txtUnderline { text-decoration: underline !important;
   }
 
-  .xs\.txtOverLine { text-decoration: overline !important;
+  .xs\.txtOverline { text-decoration: overline !important;
   }
 
   .xs\.txtStrikeThrough { text-decoration: line-through !important;
@@ -14538,10 +14537,10 @@ textarea.large\:input {
   .sm\.txtCapitalize { text-transform: capitalize !important;
   }
 
-  .sm\.txtUnderLine { text-decoration: underline !important;
+  .sm\.txtUnderline { text-decoration: underline !important;
   }
 
-  .sm\.txtOverLine { text-decoration: overline !important;
+  .sm\.txtOverline { text-decoration: overline !important;
   }
 
   .sm\.txtStrikeThrough { text-decoration: line-through !important;
@@ -14704,10 +14703,10 @@ textarea.large\:input {
   .md\.txtCapitalize { text-transform: capitalize !important;
   }
 
-  .md\.txtUnderLine { text-decoration: underline !important;
+  .md\.txtUnderline { text-decoration: underline !important;
   }
 
-  .md\.txtOverLine { text-decoration: overline !important;
+  .md\.txtOverline { text-decoration: overline !important;
   }
 
   .md\.txtStrikeThrough { text-decoration: line-through !important;
@@ -14870,10 +14869,10 @@ textarea.large\:input {
   .lg\.txtCapitalize { text-transform: capitalize !important;
   }
 
-  .lg\.txtUnderLine { text-decoration: underline !important;
+  .lg\.txtUnderline { text-decoration: underline !important;
   }
 
-  .lg\.txtOverLine { text-decoration: overline !important;
+  .lg\.txtOverline { text-decoration: overline !important;
   }
 
   .lg\.txtStrikeThrough { text-decoration: line-through !important;
@@ -15036,10 +15035,10 @@ textarea.large\:input {
   .xl\.txtCapitalize { text-transform: capitalize !important;
   }
 
-  .xl\.txtUnderLine { text-decoration: underline !important;
+  .xl\.txtUnderline { text-decoration: underline !important;
   }
 
-  .xl\.txtOverLine { text-decoration: overline !important;
+  .xl\.txtOverline { text-decoration: overline !important;
   }
 
   .xl\.txtStrikeThrough { text-decoration: line-through !important;
@@ -15202,10 +15201,10 @@ textarea.large\:input {
   .\2xl\.txtCapitalize { text-transform: capitalize !important;
   }
 
-  .\2xl\.txtUnderLine { text-decoration: underline !important;
+  .\2xl\.txtUnderline { text-decoration: underline !important;
   }
 
-  .\2xl\.txtOverLine { text-decoration: overline !important;
+  .\2xl\.txtOverline { text-decoration: overline !important;
   }
 
   .\2xl\.txtStrikeThrough { text-decoration: line-through !important;
@@ -15316,58 +15315,256 @@ textarea.large\:input {
   }
 }
 
-.all\:selection { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important;
+.selection { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important; -webkit-user-select: var(--selection, all) !important; -moz-user-select: var(--selection, all) !important; -ms-user-select: var(--selection, all) !important; user-select: var(--selection, all) !important;
 }
 
-.auto\:selection { -webkit-user-select: auto !important; -moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important;
+.selectionAll { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important;
 }
 
-.none\:selection { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important;
+.selectionAuto { -webkit-user-select: auto !important; -moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important;
 }
 
-.text\:selection { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important;
+.selectionNone { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important;
 }
 
-.none\:event { pointer-events: none !important;
+.selectionText { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;
 }
 
-.auto\:event { pointer-events: auto !important;
+.selectionContain { -webkit-user-select: contain !important; -moz-user-select: contain !important; -ms-user-select: element !important; user-select: contain !important;
 }
 
-.cursor { cursor: default;
+.event { pointer-events: auto !important; pointer-events: var(--event, auto) !important;
 }
 
-.auto\:cursor { cursor: auto;
+.eventNone { pointer-events: none !important;
 }
 
-.pointer\:cursor { cursor: pointer;
+.eventAuto { pointer-events: auto !important;
 }
 
-.wait\:cursor { cursor: wait;
+.cursor { cursor: default; cursor: var(--cursor, default);
 }
 
-.text\:cursor { cursor: text;
+.cursorAuto { cursor: auto;
 }
 
-.move\:cursor { cursor: move;
+.cursorPointer { cursor: pointer;
 }
 
-.cursor-disabled { cursor: not-allowed;
+.cursorWait { cursor: wait;
 }
 
-.none\:appearance {	-webkit-appearance: none;	-moz-appearance: none;	appearance: none;
+.cursorText { cursor: text;
 }
 
-.resize { resize: both;
+.cursorMove { cursor: move;
 }
 
-.none\:resize { resize: none;
+.cursorDisabled { cursor: not-allowed;
 }
 
-.start\:resize { resize: vertical;
+.appearance {	-webkit-appearance: auto;	-moz-appearance: auto;	appearance: auto;	-webkit-appearance: var(--appearance, auto);	-moz-appearance: var(--appearance, auto);	appearance: var(--appearance, auto);
 }
 
-.end\:resize { resize: horizontal;
+.appearanceMoz {	-moz-appearance: auto;	-moz-appearance: var(--appearanceMoz, auto);
+}
+
+.appearanceWebKit {	-webkit-appearance: auto;	-webkit-appearance: var(--appearanceWebKit, auto);
+}
+
+.appearanceAuto {	-webkit-appearance: auto;	-moz-appearance: auto;	appearance: auto;
+}
+
+.appearanceNone {	-webkit-appearance: none;	-moz-appearance: none;	appearance: none;
+}
+
+.resize { resize: both; resize: var(--resize, both);
+}
+
+.resizeBoth { resize: both;
+}
+
+.resizeNone { resize: none;
+}
+
+.resizeStart { resize: vertical;
+}
+
+.resizeEnd { resize: horizontal;
+}
+
+@media (min-width: 640px) {
+  .xs\.selection { -webkit-user-select: var(--selection, all) !important; -moz-user-select: var(--selection, all) !important; -ms-user-select: var(--selection, all) !important; user-select: var(--selection, all) !important; }
+  .xs\.selectionAll { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important; }
+  .xs\.selectionAuto { -webkit-user-select: auto !important; -moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important; }
+  .xs\.selectionNone { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; }
+  .xs\.selectionText { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
+  .xs\.selectionContain { -webkit-user-select: contain !important; -moz-user-select: contain !important; -ms-user-select: element !important; user-select: contain !important; }
+  .xs\.event { pointer-events: var(--event, auto) !important; }
+  .xs\.eventNone { pointer-events: none !important; }
+  .xs\.eventAuto { pointer-events: auto !important; }
+  .xs\.cursor { cursor: var(--cursor, default); }
+  .xs\.cursorAuto { cursor: auto; }
+  .xs\.cursorPointer { cursor: pointer; }
+  .xs\.cursorWait { cursor: wait; }
+  .xs\.cursorText { cursor: text; }
+  .xs\.cursorMove { cursor: move; }
+  .xs\.cursorDisabled { cursor: not-allowed; }
+  .xs\.appearance {	-webkit-appearance: var(--appearance, auto);	-moz-appearance: var(--appearance, auto);	appearance: var(--appearance, auto); }
+  .xs\.appearanceMoz {	-moz-appearance: var(--appearanceMoz, auto); }
+  .xs\.appearanceWebKit {	-webkit-appearance: var(--appearanceWebKit, auto); }
+  .xs\.appearanceAuto {	-webkit-appearance: auto;	-moz-appearance: auto;	appearance: auto; }
+  .xs\.appearanceNone {	-webkit-appearance: none;	-moz-appearance: none;	appearance: none; }
+  .xs\.resize { resize: var(--resize, both); }
+  .xs\.resizeBoth { resize: both; }
+  .xs\.resizeNone { resize: none; }
+  .xs\.resizeStart { resize: vertical; }
+  .xs\.resizeEnd { resize: horizontal; }
+}
+
+@media (min-width: 768px) {
+  .sm\.selection { -webkit-user-select: var(--selection, all) !important; -moz-user-select: var(--selection, all) !important; -ms-user-select: var(--selection, all) !important; user-select: var(--selection, all) !important; }
+  .sm\.selectionAll { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important; }
+  .sm\.selectionAuto { -webkit-user-select: auto !important; -moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important; }
+  .sm\.selectionNone { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; }
+  .sm\.selectionText { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
+  .sm\.selectionContain { -webkit-user-select: contain !important; -moz-user-select: contain !important; -ms-user-select: element !important; user-select: contain !important; }
+  .sm\.event { pointer-events: var(--event, auto) !important; }
+  .sm\.eventNone { pointer-events: none !important; }
+  .sm\.eventAuto { pointer-events: auto !important; }
+  .sm\.cursor { cursor: var(--cursor, default); }
+  .sm\.cursorAuto { cursor: auto; }
+  .sm\.cursorPointer { cursor: pointer; }
+  .sm\.cursorWait { cursor: wait; }
+  .sm\.cursorText { cursor: text; }
+  .sm\.cursorMove { cursor: move; }
+  .sm\.cursorDisabled { cursor: not-allowed; }
+  .sm\.appearance {	-webkit-appearance: var(--appearance, auto);	-moz-appearance: var(--appearance, auto);	appearance: var(--appearance, auto); }
+  .sm\.appearanceMoz {	-moz-appearance: var(--appearanceMoz, auto); }
+  .sm\.appearanceWebKit {	-webkit-appearance: var(--appearanceWebKit, auto); }
+  .sm\.appearanceAuto {	-webkit-appearance: auto;	-moz-appearance: auto;	appearance: auto; }
+  .sm\.appearanceNone {	-webkit-appearance: none;	-moz-appearance: none;	appearance: none; }
+  .sm\.resize { resize: var(--resize, both); }
+  .sm\.resizeBoth { resize: both; }
+  .sm\.resizeNone { resize: none; }
+  .sm\.resizeStart { resize: vertical; }
+  .sm\.resizeEnd { resize: horizontal; }
+}
+
+@media (min-width: 1024px) {
+  .md\.selection { -webkit-user-select: var(--selection, all) !important; -moz-user-select: var(--selection, all) !important; -ms-user-select: var(--selection, all) !important; user-select: var(--selection, all) !important; }
+  .md\.selectionAll { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important; }
+  .md\.selectionAuto { -webkit-user-select: auto !important; -moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important; }
+  .md\.selectionNone { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; }
+  .md\.selectionText { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
+  .md\.selectionContain { -webkit-user-select: contain !important; -moz-user-select: contain !important; -ms-user-select: element !important; user-select: contain !important; }
+  .md\.event { pointer-events: var(--event, auto) !important; }
+  .md\.eventNone { pointer-events: none !important; }
+  .md\.eventAuto { pointer-events: auto !important; }
+  .md\.cursor { cursor: var(--cursor, default); }
+  .md\.cursorAuto { cursor: auto; }
+  .md\.cursorPointer { cursor: pointer; }
+  .md\.cursorWait { cursor: wait; }
+  .md\.cursorText { cursor: text; }
+  .md\.cursorMove { cursor: move; }
+  .md\.cursorDisabled { cursor: not-allowed; }
+  .md\.appearance {	-webkit-appearance: var(--appearance, auto);	-moz-appearance: var(--appearance, auto);	appearance: var(--appearance, auto); }
+  .md\.appearanceMoz {	-moz-appearance: var(--appearanceMoz, auto); }
+  .md\.appearanceWebKit {	-webkit-appearance: var(--appearanceWebKit, auto); }
+  .md\.appearanceAuto {	-webkit-appearance: auto;	-moz-appearance: auto;	appearance: auto; }
+  .md\.appearanceNone {	-webkit-appearance: none;	-moz-appearance: none;	appearance: none; }
+  .md\.resize { resize: var(--resize, both); }
+  .md\.resizeBoth { resize: both; }
+  .md\.resizeNone { resize: none; }
+  .md\.resizeStart { resize: vertical; }
+  .md\.resizeEnd { resize: horizontal; }
+}
+
+@media (min-width: 1280px) {
+  .lg\.selection { -webkit-user-select: var(--selection, all) !important; -moz-user-select: var(--selection, all) !important; -ms-user-select: var(--selection, all) !important; user-select: var(--selection, all) !important; }
+  .lg\.selectionAll { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important; }
+  .lg\.selectionAuto { -webkit-user-select: auto !important; -moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important; }
+  .lg\.selectionNone { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; }
+  .lg\.selectionText { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
+  .lg\.selectionContain { -webkit-user-select: contain !important; -moz-user-select: contain !important; -ms-user-select: element !important; user-select: contain !important; }
+  .lg\.event { pointer-events: var(--event, auto) !important; }
+  .lg\.eventNone { pointer-events: none !important; }
+  .lg\.eventAuto { pointer-events: auto !important; }
+  .lg\.cursor { cursor: var(--cursor, default); }
+  .lg\.cursorAuto { cursor: auto; }
+  .lg\.cursorPointer { cursor: pointer; }
+  .lg\.cursorWait { cursor: wait; }
+  .lg\.cursorText { cursor: text; }
+  .lg\.cursorMove { cursor: move; }
+  .lg\.cursorDisabled { cursor: not-allowed; }
+  .lg\.appearance {	-webkit-appearance: var(--appearance, auto);	-moz-appearance: var(--appearance, auto);	appearance: var(--appearance, auto); }
+  .lg\.appearanceMoz {	-moz-appearance: var(--appearanceMoz, auto); }
+  .lg\.appearanceWebKit {	-webkit-appearance: var(--appearanceWebKit, auto); }
+  .lg\.appearanceAuto {	-webkit-appearance: auto;	-moz-appearance: auto;	appearance: auto; }
+  .lg\.appearanceNone {	-webkit-appearance: none;	-moz-appearance: none;	appearance: none; }
+  .lg\.resize { resize: var(--resize, both); }
+  .lg\.resizeBoth { resize: both; }
+  .lg\.resizeNone { resize: none; }
+  .lg\.resizeStart { resize: vertical; }
+  .lg\.resizeEnd { resize: horizontal; }
+}
+
+@media (min-width: 1536px) {
+  .xl\.selection { -webkit-user-select: var(--selection, all) !important; -moz-user-select: var(--selection, all) !important; -ms-user-select: var(--selection, all) !important; user-select: var(--selection, all) !important; }
+  .xl\.selectionAll { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important; }
+  .xl\.selectionAuto { -webkit-user-select: auto !important; -moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important; }
+  .xl\.selectionNone { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; }
+  .xl\.selectionText { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
+  .xl\.selectionContain { -webkit-user-select: contain !important; -moz-user-select: contain !important; -ms-user-select: element !important; user-select: contain !important; }
+  .xl\.event { pointer-events: var(--event, auto) !important; }
+  .xl\.eventNone { pointer-events: none !important; }
+  .xl\.eventAuto { pointer-events: auto !important; }
+  .xl\.cursor { cursor: var(--cursor, default); }
+  .xl\.cursorAuto { cursor: auto; }
+  .xl\.cursorPointer { cursor: pointer; }
+  .xl\.cursorWait { cursor: wait; }
+  .xl\.cursorText { cursor: text; }
+  .xl\.cursorMove { cursor: move; }
+  .xl\.cursorDisabled { cursor: not-allowed; }
+  .xl\.appearance {	-webkit-appearance: var(--appearance, auto);	-moz-appearance: var(--appearance, auto);	appearance: var(--appearance, auto); }
+  .xl\.appearanceMoz {	-moz-appearance: var(--appearanceMoz, auto); }
+  .xl\.appearanceWebKit {	-webkit-appearance: var(--appearanceWebKit, auto); }
+  .xl\.appearanceAuto {	-webkit-appearance: auto;	-moz-appearance: auto;	appearance: auto; }
+  .xl\.appearanceNone {	-webkit-appearance: none;	-moz-appearance: none;	appearance: none; }
+  .xl\.resize { resize: var(--resize, both); }
+  .xl\.resizeBoth { resize: both; }
+  .xl\.resizeNone { resize: none; }
+  .xl\.resizeStart { resize: vertical; }
+  .xl\.resizeEnd { resize: horizontal; }
+}
+
+@media (min-width: 1920px) {
+  .\2xl\.selection { -webkit-user-select: var(--selection, all) !important; -moz-user-select: var(--selection, all) !important; -ms-user-select: var(--selection, all) !important; user-select: var(--selection, all) !important; }
+  .\2xl\.selectionAll { -webkit-user-select: all !important; -moz-user-select: all !important; user-select: all !important; }
+  .\2xl\.selectionAuto { -webkit-user-select: auto !important; -moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important; }
+  .\2xl\.selectionNone { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; }
+  .\2xl\.selectionText { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
+  .\2xl\.selectionContain { -webkit-user-select: contain !important; -moz-user-select: contain !important; -ms-user-select: element !important; user-select: contain !important; }
+  .\2xl\.event { pointer-events: var(--event, auto) !important; }
+  .\2xl\.eventNone { pointer-events: none !important; }
+  .\2xl\.eventAuto { pointer-events: auto !important; }
+  .\2xl\.cursor { cursor: var(--cursor, default); }
+  .\2xl\.cursorAuto { cursor: auto; }
+  .\2xl\.cursorPointer { cursor: pointer; }
+  .\2xl\.cursorWait { cursor: wait; }
+  .\2xl\.cursorText { cursor: text; }
+  .\2xl\.cursorMove { cursor: move; }
+  .\2xl\.cursorDisabled { cursor: not-allowed; }
+  .\2xl\.appearance {	-webkit-appearance: var(--appearance, auto);	-moz-appearance: var(--appearance, auto);	appearance: var(--appearance, auto); }
+  .\2xl\.appearanceMoz {	-moz-appearance: var(--appearanceMoz, auto); }
+  .\2xl\.appearanceWebKit {	-webkit-appearance: var(--appearanceWebKit, auto); }
+  .\2xl\.appearanceAuto {	-webkit-appearance: auto;	-moz-appearance: auto;	appearance: auto; }
+  .\2xl\.appearanceNone {	-webkit-appearance: none;	-moz-appearance: none;	appearance: none; }
+  .\2xl\.resize { resize: var(--resize, both); }
+  .\2xl\.resizeBoth { resize: both; }
+  .\2xl\.resizeNone { resize: none; }
+  .\2xl\.resizeStart { resize: vertical; }
+  .\2xl\.resizeEnd { resize: horizontal; }
 }
 
 .overlay {
@@ -17173,31 +17370,31 @@ textarea.large\:input {
   }
 
 .flexGrow-0 {
-    flexGrow: 0 !important;
+    flex-grow: 0 !important;
   }
 
 .flexGrow-1 {
-    flexGrow: 1 !important;
+    flex-grow: 1 !important;
   }
 
 .flexShrink-0 {
-    flexShrink: 0 !important;
+    flex-shrink: 0 !important;
   }
 
 .flexShrink-1 {
-    flexShrink: 1 !important;
+    flex-shrink: 1 !important;
   }
 
 .flexWrap {
-    flexWrap: wrap !important;
+    flex-wrap: wrap !important;
   }
 
 .flexNoWrap {
-    flexWrap: nowrap !important;
+    flex-wrap: nowrap !important;
   }
 
 .flexWrapReverse {
-    flexWrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important;
   }
 
 .justifyStart {
@@ -17388,31 +17585,31 @@ textarea.large\:input {
   }
 
   .xs\.flexGrow-0 {
-    flexGrow: 0 !important;
+    flex-grow: 0 !important;
   }
 
   .xs\.flexGrow-1 {
-    flexGrow: 1 !important;
+    flex-grow: 1 !important;
   }
 
   .xs\.flexShrink-0 {
-    flexShrink: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .xs\.flexShrink-1 {
-    flexShrink: 1 !important;
+    flex-shrink: 1 !important;
   }
 
   .xs\.flexWrap {
-    flexWrap: wrap !important;
+    flex-wrap: wrap !important;
   }
 
   .xs\.flexNoWrap {
-    flexWrap: nowrap !important;
+    flex-wrap: nowrap !important;
   }
 
   .xs\.flexWrapReverse {
-    flexWrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important;
   }
 
   .xs\.justifyStart {
@@ -17604,31 +17801,31 @@ textarea.large\:input {
   }
 
   .sm\.flexGrow-0 {
-    flexGrow: 0 !important;
+    flex-grow: 0 !important;
   }
 
   .sm\.flexGrow-1 {
-    flexGrow: 1 !important;
+    flex-grow: 1 !important;
   }
 
   .sm\.flexShrink-0 {
-    flexShrink: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .sm\.flexShrink-1 {
-    flexShrink: 1 !important;
+    flex-shrink: 1 !important;
   }
 
   .sm\.flexWrap {
-    flexWrap: wrap !important;
+    flex-wrap: wrap !important;
   }
 
   .sm\.flexNoWrap {
-    flexWrap: nowrap !important;
+    flex-wrap: nowrap !important;
   }
 
   .sm\.flexWrapReverse {
-    flexWrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important;
   }
 
   .sm\.justifyStart {
@@ -17820,31 +18017,31 @@ textarea.large\:input {
   }
 
   .md\.flexGrow-0 {
-    flexGrow: 0 !important;
+    flex-grow: 0 !important;
   }
 
   .md\.flexGrow-1 {
-    flexGrow: 1 !important;
+    flex-grow: 1 !important;
   }
 
   .md\.flexShrink-0 {
-    flexShrink: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .md\.flexShrink-1 {
-    flexShrink: 1 !important;
+    flex-shrink: 1 !important;
   }
 
   .md\.flexWrap {
-    flexWrap: wrap !important;
+    flex-wrap: wrap !important;
   }
 
   .md\.flexNoWrap {
-    flexWrap: nowrap !important;
+    flex-wrap: nowrap !important;
   }
 
   .md\.flexWrapReverse {
-    flexWrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important;
   }
 
   .md\.justifyStart {
@@ -18036,31 +18233,31 @@ textarea.large\:input {
   }
 
   .lg\.flexGrow-0 {
-    flexGrow: 0 !important;
+    flex-grow: 0 !important;
   }
 
   .lg\.flexGrow-1 {
-    flexGrow: 1 !important;
+    flex-grow: 1 !important;
   }
 
   .lg\.flexShrink-0 {
-    flexShrink: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .lg\.flexShrink-1 {
-    flexShrink: 1 !important;
+    flex-shrink: 1 !important;
   }
 
   .lg\.flexWrap {
-    flexWrap: wrap !important;
+    flex-wrap: wrap !important;
   }
 
   .lg\.flexNoWrap {
-    flexWrap: nowrap !important;
+    flex-wrap: nowrap !important;
   }
 
   .lg\.flexWrapReverse {
-    flexWrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important;
   }
 
   .lg\.justifyStart {
@@ -18252,31 +18449,31 @@ textarea.large\:input {
   }
 
   .xl\.flexGrow-0 {
-    flexGrow: 0 !important;
+    flex-grow: 0 !important;
   }
 
   .xl\.flexGrow-1 {
-    flexGrow: 1 !important;
+    flex-grow: 1 !important;
   }
 
   .xl\.flexShrink-0 {
-    flexShrink: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .xl\.flexShrink-1 {
-    flexShrink: 1 !important;
+    flex-shrink: 1 !important;
   }
 
   .xl\.flexWrap {
-    flexWrap: wrap !important;
+    flex-wrap: wrap !important;
   }
 
   .xl\.flexNoWrap {
-    flexWrap: nowrap !important;
+    flex-wrap: nowrap !important;
   }
 
   .xl\.flexWrapReverse {
-    flexWrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important;
   }
 
   .xl\.justifyStart {
@@ -18468,31 +18665,31 @@ textarea.large\:input {
   }
 
   .\2xl\.flexGrow-0 {
-    flexGrow: 0 !important;
+    flex-grow: 0 !important;
   }
 
   .\2xl\.flexGrow-1 {
-    flexGrow: 1 !important;
+    flex-grow: 1 !important;
   }
 
   .\2xl\.flexShrink-0 {
-    flexShrink: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .\2xl\.flexShrink-1 {
-    flexShrink: 1 !important;
+    flex-shrink: 1 !important;
   }
 
   .\2xl\.flexWrap {
-    flexWrap: wrap !important;
+    flex-wrap: wrap !important;
   }
 
   .\2xl\.flexNoWrap {
-    flexWrap: nowrap !important;
+    flex-wrap: nowrap !important;
   }
 
   .\2xl\.flexWrapReverse {
-    flexWrap: wrap-reverse !important;
+    flex-wrap: wrap-reverse !important;
   }
 
   .\2xl\.justifyStart {
@@ -18620,625 +18817,625 @@ textarea.large\:input {
   }
 }
 
-.column\:grid-1 {
+.gridColumns-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-.column\:grid-2 {
+.gridColumns-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-.column\:grid-3 {
+.gridColumns-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-.column\:grid-4 {
+.gridColumns-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-.column\:grid-5 {
+.gridColumns-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-.column\:grid-6 {
+.gridColumns-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-.column\:grid-7 {
+.gridColumns-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-.column\:grid-8 {
+.gridColumns-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-.column\:grid-9 {
+.gridColumns-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-.column\:grid-10 {
+.gridColumns-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-.column\:grid-11 {
+.gridColumns-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-.column\:grid-12 {
+.gridColumns-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-.column\:grid-none {
+.gridColumns-none {
     display: grid;
     grid-template-columns: none;
   }
 
-.grid-columns-1 {
+.columns-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-.grid-columns-2 {
+.columns-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-.grid-columns-3 {
+.columns-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-.grid-columns-4 {
+.columns-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-.grid-columns-5 {
+.columns-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-.grid-columns-6 {
+.columns-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-.grid-columns-7 {
+.columns-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-.grid-columns-8 {
+.columns-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-.grid-columns-9 {
+.columns-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-.grid-columns-10 {
+.columns-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-.grid-columns-11 {
+.columns-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-.grid-columns-12 {
+.columns-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-.grid-columns-none {
+.columns-none {
     grid-template-columns: none;
   }
 
-.auto\:grid-columns {
+.columnsAuto {
     grid-auto-columns: auto;
   }
 
-.min\:grid-columns {
+.columnsMin {
     grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
-.max\:grid-columns {
+.columnsMax {
     grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
-.fr\:grid-columns {
+.columnsFr {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-.flow\:grid-columns {
+.columnsFlow {
     grid-auto-flow: column;
   }
 
-.dense\:grid-columns {
+.columnsDense {
     grid-auto-flow: column dense;
   }
 
-.row\:grid-1 {
+.gridRows-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-.row\:grid-2 {
+.gridRows-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-.row\:grid-3 {
+.gridRows-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-.row\:grid-4 {
+.gridRows-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-.row\:grid-5 {
+.gridRows-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-.row\:grid-6 {
+.gridRows-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-.row\:grid-7 {
+.gridRows-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-.row\:grid-8 {
+.gridRows-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-.row\:grid-9 {
+.gridRows-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-.row\:grid-10 {
+.gridRows-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-.row\:grid-11 {
+.gridRows-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-.row\:grid-12 {
+.gridRows-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-.row\:grid-none {
+.gridRows-none {
     display: grid;
     grid-template-rows: none;
   }
 
-.grid-rows-1 {
+.rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-.grid-rows-2 {
+.rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-.grid-rows-3 {
+.rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-.grid-rows-4 {
+.rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-.grid-rows-5 {
+.rows-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-.grid-rows-6 {
+.rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-.grid-rows-7 {
+.rows-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-.grid-rows-8 {
+.rows-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-.grid-rows-9 {
+.rows-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-.grid-rows-10 {
+.rows-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-.grid-rows-11 {
+.rows-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-.grid-rows-12 {
+.rows-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-.grid-rows-none {
+.rows-none {
     grid-template-rows: none;
   }
 
-.auto\:grid-rows {
+.rowsAuto {
     grid-auto-rows: auto;
   }
 
-.min\:grid-rows {
+.rowsMin {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
-.max\:grid-rows {
+.rowsMax {
     grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
-.fr\:grid-rows {
+.rowsFr {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-.flow\:grid-rows {
+.rowsFlow {
     grid-auto-flow: row;
   }
 
-.dense\:grid-rows {
+.rowsDense {
     grid-auto-flow: row dense;
   }
 
-.colspan-auto {
+.column-auto {
     grid-column: auto;
   }
 
-.colspan-1 {
+.column-1 {
     grid-column: span 1 / span 1;
   }
 
-.colspan-2 {
+.column-2 {
     grid-column: span 2 / span 2;
   }
 
-.colspan-3 {
+.column-3 {
     grid-column: span 3 / span 3;
   }
 
-.colspan-4 {
+.column-4 {
     grid-column: span 4 / span 4;
   }
 
-.colspan-5 {
+.column-5 {
     grid-column: span 5 / span 5;
   }
 
-.colspan-6 {
+.column-6 {
     grid-column: span 6 / span 6;
   }
 
-.colspan-7 {
+.column-7 {
     grid-column: span 7 / span 7;
   }
 
-.colspan-8 {
+.column-8 {
     grid-column: span 8 / span 8;
   }
 
-.colspan-9 {
+.column-9 {
     grid-column: span 9 / span 9;
   }
 
-.colspan-10 {
+.column-10 {
     grid-column: span 10 / span 10;
   }
 
-.colspan-11 {
+.column-11 {
     grid-column: span 11 / span 11;
   }
 
-.colspan-12 {
+.column-12 {
     grid-column: span 12 / span 12;
   }
 
-.colspan-full {
+.column-full {
     grid-column: 1 / -1;
   }
 
-.start\:colspan-auto {
+.columnStart-auto {
     grid-column-start: auto;
   }
 
-.start\:colspan-1 {
+.columnStart-1 {
     grid-column-start: 1;
   }
 
-.start\:colspan-2 {
+.columnStart-2 {
     grid-column-start: 2;
   }
 
-.start\:colspan-3 {
+.columnStart-3 {
     grid-column-start: 3;
   }
 
-.start\:colspan-4 {
+.columnStart-4 {
     grid-column-start: 4;
   }
 
-.start\:colspan-5 {
+.columnStart-5 {
     grid-column-start: 5;
   }
 
-.start\:colspan-6 {
+.columnStart-6 {
     grid-column-start: 6;
   }
 
-.start\:colspan-7 {
+.columnStart-7 {
     grid-column-start: 7;
   }
 
-.start\:colspan-8 {
+.columnStart-8 {
     grid-column-start: 8;
   }
 
-.start\:colspan-9 {
+.columnStart-9 {
     grid-column-start: 9;
   }
 
-.start\:colspan-10 {
+.columnStart-10 {
     grid-column-start: 10;
   }
 
-.start\:colspan-11 {
+.columnStart-11 {
     grid-column-start: 11;
   }
 
-.start\:colspan-12 {
+.columnStart-12 {
     grid-column-start: 12;
   }
 
-.start\:colspan-13 {
+.columnStart-13 {
     grid-column-start: 13;
   }
 
-.end\:colspan-auto {
+.columnEnd-auto {
     grid-column-end: auto;
   }
 
-.end\:colspan-1 {
+.columnEnd-1 {
     grid-column-end: 1;
   }
 
-.end\:colspan-2 {
+.columnEnd-2 {
     grid-column-end: 2;
   }
 
-.end\:colspan-3 {
+.columnEnd-3 {
     grid-column-end: 3;
   }
 
-.end\:colspan-4 {
+.columnEnd-4 {
     grid-column-end: 4;
   }
 
-.end\:colspan-5 {
+.columnEnd-5 {
     grid-column-end: 5;
   }
 
-.end\:colspan-6 {
+.columnEnd-6 {
     grid-column-end: 6;
   }
 
-.end\:colspan-7 {
+.columnEnd-7 {
     grid-column-end: 7;
   }
 
-.end\:colspan-8 {
+.columnEnd-8 {
     grid-column-end: 8;
   }
 
-.end\:colspan-9 {
+.columnEnd-9 {
     grid-column-end: 9;
   }
 
-.end\:colspan-10 {
+.columnEnd-10 {
     grid-column-end: 10;
   }
 
-.end\:colspan-11 {
+.columnEnd-11 {
     grid-column-end: 11;
   }
 
-.end\:colspan-12 {
+.columnEnd-12 {
     grid-column-end: 12;
   }
 
-.end\:colspan-13 {
+.columnEnd-13 {
     grid-column-end: 13;
   }
 
-.rowspan-auto {
+.row-auto {
     grid-row: auto;
   }
 
-.rowspan-1 {
+.row-1 {
     grid-row: span 1 / span 1;
   }
 
-.rowspan-2 {
+.row-2 {
     grid-row: span 2 / span 2;
   }
 
-.rowspan-3 {
+.row-3 {
     grid-row: span 3 / span 3;
   }
 
-.rowspan-4 {
+.row-4 {
     grid-row: span 4 / span 4;
   }
 
-.rowspan-5 {
+.row-5 {
     grid-row: span 5 / span 5;
   }
 
-.rowspan-6 {
+.row-6 {
     grid-row: span 6 / span 6;
   }
 
-.rowspan-7 {
+.row-7 {
     grid-row: span 7 / span 7;
   }
 
-.rowspan-8 {
+.row-8 {
     grid-row: span 8 / span 8;
   }
 
-.rowspan-9 {
+.row-9 {
     grid-row: span 9 / span 9;
   }
 
-.rowspan-10 {
+.row-10 {
     grid-row: span 10 / span 10;
   }
 
-.rowspan-11 {
+.row-11 {
     grid-row: span 11 / span 11;
   }
 
-.rowspan-12 {
+.row-12 {
     grid-row: span 12 / span 12;
   }
 
-.rowspan-full {
+.row-full {
     grid-row: 1 / -1;
   }
 
-.start\:rowspan-auto {
+.rowStart-auto {
     grid-row-start: auto;
   }
 
-.start\:rowspan-1 {
+.rowStart-1 {
     grid-row-start: 1;
   }
 
-.start\:rowspan-2 {
+.rowStart-2 {
     grid-row-start: 2;
   }
 
-.start\:rowspan-3 {
+.rowStart-3 {
     grid-row-start: 3;
   }
 
-.start\:rowspan-4 {
+.rowStart-4 {
     grid-row-start: 4;
   }
 
-.start\:rowspan-5 {
+.rowStart-5 {
     grid-row-start: 5;
   }
 
-.start\:rowspan-6 {
+.rowStart-6 {
     grid-row-start: 6;
   }
 
-.start\:rowspan-7 {
+.rowStart-7 {
     grid-row-start: 7;
   }
 
-.start\:rowspan-8 {
+.rowStart-8 {
     grid-row-start: 8;
   }
 
-.start\:rowspan-9 {
+.rowStart-9 {
     grid-row-start: 9;
   }
 
-.start\:rowspan-10 {
+.rowStart-10 {
     grid-row-start: 10;
   }
 
-.start\:rowspan-11 {
+.rowStart-11 {
     grid-row-start: 11;
   }
 
-.start\:rowspan-12 {
+.rowStart-12 {
     grid-row-start: 12;
   }
 
-.start\:rowspan-13 {
+.rowStart-13 {
     grid-row-start: 13;
   }
 
-.end\:rowspan-auto {
+.rowEnd-auto {
     grid-row-end: auto;
   }
 
-.end\:rowspan-1 {
+.rowEnd-1 {
     grid-row-end: 1;
   }
 
-.end\:rowspan-2 {
+.rowEnd-2 {
     grid-row-end: 2;
   }
 
-.end\:rowspan-3 {
+.rowEnd-3 {
     grid-row-end: 3;
   }
 
-.end\:rowspan-4 {
+.rowEnd-4 {
     grid-row-end: 4;
   }
 
-.end\:rowspan-5 {
+.rowEnd-5 {
     grid-row-end: 5;
   }
 
-.end\:rowspan-6 {
+.rowEnd-6 {
     grid-row-end: 6;
   }
 
-.end\:rowspan-7 {
+.rowEnd-7 {
     grid-row-end: 7;
   }
 
-.end\:rowspan-8 {
+.rowEnd-8 {
     grid-row-end: 8;
   }
 
-.end\:rowspan-9 {
+.rowEnd-9 {
     grid-row-end: 9;
   }
 
-.end\:rowspan-10 {
+.rowEnd-10 {
     grid-row-end: 10;
   }
 
-.end\:rowspan-11 {
+.rowEnd-11 {
     grid-row-end: 11;
   }
 
-.end\:rowspan-12 {
+.rowEnd-12 {
     grid-row-end: 12;
   }
 
-.end\:rowspan-13 {
+.rowEnd-13 {
     grid-row-end: 13;
   }
 
@@ -19330,6036 +19527,6036 @@ textarea.large\:input {
     gap: 4.25rem;
   }
 
-.column\:gap-0 {
+.gapColumn-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
   }
 
-.column\:gap-1 {
+.gapColumn-1 {
     -moz-column-gap: 0.125rem;
          column-gap: 0.125rem;
   }
 
-.column\:gap-2 {
+.gapColumn-2 {
     -moz-column-gap: 0.25rem;
          column-gap: 0.25rem;
   }
 
-.column\:gap-3 {
+.gapColumn-3 {
     -moz-column-gap: 0.375rem;
          column-gap: 0.375rem;
   }
 
-.column\:gap-4 {
+.gapColumn-4 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
 
-.column\:gap-5 {
+.gapColumn-5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
   }
 
-.column\:gap-6 {
+.gapColumn-6 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
   }
 
-.column\:gap-7 {
+.gapColumn-7 {
     -moz-column-gap: 0.875rem;
          column-gap: 0.875rem;
   }
 
-.column\:gap-8 {
+.gapColumn-8 {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 
-.column\:gap-9 {
+.gapColumn-9 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
 
-.column\:gap-10 {
+.gapColumn-10 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
 
-.column\:gap-11 {
+.gapColumn-11 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
   }
 
-.column\:gap-12 {
+.gapColumn-12 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
 
-.column\:gap-13 {
+.gapColumn-13 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
   }
 
-.column\:gap-14 {
+.gapColumn-14 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
 
-.column\:gap-15 {
+.gapColumn-15 {
     -moz-column-gap: 2.75rem;
          column-gap: 2.75rem;
   }
 
-.column\:gap-15 {
+.gapColumn-15 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
   }
 
-.column\:gap-16 {
+.gapColumn-16 {
     -moz-column-gap: 3.25rem;
          column-gap: 3.25rem;
   }
 
-.column\:gap-17 {
+.gapColumn-17 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
   }
 
-.column\:gap-18 {
+.gapColumn-18 {
     -moz-column-gap: 3.75rem;
          column-gap: 3.75rem;
   }
 
-.column\:gap-19 {
+.gapColumn-19 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
   }
 
-.column\:gap-20 {
+.gapColumn-20 {
     -moz-column-gap: 4.25rem;
          column-gap: 4.25rem;
   }
 
-.row\:gap-0 {
+.gapRow-0 {
     row-gap: 0px;
   }
 
-.row\:gap-1 {
+.gapRow-1 {
     row-gap: 0.125rem;
   }
 
-.row\:gap-2 {
+.gapRow-2 {
     row-gap: 0.25rem;
   }
 
-.row\:gap-3 {
+.gapRow-3 {
     row-gap: 0.375rem;
   }
 
-.row\:gap-4 {
+.gapRow-4 {
     row-gap: 0.5rem;
   }
 
-.row\:gap-5 {
+.gapRow-5 {
     row-gap: 0.625rem;
   }
 
-.row\:gap-6 {
+.gapRow-6 {
     row-gap: 0.75rem;
   }
 
-.row\:gap-7 {
+.gapRow-7 {
     row-gap: 0.875rem;
   }
 
-.row\:gap-8 {
+.gapRow-8 {
     row-gap: 1rem;
   }
 
-.row\:gap-9 {
+.gapRow-9 {
     row-gap: 1.25rem;
   }
 
-.row\:gap-10 {
+.gapRow-10 {
     row-gap: 1.5rem;
   }
 
-.row\:gap-11 {
+.gapRow-11 {
     row-gap: 1.75rem;
   }
 
-.row\:gap-12 {
+.gapRow-12 {
     row-gap: 2rem;
   }
 
-.row\:gap-13 {
+.gapRow-13 {
     row-gap: 2.25rem;
   }
 
-.row\:gap-14 {
+.gapRow-14 {
     row-gap: 2.5rem;
   }
 
-.row\:gap-15 {
+.gapRow-15 {
     row-gap: 2.75rem;
   }
 
-.row\:gap-15 {
+.gapRow-15 {
     row-gap: 3rem;
   }
 
-.row\:gap-16 {
+.gapRow-16 {
     row-gap: 3.25rem;
   }
 
-.row\:gap-17 {
+.gapRow-17 {
     row-gap: 3.5rem;
   }
 
-.row\:gap-18 {
+.gapRow-18 {
     row-gap: 3.75rem;
   }
 
-.row\:gap-19 {
+.gapRow-19 {
     row-gap: 4rem;
   }
 
-.row\:gap-20 {
+.gapRow-20 {
     row-gap: 4.25rem;
   }
 
-.grid-items {
+.gridItems {
     justify-items: stretch;
   }
 
-.stretch\:grid-items {
+.gridItemsStretch {
     justify-items: stretch;
   }
 
-.center\:grid-items {
+.gridItemsCenter {
     justify-items: center;
   }
 
-.start\:grid-items {
+.gridItemsStart {
     justify-items: start;
   }
 
-.end\:grid-items {
+.gridItemsEnd {
     justify-items: end;
   }
 
-.left\:grid-items {
+.gridItemsLeft {
     justify-items: left;
   }
 
-.right\:grid-items {
+.gridItemsRight {
     justify-items: right;
   }
 
-.baseline\:grid-items {
+.gridItemsBaseline {
     justify-items: baseline;
   }
 
-.grid-self {
+.gridSelf {
     justify-self: stretch;
   }
 
-.stretch\:grid-self {
+.gridSelfStretch {
     justify-self: stretch;
   }
 
-.center\:grid-self {
+.gridSelfCenter {
     justify-self: center;
   }
 
-.start\:grid-self {
+.gridSelfStart {
     justify-self: start;
   }
 
-.end\:grid-self {
+.gridSelfEnd {
     justify-self: end;
   }
 
-.left\:grid-self {
+.gridSelfLeft {
     justify-self: left;
   }
 
-.right\:grid-self {
+.gridSelfRight {
     justify-self: right;
   }
 
-.baseline\:grid-self {
+.gridSelfBaseline {
     justify-self: baseline;
   }
 
 @media (min-width: 640px) {
-  .smaller\(column\:grid\)-1 {
+  .xs\.gridColumns-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-2 {
+  .xs\.gridColumns-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-3 {
+  .xs\.gridColumns-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-4 {
+  .xs\.gridColumns-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-5 {
+  .xs\.gridColumns-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-6 {
+  .xs\.gridColumns-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-7 {
+  .xs\.gridColumns-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-8 {
+  .xs\.gridColumns-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-9 {
+  .xs\.gridColumns-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-10 {
+  .xs\.gridColumns-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-11 {
+  .xs\.gridColumns-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-12 {
+  .xs\.gridColumns-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-  .smaller\(column\:grid\)-none {
+  .xs\.gridColumns-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .smaller\(grid-columns\)-1 {
+  .xs\.columns-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-2 {
+  .xs\.columns-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-3 {
+  .xs\.columns-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-4 {
+  .xs\.columns-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-5 {
+  .xs\.columns-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-6 {
+  .xs\.columns-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-7 {
+  .xs\.columns-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-8 {
+  .xs\.columns-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-9 {
+  .xs\.columns-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-10 {
+  .xs\.columns-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-11 {
+  .xs\.columns-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-12 {
+  .xs\.columns-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .smaller\(grid-columns\)-none {
+  .xs\.columns-none {
     grid-template-columns: none;
   }
 
-  .smaller\(auto\:grid-columns\) {
+  .xs\.columnsAuto {
     grid-auto-columns: auto;
   }
 
-  .smaller\(min\:grid-columns\) {
+  .xs\.columnsMin {
     grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
-  .smaller\(max\:grid-columns\) {
+  .xs\.columnsMax {
     grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
-  .smaller\(fr\:grid-columns\) {
+  .xs\.columnsFr {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .smaller\(flow\:grid-columns\) {
+  .xs\.columnsFlow {
     grid-auto-flow: column;
   }
 
-  .smaller\(dense\:grid-columns\) {
+  .xs\.columnsDense {
     grid-auto-flow: column dense;
   }
 
-  .smaller\(row\:grid\)-1 {
+  .xs\.gridRows-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-2 {
+  .xs\.gridRows-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-3 {
+  .xs\.gridRows-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-4 {
+  .xs\.gridRows-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-5 {
+  .xs\.gridRows-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-6 {
+  .xs\.gridRows-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-7 {
+  .xs\.gridRows-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-8 {
+  .xs\.gridRows-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-9 {
+  .xs\.gridRows-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-10 {
+  .xs\.gridRows-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-11 {
+  .xs\.gridRows-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-12 {
+  .xs\.gridRows-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .smaller\(row\:grid\)-none {
+  .xs\.gridRows-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .smaller\(grid-rows\)-1 {
+  .xs\.rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-2 {
+  .xs\.rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-3 {
+  .xs\.rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-4 {
+  .xs\.rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-5 {
+  .xs\.rows-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-6 {
+  .xs\.rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-7 {
+  .xs\.rows-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-8 {
+  .xs\.rows-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-9 {
+  .xs\.rows-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-10 {
+  .xs\.rows-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-11 {
+  .xs\.rows-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-12 {
+  .xs\.rows-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .smaller\(grid-rows\)-none {
+  .xs\.rows-none {
     grid-template-rows: none;
   }
 
-  .smaller\(auto\:grid-rows\) {
+  .xs\.rowsAuto {
     grid-auto-rows: auto;
   }
 
-  .smaller\(min\:grid-rows\) {
+  .xs\.rowsMin {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
-  .smaller\(max\:grid-rows\) {
+  .xs\.rowsMax {
     grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
-  .smaller\(fr\:grid-rows\) {
+  .xs\.rowsFr {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .smaller\(flow\:grid-rows\) {
+  .xs\.rowsFlow {
     grid-auto-flow: row;
   }
 
-  .smaller\(dense\:grid-rows\) {
+  .xs\.rowsDense {
     grid-auto-flow: row dense;
   }
 
-  .smaller\(colspan\)-auto {
+  .xs\.column-auto {
     grid-column: auto;
   }
 
-  .smaller\(colspan\)-1 {
+  .xs\.column-1 {
     grid-column: span 1 / span 1;
   }
 
-  .smaller\(colspan\)-2 {
+  .xs\.column-2 {
     grid-column: span 2 / span 2;
   }
 
-  .smaller\(colspan\)-3 {
+  .xs\.column-3 {
     grid-column: span 3 / span 3;
   }
 
-  .smaller\(colspan\)-4 {
+  .xs\.column-4 {
     grid-column: span 4 / span 4;
   }
 
-  .smaller\(colspan\)-5 {
+  .xs\.column-5 {
     grid-column: span 5 / span 5;
   }
 
-  .smaller\(colspan\)-6 {
+  .xs\.column-6 {
     grid-column: span 6 / span 6;
   }
 
-  .smaller\(colspan\)-7 {
+  .xs\.column-7 {
     grid-column: span 7 / span 7;
   }
 
-  .smaller\(colspan\)-8 {
+  .xs\.column-8 {
     grid-column: span 8 / span 8;
   }
 
-  .smaller\(colspan\)-9 {
+  .xs\.column-9 {
     grid-column: span 9 / span 9;
   }
 
-  .smaller\(colspan\)-10 {
+  .xs\.column-10 {
     grid-column: span 10 / span 10;
   }
 
-  .smaller\(colspan\)-11 {
+  .xs\.column-11 {
     grid-column: span 11 / span 11;
   }
 
-  .smaller\(colspan\)-12 {
+  .xs\.column-12 {
     grid-column: span 12 / span 12;
   }
 
-  .smaller\(colspan\)-full {
+  .xs\.column-full {
     grid-column: 1 / -1;
   }
 
-  .smaller\(start\:colspan\)-auto {
+  .xs\.columnStart-auto {
     grid-column-start: auto;
   }
 
-  .smaller\(start\:colspan\)-1 {
+  .xs\.columnStart-1 {
     grid-column-start: 1;
   }
 
-  .smaller\(start\:colspan\)-2 {
+  .xs\.columnStart-2 {
     grid-column-start: 2;
   }
 
-  .smaller\(start\:colspan\)-3 {
+  .xs\.columnStart-3 {
     grid-column-start: 3;
   }
 
-  .smaller\(start\:colspan\)-4 {
+  .xs\.columnStart-4 {
     grid-column-start: 4;
   }
 
-  .smaller\(start\:colspan\)-5 {
+  .xs\.columnStart-5 {
     grid-column-start: 5;
   }
 
-  .smaller\(start\:colspan\)-6 {
+  .xs\.columnStart-6 {
     grid-column-start: 6;
   }
 
-  .smaller\(start\:colspan\)-7 {
+  .xs\.columnStart-7 {
     grid-column-start: 7;
   }
 
-  .smaller\(start\:colspan\)-8 {
+  .xs\.columnStart-8 {
     grid-column-start: 8;
   }
 
-  .smaller\(start\:colspan\)-9 {
+  .xs\.columnStart-9 {
     grid-column-start: 9;
   }
 
-  .smaller\(start\:colspan\)-10 {
+  .xs\.columnStart-10 {
     grid-column-start: 10;
   }
 
-  .smaller\(start\:colspan\)-11 {
+  .xs\.columnStart-11 {
     grid-column-start: 11;
   }
 
-  .smaller\(start\:colspan\)-12 {
+  .xs\.columnStart-12 {
     grid-column-start: 12;
   }
 
-  .smaller\(start\:colspan\)-13 {
+  .xs\.columnStart-13 {
     grid-column-start: 13;
   }
 
-  .smaller\(end\:colspan\)-auto {
+  .xs\.columnEnd-auto {
     grid-column-end: auto;
   }
 
-  .smaller\(end\:colspan\)-1 {
+  .xs\.columnEnd-1 {
     grid-column-end: 1;
   }
 
-  .smaller\(end\:colspan\)-2 {
+  .xs\.columnEnd-2 {
     grid-column-end: 2;
   }
 
-  .smaller\(end\:colspan\)-3 {
+  .xs\.columnEnd-3 {
     grid-column-end: 3;
   }
 
-  .smaller\(end\:colspan\)-4 {
+  .xs\.columnEnd-4 {
     grid-column-end: 4;
   }
 
-  .smaller\(end\:colspan\)-5 {
+  .xs\.columnEnd-5 {
     grid-column-end: 5;
   }
 
-  .smaller\(end\:colspan\)-6 {
+  .xs\.columnEnd-6 {
     grid-column-end: 6;
   }
 
-  .smaller\(end\:colspan\)-7 {
+  .xs\.columnEnd-7 {
     grid-column-end: 7;
   }
 
-  .smaller\(end\:colspan\)-8 {
+  .xs\.columnEnd-8 {
     grid-column-end: 8;
   }
 
-  .smaller\(end\:colspan\)-9 {
+  .xs\.columnEnd-9 {
     grid-column-end: 9;
   }
 
-  .smaller\(end\:colspan\)-10 {
+  .xs\.columnEnd-10 {
     grid-column-end: 10;
   }
 
-  .smaller\(end\:colspan\)-11 {
+  .xs\.columnEnd-11 {
     grid-column-end: 11;
   }
 
-  .smaller\(end\:colspan\)-12 {
+  .xs\.columnEnd-12 {
     grid-column-end: 12;
   }
 
-  .smaller\(end\:colspan\)-13 {
+  .xs\.columnEnd-13 {
     grid-column-end: 13;
   }
 
-  .smaller\(rowspan\)-auto {
+  .xs\.row-auto {
     grid-row: auto;
   }
 
-  .smaller\(rowspan\)-1 {
+  .xs\.row-1 {
     grid-row: span 1 / span 1;
   }
 
-  .smaller\(rowspan\)-2 {
+  .xs\.row-2 {
     grid-row: span 2 / span 2;
   }
 
-  .smaller\(rowspan\)-3 {
+  .xs\.row-3 {
     grid-row: span 3 / span 3;
   }
 
-  .smaller\(rowspan\)-4 {
+  .xs\.row-4 {
     grid-row: span 4 / span 4;
   }
 
-  .smaller\(rowspan\)-5 {
+  .xs\.row-5 {
     grid-row: span 5 / span 5;
   }
 
-  .smaller\(rowspan\)-6 {
+  .xs\.row-6 {
     grid-row: span 6 / span 6;
   }
 
-  .smaller\(rowspan\)-7 {
+  .xs\.row-7 {
     grid-row: span 7 / span 7;
   }
 
-  .smaller\(rowspan\)-8 {
+  .xs\.row-8 {
     grid-row: span 8 / span 8;
   }
 
-  .smaller\(rowspan\)-9 {
+  .xs\.row-9 {
     grid-row: span 9 / span 9;
   }
 
-  .smaller\(rowspan\)-10 {
+  .xs\.row-10 {
     grid-row: span 10 / span 10;
   }
 
-  .smaller\(rowspan\)-11 {
+  .xs\.row-11 {
     grid-row: span 11 / span 11;
   }
 
-  .smaller\(rowspan\)-12 {
+  .xs\.row-12 {
     grid-row: span 12 / span 12;
   }
 
-  .smaller\(rowspan\)-full {
+  .xs\.row-full {
     grid-row: 1 / -1;
   }
 
-  .smaller\(start\:rowspan\)-auto {
+  .xs\.rowStart-auto {
     grid-row-start: auto;
   }
 
-  .smaller\(start\:rowspan\)-1 {
+  .xs\.rowStart-1 {
     grid-row-start: 1;
   }
 
-  .smaller\(start\:rowspan\)-2 {
+  .xs\.rowStart-2 {
     grid-row-start: 2;
   }
 
-  .smaller\(start\:rowspan\)-3 {
+  .xs\.rowStart-3 {
     grid-row-start: 3;
   }
 
-  .smaller\(start\:rowspan\)-4 {
+  .xs\.rowStart-4 {
     grid-row-start: 4;
   }
 
-  .smaller\(start\:rowspan\)-5 {
+  .xs\.rowStart-5 {
     grid-row-start: 5;
   }
 
-  .smaller\(start\:rowspan\)-6 {
+  .xs\.rowStart-6 {
     grid-row-start: 6;
   }
 
-  .smaller\(start\:rowspan\)-7 {
+  .xs\.rowStart-7 {
     grid-row-start: 7;
   }
 
-  .smaller\(start\:rowspan\)-8 {
+  .xs\.rowStart-8 {
     grid-row-start: 8;
   }
 
-  .smaller\(start\:rowspan\)-9 {
+  .xs\.rowStart-9 {
     grid-row-start: 9;
   }
 
-  .smaller\(start\:rowspan\)-10 {
+  .xs\.rowStart-10 {
     grid-row-start: 10;
   }
 
-  .smaller\(start\:rowspan\)-11 {
+  .xs\.rowStart-11 {
     grid-row-start: 11;
   }
 
-  .smaller\(start\:rowspan\)-12 {
+  .xs\.rowStart-12 {
     grid-row-start: 12;
   }
 
-  .smaller\(start\:rowspan\)-13 {
+  .xs\.rowStart-13 {
     grid-row-start: 13;
   }
 
-  .smaller\(end\:rowspan\)-auto {
+  .xs\.rowEnd-auto {
     grid-row-end: auto;
   }
 
-  .smaller\(end\:rowspan\)-1 {
+  .xs\.rowEnd-1 {
     grid-row-end: 1;
   }
 
-  .smaller\(end\:rowspan\)-2 {
+  .xs\.rowEnd-2 {
     grid-row-end: 2;
   }
 
-  .smaller\(end\:rowspan\)-3 {
+  .xs\.rowEnd-3 {
     grid-row-end: 3;
   }
 
-  .smaller\(end\:rowspan\)-4 {
+  .xs\.rowEnd-4 {
     grid-row-end: 4;
   }
 
-  .smaller\(end\:rowspan\)-5 {
+  .xs\.rowEnd-5 {
     grid-row-end: 5;
   }
 
-  .smaller\(end\:rowspan\)-6 {
+  .xs\.rowEnd-6 {
     grid-row-end: 6;
   }
 
-  .smaller\(end\:rowspan\)-7 {
+  .xs\.rowEnd-7 {
     grid-row-end: 7;
   }
 
-  .smaller\(end\:rowspan\)-8 {
+  .xs\.rowEnd-8 {
     grid-row-end: 8;
   }
 
-  .smaller\(end\:rowspan\)-9 {
+  .xs\.rowEnd-9 {
     grid-row-end: 9;
   }
 
-  .smaller\(end\:rowspan\)-10 {
+  .xs\.rowEnd-10 {
     grid-row-end: 10;
   }
 
-  .smaller\(end\:rowspan\)-11 {
+  .xs\.rowEnd-11 {
     grid-row-end: 11;
   }
 
-  .smaller\(end\:rowspan\)-12 {
+  .xs\.rowEnd-12 {
     grid-row-end: 12;
   }
 
-  .smaller\(end\:rowspan\)-13 {
+  .xs\.rowEnd-13 {
     grid-row-end: 13;
   }
 
-  .smaller\(gap\)-0 {
+  .xs\.gap-0 {
     gap: 0px;
   }
 
-  .smaller\(gap\)-1 {
+  .xs\.gap-1 {
     gap: 0.125rem;
   }
 
-  .smaller\(gap\)-2 {
+  .xs\.gap-2 {
     gap: 0.25rem;
   }
 
-  .smaller\(gap\)-3 {
+  .xs\.gap-3 {
     gap: 0.375rem;
   }
 
-  .smaller\(gap\)-4 {
+  .xs\.gap-4 {
     gap: 0.5rem;
   }
 
-  .smaller\(gap\)-5 {
+  .xs\.gap-5 {
     gap: 0.625rem;
   }
 
-  .smaller\(gap\)-6 {
+  .xs\.gap-6 {
     gap: 0.75rem;
   }
 
-  .smaller\(gap\)-7 {
+  .xs\.gap-7 {
     gap: 0.875rem;
   }
 
-  .smaller\(gap\)-8 {
+  .xs\.gap-8 {
     gap: 1rem;
   }
 
-  .smaller\(gap\)-9 {
+  .xs\.gap-9 {
     gap: 1.25rem;
   }
 
-  .smaller\(gap\)-10 {
+  .xs\.gap-10 {
     gap: 1.5rem;
   }
 
-  .smaller\(gap\)-11 {
+  .xs\.gap-11 {
     gap: 1.75rem;
   }
 
-  .smaller\(gap\)-12 {
+  .xs\.gap-12 {
     gap: 2rem;
   }
 
-  .smaller\(gap\)-13 {
+  .xs\.gap-13 {
     gap: 2.25rem;
   }
 
-  .smaller\(gap\)-14 {
+  .xs\.gap-14 {
     gap: 2.5rem;
   }
 
-  .smaller\(gap\)-15 {
+  .xs\.gap-15 {
     gap: 2.75rem;
   }
 
-  .smaller\(gap\)-15 {
+  .xs\.gap-15 {
     gap: 3rem;
   }
 
-  .smaller\(gap\)-16 {
+  .xs\.gap-16 {
     gap: 3.25rem;
   }
 
-  .smaller\(gap\)-17 {
+  .xs\.gap-17 {
     gap: 3.5rem;
   }
 
-  .smaller\(gap\)-18 {
+  .xs\.gap-18 {
     gap: 3.75rem;
   }
 
-  .smaller\(gap\)-19 {
+  .xs\.gap-19 {
     gap: 4rem;
   }
 
-  .smaller\(gap\)-20 {
+  .xs\.gap-20 {
     gap: 4.25rem;
   }
 
-  .smaller\(column\:gap\)-0 {
+  .xs\.gapColumn-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
   }
 
-  .smaller\(column\:gap\)-1 {
+  .xs\.gapColumn-1 {
     -moz-column-gap: 0.125rem;
          column-gap: 0.125rem;
   }
 
-  .smaller\(column\:gap\)-2 {
+  .xs\.gapColumn-2 {
     -moz-column-gap: 0.25rem;
          column-gap: 0.25rem;
   }
 
-  .smaller\(column\:gap\)-3 {
+  .xs\.gapColumn-3 {
     -moz-column-gap: 0.375rem;
          column-gap: 0.375rem;
   }
 
-  .smaller\(column\:gap\)-4 {
+  .xs\.gapColumn-4 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
 
-  .smaller\(column\:gap\)-5 {
+  .xs\.gapColumn-5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
   }
 
-  .smaller\(column\:gap\)-6 {
+  .xs\.gapColumn-6 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
   }
 
-  .smaller\(column\:gap\)-7 {
+  .xs\.gapColumn-7 {
     -moz-column-gap: 0.875rem;
          column-gap: 0.875rem;
   }
 
-  .smaller\(column\:gap\)-8 {
+  .xs\.gapColumn-8 {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 
-  .smaller\(column\:gap\)-9 {
+  .xs\.gapColumn-9 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
 
-  .smaller\(column\:gap\)-10 {
+  .xs\.gapColumn-10 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
 
-  .smaller\(column\:gap\)-11 {
+  .xs\.gapColumn-11 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
   }
 
-  .smaller\(column\:gap\)-12 {
+  .xs\.gapColumn-12 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
 
-  .smaller\(column\:gap\)-13 {
+  .xs\.gapColumn-13 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
   }
 
-  .smaller\(column\:gap\)-14 {
+  .xs\.gapColumn-14 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
 
-  .smaller\(column\:gap\)-15 {
+  .xs\.gapColumn-15 {
     -moz-column-gap: 2.75rem;
          column-gap: 2.75rem;
   }
 
-  .smaller\(column\:gap\)-15 {
+  .xs\.gapColumn-15 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
   }
 
-  .smaller\(column\:gap\)-16 {
+  .xs\.gapColumn-16 {
     -moz-column-gap: 3.25rem;
          column-gap: 3.25rem;
   }
 
-  .smaller\(column\:gap\)-17 {
+  .xs\.gapColumn-17 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
   }
 
-  .smaller\(column\:gap\)-18 {
+  .xs\.gapColumn-18 {
     -moz-column-gap: 3.75rem;
          column-gap: 3.75rem;
   }
 
-  .smaller\(column\:gap\)-19 {
+  .xs\.gapColumn-19 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
   }
 
-  .smaller\(column\:gap\)-20 {
+  .xs\.gapColumn-20 {
     -moz-column-gap: 4.25rem;
          column-gap: 4.25rem;
   }
 
-  .smaller\(row\:gap\)-0 {
+  .xs\.gapRow-0 {
     row-gap: 0px;
   }
 
-  .smaller\(row\:gap\)-1 {
+  .xs\.gapRow-1 {
     row-gap: 0.125rem;
   }
 
-  .smaller\(row\:gap\)-2 {
+  .xs\.gapRow-2 {
     row-gap: 0.25rem;
   }
 
-  .smaller\(row\:gap\)-3 {
+  .xs\.gapRow-3 {
     row-gap: 0.375rem;
   }
 
-  .smaller\(row\:gap\)-4 {
+  .xs\.gapRow-4 {
     row-gap: 0.5rem;
   }
 
-  .smaller\(row\:gap\)-5 {
+  .xs\.gapRow-5 {
     row-gap: 0.625rem;
   }
 
-  .smaller\(row\:gap\)-6 {
+  .xs\.gapRow-6 {
     row-gap: 0.75rem;
   }
 
-  .smaller\(row\:gap\)-7 {
+  .xs\.gapRow-7 {
     row-gap: 0.875rem;
   }
 
-  .smaller\(row\:gap\)-8 {
+  .xs\.gapRow-8 {
     row-gap: 1rem;
   }
 
-  .smaller\(row\:gap\)-9 {
+  .xs\.gapRow-9 {
     row-gap: 1.25rem;
   }
 
-  .smaller\(row\:gap\)-10 {
+  .xs\.gapRow-10 {
     row-gap: 1.5rem;
   }
 
-  .smaller\(row\:gap\)-11 {
+  .xs\.gapRow-11 {
     row-gap: 1.75rem;
   }
 
-  .smaller\(row\:gap\)-12 {
+  .xs\.gapRow-12 {
     row-gap: 2rem;
   }
 
-  .smaller\(row\:gap\)-13 {
+  .xs\.gapRow-13 {
     row-gap: 2.25rem;
   }
 
-  .smaller\(row\:gap\)-14 {
+  .xs\.gapRow-14 {
     row-gap: 2.5rem;
   }
 
-  .smaller\(row\:gap\)-15 {
+  .xs\.gapRow-15 {
     row-gap: 2.75rem;
   }
 
-  .smaller\(row\:gap\)-15 {
+  .xs\.gapRow-15 {
     row-gap: 3rem;
   }
 
-  .smaller\(row\:gap\)-16 {
+  .xs\.gapRow-16 {
     row-gap: 3.25rem;
   }
 
-  .smaller\(row\:gap\)-17 {
+  .xs\.gapRow-17 {
     row-gap: 3.5rem;
   }
 
-  .smaller\(row\:gap\)-18 {
+  .xs\.gapRow-18 {
     row-gap: 3.75rem;
   }
 
-  .smaller\(row\:gap\)-19 {
+  .xs\.gapRow-19 {
     row-gap: 4rem;
   }
 
-  .smaller\(row\:gap\)-20 {
+  .xs\.gapRow-20 {
     row-gap: 4.25rem;
   }
 
-  .smaller\(grid-items\) {
+  .xs\.gridItems {
     justify-items: stretch;
   }
 
-  .smaller\(stretch\:grid-items\) {
+  .xs\.gridItemsStretch {
     justify-items: stretch;
   }
 
-  .smaller\(center\:grid-items\) {
+  .xs\.gridItemsCenter {
     justify-items: center;
   }
 
-  .smaller\(start\:grid-items\) {
+  .xs\.gridItemsStart {
     justify-items: start;
   }
 
-  .smaller\(end\:grid-items\) {
+  .xs\.gridItemsEnd {
     justify-items: end;
   }
 
-  .smaller\(left\:grid-items\) {
+  .xs\.gridItemsLeft {
     justify-items: left;
   }
 
-  .smaller\(right\:grid-items\) {
+  .xs\.gridItemsRight {
     justify-items: right;
   }
 
-  .smaller\(baseline\:grid-items\) {
+  .xs\.gridItemsBaseline {
     justify-items: baseline;
   }
 
-  .smaller\(grid-self\) {
+  .xs\.gridSelf {
     justify-self: stretch;
   }
 
-  .smaller\(stretch\:grid-self\) {
+  .xs\.gridSelfStretch {
     justify-self: stretch;
   }
 
-  .smaller\(center\:grid-self\) {
+  .xs\.gridSelfCenter {
     justify-self: center;
   }
 
-  .smaller\(start\:grid-self\) {
+  .xs\.gridSelfStart {
     justify-self: start;
   }
 
-  .smaller\(end\:grid-self\) {
+  .xs\.gridSelfEnd {
     justify-self: end;
   }
 
-  .smaller\(left\:grid-self\) {
+  .xs\.gridSelfLeft {
     justify-self: left;
   }
 
-  .smaller\(right\:grid-self\) {
+  .xs\.gridSelfRight {
     justify-self: right;
   }
 
-  .smaller\(baseline\:grid-self\) {
+  .xs\.gridSelfBaseline {
     justify-self: baseline;
   }
 }
 
 @media (min-width: 768px) {
-  .small\(column\:grid\)-1 {
+  .sm\.gridColumns-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-2 {
+  .sm\.gridColumns-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-3 {
+  .sm\.gridColumns-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-4 {
+  .sm\.gridColumns-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-5 {
+  .sm\.gridColumns-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-6 {
+  .sm\.gridColumns-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-7 {
+  .sm\.gridColumns-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-8 {
+  .sm\.gridColumns-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-9 {
+  .sm\.gridColumns-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-10 {
+  .sm\.gridColumns-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-11 {
+  .sm\.gridColumns-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-12 {
+  .sm\.gridColumns-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-  .small\(column\:grid\)-none {
+  .sm\.gridColumns-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .small\(grid-columns\)-1 {
+  .sm\.columns-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-2 {
+  .sm\.columns-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-3 {
+  .sm\.columns-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-4 {
+  .sm\.columns-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-5 {
+  .sm\.columns-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-6 {
+  .sm\.columns-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-7 {
+  .sm\.columns-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-8 {
+  .sm\.columns-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-9 {
+  .sm\.columns-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-10 {
+  .sm\.columns-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-11 {
+  .sm\.columns-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-12 {
+  .sm\.columns-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .small\(grid-columns\)-none {
+  .sm\.columns-none {
     grid-template-columns: none;
   }
 
-  .small\(auto\:grid-columns\) {
+  .sm\.columnsAuto {
     grid-auto-columns: auto;
   }
 
-  .small\(min\:grid-columns\) {
+  .sm\.columnsMin {
     grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
-  .small\(max\:grid-columns\) {
+  .sm\.columnsMax {
     grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
-  .small\(fr\:grid-columns\) {
+  .sm\.columnsFr {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .small\(flow\:grid-columns\) {
+  .sm\.columnsFlow {
     grid-auto-flow: column;
   }
 
-  .small\(dense\:grid-columns\) {
+  .sm\.columnsDense {
     grid-auto-flow: column dense;
   }
 
-  .small\(row\:grid\)-1 {
+  .sm\.gridRows-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-2 {
+  .sm\.gridRows-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-3 {
+  .sm\.gridRows-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-4 {
+  .sm\.gridRows-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-5 {
+  .sm\.gridRows-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-6 {
+  .sm\.gridRows-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-7 {
+  .sm\.gridRows-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-8 {
+  .sm\.gridRows-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-9 {
+  .sm\.gridRows-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-10 {
+  .sm\.gridRows-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-11 {
+  .sm\.gridRows-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-12 {
+  .sm\.gridRows-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .small\(row\:grid\)-none {
+  .sm\.gridRows-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .small\(grid-rows\)-1 {
+  .sm\.rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-2 {
+  .sm\.rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-3 {
+  .sm\.rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-4 {
+  .sm\.rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-5 {
+  .sm\.rows-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-6 {
+  .sm\.rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-7 {
+  .sm\.rows-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-8 {
+  .sm\.rows-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-9 {
+  .sm\.rows-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-10 {
+  .sm\.rows-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-11 {
+  .sm\.rows-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-12 {
+  .sm\.rows-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .small\(grid-rows\)-none {
+  .sm\.rows-none {
     grid-template-rows: none;
   }
 
-  .small\(auto\:grid-rows\) {
+  .sm\.rowsAuto {
     grid-auto-rows: auto;
   }
 
-  .small\(min\:grid-rows\) {
+  .sm\.rowsMin {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
-  .small\(max\:grid-rows\) {
+  .sm\.rowsMax {
     grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
-  .small\(fr\:grid-rows\) {
+  .sm\.rowsFr {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .small\(flow\:grid-rows\) {
+  .sm\.rowsFlow {
     grid-auto-flow: row;
   }
 
-  .small\(dense\:grid-rows\) {
+  .sm\.rowsDense {
     grid-auto-flow: row dense;
   }
 
-  .small\(colspan\)-auto {
+  .sm\.column-auto {
     grid-column: auto;
   }
 
-  .small\(colspan\)-1 {
+  .sm\.column-1 {
     grid-column: span 1 / span 1;
   }
 
-  .small\(colspan\)-2 {
+  .sm\.column-2 {
     grid-column: span 2 / span 2;
   }
 
-  .small\(colspan\)-3 {
+  .sm\.column-3 {
     grid-column: span 3 / span 3;
   }
 
-  .small\(colspan\)-4 {
+  .sm\.column-4 {
     grid-column: span 4 / span 4;
   }
 
-  .small\(colspan\)-5 {
+  .sm\.column-5 {
     grid-column: span 5 / span 5;
   }
 
-  .small\(colspan\)-6 {
+  .sm\.column-6 {
     grid-column: span 6 / span 6;
   }
 
-  .small\(colspan\)-7 {
+  .sm\.column-7 {
     grid-column: span 7 / span 7;
   }
 
-  .small\(colspan\)-8 {
+  .sm\.column-8 {
     grid-column: span 8 / span 8;
   }
 
-  .small\(colspan\)-9 {
+  .sm\.column-9 {
     grid-column: span 9 / span 9;
   }
 
-  .small\(colspan\)-10 {
+  .sm\.column-10 {
     grid-column: span 10 / span 10;
   }
 
-  .small\(colspan\)-11 {
+  .sm\.column-11 {
     grid-column: span 11 / span 11;
   }
 
-  .small\(colspan\)-12 {
+  .sm\.column-12 {
     grid-column: span 12 / span 12;
   }
 
-  .small\(colspan\)-full {
+  .sm\.column-full {
     grid-column: 1 / -1;
   }
 
-  .small\(start\:colspan\)-auto {
+  .sm\.columnStart-auto {
     grid-column-start: auto;
   }
 
-  .small\(start\:colspan\)-1 {
+  .sm\.columnStart-1 {
     grid-column-start: 1;
   }
 
-  .small\(start\:colspan\)-2 {
+  .sm\.columnStart-2 {
     grid-column-start: 2;
   }
 
-  .small\(start\:colspan\)-3 {
+  .sm\.columnStart-3 {
     grid-column-start: 3;
   }
 
-  .small\(start\:colspan\)-4 {
+  .sm\.columnStart-4 {
     grid-column-start: 4;
   }
 
-  .small\(start\:colspan\)-5 {
+  .sm\.columnStart-5 {
     grid-column-start: 5;
   }
 
-  .small\(start\:colspan\)-6 {
+  .sm\.columnStart-6 {
     grid-column-start: 6;
   }
 
-  .small\(start\:colspan\)-7 {
+  .sm\.columnStart-7 {
     grid-column-start: 7;
   }
 
-  .small\(start\:colspan\)-8 {
+  .sm\.columnStart-8 {
     grid-column-start: 8;
   }
 
-  .small\(start\:colspan\)-9 {
+  .sm\.columnStart-9 {
     grid-column-start: 9;
   }
 
-  .small\(start\:colspan\)-10 {
+  .sm\.columnStart-10 {
     grid-column-start: 10;
   }
 
-  .small\(start\:colspan\)-11 {
+  .sm\.columnStart-11 {
     grid-column-start: 11;
   }
 
-  .small\(start\:colspan\)-12 {
+  .sm\.columnStart-12 {
     grid-column-start: 12;
   }
 
-  .small\(start\:colspan\)-13 {
+  .sm\.columnStart-13 {
     grid-column-start: 13;
   }
 
-  .small\(end\:colspan\)-auto {
+  .sm\.columnEnd-auto {
     grid-column-end: auto;
   }
 
-  .small\(end\:colspan\)-1 {
+  .sm\.columnEnd-1 {
     grid-column-end: 1;
   }
 
-  .small\(end\:colspan\)-2 {
+  .sm\.columnEnd-2 {
     grid-column-end: 2;
   }
 
-  .small\(end\:colspan\)-3 {
+  .sm\.columnEnd-3 {
     grid-column-end: 3;
   }
 
-  .small\(end\:colspan\)-4 {
+  .sm\.columnEnd-4 {
     grid-column-end: 4;
   }
 
-  .small\(end\:colspan\)-5 {
+  .sm\.columnEnd-5 {
     grid-column-end: 5;
   }
 
-  .small\(end\:colspan\)-6 {
+  .sm\.columnEnd-6 {
     grid-column-end: 6;
   }
 
-  .small\(end\:colspan\)-7 {
+  .sm\.columnEnd-7 {
     grid-column-end: 7;
   }
 
-  .small\(end\:colspan\)-8 {
+  .sm\.columnEnd-8 {
     grid-column-end: 8;
   }
 
-  .small\(end\:colspan\)-9 {
+  .sm\.columnEnd-9 {
     grid-column-end: 9;
   }
 
-  .small\(end\:colspan\)-10 {
+  .sm\.columnEnd-10 {
     grid-column-end: 10;
   }
 
-  .small\(end\:colspan\)-11 {
+  .sm\.columnEnd-11 {
     grid-column-end: 11;
   }
 
-  .small\(end\:colspan\)-12 {
+  .sm\.columnEnd-12 {
     grid-column-end: 12;
   }
 
-  .small\(end\:colspan\)-13 {
+  .sm\.columnEnd-13 {
     grid-column-end: 13;
   }
 
-  .small\(rowspan\)-auto {
+  .sm\.row-auto {
     grid-row: auto;
   }
 
-  .small\(rowspan\)-1 {
+  .sm\.row-1 {
     grid-row: span 1 / span 1;
   }
 
-  .small\(rowspan\)-2 {
+  .sm\.row-2 {
     grid-row: span 2 / span 2;
   }
 
-  .small\(rowspan\)-3 {
+  .sm\.row-3 {
     grid-row: span 3 / span 3;
   }
 
-  .small\(rowspan\)-4 {
+  .sm\.row-4 {
     grid-row: span 4 / span 4;
   }
 
-  .small\(rowspan\)-5 {
+  .sm\.row-5 {
     grid-row: span 5 / span 5;
   }
 
-  .small\(rowspan\)-6 {
+  .sm\.row-6 {
     grid-row: span 6 / span 6;
   }
 
-  .small\(rowspan\)-7 {
+  .sm\.row-7 {
     grid-row: span 7 / span 7;
   }
 
-  .small\(rowspan\)-8 {
+  .sm\.row-8 {
     grid-row: span 8 / span 8;
   }
 
-  .small\(rowspan\)-9 {
+  .sm\.row-9 {
     grid-row: span 9 / span 9;
   }
 
-  .small\(rowspan\)-10 {
+  .sm\.row-10 {
     grid-row: span 10 / span 10;
   }
 
-  .small\(rowspan\)-11 {
+  .sm\.row-11 {
     grid-row: span 11 / span 11;
   }
 
-  .small\(rowspan\)-12 {
+  .sm\.row-12 {
     grid-row: span 12 / span 12;
   }
 
-  .small\(rowspan\)-full {
+  .sm\.row-full {
     grid-row: 1 / -1;
   }
 
-  .small\(start\:rowspan\)-auto {
+  .sm\.rowStart-auto {
     grid-row-start: auto;
   }
 
-  .small\(start\:rowspan\)-1 {
+  .sm\.rowStart-1 {
     grid-row-start: 1;
   }
 
-  .small\(start\:rowspan\)-2 {
+  .sm\.rowStart-2 {
     grid-row-start: 2;
   }
 
-  .small\(start\:rowspan\)-3 {
+  .sm\.rowStart-3 {
     grid-row-start: 3;
   }
 
-  .small\(start\:rowspan\)-4 {
+  .sm\.rowStart-4 {
     grid-row-start: 4;
   }
 
-  .small\(start\:rowspan\)-5 {
+  .sm\.rowStart-5 {
     grid-row-start: 5;
   }
 
-  .small\(start\:rowspan\)-6 {
+  .sm\.rowStart-6 {
     grid-row-start: 6;
   }
 
-  .small\(start\:rowspan\)-7 {
+  .sm\.rowStart-7 {
     grid-row-start: 7;
   }
 
-  .small\(start\:rowspan\)-8 {
+  .sm\.rowStart-8 {
     grid-row-start: 8;
   }
 
-  .small\(start\:rowspan\)-9 {
+  .sm\.rowStart-9 {
     grid-row-start: 9;
   }
 
-  .small\(start\:rowspan\)-10 {
+  .sm\.rowStart-10 {
     grid-row-start: 10;
   }
 
-  .small\(start\:rowspan\)-11 {
+  .sm\.rowStart-11 {
     grid-row-start: 11;
   }
 
-  .small\(start\:rowspan\)-12 {
+  .sm\.rowStart-12 {
     grid-row-start: 12;
   }
 
-  .small\(start\:rowspan\)-13 {
+  .sm\.rowStart-13 {
     grid-row-start: 13;
   }
 
-  .small\(end\:rowspan\)-auto {
+  .sm\.rowEnd-auto {
     grid-row-end: auto;
   }
 
-  .small\(end\:rowspan\)-1 {
+  .sm\.rowEnd-1 {
     grid-row-end: 1;
   }
 
-  .small\(end\:rowspan\)-2 {
+  .sm\.rowEnd-2 {
     grid-row-end: 2;
   }
 
-  .small\(end\:rowspan\)-3 {
+  .sm\.rowEnd-3 {
     grid-row-end: 3;
   }
 
-  .small\(end\:rowspan\)-4 {
+  .sm\.rowEnd-4 {
     grid-row-end: 4;
   }
 
-  .small\(end\:rowspan\)-5 {
+  .sm\.rowEnd-5 {
     grid-row-end: 5;
   }
 
-  .small\(end\:rowspan\)-6 {
+  .sm\.rowEnd-6 {
     grid-row-end: 6;
   }
 
-  .small\(end\:rowspan\)-7 {
+  .sm\.rowEnd-7 {
     grid-row-end: 7;
   }
 
-  .small\(end\:rowspan\)-8 {
+  .sm\.rowEnd-8 {
     grid-row-end: 8;
   }
 
-  .small\(end\:rowspan\)-9 {
+  .sm\.rowEnd-9 {
     grid-row-end: 9;
   }
 
-  .small\(end\:rowspan\)-10 {
+  .sm\.rowEnd-10 {
     grid-row-end: 10;
   }
 
-  .small\(end\:rowspan\)-11 {
+  .sm\.rowEnd-11 {
     grid-row-end: 11;
   }
 
-  .small\(end\:rowspan\)-12 {
+  .sm\.rowEnd-12 {
     grid-row-end: 12;
   }
 
-  .small\(end\:rowspan\)-13 {
+  .sm\.rowEnd-13 {
     grid-row-end: 13;
   }
 
-  .small\(gap\)-0 {
+  .sm\.gap-0 {
     gap: 0px;
   }
 
-  .small\(gap\)-1 {
+  .sm\.gap-1 {
     gap: 0.125rem;
   }
 
-  .small\(gap\)-2 {
+  .sm\.gap-2 {
     gap: 0.25rem;
   }
 
-  .small\(gap\)-3 {
+  .sm\.gap-3 {
     gap: 0.375rem;
   }
 
-  .small\(gap\)-4 {
+  .sm\.gap-4 {
     gap: 0.5rem;
   }
 
-  .small\(gap\)-5 {
+  .sm\.gap-5 {
     gap: 0.625rem;
   }
 
-  .small\(gap\)-6 {
+  .sm\.gap-6 {
     gap: 0.75rem;
   }
 
-  .small\(gap\)-7 {
+  .sm\.gap-7 {
     gap: 0.875rem;
   }
 
-  .small\(gap\)-8 {
+  .sm\.gap-8 {
     gap: 1rem;
   }
 
-  .small\(gap\)-9 {
+  .sm\.gap-9 {
     gap: 1.25rem;
   }
 
-  .small\(gap\)-10 {
+  .sm\.gap-10 {
     gap: 1.5rem;
   }
 
-  .small\(gap\)-11 {
+  .sm\.gap-11 {
     gap: 1.75rem;
   }
 
-  .small\(gap\)-12 {
+  .sm\.gap-12 {
     gap: 2rem;
   }
 
-  .small\(gap\)-13 {
+  .sm\.gap-13 {
     gap: 2.25rem;
   }
 
-  .small\(gap\)-14 {
+  .sm\.gap-14 {
     gap: 2.5rem;
   }
 
-  .small\(gap\)-15 {
+  .sm\.gap-15 {
     gap: 2.75rem;
   }
 
-  .small\(gap\)-15 {
+  .sm\.gap-15 {
     gap: 3rem;
   }
 
-  .small\(gap\)-16 {
+  .sm\.gap-16 {
     gap: 3.25rem;
   }
 
-  .small\(gap\)-17 {
+  .sm\.gap-17 {
     gap: 3.5rem;
   }
 
-  .small\(gap\)-18 {
+  .sm\.gap-18 {
     gap: 3.75rem;
   }
 
-  .small\(gap\)-19 {
+  .sm\.gap-19 {
     gap: 4rem;
   }
 
-  .small\(gap\)-20 {
+  .sm\.gap-20 {
     gap: 4.25rem;
   }
 
-  .small\(column\:gap\)-0 {
+  .sm\.gapColumn-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
   }
 
-  .small\(column\:gap\)-1 {
+  .sm\.gapColumn-1 {
     -moz-column-gap: 0.125rem;
          column-gap: 0.125rem;
   }
 
-  .small\(column\:gap\)-2 {
+  .sm\.gapColumn-2 {
     -moz-column-gap: 0.25rem;
          column-gap: 0.25rem;
   }
 
-  .small\(column\:gap\)-3 {
+  .sm\.gapColumn-3 {
     -moz-column-gap: 0.375rem;
          column-gap: 0.375rem;
   }
 
-  .small\(column\:gap\)-4 {
+  .sm\.gapColumn-4 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
 
-  .small\(column\:gap\)-5 {
+  .sm\.gapColumn-5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
   }
 
-  .small\(column\:gap\)-6 {
+  .sm\.gapColumn-6 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
   }
 
-  .small\(column\:gap\)-7 {
+  .sm\.gapColumn-7 {
     -moz-column-gap: 0.875rem;
          column-gap: 0.875rem;
   }
 
-  .small\(column\:gap\)-8 {
+  .sm\.gapColumn-8 {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 
-  .small\(column\:gap\)-9 {
+  .sm\.gapColumn-9 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
 
-  .small\(column\:gap\)-10 {
+  .sm\.gapColumn-10 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
 
-  .small\(column\:gap\)-11 {
+  .sm\.gapColumn-11 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
   }
 
-  .small\(column\:gap\)-12 {
+  .sm\.gapColumn-12 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
 
-  .small\(column\:gap\)-13 {
+  .sm\.gapColumn-13 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
   }
 
-  .small\(column\:gap\)-14 {
+  .sm\.gapColumn-14 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
 
-  .small\(column\:gap\)-15 {
+  .sm\.gapColumn-15 {
     -moz-column-gap: 2.75rem;
          column-gap: 2.75rem;
   }
 
-  .small\(column\:gap\)-15 {
+  .sm\.gapColumn-15 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
   }
 
-  .small\(column\:gap\)-16 {
+  .sm\.gapColumn-16 {
     -moz-column-gap: 3.25rem;
          column-gap: 3.25rem;
   }
 
-  .small\(column\:gap\)-17 {
+  .sm\.gapColumn-17 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
   }
 
-  .small\(column\:gap\)-18 {
+  .sm\.gapColumn-18 {
     -moz-column-gap: 3.75rem;
          column-gap: 3.75rem;
   }
 
-  .small\(column\:gap\)-19 {
+  .sm\.gapColumn-19 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
   }
 
-  .small\(column\:gap\)-20 {
+  .sm\.gapColumn-20 {
     -moz-column-gap: 4.25rem;
          column-gap: 4.25rem;
   }
 
-  .small\(row\:gap\)-0 {
+  .sm\.gapRow-0 {
     row-gap: 0px;
   }
 
-  .small\(row\:gap\)-1 {
+  .sm\.gapRow-1 {
     row-gap: 0.125rem;
   }
 
-  .small\(row\:gap\)-2 {
+  .sm\.gapRow-2 {
     row-gap: 0.25rem;
   }
 
-  .small\(row\:gap\)-3 {
+  .sm\.gapRow-3 {
     row-gap: 0.375rem;
   }
 
-  .small\(row\:gap\)-4 {
+  .sm\.gapRow-4 {
     row-gap: 0.5rem;
   }
 
-  .small\(row\:gap\)-5 {
+  .sm\.gapRow-5 {
     row-gap: 0.625rem;
   }
 
-  .small\(row\:gap\)-6 {
+  .sm\.gapRow-6 {
     row-gap: 0.75rem;
   }
 
-  .small\(row\:gap\)-7 {
+  .sm\.gapRow-7 {
     row-gap: 0.875rem;
   }
 
-  .small\(row\:gap\)-8 {
+  .sm\.gapRow-8 {
     row-gap: 1rem;
   }
 
-  .small\(row\:gap\)-9 {
+  .sm\.gapRow-9 {
     row-gap: 1.25rem;
   }
 
-  .small\(row\:gap\)-10 {
+  .sm\.gapRow-10 {
     row-gap: 1.5rem;
   }
 
-  .small\(row\:gap\)-11 {
+  .sm\.gapRow-11 {
     row-gap: 1.75rem;
   }
 
-  .small\(row\:gap\)-12 {
+  .sm\.gapRow-12 {
     row-gap: 2rem;
   }
 
-  .small\(row\:gap\)-13 {
+  .sm\.gapRow-13 {
     row-gap: 2.25rem;
   }
 
-  .small\(row\:gap\)-14 {
+  .sm\.gapRow-14 {
     row-gap: 2.5rem;
   }
 
-  .small\(row\:gap\)-15 {
+  .sm\.gapRow-15 {
     row-gap: 2.75rem;
   }
 
-  .small\(row\:gap\)-15 {
+  .sm\.gapRow-15 {
     row-gap: 3rem;
   }
 
-  .small\(row\:gap\)-16 {
+  .sm\.gapRow-16 {
     row-gap: 3.25rem;
   }
 
-  .small\(row\:gap\)-17 {
+  .sm\.gapRow-17 {
     row-gap: 3.5rem;
   }
 
-  .small\(row\:gap\)-18 {
+  .sm\.gapRow-18 {
     row-gap: 3.75rem;
   }
 
-  .small\(row\:gap\)-19 {
+  .sm\.gapRow-19 {
     row-gap: 4rem;
   }
 
-  .small\(row\:gap\)-20 {
+  .sm\.gapRow-20 {
     row-gap: 4.25rem;
   }
 
-  .small\(grid-items\) {
+  .sm\.gridItems {
     justify-items: stretch;
   }
 
-  .small\(stretch\:grid-items\) {
+  .sm\.gridItemsStretch {
     justify-items: stretch;
   }
 
-  .small\(center\:grid-items\) {
+  .sm\.gridItemsCenter {
     justify-items: center;
   }
 
-  .small\(start\:grid-items\) {
+  .sm\.gridItemsStart {
     justify-items: start;
   }
 
-  .small\(end\:grid-items\) {
+  .sm\.gridItemsEnd {
     justify-items: end;
   }
 
-  .small\(left\:grid-items\) {
+  .sm\.gridItemsLeft {
     justify-items: left;
   }
 
-  .small\(right\:grid-items\) {
+  .sm\.gridItemsRight {
     justify-items: right;
   }
 
-  .small\(baseline\:grid-items\) {
+  .sm\.gridItemsBaseline {
     justify-items: baseline;
   }
 
-  .small\(grid-self\) {
+  .sm\.gridSelf {
     justify-self: stretch;
   }
 
-  .small\(stretch\:grid-self\) {
+  .sm\.gridSelfStretch {
     justify-self: stretch;
   }
 
-  .small\(center\:grid-self\) {
+  .sm\.gridSelfCenter {
     justify-self: center;
   }
 
-  .small\(start\:grid-self\) {
+  .sm\.gridSelfStart {
     justify-self: start;
   }
 
-  .small\(end\:grid-self\) {
+  .sm\.gridSelfEnd {
     justify-self: end;
   }
 
-  .small\(left\:grid-self\) {
+  .sm\.gridSelfLeft {
     justify-self: left;
   }
 
-  .small\(right\:grid-self\) {
+  .sm\.gridSelfRight {
     justify-self: right;
   }
 
-  .small\(baseline\:grid-self\) {
+  .sm\.gridSelfBaseline {
     justify-self: baseline;
   }
 }
 
 @media (min-width: 1024px) {
-  .medium\(column\:grid\)-1 {
+  .md\.gridColumns-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-2 {
+  .md\.gridColumns-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-3 {
+  .md\.gridColumns-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-4 {
+  .md\.gridColumns-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-5 {
+  .md\.gridColumns-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-6 {
+  .md\.gridColumns-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-7 {
+  .md\.gridColumns-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-8 {
+  .md\.gridColumns-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-9 {
+  .md\.gridColumns-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-10 {
+  .md\.gridColumns-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-11 {
+  .md\.gridColumns-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-12 {
+  .md\.gridColumns-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-  .medium\(column\:grid\)-none {
+  .md\.gridColumns-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .medium\(grid-columns\)-1 {
+  .md\.columns-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-2 {
+  .md\.columns-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-3 {
+  .md\.columns-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-4 {
+  .md\.columns-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-5 {
+  .md\.columns-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-6 {
+  .md\.columns-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-7 {
+  .md\.columns-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-8 {
+  .md\.columns-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-9 {
+  .md\.columns-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-10 {
+  .md\.columns-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-11 {
+  .md\.columns-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-12 {
+  .md\.columns-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .medium\(grid-columns\)-none {
+  .md\.columns-none {
     grid-template-columns: none;
   }
 
-  .medium\(auto\:grid-columns\) {
+  .md\.columnsAuto {
     grid-auto-columns: auto;
   }
 
-  .medium\(min\:grid-columns\) {
+  .md\.columnsMin {
     grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
-  .medium\(max\:grid-columns\) {
+  .md\.columnsMax {
     grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
-  .medium\(fr\:grid-columns\) {
+  .md\.columnsFr {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .medium\(flow\:grid-columns\) {
+  .md\.columnsFlow {
     grid-auto-flow: column;
   }
 
-  .medium\(dense\:grid-columns\) {
+  .md\.columnsDense {
     grid-auto-flow: column dense;
   }
 
-  .medium\(row\:grid\)-1 {
+  .md\.gridRows-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-2 {
+  .md\.gridRows-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-3 {
+  .md\.gridRows-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-4 {
+  .md\.gridRows-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-5 {
+  .md\.gridRows-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-6 {
+  .md\.gridRows-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-7 {
+  .md\.gridRows-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-8 {
+  .md\.gridRows-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-9 {
+  .md\.gridRows-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-10 {
+  .md\.gridRows-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-11 {
+  .md\.gridRows-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-12 {
+  .md\.gridRows-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .medium\(row\:grid\)-none {
+  .md\.gridRows-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .medium\(grid-rows\)-1 {
+  .md\.rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-2 {
+  .md\.rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-3 {
+  .md\.rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-4 {
+  .md\.rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-5 {
+  .md\.rows-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-6 {
+  .md\.rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-7 {
+  .md\.rows-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-8 {
+  .md\.rows-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-9 {
+  .md\.rows-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-10 {
+  .md\.rows-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-11 {
+  .md\.rows-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-12 {
+  .md\.rows-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .medium\(grid-rows\)-none {
+  .md\.rows-none {
     grid-template-rows: none;
   }
 
-  .medium\(auto\:grid-rows\) {
+  .md\.rowsAuto {
     grid-auto-rows: auto;
   }
 
-  .medium\(min\:grid-rows\) {
+  .md\.rowsMin {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
-  .medium\(max\:grid-rows\) {
+  .md\.rowsMax {
     grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
-  .medium\(fr\:grid-rows\) {
+  .md\.rowsFr {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .medium\(flow\:grid-rows\) {
+  .md\.rowsFlow {
     grid-auto-flow: row;
   }
 
-  .medium\(dense\:grid-rows\) {
+  .md\.rowsDense {
     grid-auto-flow: row dense;
   }
 
-  .medium\(colspan\)-auto {
+  .md\.column-auto {
     grid-column: auto;
   }
 
-  .medium\(colspan\)-1 {
+  .md\.column-1 {
     grid-column: span 1 / span 1;
   }
 
-  .medium\(colspan\)-2 {
+  .md\.column-2 {
     grid-column: span 2 / span 2;
   }
 
-  .medium\(colspan\)-3 {
+  .md\.column-3 {
     grid-column: span 3 / span 3;
   }
 
-  .medium\(colspan\)-4 {
+  .md\.column-4 {
     grid-column: span 4 / span 4;
   }
 
-  .medium\(colspan\)-5 {
+  .md\.column-5 {
     grid-column: span 5 / span 5;
   }
 
-  .medium\(colspan\)-6 {
+  .md\.column-6 {
     grid-column: span 6 / span 6;
   }
 
-  .medium\(colspan\)-7 {
+  .md\.column-7 {
     grid-column: span 7 / span 7;
   }
 
-  .medium\(colspan\)-8 {
+  .md\.column-8 {
     grid-column: span 8 / span 8;
   }
 
-  .medium\(colspan\)-9 {
+  .md\.column-9 {
     grid-column: span 9 / span 9;
   }
 
-  .medium\(colspan\)-10 {
+  .md\.column-10 {
     grid-column: span 10 / span 10;
   }
 
-  .medium\(colspan\)-11 {
+  .md\.column-11 {
     grid-column: span 11 / span 11;
   }
 
-  .medium\(colspan\)-12 {
+  .md\.column-12 {
     grid-column: span 12 / span 12;
   }
 
-  .medium\(colspan\)-full {
+  .md\.column-full {
     grid-column: 1 / -1;
   }
 
-  .medium\(start\:colspan\)-auto {
+  .md\.columnStart-auto {
     grid-column-start: auto;
   }
 
-  .medium\(start\:colspan\)-1 {
+  .md\.columnStart-1 {
     grid-column-start: 1;
   }
 
-  .medium\(start\:colspan\)-2 {
+  .md\.columnStart-2 {
     grid-column-start: 2;
   }
 
-  .medium\(start\:colspan\)-3 {
+  .md\.columnStart-3 {
     grid-column-start: 3;
   }
 
-  .medium\(start\:colspan\)-4 {
+  .md\.columnStart-4 {
     grid-column-start: 4;
   }
 
-  .medium\(start\:colspan\)-5 {
+  .md\.columnStart-5 {
     grid-column-start: 5;
   }
 
-  .medium\(start\:colspan\)-6 {
+  .md\.columnStart-6 {
     grid-column-start: 6;
   }
 
-  .medium\(start\:colspan\)-7 {
+  .md\.columnStart-7 {
     grid-column-start: 7;
   }
 
-  .medium\(start\:colspan\)-8 {
+  .md\.columnStart-8 {
     grid-column-start: 8;
   }
 
-  .medium\(start\:colspan\)-9 {
+  .md\.columnStart-9 {
     grid-column-start: 9;
   }
 
-  .medium\(start\:colspan\)-10 {
+  .md\.columnStart-10 {
     grid-column-start: 10;
   }
 
-  .medium\(start\:colspan\)-11 {
+  .md\.columnStart-11 {
     grid-column-start: 11;
   }
 
-  .medium\(start\:colspan\)-12 {
+  .md\.columnStart-12 {
     grid-column-start: 12;
   }
 
-  .medium\(start\:colspan\)-13 {
+  .md\.columnStart-13 {
     grid-column-start: 13;
   }
 
-  .medium\(end\:colspan\)-auto {
+  .md\.columnEnd-auto {
     grid-column-end: auto;
   }
 
-  .medium\(end\:colspan\)-1 {
+  .md\.columnEnd-1 {
     grid-column-end: 1;
   }
 
-  .medium\(end\:colspan\)-2 {
+  .md\.columnEnd-2 {
     grid-column-end: 2;
   }
 
-  .medium\(end\:colspan\)-3 {
+  .md\.columnEnd-3 {
     grid-column-end: 3;
   }
 
-  .medium\(end\:colspan\)-4 {
+  .md\.columnEnd-4 {
     grid-column-end: 4;
   }
 
-  .medium\(end\:colspan\)-5 {
+  .md\.columnEnd-5 {
     grid-column-end: 5;
   }
 
-  .medium\(end\:colspan\)-6 {
+  .md\.columnEnd-6 {
     grid-column-end: 6;
   }
 
-  .medium\(end\:colspan\)-7 {
+  .md\.columnEnd-7 {
     grid-column-end: 7;
   }
 
-  .medium\(end\:colspan\)-8 {
+  .md\.columnEnd-8 {
     grid-column-end: 8;
   }
 
-  .medium\(end\:colspan\)-9 {
+  .md\.columnEnd-9 {
     grid-column-end: 9;
   }
 
-  .medium\(end\:colspan\)-10 {
+  .md\.columnEnd-10 {
     grid-column-end: 10;
   }
 
-  .medium\(end\:colspan\)-11 {
+  .md\.columnEnd-11 {
     grid-column-end: 11;
   }
 
-  .medium\(end\:colspan\)-12 {
+  .md\.columnEnd-12 {
     grid-column-end: 12;
   }
 
-  .medium\(end\:colspan\)-13 {
+  .md\.columnEnd-13 {
     grid-column-end: 13;
   }
 
-  .medium\(rowspan\)-auto {
+  .md\.row-auto {
     grid-row: auto;
   }
 
-  .medium\(rowspan\)-1 {
+  .md\.row-1 {
     grid-row: span 1 / span 1;
   }
 
-  .medium\(rowspan\)-2 {
+  .md\.row-2 {
     grid-row: span 2 / span 2;
   }
 
-  .medium\(rowspan\)-3 {
+  .md\.row-3 {
     grid-row: span 3 / span 3;
   }
 
-  .medium\(rowspan\)-4 {
+  .md\.row-4 {
     grid-row: span 4 / span 4;
   }
 
-  .medium\(rowspan\)-5 {
+  .md\.row-5 {
     grid-row: span 5 / span 5;
   }
 
-  .medium\(rowspan\)-6 {
+  .md\.row-6 {
     grid-row: span 6 / span 6;
   }
 
-  .medium\(rowspan\)-7 {
+  .md\.row-7 {
     grid-row: span 7 / span 7;
   }
 
-  .medium\(rowspan\)-8 {
+  .md\.row-8 {
     grid-row: span 8 / span 8;
   }
 
-  .medium\(rowspan\)-9 {
+  .md\.row-9 {
     grid-row: span 9 / span 9;
   }
 
-  .medium\(rowspan\)-10 {
+  .md\.row-10 {
     grid-row: span 10 / span 10;
   }
 
-  .medium\(rowspan\)-11 {
+  .md\.row-11 {
     grid-row: span 11 / span 11;
   }
 
-  .medium\(rowspan\)-12 {
+  .md\.row-12 {
     grid-row: span 12 / span 12;
   }
 
-  .medium\(rowspan\)-full {
+  .md\.row-full {
     grid-row: 1 / -1;
   }
 
-  .medium\(start\:rowspan\)-auto {
+  .md\.rowStart-auto {
     grid-row-start: auto;
   }
 
-  .medium\(start\:rowspan\)-1 {
+  .md\.rowStart-1 {
     grid-row-start: 1;
   }
 
-  .medium\(start\:rowspan\)-2 {
+  .md\.rowStart-2 {
     grid-row-start: 2;
   }
 
-  .medium\(start\:rowspan\)-3 {
+  .md\.rowStart-3 {
     grid-row-start: 3;
   }
 
-  .medium\(start\:rowspan\)-4 {
+  .md\.rowStart-4 {
     grid-row-start: 4;
   }
 
-  .medium\(start\:rowspan\)-5 {
+  .md\.rowStart-5 {
     grid-row-start: 5;
   }
 
-  .medium\(start\:rowspan\)-6 {
+  .md\.rowStart-6 {
     grid-row-start: 6;
   }
 
-  .medium\(start\:rowspan\)-7 {
+  .md\.rowStart-7 {
     grid-row-start: 7;
   }
 
-  .medium\(start\:rowspan\)-8 {
+  .md\.rowStart-8 {
     grid-row-start: 8;
   }
 
-  .medium\(start\:rowspan\)-9 {
+  .md\.rowStart-9 {
     grid-row-start: 9;
   }
 
-  .medium\(start\:rowspan\)-10 {
+  .md\.rowStart-10 {
     grid-row-start: 10;
   }
 
-  .medium\(start\:rowspan\)-11 {
+  .md\.rowStart-11 {
     grid-row-start: 11;
   }
 
-  .medium\(start\:rowspan\)-12 {
+  .md\.rowStart-12 {
     grid-row-start: 12;
   }
 
-  .medium\(start\:rowspan\)-13 {
+  .md\.rowStart-13 {
     grid-row-start: 13;
   }
 
-  .medium\(end\:rowspan\)-auto {
+  .md\.rowEnd-auto {
     grid-row-end: auto;
   }
 
-  .medium\(end\:rowspan\)-1 {
+  .md\.rowEnd-1 {
     grid-row-end: 1;
   }
 
-  .medium\(end\:rowspan\)-2 {
+  .md\.rowEnd-2 {
     grid-row-end: 2;
   }
 
-  .medium\(end\:rowspan\)-3 {
+  .md\.rowEnd-3 {
     grid-row-end: 3;
   }
 
-  .medium\(end\:rowspan\)-4 {
+  .md\.rowEnd-4 {
     grid-row-end: 4;
   }
 
-  .medium\(end\:rowspan\)-5 {
+  .md\.rowEnd-5 {
     grid-row-end: 5;
   }
 
-  .medium\(end\:rowspan\)-6 {
+  .md\.rowEnd-6 {
     grid-row-end: 6;
   }
 
-  .medium\(end\:rowspan\)-7 {
+  .md\.rowEnd-7 {
     grid-row-end: 7;
   }
 
-  .medium\(end\:rowspan\)-8 {
+  .md\.rowEnd-8 {
     grid-row-end: 8;
   }
 
-  .medium\(end\:rowspan\)-9 {
+  .md\.rowEnd-9 {
     grid-row-end: 9;
   }
 
-  .medium\(end\:rowspan\)-10 {
+  .md\.rowEnd-10 {
     grid-row-end: 10;
   }
 
-  .medium\(end\:rowspan\)-11 {
+  .md\.rowEnd-11 {
     grid-row-end: 11;
   }
 
-  .medium\(end\:rowspan\)-12 {
+  .md\.rowEnd-12 {
     grid-row-end: 12;
   }
 
-  .medium\(end\:rowspan\)-13 {
+  .md\.rowEnd-13 {
     grid-row-end: 13;
   }
 
-  .medium\(gap\)-0 {
+  .md\.gap-0 {
     gap: 0px;
   }
 
-  .medium\(gap\)-1 {
+  .md\.gap-1 {
     gap: 0.125rem;
   }
 
-  .medium\(gap\)-2 {
+  .md\.gap-2 {
     gap: 0.25rem;
   }
 
-  .medium\(gap\)-3 {
+  .md\.gap-3 {
     gap: 0.375rem;
   }
 
-  .medium\(gap\)-4 {
+  .md\.gap-4 {
     gap: 0.5rem;
   }
 
-  .medium\(gap\)-5 {
+  .md\.gap-5 {
     gap: 0.625rem;
   }
 
-  .medium\(gap\)-6 {
+  .md\.gap-6 {
     gap: 0.75rem;
   }
 
-  .medium\(gap\)-7 {
+  .md\.gap-7 {
     gap: 0.875rem;
   }
 
-  .medium\(gap\)-8 {
+  .md\.gap-8 {
     gap: 1rem;
   }
 
-  .medium\(gap\)-9 {
+  .md\.gap-9 {
     gap: 1.25rem;
   }
 
-  .medium\(gap\)-10 {
+  .md\.gap-10 {
     gap: 1.5rem;
   }
 
-  .medium\(gap\)-11 {
+  .md\.gap-11 {
     gap: 1.75rem;
   }
 
-  .medium\(gap\)-12 {
+  .md\.gap-12 {
     gap: 2rem;
   }
 
-  .medium\(gap\)-13 {
+  .md\.gap-13 {
     gap: 2.25rem;
   }
 
-  .medium\(gap\)-14 {
+  .md\.gap-14 {
     gap: 2.5rem;
   }
 
-  .medium\(gap\)-15 {
+  .md\.gap-15 {
     gap: 2.75rem;
   }
 
-  .medium\(gap\)-15 {
+  .md\.gap-15 {
     gap: 3rem;
   }
 
-  .medium\(gap\)-16 {
+  .md\.gap-16 {
     gap: 3.25rem;
   }
 
-  .medium\(gap\)-17 {
+  .md\.gap-17 {
     gap: 3.5rem;
   }
 
-  .medium\(gap\)-18 {
+  .md\.gap-18 {
     gap: 3.75rem;
   }
 
-  .medium\(gap\)-19 {
+  .md\.gap-19 {
     gap: 4rem;
   }
 
-  .medium\(gap\)-20 {
+  .md\.gap-20 {
     gap: 4.25rem;
   }
 
-  .medium\(column\:gap\)-0 {
+  .md\.gapColumn-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
   }
 
-  .medium\(column\:gap\)-1 {
+  .md\.gapColumn-1 {
     -moz-column-gap: 0.125rem;
          column-gap: 0.125rem;
   }
 
-  .medium\(column\:gap\)-2 {
+  .md\.gapColumn-2 {
     -moz-column-gap: 0.25rem;
          column-gap: 0.25rem;
   }
 
-  .medium\(column\:gap\)-3 {
+  .md\.gapColumn-3 {
     -moz-column-gap: 0.375rem;
          column-gap: 0.375rem;
   }
 
-  .medium\(column\:gap\)-4 {
+  .md\.gapColumn-4 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
 
-  .medium\(column\:gap\)-5 {
+  .md\.gapColumn-5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
   }
 
-  .medium\(column\:gap\)-6 {
+  .md\.gapColumn-6 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
   }
 
-  .medium\(column\:gap\)-7 {
+  .md\.gapColumn-7 {
     -moz-column-gap: 0.875rem;
          column-gap: 0.875rem;
   }
 
-  .medium\(column\:gap\)-8 {
+  .md\.gapColumn-8 {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 
-  .medium\(column\:gap\)-9 {
+  .md\.gapColumn-9 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
 
-  .medium\(column\:gap\)-10 {
+  .md\.gapColumn-10 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
 
-  .medium\(column\:gap\)-11 {
+  .md\.gapColumn-11 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
   }
 
-  .medium\(column\:gap\)-12 {
+  .md\.gapColumn-12 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
 
-  .medium\(column\:gap\)-13 {
+  .md\.gapColumn-13 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
   }
 
-  .medium\(column\:gap\)-14 {
+  .md\.gapColumn-14 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
 
-  .medium\(column\:gap\)-15 {
+  .md\.gapColumn-15 {
     -moz-column-gap: 2.75rem;
          column-gap: 2.75rem;
   }
 
-  .medium\(column\:gap\)-15 {
+  .md\.gapColumn-15 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
   }
 
-  .medium\(column\:gap\)-16 {
+  .md\.gapColumn-16 {
     -moz-column-gap: 3.25rem;
          column-gap: 3.25rem;
   }
 
-  .medium\(column\:gap\)-17 {
+  .md\.gapColumn-17 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
   }
 
-  .medium\(column\:gap\)-18 {
+  .md\.gapColumn-18 {
     -moz-column-gap: 3.75rem;
          column-gap: 3.75rem;
   }
 
-  .medium\(column\:gap\)-19 {
+  .md\.gapColumn-19 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
   }
 
-  .medium\(column\:gap\)-20 {
+  .md\.gapColumn-20 {
     -moz-column-gap: 4.25rem;
          column-gap: 4.25rem;
   }
 
-  .medium\(row\:gap\)-0 {
+  .md\.gapRow-0 {
     row-gap: 0px;
   }
 
-  .medium\(row\:gap\)-1 {
+  .md\.gapRow-1 {
     row-gap: 0.125rem;
   }
 
-  .medium\(row\:gap\)-2 {
+  .md\.gapRow-2 {
     row-gap: 0.25rem;
   }
 
-  .medium\(row\:gap\)-3 {
+  .md\.gapRow-3 {
     row-gap: 0.375rem;
   }
 
-  .medium\(row\:gap\)-4 {
+  .md\.gapRow-4 {
     row-gap: 0.5rem;
   }
 
-  .medium\(row\:gap\)-5 {
+  .md\.gapRow-5 {
     row-gap: 0.625rem;
   }
 
-  .medium\(row\:gap\)-6 {
+  .md\.gapRow-6 {
     row-gap: 0.75rem;
   }
 
-  .medium\(row\:gap\)-7 {
+  .md\.gapRow-7 {
     row-gap: 0.875rem;
   }
 
-  .medium\(row\:gap\)-8 {
+  .md\.gapRow-8 {
     row-gap: 1rem;
   }
 
-  .medium\(row\:gap\)-9 {
+  .md\.gapRow-9 {
     row-gap: 1.25rem;
   }
 
-  .medium\(row\:gap\)-10 {
+  .md\.gapRow-10 {
     row-gap: 1.5rem;
   }
 
-  .medium\(row\:gap\)-11 {
+  .md\.gapRow-11 {
     row-gap: 1.75rem;
   }
 
-  .medium\(row\:gap\)-12 {
+  .md\.gapRow-12 {
     row-gap: 2rem;
   }
 
-  .medium\(row\:gap\)-13 {
+  .md\.gapRow-13 {
     row-gap: 2.25rem;
   }
 
-  .medium\(row\:gap\)-14 {
+  .md\.gapRow-14 {
     row-gap: 2.5rem;
   }
 
-  .medium\(row\:gap\)-15 {
+  .md\.gapRow-15 {
     row-gap: 2.75rem;
   }
 
-  .medium\(row\:gap\)-15 {
+  .md\.gapRow-15 {
     row-gap: 3rem;
   }
 
-  .medium\(row\:gap\)-16 {
+  .md\.gapRow-16 {
     row-gap: 3.25rem;
   }
 
-  .medium\(row\:gap\)-17 {
+  .md\.gapRow-17 {
     row-gap: 3.5rem;
   }
 
-  .medium\(row\:gap\)-18 {
+  .md\.gapRow-18 {
     row-gap: 3.75rem;
   }
 
-  .medium\(row\:gap\)-19 {
+  .md\.gapRow-19 {
     row-gap: 4rem;
   }
 
-  .medium\(row\:gap\)-20 {
+  .md\.gapRow-20 {
     row-gap: 4.25rem;
   }
 
-  .medium\(grid-items\) {
+  .md\.gridItems {
     justify-items: stretch;
   }
 
-  .medium\(stretch\:grid-items\) {
+  .md\.gridItemsStretch {
     justify-items: stretch;
   }
 
-  .medium\(center\:grid-items\) {
+  .md\.gridItemsCenter {
     justify-items: center;
   }
 
-  .medium\(start\:grid-items\) {
+  .md\.gridItemsStart {
     justify-items: start;
   }
 
-  .medium\(end\:grid-items\) {
+  .md\.gridItemsEnd {
     justify-items: end;
   }
 
-  .medium\(left\:grid-items\) {
+  .md\.gridItemsLeft {
     justify-items: left;
   }
 
-  .medium\(right\:grid-items\) {
+  .md\.gridItemsRight {
     justify-items: right;
   }
 
-  .medium\(baseline\:grid-items\) {
+  .md\.gridItemsBaseline {
     justify-items: baseline;
   }
 
-  .medium\(grid-self\) {
+  .md\.gridSelf {
     justify-self: stretch;
   }
 
-  .medium\(stretch\:grid-self\) {
+  .md\.gridSelfStretch {
     justify-self: stretch;
   }
 
-  .medium\(center\:grid-self\) {
+  .md\.gridSelfCenter {
     justify-self: center;
   }
 
-  .medium\(start\:grid-self\) {
+  .md\.gridSelfStart {
     justify-self: start;
   }
 
-  .medium\(end\:grid-self\) {
+  .md\.gridSelfEnd {
     justify-self: end;
   }
 
-  .medium\(left\:grid-self\) {
+  .md\.gridSelfLeft {
     justify-self: left;
   }
 
-  .medium\(right\:grid-self\) {
+  .md\.gridSelfRight {
     justify-self: right;
   }
 
-  .medium\(baseline\:grid-self\) {
+  .md\.gridSelfBaseline {
     justify-self: baseline;
   }
 }
 
 @media (min-width: 1280px) {
-  .large\(column\:grid\)-1 {
+  .lg\.gridColumns-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-2 {
+  .lg\.gridColumns-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-3 {
+  .lg\.gridColumns-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-4 {
+  .lg\.gridColumns-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-5 {
+  .lg\.gridColumns-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-6 {
+  .lg\.gridColumns-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-7 {
+  .lg\.gridColumns-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-8 {
+  .lg\.gridColumns-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-9 {
+  .lg\.gridColumns-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-10 {
+  .lg\.gridColumns-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-11 {
+  .lg\.gridColumns-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-12 {
+  .lg\.gridColumns-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-  .large\(column\:grid\)-none {
+  .lg\.gridColumns-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .large\(grid-columns\)-1 {
+  .lg\.columns-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-2 {
+  .lg\.columns-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-3 {
+  .lg\.columns-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-4 {
+  .lg\.columns-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-5 {
+  .lg\.columns-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-6 {
+  .lg\.columns-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-7 {
+  .lg\.columns-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-8 {
+  .lg\.columns-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-9 {
+  .lg\.columns-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-10 {
+  .lg\.columns-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-11 {
+  .lg\.columns-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-12 {
+  .lg\.columns-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .large\(grid-columns\)-none {
+  .lg\.columns-none {
     grid-template-columns: none;
   }
 
-  .large\(auto\:grid-columns\) {
+  .lg\.columnsAuto {
     grid-auto-columns: auto;
   }
 
-  .large\(min\:grid-columns\) {
+  .lg\.columnsMin {
     grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
-  .large\(max\:grid-columns\) {
+  .lg\.columnsMax {
     grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
-  .large\(fr\:grid-columns\) {
+  .lg\.columnsFr {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .large\(flow\:grid-columns\) {
+  .lg\.columnsFlow {
     grid-auto-flow: column;
   }
 
-  .large\(dense\:grid-columns\) {
+  .lg\.columnsDense {
     grid-auto-flow: column dense;
   }
 
-  .large\(row\:grid\)-1 {
+  .lg\.gridRows-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-2 {
+  .lg\.gridRows-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-3 {
+  .lg\.gridRows-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-4 {
+  .lg\.gridRows-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-5 {
+  .lg\.gridRows-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-6 {
+  .lg\.gridRows-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-7 {
+  .lg\.gridRows-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-8 {
+  .lg\.gridRows-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-9 {
+  .lg\.gridRows-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-10 {
+  .lg\.gridRows-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-11 {
+  .lg\.gridRows-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-12 {
+  .lg\.gridRows-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .large\(row\:grid\)-none {
+  .lg\.gridRows-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .large\(grid-rows\)-1 {
+  .lg\.rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-2 {
+  .lg\.rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-3 {
+  .lg\.rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-4 {
+  .lg\.rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-5 {
+  .lg\.rows-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-6 {
+  .lg\.rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-7 {
+  .lg\.rows-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-8 {
+  .lg\.rows-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-9 {
+  .lg\.rows-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-10 {
+  .lg\.rows-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-11 {
+  .lg\.rows-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-12 {
+  .lg\.rows-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .large\(grid-rows\)-none {
+  .lg\.rows-none {
     grid-template-rows: none;
   }
 
-  .large\(auto\:grid-rows\) {
+  .lg\.rowsAuto {
     grid-auto-rows: auto;
   }
 
-  .large\(min\:grid-rows\) {
+  .lg\.rowsMin {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
-  .large\(max\:grid-rows\) {
+  .lg\.rowsMax {
     grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
-  .large\(fr\:grid-rows\) {
+  .lg\.rowsFr {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .large\(flow\:grid-rows\) {
+  .lg\.rowsFlow {
     grid-auto-flow: row;
   }
 
-  .large\(dense\:grid-rows\) {
+  .lg\.rowsDense {
     grid-auto-flow: row dense;
   }
 
-  .large\(colspan\)-auto {
+  .lg\.column-auto {
     grid-column: auto;
   }
 
-  .large\(colspan\)-1 {
+  .lg\.column-1 {
     grid-column: span 1 / span 1;
   }
 
-  .large\(colspan\)-2 {
+  .lg\.column-2 {
     grid-column: span 2 / span 2;
   }
 
-  .large\(colspan\)-3 {
+  .lg\.column-3 {
     grid-column: span 3 / span 3;
   }
 
-  .large\(colspan\)-4 {
+  .lg\.column-4 {
     grid-column: span 4 / span 4;
   }
 
-  .large\(colspan\)-5 {
+  .lg\.column-5 {
     grid-column: span 5 / span 5;
   }
 
-  .large\(colspan\)-6 {
+  .lg\.column-6 {
     grid-column: span 6 / span 6;
   }
 
-  .large\(colspan\)-7 {
+  .lg\.column-7 {
     grid-column: span 7 / span 7;
   }
 
-  .large\(colspan\)-8 {
+  .lg\.column-8 {
     grid-column: span 8 / span 8;
   }
 
-  .large\(colspan\)-9 {
+  .lg\.column-9 {
     grid-column: span 9 / span 9;
   }
 
-  .large\(colspan\)-10 {
+  .lg\.column-10 {
     grid-column: span 10 / span 10;
   }
 
-  .large\(colspan\)-11 {
+  .lg\.column-11 {
     grid-column: span 11 / span 11;
   }
 
-  .large\(colspan\)-12 {
+  .lg\.column-12 {
     grid-column: span 12 / span 12;
   }
 
-  .large\(colspan\)-full {
+  .lg\.column-full {
     grid-column: 1 / -1;
   }
 
-  .large\(start\:colspan\)-auto {
+  .lg\.columnStart-auto {
     grid-column-start: auto;
   }
 
-  .large\(start\:colspan\)-1 {
+  .lg\.columnStart-1 {
     grid-column-start: 1;
   }
 
-  .large\(start\:colspan\)-2 {
+  .lg\.columnStart-2 {
     grid-column-start: 2;
   }
 
-  .large\(start\:colspan\)-3 {
+  .lg\.columnStart-3 {
     grid-column-start: 3;
   }
 
-  .large\(start\:colspan\)-4 {
+  .lg\.columnStart-4 {
     grid-column-start: 4;
   }
 
-  .large\(start\:colspan\)-5 {
+  .lg\.columnStart-5 {
     grid-column-start: 5;
   }
 
-  .large\(start\:colspan\)-6 {
+  .lg\.columnStart-6 {
     grid-column-start: 6;
   }
 
-  .large\(start\:colspan\)-7 {
+  .lg\.columnStart-7 {
     grid-column-start: 7;
   }
 
-  .large\(start\:colspan\)-8 {
+  .lg\.columnStart-8 {
     grid-column-start: 8;
   }
 
-  .large\(start\:colspan\)-9 {
+  .lg\.columnStart-9 {
     grid-column-start: 9;
   }
 
-  .large\(start\:colspan\)-10 {
+  .lg\.columnStart-10 {
     grid-column-start: 10;
   }
 
-  .large\(start\:colspan\)-11 {
+  .lg\.columnStart-11 {
     grid-column-start: 11;
   }
 
-  .large\(start\:colspan\)-12 {
+  .lg\.columnStart-12 {
     grid-column-start: 12;
   }
 
-  .large\(start\:colspan\)-13 {
+  .lg\.columnStart-13 {
     grid-column-start: 13;
   }
 
-  .large\(end\:colspan\)-auto {
+  .lg\.columnEnd-auto {
     grid-column-end: auto;
   }
 
-  .large\(end\:colspan\)-1 {
+  .lg\.columnEnd-1 {
     grid-column-end: 1;
   }
 
-  .large\(end\:colspan\)-2 {
+  .lg\.columnEnd-2 {
     grid-column-end: 2;
   }
 
-  .large\(end\:colspan\)-3 {
+  .lg\.columnEnd-3 {
     grid-column-end: 3;
   }
 
-  .large\(end\:colspan\)-4 {
+  .lg\.columnEnd-4 {
     grid-column-end: 4;
   }
 
-  .large\(end\:colspan\)-5 {
+  .lg\.columnEnd-5 {
     grid-column-end: 5;
   }
 
-  .large\(end\:colspan\)-6 {
+  .lg\.columnEnd-6 {
     grid-column-end: 6;
   }
 
-  .large\(end\:colspan\)-7 {
+  .lg\.columnEnd-7 {
     grid-column-end: 7;
   }
 
-  .large\(end\:colspan\)-8 {
+  .lg\.columnEnd-8 {
     grid-column-end: 8;
   }
 
-  .large\(end\:colspan\)-9 {
+  .lg\.columnEnd-9 {
     grid-column-end: 9;
   }
 
-  .large\(end\:colspan\)-10 {
+  .lg\.columnEnd-10 {
     grid-column-end: 10;
   }
 
-  .large\(end\:colspan\)-11 {
+  .lg\.columnEnd-11 {
     grid-column-end: 11;
   }
 
-  .large\(end\:colspan\)-12 {
+  .lg\.columnEnd-12 {
     grid-column-end: 12;
   }
 
-  .large\(end\:colspan\)-13 {
+  .lg\.columnEnd-13 {
     grid-column-end: 13;
   }
 
-  .large\(rowspan\)-auto {
+  .lg\.row-auto {
     grid-row: auto;
   }
 
-  .large\(rowspan\)-1 {
+  .lg\.row-1 {
     grid-row: span 1 / span 1;
   }
 
-  .large\(rowspan\)-2 {
+  .lg\.row-2 {
     grid-row: span 2 / span 2;
   }
 
-  .large\(rowspan\)-3 {
+  .lg\.row-3 {
     grid-row: span 3 / span 3;
   }
 
-  .large\(rowspan\)-4 {
+  .lg\.row-4 {
     grid-row: span 4 / span 4;
   }
 
-  .large\(rowspan\)-5 {
+  .lg\.row-5 {
     grid-row: span 5 / span 5;
   }
 
-  .large\(rowspan\)-6 {
+  .lg\.row-6 {
     grid-row: span 6 / span 6;
   }
 
-  .large\(rowspan\)-7 {
+  .lg\.row-7 {
     grid-row: span 7 / span 7;
   }
 
-  .large\(rowspan\)-8 {
+  .lg\.row-8 {
     grid-row: span 8 / span 8;
   }
 
-  .large\(rowspan\)-9 {
+  .lg\.row-9 {
     grid-row: span 9 / span 9;
   }
 
-  .large\(rowspan\)-10 {
+  .lg\.row-10 {
     grid-row: span 10 / span 10;
   }
 
-  .large\(rowspan\)-11 {
+  .lg\.row-11 {
     grid-row: span 11 / span 11;
   }
 
-  .large\(rowspan\)-12 {
+  .lg\.row-12 {
     grid-row: span 12 / span 12;
   }
 
-  .large\(rowspan\)-full {
+  .lg\.row-full {
     grid-row: 1 / -1;
   }
 
-  .large\(start\:rowspan\)-auto {
+  .lg\.rowStart-auto {
     grid-row-start: auto;
   }
 
-  .large\(start\:rowspan\)-1 {
+  .lg\.rowStart-1 {
     grid-row-start: 1;
   }
 
-  .large\(start\:rowspan\)-2 {
+  .lg\.rowStart-2 {
     grid-row-start: 2;
   }
 
-  .large\(start\:rowspan\)-3 {
+  .lg\.rowStart-3 {
     grid-row-start: 3;
   }
 
-  .large\(start\:rowspan\)-4 {
+  .lg\.rowStart-4 {
     grid-row-start: 4;
   }
 
-  .large\(start\:rowspan\)-5 {
+  .lg\.rowStart-5 {
     grid-row-start: 5;
   }
 
-  .large\(start\:rowspan\)-6 {
+  .lg\.rowStart-6 {
     grid-row-start: 6;
   }
 
-  .large\(start\:rowspan\)-7 {
+  .lg\.rowStart-7 {
     grid-row-start: 7;
   }
 
-  .large\(start\:rowspan\)-8 {
+  .lg\.rowStart-8 {
     grid-row-start: 8;
   }
 
-  .large\(start\:rowspan\)-9 {
+  .lg\.rowStart-9 {
     grid-row-start: 9;
   }
 
-  .large\(start\:rowspan\)-10 {
+  .lg\.rowStart-10 {
     grid-row-start: 10;
   }
 
-  .large\(start\:rowspan\)-11 {
+  .lg\.rowStart-11 {
     grid-row-start: 11;
   }
 
-  .large\(start\:rowspan\)-12 {
+  .lg\.rowStart-12 {
     grid-row-start: 12;
   }
 
-  .large\(start\:rowspan\)-13 {
+  .lg\.rowStart-13 {
     grid-row-start: 13;
   }
 
-  .large\(end\:rowspan\)-auto {
+  .lg\.rowEnd-auto {
     grid-row-end: auto;
   }
 
-  .large\(end\:rowspan\)-1 {
+  .lg\.rowEnd-1 {
     grid-row-end: 1;
   }
 
-  .large\(end\:rowspan\)-2 {
+  .lg\.rowEnd-2 {
     grid-row-end: 2;
   }
 
-  .large\(end\:rowspan\)-3 {
+  .lg\.rowEnd-3 {
     grid-row-end: 3;
   }
 
-  .large\(end\:rowspan\)-4 {
+  .lg\.rowEnd-4 {
     grid-row-end: 4;
   }
 
-  .large\(end\:rowspan\)-5 {
+  .lg\.rowEnd-5 {
     grid-row-end: 5;
   }
 
-  .large\(end\:rowspan\)-6 {
+  .lg\.rowEnd-6 {
     grid-row-end: 6;
   }
 
-  .large\(end\:rowspan\)-7 {
+  .lg\.rowEnd-7 {
     grid-row-end: 7;
   }
 
-  .large\(end\:rowspan\)-8 {
+  .lg\.rowEnd-8 {
     grid-row-end: 8;
   }
 
-  .large\(end\:rowspan\)-9 {
+  .lg\.rowEnd-9 {
     grid-row-end: 9;
   }
 
-  .large\(end\:rowspan\)-10 {
+  .lg\.rowEnd-10 {
     grid-row-end: 10;
   }
 
-  .large\(end\:rowspan\)-11 {
+  .lg\.rowEnd-11 {
     grid-row-end: 11;
   }
 
-  .large\(end\:rowspan\)-12 {
+  .lg\.rowEnd-12 {
     grid-row-end: 12;
   }
 
-  .large\(end\:rowspan\)-13 {
+  .lg\.rowEnd-13 {
     grid-row-end: 13;
   }
 
-  .large\(gap\)-0 {
+  .lg\.gap-0 {
     gap: 0px;
   }
 
-  .large\(gap\)-1 {
+  .lg\.gap-1 {
     gap: 0.125rem;
   }
 
-  .large\(gap\)-2 {
+  .lg\.gap-2 {
     gap: 0.25rem;
   }
 
-  .large\(gap\)-3 {
+  .lg\.gap-3 {
     gap: 0.375rem;
   }
 
-  .large\(gap\)-4 {
+  .lg\.gap-4 {
     gap: 0.5rem;
   }
 
-  .large\(gap\)-5 {
+  .lg\.gap-5 {
     gap: 0.625rem;
   }
 
-  .large\(gap\)-6 {
+  .lg\.gap-6 {
     gap: 0.75rem;
   }
 
-  .large\(gap\)-7 {
+  .lg\.gap-7 {
     gap: 0.875rem;
   }
 
-  .large\(gap\)-8 {
+  .lg\.gap-8 {
     gap: 1rem;
   }
 
-  .large\(gap\)-9 {
+  .lg\.gap-9 {
     gap: 1.25rem;
   }
 
-  .large\(gap\)-10 {
+  .lg\.gap-10 {
     gap: 1.5rem;
   }
 
-  .large\(gap\)-11 {
+  .lg\.gap-11 {
     gap: 1.75rem;
   }
 
-  .large\(gap\)-12 {
+  .lg\.gap-12 {
     gap: 2rem;
   }
 
-  .large\(gap\)-13 {
+  .lg\.gap-13 {
     gap: 2.25rem;
   }
 
-  .large\(gap\)-14 {
+  .lg\.gap-14 {
     gap: 2.5rem;
   }
 
-  .large\(gap\)-15 {
+  .lg\.gap-15 {
     gap: 2.75rem;
   }
 
-  .large\(gap\)-15 {
+  .lg\.gap-15 {
     gap: 3rem;
   }
 
-  .large\(gap\)-16 {
+  .lg\.gap-16 {
     gap: 3.25rem;
   }
 
-  .large\(gap\)-17 {
+  .lg\.gap-17 {
     gap: 3.5rem;
   }
 
-  .large\(gap\)-18 {
+  .lg\.gap-18 {
     gap: 3.75rem;
   }
 
-  .large\(gap\)-19 {
+  .lg\.gap-19 {
     gap: 4rem;
   }
 
-  .large\(gap\)-20 {
+  .lg\.gap-20 {
     gap: 4.25rem;
   }
 
-  .large\(column\:gap\)-0 {
+  .lg\.gapColumn-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
   }
 
-  .large\(column\:gap\)-1 {
+  .lg\.gapColumn-1 {
     -moz-column-gap: 0.125rem;
          column-gap: 0.125rem;
   }
 
-  .large\(column\:gap\)-2 {
+  .lg\.gapColumn-2 {
     -moz-column-gap: 0.25rem;
          column-gap: 0.25rem;
   }
 
-  .large\(column\:gap\)-3 {
+  .lg\.gapColumn-3 {
     -moz-column-gap: 0.375rem;
          column-gap: 0.375rem;
   }
 
-  .large\(column\:gap\)-4 {
+  .lg\.gapColumn-4 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
 
-  .large\(column\:gap\)-5 {
+  .lg\.gapColumn-5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
   }
 
-  .large\(column\:gap\)-6 {
+  .lg\.gapColumn-6 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
   }
 
-  .large\(column\:gap\)-7 {
+  .lg\.gapColumn-7 {
     -moz-column-gap: 0.875rem;
          column-gap: 0.875rem;
   }
 
-  .large\(column\:gap\)-8 {
+  .lg\.gapColumn-8 {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 
-  .large\(column\:gap\)-9 {
+  .lg\.gapColumn-9 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
 
-  .large\(column\:gap\)-10 {
+  .lg\.gapColumn-10 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
 
-  .large\(column\:gap\)-11 {
+  .lg\.gapColumn-11 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
   }
 
-  .large\(column\:gap\)-12 {
+  .lg\.gapColumn-12 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
 
-  .large\(column\:gap\)-13 {
+  .lg\.gapColumn-13 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
   }
 
-  .large\(column\:gap\)-14 {
+  .lg\.gapColumn-14 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
 
-  .large\(column\:gap\)-15 {
+  .lg\.gapColumn-15 {
     -moz-column-gap: 2.75rem;
          column-gap: 2.75rem;
   }
 
-  .large\(column\:gap\)-15 {
+  .lg\.gapColumn-15 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
   }
 
-  .large\(column\:gap\)-16 {
+  .lg\.gapColumn-16 {
     -moz-column-gap: 3.25rem;
          column-gap: 3.25rem;
   }
 
-  .large\(column\:gap\)-17 {
+  .lg\.gapColumn-17 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
   }
 
-  .large\(column\:gap\)-18 {
+  .lg\.gapColumn-18 {
     -moz-column-gap: 3.75rem;
          column-gap: 3.75rem;
   }
 
-  .large\(column\:gap\)-19 {
+  .lg\.gapColumn-19 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
   }
 
-  .large\(column\:gap\)-20 {
+  .lg\.gapColumn-20 {
     -moz-column-gap: 4.25rem;
          column-gap: 4.25rem;
   }
 
-  .large\(row\:gap\)-0 {
+  .lg\.gapRow-0 {
     row-gap: 0px;
   }
 
-  .large\(row\:gap\)-1 {
+  .lg\.gapRow-1 {
     row-gap: 0.125rem;
   }
 
-  .large\(row\:gap\)-2 {
+  .lg\.gapRow-2 {
     row-gap: 0.25rem;
   }
 
-  .large\(row\:gap\)-3 {
+  .lg\.gapRow-3 {
     row-gap: 0.375rem;
   }
 
-  .large\(row\:gap\)-4 {
+  .lg\.gapRow-4 {
     row-gap: 0.5rem;
   }
 
-  .large\(row\:gap\)-5 {
+  .lg\.gapRow-5 {
     row-gap: 0.625rem;
   }
 
-  .large\(row\:gap\)-6 {
+  .lg\.gapRow-6 {
     row-gap: 0.75rem;
   }
 
-  .large\(row\:gap\)-7 {
+  .lg\.gapRow-7 {
     row-gap: 0.875rem;
   }
 
-  .large\(row\:gap\)-8 {
+  .lg\.gapRow-8 {
     row-gap: 1rem;
   }
 
-  .large\(row\:gap\)-9 {
+  .lg\.gapRow-9 {
     row-gap: 1.25rem;
   }
 
-  .large\(row\:gap\)-10 {
+  .lg\.gapRow-10 {
     row-gap: 1.5rem;
   }
 
-  .large\(row\:gap\)-11 {
+  .lg\.gapRow-11 {
     row-gap: 1.75rem;
   }
 
-  .large\(row\:gap\)-12 {
+  .lg\.gapRow-12 {
     row-gap: 2rem;
   }
 
-  .large\(row\:gap\)-13 {
+  .lg\.gapRow-13 {
     row-gap: 2.25rem;
   }
 
-  .large\(row\:gap\)-14 {
+  .lg\.gapRow-14 {
     row-gap: 2.5rem;
   }
 
-  .large\(row\:gap\)-15 {
+  .lg\.gapRow-15 {
     row-gap: 2.75rem;
   }
 
-  .large\(row\:gap\)-15 {
+  .lg\.gapRow-15 {
     row-gap: 3rem;
   }
 
-  .large\(row\:gap\)-16 {
+  .lg\.gapRow-16 {
     row-gap: 3.25rem;
   }
 
-  .large\(row\:gap\)-17 {
+  .lg\.gapRow-17 {
     row-gap: 3.5rem;
   }
 
-  .large\(row\:gap\)-18 {
+  .lg\.gapRow-18 {
     row-gap: 3.75rem;
   }
 
-  .large\(row\:gap\)-19 {
+  .lg\.gapRow-19 {
     row-gap: 4rem;
   }
 
-  .large\(row\:gap\)-20 {
+  .lg\.gapRow-20 {
     row-gap: 4.25rem;
   }
 
-  .large\(grid-items\) {
+  .lg\.gridItems {
     justify-items: stretch;
   }
 
-  .large\(stretch\:grid-items\) {
+  .lg\.gridItemsStretch {
     justify-items: stretch;
   }
 
-  .large\(center\:grid-items\) {
+  .lg\.gridItemsCenter {
     justify-items: center;
   }
 
-  .large\(start\:grid-items\) {
+  .lg\.gridItemsStart {
     justify-items: start;
   }
 
-  .large\(end\:grid-items\) {
+  .lg\.gridItemsEnd {
     justify-items: end;
   }
 
-  .large\(left\:grid-items\) {
+  .lg\.gridItemsLeft {
     justify-items: left;
   }
 
-  .large\(right\:grid-items\) {
+  .lg\.gridItemsRight {
     justify-items: right;
   }
 
-  .large\(baseline\:grid-items\) {
+  .lg\.gridItemsBaseline {
     justify-items: baseline;
   }
 
-  .large\(grid-self\) {
+  .lg\.gridSelf {
     justify-self: stretch;
   }
 
-  .large\(stretch\:grid-self\) {
+  .lg\.gridSelfStretch {
     justify-self: stretch;
   }
 
-  .large\(center\:grid-self\) {
+  .lg\.gridSelfCenter {
     justify-self: center;
   }
 
-  .large\(start\:grid-self\) {
+  .lg\.gridSelfStart {
     justify-self: start;
   }
 
-  .large\(end\:grid-self\) {
+  .lg\.gridSelfEnd {
     justify-self: end;
   }
 
-  .large\(left\:grid-self\) {
+  .lg\.gridSelfLeft {
     justify-self: left;
   }
 
-  .large\(right\:grid-self\) {
+  .lg\.gridSelfRight {
     justify-self: right;
   }
 
-  .large\(baseline\:grid-self\) {
+  .lg\.gridSelfBaseline {
     justify-self: baseline;
   }
 }
 
 @media (min-width: 1536px) {
-  .larger\(column\:grid\)-1 {
+  .xl\.gridColumns-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-2 {
+  .xl\.gridColumns-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-3 {
+  .xl\.gridColumns-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-4 {
+  .xl\.gridColumns-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-5 {
+  .xl\.gridColumns-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-6 {
+  .xl\.gridColumns-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-7 {
+  .xl\.gridColumns-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-8 {
+  .xl\.gridColumns-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-9 {
+  .xl\.gridColumns-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-10 {
+  .xl\.gridColumns-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-11 {
+  .xl\.gridColumns-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-12 {
+  .xl\.gridColumns-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-  .larger\(column\:grid\)-none {
+  .xl\.gridColumns-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .larger\(grid-columns\)-1 {
+  .xl\.columns-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-2 {
+  .xl\.columns-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-3 {
+  .xl\.columns-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-4 {
+  .xl\.columns-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-5 {
+  .xl\.columns-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-6 {
+  .xl\.columns-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-7 {
+  .xl\.columns-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-8 {
+  .xl\.columns-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-9 {
+  .xl\.columns-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-10 {
+  .xl\.columns-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-11 {
+  .xl\.columns-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-12 {
+  .xl\.columns-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .larger\(grid-columns\)-none {
+  .xl\.columns-none {
     grid-template-columns: none;
   }
 
-  .larger\(auto\:grid-columns\) {
+  .xl\.columnsAuto {
     grid-auto-columns: auto;
   }
 
-  .larger\(min\:grid-columns\) {
+  .xl\.columnsMin {
     grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
-  .larger\(max\:grid-columns\) {
+  .xl\.columnsMax {
     grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
-  .larger\(fr\:grid-columns\) {
+  .xl\.columnsFr {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .larger\(flow\:grid-columns\) {
+  .xl\.columnsFlow {
     grid-auto-flow: column;
   }
 
-  .larger\(dense\:grid-columns\) {
+  .xl\.columnsDense {
     grid-auto-flow: column dense;
   }
 
-  .larger\(row\:grid\)-1 {
+  .xl\.gridRows-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-2 {
+  .xl\.gridRows-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-3 {
+  .xl\.gridRows-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-4 {
+  .xl\.gridRows-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-5 {
+  .xl\.gridRows-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-6 {
+  .xl\.gridRows-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-7 {
+  .xl\.gridRows-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-8 {
+  .xl\.gridRows-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-9 {
+  .xl\.gridRows-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-10 {
+  .xl\.gridRows-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-11 {
+  .xl\.gridRows-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-12 {
+  .xl\.gridRows-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .larger\(row\:grid\)-none {
+  .xl\.gridRows-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .larger\(grid-rows\)-1 {
+  .xl\.rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-2 {
+  .xl\.rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-3 {
+  .xl\.rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-4 {
+  .xl\.rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-5 {
+  .xl\.rows-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-6 {
+  .xl\.rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-7 {
+  .xl\.rows-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-8 {
+  .xl\.rows-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-9 {
+  .xl\.rows-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-10 {
+  .xl\.rows-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-11 {
+  .xl\.rows-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-12 {
+  .xl\.rows-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .larger\(grid-rows\)-none {
+  .xl\.rows-none {
     grid-template-rows: none;
   }
 
-  .larger\(auto\:grid-rows\) {
+  .xl\.rowsAuto {
     grid-auto-rows: auto;
   }
 
-  .larger\(min\:grid-rows\) {
+  .xl\.rowsMin {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
-  .larger\(max\:grid-rows\) {
+  .xl\.rowsMax {
     grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
-  .larger\(fr\:grid-rows\) {
+  .xl\.rowsFr {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .larger\(flow\:grid-rows\) {
+  .xl\.rowsFlow {
     grid-auto-flow: row;
   }
 
-  .larger\(dense\:grid-rows\) {
+  .xl\.rowsDense {
     grid-auto-flow: row dense;
   }
 
-  .larger\(colspan\)-auto {
+  .xl\.column-auto {
     grid-column: auto;
   }
 
-  .larger\(colspan\)-1 {
+  .xl\.column-1 {
     grid-column: span 1 / span 1;
   }
 
-  .larger\(colspan\)-2 {
+  .xl\.column-2 {
     grid-column: span 2 / span 2;
   }
 
-  .larger\(colspan\)-3 {
+  .xl\.column-3 {
     grid-column: span 3 / span 3;
   }
 
-  .larger\(colspan\)-4 {
+  .xl\.column-4 {
     grid-column: span 4 / span 4;
   }
 
-  .larger\(colspan\)-5 {
+  .xl\.column-5 {
     grid-column: span 5 / span 5;
   }
 
-  .larger\(colspan\)-6 {
+  .xl\.column-6 {
     grid-column: span 6 / span 6;
   }
 
-  .larger\(colspan\)-7 {
+  .xl\.column-7 {
     grid-column: span 7 / span 7;
   }
 
-  .larger\(colspan\)-8 {
+  .xl\.column-8 {
     grid-column: span 8 / span 8;
   }
 
-  .larger\(colspan\)-9 {
+  .xl\.column-9 {
     grid-column: span 9 / span 9;
   }
 
-  .larger\(colspan\)-10 {
+  .xl\.column-10 {
     grid-column: span 10 / span 10;
   }
 
-  .larger\(colspan\)-11 {
+  .xl\.column-11 {
     grid-column: span 11 / span 11;
   }
 
-  .larger\(colspan\)-12 {
+  .xl\.column-12 {
     grid-column: span 12 / span 12;
   }
 
-  .larger\(colspan\)-full {
+  .xl\.column-full {
     grid-column: 1 / -1;
   }
 
-  .larger\(start\:colspan\)-auto {
+  .xl\.columnStart-auto {
     grid-column-start: auto;
   }
 
-  .larger\(start\:colspan\)-1 {
+  .xl\.columnStart-1 {
     grid-column-start: 1;
   }
 
-  .larger\(start\:colspan\)-2 {
+  .xl\.columnStart-2 {
     grid-column-start: 2;
   }
 
-  .larger\(start\:colspan\)-3 {
+  .xl\.columnStart-3 {
     grid-column-start: 3;
   }
 
-  .larger\(start\:colspan\)-4 {
+  .xl\.columnStart-4 {
     grid-column-start: 4;
   }
 
-  .larger\(start\:colspan\)-5 {
+  .xl\.columnStart-5 {
     grid-column-start: 5;
   }
 
-  .larger\(start\:colspan\)-6 {
+  .xl\.columnStart-6 {
     grid-column-start: 6;
   }
 
-  .larger\(start\:colspan\)-7 {
+  .xl\.columnStart-7 {
     grid-column-start: 7;
   }
 
-  .larger\(start\:colspan\)-8 {
+  .xl\.columnStart-8 {
     grid-column-start: 8;
   }
 
-  .larger\(start\:colspan\)-9 {
+  .xl\.columnStart-9 {
     grid-column-start: 9;
   }
 
-  .larger\(start\:colspan\)-10 {
+  .xl\.columnStart-10 {
     grid-column-start: 10;
   }
 
-  .larger\(start\:colspan\)-11 {
+  .xl\.columnStart-11 {
     grid-column-start: 11;
   }
 
-  .larger\(start\:colspan\)-12 {
+  .xl\.columnStart-12 {
     grid-column-start: 12;
   }
 
-  .larger\(start\:colspan\)-13 {
+  .xl\.columnStart-13 {
     grid-column-start: 13;
   }
 
-  .larger\(end\:colspan\)-auto {
+  .xl\.columnEnd-auto {
     grid-column-end: auto;
   }
 
-  .larger\(end\:colspan\)-1 {
+  .xl\.columnEnd-1 {
     grid-column-end: 1;
   }
 
-  .larger\(end\:colspan\)-2 {
+  .xl\.columnEnd-2 {
     grid-column-end: 2;
   }
 
-  .larger\(end\:colspan\)-3 {
+  .xl\.columnEnd-3 {
     grid-column-end: 3;
   }
 
-  .larger\(end\:colspan\)-4 {
+  .xl\.columnEnd-4 {
     grid-column-end: 4;
   }
 
-  .larger\(end\:colspan\)-5 {
+  .xl\.columnEnd-5 {
     grid-column-end: 5;
   }
 
-  .larger\(end\:colspan\)-6 {
+  .xl\.columnEnd-6 {
     grid-column-end: 6;
   }
 
-  .larger\(end\:colspan\)-7 {
+  .xl\.columnEnd-7 {
     grid-column-end: 7;
   }
 
-  .larger\(end\:colspan\)-8 {
+  .xl\.columnEnd-8 {
     grid-column-end: 8;
   }
 
-  .larger\(end\:colspan\)-9 {
+  .xl\.columnEnd-9 {
     grid-column-end: 9;
   }
 
-  .larger\(end\:colspan\)-10 {
+  .xl\.columnEnd-10 {
     grid-column-end: 10;
   }
 
-  .larger\(end\:colspan\)-11 {
+  .xl\.columnEnd-11 {
     grid-column-end: 11;
   }
 
-  .larger\(end\:colspan\)-12 {
+  .xl\.columnEnd-12 {
     grid-column-end: 12;
   }
 
-  .larger\(end\:colspan\)-13 {
+  .xl\.columnEnd-13 {
     grid-column-end: 13;
   }
 
-  .larger\(rowspan\)-auto {
+  .xl\.row-auto {
     grid-row: auto;
   }
 
-  .larger\(rowspan\)-1 {
+  .xl\.row-1 {
     grid-row: span 1 / span 1;
   }
 
-  .larger\(rowspan\)-2 {
+  .xl\.row-2 {
     grid-row: span 2 / span 2;
   }
 
-  .larger\(rowspan\)-3 {
+  .xl\.row-3 {
     grid-row: span 3 / span 3;
   }
 
-  .larger\(rowspan\)-4 {
+  .xl\.row-4 {
     grid-row: span 4 / span 4;
   }
 
-  .larger\(rowspan\)-5 {
+  .xl\.row-5 {
     grid-row: span 5 / span 5;
   }
 
-  .larger\(rowspan\)-6 {
+  .xl\.row-6 {
     grid-row: span 6 / span 6;
   }
 
-  .larger\(rowspan\)-7 {
+  .xl\.row-7 {
     grid-row: span 7 / span 7;
   }
 
-  .larger\(rowspan\)-8 {
+  .xl\.row-8 {
     grid-row: span 8 / span 8;
   }
 
-  .larger\(rowspan\)-9 {
+  .xl\.row-9 {
     grid-row: span 9 / span 9;
   }
 
-  .larger\(rowspan\)-10 {
+  .xl\.row-10 {
     grid-row: span 10 / span 10;
   }
 
-  .larger\(rowspan\)-11 {
+  .xl\.row-11 {
     grid-row: span 11 / span 11;
   }
 
-  .larger\(rowspan\)-12 {
+  .xl\.row-12 {
     grid-row: span 12 / span 12;
   }
 
-  .larger\(rowspan\)-full {
+  .xl\.row-full {
     grid-row: 1 / -1;
   }
 
-  .larger\(start\:rowspan\)-auto {
+  .xl\.rowStart-auto {
     grid-row-start: auto;
   }
 
-  .larger\(start\:rowspan\)-1 {
+  .xl\.rowStart-1 {
     grid-row-start: 1;
   }
 
-  .larger\(start\:rowspan\)-2 {
+  .xl\.rowStart-2 {
     grid-row-start: 2;
   }
 
-  .larger\(start\:rowspan\)-3 {
+  .xl\.rowStart-3 {
     grid-row-start: 3;
   }
 
-  .larger\(start\:rowspan\)-4 {
+  .xl\.rowStart-4 {
     grid-row-start: 4;
   }
 
-  .larger\(start\:rowspan\)-5 {
+  .xl\.rowStart-5 {
     grid-row-start: 5;
   }
 
-  .larger\(start\:rowspan\)-6 {
+  .xl\.rowStart-6 {
     grid-row-start: 6;
   }
 
-  .larger\(start\:rowspan\)-7 {
+  .xl\.rowStart-7 {
     grid-row-start: 7;
   }
 
-  .larger\(start\:rowspan\)-8 {
+  .xl\.rowStart-8 {
     grid-row-start: 8;
   }
 
-  .larger\(start\:rowspan\)-9 {
+  .xl\.rowStart-9 {
     grid-row-start: 9;
   }
 
-  .larger\(start\:rowspan\)-10 {
+  .xl\.rowStart-10 {
     grid-row-start: 10;
   }
 
-  .larger\(start\:rowspan\)-11 {
+  .xl\.rowStart-11 {
     grid-row-start: 11;
   }
 
-  .larger\(start\:rowspan\)-12 {
+  .xl\.rowStart-12 {
     grid-row-start: 12;
   }
 
-  .larger\(start\:rowspan\)-13 {
+  .xl\.rowStart-13 {
     grid-row-start: 13;
   }
 
-  .larger\(end\:rowspan\)-auto {
+  .xl\.rowEnd-auto {
     grid-row-end: auto;
   }
 
-  .larger\(end\:rowspan\)-1 {
+  .xl\.rowEnd-1 {
     grid-row-end: 1;
   }
 
-  .larger\(end\:rowspan\)-2 {
+  .xl\.rowEnd-2 {
     grid-row-end: 2;
   }
 
-  .larger\(end\:rowspan\)-3 {
+  .xl\.rowEnd-3 {
     grid-row-end: 3;
   }
 
-  .larger\(end\:rowspan\)-4 {
+  .xl\.rowEnd-4 {
     grid-row-end: 4;
   }
 
-  .larger\(end\:rowspan\)-5 {
+  .xl\.rowEnd-5 {
     grid-row-end: 5;
   }
 
-  .larger\(end\:rowspan\)-6 {
+  .xl\.rowEnd-6 {
     grid-row-end: 6;
   }
 
-  .larger\(end\:rowspan\)-7 {
+  .xl\.rowEnd-7 {
     grid-row-end: 7;
   }
 
-  .larger\(end\:rowspan\)-8 {
+  .xl\.rowEnd-8 {
     grid-row-end: 8;
   }
 
-  .larger\(end\:rowspan\)-9 {
+  .xl\.rowEnd-9 {
     grid-row-end: 9;
   }
 
-  .larger\(end\:rowspan\)-10 {
+  .xl\.rowEnd-10 {
     grid-row-end: 10;
   }
 
-  .larger\(end\:rowspan\)-11 {
+  .xl\.rowEnd-11 {
     grid-row-end: 11;
   }
 
-  .larger\(end\:rowspan\)-12 {
+  .xl\.rowEnd-12 {
     grid-row-end: 12;
   }
 
-  .larger\(end\:rowspan\)-13 {
+  .xl\.rowEnd-13 {
     grid-row-end: 13;
   }
 
-  .larger\(gap\)-0 {
+  .xl\.gap-0 {
     gap: 0px;
   }
 
-  .larger\(gap\)-1 {
+  .xl\.gap-1 {
     gap: 0.125rem;
   }
 
-  .larger\(gap\)-2 {
+  .xl\.gap-2 {
     gap: 0.25rem;
   }
 
-  .larger\(gap\)-3 {
+  .xl\.gap-3 {
     gap: 0.375rem;
   }
 
-  .larger\(gap\)-4 {
+  .xl\.gap-4 {
     gap: 0.5rem;
   }
 
-  .larger\(gap\)-5 {
+  .xl\.gap-5 {
     gap: 0.625rem;
   }
 
-  .larger\(gap\)-6 {
+  .xl\.gap-6 {
     gap: 0.75rem;
   }
 
-  .larger\(gap\)-7 {
+  .xl\.gap-7 {
     gap: 0.875rem;
   }
 
-  .larger\(gap\)-8 {
+  .xl\.gap-8 {
     gap: 1rem;
   }
 
-  .larger\(gap\)-9 {
+  .xl\.gap-9 {
     gap: 1.25rem;
   }
 
-  .larger\(gap\)-10 {
+  .xl\.gap-10 {
     gap: 1.5rem;
   }
 
-  .larger\(gap\)-11 {
+  .xl\.gap-11 {
     gap: 1.75rem;
   }
 
-  .larger\(gap\)-12 {
+  .xl\.gap-12 {
     gap: 2rem;
   }
 
-  .larger\(gap\)-13 {
+  .xl\.gap-13 {
     gap: 2.25rem;
   }
 
-  .larger\(gap\)-14 {
+  .xl\.gap-14 {
     gap: 2.5rem;
   }
 
-  .larger\(gap\)-15 {
+  .xl\.gap-15 {
     gap: 2.75rem;
   }
 
-  .larger\(gap\)-15 {
+  .xl\.gap-15 {
     gap: 3rem;
   }
 
-  .larger\(gap\)-16 {
+  .xl\.gap-16 {
     gap: 3.25rem;
   }
 
-  .larger\(gap\)-17 {
+  .xl\.gap-17 {
     gap: 3.5rem;
   }
 
-  .larger\(gap\)-18 {
+  .xl\.gap-18 {
     gap: 3.75rem;
   }
 
-  .larger\(gap\)-19 {
+  .xl\.gap-19 {
     gap: 4rem;
   }
 
-  .larger\(gap\)-20 {
+  .xl\.gap-20 {
     gap: 4.25rem;
   }
 
-  .larger\(column\:gap\)-0 {
+  .xl\.gapColumn-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
   }
 
-  .larger\(column\:gap\)-1 {
+  .xl\.gapColumn-1 {
     -moz-column-gap: 0.125rem;
          column-gap: 0.125rem;
   }
 
-  .larger\(column\:gap\)-2 {
+  .xl\.gapColumn-2 {
     -moz-column-gap: 0.25rem;
          column-gap: 0.25rem;
   }
 
-  .larger\(column\:gap\)-3 {
+  .xl\.gapColumn-3 {
     -moz-column-gap: 0.375rem;
          column-gap: 0.375rem;
   }
 
-  .larger\(column\:gap\)-4 {
+  .xl\.gapColumn-4 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
 
-  .larger\(column\:gap\)-5 {
+  .xl\.gapColumn-5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
   }
 
-  .larger\(column\:gap\)-6 {
+  .xl\.gapColumn-6 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
   }
 
-  .larger\(column\:gap\)-7 {
+  .xl\.gapColumn-7 {
     -moz-column-gap: 0.875rem;
          column-gap: 0.875rem;
   }
 
-  .larger\(column\:gap\)-8 {
+  .xl\.gapColumn-8 {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 
-  .larger\(column\:gap\)-9 {
+  .xl\.gapColumn-9 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
 
-  .larger\(column\:gap\)-10 {
+  .xl\.gapColumn-10 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
 
-  .larger\(column\:gap\)-11 {
+  .xl\.gapColumn-11 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
   }
 
-  .larger\(column\:gap\)-12 {
+  .xl\.gapColumn-12 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
 
-  .larger\(column\:gap\)-13 {
+  .xl\.gapColumn-13 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
   }
 
-  .larger\(column\:gap\)-14 {
+  .xl\.gapColumn-14 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
 
-  .larger\(column\:gap\)-15 {
+  .xl\.gapColumn-15 {
     -moz-column-gap: 2.75rem;
          column-gap: 2.75rem;
   }
 
-  .larger\(column\:gap\)-15 {
+  .xl\.gapColumn-15 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
   }
 
-  .larger\(column\:gap\)-16 {
+  .xl\.gapColumn-16 {
     -moz-column-gap: 3.25rem;
          column-gap: 3.25rem;
   }
 
-  .larger\(column\:gap\)-17 {
+  .xl\.gapColumn-17 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
   }
 
-  .larger\(column\:gap\)-18 {
+  .xl\.gapColumn-18 {
     -moz-column-gap: 3.75rem;
          column-gap: 3.75rem;
   }
 
-  .larger\(column\:gap\)-19 {
+  .xl\.gapColumn-19 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
   }
 
-  .larger\(column\:gap\)-20 {
+  .xl\.gapColumn-20 {
     -moz-column-gap: 4.25rem;
          column-gap: 4.25rem;
   }
 
-  .larger\(row\:gap\)-0 {
+  .xl\.gapRow-0 {
     row-gap: 0px;
   }
 
-  .larger\(row\:gap\)-1 {
+  .xl\.gapRow-1 {
     row-gap: 0.125rem;
   }
 
-  .larger\(row\:gap\)-2 {
+  .xl\.gapRow-2 {
     row-gap: 0.25rem;
   }
 
-  .larger\(row\:gap\)-3 {
+  .xl\.gapRow-3 {
     row-gap: 0.375rem;
   }
 
-  .larger\(row\:gap\)-4 {
+  .xl\.gapRow-4 {
     row-gap: 0.5rem;
   }
 
-  .larger\(row\:gap\)-5 {
+  .xl\.gapRow-5 {
     row-gap: 0.625rem;
   }
 
-  .larger\(row\:gap\)-6 {
+  .xl\.gapRow-6 {
     row-gap: 0.75rem;
   }
 
-  .larger\(row\:gap\)-7 {
+  .xl\.gapRow-7 {
     row-gap: 0.875rem;
   }
 
-  .larger\(row\:gap\)-8 {
+  .xl\.gapRow-8 {
     row-gap: 1rem;
   }
 
-  .larger\(row\:gap\)-9 {
+  .xl\.gapRow-9 {
     row-gap: 1.25rem;
   }
 
-  .larger\(row\:gap\)-10 {
+  .xl\.gapRow-10 {
     row-gap: 1.5rem;
   }
 
-  .larger\(row\:gap\)-11 {
+  .xl\.gapRow-11 {
     row-gap: 1.75rem;
   }
 
-  .larger\(row\:gap\)-12 {
+  .xl\.gapRow-12 {
     row-gap: 2rem;
   }
 
-  .larger\(row\:gap\)-13 {
+  .xl\.gapRow-13 {
     row-gap: 2.25rem;
   }
 
-  .larger\(row\:gap\)-14 {
+  .xl\.gapRow-14 {
     row-gap: 2.5rem;
   }
 
-  .larger\(row\:gap\)-15 {
+  .xl\.gapRow-15 {
     row-gap: 2.75rem;
   }
 
-  .larger\(row\:gap\)-15 {
+  .xl\.gapRow-15 {
     row-gap: 3rem;
   }
 
-  .larger\(row\:gap\)-16 {
+  .xl\.gapRow-16 {
     row-gap: 3.25rem;
   }
 
-  .larger\(row\:gap\)-17 {
+  .xl\.gapRow-17 {
     row-gap: 3.5rem;
   }
 
-  .larger\(row\:gap\)-18 {
+  .xl\.gapRow-18 {
     row-gap: 3.75rem;
   }
 
-  .larger\(row\:gap\)-19 {
+  .xl\.gapRow-19 {
     row-gap: 4rem;
   }
 
-  .larger\(row\:gap\)-20 {
+  .xl\.gapRow-20 {
     row-gap: 4.25rem;
   }
 
-  .larger\(grid-items\) {
+  .xl\.gridItems {
     justify-items: stretch;
   }
 
-  .larger\(stretch\:grid-items\) {
+  .xl\.gridItemsStretch {
     justify-items: stretch;
   }
 
-  .larger\(center\:grid-items\) {
+  .xl\.gridItemsCenter {
     justify-items: center;
   }
 
-  .larger\(start\:grid-items\) {
+  .xl\.gridItemsStart {
     justify-items: start;
   }
 
-  .larger\(end\:grid-items\) {
+  .xl\.gridItemsEnd {
     justify-items: end;
   }
 
-  .larger\(left\:grid-items\) {
+  .xl\.gridItemsLeft {
     justify-items: left;
   }
 
-  .larger\(right\:grid-items\) {
+  .xl\.gridItemsRight {
     justify-items: right;
   }
 
-  .larger\(baseline\:grid-items\) {
+  .xl\.gridItemsBaseline {
     justify-items: baseline;
   }
 
-  .larger\(grid-self\) {
+  .xl\.gridSelf {
     justify-self: stretch;
   }
 
-  .larger\(stretch\:grid-self\) {
+  .xl\.gridSelfStretch {
     justify-self: stretch;
   }
 
-  .larger\(center\:grid-self\) {
+  .xl\.gridSelfCenter {
     justify-self: center;
   }
 
-  .larger\(start\:grid-self\) {
+  .xl\.gridSelfStart {
     justify-self: start;
   }
 
-  .larger\(end\:grid-self\) {
+  .xl\.gridSelfEnd {
     justify-self: end;
   }
 
-  .larger\(left\:grid-self\) {
+  .xl\.gridSelfLeft {
     justify-self: left;
   }
 
-  .larger\(right\:grid-self\) {
+  .xl\.gridSelfRight {
     justify-self: right;
   }
 
-  .larger\(baseline\:grid-self\) {
+  .xl\.gridSelfBaseline {
     justify-self: baseline;
   }
 }
 
 @media (min-width: 1920px) {
-  .largest\(column\:grid\)-1 {
+  .\2xl\.gridColumns-1 {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-2 {
+  .\2xl\.gridColumns-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-3 {
+  .\2xl\.gridColumns-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-4 {
+  .\2xl\.gridColumns-4 {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-5 {
+  .\2xl\.gridColumns-5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-6 {
+  .\2xl\.gridColumns-6 {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-7 {
+  .\2xl\.gridColumns-7 {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-8 {
+  .\2xl\.gridColumns-8 {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-9 {
+  .\2xl\.gridColumns-9 {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-10 {
+  .\2xl\.gridColumns-10 {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-11 {
+  .\2xl\.gridColumns-11 {
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-12 {
+  .\2xl\.gridColumns-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
-  .largest\(column\:grid\)-none {
+  .\2xl\.gridColumns-none {
     display: grid;
     grid-template-columns: none;
   }
 
-  .largest\(grid-columns\)-1 {
+  .\2xl\.columns-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-2 {
+  .\2xl\.columns-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-3 {
+  .\2xl\.columns-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-4 {
+  .\2xl\.columns-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-5 {
+  .\2xl\.columns-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-6 {
+  .\2xl\.columns-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-7 {
+  .\2xl\.columns-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-8 {
+  .\2xl\.columns-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-9 {
+  .\2xl\.columns-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-10 {
+  .\2xl\.columns-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-11 {
+  .\2xl\.columns-11 {
     grid-template-columns: repeat(11, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-12 {
+  .\2xl\.columns-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
-  .largest\(grid-columns\)-none {
+  .\2xl\.columns-none {
     grid-template-columns: none;
   }
 
-  .largest\(auto\:grid-columns\) {
+  .\2xl\.columnsAuto {
     grid-auto-columns: auto;
   }
 
-  .largest\(min\:grid-columns\) {
+  .\2xl\.columnsMin {
     grid-auto-columns: -webkit-min-content;
     grid-auto-columns: min-content;
   }
 
-  .largest\(max\:grid-columns\) {
+  .\2xl\.columnsMax {
     grid-auto-columns: -webkit-max-content;
     grid-auto-columns: max-content;
   }
 
-  .largest\(fr\:grid-columns\) {
+  .\2xl\.columnsFr {
     grid-auto-columns: minmax(0, 1fr);
   }
 
-  .largest\(flow\:grid-columns\) {
+  .\2xl\.columnsFlow {
     grid-auto-flow: column;
   }
 
-  .largest\(dense\:grid-columns\) {
+  .\2xl\.columnsDense {
     grid-auto-flow: column dense;
   }
 
-  .largest\(row\:grid\)-1 {
+  .\2xl\.gridRows-1 {
     display: grid;
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-2 {
+  .\2xl\.gridRows-2 {
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-3 {
+  .\2xl\.gridRows-3 {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-4 {
+  .\2xl\.gridRows-4 {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-5 {
+  .\2xl\.gridRows-5 {
     display: grid;
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-6 {
+  .\2xl\.gridRows-6 {
     display: grid;
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-7 {
+  .\2xl\.gridRows-7 {
     display: grid;
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-8 {
+  .\2xl\.gridRows-8 {
     display: grid;
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-9 {
+  .\2xl\.gridRows-9 {
     display: grid;
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-10 {
+  .\2xl\.gridRows-10 {
     display: grid;
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-11 {
+  .\2xl\.gridRows-11 {
     display: grid;
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-12 {
+  .\2xl\.gridRows-12 {
     display: grid;
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .largest\(row\:grid\)-none {
+  .\2xl\.gridRows-none {
     display: grid;
     grid-template-rows: none;
   }
 
-  .largest\(grid-rows\)-1 {
+  .\2xl\.rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-2 {
+  .\2xl\.rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-3 {
+  .\2xl\.rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-4 {
+  .\2xl\.rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-5 {
+  .\2xl\.rows-5 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-6 {
+  .\2xl\.rows-6 {
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-7 {
+  .\2xl\.rows-7 {
     grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-8 {
+  .\2xl\.rows-8 {
     grid-template-rows: repeat(8, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-9 {
+  .\2xl\.rows-9 {
     grid-template-rows: repeat(9, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-10 {
+  .\2xl\.rows-10 {
     grid-template-rows: repeat(10, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-11 {
+  .\2xl\.rows-11 {
     grid-template-rows: repeat(11, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-12 {
+  .\2xl\.rows-12 {
     grid-template-rows: repeat(12, minmax(0, 1fr));
   }
 
-  .largest\(grid-rows\)-none {
+  .\2xl\.rows-none {
     grid-template-rows: none;
   }
 
-  .largest\(auto\:grid-rows\) {
+  .\2xl\.rowsAuto {
     grid-auto-rows: auto;
   }
 
-  .largest\(min\:grid-rows\) {
+  .\2xl\.rowsMin {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
 
-  .largest\(max\:grid-rows\) {
+  .\2xl\.rowsMax {
     grid-auto-rows: -webkit-max-content;
     grid-auto-rows: max-content;
   }
 
-  .largest\(fr\:grid-rows\) {
+  .\2xl\.rowsFr {
     grid-auto-rows: minmax(0, 1fr);
   }
 
-  .largest\(flow\:grid-rows\) {
+  .\2xl\.rowsFlow {
     grid-auto-flow: row;
   }
 
-  .largest\(dense\:grid-rows\) {
+  .\2xl\.rowsDense {
     grid-auto-flow: row dense;
   }
 
-  .largest\(colspan\)-auto {
+  .\2xl\.column-auto {
     grid-column: auto;
   }
 
-  .largest\(colspan\)-1 {
+  .\2xl\.column-1 {
     grid-column: span 1 / span 1;
   }
 
-  .largest\(colspan\)-2 {
+  .\2xl\.column-2 {
     grid-column: span 2 / span 2;
   }
 
-  .largest\(colspan\)-3 {
+  .\2xl\.column-3 {
     grid-column: span 3 / span 3;
   }
 
-  .largest\(colspan\)-4 {
+  .\2xl\.column-4 {
     grid-column: span 4 / span 4;
   }
 
-  .largest\(colspan\)-5 {
+  .\2xl\.column-5 {
     grid-column: span 5 / span 5;
   }
 
-  .largest\(colspan\)-6 {
+  .\2xl\.column-6 {
     grid-column: span 6 / span 6;
   }
 
-  .largest\(colspan\)-7 {
+  .\2xl\.column-7 {
     grid-column: span 7 / span 7;
   }
 
-  .largest\(colspan\)-8 {
+  .\2xl\.column-8 {
     grid-column: span 8 / span 8;
   }
 
-  .largest\(colspan\)-9 {
+  .\2xl\.column-9 {
     grid-column: span 9 / span 9;
   }
 
-  .largest\(colspan\)-10 {
+  .\2xl\.column-10 {
     grid-column: span 10 / span 10;
   }
 
-  .largest\(colspan\)-11 {
+  .\2xl\.column-11 {
     grid-column: span 11 / span 11;
   }
 
-  .largest\(colspan\)-12 {
+  .\2xl\.column-12 {
     grid-column: span 12 / span 12;
   }
 
-  .largest\(colspan\)-full {
+  .\2xl\.column-full {
     grid-column: 1 / -1;
   }
 
-  .largest\(start\:colspan\)-auto {
+  .\2xl\.columnStart-auto {
     grid-column-start: auto;
   }
 
-  .largest\(start\:colspan\)-1 {
+  .\2xl\.columnStart-1 {
     grid-column-start: 1;
   }
 
-  .largest\(start\:colspan\)-2 {
+  .\2xl\.columnStart-2 {
     grid-column-start: 2;
   }
 
-  .largest\(start\:colspan\)-3 {
+  .\2xl\.columnStart-3 {
     grid-column-start: 3;
   }
 
-  .largest\(start\:colspan\)-4 {
+  .\2xl\.columnStart-4 {
     grid-column-start: 4;
   }
 
-  .largest\(start\:colspan\)-5 {
+  .\2xl\.columnStart-5 {
     grid-column-start: 5;
   }
 
-  .largest\(start\:colspan\)-6 {
+  .\2xl\.columnStart-6 {
     grid-column-start: 6;
   }
 
-  .largest\(start\:colspan\)-7 {
+  .\2xl\.columnStart-7 {
     grid-column-start: 7;
   }
 
-  .largest\(start\:colspan\)-8 {
+  .\2xl\.columnStart-8 {
     grid-column-start: 8;
   }
 
-  .largest\(start\:colspan\)-9 {
+  .\2xl\.columnStart-9 {
     grid-column-start: 9;
   }
 
-  .largest\(start\:colspan\)-10 {
+  .\2xl\.columnStart-10 {
     grid-column-start: 10;
   }
 
-  .largest\(start\:colspan\)-11 {
+  .\2xl\.columnStart-11 {
     grid-column-start: 11;
   }
 
-  .largest\(start\:colspan\)-12 {
+  .\2xl\.columnStart-12 {
     grid-column-start: 12;
   }
 
-  .largest\(start\:colspan\)-13 {
+  .\2xl\.columnStart-13 {
     grid-column-start: 13;
   }
 
-  .largest\(end\:colspan\)-auto {
+  .\2xl\.columnEnd-auto {
     grid-column-end: auto;
   }
 
-  .largest\(end\:colspan\)-1 {
+  .\2xl\.columnEnd-1 {
     grid-column-end: 1;
   }
 
-  .largest\(end\:colspan\)-2 {
+  .\2xl\.columnEnd-2 {
     grid-column-end: 2;
   }
 
-  .largest\(end\:colspan\)-3 {
+  .\2xl\.columnEnd-3 {
     grid-column-end: 3;
   }
 
-  .largest\(end\:colspan\)-4 {
+  .\2xl\.columnEnd-4 {
     grid-column-end: 4;
   }
 
-  .largest\(end\:colspan\)-5 {
+  .\2xl\.columnEnd-5 {
     grid-column-end: 5;
   }
 
-  .largest\(end\:colspan\)-6 {
+  .\2xl\.columnEnd-6 {
     grid-column-end: 6;
   }
 
-  .largest\(end\:colspan\)-7 {
+  .\2xl\.columnEnd-7 {
     grid-column-end: 7;
   }
 
-  .largest\(end\:colspan\)-8 {
+  .\2xl\.columnEnd-8 {
     grid-column-end: 8;
   }
 
-  .largest\(end\:colspan\)-9 {
+  .\2xl\.columnEnd-9 {
     grid-column-end: 9;
   }
 
-  .largest\(end\:colspan\)-10 {
+  .\2xl\.columnEnd-10 {
     grid-column-end: 10;
   }
 
-  .largest\(end\:colspan\)-11 {
+  .\2xl\.columnEnd-11 {
     grid-column-end: 11;
   }
 
-  .largest\(end\:colspan\)-12 {
+  .\2xl\.columnEnd-12 {
     grid-column-end: 12;
   }
 
-  .largest\(end\:colspan\)-13 {
+  .\2xl\.columnEnd-13 {
     grid-column-end: 13;
   }
 
-  .largest\(rowspan\)-auto {
+  .\2xl\.row-auto {
     grid-row: auto;
   }
 
-  .largest\(rowspan\)-1 {
+  .\2xl\.row-1 {
     grid-row: span 1 / span 1;
   }
 
-  .largest\(rowspan\)-2 {
+  .\2xl\.row-2 {
     grid-row: span 2 / span 2;
   }
 
-  .largest\(rowspan\)-3 {
+  .\2xl\.row-3 {
     grid-row: span 3 / span 3;
   }
 
-  .largest\(rowspan\)-4 {
+  .\2xl\.row-4 {
     grid-row: span 4 / span 4;
   }
 
-  .largest\(rowspan\)-5 {
+  .\2xl\.row-5 {
     grid-row: span 5 / span 5;
   }
 
-  .largest\(rowspan\)-6 {
+  .\2xl\.row-6 {
     grid-row: span 6 / span 6;
   }
 
-  .largest\(rowspan\)-7 {
+  .\2xl\.row-7 {
     grid-row: span 7 / span 7;
   }
 
-  .largest\(rowspan\)-8 {
+  .\2xl\.row-8 {
     grid-row: span 8 / span 8;
   }
 
-  .largest\(rowspan\)-9 {
+  .\2xl\.row-9 {
     grid-row: span 9 / span 9;
   }
 
-  .largest\(rowspan\)-10 {
+  .\2xl\.row-10 {
     grid-row: span 10 / span 10;
   }
 
-  .largest\(rowspan\)-11 {
+  .\2xl\.row-11 {
     grid-row: span 11 / span 11;
   }
 
-  .largest\(rowspan\)-12 {
+  .\2xl\.row-12 {
     grid-row: span 12 / span 12;
   }
 
-  .largest\(rowspan\)-full {
+  .\2xl\.row-full {
     grid-row: 1 / -1;
   }
 
-  .largest\(start\:rowspan\)-auto {
+  .\2xl\.rowStart-auto {
     grid-row-start: auto;
   }
 
-  .largest\(start\:rowspan\)-1 {
+  .\2xl\.rowStart-1 {
     grid-row-start: 1;
   }
 
-  .largest\(start\:rowspan\)-2 {
+  .\2xl\.rowStart-2 {
     grid-row-start: 2;
   }
 
-  .largest\(start\:rowspan\)-3 {
+  .\2xl\.rowStart-3 {
     grid-row-start: 3;
   }
 
-  .largest\(start\:rowspan\)-4 {
+  .\2xl\.rowStart-4 {
     grid-row-start: 4;
   }
 
-  .largest\(start\:rowspan\)-5 {
+  .\2xl\.rowStart-5 {
     grid-row-start: 5;
   }
 
-  .largest\(start\:rowspan\)-6 {
+  .\2xl\.rowStart-6 {
     grid-row-start: 6;
   }
 
-  .largest\(start\:rowspan\)-7 {
+  .\2xl\.rowStart-7 {
     grid-row-start: 7;
   }
 
-  .largest\(start\:rowspan\)-8 {
+  .\2xl\.rowStart-8 {
     grid-row-start: 8;
   }
 
-  .largest\(start\:rowspan\)-9 {
+  .\2xl\.rowStart-9 {
     grid-row-start: 9;
   }
 
-  .largest\(start\:rowspan\)-10 {
+  .\2xl\.rowStart-10 {
     grid-row-start: 10;
   }
 
-  .largest\(start\:rowspan\)-11 {
+  .\2xl\.rowStart-11 {
     grid-row-start: 11;
   }
 
-  .largest\(start\:rowspan\)-12 {
+  .\2xl\.rowStart-12 {
     grid-row-start: 12;
   }
 
-  .largest\(start\:rowspan\)-13 {
+  .\2xl\.rowStart-13 {
     grid-row-start: 13;
   }
 
-  .largest\(end\:rowspan\)-auto {
+  .\2xl\.rowEnd-auto {
     grid-row-end: auto;
   }
 
-  .largest\(end\:rowspan\)-1 {
+  .\2xl\.rowEnd-1 {
     grid-row-end: 1;
   }
 
-  .largest\(end\:rowspan\)-2 {
+  .\2xl\.rowEnd-2 {
     grid-row-end: 2;
   }
 
-  .largest\(end\:rowspan\)-3 {
+  .\2xl\.rowEnd-3 {
     grid-row-end: 3;
   }
 
-  .largest\(end\:rowspan\)-4 {
+  .\2xl\.rowEnd-4 {
     grid-row-end: 4;
   }
 
-  .largest\(end\:rowspan\)-5 {
+  .\2xl\.rowEnd-5 {
     grid-row-end: 5;
   }
 
-  .largest\(end\:rowspan\)-6 {
+  .\2xl\.rowEnd-6 {
     grid-row-end: 6;
   }
 
-  .largest\(end\:rowspan\)-7 {
+  .\2xl\.rowEnd-7 {
     grid-row-end: 7;
   }
 
-  .largest\(end\:rowspan\)-8 {
+  .\2xl\.rowEnd-8 {
     grid-row-end: 8;
   }
 
-  .largest\(end\:rowspan\)-9 {
+  .\2xl\.rowEnd-9 {
     grid-row-end: 9;
   }
 
-  .largest\(end\:rowspan\)-10 {
+  .\2xl\.rowEnd-10 {
     grid-row-end: 10;
   }
 
-  .largest\(end\:rowspan\)-11 {
+  .\2xl\.rowEnd-11 {
     grid-row-end: 11;
   }
 
-  .largest\(end\:rowspan\)-12 {
+  .\2xl\.rowEnd-12 {
     grid-row-end: 12;
   }
 
-  .largest\(end\:rowspan\)-13 {
+  .\2xl\.rowEnd-13 {
     grid-row-end: 13;
   }
 
-  .largest\(gap\)-0 {
+  .\2xl\.gap-0 {
     gap: 0px;
   }
 
-  .largest\(gap\)-1 {
+  .\2xl\.gap-1 {
     gap: 0.125rem;
   }
 
-  .largest\(gap\)-2 {
+  .\2xl\.gap-2 {
     gap: 0.25rem;
   }
 
-  .largest\(gap\)-3 {
+  .\2xl\.gap-3 {
     gap: 0.375rem;
   }
 
-  .largest\(gap\)-4 {
+  .\2xl\.gap-4 {
     gap: 0.5rem;
   }
 
-  .largest\(gap\)-5 {
+  .\2xl\.gap-5 {
     gap: 0.625rem;
   }
 
-  .largest\(gap\)-6 {
+  .\2xl\.gap-6 {
     gap: 0.75rem;
   }
 
-  .largest\(gap\)-7 {
+  .\2xl\.gap-7 {
     gap: 0.875rem;
   }
 
-  .largest\(gap\)-8 {
+  .\2xl\.gap-8 {
     gap: 1rem;
   }
 
-  .largest\(gap\)-9 {
+  .\2xl\.gap-9 {
     gap: 1.25rem;
   }
 
-  .largest\(gap\)-10 {
+  .\2xl\.gap-10 {
     gap: 1.5rem;
   }
 
-  .largest\(gap\)-11 {
+  .\2xl\.gap-11 {
     gap: 1.75rem;
   }
 
-  .largest\(gap\)-12 {
+  .\2xl\.gap-12 {
     gap: 2rem;
   }
 
-  .largest\(gap\)-13 {
+  .\2xl\.gap-13 {
     gap: 2.25rem;
   }
 
-  .largest\(gap\)-14 {
+  .\2xl\.gap-14 {
     gap: 2.5rem;
   }
 
-  .largest\(gap\)-15 {
+  .\2xl\.gap-15 {
     gap: 2.75rem;
   }
 
-  .largest\(gap\)-15 {
+  .\2xl\.gap-15 {
     gap: 3rem;
   }
 
-  .largest\(gap\)-16 {
+  .\2xl\.gap-16 {
     gap: 3.25rem;
   }
 
-  .largest\(gap\)-17 {
+  .\2xl\.gap-17 {
     gap: 3.5rem;
   }
 
-  .largest\(gap\)-18 {
+  .\2xl\.gap-18 {
     gap: 3.75rem;
   }
 
-  .largest\(gap\)-19 {
+  .\2xl\.gap-19 {
     gap: 4rem;
   }
 
-  .largest\(gap\)-20 {
+  .\2xl\.gap-20 {
     gap: 4.25rem;
   }
 
-  .largest\(column\:gap\)-0 {
+  .\2xl\.gapColumn-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
   }
 
-  .largest\(column\:gap\)-1 {
+  .\2xl\.gapColumn-1 {
     -moz-column-gap: 0.125rem;
          column-gap: 0.125rem;
   }
 
-  .largest\(column\:gap\)-2 {
+  .\2xl\.gapColumn-2 {
     -moz-column-gap: 0.25rem;
          column-gap: 0.25rem;
   }
 
-  .largest\(column\:gap\)-3 {
+  .\2xl\.gapColumn-3 {
     -moz-column-gap: 0.375rem;
          column-gap: 0.375rem;
   }
 
-  .largest\(column\:gap\)-4 {
+  .\2xl\.gapColumn-4 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
   }
 
-  .largest\(column\:gap\)-5 {
+  .\2xl\.gapColumn-5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
   }
 
-  .largest\(column\:gap\)-6 {
+  .\2xl\.gapColumn-6 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
   }
 
-  .largest\(column\:gap\)-7 {
+  .\2xl\.gapColumn-7 {
     -moz-column-gap: 0.875rem;
          column-gap: 0.875rem;
   }
 
-  .largest\(column\:gap\)-8 {
+  .\2xl\.gapColumn-8 {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
 
-  .largest\(column\:gap\)-9 {
+  .\2xl\.gapColumn-9 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
   }
 
-  .largest\(column\:gap\)-10 {
+  .\2xl\.gapColumn-10 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
 
-  .largest\(column\:gap\)-11 {
+  .\2xl\.gapColumn-11 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
   }
 
-  .largest\(column\:gap\)-12 {
+  .\2xl\.gapColumn-12 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
 
-  .largest\(column\:gap\)-13 {
+  .\2xl\.gapColumn-13 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
   }
 
-  .largest\(column\:gap\)-14 {
+  .\2xl\.gapColumn-14 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
 
-  .largest\(column\:gap\)-15 {
+  .\2xl\.gapColumn-15 {
     -moz-column-gap: 2.75rem;
          column-gap: 2.75rem;
   }
 
-  .largest\(column\:gap\)-15 {
+  .\2xl\.gapColumn-15 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
   }
 
-  .largest\(column\:gap\)-16 {
+  .\2xl\.gapColumn-16 {
     -moz-column-gap: 3.25rem;
          column-gap: 3.25rem;
   }
 
-  .largest\(column\:gap\)-17 {
+  .\2xl\.gapColumn-17 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
   }
 
-  .largest\(column\:gap\)-18 {
+  .\2xl\.gapColumn-18 {
     -moz-column-gap: 3.75rem;
          column-gap: 3.75rem;
   }
 
-  .largest\(column\:gap\)-19 {
+  .\2xl\.gapColumn-19 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
   }
 
-  .largest\(column\:gap\)-20 {
+  .\2xl\.gapColumn-20 {
     -moz-column-gap: 4.25rem;
          column-gap: 4.25rem;
   }
 
-  .largest\(row\:gap\)-0 {
+  .\2xl\.gapRow-0 {
     row-gap: 0px;
   }
 
-  .largest\(row\:gap\)-1 {
+  .\2xl\.gapRow-1 {
     row-gap: 0.125rem;
   }
 
-  .largest\(row\:gap\)-2 {
+  .\2xl\.gapRow-2 {
     row-gap: 0.25rem;
   }
 
-  .largest\(row\:gap\)-3 {
+  .\2xl\.gapRow-3 {
     row-gap: 0.375rem;
   }
 
-  .largest\(row\:gap\)-4 {
+  .\2xl\.gapRow-4 {
     row-gap: 0.5rem;
   }
 
-  .largest\(row\:gap\)-5 {
+  .\2xl\.gapRow-5 {
     row-gap: 0.625rem;
   }
 
-  .largest\(row\:gap\)-6 {
+  .\2xl\.gapRow-6 {
     row-gap: 0.75rem;
   }
 
-  .largest\(row\:gap\)-7 {
+  .\2xl\.gapRow-7 {
     row-gap: 0.875rem;
   }
 
-  .largest\(row\:gap\)-8 {
+  .\2xl\.gapRow-8 {
     row-gap: 1rem;
   }
 
-  .largest\(row\:gap\)-9 {
+  .\2xl\.gapRow-9 {
     row-gap: 1.25rem;
   }
 
-  .largest\(row\:gap\)-10 {
+  .\2xl\.gapRow-10 {
     row-gap: 1.5rem;
   }
 
-  .largest\(row\:gap\)-11 {
+  .\2xl\.gapRow-11 {
     row-gap: 1.75rem;
   }
 
-  .largest\(row\:gap\)-12 {
+  .\2xl\.gapRow-12 {
     row-gap: 2rem;
   }
 
-  .largest\(row\:gap\)-13 {
+  .\2xl\.gapRow-13 {
     row-gap: 2.25rem;
   }
 
-  .largest\(row\:gap\)-14 {
+  .\2xl\.gapRow-14 {
     row-gap: 2.5rem;
   }
 
-  .largest\(row\:gap\)-15 {
+  .\2xl\.gapRow-15 {
     row-gap: 2.75rem;
   }
 
-  .largest\(row\:gap\)-15 {
+  .\2xl\.gapRow-15 {
     row-gap: 3rem;
   }
 
-  .largest\(row\:gap\)-16 {
+  .\2xl\.gapRow-16 {
     row-gap: 3.25rem;
   }
 
-  .largest\(row\:gap\)-17 {
+  .\2xl\.gapRow-17 {
     row-gap: 3.5rem;
   }
 
-  .largest\(row\:gap\)-18 {
+  .\2xl\.gapRow-18 {
     row-gap: 3.75rem;
   }
 
-  .largest\(row\:gap\)-19 {
+  .\2xl\.gapRow-19 {
     row-gap: 4rem;
   }
 
-  .largest\(row\:gap\)-20 {
+  .\2xl\.gapRow-20 {
     row-gap: 4.25rem;
   }
 
-  .largest\(grid-items\) {
+  .\2xl\.gridItems {
     justify-items: stretch;
   }
 
-  .largest\(stretch\:grid-items\) {
+  .\2xl\.gridItemsStretch {
     justify-items: stretch;
   }
 
-  .largest\(center\:grid-items\) {
+  .\2xl\.gridItemsCenter {
     justify-items: center;
   }
 
-  .largest\(start\:grid-items\) {
+  .\2xl\.gridItemsStart {
     justify-items: start;
   }
 
-  .largest\(end\:grid-items\) {
+  .\2xl\.gridItemsEnd {
     justify-items: end;
   }
 
-  .largest\(left\:grid-items\) {
+  .\2xl\.gridItemsLeft {
     justify-items: left;
   }
 
-  .largest\(right\:grid-items\) {
+  .\2xl\.gridItemsRight {
     justify-items: right;
   }
 
-  .largest\(baseline\:grid-items\) {
+  .\2xl\.gridItemsBaseline {
     justify-items: baseline;
   }
 
-  .largest\(grid-self\) {
+  .\2xl\.gridSelf {
     justify-self: stretch;
   }
 
-  .largest\(stretch\:grid-self\) {
+  .\2xl\.gridSelfStretch {
     justify-self: stretch;
   }
 
-  .largest\(center\:grid-self\) {
+  .\2xl\.gridSelfCenter {
     justify-self: center;
   }
 
-  .largest\(start\:grid-self\) {
+  .\2xl\.gridSelfStart {
     justify-self: start;
   }
 
-  .largest\(end\:grid-self\) {
+  .\2xl\.gridSelfEnd {
     justify-self: end;
   }
 
-  .largest\(left\:grid-self\) {
+  .\2xl\.gridSelfLeft {
     justify-self: left;
   }
 
-  .largest\(right\:grid-self\) {
+  .\2xl\.gridSelfRight {
     justify-self: right;
   }
 
-  .largest\(baseline\:grid-self\) {
+  .\2xl\.gridSelfBaseline {
     justify-self: baseline;
   }
 }
@@ -67399,141 +67596,141 @@ textarea.large\:input {
 }
 
 .overflow,
-.auto\:overflow {
+.overflowAuto {
   overflow: auto !important;
 }
 
-.overflow-x, .auto\:overflow-x {
+.overflowX, .overflowAutoX {
     overflow-x: auto !important;
   }
 
-.overflow-y, .auto\:overflow-y {
+.overflowY, .overflowAutoY {
     overflow-y: auto !important;
   }
 
-.hidden\:overflow {
+.overflowHidden {
   overflow: hidden !important;
 }
 
-.hidden\:overflow-x {
+.overflowHiddenX {
     overflow-x: hidden !important;
   }
 
-.hidden\:overflow-y {
+.overflowHiddenY {
     overflow-y: hidden !important;
   }
 
-.visible\:overflow {
+.overflowVisible {
   overflow: visible !important;
 }
 
-.visible\:overflow-x {
+.overflowVisibleX {
     overflow-x: visible !important;
   }
 
-.visible\:overflow-y {
+.overflowVisibleY {
     overflow-y: visible !important;
   }
 
-.scroll\:overflow {
+.overflowScroll {
   overflow: scroll !important;
 }
 
-.scroll\:overflow-x {
+.overflowScrollX {
     overflow-x: scroll !important;
   }
 
-.scroll\:overflow-y {
+.overflowScrollY {
     overflow-y: scroll !important;
   }
 
-.clip\:text {
+.txtClip {
   overflow: hidden;
   text-overflow: clip;
   white-space: nowrap;
 }
 
-.truncate\:text,
-.ellipsis\:text {
+.txtTruncate,
+.txtEllipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.less\:text {
+.txtLess {
   overflow: hidden;
   text-overflow: " [..]";
   white-space: nowrap;
 }
 
-.more\:text {
+.txtMore {
   overflow: hidden;
   text-overflow: clip;
   white-space: initial;
 }
 
 @media (min-width: 640px) {
-  .small\(overflow\),
-  .small\(auto\:overflow\) {
+  .xs\.overflow,
+  .xs\.overflowAuto {
     overflow: auto !important;
   }
-    .small\(overflow\)-x, .small\(auto\:overflow\)-x {
+    .xs\.overflowX, .xs\.overflowAutoX {
       overflow-x: auto !important;
     }
-    .small\(overflow\)-y, .small\(auto\:overflow\)-y {
+    .xs\.overflowY, .xs\.overflowAutoY {
       overflow-y: auto !important;
     }
 
-  .small\(hidden\:overflow\) {
+  .xs\.overflowHidden {
     overflow: hidden !important;
   }
-    .small\(hidden\:overflow\)-x {
+    .xs\.overflowHiddenX {
       overflow-x: hidden !important;
     }
-    .small\(hidden\:overflow\)-y {
+    .xs\.overflowHiddenY {
       overflow-y: hidden !important;
     }
 
-  .small\(visible\:overflow\) {
+  .xs\.overflowVisible {
     overflow: visible !important;
   }
-    .small\(visible\:overflow\)-x {
+    .xs\.overflowVisibleX {
       overflow-x: visible !important;
     }
-    .small\(visible\:overflow\)-y {
+    .xs\.overflowVisibleY {
       overflow-y: visible !important;
     }
 
-  .small\(scroll\:overflow\) {
+  .xs\.overflowScroll {
     overflow: scroll !important;
   }
-    .small\(scroll\:overflow\)-x {
+    .xs\.overflowScrollX {
       overflow-x: scroll !important;
     }
-    .small\(scroll\:overflow\)-y {
+    .xs\.overflowScrollY {
       overflow-y: scroll !important;
     }
 
-  .small\(clip\:text\) {
+  .xs\.txtClip {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .small\(truncate\:text\),
-  .small\(ellipsis\:text\) {
+  .xs\.txtTruncate,
+  .xs\.txtEllipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .small\(less\:text\) {
+  .xs\.txtLess {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .small\(more\:text\) {
+  .xs\.txtMore {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -67541,67 +67738,67 @@ textarea.large\:input {
 }
 
 @media (min-width: 768px) {
-  .medium\(overflow\),
-  .medium\(auto\:overflow\) {
+  .sm\.overflow,
+  .sm\.overflowAuto {
     overflow: auto !important;
   }
-    .medium\(overflow\)-x, .medium\(auto\:overflow\)-x {
+    .sm\.overflowX, .sm\.overflowAutoX {
       overflow-x: auto !important;
     }
-    .medium\(overflow\)-y, .medium\(auto\:overflow\)-y {
+    .sm\.overflowY, .sm\.overflowAutoY {
       overflow-y: auto !important;
     }
 
-  .medium\(hidden\:overflow\) {
+  .sm\.overflowHidden {
     overflow: hidden !important;
   }
-    .medium\(hidden\:overflow\)-x {
+    .sm\.overflowHiddenX {
       overflow-x: hidden !important;
     }
-    .medium\(hidden\:overflow\)-y {
+    .sm\.overflowHiddenY {
       overflow-y: hidden !important;
     }
 
-  .medium\(visible\:overflow\) {
+  .sm\.overflowVisible {
     overflow: visible !important;
   }
-    .medium\(visible\:overflow\)-x {
+    .sm\.overflowVisibleX {
       overflow-x: visible !important;
     }
-    .medium\(visible\:overflow\)-y {
+    .sm\.overflowVisibleY {
       overflow-y: visible !important;
     }
 
-  .medium\(scroll\:overflow\) {
+  .sm\.overflowScroll {
     overflow: scroll !important;
   }
-    .medium\(scroll\:overflow\)-x {
+    .sm\.overflowScrollX {
       overflow-x: scroll !important;
     }
-    .medium\(scroll\:overflow\)-y {
+    .sm\.overflowScrollY {
       overflow-y: scroll !important;
     }
 
-  .medium\(clip\:text\) {
+  .sm\.txtClip {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .medium\(truncate\:text\),
-  .medium\(ellipsis\:text\) {
+  .sm\.txtTruncate,
+  .sm\.txtEllipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .medium\(less\:text\) {
+  .sm\.txtLess {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .medium\(more\:text\) {
+  .sm\.txtMore {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -67609,67 +67806,67 @@ textarea.large\:input {
 }
 
 @media (min-width: 1024px) {
-  .large\(overflow\),
-  .large\(auto\:overflow\) {
+  .md\.overflow,
+  .md\.overflowAuto {
     overflow: auto !important;
   }
-    .large\(overflow\)-x, .large\(auto\:overflow\)-x {
+    .md\.overflowX, .md\.overflowAutoX {
       overflow-x: auto !important;
     }
-    .large\(overflow\)-y, .large\(auto\:overflow\)-y {
+    .md\.overflowY, .md\.overflowAutoY {
       overflow-y: auto !important;
     }
 
-  .large\(hidden\:overflow\) {
+  .md\.overflowHidden {
     overflow: hidden !important;
   }
-    .large\(hidden\:overflow\)-x {
+    .md\.overflowHiddenX {
       overflow-x: hidden !important;
     }
-    .large\(hidden\:overflow\)-y {
+    .md\.overflowHiddenY {
       overflow-y: hidden !important;
     }
 
-  .large\(visible\:overflow\) {
+  .md\.overflowVisible {
     overflow: visible !important;
   }
-    .large\(visible\:overflow\)-x {
+    .md\.overflowVisibleX {
       overflow-x: visible !important;
     }
-    .large\(visible\:overflow\)-y {
+    .md\.overflowVisibleY {
       overflow-y: visible !important;
     }
 
-  .large\(scroll\:overflow\) {
+  .md\.overflowScroll {
     overflow: scroll !important;
   }
-    .large\(scroll\:overflow\)-x {
+    .md\.overflowScrollX {
       overflow-x: scroll !important;
     }
-    .large\(scroll\:overflow\)-y {
+    .md\.overflowScrollY {
       overflow-y: scroll !important;
     }
 
-  .large\(clip\:text\) {
+  .md\.txtClip {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .large\(truncate\:text\),
-  .large\(ellipsis\:text\) {
+  .md\.txtTruncate,
+  .md\.txtEllipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .large\(less\:text\) {
+  .md\.txtLess {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .large\(more\:text\) {
+  .md\.txtMore {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -67677,67 +67874,67 @@ textarea.large\:input {
 }
 
 @media (min-width: 1280px) {
-  .larger\(overflow\),
-  .larger\(auto\:overflow\) {
+  .lg\.overflow,
+  .lg\.overflowAuto {
     overflow: auto !important;
   }
-    .larger\(overflow\)-x, .larger\(auto\:overflow\)-x {
+    .lg\.overflowX, .lg\.overflowAutoX {
       overflow-x: auto !important;
     }
-    .larger\(overflow\)-y, .larger\(auto\:overflow\)-y {
+    .lg\.overflowY, .lg\.overflowAutoY {
       overflow-y: auto !important;
     }
 
-  .larger\(hidden\:overflow\) {
+  .lg\.overflowHidden {
     overflow: hidden !important;
   }
-    .larger\(hidden\:overflow\)-x {
+    .lg\.overflowHiddenX {
       overflow-x: hidden !important;
     }
-    .larger\(hidden\:overflow\)-y {
+    .lg\.overflowHiddenY {
       overflow-y: hidden !important;
     }
 
-  .larger\(visible\:overflow\) {
+  .lg\.overflowVisible {
     overflow: visible !important;
   }
-    .larger\(visible\:overflow\)-x {
+    .lg\.overflowVisibleX {
       overflow-x: visible !important;
     }
-    .larger\(visible\:overflow\)-y {
+    .lg\.overflowVisibleY {
       overflow-y: visible !important;
     }
 
-  .larger\(scroll\:overflow\) {
+  .lg\.overflowScroll {
     overflow: scroll !important;
   }
-    .larger\(scroll\:overflow\)-x {
+    .lg\.overflowScrollX {
       overflow-x: scroll !important;
     }
-    .larger\(scroll\:overflow\)-y {
+    .lg\.overflowScrollY {
       overflow-y: scroll !important;
     }
 
-  .larger\(clip\:text\) {
+  .lg\.txtClip {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .larger\(truncate\:text\),
-  .larger\(ellipsis\:text\) {
+  .lg\.txtTruncate,
+  .lg\.txtEllipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .larger\(less\:text\) {
+  .lg\.txtLess {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .larger\(more\:text\) {
+  .lg\.txtMore {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -67745,67 +67942,135 @@ textarea.large\:input {
 }
 
 @media (min-width: 1536px) {
-  .largest\(overflow\),
-  .largest\(auto\:overflow\) {
+  .xl\.overflow,
+  .xl\.overflowAuto {
     overflow: auto !important;
   }
-    .largest\(overflow\)-x, .largest\(auto\:overflow\)-x {
+    .xl\.overflowX, .xl\.overflowAutoX {
       overflow-x: auto !important;
     }
-    .largest\(overflow\)-y, .largest\(auto\:overflow\)-y {
+    .xl\.overflowY, .xl\.overflowAutoY {
       overflow-y: auto !important;
     }
 
-  .largest\(hidden\:overflow\) {
+  .xl\.overflowHidden {
     overflow: hidden !important;
   }
-    .largest\(hidden\:overflow\)-x {
+    .xl\.overflowHiddenX {
       overflow-x: hidden !important;
     }
-    .largest\(hidden\:overflow\)-y {
+    .xl\.overflowHiddenY {
       overflow-y: hidden !important;
     }
 
-  .largest\(visible\:overflow\) {
+  .xl\.overflowVisible {
     overflow: visible !important;
   }
-    .largest\(visible\:overflow\)-x {
+    .xl\.overflowVisibleX {
       overflow-x: visible !important;
     }
-    .largest\(visible\:overflow\)-y {
+    .xl\.overflowVisibleY {
       overflow-y: visible !important;
     }
 
-  .largest\(scroll\:overflow\) {
+  .xl\.overflowScroll {
     overflow: scroll !important;
   }
-    .largest\(scroll\:overflow\)-x {
+    .xl\.overflowScrollX {
       overflow-x: scroll !important;
     }
-    .largest\(scroll\:overflow\)-y {
+    .xl\.overflowScrollY {
       overflow-y: scroll !important;
     }
 
-  .largest\(clip\:text\) {
+  .xl\.txtClip {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
   }
 
-  .largest\(truncate\:text\),
-  .largest\(ellipsis\:text\) {
+  .xl\.txtTruncate,
+  .xl\.txtEllipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .largest\(less\:text\) {
+  .xl\.txtLess {
     overflow: hidden;
     text-overflow: " [..]";
     white-space: nowrap;
   }
 
-  .largest\(more\:text\) {
+  .xl\.txtMore {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: initial;
+  }
+}
+
+@media (min-width: 1920px) {
+  .\2xl\.overflow,
+  .\2xl\.overflowAuto {
+    overflow: auto !important;
+  }
+    .\2xl\.overflowX, .\2xl\.overflowAutoX {
+      overflow-x: auto !important;
+    }
+    .\2xl\.overflowY, .\2xl\.overflowAutoY {
+      overflow-y: auto !important;
+    }
+
+  .\2xl\.overflowHidden {
+    overflow: hidden !important;
+  }
+    .\2xl\.overflowHiddenX {
+      overflow-x: hidden !important;
+    }
+    .\2xl\.overflowHiddenY {
+      overflow-y: hidden !important;
+    }
+
+  .\2xl\.overflowVisible {
+    overflow: visible !important;
+  }
+    .\2xl\.overflowVisibleX {
+      overflow-x: visible !important;
+    }
+    .\2xl\.overflowVisibleY {
+      overflow-y: visible !important;
+    }
+
+  .\2xl\.overflowScroll {
+    overflow: scroll !important;
+  }
+    .\2xl\.overflowScrollX {
+      overflow-x: scroll !important;
+    }
+    .\2xl\.overflowScrollY {
+      overflow-y: scroll !important;
+    }
+
+  .\2xl\.txtClip {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+
+  .\2xl\.txtTruncate,
+  .\2xl\.txtEllipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .\2xl\.txtLess {
+    overflow: hidden;
+    text-overflow: " [..]";
+    white-space: nowrap;
+  }
+
+  .\2xl\.txtMore {
     overflow: hidden;
     text-overflow: clip;
     white-space: initial;
@@ -68032,40 +68297,220 @@ textarea.large\:input {
     }
 }
 
-.shadow {
+.sd {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-.shadow-0 {
+.sd-0 {
   box-shadow: none !important;
 }
 
-.shadow-1 {
+.sd-1 {
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
-.shadow-2 {
+.sd-2 {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
 
-.shadow-3 {
+.sd-3 {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
-.shadow-4 {
+.sd-4 {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 
-.shadow-5 {
+.sd-5 {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
-.shadow-6 {
+.sd-6 {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
-.inset\:shadow {
+.sdInset {
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+@media (min-width: 640px) {
+  .xs\.sd {
+    box-shadow: var(--sd, 0 0.5rem 1rem rgba(0, 0, 0, 0.15)) !important;
+  }
+  .xs\.sd-0 {
+    box-shadow: none !important;
+  }
+  .xs\.sd-1 {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  }
+  .xs\.sd-2 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  }
+  .xs\.sd-3 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  }
+  .xs\.sd-4 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  }
+  .xs\.sd-5 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+  .xs\.sd-6 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+  .xs\.sdInset {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+}
+
+@media (min-width: 768px) {
+  .sm\.sd {
+    box-shadow: var(--sd, 0 0.5rem 1rem rgba(0, 0, 0, 0.15)) !important;
+  }
+  .sm\.sd-0 {
+    box-shadow: none !important;
+  }
+  .sm\.sd-1 {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  }
+  .sm\.sd-2 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  }
+  .sm\.sd-3 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  }
+  .sm\.sd-4 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  }
+  .sm\.sd-5 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+  .sm\.sd-6 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+  .sm\.sdInset {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+}
+
+@media (min-width: 1024px) {
+  .md\.sd {
+    box-shadow: var(--sd, 0 0.5rem 1rem rgba(0, 0, 0, 0.15)) !important;
+  }
+  .md\.sd-0 {
+    box-shadow: none !important;
+  }
+  .md\.sd-1 {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  }
+  .md\.sd-2 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  }
+  .md\.sd-3 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  }
+  .md\.sd-4 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  }
+  .md\.sd-5 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+  .md\.sd-6 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+  .md\.sdInset {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+}
+
+@media (min-width: 1280px) {
+  .lg\.sd {
+    box-shadow: var(--sd, 0 0.5rem 1rem rgba(0, 0, 0, 0.15)) !important;
+  }
+  .lg\.sd-0 {
+    box-shadow: none !important;
+  }
+  .lg\.sd-1 {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  }
+  .lg\.sd-2 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  }
+  .lg\.sd-3 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  }
+  .lg\.sd-4 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  }
+  .lg\.sd-5 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+  .lg\.sd-6 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+  .lg\.sdInset {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+}
+
+@media (min-width: 1536px) {
+  .xl\.sd {
+    box-shadow: var(--sd, 0 0.5rem 1rem rgba(0, 0, 0, 0.15)) !important;
+  }
+  .xl\.sd-0 {
+    box-shadow: none !important;
+  }
+  .xl\.sd-1 {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  }
+  .xl\.sd-2 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  }
+  .xl\.sd-3 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  }
+  .xl\.sd-4 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  }
+  .xl\.sd-5 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+  .xl\.sd-6 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+  .xl\.sdInset {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+}
+
+@media (min-width: 1920px) {
+  .\2xl\.sd {
+    box-shadow: var(--sd, 0 0.5rem 1rem rgba(0, 0, 0, 0.15)) !important;
+  }
+  .\2xl\.sd-0 {
+    box-shadow: none !important;
+  }
+  .\2xl\.sd-1 {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  }
+  .\2xl\.sd-2 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  }
+  .\2xl\.sd-3 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  }
+  .\2xl\.sd-4 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  }
+  .\2xl\.sd-5 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+  .\2xl\.sd-6 {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+  .\2xl\.sdInset {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
 }
 
 .bg {
