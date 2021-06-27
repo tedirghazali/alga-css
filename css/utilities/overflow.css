@@ -1,40 +1,54 @@
-.overflow,
-.overflowAuto { 
-  overflow: auto !important;
-  &X {
-    overflow-x: auto !important;
+.of {
+  &Auto {
+    overflow: auto !important;
   }
-  &Y {
-    overflow-y: auto !important;
+  
+  &Hidden {
+    overflow: hidden !important;
   }
-}
+  
+  &Visible {
+    overflow: visible !important;
+  }
+  
+  &Scroll {
+    overflow: scroll !important;
+  }
 
-.overflowHidden { 
-  overflow: hidden !important;
   &X {
-    overflow-x: hidden !important;
+    &Auto {
+      overflow-x: auto !important;
+    }
+    
+    &Hidden {
+      overflow-x: hidden !important;
+    }
+    
+    &Visible {
+      overflow-x: visible !important;
+    }
+    
+    &Scroll {
+      overflow-x: scroll !important;
+    }
   }
+  
   &Y {
-    overflow-y: hidden !important;
-  }
-}
-
-.overflowVisible { 
-  overflow: visible !important;
-  &X {
-    overflow-x: visible !important;
-  }
-  &Y {
-    overflow-y: visible !important;
-  }
-}
-.overflowScroll { 
-  overflow: scroll !important;
-  &X {
-    overflow-x: scroll !important;
-  }
-  &Y {
-    overflow-y: scroll !important;
+    &Auto {
+      overflow-y: auto !important;
+    }
+    
+    &Hidden {
+      overflow-y: hidden !important;
+    }
+    
+    &Visible {
+      overflow-y: visible !important;
+    }
+    
+    &Scroll {
+      overflow-y: scroll !important;
+    }
   }
 }
 
@@ -64,46 +78,8 @@
 }
 
 @media (min-width: 640px) {
-  .xs\.overflow,
-  .xs\.overflowAuto { 
-    overflow: auto !important;
-    &X {
-      overflow-x: auto !important;
-    }
-    &Y {
-      overflow-y: auto !important;
-    }
-  }
-
-  .xs\.overflowHidden { 
-    overflow: hidden !important;
-    &X {
-      overflow-x: hidden !important;
-    }
-    &Y {
-      overflow-y: hidden !important;
-    }
-  }
-
-  .xs\.overflowVisible { 
-    overflow: visible !important;
-    &X {
-      overflow-x: visible !important;
-    }
-    &Y {
-      overflow-y: visible !important;
-    }
-  }
-  .xs\.overflowScroll { 
-    overflow: scroll !important;
-    &X {
-      overflow-x: scroll !important;
-    }
-    &Y {
-      overflow-y: scroll !important;
-    }
-  }
-
+  @mixin overflow-mixin xs;
+  
   .xs\.txtClip {
     overflow: hidden;
     text-overflow: clip;
@@ -131,45 +107,7 @@
 }
 
 @media (min-width: 768px) {
-  .sm\.overflow,
-  .sm\.overflowAuto { 
-    overflow: auto !important;
-    &X {
-      overflow-x: auto !important;
-    }
-    &Y {
-      overflow-y: auto !important;
-    }
-  }
-
-  .sm\.overflowHidden { 
-    overflow: hidden !important;
-    &X {
-      overflow-x: hidden !important;
-    }
-    &Y {
-      overflow-y: hidden !important;
-    }
-  }
-
-  .sm\.overflowVisible { 
-    overflow: visible !important;
-    &X {
-      overflow-x: visible !important;
-    }
-    &Y {
-      overflow-y: visible !important;
-    }
-  }
-  .sm\.overflowScroll { 
-    overflow: scroll !important;
-    &X {
-      overflow-x: scroll !important;
-    }
-    &Y {
-      overflow-y: scroll !important;
-    }
-  }
+  @mixin overflow-mixin sm;
 
   .sm\.txtClip {
     overflow: hidden;
@@ -198,45 +136,7 @@
 }
 
 @media (min-width: 1024px) {
-  .md\.overflow,
-  .md\.overflowAuto { 
-    overflow: auto !important;
-    &X {
-      overflow-x: auto !important;
-    }
-    &Y {
-      overflow-y: auto !important;
-    }
-  }
-
-  .md\.overflowHidden { 
-    overflow: hidden !important;
-    &X {
-      overflow-x: hidden !important;
-    }
-    &Y {
-      overflow-y: hidden !important;
-    }
-  }
-
-  .md\.overflowVisible { 
-    overflow: visible !important;
-    &X {
-      overflow-x: visible !important;
-    }
-    &Y {
-      overflow-y: visible !important;
-    }
-  }
-  .md\.overflowScroll { 
-    overflow: scroll !important;
-    &X {
-      overflow-x: scroll !important;
-    }
-    &Y {
-      overflow-y: scroll !important;
-    }
-  }
+  @mixin overflow-mixin md;
 
   .md\.txtClip {
     overflow: hidden;
@@ -265,45 +165,7 @@
 }
 
 @media (min-width: 1280px) {
-  .lg\.overflow,
-  .lg\.overflowAuto { 
-    overflow: auto !important;
-    &X {
-      overflow-x: auto !important;
-    }
-    &Y {
-      overflow-y: auto !important;
-    }
-  }
-
-  .lg\.overflowHidden { 
-    overflow: hidden !important;
-    &X {
-      overflow-x: hidden !important;
-    }
-    &Y {
-      overflow-y: hidden !important;
-    }
-  }
-
-  .lg\.overflowVisible { 
-    overflow: visible !important;
-    &X {
-      overflow-x: visible !important;
-    }
-    &Y {
-      overflow-y: visible !important;
-    }
-  }
-  .lg\.overflowScroll { 
-    overflow: scroll !important;
-    &X {
-      overflow-x: scroll !important;
-    }
-    &Y {
-      overflow-y: scroll !important;
-    }
-  }
+  @mixin overflow-mixin lg;
 
   .lg\.txtClip {
     overflow: hidden;
@@ -332,45 +194,7 @@
 }
 
 @media (min-width: 1536px) {
-  .xl\.overflow,
-  .xl\.overflowAuto { 
-    overflow: auto !important;
-    &X {
-      overflow-x: auto !important;
-    }
-    &Y {
-      overflow-y: auto !important;
-    }
-  }
-
-  .xl\.overflowHidden { 
-    overflow: hidden !important;
-    &X {
-      overflow-x: hidden !important;
-    }
-    &Y {
-      overflow-y: hidden !important;
-    }
-  }
-
-  .xl\.overflowVisible { 
-    overflow: visible !important;
-    &X {
-      overflow-x: visible !important;
-    }
-    &Y {
-      overflow-y: visible !important;
-    }
-  }
-  .xl\.overflowScroll { 
-    overflow: scroll !important;
-    &X {
-      overflow-x: scroll !important;
-    }
-    &Y {
-      overflow-y: scroll !important;
-    }
-  }
+  @mixin overflow-mixin xl;
 
   .xl\.txtClip {
     overflow: hidden;
@@ -399,45 +223,7 @@
 }
 
 @media (min-width: 1920px) {
-  .\2xl\.overflow,
-  .\2xl\.overflowAuto { 
-    overflow: auto !important;
-    &X {
-      overflow-x: auto !important;
-    }
-    &Y {
-      overflow-y: auto !important;
-    }
-  }
-
-  .\2xl\.overflowHidden { 
-    overflow: hidden !important;
-    &X {
-      overflow-x: hidden !important;
-    }
-    &Y {
-      overflow-y: hidden !important;
-    }
-  }
-
-  .\2xl\.overflowVisible { 
-    overflow: visible !important;
-    &X {
-      overflow-x: visible !important;
-    }
-    &Y {
-      overflow-y: visible !important;
-    }
-  }
-  .\2xl\.overflowScroll { 
-    overflow: scroll !important;
-    &X {
-      overflow-x: scroll !important;
-    }
-    &Y {
-      overflow-y: scroll !important;
-    }
-  }
+  @mixin overflow-mixin \2xl;
 
   .\2xl\.txtClip {
     overflow: hidden;

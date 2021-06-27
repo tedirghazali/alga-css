@@ -18,9 +18,9 @@
 @mixin color-mixin Teal, teal, white;
 @mixin color-mixin Cyan, cyan, white;
 @mixin color-mixin Gray, gray, black;
-@mixin color-mixin Transparent, transparent, black;
-@mixin color-mixin Current, current, black;
-@mixin color-mixin Color, color, color;
+@mixin color-empty Transparent, transparent, black;
+@mixin color-empty Current, current, black;
+@mixin color-empty Color, color, color;
 
 /* All hover colors */
 
@@ -44,9 +44,9 @@
 @mixin color-state Teal, hover, teal, white;
 @mixin color-state Cyan, hover, cyan, white;
 @mixin color-state Gray, hover, gray, black;
-@mixin color-state Transparent, hover, transparent, black;
+/*@mixin color-state Transparent, hover, transparent, black;
 @mixin color-state Current, hover, current, black;
-@mixin color-state Color, hover, color, color;
+@mixin color-state Color, hover, color, color;*/
 
 /* All focus colors */
 
@@ -70,9 +70,9 @@
 @mixin color-state Teal, focus, teal, white;
 @mixin color-state Cyan, focus, cyan, white;
 @mixin color-state Gray, focus, gray, black;
-@mixin color-state Transparent, focus, transparent, black;
+/*@mixin color-state Transparent, focus, transparent, black;
 @mixin color-state Current, focus, current, black;
-@mixin color-state Color, focus, color, color;
+@mixin color-state Color, focus, color, color;*/
 
 @mixin color-mixin Bright, bright, black;
 @mixin color-mixin Brighter, brighter, black;

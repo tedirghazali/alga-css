@@ -10,6 +10,11 @@
 @mixin border-style .bdBottom, border-bottom;
 @mixin border-style .bdLeft, border-left;
 
+@mixin border-axis .bdX, border-left, border-right;
+@mixin border-axis .bdY, border-top, border-bottom;
+@mixin border-axis .bdStart, border-top, border-left;
+@mixin border-axis .bdEnd, border-right, border-bottom;
+
 @media (min-width: 640px) {
   @mixin border-mixin .xs\.bd, border;
   @mixin border-mixin .xs\.bdTop, border-top;
@@ -22,6 +27,11 @@
   @mixin border-style .xs\.bdRight, border-right;
   @mixin border-style .xs\.bdBottom, border-bottom;
   @mixin border-style .xs\.bdLeft, border-left;
+  
+  @mixin border-axis .xs\.bdX, border-left, border-right;
+  @mixin border-axis .xs\.bdY, border-top, border-bottom;
+  @mixin border-axis .xs\.bdStart, border-top, border-left;
+  @mixin border-axis .xs\.bdEnd, border-right, border-bottom;
 }
 
 @media (min-width: 768px) {
@@ -36,6 +46,11 @@
   @mixin border-style .sm\.bdRight, border-right;
   @mixin border-style .sm\.bdBottom, border-bottom;
   @mixin border-style .sm\.bdLeft, border-left;
+  
+  @mixin border-axis .sm\.bdX, border-left, border-right;
+  @mixin border-axis .sm\.bdY, border-top, border-bottom;
+  @mixin border-axis .sm\.bdStart, border-top, border-left;
+  @mixin border-axis .sm\.bdEnd, border-right, border-bottom;
 }
 
 @media (min-width: 1024px) {
@@ -50,6 +65,11 @@
   @mixin border-style .md\.bdRight, border-right;
   @mixin border-style .md\.bdBottom, border-bottom;
   @mixin border-style .md\.bdLeft, border-left;
+  
+  @mixin border-axis .md\.bdX, border-left, border-right;
+  @mixin border-axis .md\.bdY, border-top, border-bottom;
+  @mixin border-axis .md\.bdStart, border-top, border-left;
+  @mixin border-axis .md\.bdEnd, border-right, border-bottom;
 }
 
 @media (min-width: 1280px) {
@@ -64,6 +84,11 @@
   @mixin border-style .lg\.bdRight, border-right;
   @mixin border-style .lg\.bdBottom, border-bottom;
   @mixin border-style .lg\.bdLeft, border-left;
+  
+  @mixin border-axis .lg\.bdX, border-left, border-right;
+  @mixin border-axis .lg\.bdY, border-top, border-bottom;
+  @mixin border-axis .lg\.bdStart, border-top, border-left;
+  @mixin border-axis .lg\.bdEnd, border-right, border-bottom;
 }
 
 @media (min-width: 1536px) {
@@ -78,6 +103,11 @@
   @mixin border-style .xl\.bdRight, border-right;
   @mixin border-style .xl\.bdBottom, border-bottom;
   @mixin border-style .xl\.bdLeft, border-left;
+  
+  @mixin border-axis .xl\.bdX, border-left, border-right;
+  @mixin border-axis .xl\.bdY, border-top, border-bottom;
+  @mixin border-axis .xl\.bdStart, border-top, border-left;
+  @mixin border-axis .xl\.bdEnd, border-right, border-bottom;
 }
 
 @media (min-width: 1920px) {
@@ -92,4 +122,9 @@
   @mixin border-style .\2xl\.bdRight, border-right;
   @mixin border-style .\2xl\.bdBottom, border-bottom;
   @mixin border-style .\2xl\.bdLeft, border-left;
+  
+  @mixin border-axis .\2xl\.bdX, border-left, border-right;
+  @mixin border-axis .\2xl\.bdY, border-top, border-bottom;
+  @mixin border-axis .\2xl\.bdStart, border-top, border-left;
+  @mixin border-axis .\2xl\.bdEnd, border-right, border-bottom;
 }

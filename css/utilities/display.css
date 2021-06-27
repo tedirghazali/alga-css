@@ -1,670 +1,758 @@
-.d\:none,
+.dpNone,
 .hidden { 
   display: none !important; 
 }
 
-.d\:inline,
+.dpInline,
 .inline { 
   display: inline !important; 
 }
 
-.d\:block,
+.dpBlock,
 .block { 
   display: block !important; 
 }
 
-.d\:inline-block,
-.inline\:block { 
+.dpInlineBlock,
+.inlineBlock { 
   display: inline-block !important; 
 }
 
-.d\:table {
+.dpTable {
   display: table !important;
 }
 
-.d\:inline-table,
-.inline\:table { 
+.dpInlineTable,
+.inlineTable { 
   display: inline-table !important; 
 }
 
-.d\:table-body,
-.body\:table {
+.dpTableBody,
+.tableBody {
   display: table-row-group !important;
 }
 
-.d\:table-header,
-.header\:table {
+.dpTableHeader,
+.tableHeader {
   display: table-header-group !important;
 }
 
-.d\:table-footer,
-.footer\:table {
+.dpTableFooter,
+.tableFooter {
   display: table-footer-group !important;
 }
 
-.d\:table-caption,
-.caption\:table {
+.dpTableCaption,
+.tableCaption {
   display: table-caption !important;
 }
 
-.d\:table-row,
-.row\:table {
+.dpTableRow,
+.tableRow {
   display: table-row !important;
 }
 
-.d\:table-cell,
-.cell\:table {
+.dpTableCell,
+.tableCell {
   display: table-cell !important;
 }
 
-.d\:table-col,
-.col\:table {
+.dpTableColumn,
+.tableColumn {
   display: table-column !important;
 }
 
-.d\:table-colgroup,
-.colgroup\:table {
+.dpTableColumnGroup,
+.tableColumnGroup {
   display: table-column-group !important;
 }
 
-.d\:flex,
+.dpFlex,
 .flex { 
   display: flex !important; 
 }
 
-.d\:inline-flex,
-.inline\:flex { 
+.dpInlineFlex,
+.inlineFlex { 
   display: inline-flex !important; 
 }
 
-.d\:grid,
+.dpGrid,
 .grid {
   display: grid !important;
 }
 
-.d\:inline-grid,
-.inline\:grid {
+.dpInlineGrid,
+.inlineGrid {
   display: inline-grid !important;
 }
 
-.d\:list-item,
-.list\:item {
+.dpListItem {
   display: list-item !important;
 }
 
 @media (min-width: 640px) {
-  .small\(d\:none\)
-  .small\(hidden\) { 
+  .xs\.dpNone
+  .xs\.hidden { 
     display: none !important; 
   }
   
-  .small\(d\:inline\),
-  .small\(inline\) { 
+  .xs\.dpInline,
+  .xs\.inline { 
     display: inline !important; 
   }
   
-  .small\(d\:block\),
-  .small\(block\) { 
+  .xs\.dpBlock,
+  .xs\.block { 
     display: block !important; 
   }
   
-  .small\(d\:inline-block\),
-  .small\(inline\:block\) { 
+  .xs\.dpInlineBlock,
+  .xs\.inlineBlock { 
     display: inline-block !important; 
   }
   
-  .small\(d\:table\) {
+  .xs\.dpTable {
     display: table !important;
   }
 
-  .small\(d\:inline-table\),
-  .small\(inline\:table\) { 
+  .xs\.dpInlineTable,
+  .xs\.inlineTable { 
     display: inline-table !important; 
   }
   
-  .small\(d\:table-body\),
-  .small\(body\:table\) {
+  .xs\.dpTableBody,
+  .xs\.tableBody {
     display: table-row-group !important;
   }
 
-  .small\(d\:table-header\),
-  .small\(header\:table\) {
+  .xs\.dpTableHeader,
+  .xs\.tableHeader {
     display: table-header-group !important;
   }
 
-  .small\(d\:table-footer\),
-  .small\(footer\:table\) {
+  .xs\.dpTableFooter,
+  .xs\.tableFooter {
     display: table-footer-group !important;
   }
 
-  .small\(d\:table-caption\),
-  .small\(caption\:table\) {
+  .xs\.dpTableCaption,
+  .xs\.tableCaption {
     display: table-caption !important;
   }
 
-  .small\(d\:table-row\),
-  .small\(row\:table\) {
+  .xs\.dpTableRow,
+  .xs\.tableRow {
     display: table-row !important;
   }
 
-  .small\(d\:table-cell\),
-  .small\(cell\:table\) {
+  .xs\.dpTableCell,
+  .xs\.tableCell {
     display: table-cell !important;
   }
   
-  .small\(d\:table-col\),
-  .small\(col\:table\) {
+  .xs\.dpTableColumn,
+  .xs\.tableColumn {
     display: table-column !important;
   }
   
-  .small\(d\:table-colgroup\),
-  .small\(colgroup\:table\) {
+  .xs\.dpTableColumnGroup,
+  .xs\.tableColumnGroup {
     display: table-column-group !important;
   }
   
-  .small\(d\:flex\),
-  .small\(flex\) { 
+  .xs\.dpFlex,
+  .xs\.flex { 
     display: flex !important; 
   }
 
-  .small\(d\:inline-flex\),
-  .small\(inline\:flex\) { 
+  .xs\.dpInlineFlex,
+  .xs\.inlineFlex { 
     display: inline-flex !important; 
   }
   
-  .small\(d\:grid\),
-  .small\(grid\) {
+  .xs\.dpGrid,
+  .xs\.grid {
     display: grid !important;
   }
   
-  .small\(d\:inline-grid\),
-  .small\(inline\:grid\) {
+  .xs\.dpInlineGrid,
+  .xs\.inlineGrid {
     display: inline-grid !important;
   }
   
-  .small\(d\:list-item\),
-  .small\(list\:item\) {
+  .xs\.dpListItem {
     display: list-item !important;
   }
 }
 
 @media (min-width: 768px) {
-  .medium\(d\:none\)
-  .medium\(hidden\) { 
+  .sm\.dpNone
+  .sm\.hidden { 
     display: none !important; 
   }
   
-  .medium\(d\:inline\),
-  .medium\(inline\) { 
+  .sm\.dpInline,
+  .sm\.inline { 
     display: inline !important; 
   }
   
-  .medium\(d\:block\),
-  .medium\(block\) { 
+  .sm\.dpBlock,
+  .sm\.block { 
     display: block !important; 
   }
   
-  .medium\(d\:inline-block\),
-  .medium\(inline\:block\) { 
+  .sm\.dpInlineBlock,
+  .sm\.inlineBlock { 
     display: inline-block !important; 
   }
   
-  .medium\(d\:table\) {
+  .small\\.dpTable {
     display: table !important;
   }
 
-  .medium\(d\:inline-table\),
-  .medium\(inline\:table\) { 
+  .sm\.dpInlineTable,
+  .sm\.inlineTable { 
     display: inline-table !important; 
   }
   
-  .medium\(d\:table-body\),
-  .medium\(body\:table\) {
+  .sm\.dpTableBody,
+  .sm\.tableBody {
     display: table-row-group !important;
   }
 
-  .medium\(d\:table-header\),
-  .medium\(header\:table\) {
+  .sm\.dpTableHeader,
+  .sm\.tableHeader {
     display: table-header-group !important;
   }
 
-  .medium\(d\:table-footer\),
-  .medium\(footer\:table\) {
+  .sm\.dpTableFooter,
+  .sm\.tableFooter {
     display: table-footer-group !important;
   }
 
-  .medium\(d\:table-caption\),
-  .medium\(caption\:table\) {
+  .sm\.dpTableCaption,
+  .sm\.tableCaption {
     display: table-caption !important;
   }
 
-  .medium\(d\:table-row\),
-  .medium\(row\:table\) {
+  .sm\.dpTableRow,
+  .sm\.tableRow {
     display: table-row !important;
   }
 
-  .medium\(d\:table-cell\),
-  .medium\(cell\:table\) {
+  .sm\.dpTableCell,
+  .sm\.tableCell {
     display: table-cell !important;
   }
   
-  .medium\(d\:table-col\),
-  .medium\(col\:table\) {
+  .sm\.dpTableColumn,
+  .sm\.tableColumn {
     display: table-column !important;
   }
   
-  .medium\(d\:table-colgroup\),
-  .medium\(colgroup\:table\) {
+  .sm\.dpTableColumnGroup,
+  .sm\.tableColumnGroup {
     display: table-column-group !important;
   }
   
-  .medium\(d\:flex\),
-  .medium\(flex\) { 
+  .sm\.dpFlex,
+  .sm\.flex { 
     display: flex !important; 
   }
 
-  .medium\(d\:inline-flex\),
-  .medium\(inline\:flex\) { 
+  .sm\.dpInlineFlex,
+  .sm\.inlineFlex { 
     display: inline-flex !important; 
   }
   
-  .medium\(d\:grid\),
-  .medium\(grid\) {
+  .sm\.dpGrid,
+  .sm\.grid {
     display: grid !important;
   }
   
-  .medium\(d\:inline-grid\),
-  .medium\(inline\:grid\) {
+  .sm\.dpInlineGrid,
+  .sm\.inlineGrid {
     display: inline-grid !important;
   }
   
-  .medium\(d\:list-item\),
-  .medium\(list\:item\) {
+  .sm\.dpListItem {
     display: list-item !important;
   }
 }
 
 @media (min-width: 1024px) {
-  .large\(d\:none\)
-  .large\(hidden\) { 
+  .md\.dpNone
+  .md\.hidden { 
     display: none !important; 
   }
   
-  .large\(d\:inline\),
-  .large\(inline\) { 
+  .md\.dpInline,
+  .md\.inline { 
     display: inline !important; 
   }
   
-  .large\(d\:block\),
-  .large\(block\) { 
+  .md\.dpBlock,
+  .md\.block { 
     display: block !important; 
   }
   
-  .large\(d\:inline-block\),
-  .large\(inline\:block\) { 
+  .md\.dpInlineBlock,
+  .md\.inlineBlock { 
     display: inline-block !important; 
   }
   
-  .large\(d\:table\) {
+  .medium\\.dpTable {
     display: table !important;
   }
 
-  .large\(d\:inline-table\),
-  .large\(inline\:table\) { 
+  .md\.dpInlineTable,
+  .md\.inlineTable { 
     display: inline-table !important; 
   }
   
-  .large\(d\:table-body\),
-  .large\(body\:table\) {
+  .md\.dpTableBody,
+  .md\.tableBody {
     display: table-row-group !important;
   }
 
-  .large\(d\:table-header\),
-  .large\(header\:table\) {
+  .md\.dpTableHeader,
+  .md\.tableHeader {
     display: table-header-group !important;
   }
 
-  .large\(d\:table-footer\),
-  .large\(footer\:table\) {
+  .md\.dpTableFooter,
+  .md\.tableFooter {
     display: table-footer-group !important;
   }
 
-  .large\(d\:table-caption\),
-  .large\(caption\:table\) {
+  .md\.dpTableCaption,
+  .md\.tableCaption {
     display: table-caption !important;
   }
 
-  .large\(d\:table-row\),
-  .large\(row\:table\) {
+  .md\.dpTableRow,
+  .md\.tableRow {
     display: table-row !important;
   }
 
-  .large\(d\:table-cell\),
-  .large\(cell\:table\) {
+  .md\.dpTableCell,
+  .md\.tableCell {
     display: table-cell !important;
   }
   
-  .large\(d\:table-col\),
-  .large\(col\:table\) {
+  .md\.dpTableColumn,
+  .md\.tableColumn {
     display: table-column !important;
   }
   
-  .large\(d\:table-colgroup\),
-  .large\(colgroup\:table\) {
+  .md\.dpTableColumnGroup,
+  .md\.tableColumnGroup {
     display: table-column-group !important;
   }
   
-  .large\(d\:flex\),
-  .large\(flex\) { 
+  .md\.dpFlex,
+  .md\.flex { 
     display: flex !important; 
   }
 
-  .large\(d\:inline-flex\),
-  .large\(inline\:flex\) { 
+  .md\.dpInlineFlex,
+  .md\.inlineFlex { 
     display: inline-flex !important; 
   }
   
-  .large\(d\:grid\),
-  .large\(grid\) {
+  .md\.dpGrid,
+  .md\.grid {
     display: grid !important;
   }
   
-  .large\(d\:inline-grid\),
-  .large\(inline\:grid\) {
+  .md\.dpInlineGrid,
+  .md\.inlineGrid {
     display: inline-grid !important;
   }
   
-  .large\(d\:list-item\),
-  .large\(list\:item\) {
+  .md\.dpListItem {
     display: list-item !important;
   }
 }
 
 @media (min-width: 1280px) {
-  .larger\(d\:none\)
-  .larger\(hidden\) { 
+  .lg\.dpNone
+  .lg\.hidden { 
     display: none !important; 
   }
   
-  .larger\(d\:inline\),
-  .larger\(inline\) { 
+  .lg\.dpInline,
+  .lg\.inline { 
     display: inline !important; 
   }
   
-  .larger\(d\:block\),
-  .larger\(block\) { 
+  .lg\.dpBlock,
+  .lg\.block { 
     display: block !important; 
   }
   
-  .larger\(d\:inline-block\),
-  .larger\(inline\:block\) { 
+  .lg\.dpInlineBlock,
+  .lg\.inlineBlock { 
     display: inline-block !important; 
   }
   
-  .larger\(d\:table\) {
+  .large\\.dpTable {
     display: table !important;
   }
 
-  .larger\(d\:inline-table\),
-  .larger\(inline\:table\) { 
+  .lg\.dpInlineTable,
+  .lg\.inlineTable { 
     display: inline-table !important; 
   }
   
-  .larger\(d\:table-body\),
-  .larger\(body\:table\) {
+  .lg\.dpTableBody,
+  .lg\.tableBody {
     display: table-row-group !important;
   }
 
-  .larger\(d\:table-header\),
-  .larger\(header\:table\) {
+  .lg\.dpTableHeader,
+  .lg\.tableHeader {
     display: table-header-group !important;
   }
 
-  .larger\(d\:table-footer\),
-  .larger\(footer\:table\) {
+  .lg\.dpTableFooter,
+  .lg\.tableFooter {
     display: table-footer-group !important;
   }
 
-  .larger\(d\:table-caption\),
-  .larger\(caption\:table\) {
+  .lg\.dpTableCaption,
+  .lg\.tableCaption {
     display: table-caption !important;
   }
 
-  .larger\(d\:table-row\),
-  .larger\(row\:table\) {
+  .lg\.dpTableRow,
+  .lg\.tableRow {
     display: table-row !important;
   }
 
-  .larger\(d\:table-cell\),
-  .larger\(cell\:table\) {
+  .lg\.dpTableCell,
+  .lg\.tableCell {
     display: table-cell !important;
   }
   
-  .larger\(d\:table-col\),
-  .larger\(col\:table\) {
+  .lg\.dpTableColumn,
+  .lg\.tableColumn {
     display: table-column !important;
   }
   
-  .larger\(d\:table-colgroup\),
-  .larger\(colgroup\:table\) {
+  .lg\.dpTableColumnGroup,
+  .lg\.tableColumnGroup {
     display: table-column-group !important;
   }
   
-  .larger\(d\:flex\),
-  .larger\(flex\) { 
+  .lg\.dpFlex,
+  .lg\.flex { 
     display: flex !important; 
   }
 
-  .larger\(d\:inline-flex\),
-  .larger\(inline\:flex\) { 
+  .lg\.dpInlineFlex,
+  .lg\.inlineFlex { 
     display: inline-flex !important; 
   }
   
-  .larger\(d\:grid\),
-  .larger\(grid\) {
+  .lg\.dpGrid,
+  .lg\.grid {
     display: grid !important;
   }
   
-  .larger\(d\:inline-grid\),
-  .larger\(inline\:grid\) {
+  .lg\.dpInlineGrid,
+  .lg\.inlineGrid {
     display: inline-grid !important;
   }
   
-  .larger\(d\:list-item\),
-  .larger\(list\:item\) {
+  .lg\.dpListItem {
     display: list-item !important;
   }
 }
 
 @media (min-width: 1536px) {
-  .largest\(d\:none\)
-  .largest\(hidden\) { 
+  .xl\.dpNone
+  .xl\.hidden { 
     display: none !important; 
   }
   
-  .largest\(d\:inline\),
-  .largest\(inline\) { 
+  .xl\.dpInline,
+  .xl\.inline { 
     display: inline !important; 
   }
   
-  .largest\(d\:block\),
-  .largest\(block\) { 
+  .xl\.dpBlock,
+  .xl\.block { 
     display: block !important; 
   }
   
-  .largest\(d\:inline-block\),
-  .largest\(inline\:block\) { 
+  .xl\.dpInlineBlock,
+  .xl\.inlineBlock { 
     display: inline-block !important; 
   }
   
-  .largest\(d\:table\) {
+  .larger\\.dpTable {
     display: table !important;
   }
 
-  .largest\(d\:inline-table\),
-  .largest\(inline\:table\) { 
+  .xl\.dpInlineTable,
+  .xl\.inlineTable { 
     display: inline-table !important; 
   }
   
-  .largest\(d\:table-body\),
-  .largest\(body\:table\) {
+  .xl\.dpTableBody,
+  .xl\.tableBody {
     display: table-row-group !important;
   }
 
-  .largest\(d\:table-header\),
-  .largest\(header\:table\) {
+  .xl\.dpTableHeader,
+  .xl\.tableHeader {
     display: table-header-group !important;
   }
 
-  .largest\(d\:table-footer\),
-  .largest\(footer\:table\) {
+  .xl\.dpTableFooter,
+  .xl\.tableFooter {
     display: table-footer-group !important;
   }
 
-  .largest\(d\:table-caption\),
-  .largest\(caption\:table\) {
+  .xl\.dpTableCaption,
+  .xl\.tableCaption {
     display: table-caption !important;
   }
 
-  .largest\(d\:table-row\),
-  .largest\(row\:table\) {
+  .xl\.dpTableRow,
+  .xl\.tableRow {
     display: table-row !important;
   }
 
-  .largest\(d\:table-cell\),
-  .largest\(cell\:table\) {
+  .xl\.dpTableCell,
+  .xl\.tableCell {
     display: table-cell !important;
   }
   
-  .largest\(d\:table-col\),
-  .largest\(col\:table\) {
+  .xl\.dpTableColumn,
+  .xl\.tableColumn {
     display: table-column !important;
   }
   
-  .largest\(d\:table-colgroup\),
-  .largest\(colgroup\:table\) {
+  .xl\.dpTableColumnGroup,
+  .xl\.tableColumnGroup {
     display: table-column-group !important;
   }
   
-  .largest\(d\:flex\),
-  .largest\(flex\) { 
+  .xl\.dpFlex,
+  .xl\.flex { 
     display: flex !important; 
   }
 
-  .largest\(d\:inline-flex\),
-  .largest\(inline\:flex\) { 
+  .xl\.dpInlineFlex,
+  .xl\.inlineFlex { 
     display: inline-flex !important; 
   }
   
-  .largest\(d\:grid\),
-  .largest\(grid\) {
+  .xl\.dpGrid,
+  .xl\.grid {
     display: grid !important;
   }
   
-  .largest\(d\:inline-grid\),
-  .largest\(inline\:grid\) {
+  .xl\.dpInlineGrid,
+  .xl\.inlineGrid {
     display: inline-grid !important;
   }
   
-  .largest\(d\:list-item\),
-  .largest\(list\:item\) {
+  .xl\.dpListItem {
+    display: list-item !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .\2xl\.dpNone
+  .\2xl\.hidden { 
+    display: none !important; 
+  }
+  
+  .\2xl\.dpInline,
+  .\2xl\.inline { 
+    display: inline !important; 
+  }
+  
+  .\2xl\.dpBlock,
+  .\2xl\.block { 
+    display: block !important; 
+  }
+  
+  .\2xl\.dpInlineBlock,
+  .\2xl\.inlineBlock { 
+    display: inline-block !important; 
+  }
+  
+  .largest\\.dpTable {
+    display: table !important;
+  }
+
+  .\2xl\.dpInlineTable,
+  .\2xl\.inlineTable { 
+    display: inline-table !important; 
+  }
+  
+  .\2xl\.dpTableBody,
+  .\2xl\.tableBody {
+    display: table-row-group !important;
+  }
+
+  .\2xl\.dpTableHeader,
+  .\2xl\.tableHeader {
+    display: table-header-group !important;
+  }
+
+  .\2xl\.dpTableFooter,
+  .\2xl\.tableFooter {
+    display: table-footer-group !important;
+  }
+
+  .\2xl\.dpTableCaption,
+  .\2xl\.tableCaption {
+    display: table-caption !important;
+  }
+
+  .\2xl\.dpTableRow,
+  .\2xl\.tableRow {
+    display: table-row !important;
+  }
+
+  .\2xl\.dpTableCell,
+  .\2xl\.tableCell {
+    display: table-cell !important;
+  }
+  
+  .\2xl\.dpTableColumn,
+  .\2xl\.tableColumn {
+    display: table-column !important;
+  }
+  
+  .\2xl\.dpTableColumnGroup,
+  .\2xl\.tableColumnGroup {
+    display: table-column-group !important;
+  }
+  
+  .\2xl\.dpFlex,
+  .\2xl\.flex { 
+    display: flex !important; 
+  }
+
+  .\2xl\.dpInlineFlex,
+  .\2xl\.inlineFlex { 
+    display: inline-flex !important; 
+  }
+  
+  .\2xl\.dpGrid,
+  .\2xl\.grid {
+    display: grid !important;
+  }
+  
+  .\2xl\.dpInlineGrid,
+  .\2xl\.inlineGrid {
+    display: inline-grid !important;
+  }
+  
+  .\2xl\.dpListItem {
     display: list-item !important;
   }
 }
 
 
 @media print {
-  .print\(d\:none\),
-  .print\(hidden\) { 
+  .print\.dpNone,
+  .print\.hidden { 
     display: none !important; 
   }
   
-  .print\(d\:inline\),
-  .print\(inline\) { 
+  .print\.dpInline,
+  .print\.inline { 
     display: inline !important; 
   }
   
-  .print\(d\:block\),
-  .print\(block\) { 
+  .print\.dpBlock,
+  .print\.block { 
     display: block !important; 
   }
   
-  .print\(d\:inline-block\),
-  .print\(inline\:block\) { 
+  .print\.dpInlineBlock,
+  .print\.inlineBlock { 
     display: inline-block !important; 
   }
   
-  .print\(d\:table\) {
+  .print\\.dpTable {
     display: table !important;
   }
   
-  .print\(d\:inline-table\),
-  .print\(inline\:table\) {
+  .print\.dpInlineTable,
+  .print\.inlineTable {
     display: inline-table !important;
   }
 
-  .print\(d\:table-body\),
-  .print\(body\:table\) {
+  .print\.dpTableBody,
+  .print\.tableBody {
     display: table-row-group !important;
   }
 
-  .print\(d\:table-header\),
-  .print\(header\:table\) {
+  .print\.dpTableHeader,
+  .print\.tableHeader {
     display: table-header-group !important;
   }
 
-  .print\(d\:table-footer\),
-  .print\(footer\:table\) {
+  .print\.dpTableFooter,
+  .print\.tableFooter {
     display: table-footer-group !important;
   }
 
-  .print\(d\:table-caption\),
-  .print\(caption\:table\) {
+  .print\.dpTableCaption,
+  .print\.tableCaption {
     display: table-caption !important;
   }
 
-  .print\(d\:table-row\),
-  .print\(row\:table\) {
+  .print\.dpTableRow,
+  .print\.tableRow {
     display: table-row !important;
   }
 
-  .print\(d\:table-cell\),
-  .print\(cell\:table\) {
+  .print\.dpTableCell,
+  .print\.tableCell {
     display: table-cell !important;
   }
   
-  .print\(d\:table-col\),
-  .print\(col\:table\) {
+  .print\.dpTableColumn,
+  .print\.tableColumn {
     display: table-column !important;
   }
   
-  .print\(d\:table-colgroup\),
-  .print\(colgroup\:table\) {
+  .print\.dpTableColumnGroup,
+  .print\.tableColumnGroup {
     display: table-column-group !important;
   }
   
-  .print\(d\:flex\),
-  .print\(flex\) { 
+  .print\.dpFlex,
+  .print\.flex { 
     display: flex !important; 
   }
 
-  .print\(d\:inline-flex\),
-  .print\(inline\:flex\) { 
+  .print\.dpInlineFlex,
+  .print\.inlineFlex { 
     display: inline-flex !important; 
   }
   
-  .print\(d\:grid\),
-  .print\(grid\) {
+  .print\.dpGrid,
+  .print\.grid {
     display: grid !important;
   }
   
-  .print\(d\:inline-grid\),
-  .print\(inline\:grid\) {
+  .print\.dpInlineGrid,
+  .print\.inlineGrid {
     display: inline-grid !important;
   }
   
-  .print\(d\:list-item\),
-  .print\(list\:item\) {
+  .print\.dpListItem {
     display: list-item !important;
   }
 }

@@ -1,14 +1,56 @@
 .list,
-.border\:list,
-.flush\:list {
+.listBorder,
+.listFlush {
   display: flex;
   flex-direction: column;
   padding-left: 0;
   margin: 0;
   list-style: none;
+   
+  & .listItem {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    
+    &Action {
+      width: 100%;
+      color: #495057;
+      text-align: inherit;
+    }
+    
+    &Action:hover, &Action:focus {
+      z-index: 1;
+      color: #495057;
+      text-decoration: none;
+      background-color: #f8f9fa;
+    }
+    
+    &Action:active {
+      color: #212529;
+      background-color: #e9ecef;
+    }
+  }
+  & .listItem.disabled, & .listItem:disabled {
+    color: #6c757d;
+    pointer-events: none;
+  }
+  & .listItem:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  & .listItem.active {
+    background-color: rgba(0, 0, 0, 0.125); /* #0d6efd */
+  }
+  & .listItem + & .listItem {
+    border-top-width: 0;
+  }
+  & .listItem + & .listItem.active {
+    margin-top: -1px;
+    border-top-width: 1px;
+  }
 }
 
-.list-unstyled {
+.listNone {
   padding-left: 0;
   list-style: none;
     
@@ -18,7 +60,7 @@
   }
 }
 
-.inline\:list-item {
+.listItemInline {
   display: inline-block;
   
   &:not(:last-child) {
@@ -26,76 +68,48 @@
   }
 }
 
-.list-link {
-  position: relative;
-  display: block;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
+.listBorder {
+  border-radius: var(--rdButton, 0.25rem);
+  border: 1px solid var(--bdColor, rgba(0, 0, 0, 0.125));
   
-  &-action {
-    width: 100%;
-    color: #495057;
-    text-align: inherit;
+  & .listItem {
+    border-bottom: 1px solid var(--bdColor, rgba(0, 0, 0, 0.125));
   }
-  
-  &-action:hover, &-action:focus {
-    z-index: 1;
-    color: #495057;
-    text-decoration: none;
-    background-color: #f8f9fa;
-  }
-  
-  &-action:active {
-    color: #212529;
-    background-color: #e9ecef;
-  }
-}
-
-.border\:list,
-.flush\:list {
-  & .list-link {
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-  }
-  & .list-link:first-child {
+  & .listItem:first-child {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
   }
-  & .list-link:last-child {
+  & .listItem:last-child {
     border-bottom-right-radius: inherit;
     border-bottom-left-radius: inherit;
-  }
-  & .list-link.disabled, & .list-link:disabled {
-    color: #6c757d;
-    pointer-events: none;
-    background-color: #fff;
-  }
-  & .list-link.active {
-    z-index: 2;
-    color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-  }
-  & .list-link + & .list-link {
-    border-top-width: 0;
-  }
-  & .list-link + & .list-link.active {
-    margin-top: -1px;
-    border-top-width: 1px;
-  }
-}
-
-.flush\:list {
-  border-radius: 0;
-  
-  & .list-link {
-    border-width: 0 0 1px;
-  }
-  & .list-link:last-child {
     border-bottom-width: 0;
   }
 }
 
-.sidebar .list-link {
+.listFlush {
+  border-radius: 0;
+  
+  & .listItem {
+    border-bottom: 1px solid var(--bdColor, rgba(0, 0, 0, 0.125));
+  }
+  & .listItem:last-child {
+    border-bottom-width: 0;
+  }
+}
+
+.listSharp {
+  border-radius: 0;
+  
+  & .listItem:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  & .listItem:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.sidebar .listItem {
   color: inherit;
 }

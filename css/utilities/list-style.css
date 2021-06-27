@@ -1,47 +1,47 @@
-.none\:list-style {
+.listStyleNone {
   list-style-type: none;
 }
 
-.dics\:list-style {
+.listStyleDics {
   list-style-type: disc;
 }
 
-.circle\:list-style {
+.listStyleCircle {
   list-style-type: circle;
 }
 
-.square\:list-style {
+.listStyleSquare {
   list-style-type: square;
 }
 
-.decimal\:list-style {
+.listStyleDecimal {
   list-style-type: decimal;
 }
 
-.dash\:list-style {
+.listStyleDash {
   list-style-type: '-';
 }
 
-.lower-roman\:list-style {
+.listStyleLowerRoman {
   list-style-type: lower-roman;
 }
 
-.upper-roman\:list-style {
+.listStyleUpperRoman {
   list-style-type: upper-roman;
 }
 
-.lowercase\:list-style {
+.listStyleLowerCase {
   list-style-type: lower-alpha;
 }
 
-.uppercase\:list-style {
+.listStyleUpperCase {
   list-style-type: upper-alpha;
 }
 
-.inside\:list-style {
+.listStyleInside {
   list-style-type: inside;
 }
 
-.outside\:list-style {
+.listStyleOutside {
   list-style-type: outside;
 }
