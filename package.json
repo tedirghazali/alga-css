@@ -6,7 +6,8 @@
   "unpkg": "dist/alga-v1.min.css",
   "scripts": {
     "build": "gulp",
-    "lint": "npx stylelint 'dist/*.css'"
+    "test": "jest",
+    "lint": "eslint js"
   },
   "repository": {
     "type": "git",
@@ -27,25 +28,24 @@
   "homepage": "https://github.com/tedirghazali/alga-css#readme",
   "devDependencies": {
     "autoprefixer": "^10.0.2",
+    "eslint": "^7.30.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.4.1",
+    "jest": "^27.0.6",
     "postcss": "^8.1.7",
     "postcss-custom-properties": "^10.0.0",
     "postcss-header": "^3.0.1",
     "postcss-import": "^13.0.0",
     "postcss-mixins": "^7.0.2",
-    "postcss-nested": "^5.0.1",
-    "postcss-simple-vars": "^6.0.2",
-    "stylelint": "^13.8.0",
-    "stylelint-config-standard": "^20.0.0",
-    "tailwindcss": "^2.0.1"
+    "postcss-nested": "^5.0.1"
   },
   "dependencies": {
+    "fast-glob": "^3.2.7",
     "postcss-selector-parser": "^6.0.4"
   }
 }

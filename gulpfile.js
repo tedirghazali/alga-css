@@ -22,10 +22,7 @@ function css() {
       require('postcss-mixins')({
         mixinsDir: path.join(__dirname, 'css/mixins')
       }),
-      require('tailwindcss'),
-      //require("stylelint"),
       require('postcss-custom-properties'),
-      //require('postcss-simple-vars'),
       require('postcss-nested'),
       require('autoprefixer'),
       require('postcss-header')({ header })
