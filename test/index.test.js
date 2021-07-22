@@ -13,14 +13,16 @@ test('does something', async () => {
   await run('a{ }', 'a{ }', { })
 })
 
-/*test('test injection', async () => {
+test('test injection', async () => {
   let result = await postcss([
-    algacss({})
-  ]).process('@inject btn;@inject toolbar;', { from: undefined })
+    algacss({
+      provide: ['./test/provide/*.css']
+    })
+  ]).process('@inject dot;', { from: undefined })
   console.log(result.css)
-})*/
+})
 
-test('test provide', async () => {
+/*test('test provide', async () => {
   let result = await postcss([
     algacss({})
   ]).process(`
@@ -91,4 +93,4 @@ test('test provide', async () => {
 @inject toolbar;
   `, { from: undefined })
   console.log(result.css)
-})
+})*/

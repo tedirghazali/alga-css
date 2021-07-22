@@ -1,14 +1,17 @@
-//const postcss = require('postcss')
+const provide = require('./provide.js')
 const screen = require('./screen.js')
 const prefers = require('./prefers.js')
 
 // caranya bukan parse tapi menggunakan regexp
 function algacss(options, result) {
   const config = {
-    provide: (typeof options.provide === 'object' && options.provide !== null) ? Object.assign({}, options.provide) : {},
+    provide: {},
     screen: Object.assign({}, screen, options.screen),
     prefers: Object.assign({}, prefers)
   }
+  
+  config.provide = provide(options.provide)
+  console.log(config.provide)
   
   return {
     Once (root, {Rule, Declaration, AtRule}) {
