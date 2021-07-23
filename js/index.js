@@ -1,4 +1,5 @@
 const provide = require('./provide.js')
+const extract = require('./extract.js')
 const screen = require('./screen.js')
 const prefers = require('./prefers.js')
 
@@ -7,11 +8,12 @@ function algacss(options, result) {
   const config = {
     provide: {},
     screen: Object.assign({}, screen, options.screen),
-    prefers: Object.assign({}, prefers)
+    prefers: Object.assign({}, prefers),
+    extract: {}
   }
   
   config.provide = provide(options.provide)
-  console.log(config.provide)
+  config.extract = extract(options.extract)
   
   return {
     Once (root, {Rule, Declaration, AtRule}) {
@@ -30,7 +32,7 @@ function algacss(options, result) {
               } else {
                 node.remove()
               }
-            } else if(node.name === 'media') {
+            } else if(node.name === 'screen') {
               const screenParam = node.params.trim()
               if(config.screen[screenParam]) {
                 const media = new AtRule({name: 'media', params: `(min-width: ${config.screen[screenParam]})`})

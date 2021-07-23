@@ -16,7 +16,8 @@ test('does something', async () => {
 test('test injection', async () => {
   let result = await postcss([
     algacss({
-      provide: ['./test/provide/*.css']
+      provide: ['./test/provide/*.css'],
+      extract: ['./test/extract/*.html']
     })
   ]).process('@inject dot;', { from: undefined })
   console.log(result.css)
