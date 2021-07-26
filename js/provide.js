@@ -17,10 +17,10 @@ function readPath(rp) {
 module.exports = (paths) => {
   let provide = {}
   
-  const coreFiles = fs.readdirSync(__dirname.toString().replace('js', 'css') + '/provide/')
+  const coreFiles = fs.readdirSync(__dirname.toString().replace('js', 'css') + '/provides/')
   if(coreFiles) {
     for(let file of coreFiles) {
-      provide = Object.assign({}, provide, readPath(__dirname.toString().replace('js', 'css') + '/provide/' + file))
+      provide = Object.assign({}, provide, readPath(__dirname.toString().replace('js', 'css') + '/provides/' + file))
     }
   }
   
