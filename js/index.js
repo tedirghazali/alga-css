@@ -36,8 +36,10 @@ function algacss(options, result) {
                 selectNodes.push(...config.define[node.params.trim()])
               }
             } else if(node.type === 'atrule' && node.name === 'ref') {
-              const getRefs = node.params.trim() ? Array.from(new Set(node.params.trim().split(/\s|\|/).filter(i => i !== ''))) : []
-              selectNodes.push(...reference(...getRefs, {screen: config.screen, prefers: config.prefers, color: config.color, select: config.select}))
+              const refs = node.params.trim() ? Array.from(new Set(node.params.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+              for(let ref of refs) {
+                selectNodes.push(...reference(ref, {screen: config.screen, prefers: config.prefers, color: config.color, select: config.select}))
+              }
             } else {
               selectNodes.push(node)
             }

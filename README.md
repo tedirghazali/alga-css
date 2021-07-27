@@ -5,8 +5,8 @@
 </p>
 <br/>
 
-# Alga CSS (formerly tailstrap)
-Alga CSS is an alternative toolkit based on Tailwind CSS and Bootstrap 5 classes. This is not a framework but just CSS for my Vue components
+# Alga CSS
+Alga CSS is a scoped-first CSS toolkit for quickly compose or share any design between components
 
 No doubt about the current class names are very confusing because we write the value first and before the colon. So, now we provide a new way to create perfect css names by using dot/period (.) for breakpoint and colon (:) for value.
 

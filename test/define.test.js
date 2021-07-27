@@ -12,7 +12,7 @@ async function execute(arg = { input: 'a {}', output: 'a {}', options: {} }) {
 test('Set and get atrule with basic declaration', async () => {
   await execute({
     input: `
-@set .dot {
+@set .titik {
   display: inline-block;
   box-sizing: content-box;
   width: 0;
@@ -21,9 +21,9 @@ test('Set and get atrule with basic declaration', async () => {
   border-radius: calc(var(--dot, 10px)/2);
 }
 
-@get .dot;
+@get .titik;
     `, 
-    output: `.dot {
+    output: `.titik {
   display: inline-block;
   box-sizing: content-box;
   width: 0;
@@ -39,7 +39,7 @@ test('Set and get atrule with basic declaration', async () => {
 test('Props, set and get atrule with compose declaration', async () => {
   await execute({
     input: `
-@set .dot {
+@set .titik {
   display: inline-block;
   box-sizing: content-box;
   width: 0;
@@ -48,16 +48,16 @@ test('Props, set and get atrule with compose declaration', async () => {
   border-radius: calc(var(--dot, 10px)/2);
 }
 
-@set .circle {
+@set .bulat {
   --dot: 50px;
   --dotColor: #c0ffee;
-  @props .dot;
+  @props .titik;
   color: #333;
 }
 
-@get .circle;
+@get .bulat;
     `,
-    output: `.circle {
+    output: `.bulat {
   --dot: 50px;
   --dotColor: #c0ffee;
   display: inline-block;
@@ -78,7 +78,7 @@ test('Ref, set, props and get atrule with utility declaration', async () => {
   let result = await postcss([
     algacss()
   ]).process(`
-@set .dot {
+@set .titik {
   display: inline-block;
   box-sizing: content-box;
   width: 0;
@@ -87,14 +87,14 @@ test('Ref, set, props and get atrule with utility declaration', async () => {
   border-radius: calc(var(--dot, 10px)/2);
 }
 
-@set .circle {
+@set .bulat {
   --dot: 50px;
   --dotColor: #c0ffee;
-  @props .dot;
-  color: #333;
+  @props .titik;
+  @ref primary-4;
 }
 
-@get .circle;
+@get .bulat;
   `, { from: undefined })
   console.log(result.css)
 })

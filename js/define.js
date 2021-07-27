@@ -16,8 +16,10 @@ function readPath(rp, defs, opts) {
             selectNodes.push(...defs[node.params.trim()])
           }
         } else if(node.name = 'ref') {
-          const getRefs = node.params.trim() ? Array.from(new Set(node.params.trim().split(/\s|\|/).filter(i => i !== ''))) : []
-          selectNodes.push(...reference(...getRefs, opts))
+          const refs = node.params.trim() ? Array.from(new Set(node.params.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+          for(let ref of refs) {
+            selectNodes.push(...reference(ref, opts))
+          }
         } else {
           selectNodes.push(node)
         }

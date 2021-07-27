@@ -1,4 +1,8 @@
 module.exports = {
-  X: {},
-  Y: {}
+  support: ['unit'],
+  unit: 0.125,
+  attrs: {
+    X: {},
+    Y: {}
+  }
 }

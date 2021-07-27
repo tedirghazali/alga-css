@@ -1,7 +1,7 @@
 {
   "name": "alga-css",
   "version": "1.0.0-development2",
-  "description": "Alga CSS is an alternative toolkit based on Tailwind CSS and Bootstrap 5",
+  "description": "Alga CSS is a scoped-first CSS toolkit for quickly compose or share any design between components",
   "main": "js/index.js",
   "unpkg": "dist/alga-v1.min.css",
   "scripts": {
