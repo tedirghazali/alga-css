@@ -5,12 +5,12 @@ const screen = require('./screen.js')
 const prefers = require('./prefers.js')
 const color = require('./color.js')
 const reference = require('./reference.js')
-const select = require('./select.js')
+const preset = require('./preset.js')
 
 // caranya bukan parse tapi menggunakan regexp
 function algacss(options, result) {
   const config = {
-    select: Object.assign({}, select, options.select),
+    preset: Object.assign({}, preset, options.preset),
     screen: Object.assign({}, screen, options.screen),
     prefers: Object.assign({}, prefers),
     color: Object.assign({}, color, options.color),
@@ -19,7 +19,7 @@ function algacss(options, result) {
     extract: {}
   }
   
-  config.define = define(options.define, {screen: config.screen, prefers: config.prefers, color: config.color, select: config.select})
+  config.define = define(options.define, {screen: config.screen, prefers: config.prefers, color: config.color, preset: config.preset})
   config.provide = provide(options.provide)
   config.extract = extract(options.extract)
   
@@ -38,7 +38,7 @@ function algacss(options, result) {
             } else if(node.type === 'atrule' && node.name === 'ref') {
               const refs = node.params.trim() ? Array.from(new Set(node.params.trim().split(/\s|\|/).filter(i => i !== ''))) : []
               for(let ref of refs) {
-                selectNodes.push(...reference(ref, {screen: config.screen, prefers: config.prefers, color: config.color, select: config.select}))
+                selectNodes.push(...reference(ref, {screen: config.screen, prefers: config.prefers, color: config.color, preset: config.preset}))
               }
             } else {
               selectNodes.push(node)

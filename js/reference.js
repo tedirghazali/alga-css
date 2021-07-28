@@ -1,70 +1,70 @@
 const postcss = require('postcss')
-const properties = require('./properties.js')
-const colorUtil = require('./utilities/color-utility.js')
+const unit = require('./props/unit.js')
+const sizing = require('./props/sizing.js')
+const colorUtil = require('./utils/color-util.js')
+const unitUtil = require('./utils/unit-util.js')
+
+const positions = ['top', 'right', 'bottom', 'left']
 
 module.exports = (ref, opts) => {
-  const setRef = []
-  let setAlpha = 1
-  const objRule = {}
-  const params = ref.trim().split(/\.|-|_|\:/) // split camelCase ref.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+  const arr = []
+  const obj = {}
+  const state = {
+    alpha: 1
+  }
   
-  params.forEach((param, index) => {
-    if(index === 0) {
-      if(Object.keys(opts.select).includes(param)) {
-        param = opts.select[param]
-      }
-          
-      if(Object.keys(opts.screen).includes(param)) {
-        objRule['type'] = 'screen'
-        objRule['rule'] = postcss.AtRule({ name: 'media', params: '(min-width: ${opts.screen[param]})' })
-      } else if(param === 'dark' || param === 'light' || param === 'reduce') {
-        objRule['type'] = 'prefers'
-        objRule['rule'] = postcss.AtRule({ name: 'media', params: opts.prefers[param] })
-      } else if(param === 'print' || param === 'screen') {
-        objRule['type'] = 'print'
-        objRule['rule'] = postcss.AtRule({ name: 'media', params: param })
+  const refs = ref.trim().split(/\.|-|_|\:/).filter(i => i !== '')
+  
+  if(Object.keys(opts.preset).includes(refs[0])) {
+    refs[0] = opts.preset[param]
+  }
+  
+  if(Object.keys(opts.screen).includes(refs[0])) {
+    obj['screen'] = postcss.AtRule({ name: 'media', params: '(min-width: ${opts.screen[refs[0]]})' })
+  } else if(refs[0] === 'dark' || refs[0] === 'light' || refs[0] === 'reduce') {
+    obj['screen'] = postcss.AtRule({ name: 'media', params: opts.prefers[refs[0]] })
+  } else if(refs[0] === 'print' || refs[0] === 'screen') {
+    obj['screen'] = postcss.AtRule({ name: 'media', params: refs[0] })
+  } else {
+    obj['coloring'] = ''
+    obj['spacing'] = ''
+    
+    const cls = refs[0].replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase().trim().split('-').filter(i => i !== '')
+    
+    if(Object.keys(opts.color).includes(cls[0])) {
+      if(cls[1] === 'outlined') {
+        objRule['coloring'] = {
+          'color': opts.color[cls[0]],
+          'background-color': 'transparent',
+          'border-color': opts.color[cls[0]]
+        }
       } else {
-        objRule['type'] = 'main'
-        objRule['color'] = ''
-        objRule['fill'] = ''
-        const prm = param.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase().trim().split('-')
-        prm.forEach((pr, ind) => {
-          if(ind === 0) {
-            if(Object.keys(opts.color).includes(pr)) {
-              objRule['color'] = pr
-              objRule['colors'] = {
-                'color': (pr !== 'white' && pr !== 'yellow' && pr !== 'warning') ? '#fff' : '#333',
-                'background-color': opts.color[pr],
-                'border-color': opts.color[pr]
-              }
-            } else if(Object.keys(properties).includes(pr)) {
-              objRule['rule'] = pr
-            }
-          } else if(ind === 1) {
-            if(prm[0] === objRule['color'] && pr === 'outlined') {
-              objRule['fill'] = pr
-              objRule['colors'] = {
-                'color': opts.color[objRule['color']],
-                'background-color': 'transparent',
-                'border-color': opts.color[objRule['color']]
-              }
-            }
-          } else if(ind === 2) {
-            
-          }
-        })
+        obj['coloring'] = {
+          'color': (cls[0] !== 'white' && cls[0] !== 'yellow' && cls[0] !== 'warning') ? '#fff' : '#333',
+          'background-color': opts.color[cls[0]],
+          'border-color': opts.color[cls[0]]
+        }
       }
-    } else if(index === 1) {
-      if(params[0].toLowerCase().startsWith(objRule['color'] + objRule['fill']) && isNaN(param) === false) {
-        setAlpha = Number('0.'+param)
+      
+      if(isNaN(refs[1]) === false) {
+        state.alpha = Number('0.'+ refs[1])
       }
-    }
-  })
-  if(typeof objRule['colors'] === 'object' && objRule['colors'] !== null) {
-    for(let [key, val] of Object.entries(objRule['colors'])) {
-      setRef.push(postcss.decl({ prop: key, value: (typeof val !== 'string') ? colorUtil(val, setAlpha) : val }))
+    } else if(Object.keys(sizing).includes(cls[0])) {
+      if(cls[1] === 'auto') {
+        arr.push(postcss.decl({ prop: sizing[cls[0]], value: 'auto' }))
+      } else {
+        if(typeof refs[1] === 'string') {
+          arr.push(postcss.decl({ prop: sizing[cls[0]], value: unitUtil(refs[1], unit.length, '%', 1) }))
+        }
+      }
     }
   }
   
-  return setRef
+  if(typeof obj['coloring'] === 'object' && obj['coloring'] !== null) {
+    for(let [key, val] of Object.entries(obj['coloring'])) {
+      arr.push(postcss.decl({ prop: key, value: (typeof val !== 'string') ? colorUtil(val, state.alpha) : val }))
+    }
+  }
+  
+  return arr
 }

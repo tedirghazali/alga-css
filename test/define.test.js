@@ -81,8 +81,8 @@ test('Ref, set, props and get atrule with utility declaration', async () => {
 @set .titik {
   display: inline-block;
   box-sizing: content-box;
-  width: 0;
-  height: 0;
+  @ref wd-0;
+  @ref hg-0;
   border: calc(var(--dot, 10px)/2) solid var(--dotColor, #3788d8);
   border-radius: calc(var(--dot, 10px)/2);
 }
