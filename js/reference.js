@@ -1,10 +1,13 @@
 const postcss = require('postcss')
 const unit = require('./props/unit.js')
 const sizing = require('./props/sizing.js')
+const single = require('./props/single.js')
 const colorUtil = require('./utils/color-util.js')
 const unitUtil = require('./utils/unit-util.js')
 
-const positions = ['top', 'right', 'bottom', 'left']
+const xY = ['x', 'y']
+const rightLeft = ['right', 'left']
+const topBottom = ['top', 'bottom']
 
 module.exports = (ref, opts) => {
   const arr = []
@@ -29,7 +32,7 @@ module.exports = (ref, opts) => {
     obj['coloring'] = ''
     obj['spacing'] = ''
     
-    const cls = refs[0].replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase().trim().split('-').filter(i => i !== '')
+    const cls = refs[0].replace(/([a-z])([A-Z])/g, '$1-$2').replace(/([A-Z])([A-Z])/g, '$1-$2').toLowerCase().trim().split('-').filter(i => i !== '')
     
     if(Object.keys(opts.color).includes(cls[0])) {
       if(cls[1] === 'outlined') {
@@ -57,6 +60,30 @@ module.exports = (ref, opts) => {
           arr.push(postcss.decl({ prop: sizing[cls[0]], value: unitUtil(refs[1], unit.length, '%', 1) }))
         }
       }
+    } else if([...rightLeft, ...topBottom].includes(cls[0])) {
+      if(cls[1] === 'auto') {
+        arr.push(postcss.decl({ prop: [...rightLeft, ...topBottom][cls[0]], value: 'auto' }))
+      } else {
+        if(typeof refs[1] === 'string') {
+          arr.push(postcss.decl({ prop: [...rightLeft, ...topBottom][cls[0]], value: unitUtil(refs[1], unit.length, 'rem', 0.25) }))
+        }
+      }
+    } else if(cls[0] === 'gap') {
+      if(cls[1] === 'x') {
+        if(typeof refs[1] === 'string') {
+          arr.push(postcss.decl({ prop: 'column-gap', value: unitUtil(refs[1], unit.length, 'rem', 0.25) }))
+        }
+      } else if(cls[1] === 'y') {
+        if(typeof refs[1] === 'string') {
+          arr.push(postcss.decl({ prop: 'row-gap', value: unitUtil(refs[1], unit.length, 'rem', 0.25) }))
+        }
+      } else {
+        if(typeof refs[1] === 'string') {
+          arr.push(postcss.decl({ prop: 'gap', value: unitUtil(refs[1], unit.length, 'rem', 0.25) }))
+        }
+      }
+    } else if(Object.keys(single).includes(cls[0])) {
+      arr.push(postcss.decl({ prop: single[cls[0]].key, value: single[cls[0]].val }))
     }
   }
   

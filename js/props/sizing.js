@@ -4,5 +4,5 @@ module.exports = {
   mwd: 'max-width',
   nwd: 'min-width',
   mhg: 'max-height',
-  nhg: 'min-height',
+  nhg: 'min-height'
 }
