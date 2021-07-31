@@ -8,20 +8,21 @@ function readPath(rp, defs, opts) {
   const data = fs.readFileSync(rp, 'utf8')
   const root = postcss.parse(data)
   for(let node of root.nodes) {
-    if(node.name === 'set') {
+    if(node.type === 'atrule' && node.name === 'set') {
       const selectNodes = []
-      for(let node of node.nodes) {
-        if(node.name = 'props') {
-          if(defs[node.params.trim()]) {
-            selectNodes.push(...defs[node.params.trim()])
+      const clsNames = Array.from(node.nodes)
+      for(let cls of clsNames) {
+        if(cls.type === 'atrule' && cls.name === 'props') {
+          if(typeof cls.params === 'string' && defs[cls.params.trim()]) {
+            selectNodes.push(...defs[cls.params.trim()])
           }
-        } else if(node.name = 'ref') {
-          const refs = node.params.trim() ? Array.from(new Set(node.params.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+        } else if(cls.type === 'atrule' && cls.name === 'ref') {
+          const refs = cls.params.trim() ? Array.from(new Set(cls.params.trim().split(/\s|\|/).filter(i => i !== ''))) : []
           for(let ref of refs) {
             selectNodes.push(...reference(ref, opts))
           }
         } else {
-          selectNodes.push(node)
+          selectNodes.push(cls)
         }
       }
       define[node.params.trim()] = selectNodes

@@ -11,5 +11,20 @@ module.exports = {
   content: 'alignContent',
   items: 'alignItems',
   self: 'alignSelf',
-  mt: 'mgTop'
+  mt: 'mgTop',
+  mr: 'mgRight',
+  me: 'mgRight',
+  mb: 'mgBottom',
+  ml: 'mgLeft',
+  ms: 'mgLeft',
+  mx: 'mgX',
+  my: 'mgY',
+  pt: 'pdTop',
+  pr: 'pdRight',
+  pe: 'pdRight',
+  pb: 'pdBottom',
+  pl: 'pdLeft',
+  ps: 'pdLeft',
+  px: 'pdX',
+  py: 'pdY'
 }

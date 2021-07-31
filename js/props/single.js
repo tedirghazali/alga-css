@@ -21,7 +21,4 @@ module.exports = {
   anywhere: { key: 'overflow-wrap', val: 'anywhere' },
   breakall: { key: 'word-break', val: 'break-all' },
   'break': { key: 'word-break', val: 'break-word' },
-  noselect: { key: 'user-select', val: 'none' },
-  userselect: { key: 'user-select', val: 'text' },
-  selectall: { key: 'user-select', val: 'all' },
 }
