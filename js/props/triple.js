@@ -49,5 +49,10 @@ module.exports = {
     content: { key: 'place-content', val: {start: 'start', end: 'end', center: 'center', between: 'space-between', around: 'space-around', evenly: 'space-evenly', stretch: 'stretch'}},
     items: { key: 'place-items', val: {start: 'start', end: 'end', center: 'center', stretch: 'stretch'}},
     self: { key: 'place-self', val: selfVal}
+  },
+  auto: {
+    flow: { key: 'grid-auto-flow', val: {row: 'row', column: 'column', rowdense: 'row dense', coldense: 'column dense'}},
+    cols: { key: 'grid-auto-columns', val: {auto: 'auto', 'min': 'min-content', 'max': 'max-content', fr: 'minmax(0px, 1fr)'}},
+    rows: { key: 'grid-auto-rows', val: {auto: 'auto', 'min': 'min-content', 'max': 'max-content', fr: 'minmax(0px, 1fr)'}},
   }
 }

@@ -19,7 +19,7 @@ test('test injection', async () => {
       provide: ['./test/provide/*.css'],
       extract: ['./test/extract/*.html']
     })
-  ]).process('@inject dot;', { from: undefined })
+  ]).process('@get .page; @inject dot;', { from: undefined })
   console.log(result.css)
 })
 

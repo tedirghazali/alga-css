@@ -5,6 +5,8 @@ const spacing = require('./props/spacing.js')
 const single = require('./props/single.js')
 const double = require('./props/double.js')
 const triple = require('./props/triple.js')
+const indexing = require('./props/indexing.js')
+const grid = require('./props/grid.js')
 const colorUtil = require('./utils/color-util.js')
 const unitUtil = require('./utils/unit-util.js')
 
@@ -130,6 +132,44 @@ function reference(nameArg, valueArg, opts) {
           arr.push(postcss.decl({ prop: triple[cls[0]][cls[1]].key, value: triple[cls[0]][cls[1]].val.base }))
         }
       }
+    }
+  } else if(cls[0] === 'grid') {
+    const decl1 = postcss.decl({ prop: 'display', value: 'grid' })
+    if(Object.keys(grid.template).includes(cls[1])) {
+      if(isNaN(valueArg) === false) {
+        const decl2 = postcss.decl({ prop: grid.template[cls[1]], value: `repeat(${valueArg}, minmax(0px, 1fr))` })
+        arr.push(decl1, decl2)
+      } else if(cls[2] === 'none') {
+        const decl2 = postcss.decl({ prop: grid.template[cls[1]], value: 'none' })
+        arr.push(decl1, decl2)
+      }
+    } else {
+      arr.push(decl1)
+    }
+  } else if(Object.keys(grid.template).includes(cls[0])) {
+    if(isNaN(valueArg) === false) {
+      arr.push(postcss.decl({ prop: grid.template[cls[0]], value: `repeat(${valueArg}, minmax(0px, 1fr))` }))
+    } else if(cls[1] === 'none') {
+      arr.push(postcss.decl({ prop: grid.template[cls[0]], value: 'none' }))
+    }
+  } else if(Object.keys(grid.span).includes(cls[0])) {
+    if(cls[1] === 'span') {
+      if(isNaN(valueArg) === false) {
+        arr.push(postcss.decl({ prop: grid.span[cls[0]], value: `span ${valueArg} / span ${valueArg}` }))
+      } else if(cls[1] === 'full') {
+        arr.push(postcss.decl({ prop: grid.span[cls[0]], value: '1 / -1' }))
+      }
+    } else if(['start', 'end'].includes(cls[1])) {
+      if(isNaN(valueArg) === false) {
+        arr.push(postcss.decl({ prop: `${grid.span[cls[0]]}-${cls[1]}`, value: valueArg }))
+      } else if(cls[1] === 'auto') {
+        arr.push(postcss.decl({ prop: `${grid.span[cls[0]]}-${cls[1]}`, value: 'auto' }))
+      }
+    }
+  } else if(Object.keys(indexing).includes(cls[0])) {
+    const indVal = valueArg.replace(',', '.')
+    if(isNaN(indVal) === false) {
+      arr.push(postcss.decl({ prop: indexing[cls[0]], value: indVal }))
     }
   }
   return arr
