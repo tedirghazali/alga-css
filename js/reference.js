@@ -7,6 +7,7 @@ const double = require('./props/double.js')
 const triple = require('./props/triple.js')
 const indexing = require('./props/indexing.js')
 const grid = require('./props/grid.js')
+const flex = require('./props/flex.js')
 const colorUtil = require('./utils/color-util.js')
 const unitUtil = require('./utils/unit-util.js')
 
@@ -166,10 +167,38 @@ function reference(nameArg, valueArg, opts) {
         arr.push(postcss.decl({ prop: `${grid.span[cls[0]]}-${cls[1]}`, value: 'auto' }))
       }
     }
+  } else if(cls[0] === 'area') {
+    if(cls[1]) {
+      const cls1or2 = (typeof cls[2] === 'string') ? `${cls[1]}-${cls[2]}` : cls[1]
+      arr.push(postcss.decl({ prop: 'grid-area', value: cls1or2 }))
+    }
   } else if(Object.keys(indexing).includes(cls[0])) {
     const indVal = valueArg.replace(',', '.')
     if(isNaN(indVal) === false) {
       arr.push(postcss.decl({ prop: indexing[cls[0]], value: indVal }))
+    }
+  } else if(cls[0] === 'flex') {
+    const decl1 = postcss.decl({prop: 'display', value: 'flex'})
+    if(Object.keys(flex.justify).includes(cls[1])) {
+      const decl2 = postcss.decl({prop: flex.justify[cls[1]].key, value: flex.justify[cls[1]].val})
+      arr.push(decl1, decl2)
+    } else if(cls[1] === 'items' && Object.keys(flex.items).includes(cls[2])) {
+      const decl2 = postcss.decl({prop: flex.items[cls[2]].key, value: flex.items[cls[2]].val})
+      arr.push(decl1, decl2)
+    } else if(Object.keys(flex.attrs).includes(cls[1])) {
+      if(typeof flex.attrs[cls[1]].val === 'string') {
+        arr.push(postcss.decl({prop: flex.attrs[cls[1]].key, value: flex.attrs[cls[1]].val}))
+      } else if(typeof flex.attrs[cls[1]].val === 'object' && Object.keys(flex.attrs[cls[1]].val).includes(cls[2])) {
+        arr.push(postcss.decl({prop: flex.attrs[cls[1]].key, value: flex.attrs[cls[1]].val[cls[2]]}))
+      } else {
+        if(flex.attrs[cls[1]].val.base) {
+          arr.push(postcss.decl({prop: flex.attrs[cls[1]].key, value: flex.attrs[cls[1]].val.base}))
+        }
+      }
+    } else {
+      if(isNaN(valueArg) === false) {
+        arr.push(postcss.decl({prop: 'flex', value: `${valueArg} 1 0px`}))
+      }
     }
   }
   return arr

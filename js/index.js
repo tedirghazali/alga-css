@@ -25,6 +25,23 @@ function algacss(options, result) {
   
   return {
     Once (root, {Rule, Declaration, AtRule}) {
+      root.walkAtRules(/^template/i, rule => {
+        const name = new Rule({ selector: '.'+rule.params.replace('.', '').trim() })
+        name.append(new Declaration({ prop: 'display', value: 'grid'})
+        for(let node of rule.nodes) {
+          if(node.type === 'decl' && node.prop === 'areas') {
+            name.append(new Declaration({ prop: 'grid-template-areas', value: node.value})
+          } else if(node.type === 'decl' && node.prop === 'y') {
+            name.append(new Declaration({ prop: 'grid-template-rows', value: node.value})
+          } else if(node.type === 'decl' && node.prop === 'x') {
+            name.append(new Declaration({ prop: 'grid-template-columns', value: node.value})
+          } else if(node.type === 'decl' && node.prop === 'layout') {
+            name.append(new Declaration({ prop: 'grid-template', value: node.value})
+          }
+        }
+        rule.replaceWith(name)
+        rule.remove()
+      })
       root.walkAtRules(/^set/i, rule => {
         const param = rule.params.trim()
         
