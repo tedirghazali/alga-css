@@ -25,23 +25,34 @@ function algacss(options, result) {
   
   return {
     Once (root, {Rule, Declaration, AtRule}) {
+      root.walkDecls(/^ref/, decl => {
+        const refs = decl.value.trim() ? Array.from(new Set(decl.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+        const selectNodes = []
+        for(let ref of refs) {
+          selectNodes.push(...reference(ref, {screen: config.screen, prefers: config.prefers, color: config.color, preset: config.preset}))
+        }
+        decl.replaceWith(...selectNodes)
+        decl.remove()
+      })
+      
       root.walkAtRules(/^template/i, rule => {
         const name = new Rule({ selector: '.'+rule.params.replace('.', '').trim() })
-        name.append(new Declaration({ prop: 'display', value: 'grid'})
+        name.append(new Declaration({ prop: 'display', value: 'grid'}))
         for(let node of rule.nodes) {
           if(node.type === 'decl' && node.prop === 'areas') {
-            name.append(new Declaration({ prop: 'grid-template-areas', value: node.value})
+            name.append(new Declaration({ prop: 'grid-template-areas', value: node.value}))
           } else if(node.type === 'decl' && node.prop === 'y') {
-            name.append(new Declaration({ prop: 'grid-template-rows', value: node.value})
+            name.append(new Declaration({ prop: 'grid-template-rows', value: node.value}))
           } else if(node.type === 'decl' && node.prop === 'x') {
-            name.append(new Declaration({ prop: 'grid-template-columns', value: node.value})
+            name.append(new Declaration({ prop: 'grid-template-columns', value: node.value}))
           } else if(node.type === 'decl' && node.prop === 'layout') {
-            name.append(new Declaration({ prop: 'grid-template', value: node.value})
+            name.append(new Declaration({ prop: 'grid-template', value: node.value}))
           }
         }
         rule.replaceWith(name)
         rule.remove()
       })
+      
       root.walkAtRules(/^set/i, rule => {
         const param = rule.params.trim()
         
@@ -76,6 +87,16 @@ function algacss(options, result) {
         } else {
           rule.remove()
         }
+      })
+      
+      root.walkDecls('props', decl => {
+        const props = decl.value.trim()
+        const selectNodes = []
+        if(config.define[props]) {
+          selectNodes.push(...config.define[props])
+        }
+        decl.replaceWith(...selectNodes)
+        decl.remove()
       })
       
       root.walkAtRules(/^prefers/i, rule => {

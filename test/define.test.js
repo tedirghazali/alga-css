@@ -73,7 +73,6 @@ test('Props, set and get atrule with compose declaration', async () => {
   })
 })
 
-
 test('Ref, set, props and get atrule with utility declaration', async () => {
   let result = await postcss([
     algacss()
