@@ -12,22 +12,19 @@ async function execute(arg = { input: 'a {}', output: 'a {}', options: {} }) {
 test('Set and get atrule with basic declaration', async () => {
   await execute({
     input: `
-@set .titik {
-  display: inline-block;
-  box-sizing: content-box;
-  width: 0;
-  height: 0;
+@set titik {
+  ref: inlineBlock sizingContent wd-0 hg-0;
   border: calc(var(--dot, 10px)/2) solid var(--dotColor, #3788d8);
   border-radius: calc(var(--dot, 10px)/2);
 }
 
-@get .titik;
+@get titik;
     `, 
     output: `.titik {
   display: inline-block;
   box-sizing: content-box;
-  width: 0;
-  height: 0;
+  width: 0px;
+  height: 0px;
   border: calc(var(--dot, 10px)/2) solid var(--dotColor, #3788d8);
   border-radius: calc(var(--dot, 10px)/2)
 }
@@ -39,31 +36,28 @@ test('Set and get atrule with basic declaration', async () => {
 test('Props, set and get atrule with compose declaration', async () => {
   await execute({
     input: `
-@set .titik {
-  display: inline-block;
-  box-sizing: content-box;
-  width: 0;
-  height: 0;
+@set titik {
+  ref: inlineBlock sizingContent wd-0 hg-0;
   border: calc(var(--dot, 10px)/2) solid var(--dotColor, #3788d8);
   border-radius: calc(var(--dot, 10px)/2);
 }
 
-@set .bulat {
+@set bulat {
   --dot: 50px;
   --dotColor: #c0ffee;
-  @props .titik;
+  props: titik;
   color: #333;
 }
 
-@get .bulat;
+@get bulat;
     `,
     output: `.bulat {
   --dot: 50px;
   --dotColor: #c0ffee;
   display: inline-block;
   box-sizing: content-box;
-  width: 0;
-  height: 0;
+  width: 0px;
+  height: 0px;
   border: calc(var(--dot, 10px)/2) solid var(--dotColor, #3788d8);
   border-radius: calc(var(--dot, 10px)/2);
   color: #333
@@ -73,27 +67,32 @@ test('Props, set and get atrule with compose declaration', async () => {
   })
 })
 
-test('Ref, set, props and get atrule with utility declaration', async () => {
+/*test('Ref, set, props and get atrule with utility declaration', async () => {
   let result = await postcss([
     algacss()
   ]).process(`
-@set .titik {
+@set titik {
   display: inline-block;
   box-sizing: content-box;
-  @ref wd-0;
-  @ref hg-0;
+  ref: wd-0;
+  ref: hg-0;
   border: calc(var(--dot, 10px)/2) solid var(--dotColor, #3788d8);
   border-radius: calc(var(--dot, 10px)/2);
 }
 
-@set .bulat {
+@set bulat {
   --dot: 50px;
   --dotColor: #c0ffee;
-  @props .titik;
-  @ref primary-4;
+  props: titik;
+  ref: primary-4;
 }
 
-@get .bulat;
+@set bulatan {
+  props: titik;
+}
+
+@get bulat;
+@get bulatan;
   `, { from: undefined })
   console.log(result.css)
-})
+})*/

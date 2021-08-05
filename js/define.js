@@ -12,12 +12,12 @@ function readPath(rp, defs, opts) {
       const selectNodes = []
       const clsNames = Array.from(node.nodes)
       for(let cls of clsNames) {
-        if(cls.type === 'atrule' && cls.name === 'props') {
-          if(typeof cls.params === 'string' && defs[cls.params.trim()]) {
-            selectNodes.push(...defs[cls.params.trim()])
+        if(cls.type === 'decl' && cls.prop === 'props') {
+          if(typeof cls.params === 'string' && defs[cls.value.trim()]) {
+            selectNodes.push(...defs[cls.value.trim()])
           }
-        } else if(cls.type === 'atrule' && cls.name === 'ref') {
-          const refs = cls.params.trim() ? Array.from(new Set(cls.params.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+        } else if(cls.type === 'decl' && cls.prop === 'ref') {
+          const refs = cls.value.trim() ? Array.from(new Set(cls.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
           for(let ref of refs) {
             selectNodes.push(...reference(ref, opts))
           }

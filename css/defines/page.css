@@ -1,5 +1,3 @@
-@set .page {
-  @ref grid;
-  @ref wd-100;
-  @ref mwd-100vw;
+@set page {
+  ref: grid wd-100 mwd-100vw;
 }

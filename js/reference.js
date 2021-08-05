@@ -196,8 +196,10 @@ function reference(nameArg, valueArg, opts) {
         }
       }
     } else {
-      if(isNaN(valueArg) === false) {
+      if(valueArg !== null && isNaN(valueArg) === false) {
         arr.push(postcss.decl({prop: 'flex', value: `${valueArg} 1 0px`}))
+      } else {
+        arr.push(decl1)
       }
     }
   }
@@ -221,7 +223,7 @@ module.exports = (ref, opts) => {
   } else if(refs[0] === 'print' || refs[0] === 'screen') {
     obj['screen'] = postcss.AtRule({ name: 'media', params: refs[0] })
   } else {
-    arr = arr.concat(reference(refs[0], refs[1], opts))
+    arr = arr.concat(reference(refs[0], refs[1] ? refs[1] : null, opts))
   }
   
   return arr

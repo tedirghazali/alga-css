@@ -33,6 +33,37 @@ test('Test the reference feature', async () => {
   })
 })
 
+/*test('Reference of Flexbox', async () => {
+  let result = await postcss([
+    algacss()
+  ]).process(`
+.flexbox1 {
+  ref: flex flexRow flex-1;
+}
+
+.flexbox2 {
+  ref: flexCenter;
+  ref: flexCol;
+  ref: flexAuto;
+}
+
+.flexbox3 {
+  ref: flexItemsCenter;
+  ref: flexRowReverse;
+  ref: flexInitial;
+}
+
+.gridPage {
+  props: page;
+}
+
+.gridPage2 {
+  props: page;
+}
+  `, { from: undefined })
+  console.log(result.css)
+})*/
+
 /*test('Reference of CSS utility', async () => {
   let result = await postcss([
     algacss()

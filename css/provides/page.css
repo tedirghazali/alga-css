@@ -1,6 +1,6 @@
 @provide page {
   .page {
-    @props .page;
+    props: page;
     grid-template:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                     [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                     [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
@@ -8,77 +8,77 @@
   }
 
   .pageTop {
-    @props .page;
+    props: page;
     grid-template:  [top-section-left] "top-section top-section" auto [top-section-right]
                     [main-section-left] "main-section main-section" 1fr [main-section-right]
                     / auto 1fr;
   }
     
   .pageLeft {
-    @props .page;
+    props: page;
     grid-template:  [left-section-left] "left-section main-section" auto [main-section-right]
                     [left-section-left] "left-section main-section" 1fr [main-section-right]
                     / auto 1fr;
   }
     
   .pageRight {
-    @props .page;
+    props: page;
     grid-template:  [main-section-left] "main-section right-section" auto [right-section-right]
                     [main-section-left] "main-section right-section" 1fr [right-section-right]
                     / auto 1fr;
   }
     
   .pageBottom {
-    @props .page;
+    props: page;
     grid-template:  [main-section-left] "main-section main-section" 1fr [main-section-right]
                     [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
                     / auto 1fr;
   }
 
   .pageTopLeft {
-    @props .page;
+    props: page;
     grid-template:  [top-section-left] "top-section top-section" auto [top-section-right]
                     [left-section-left] "left-section main-section" 1fr [main-section-right]
                     / auto 1fr;
   }
 
   .pageTopRight {
-    @props .page;
+    props: page;
     grid-template:  [top-section-left] "top-section top-section" auto [top-section-right]
                     [main-section-left] "main-section right-section" 1fr [right-section-right]
                     / auto 1fr;
   }
     
   .pageBottomLeft {
-    @props .page;
+    props: page;
     grid-template:  [left-section-left] "left-section main-section" 1fr [main-section-right]
                     [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
                     / auto 1fr;
   }
     
   .pageBottomRight {
-    @props .page;
+    props: page;
     grid-template:  [main-section-left] "main-section right-section" 1fr [right-section-right]
                     [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
                     / auto 1fr;
   }
     
   .pageTopBoth {
-    @props .page;
+    props: page;
     grid-template:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                     [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                     / auto 1fr auto;
   }
     
   .pageBottomBoth {
-    @props .page;
+    props: page;
     grid-template:  [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                     [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
                     / auto 1fr auto;
   }
     
   .pageVertical {
-    @props .page;
+    props: page;
     grid-template:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                     [main-section-left] "main-section main-section main-section" 1fr [main-section-right]
                     [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
@@ -86,7 +86,8 @@
   }
     
   .pageHorizontal {
-    @props .page;
+    props: page;
+    ref: grid wd-100 mwd-100vw;
     grid-template:  [left-section-left] "left-section main-section right-section" auto [right-section-right]
                     [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                     [left-section-left] "left-section main-section right-section" auto [right-section-right]
@@ -94,7 +95,8 @@
   }
     
   .pageSideLeft {
-    @props .page;
+    props: page;
+    ref: grid wd-100;
     grid-template:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                     [left-section-left] "left-section main-section main-section" 1fr [main-section-right]
                     [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
@@ -102,7 +104,7 @@
   }
     
   .pageSideRight {
-    @props .page;
+    props: page;
     grid-template:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                     [main-section-left] "main-section main-section right-section" 1fr [right-section-right]
                     [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
