@@ -53,13 +53,7 @@ test('Props, set and get atrule with compose declaration', async () => {
     `,
     output: `.bulat {
   --dot: 50px;
-  --dotColor: #c0ffee;
-  display: inline-block;
-  box-sizing: content-box;
-  width: 0px;
-  height: 0px;
-  border: calc(var(--dot, 10px)/2) solid var(--dotColor, #3788d8);
-  border-radius: calc(var(--dot, 10px)/2);
+  --dotColor: #c0ffee;display: inline-block;box-sizing: content-box;width: 0px;height: 0px;border: calc(var(--dot, 10px)/2) solid var(--dotColor, #3788d8);border-radius: calc(var(--dot, 10px)/2);
   color: #333
 }
     `,
@@ -71,7 +65,7 @@ test('Props, set and get atrule with compose declaration', async () => {
   let result = await postcss([
     algacss()
   ]).process(`
-@set titik {
+@set titik2 {
   display: inline-block;
   box-sizing: content-box;
   ref: wd-0;
@@ -83,12 +77,20 @@ test('Props, set and get atrule with compose declaration', async () => {
 @set bulat {
   --dot: 50px;
   --dotColor: #c0ffee;
-  props: titik;
   ref: primary-4;
 }
 
 @set bulatan {
-  props: titik;
+  props: bulat;
+}
+
+.buwat {
+  props: titik2;
+  ref: grid;
+}
+
+.buwat2 {
+  props: titik2;
 }
 
 @get bulat;

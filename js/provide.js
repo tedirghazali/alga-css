@@ -56,7 +56,7 @@ function readPath(rp, opts) {
               for(let nd of node.nodes) {
                 if(nd.type === 'decl' && nd.prop === 'props') {
                   if(opts.define[nd.value.trim()] !== undefined) {
-                    setRule.append(...opts.define[nd.value.trim()])
+                    setRule.append(opts.define[nd.value.trim()].join(';'))
                   }
                 } else if(nd.type === 'decl' && nd.prop === 'ref') {
                   const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []

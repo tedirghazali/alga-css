@@ -67,7 +67,7 @@ function algacss(options, result) {
           for(let node of rule.nodes) {
             if(node.type === 'decl' && node.prop === 'props') {
               if(config.define[node.value.trim()]) {
-                selectNodes.push(...config.define[node.value.trim()])
+                selectNodes.push(config.define[node.value.trim()].join(';'))
               }
             } else if(node.type === 'decl' && node.prop === 'ref') {
               const refs = node.value.trim() ? Array.from(new Set(node.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
@@ -109,10 +109,12 @@ function algacss(options, result) {
         const props = decl.value.trim()
         if(props) {
           const selectNodes = []
-          if(config.define[props] !== undefined) {
-            selectNodes.push(...config.define[props])
+          if(Array.isArray(config.define[props])) {
+            Array.from(config.define[props]).forEach((item) => {
+            selectNodes.push(item)
+            })
           }
-          decl.replaceWith(...selectNodes)
+          decl.replaceWith(selectNodes.join(';'))
         } else {
           decl.remove()
         }
@@ -191,7 +193,7 @@ function algacss(options, result) {
                 for(let nd of node.nodes) {
                   if(nd.type === 'decl' && nd.prop === 'props') {
                     if(config.define[nd.value.trim()] !== undefined) {
-                      setRule.append(...config.define[nd.value.trim()])
+                      setRule.append(config.define[nd.value.trim()].join(';'))
                     }
                   } else if(nd.type === 'decl' && nd.prop === 'ref') {
                     const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []

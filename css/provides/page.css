@@ -87,7 +87,6 @@
     
   .pageHorizontal {
     props: page;
-    ref: grid wd-100 mwd-100vw;
     grid-template:  [left-section-left] "left-section main-section right-section" auto [right-section-right]
                     [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
                     [left-section-left] "left-section main-section right-section" auto [right-section-right]
@@ -96,7 +95,6 @@
     
   .pageSideLeft {
     props: page;
-    ref: grid wd-100;
     grid-template:  [top-section-left] "top-section top-section top-section" auto [top-section-right]
                     [left-section-left] "left-section main-section main-section" 1fr [main-section-right]
                     [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
