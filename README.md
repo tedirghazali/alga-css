@@ -14,7 +14,7 @@
 # Alga CSS
 Alga CSS is a scope-first CSS toolkit for quickly compose or share any design between components
 
-No doubt about the current class names are very confusing because we write the value first and before the colon. So, now we provide a new way to create perfect css names by using dot/period (.) for breakpoint and colon (:) for value.
+What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue`, `Svelte` and `Astro`. Also, my goal in building this is to support all the UI libraries that I have now like `vidie` or `sastra`
 
 All the main features:
 1. Created for scoped CSS
@@ -24,8 +24,35 @@ All the main features:
 5. Custom CSS utility/helper (preset, define, color, screen, etc.)
 6. Extract classes from HTML (Petite-Vue, Alpine.js), Astro, Vue, Svelte, and JSX as well
 
-## Composable CSS Component (@set, @get, @props and @ref)
+## Utility and Mixin
+For getting CSS utility, I provide a custom property which is `ref`.
+
+```css
+.className {
+  ref: flex justifyCenter flex-20 bgPrimary-3;
+}
+
+.otherClassName {
+  ref: flex;
+  ref: justifyCenter;
+  ref: flex-20;
+  ref: bgPrimary-3;
+}
+```
+
+For mixing or composing CSS properties, we can use `props` custom property.
+
+```css
+@set className {
+  ref: flex justifyCenter flex-20 bgPrimary-3;
+}
+
+.otherClassName {
+  props: className;
+}
+```
+
+## Composable CSS Component (@set, @get)
 
 ## Advanced CSS Component (@provide, @inject, @prefers, @screen)
 
-## CSS Utility/Helper
