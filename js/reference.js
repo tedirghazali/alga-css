@@ -2,14 +2,16 @@ const postcss = require('postcss')
 const unit = require('./props/unit.js')
 const sizing = require('./props/sizing.js')
 const spacing = require('./props/spacing.js')
+const styling = require('./props/styling.js')
+const indexing = require('./props/indexing.js')
 const single = require('./props/single.js')
 const double = require('./props/double.js')
 const triple = require('./props/triple.js')
-const indexing = require('./props/indexing.js')
 const grid = require('./props/grid.js')
 const flex = require('./props/flex.js')
 const colorUtil = require('./utils/color-util.js')
 const unitUtil = require('./utils/unit-util.js')
+const isUtil = require('./utils/is-util.js')
 
 const rightLeft = ['right', 'left']
 const topBottom = ['top', 'bottom']
@@ -200,6 +202,18 @@ function reference(nameArg, valueArg, opts) {
         arr.push(postcss.decl({prop: 'flex', value: `${valueArg} 1 0px`}))
       } else {
         arr.push(decl1)
+      }
+    }
+  } else if(cls[0] === 'bd') {
+    if(cls[1] === 'collapse') {
+      arr.push(postcss.decl({prop: 'border-collapse', value: 'collapse'}))
+    }
+  } else if(cls[0] === 'txt') {
+    if(Object.keys(styling.txt.position.val).includes(cls[1])) {
+      arr.push(postcss.decl({prop: styling.txt.position.key, value: styling.txt.position.val[cls[1]]}))
+    } else if(cls[1] === 'color') {
+      if(isUtil.isColor(valueArg)) {
+        arr.push(postcss.decl({prop: 'color', value: valueArg}))
       }
     }
   }

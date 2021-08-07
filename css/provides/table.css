@@ -1,0 +1,117 @@
+@provide table {
+  .table {
+    ref: wd-100 mgBottom-4 captionBottom bdCollapse txtColor-#212529;
+  }
+
+  caption {
+    ref: pdTop-2 pdBottom-2 txtLeft txtColor-#6c757d;
+  }
+
+  th {
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+  }
+
+  thead, tbody, tfoot, tr, td, th {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+  }
+
+  .table > :not(caption) > * > * {
+    padding: .75rem;
+    background-color: transparent;
+    border-bottom-width: 1px;
+  }
+
+  .table > tbody {
+    vertical-align: inherit;
+  }
+
+  .table > thead {
+    vertical-align: bottom;
+  }
+
+  .table > :not(:last-child) > :last-child > * {
+    border-bottom-color: inherit;
+  }
+
+  .captionTop {
+    caption-side: top;
+  }
+
+  .tableBorder > :not(caption) > * {
+    border-width: 1px 0;
+  }
+
+  .tableBorder > :not(caption) > * > * {
+    border-width: 0 1px;
+  }
+
+  .tableBorderless > :not(caption) > * > * {
+    border-bottom-width: 0;
+  }
+
+  .tableStriped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, .1);
+  }
+
+  .tableActive {
+    background-color: rgba(0, 0, 0, .25);
+  }
+
+  .tableHover > tbody > tr:hover {
+    background-color: rgba(0, 0, 0, .15);
+  }
+
+  .tableResponsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @screen sm {
+    .table > :not(caption) > * > * {
+      padding: 0.25rem 0.25rem;
+    }
+    
+    .sm\.tableResponsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  @screen md {
+    .md\.tableResponsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  @screen lg {
+    .lg\.tableResponsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  @screen xl {
+    .xl\.tableResponsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  @screen 2xl {
+    .2xl\.tableResponsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  @screen 3xl {
+    .3xl\.tableResponsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}

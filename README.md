@@ -24,6 +24,29 @@ All the main features:
 5. Custom CSS utility/helper (preset, define, color, screen, etc.)
 6. Extract classes from HTML (Petite-Vue, Alpine.js), Astro, Vue, Svelte, and JSX as well
 
+## Class Name Structure
+Alga CSS allow you to use whatever special character you wish (use either `-`, `.`, `:` or `_`) as divider or separator of class names or references.
+
+```css
+/* highly recommended */
+<span class="md.mgTop-5 bgPrimary-725 txtColor-#333"></span>
+
+.className {
+  ref: md.mgTop-5;
+  ref: txtColor.rgb(205,45,67);
+}
+
+
+/* alternative */
+md.pdTop.2
+
+md-pdBottom-4
+
+md:pdLeft:3
+
+md_pdRight_7
+```
+
 ## Utility and Mixin
 For getting CSS utility, I provide a custom property which is `ref`.
 

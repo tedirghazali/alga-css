@@ -1,6 +1,6 @@
 {
   "name": "alga-css",
-  "version": "1.0.0-development3",
+  "version": "1.0.0-development4",
   "description": "Alga CSS is a scoped-first CSS toolkit for quickly compose or share any design between components",
   "main": "js/index.js",
   "unpkg": "dist/alga-v1.min.css",
@@ -9,6 +9,11 @@
     "test": "jest",
     "lint": "eslint js"
   },
+  "files": [
+    "js",
+    "css/defines",
+    "css/provides"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tedirghazali/alga-css.git"
@@ -27,18 +32,9 @@
   },
   "homepage": "https://github.com/tedirghazali/alga-css#readme",
   "devDependencies": {
-    "autoprefixer": "^10.0.2",
     "eslint": "^7.30.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-postcss": "^9.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sourcemaps": "^2.6.5",
     "jest": "^27.0.6",
-    "postcss": "^8.1.7",
-    "postcss-import": "^13.0.0",
-    "postcss-mixins": "^7.0.2",
-    "postcss-nested": "^5.0.1"
+    "postcss": "^8.1.7"
   },
   "dependencies": {
     "glob": "^7.1.7"
