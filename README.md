@@ -14,7 +14,7 @@
 # Alga CSS
 Alga CSS is a scope-first CSS toolkit for quickly compose or share any design between components
 
-What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue`, `Svelte` and `Astro`. Also, my goal in building this is to support all the UI libraries that I have now like `vidie` or `sastra`
+What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue` (`Svelte` or `Astro` in the future). Also, my goal in building this is to support all the UI libraries that I have now like `vidie` (`sastra` in progress)
 
 All the main features:
 1. Created for scoped CSS
@@ -22,14 +22,14 @@ All the main features:
 3. Composing or mixing CSS components
 4. Provide/inject a large CSS component
 5. Custom CSS utility/helper (preset, define, color, screen, etc.)
-6. Extract classes from HTML (Petite-Vue, Alpine.js), Astro, Vue, Svelte, and JSX as well
+6. Extract classes from HTML (Petite-Vue, Alpine.js) and Vue (in the future will support Svelte, Astro, and JSX as well)
 
 ## Class Name Structure
 Alga CSS allow you to use whatever special character you wish (use either `-`, `.`, `:` or `_`) as divider or separator of class names or references.
 
 ```css
 /* highly recommended */
-<span class="md.mgTop-5 bgPrimary-725 txtColor-#333"></span>
+<span class="md.mgTop-5 bgPrimary-725 txtColor-hex(333)"></span>
 
 .className {
   ref: md.mgTop-5;
@@ -47,8 +47,8 @@ md:pdLeft:3
 md_pdRight_7
 ```
 
-## Utility and Mixin
-For getting CSS utility, I provide a custom property which is `ref`.
+## Mixin and Composing CSS Component
+For composing CSS utility, I provide a custom property which is `ref`.
 
 ```css
 .className {
@@ -63,7 +63,7 @@ For getting CSS utility, I provide a custom property which is `ref`.
 }
 ```
 
-For mixing or composing CSS properties, we can use `props` custom property.
+For mixing CSS properties, we can use `props` custom property.
 
 ```css
 @set className {
@@ -75,7 +75,24 @@ For mixing or composing CSS properties, we can use `props` custom property.
 }
 ```
 
-## Composable CSS Component (@set, @get)
+For getting CSS custom class, we can use `@get` custom rule and `emit` custom property if you want to inject CSS utility to it.
 
-## Advanced CSS Component (@provide, @inject, @prefers, @screen)
+```css
+@get className;
+
+/* or */
+
+@get className {
+  emit: txtBold-5 bdSolid-5;
+}
+
+/* or */
+
+@get className {
+  emit: txtBold-5;
+  emit: bdSolid-5;
+}
+```
+
+## Fragmenting CSS Component
 

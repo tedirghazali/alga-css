@@ -214,6 +214,8 @@ function reference(nameArg, valueArg, opts) {
     } else if(cls[1] === 'color') {
       if(isUtil.isColor(valueArg)) {
         arr.push(postcss.decl({prop: 'color', value: valueArg}))
+      } else if(isUtil.isHex(valueArg)) {
+        arr.push(postcss.decl({prop: 'color', value: valueArg.replace('hex(', '#').replace(')', '')}))
       }
     }
   }

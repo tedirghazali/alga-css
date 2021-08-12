@@ -3,10 +3,10 @@ const glob = require('glob')
 const fs = require('fs')
 
 function readPath(rp) {
-  const regexp = /class=\"([\w]+|[\s\w]+|[\s\w\-\_\.\:\d\(\)]+)\"/g
+  const regexp = /(v-bind:class|x-bind:class|:class|class)=\"([\w]+|[\s\w]+|[\s\w\-\_\.\:\d\(\)]+)\"/g
   const content = {}
   const data = fs.readFileSync(rp, 'utf8')
-  const classes = [...data.matchAll(regexp)].flat().filter(i => i.indexOf('class=') === -1)
+  const classes = [...data.matchAll(regexp)].flat().filter(i => i.indexOf('class') === -1)
   const uniqClasses = Array.from(new Set(classes.map(i => i.split(' ')).flat()))
   console.log(uniqClasses)
   /*const root = postcss.parse(data)
