@@ -14,7 +14,7 @@
 # Alga CSS
 Alga CSS is a scope-first CSS toolkit for quickly compose or share any design between components
 
-What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue` (`Svelte` or `Astro` in the future). Also, my goal in building this is to support all the UI libraries that I have now like `vidie` (`sastra` in progress)
+What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue` or (`Svelte` or `Astro` coming soon). Also, my goal in building this is to support all the UI libraries that I have now like `vidie` or (`sastra` still in progress)
 
 All the main features:
 1. Created for scoped CSS
@@ -22,7 +22,7 @@ All the main features:
 3. Composing or mixing CSS components
 4. Provide/inject a large CSS component
 5. Custom CSS utility/helper (preset, define, color, screen, etc.)
-6. Extract classes from HTML (Petite-Vue, Alpine.js) and Vue (in the future will support Svelte, Astro, and JSX as well)
+6. Extract classes from HTML (Petite-Vue, Alpine.js) and Vue or (in the future will support Svelte, Astro, and JSX as well)
 
 ## Class Name Structure
 Alga CSS allow you to use whatever special character you wish (use either `-`, `.`, `:` or `_`) as divider or separator of class names or references.
@@ -48,7 +48,7 @@ md_pdRight_7
 ```
 
 ## Mixin and Composing CSS Component
-For composing CSS utility, I provide a custom property which is `ref`.
+For composing CSS utility, we provide a custom property which is `ref`.
 
 ```css
 .className {
@@ -63,7 +63,7 @@ For composing CSS utility, I provide a custom property which is `ref`.
 }
 ```
 
-For mixing CSS properties, we can use `props` custom property.
+For mixing CSS properties, we provide `props` custom property.
 
 ```css
 @set className {
@@ -75,7 +75,7 @@ For mixing CSS properties, we can use `props` custom property.
 }
 ```
 
-For getting CSS custom class, we can use `@get` custom rule and `emit` custom property if you want to inject CSS utility to it.
+For getting CSS custom class, you can use `@get` custom rule and `emit` custom property if you want to inject CSS utility to it.
 
 ```css
 @get className;

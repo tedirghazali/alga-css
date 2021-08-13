@@ -1,33 +1,38 @@
 @provide table {
   .table {
-    ref: wd-100 mgBottom-4 captionBottom bdCollapse txtColor-#212529;
+    ref: wd-100 mgBottom-4 captionBottom bdCollapse txtColor.hex(212529);
   }
 
-  caption {
-    ref: pdTop-2 pdBottom-2 txtLeft txtColor-#6c757d;
+  .tableCaption, caption {
+    ref: pdTop-2 pdBottom-2 txtLeft txtColor.hex(6c757d);
   }
 
-  th {
-    text-align: inherit;
-    text-align: -webkit-match-parent;
+  .tableScope, th {
+    ref: txtAlignInherit txtAlignWebkit;
   }
 
-  thead, tbody, tfoot, tr, td, th {
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
+  .tableHead, thead, 
+  .tableBody, tbody, 
+  .tableFoot, tfoot, 
+  .tableRow, tr, 
+  .tableCol, td, 
+  .tableScope, th {
+    ref: bdColorInherit bdSolid bd-0;
   }
 
+  .table > :not(.tableCaption) > * > *,
   .table > :not(caption) > * > * {
-    padding: .75rem;
+    ref: pd-3;
     background-color: transparent;
     border-bottom-width: 1px;
   }
 
+  .table > .tableBody,
   .table > tbody {
     vertical-align: inherit;
   }
 
+  .table > .tableHead,
   .table > thead {
     vertical-align: bottom;
   }
@@ -40,18 +45,22 @@
     caption-side: top;
   }
 
+  .tableBorder > :not(.tableCaption) > *,
   .tableBorder > :not(caption) > * {
     border-width: 1px 0;
   }
 
+  .tableBorder > :not(.tableCaption) > * > *,
   .tableBorder > :not(caption) > * > * {
     border-width: 0 1px;
   }
 
+  .tableBorderless > :not(.tableCaption) > * > *,
   .tableBorderless > :not(caption) > * > * {
     border-bottom-width: 0;
   }
 
+  .tableStriped > .tableBody > .tableRow:nth-of-type(odd).
   .tableStriped > tbody > tr:nth-of-type(odd) {
     background-color: rgba(0, 0, 0, .1);
   }
@@ -60,6 +69,7 @@
     background-color: rgba(0, 0, 0, .25);
   }
 
+  .tableHover > .tableBody > .tableRow:hover,
   .tableHover > tbody > tr:hover {
     background-color: rgba(0, 0, 0, .15);
   }

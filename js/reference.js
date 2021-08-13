@@ -15,6 +15,8 @@ const isUtil = require('./utils/is-util.js')
 
 const rightLeft = ['right', 'left']
 const topBottom = ['top', 'bottom']
+const sidePosition = [...topBottom, ...rightLeft]
+const globalVal = ['inherit', 'initial', 'revert', 'unset']
 
 function reference(nameArg, valueArg, opts) {
   const arr = []
@@ -39,7 +41,7 @@ function reference(nameArg, valueArg, opts) {
       }
     }
       
-    if(isNaN(valueArg) === false) {
+    if(valueArg !== '' && isNaN(valueArg) === false) {
       state.alpha = Number('0.'+ valueArg)
     }
       
@@ -198,7 +200,7 @@ function reference(nameArg, valueArg, opts) {
         }
       }
     } else {
-      if(valueArg !== null && isNaN(valueArg) === false) {
+      if(valueArg !== '' && isNaN(valueArg) === false) {
         arr.push(postcss.decl({prop: 'flex', value: `${valueArg} 1 0px`}))
       } else {
         arr.push(decl1)
@@ -207,10 +209,99 @@ function reference(nameArg, valueArg, opts) {
   } else if(cls[0] === 'bd') {
     if(cls[1] === 'collapse') {
       arr.push(postcss.decl({prop: 'border-collapse', value: 'collapse'}))
+    } else if(cls[1] === 'color') {
+      if(globalVal.includes(cls[2])) {
+        arr.push(postcss.decl({prop: styling.bd.color, value: cls[2]}))
+      } else if(isUtil.isColor(valueArg)) {
+        arr.push(postcss.decl({prop: styling.bd.color, value: valueArg}))
+      } else if(isUtil.isHex(valueArg)) {
+        arr.push(postcss.decl({prop: styling.bd.color, value: valueArg.replace('hex(', '#').replace(')', '')}))
+      }
+    } else if(Object.keys(styling.bd.attrs).includes(cls[1])) {
+      arr.push(postcss.decl({prop: styling.bd.attrs[cls[1]].key, value: styling.bd.attrs[cls[1]].val}))
+      if(styling.bd.attrs[cls[1]].key === 'border-style' && valueArg !== '') {
+        arr.push(postcss.decl({ prop: styling.bd.width, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+      }
+    } else if(Object.keys(opts.color).includes(cls[1])) {
+      let bdAlpha = 1
+      if(valueArg !== '' && isNaN(valueArg) === false) {
+        bdAlpha = Number('0.'+valueArg)
+      }
+      arr.push(postcss.decl({prop: styling.bd.color, value: (typeof opts.color[cls[1]] !== 'string') ? colorUtil(opts.color[cls[1]], bdAlpha) : opts.color[cls[1]]}))
+    } else if(sidePosition.includes(cls[1])) {
+      if(cls[2] === 'color') {
+        if(globalVal.includes(cls[3])) {
+          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-color`, value: cls[3]}))
+        } else if(isUtil.isColor(valueArg)) {
+          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-color`, value: valueArg}))
+        } else if(isUtil.isHex(valueArg)) {
+          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-color`, value: valueArg.replace('hex(', '#').replace(')', '')}))
+        }
+      } else if(Object.keys(styling.bd.attrs).includes(cls[2])) {
+        if(styling.bd.attrs[cls[2]].key === 'border-style') {
+          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-style`, value: styling.bd.attrs[cls[2]].val}))
+          if(valueArg !== '') {
+            arr.push(postcss.decl({ prop: `border-${sidePosition[cls[1]]}-width`, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+          }
+        } else if(styling.bd.attrs[cls[2]].key === 'border-width') {
+          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-width`, value: styling.bd.attrs[cls[2]].val}))
+        }
+      } else if(Object.keys(opts.color).includes(cls[2])) {
+        let bdAlpha = 1
+        if(valueArg !== '' && isNaN(valueArg) === false) {
+          bdAlpha = Number('0.'+valueArg)
+        }
+        arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-color`, value: (typeof opts.color[cls[2]] !== 'string') ? colorUtil(opts.color[cls[2]], bdAlpha) : opts.color[cls[2]]}))
+      } else {
+        if(valueArg !== '') {
+          arr.push(postcss.decl({ prop: `border-${sidePosition[cls[1]]}-width`, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+        }
+      }
+    } else {
+      if(valueArg !== '') {
+        arr.push(postcss.decl({ prop: styling.bd.width, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+      }
+    }
+  } else if(cls[0] === 'outline') {
+    if(cls[1] === 'offset') {
+      if(typeof valueArg === 'string') {
+        arr.push(postcss.decl({ prop: styling.outline.offset, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+      }
+    } else if(cls[1] === 'color') {
+      if(globalVal.includes(cls[2])) {
+        arr.push(postcss.decl({prop: styling.outline.color, value: cls[2]}))
+      } else if(isUtil.isColor(valueArg)) {
+        arr.push(postcss.decl({prop: styling.outline.color, value: valueArg}))
+      } else if(isUtil.isHex(valueArg)) {
+        arr.push(postcss.decl({prop: styling.outline.color, value: valueArg.replace('hex(', '#').replace(')', '')}))
+      }
+    } else if(Object.keys(styling.outline.attrs).includes(cls[1])) {
+      arr.push(postcss.decl({prop: styling.outline.attrs[cls[1]].key, value: styling.outline.attrs[cls[1]].val}))
+      if(styling.outline.attrs[cls[1]].key === 'outline-style' && typeof valueArg === 'string') {
+        arr.push(postcss.decl({ prop: styling.outline.width, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+      }
+    } else if(Object.keys(opts.color).includes(cls[1])) {
+      let outlineAlpha = 1
+      if(valueArg !== '' && isNaN(valueArg) === false) {
+        outlineAlpha = Number('0.'+valueArg)
+      }
+      arr.push(postcss.decl({prop: styling.outline.color, value: (typeof opts.color[cls[1]] !== 'string') ? colorUtil(opts.color[cls[1]], outlineAlpha) : opts.color[cls[1]]}))
+    } else {
+      if(valueArg !== '') {
+        arr.push(postcss.decl({ prop: styling.outline.width, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+      }
     }
   } else if(cls[0] === 'txt') {
     if(Object.keys(styling.txt.position.val).includes(cls[1])) {
-      arr.push(postcss.decl({prop: styling.txt.position.key, value: styling.txt.position.val[cls[1]]}))
+      if(typeof styling.txt.position.val[cls[1]] === 'string') {
+        arr.push(postcss.decl({prop: styling.txt.position.key, value: styling.txt.position.val[cls[1]]}))
+      }
+    } else if(cls[1] === 'align') {
+      if(globalVal.includes(cls[2])) {
+        arr.push(postcss.decl({prop: styling.txt.position.key, value: cls[2]}))
+      } else if(cls[2] === 'webkit') {
+        arr.push(postcss.decl({prop: styling.txt.position.key, value: '-webkit-match-parent'}))
+      }
     } else if(cls[1] === 'color') {
       if(isUtil.isColor(valueArg)) {
         arr.push(postcss.decl({prop: 'color', value: valueArg}))
@@ -239,7 +330,7 @@ module.exports = (ref, opts) => {
   } else if(refs[0] === 'print' || refs[0] === 'screen') {
     obj['screen'] = postcss.AtRule({ name: 'media', params: refs[0] })
   } else {
-    arr = arr.concat(reference(refs[0], refs[1] ? refs[1] : null, opts))
+    arr = arr.concat(reference(refs[0], refs[1] ? refs[1] : '', opts))
   }
   
   return arr
