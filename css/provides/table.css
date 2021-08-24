@@ -1,6 +1,6 @@
 @provide table {
   .table {
-    ref: wd-100 mgBottom-4 captionBottom bdCollapse txtColor.hex(212529);
+    ref: wd-100 mgBottom-4 captionBottom bdSpacing-0 bdCollapse txtColor.hex(212529);
   }
 
   .tableCaption, caption {
@@ -15,49 +15,47 @@
   .tableBody, tbody, 
   .tableFoot, tfoot, 
   .tableRow, tr, 
-  .tableCol, td, 
+  .tableCell, td, 
   .tableScope, th {
     ref: bdColorInherit bdSolid bd-0;
   }
 
   .table > :not(.tableCaption) > * > *,
   .table > :not(caption) > * > * {
-    ref: pd-3;
-    background-color: transparent;
-    border-bottom-width: 1px;
+    ref: pd-3 bdBottom-1px bgTransparent;
   }
 
   .table > .tableBody,
   .table > tbody {
-    vertical-align: inherit;
+    ref: alignVerticalInherit;
   }
 
   .table > .tableHead,
   .table > thead {
-    vertical-align: bottom;
+    ref: alignBottom;
   }
 
   .table > :not(:last-child) > :last-child > * {
-    border-bottom-color: inherit;
+    ref: bdBottomColorInherit;
   }
 
   .captionTop {
-    caption-side: top;
+    ref: captionTop;
   }
 
   .tableBorder > :not(.tableCaption) > *,
   .tableBorder > :not(caption) > * {
-    border-width: 1px 0;
+    ref: bdY-1 bdX-0;
   }
 
   .tableBorder > :not(.tableCaption) > * > *,
   .tableBorder > :not(caption) > * > * {
-    border-width: 0 1px;
+    ref: bdY-0 bdX-1;
   }
 
   .tableBorderless > :not(.tableCaption) > * > *,
   .tableBorderless > :not(caption) > * > * {
-    border-bottom-width: 0;
+    ref: bdBottom-0;
   }
 
   .tableStriped > .tableBody > .tableRow:nth-of-type(odd).
@@ -75,53 +73,14 @@
   }
 
   .tableResponsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    ref: overflowXAuto overflowTouch;
+    screen: overflowXAuto overflowTouch;
   }
 
   @screen sm {
+    .table > :not(.tableCaption) > * > *,
     .table > :not(caption) > * > * {
       padding: 0.25rem 0.25rem;
-    }
-    
-    .sm\.tableResponsive {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-
-  @screen md {
-    .md\.tableResponsive {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-
-  @screen lg {
-    .lg\.tableResponsive {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-
-  @screen xl {
-    .xl\.tableResponsive {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-
-  @screen 2xl {
-    .2xl\.tableResponsive {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-
-  @screen 3xl {
-    .3xl\.tableResponsive {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
   }
 }

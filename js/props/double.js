@@ -19,9 +19,9 @@ module.exports = {
     key: 'display',
     val: {base: 'inline', block: 'inline-block', flex: 'inline-flex', grid: 'inline-grid', tabular: 'inline-table'}
   },
-  tabular: {
+  tb: {
     key: 'display',
-    val: {base: 'table', caption: 'table-caption', cell: 'table-cell', col: 'table-column', colgroup: 'table-column-group', row: 'table-row', rowgroup: 'table-row-group', header: 'table-header-group', footer: 'table-footer-group'}
+    val: {base: 'table', caption: 'table-caption', cell: 'table-cell', scope: 'table-cell', col: 'table-column', cols: 'table-column-group', row: 'table-row', rows: 'table-row-group', body: 'table-row-group', head: 'table-header-group', foot: 'table-footer-group'}
   },
   flow: {
     key: 'display',
@@ -35,7 +35,7 @@ module.exports = {
     key: 'resize',
     val: {base: 'both', none: 'none', y: 'vertical', x: 'horizontal'}
   },
-  event: { 
+  events: { 
     key: 'pointer-events',
     val: {auto: 'auto', none: 'none'}
   },

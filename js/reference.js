@@ -11,6 +11,7 @@ const grid = require('./props/grid.js')
 const flex = require('./props/flex.js')
 const colorUtil = require('./utils/color-util.js')
 const unitUtil = require('./utils/unit-util.js')
+const calcUtil = require('./utils/calc-util.js')
 const isUtil = require('./utils/is-util.js')
 
 const rightLeft = ['right', 'left']
@@ -52,8 +53,12 @@ function reference(nameArg, valueArg, opts) {
     if(cls[1] === 'auto') {
       arr.push(postcss.decl({ prop: sizing[cls[0]], value: 'auto' }))
     } else {
-      if(typeof valueArg === 'string') {
-        arr.push(postcss.decl({ prop: sizing[cls[0]], value: unitUtil(valueArg, unit.length, '%', 1) }))
+      if(valueArg !== '') {
+        if(isUtil.isCalc(valueArg)) {
+          arr.push(postcss.decl({ prop: sizing[cls[0]], value: calcUtil(valueArg) }))
+        } else {
+          arr.push(postcss.decl({ prop: sizing[cls[0]], value: unitUtil(valueArg, unit.length, '%', 1) }))
+        }
       }
     }
   } else if([...rightLeft, ...topBottom].includes(cls[0])) {
@@ -173,8 +178,15 @@ function reference(nameArg, valueArg, opts) {
     }
   } else if(cls[0] === 'area') {
     if(cls[1]) {
-      const cls1or2 = (typeof cls[2] === 'string') ? `${cls[1]}-${cls[2]}` : cls[1]
-      arr.push(postcss.decl({ prop: 'grid-area', value: cls1or2 }))
+      let clsArea = cls[1]
+      if(typeof cls[4] === 'string') {
+        clsArea = `${cls[1]}-${cls[2]}-${cls[3]}-${cls[4]}`
+      } else if(typeof cls[3] === 'string') {
+        clsArea = `${cls[1]}-${cls[2]}-${cls[3]}`
+      } else if(typeof cls[2] === 'string') {
+        clsArea = `${cls[1]}-${cls[2]}`
+      }
+      arr.push(postcss.decl({ prop: 'grid-area', value: clsArea }))
     }
   } else if(Object.keys(indexing).includes(cls[0])) {
     const indVal = valueArg.replace(',', '.')
@@ -231,31 +243,49 @@ function reference(nameArg, valueArg, opts) {
     } else if(sidePosition.includes(cls[1])) {
       if(cls[2] === 'color') {
         if(globalVal.includes(cls[3])) {
-          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-color`, value: cls[3]}))
+          arr.push(postcss.decl({prop: `border-${cls[1]}-color`, value: cls[3]}))
         } else if(isUtil.isColor(valueArg)) {
-          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-color`, value: valueArg}))
+          arr.push(postcss.decl({prop: `border-${cls[1]}-color`, value: valueArg}))
         } else if(isUtil.isHex(valueArg)) {
-          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-color`, value: valueArg.replace('hex(', '#').replace(')', '')}))
+          arr.push(postcss.decl({prop: `border-${cls[1]}-color`, value: valueArg.replace('hex(', '#').replace(')', '')}))
         }
       } else if(Object.keys(styling.bd.attrs).includes(cls[2])) {
         if(styling.bd.attrs[cls[2]].key === 'border-style') {
-          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-style`, value: styling.bd.attrs[cls[2]].val}))
+          arr.push(postcss.decl({prop: `border-${cls[1]}-style`, value: styling.bd.attrs[cls[2]].val}))
           if(valueArg !== '') {
-            arr.push(postcss.decl({ prop: `border-${sidePosition[cls[1]]}-width`, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+            arr.push(postcss.decl({ prop: `border-${cls[1]}-width`, value: unitUtil(valueArg, unit.length, 'px', 1) }))
           }
         } else if(styling.bd.attrs[cls[2]].key === 'border-width') {
-          arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-width`, value: styling.bd.attrs[cls[2]].val}))
+          arr.push(postcss.decl({prop: `border-${cls[1]}-width`, value: styling.bd.attrs[cls[2]].val}))
         }
       } else if(Object.keys(opts.color).includes(cls[2])) {
         let bdAlpha = 1
         if(valueArg !== '' && isNaN(valueArg) === false) {
           bdAlpha = Number('0.'+valueArg)
         }
-        arr.push(postcss.decl({prop: `border-${sidePosition[cls[1]]}-color`, value: (typeof opts.color[cls[2]] !== 'string') ? colorUtil(opts.color[cls[2]], bdAlpha) : opts.color[cls[2]]}))
+        arr.push(postcss.decl({prop: `border-${cls[1]}-color`, value: (typeof opts.color[cls[2]] !== 'string') ? colorUtil(opts.color[cls[2]], bdAlpha) : opts.color[cls[2]]}))
       } else {
         if(valueArg !== '') {
-          arr.push(postcss.decl({ prop: `border-${sidePosition[cls[1]]}-width`, value: unitUtil(valueArg, unit.length, 'px', 1) }))
+          arr.push(postcss.decl({ prop: `border-${cls[1]}-width`, value: unitUtil(valueArg, unit.length, 'px', 1) }))
         }
+      }
+    } else if(cls[1] === 'x') {
+      if(valueArg !== '') {
+        arr.push(
+          postcss.decl({ prop: 'border-right-width', value: unitUtil(valueArg, unit.length, 'px', 1) }),
+          postcss.decl({ prop: 'border-left-width', value: unitUtil(valueArg, unit.length, 'px', 1) })
+        )
+      }
+    } else if(cls[1] === 'y') {
+      if(valueArg !== '') {
+        arr.push(
+          postcss.decl({ prop: 'border-top-width', value: unitUtil(valueArg, unit.length, 'px', 1) }),
+          postcss.decl({ prop: 'border-bottom-width', value: unitUtil(valueArg, unit.length, 'px', 1) })
+        )
+      }
+    } else if(cls[1] === 'spacing') {
+      if(valueArg !== '') {
+        arr.push(postcss.decl({ prop: 'border-spacing', value: unitUtil(valueArg, unit.length, 'px', 1) }))
       }
     } else {
       if(valueArg !== '') {
@@ -307,6 +337,34 @@ function reference(nameArg, valueArg, opts) {
         arr.push(postcss.decl({prop: 'color', value: valueArg}))
       } else if(isUtil.isHex(valueArg)) {
         arr.push(postcss.decl({prop: 'color', value: valueArg.replace('hex(', '#').replace(')', '')}))
+      }
+    } else if(Object.keys(opts.color).includes(cls[1])) {
+      let outlineAlpha = 1
+      if(valueArg !== '' && isNaN(valueArg) === false) {
+        outlineAlpha = Number('0.'+valueArg)
+      }
+      arr.push(postcss.decl({prop: styling.txt.color, value: (typeof opts.color[cls[1]] !== 'string') ? colorUtil(opts.color[cls[1]], outlineAlpha) : opts.color[cls[1]]}))
+    }
+  } else if(cls[0] === 'bg') {
+    if(Object.keys(styling.bg.attrs).includes(cls[1])) {
+      if(typeof styling.bg.attrs[cls[1]].val === 'string') {
+        arr.push(postcss.decl({prop: styling.bg.attrs[cls[1]].key, value: styling.bg.attrs[cls[1]].val}))
+      } else {
+        if(Object.keys(styling.bg.attrs[cls[1]].val).includes(cls[2])) {
+          arr.push(postcss.decl({prop: styling.bg.attrs[cls[1]].key, value: styling.bg.attrs[cls[1]].val[cls[2]]}))
+        }
+      }
+    } else if(Object.keys(opts.color).includes(cls[1])) {
+      let outlineAlpha = 1
+      if(valueArg !== '' && isNaN(valueArg) === false) {
+        outlineAlpha = Number('0.'+valueArg)
+      }
+      arr.push(postcss.decl({prop: styling.bg.color, value: (typeof opts.color[cls[1]] !== 'string') ? colorUtil(opts.color[cls[1]], outlineAlpha) : opts.color[cls[1]]}))
+    } else if(['center', ...sidePosition].includes(cls[1])) {
+      if(rightLeft.includes(cls[2])) {
+        arr.push(postcss.decl({prop: styling.bg.position, value: `${cls[1]} ${cls[2]}`}))
+      } else {
+        arr.push(postcss.decl({prop: styling.bg.position, value: cls[1]}))
       }
     }
   }

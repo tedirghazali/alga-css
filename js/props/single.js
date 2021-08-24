@@ -17,8 +17,4 @@ module.exports = {
   pre: { key: 'white-space', val: 'pre' },
   preline: { key: 'white-space', val: 'pre-line' },
   prewrap: { key: 'white-space', val: 'pre-wrap' },
-  wrap: { key: 'overflow-wrap', val: 'break-word' },
-  anywhere: { key: 'overflow-wrap', val: 'anywhere' },
-  breakall: { key: 'word-break', val: 'break-all' },
-  'break': { key: 'word-break', val: 'break-word' },
 }

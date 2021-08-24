@@ -4,5 +4,8 @@ module.exports = {
   },
   isHex(color) {
     return (color.length <= 13 && color.startsWith('hex(') && color.endsWith(')')) ? true : false
+  },
+  isCalc(calc) {
+    return (calc.startsWith('calc') && calc.endsWith(')')) ? true : false
   }
 }

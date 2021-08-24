@@ -20,6 +20,7 @@ module.exports = {
     hidden: {key: 'overflow', val: 'hidden'},
     visible: {key: 'overflow', val: 'visible'},
     scroll: {key: 'overflow', val: 'scroll'},
+    touch: {key: '-webkit-overflow-scrolling', val: 'touch'},
     x: {key: 'overflow-x', val: overflowVal},
     y: {key: 'overflow-y', val: overflowVal},
   },
@@ -43,7 +44,8 @@ module.exports = {
     top: { key: 'vertical-align', val: 'top'},
     middle: { key: 'vertical-align', val: 'middle'},
     bottom: { key: 'vertical-align', val: 'bottom'},
-    text: { key: 'vertical-align', val: {top: 'text-top', bottom: 'text-bottom'}}
+    text: { key: 'vertical-align', val: {top: 'text-top', bottom: 'text-bottom'}},
+    vertical: { key: 'vertical-align', val: {inherit: 'inherit', initial: 'initial', revert: 'revert', unset: 'unset'}}
   },
   place: {
     content: { key: 'place-content', val: {start: 'start', end: 'end', center: 'center', between: 'space-between', around: 'space-around', evenly: 'space-evenly', stretch: 'stretch'}},
@@ -54,5 +56,9 @@ module.exports = {
     flow: { key: 'grid-auto-flow', val: {row: 'row', column: 'column', rowdense: 'row dense', coldense: 'column dense'}},
     cols: { key: 'grid-auto-columns', val: {auto: 'auto', 'min': 'min-content', 'max': 'max-content', fr: 'minmax(0px, 1fr)'}},
     rows: { key: 'grid-auto-rows', val: {auto: 'auto', 'min': 'min-content', 'max': 'max-content', fr: 'minmax(0px, 1fr)'}},
+  },
+  word: {
+    wrap: {key: 'overflow-wrap', val: {base: 'break-word', anywhere: 'anywhere', normal: 'normal'}},
+    'break': {key: 'word-break', val: {base: 'break-word', all: 'break-all', normal: 'normal'}},
   }
 }

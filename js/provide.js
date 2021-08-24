@@ -13,45 +13,46 @@ function readPath(rp, opts) {
       if(param) {
         const selectNodes = []
         for(let node of rnode.nodes) {
-          if(node.type === 'atrule' && node.name === 'prefers') {
-            const prefersParam = node.params.trim()
-            if(opts.prefers[prefersParam]) {
-              const media = postcss.atRule({name: 'media', params: opts.prefers[prefersParam]})
-              media.append(node.nodes)
-              selectNodes.push(media)
-            } else {
+          if(node.type === 'atrule') {
+            if(node.name === 'prefers') {
+              const prefersParam = node.params.trim()
+              if(opts.prefers[prefersParam] !== undefined) {
+                const media = postcss.atRule({name: 'media', params: opts.prefers[prefersParam]})
+                media.append(node.nodes)
+                selectNodes.push(media)
+              }
               node.remove()
-            }
-          } else if(node.type === 'atrule' && node.name === 'screen') {
-            const screenParam = node.params.trim()
-            if(opts.screen[screenParam]) {
-              const media = postcss.atRule({name: 'media', params: `(min-width: ${opts.screen[screenParam]})`})
-              media.append(node.nodes)
-              selectNodes.push(media)
-            } else {
+            } else if(node.name === 'screen') {
+              const screenParam = node.params.trim()
+              if(Object.keys(opts.screen).includes(screenParam)) {
+                const media = postcss.atRule({name: 'media', params: `(min-width: ${opts.screen[screenParam]})`})
+                media.append(node.nodes)
+                selectNodes.push(media)
+              }
               node.remove()
-            }
-          } else if(node.type === 'atrule' && node.name === 'get') {
-            const getParam = node.params.trim()
-            if(opts.define[getParam]) {
-              const setRule = postcss.rule({selector: '.'+getParam})
-              setRule.append(...opts.define[getParam])
-              if(node.nodes) {
-                for(let getNode of node.nodes) {
-                  if(getNode.type === 'decl' && getNode.prop === 'emit') {
-                    const refs = getNode.value.trim() ? Array.from(new Set(getNode.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
-                    for(let ref of refs) {
-                      setRule.append(...reference(ref, {screen: config.screen, prefers: config.prefers, color: config.color, preset: config.preset}))
+            } else if(node.name === 'get') {
+              const getParam = node.params.trim()
+              if(opts.define[getParam]) {
+                const setRule = postcss.rule({selector: '.'+getParam})
+                setRule.append(...opts.define[getParam])
+                if(node.nodes) {
+                  for(let getNode of node.nodes) {
+                    if(getNode.type === 'decl' && getNode.prop === 'emit') {
+                      const refs = getNode.value.trim() ? Array.from(new Set(getNode.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                      for(let ref of refs) {
+                        setRule.append(...reference(ref, {screen: config.screen, prefers: config.prefers, color: config.color, preset: config.preset}))
+                      }
                     }
                   }
                 }
+                selectNodes.push(setRule)
+              } else {
+                node.remove()
               }
-              selectNodes.push(setRule)
-            } else {
-              node.remove()
             }
-          } if(node.type === 'rule') {
+          } else if(node.type === 'rule') {
             const setRule = postcss.rule({selector: node.selector})
+            const mediaDecl = []
             if(node.nodes) {
               for(let nd of node.nodes) {
                 if(nd.type === 'decl' && nd.prop === 'props') {
@@ -63,12 +64,32 @@ function readPath(rp, opts) {
                   for(let ref of refs) {
                     setRule.append(...reference(ref, {screen: opts.screen, prefers: opts.prefers, color: opts.color, preset: opts.preset}))
                   }
+                } else if(nd.type === 'decl' && nd.prop === 'screen') {
+                  for(let [scrKey, scrVal] of Object.entries(opts.screen)) {
+                    const setAtRule = postcss.atRule({name: 'media', params: `(min-width: ${scrVal})`})
+                    const setNewRule = postcss.rule({selector: `.${scrKey}\\.${node.selector.replace('.', '')}`})
+                    const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                    for(let ref of refs) {
+                      setNewRule.append(...reference(ref, {screen: opts.screen, prefers: opts.prefers, color: opts.color, preset: opts.preset}))
+                    }
+                    setAtRule.append(setNewRule)
+                    mediaDecl.push(setAtRule)
+                  }
+                } else if(nd.type === 'decl' && Object.keys(opts.screen).includes(nd.prop)) {
+                  const setAtRule = postcss.atRule({name: 'media', params: `(min-width: ${opts.screen[nd.prop]})`})
+                  const setNewRule = postcss.rule({selector: `.${nd.prop}\\.${node.selector.replace('.', '')}`})
+                  const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                  for(let ref of refs) {
+                    setNewRule.append(...reference(ref, {screen: opts.screen, prefers: opts.prefers, color: opts.color, preset: opts.preset}))
+                  }
+                  setAtRule.append(setNewRule)
+                  mediaDecl.push(setAtRule)
                 } else {
                   setRule.append(nd)
                 }
               }
             }
-            selectNodes.push(setRule)
+            selectNodes.push(setRule, ...mediaDecl)
           } else {
             selectNodes.push(node)
           }
@@ -76,6 +97,7 @@ function readPath(rp, opts) {
         provide[param] = selectNodes
       }
     }
+    //rnode.remove()
   }
   
   return provide
