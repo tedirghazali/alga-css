@@ -12,9 +12,9 @@
 <br/>
 
 # Alga CSS
-Alga CSS is a scope-first CSS toolkit for quickly compose or share any design between components
+Alga CSS is a scope-first CSS toolkit for quickly mix or compose the CSS references and share the CSS properties between components
 
-What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue` or (`Svelte` or `Astro` coming soon). Also, my goal in building this is to support all the UI libraries that I have now like `vidie` or (`sastra` still in progress)
+What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue` or (`Svelte` or `Astro` coming soon). Also, my goal in building this is to support all the UI libraries that I have now like `vidie` or `sastra`.
 
 All the main features:
 1. Created for scoped CSS
@@ -22,14 +22,14 @@ All the main features:
 3. Composing or mixing CSS components
 4. Provide/inject a large CSS component
 5. Custom CSS utility/helper (preset, define, color, screen, etc.)
-6. Extract classes from HTML (Petite-Vue, Alpine.js) and Vue or (in the future will support Svelte, Astro, and JSX as well)
+6. Extract classes from HTML (Petite-Vue, Alpine.js) and Vue or (in the future it will support Svelte, Astro, and JSX as well)
 
 ## Class Name Structure
 Alga CSS allow you to use whatever special character you wish (use either `-`, `.`, `:` or `_`) as divider or separator of class names or references.
 
 ```css
 /* highly recommended */
-<span class="md.mgTop-5 bgPrimary-725 txtColor-hex(333)"></span>
+<span class="md.mgTop-5 bgPrimary-725 txtColor.hex(333)"></span>
 
 .className {
   ref: md.mgTop-5;
@@ -48,7 +48,7 @@ md_pdRight_7
 ```
 
 ## Mixin and Composing CSS Component
-For composing CSS utility, we provide a custom property which is `ref`.
+to compose the CSS reference, we provide a custom property which is `ref` to apply css property to our class.
 
 ```css
 .className {
@@ -63,7 +63,7 @@ For composing CSS utility, we provide a custom property which is `ref`.
 }
 ```
 
-For mixing CSS properties, we provide `props` custom property.
+to mix the CSS properties, we provide `props` custom property, this only allow to get CSS properties from `@set` custom atRule.
 
 ```css
 @set className {
@@ -75,7 +75,7 @@ For mixing CSS properties, we provide `props` custom property.
 }
 ```
 
-For getting CSS custom class, you can use `@get` custom rule and `emit` custom property if you want to inject CSS utility to it.
+to get the CSS custom class (`@get`), you can use `@get` custom rule and `emit` custom property if you want to inject CSS reference to it.
 
 ```css
 @get className;
@@ -95,4 +95,24 @@ For getting CSS custom class, you can use `@get` custom rule and `emit` custom p
 ```
 
 ## Fragmenting CSS Component
+Alga CSS also provide a custom atRule for just solving that problem, to create a CSS component, you can use `@provide` and if you want to insert that component to your actual CSS file or scope CSS (like using Vue SFC `<style scoped>`).
 
+```css
+/* Create a component */
+@provide componentName {
+  
+  @get className;
+  
+  .otherClassName {
+    ref: flexBetween;
+  }
+}
+
+/* Insert the component */
+@inject componentName;
+
+/* In the future */
+@inject componentName {
+  slot: className otherClassName;
+}
+```
