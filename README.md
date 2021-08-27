@@ -116,3 +116,35 @@ Alga CSS also provide a custom atRule for just solving that problem, to create a
   slot: className otherClassName;
 }
 ```
+
+## Area or Layout Component
+You might want to create a complex layout that based on `grid-template` using Alga CSS, like for instance, creating page layout with multiple sections, you can do that by just using our custom atRule `@area`.
+
+```css
+/* Define new layout */
+@area layoutName {
+  areas: "a b c" "a b c" "a b c";
+  x: auto 1fr auto;
+  y: auto 1fr auto;
+  layoutSectionA: areaA;
+  layoutSectionB: areaB;
+  layoutSectionC: areaC;
+}
+
+/* Result of that layout */
+.layoutName {
+  display: grid;
+  grid-template-areas: "a b c" "a b c" "a b c";
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+.layoutSectionA {
+  grid-area: a;
+}
+.layoutSectionB {
+  grid-area: b;
+}
+.layoutSectionC {
+  grid-area: c;
+}
+```

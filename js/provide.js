@@ -1,7 +1,7 @@
 const postcss = require('postcss')
 const glob = require('glob')
 const fs = require('fs')
-const reference = require('./reference.js')
+const declaration = require('./declaration.js')
 
 function readPath(rp, opts) {
   const provide = {}
@@ -40,7 +40,7 @@ function readPath(rp, opts) {
                     if(getNode.type === 'decl' && getNode.prop === 'emit') {
                       const refs = getNode.value.trim() ? Array.from(new Set(getNode.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
                       for(let ref of refs) {
-                        setRule.append(...reference(ref, {screen: config.screen, prefers: config.prefers, color: config.color, preset: config.preset}))
+                        setRule.append(...declaration(ref, opts))
                       }
                     }
                   }
@@ -62,7 +62,7 @@ function readPath(rp, opts) {
                 } else if(nd.type === 'decl' && nd.prop === 'ref') {
                   const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
                   for(let ref of refs) {
-                    setRule.append(...reference(ref, {screen: opts.screen, prefers: opts.prefers, color: opts.color, preset: opts.preset}))
+                    setRule.append(...declaration(ref, opts))
                   }
                 } else if(nd.type === 'decl' && nd.prop === 'screen') {
                   for(let [scrKey, scrVal] of Object.entries(opts.screen)) {
@@ -70,7 +70,7 @@ function readPath(rp, opts) {
                     const setNewRule = postcss.rule({selector: `.${scrKey}\\.${node.selector.replace('.', '')}`})
                     const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
                     for(let ref of refs) {
-                      setNewRule.append(...reference(ref, {screen: opts.screen, prefers: opts.prefers, color: opts.color, preset: opts.preset}))
+                      setNewRule.append(...declaration(ref, opts))
                     }
                     setAtRule.append(setNewRule)
                     mediaDecl.push(setAtRule)
@@ -80,7 +80,7 @@ function readPath(rp, opts) {
                   const setNewRule = postcss.rule({selector: `.${nd.prop}\\.${node.selector.replace('.', '')}`})
                   const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
                   for(let ref of refs) {
-                    setNewRule.append(...reference(ref, {screen: opts.screen, prefers: opts.prefers, color: opts.color, preset: opts.preset}))
+                    setNewRule.append(...declaration(ref, opts))
                   }
                   setAtRule.append(setNewRule)
                   mediaDecl.push(setAtRule)

@@ -1,7 +1,7 @@
 const postcss = require('postcss')
 const glob = require('glob')
 const fs = require('fs')
-const reference = require('./reference.js')
+const declaration = require('./declaration.js')
 
 function readPath(rp, defs, opts) {
   const define = {}
@@ -19,7 +19,7 @@ function readPath(rp, defs, opts) {
         } else if(cls.type === 'decl' && cls.prop === 'ref') {
           const refs = cls.value.trim() ? Array.from(new Set(cls.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
           for(let ref of refs) {
-            selectNodes.push(...reference(ref, opts))
+            selectNodes.push(...declaration(ref, opts))
           }
         } else {
           selectNodes.push(cls)

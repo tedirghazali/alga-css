@@ -19,7 +19,7 @@ const topBottom = ['top', 'bottom']
 const sidePosition = [...topBottom, ...rightLeft]
 const globalVal = ['inherit', 'initial', 'revert', 'unset']
 
-function reference(nameArg, valueArg, opts) {
+module.exports = (nameArg, valueArg, opts) => { //function reference(nameArg, valueArg, opts) {
   const arr = []
   const state = {
     alpha: 1
@@ -371,7 +371,7 @@ function reference(nameArg, valueArg, opts) {
   return arr
 }
 
-module.exports = (ref, opts) => {
+/*module.exports = (ref, opts) => {
   let arr = []
   const obj = {}
   
@@ -392,4 +392,4 @@ module.exports = (ref, opts) => {
   }
   
   return arr
-}
+}*/
