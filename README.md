@@ -24,6 +24,31 @@ All the main features:
 5. Custom CSS utility/helper (preset, define, color, screen, etc.)
 6. Extract classes from HTML (Petite-Vue, Alpine.js) and Vue or (in the future it will support Svelte, Astro, and JSX as well)
 
+## Installation and Setup
+Alga CSS built on top of PostCSS, so before installing Alga CSS, you need to have PostCSS first and after that you can use NPM or Yarn to install this Alga CSS.
+
+```bash
+npm install alga-css@next
+
+#or
+
+yarn add alga-css@next
+```
+
+If you use tool that support PostCSS out of the box like Vite for instance, you just need to create a new config file which is `postcss.config.js` and add the code below to that file.
+
+```js
+const algacss = require('alga-css')
+
+module.exports = {
+  plugins: [
+    algacss({
+      extract: ['./src/**/*.vue', './src/**/*.html']
+    })
+  ]
+}
+```
+
 ## Class Name Structure
 Alga CSS allow you to use whatever special character you wish (use either `-`, `.`, `:` or `_`) as divider or separator of class names or references.
 
@@ -106,6 +131,8 @@ Alga CSS also provide a custom atRule for just solving that problem, to create a
   .otherClassName {
     ref: flexBetween;
   }
+  
+  @slot slotName;
 }
 
 /* Insert the component */
@@ -114,6 +141,7 @@ Alga CSS also provide a custom atRule for just solving that problem, to create a
 /* In the future */
 @inject componentName {
   slot: className otherClassName;
+  slotName: anotherClassName;
 }
 ```
 
@@ -121,7 +149,7 @@ Alga CSS also provide a custom atRule for just solving that problem, to create a
 You might want to create a complex layout that based on `grid-template` using Alga CSS, like for instance, creating page layout with multiple sections, you can do that by just using our custom atRule `@area`.
 
 ```css
-/* Define new layout */
+/* Input: */
 @area layoutName {
   areas: "a b c" "a b c" "a b c";
   x: auto 1fr auto;
@@ -131,7 +159,7 @@ You might want to create a complex layout that based on `grid-template` using Al
   layoutSectionC: areaC;
 }
 
-/* Result of that layout */
+/* Output: */
 .layoutName {
   display: grid;
   grid-template-areas: "a b c" "a b c" "a b c";

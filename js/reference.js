@@ -9,6 +9,7 @@ const double = require('./props/double.js')
 const triple = require('./props/triple.js')
 const grid = require('./props/grid.js')
 const flex = require('./props/flex.js')
+const txt = require('./refs/txt.js')
 const colorUtil = require('./utils/color-util.js')
 const unitUtil = require('./utils/unit-util.js')
 const calcUtil = require('./utils/calc-util.js')
@@ -19,7 +20,7 @@ const topBottom = ['top', 'bottom']
 const sidePosition = [...topBottom, ...rightLeft]
 const globalVal = ['inherit', 'initial', 'revert', 'unset']
 
-module.exports = (nameArg, valueArg, opts) => { //function reference(nameArg, valueArg, opts) {
+module.exports = (nameArg, valueArg, opts) => {
   const arr = []
   const state = {
     alpha: 1
@@ -322,7 +323,8 @@ module.exports = (nameArg, valueArg, opts) => { //function reference(nameArg, va
       }
     }
   } else if(cls[0] === 'txt') {
-    if(Object.keys(styling.txt.position.val).includes(cls[1])) {
+    arr.push(...txt(cls, valueArg, opts))
+    /*if(Object.keys(styling.txt.position.val).includes(cls[1])) {
       if(typeof styling.txt.position.val[cls[1]] === 'string') {
         arr.push(postcss.decl({prop: styling.txt.position.key, value: styling.txt.position.val[cls[1]]}))
       }
@@ -344,7 +346,7 @@ module.exports = (nameArg, valueArg, opts) => { //function reference(nameArg, va
         outlineAlpha = Number('0.'+valueArg)
       }
       arr.push(postcss.decl({prop: styling.txt.color, value: (typeof opts.color[cls[1]] !== 'string') ? colorUtil(opts.color[cls[1]], outlineAlpha) : opts.color[cls[1]]}))
-    }
+    }*/
   } else if(cls[0] === 'bg') {
     if(Object.keys(styling.bg.attrs).includes(cls[1])) {
       if(typeof styling.bg.attrs[cls[1]].val === 'string') {
@@ -370,26 +372,3 @@ module.exports = (nameArg, valueArg, opts) => { //function reference(nameArg, va
   }
   return arr
 }
-
-/*module.exports = (ref, opts) => {
-  let arr = []
-  const obj = {}
-  
-  const refs = ref.trim().split(/\.|-|_|\:/).filter(i => i !== '')
-  
-  if(Object.keys(opts.preset).includes(refs[0])) {
-    refs[0] = opts.preset[param]
-  }
-  
-  if(Object.keys(opts.screen).includes(refs[0])) {
-    obj['screen'] = postcss.AtRule({ name: 'media', params: '(min-width: ${opts.screen[refs[0]]})' })
-  } else if(refs[0] === 'dark' || refs[0] === 'light' || refs[0] === 'reduce') {
-    obj['screen'] = postcss.AtRule({ name: 'media', params: opts.prefers[refs[0]] })
-  } else if(refs[0] === 'print' || refs[0] === 'screen') {
-    obj['screen'] = postcss.AtRule({ name: 'media', params: refs[0] })
-  } else {
-    arr = arr.concat(reference(refs[0], refs[1] ? refs[1] : '', opts))
-  }
-  
-  return arr
-}*/

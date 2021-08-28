@@ -16,7 +16,7 @@ function algacss(options, result) {
     color: Object.assign({}, color, options.color),
     define: {},
     provide: {},
-    extract: {}
+    extract: []
   }
   
   const opts1 = {screen: config.screen, prefers: config.prefers, color: config.color, preset: config.preset}
@@ -241,6 +241,10 @@ function algacss(options, result) {
         }
         
       })
+      
+      if(config.extract.length >= 1) {
+        root.append(...config.extract)
+      }
     }
   }
       

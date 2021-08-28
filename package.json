@@ -1,6 +1,6 @@
 {
   "name": "alga-css",
-  "version": "1.0.0-development5",
+  "version": "1.0.0-development8",
   "description": "Alga CSS is a scope-first CSS toolkit for quickly mix or compose the CSS references and share the CSS properties between components",
   "main": "js/index.js",
   "unpkg": "dist/alga-v1.min.css",

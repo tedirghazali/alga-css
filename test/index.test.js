@@ -13,7 +13,7 @@ test('First impression working with posecss', async () => {
   await execute()
 })
 
-test('test injection', async () => {
+/*test('test injection', async () => {
   let result = await postcss([
     algacss({
       provide: ['./test/provide/*.css'],
@@ -21,7 +21,7 @@ test('test injection', async () => {
     })
   ]).process('@get page;', { from: undefined })
   console.log(result.css)
-})
+})*/
 
 /*test('test provide', async () => {
   let result = await postcss([

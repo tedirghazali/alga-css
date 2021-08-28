@@ -9,27 +9,26 @@ function readPath(rp, opts) {
   const data = fs.readFileSync(rp, 'utf8')
   const classes = [...data.matchAll(regexp)].flat().filter(i => i.indexOf('class') === -1)
   const uniqClasses = Array.from(new Set(classes.map(i => i.split(' ')).flat()))
-  /*for(let ref of uniqClasses) {
+  for(let ref of uniqClasses) {
     content.push(...rules(ref, opts))
-  }*/
-  console.log(uniqClasses)
+  }
   return content
 }
 
 module.exports = (paths, options) => {
-  let extract = {}
+  let extract = []
   
   if(typeof paths === 'string') {
     const files = glob.sync(paths, {})
     for(let file of files) {
-      extract = Object.assign({}, extract, readPath(file, options))
+      extract = extract.concat(readPath(file, options))
     }
   } else if(Array.isArray(paths)) {
     for(let p of Array.from(paths)) {
       if(typeof p === 'string') {
         const files = glob.sync(p, {})
         for(let file of files) {
-          extract = Object.assign({}, extract, readPath(file, options))
+          extract = extract.concat(readPath(file, options))
         }
       }
     }
