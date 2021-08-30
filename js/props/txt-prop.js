@@ -3,14 +3,14 @@ module.exports = {
   width: {
     key: 'font-size', 
     val: {
-      '2xs': 'xx-small',
-      xs: 'x-small',
-      sm: 'small',
-      md: 'medium',
-      lg: 'large',
-      xl: 'x-large',
-      '2xl': 'xx-large',
-      '3xl': 'xxx-large',
+      xxsmall: 'xx-small',
+      xsmall: 'x-small',
+      small: 'small',
+      medium: 'medium',
+      large: 'large',
+      xlarge: 'x-large',
+      xxlarge: 'xx-large',
+      xxxlarge: 'xxx-large',
       smaller: 'smaller',
       larger: 'larger'
     }
@@ -40,7 +40,9 @@ module.exports = {
       bold: 700,
       extrabold: 800,
       heavy: 900,
-      extraheavy: 950
+      extraheavy: 950,
+      lighter: 'lighter',
+      bolder: 'bolder'
     }
   },
   style: {
@@ -63,7 +65,7 @@ module.exports = {
     }
   },
   decoration: {
-    key: 'text-decoration', 
+    key: 'text-decoration-line', 
     val: {
       nodecoration: 'none',
       underline: 'underline',
@@ -71,7 +73,5 @@ module.exports = {
       strikethrough: 'line-through'
     }
   },
-  'decoration-style': ['solid', 'double', 'dotted', 'dashed', 'wavy'],
-  'thickness': 'text-decoration-thickness',
-  'shadow': 'text-shadow'
+  'text-decoration-style': ['solid', 'double', 'dotted', 'dashed', 'wavy']
 }

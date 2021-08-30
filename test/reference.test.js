@@ -1,15 +1,8 @@
 const postcss = require('postcss')
 const algacss = require('../js/')
+const execute = require('./execute.js')
 
-async function execute(arg = { input: 'a {}', output: 'a {}', options: {} }) {
-  let result = await postcss([
-    algacss(arg.options)
-  ]).process(arg.input, { from: undefined })
-  expect(result.css).toEqual(arg.output)
-  expect(result.warnings()).toHaveLength(0)
-}
-
-test('Test the reference feature', async () => {
+test('Testing the CSS reference', async () => {
   await execute({
     input: `.ref {
   ref: sizingContent;
@@ -33,38 +26,7 @@ test('Test the reference feature', async () => {
   })
 })
 
-/*test('Reference of Flexbox', async () => {
-  let result = await postcss([
-    algacss()
-  ]).process(`
-.flexbox1 {
-  ref: flex flexRow flex-1;
-}
-
-.flexbox2 {
-  ref: flexCenter;
-  ref: flexCol;
-  ref: flexAuto;
-}
-
-.flexbox3 {
-  ref: flexItemsCenter;
-  ref: flexRowReverse;
-  ref: flexInitial;
-}
-
-.gridPage {
-  props: page;
-}
-
-.gridPage2 {
-  props: page;
-}
-  `, { from: undefined })
-  console.log(result.css)
-})*/
-
-/*test('Reference of CSS utility', async () => {
+/*test('Testing the CSS reference', async () => {
   let result = await postcss([
     algacss()
   ]).process(`
