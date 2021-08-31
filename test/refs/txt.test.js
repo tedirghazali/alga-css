@@ -2,9 +2,9 @@
 //const algacss = require('../../js/')
 const execute = require('../execute.js')
 
-test('Testing the text reference', async () => {
+test('Text or txt reference testing', async () => {
   await execute({
-    input: `.textClass {
+    input: `.txtClass {
   ref: txtPrimary;
   ref: txtColor.hex(009900);
   ref: txt-5;
@@ -15,10 +15,10 @@ test('Testing the text reference', async () => {
   ref: txtUnderline;
 }
 
-.textOtherClass {
+.txtOtherClass {
   ref: txtPrimary-625 txtColor.rgb(24,56,78) txtEnd txtBold-3 txtOblique txtLowercase txtOverlineWavy;
 }`, 
-    output: `.textClass {
+    output: `.txtClass {
   color: rgba(13,110,253, 1);
   color: #009900;
   font-size: 5pt;
@@ -29,7 +29,7 @@ test('Testing the text reference', async () => {
   text-decoration-line: underline;
 }
 
-.textOtherClass {
+.txtOtherClass {
   color: rgba(13,110,253, 0.625);
   color: rgb(24,56,78);
   text-align: end;
@@ -44,11 +44,11 @@ test('Testing the text reference', async () => {
   })
 })
 
-/*test('Testing the text reference', async () => {
+/*test('Text or txt reference testing', async () => {
   let result = await postcss([
     algacss()
   ]).process(`
-.textClass {
+.txtClass {
   ref: txtPrimary;
   ref: txtColor.hex(009900);
   ref: txt-5;
@@ -59,7 +59,7 @@ test('Testing the text reference', async () => {
   ref: txtUnderline;
 }
 
-.textOtherClass {
+.txtOtherClass {
   ref: txtPrimary-625 txtColor.rgb(24,56,78) txtEnd txtBold-3 txtOblique txtLowercase txtOverlineWavy;
 }
   `, { from: undefined })

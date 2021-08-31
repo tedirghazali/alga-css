@@ -20,6 +20,5 @@ module.exports = {
   cyan: [11, 200, 238],
   gray: [108, 117, 125],
   transparent: 'transparent',
-  current: 'currentColor',
-  color: 'var(--color)',
+  current: 'currentColor'
 }

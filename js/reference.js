@@ -10,6 +10,7 @@ const triple = require('./props/triple.js')
 const grid = require('./props/grid.js')
 const flex = require('./props/flex.js')
 const txt = require('./refs/txt.js')
+const bg = require('./refs/bg.js')
 const colorUtil = require('./utils/color-util.js')
 const unitUtil = require('./utils/unit-util.js')
 const calcUtil = require('./utils/calc-util.js')
@@ -324,51 +325,8 @@ module.exports = (nameArg, valueArg, opts) => {
     }
   } else if(cls[0] === 'txt') {
     arr.push(...txt(cls, valueArg, opts))
-    /*if(Object.keys(styling.txt.position.val).includes(cls[1])) {
-      if(typeof styling.txt.position.val[cls[1]] === 'string') {
-        arr.push(postcss.decl({prop: styling.txt.position.key, value: styling.txt.position.val[cls[1]]}))
-      }
-    } else if(cls[1] === 'align') {
-      if(globalVal.includes(cls[2])) {
-        arr.push(postcss.decl({prop: styling.txt.position.key, value: cls[2]}))
-      } else if(cls[2] === 'webkit') {
-        arr.push(postcss.decl({prop: styling.txt.position.key, value: '-webkit-match-parent'}))
-      }
-    } else if(cls[1] === 'color') {
-      if(isUtil.isColor(valueArg)) {
-        arr.push(postcss.decl({prop: 'color', value: valueArg}))
-      } else if(isUtil.isHex(valueArg)) {
-        arr.push(postcss.decl({prop: 'color', value: valueArg.replace('hex(', '#').replace(')', '')}))
-      }
-    } else if(Object.keys(opts.color).includes(cls[1])) {
-      let outlineAlpha = 1
-      if(valueArg !== '' && isNaN(valueArg) === false) {
-        outlineAlpha = Number('0.'+valueArg)
-      }
-      arr.push(postcss.decl({prop: styling.txt.color, value: (typeof opts.color[cls[1]] !== 'string') ? colorUtil(opts.color[cls[1]], outlineAlpha) : opts.color[cls[1]]}))
-    }*/
   } else if(cls[0] === 'bg') {
-    if(Object.keys(styling.bg.attrs).includes(cls[1])) {
-      if(typeof styling.bg.attrs[cls[1]].val === 'string') {
-        arr.push(postcss.decl({prop: styling.bg.attrs[cls[1]].key, value: styling.bg.attrs[cls[1]].val}))
-      } else {
-        if(Object.keys(styling.bg.attrs[cls[1]].val).includes(cls[2])) {
-          arr.push(postcss.decl({prop: styling.bg.attrs[cls[1]].key, value: styling.bg.attrs[cls[1]].val[cls[2]]}))
-        }
-      }
-    } else if(Object.keys(opts.color).includes(cls[1])) {
-      let outlineAlpha = 1
-      if(valueArg !== '' && isNaN(valueArg) === false) {
-        outlineAlpha = Number('0.'+valueArg)
-      }
-      arr.push(postcss.decl({prop: styling.bg.color, value: (typeof opts.color[cls[1]] !== 'string') ? colorUtil(opts.color[cls[1]], outlineAlpha) : opts.color[cls[1]]}))
-    } else if(['center', ...sidePosition].includes(cls[1])) {
-      if(rightLeft.includes(cls[2])) {
-        arr.push(postcss.decl({prop: styling.bg.position, value: `${cls[1]} ${cls[2]}`}))
-      } else {
-        arr.push(postcss.decl({prop: styling.bg.position, value: cls[1]}))
-      }
-    }
+    arr.push(...bg(cls, valueArg, opts))
   }
   return arr
 }
