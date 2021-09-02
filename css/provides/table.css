@@ -1,6 +1,6 @@
 @provide table {
   .table {
-    ref: wd-100 mgBottom-4 captionBottom bdSpacing-0 bdCollapse txtColor.hex(212529);
+    ref: wd-100 mgBottom-4 captionBottom bdSpacing-0 bdCollapse txtColor.hex(212529) bdColor.hex(dee2e6);
   }
 
   .tableCaption, caption {
@@ -22,6 +22,16 @@
 
   .table > :not(.tableCaption) > * > *,
   .table > :not(caption) > * > * {
+    ref: pd-2 bdBottom-1px bgTransparent;
+  }
+
+  .tableSmall > :not(.tableCaption) > * > *,
+  .tableSmall > :not(caption) > * > * {
+    ref: pd-1 bdBottom-1px bgTransparent;
+  }
+
+  .table.tableLarge > :not(.tableCaption) > * > *,
+  .table.tableLarge > :not(caption) > * > * {
     ref: pd-3 bdBottom-1px bgTransparent;
   }
 
@@ -39,7 +49,7 @@
     ref: bdBottomColorInherit;
   }
 
-  .captionTop {
+  .tableCaptionTop {
     ref: captionTop;
   }
 
@@ -58,18 +68,18 @@
     ref: bdBottom-0;
   }
 
-  .tableStriped > .tableBody > .tableRow:nth-of-type(odd).
-  .tableStriped > tbody > tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, .1);
+  .tableStripe > .tableBody > .tableRow:nth-of-type(odd),
+  .tableStripe > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
   }
 
   .tableActive {
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   .tableHover > .tableBody > .tableRow:hover,
   .tableHover > tbody > tr:hover {
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, 0.075);
   }
 
   .tableResponsive {
@@ -78,8 +88,8 @@
   }
 
   @screen sm {
-    .table > :not(.tableCaption) > * > *,
-    .table > :not(caption) > * > * {
+    .sm\.table > :not(.tableCaption) > * > *,
+    .sm\.table > :not(caption) > * > * {
       padding: 0.25rem 0.25rem;
     }
   }

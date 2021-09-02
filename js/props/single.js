@@ -16,5 +16,5 @@ module.exports = {
   nowrap: { key: 'white-space', val: 'nowrap' },
   pre: { key: 'white-space', val: 'pre' },
   preline: { key: 'white-space', val: 'pre-line' },
-  prewrap: { key: 'white-space', val: 'pre-wrap' },
+  prewrap: { key: 'white-space', val: 'pre-wrap' }
 }
