@@ -27,7 +27,7 @@ module.exports = (cls, valueArg, opts) => {
     }
   } else if(Object.keys(outlineProp.attrs).includes(cls[1])) {
     arr.push(postcss.decl({prop: outlineProp.attrs[cls[1]].key, value: outlineProp.attrs[cls[1]].val}))
-    if(outlineProp.attrs[cls[1]].key === 'outline-style' && typeof valueArg === 'string') {
+    if(outlineProp.attrs[cls[1]].key === 'outline-style' && valueArg !== '') {
       arr.push(postcss.decl({ prop: outlineProp.width, value: unitUtil(valueArg, unit.length, 'px', 1) }))
     }
   } else if(Object.keys(opts.color).includes(cls[1])) {

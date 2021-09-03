@@ -29,9 +29,11 @@ module.exports = (ref, opts) => {
     newAtRule.append(newRule)
     arr.push(newAtRule)
   } else {
-    const newRule = postcss.rule({ selector: '.'+ref.trim().replace('.', '\\.').replace(':', '\\:') })
-    newRule.append(...reference(refs[0], refs[1] ? refs[1] : '', opts))
-    arr.push(newRule)
+    if(reference(refs[0], refs[1] ? refs[1] : '', opts).length >= 1) {
+      const newRule = postcss.rule({ selector: '.'+ref.trim().replace('.', '\\.').replace(':', '\\:') })
+      newRule.append(...reference(refs[0], refs[1] ? refs[1] : '', opts))
+      arr.push(newRule)
+    }
   }
   
   return arr
