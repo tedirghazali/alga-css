@@ -14,7 +14,7 @@
 # Alga CSS
 Alga CSS is a scope-first CSS toolkit for quickly mix or compose the CSS references and share the CSS properties between components
 
-What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue` or (`Svelte` or `Astro` coming soon). Also, my goal in building this is to support all the UI libraries that I have now like `vidie` or `sastra`.
+What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue`, `Svelte` or `Astro`. Also, my goal in building this is to support all the UI libraries that I have now like `vidie` or `sastra`.
 
 All the main features:
 1. Created for scoped CSS
@@ -22,12 +22,12 @@ All the main features:
 3. Composing or mixing CSS components
 4. Provide/inject a large CSS component
 5. Custom CSS utility/helper (preset, define, color, screen, etc.)
-6. Extract classes from HTML (Petite-Vue, Alpine.js) and Vue or (in the future it will support Svelte, Astro, and JSX as well)
+6. Extract classes from HTML (Petite-Vue, Alpine.js), Vue, Svelte, and Astro
 
 ## Installation and Setup
 Alga CSS built on top of PostCSS, so before installing Alga CSS, you need to have PostCSS first and after that you can use NPM or Yarn to install this Alga CSS.
 
-```bash
+```sh
 npm install alga-css@next
 
 #or
@@ -43,7 +43,7 @@ const algacss = require('alga-css')
 module.exports = {
   plugins: [
     algacss({
-      extract: ['./src/**/*.vue', './src/**/*.html']
+      extract: ['./src/**/*.vue', './src/**/*.svelte', './src/**/*.html']
     })
   ]
 }

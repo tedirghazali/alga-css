@@ -11,6 +11,8 @@ const flex = require('./props/flex.js')
 const txt = require('./refs/txt.js')
 const bg = require('./refs/bg.js')
 const bd = require('./refs/bd.js')
+const sd = require('./refs/sd.js')
+const rd = require('./refs/rd.js')
 const outline = require('./refs/outline.js')
 const colorUtil = require('./utils/color-util.js')
 const unitUtil = require('./utils/unit-util.js')
@@ -229,6 +231,10 @@ module.exports = (nameArg, valueArg, opts) => {
     arr.push(...txt(cls, valueArg, opts))
   } else if(cls[0] === 'bg') {
     arr.push(...bg(cls, valueArg, opts))
+  } else if(cls[0] === 'sd') {
+    arr.push(...sd(cls, valueArg, opts))
+  } else if(cls[0] === 'rd') {
+    arr.push(...rd(cls, valueArg, opts))
   }
   return arr
 }

@@ -26,5 +26,8 @@ module.exports = {
   pl: 'pdLeft',
   ps: 'pdLeft',
   px: 'pdX',
-  py: 'pdY'
+  py: 'pdY',
+  border: 'bd',
+  rounded: 'rd',
+  text: 'txt'
 }
