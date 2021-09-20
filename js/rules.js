@@ -4,7 +4,7 @@ const reference = require('./reference.js')
 module.exports = (ref, opts) => {
   let arr = []
   
-  const refs = ref.trim().split(/\.|-|_|\:/).filter(i => i !== '')
+  const refs = ref.trim().split(/\||-|_|:/).filter(i => i !== '')
   
   if(Object.keys(opts.preset).includes(refs[0])) {
     refs[0] = opts.preset[refs[0]]

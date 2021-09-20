@@ -1,9 +1,9 @@
 const postcss = require('postcss')
 const bgProp = require('../props/bg-prop.js')
-const gbl = require('../props/global.js')
-const unit = require('../props/unit.js')
+//const gbl = require('../props/global.js')
+//const unit = require('../props/unit.js')
 const colorUtil = require('../utils/color-util.js')
-const unitUtil = require('../utils/unit-util.js')
+//const unitUtil = require('../utils/unit-util.js')
 const isUtil = require('../utils/is-util.js')
 
 const rightLeft = ['right', 'left']

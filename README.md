@@ -43,31 +43,31 @@ const algacss = require('alga-css')
 module.exports = {
   plugins: [
     algacss({
-      extract: ['./src/**/*.vue', './src/**/*.svelte', './src/**/*.html']
+      extract: ['./src/**/*.vue', './src/**/*.html', './src/**/*.svelte', './src/**/*.astro']
     })
   ]
 }
 ```
 
 ## Class Name Structure
-Alga CSS allow you to use whatever special character you wish (use either `-`, `.`, `:` or `_`) as divider or separator of class names or references.
+Alga CSS allow you to use whatever special character you wish (use either `-`, `|`, `:` or `_`) as divider or separator of class names or references.
 
 ```css
 /* highly recommended */
-<span class="md.mgTop-5 bgPrimary-725 txtColor.hex(333)"></span>
+<span class="md|mgTop-5 bgPrimary-725 txtColor-hex(333)"></span>
 
 .className {
-  ref: md.mgTop-5;
-  ref: txtColor.rgb(205,45,67);
+  ref: txtColor-rgb(205,45,67);
+  screen-md: mgTop-5;
 }
 
 
 /* alternative */
-md.pdTop.2
+md|pdTop-2
 
 md-pdBottom-4
 
-md:pdLeft:3
+md:pdLeft-3
 
 md_pdRight_7
 ```
@@ -100,7 +100,7 @@ to mix the CSS properties, we provide `props` custom property, this only allow t
 }
 ```
 
-to get the CSS custom class (`@get`), you can use `@get` custom rule and `emit` custom property if you want to inject CSS reference to it.
+to get the CSS custom class from `@set` directive, you can use `@get` custom rule and `emit` custom property if you want to inject CSS reference to it.
 
 ```css
 @get className;

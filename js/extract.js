@@ -1,4 +1,4 @@
-const postcss = require('postcss')
+//const postcss = require('postcss')
 const glob = require('glob')
 const fs = require('fs')
 const rules = require('./rules.js')
@@ -7,15 +7,15 @@ function readPath(rp) {
   const content = []
   const data = fs.readFileSync(rp, 'utf8')
   let regexp, replaceData
-  if(rp.endsWith('.vue') || rp.endsWith('.html')) {
-    regexp = /(v-bind:class|x-bind:class|:class|class)=\"([\w]+|[\s\w]+|[\s\w\-\_\.\:\d\(\)]+)\"/g
-    replaceData = data.replace(/\[|\]|\',|,\s|\'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
+  if(rp.endsWith('.vue')) {
+    regexp = /(v-bind:class|:class|class)="([\w]+|[\s\w]+|[\s\w\-_\.:\d\(\)]+)"/g
+    replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
   } else if(rp.endsWith('.svelte')) {
-    regexp = /class:([\w]+|[\s\w]+|[\s\w\-\_\.\:\d\(\)]+)\s/g
+    regexp = /class:([\w]+|[\s\w]+|[\s\w\-_.:\d\(\)]+)\s/g
     replaceData = data.replace(/=|\>/ig, ' ')
-  } else if(rp.endsWith('.astro')) {
-    regexp = /class=(\"|\{)([\w]+|[\s\w]+|[\s\w\-\_\.\:\d\(\)]+)(\"|\})/g
-    replaceData = data.replace(/\[|\]|\',|,\s|\'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
+  } else { //.html, .astro, .edge, .blade.php, .twig
+    regexp = /(v-bind:class|x-bind:class|:class|class)="([\w]+|[\s\w]+|[\s\w\-_\.:\d\(\)]+)"/g
+    replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
   }
   if(regexp !== undefined && replaceData !== undefined) {
     const classes = [...replaceData.matchAll(regexp)].flat().filter(i => i.indexOf('class') === -1)

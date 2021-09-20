@@ -6,21 +6,21 @@ test('Border or bd reference testing', async () => {
   await execute({
     input: `.bdClass {
   ref: bdPrimary;
-  ref: bdColor.hex(33333);
+  ref: bdColor-hex(33333);
   ref: bdSolid-4;
   ref: bdTopDashed-5;
   ref: bdTopPrimary;
-  ref: bdRightColor.hex(c0ffee);
+  ref: bdRightColor-hex(c0ffee);
   ref: bdCollapse;
   ref: bdBlockStartSolid-7;
   ref: bdBlockStartSuccess-525;
   ref: bdInlineStartDashed-2;
-  ref: bdInlineStartColor.rgb(0,0,0);
+  ref: bdInlineStartColor-rgb(0,0,0);
   ref: bdY-8;
 }
 
 .bdOtherClass {
-  ref: bdPrimary-725 bdLeftColor.rgb(24,56,78) bdLeft-4 bdX-5 bdBlockEnd-7 bdBlockEndSolid bdInlineEndSolid bdInlineEnd-4;
+  ref: bdPrimary-725 bdLeftColor-rgb(24,56,78) bdLeft-4 bdX-5 bdBlockEnd-7 bdBlockEndSolid bdInlineEndSolid bdInlineEnd-4;
 }`, 
     output: `.bdClass {
   border-color: rgba(13,110,253, 1);

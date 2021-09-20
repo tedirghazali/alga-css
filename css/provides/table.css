@@ -1,10 +1,10 @@
 @provide table {
   .table {
-    ref: wd-100 mgBottom-4 captionBottom bdSpacing-0 bdCollapse txtColor.hex(212529) bdColor.hex(dee2e6);
+    ref: wd-100 mgBottom-4 captionBottom bdSpacing-0 bdCollapse txtColor-hex(212529) bdColor-hex(dee2e6);
   }
 
   .tableCaption, caption {
-    ref: pdTop-2 pdBottom-2 txtLeft txtColor.hex(6c757d);
+    ref: pdTop-2 pdBottom-2 txtLeft txtColor-hex(6c757d);
   }
 
   .tableScope, th {

@@ -7,13 +7,13 @@ test('Outline reference testing', async () => {
     input: `.outlineClass {
   ref: outline-3;
   ref: outlineSolid;
-  ref: outlineColor.hex(c0ffee);
+  ref: outlineColor-hex(c0ffee);
   ref: outlineDashed-5;
   ref: outlinePrimary;
 }
 
 .outlineOtherClass {
-  ref: outlinePrimary-725 outlineColor.rgb(24,56,78) outlineSolid-4;
+  ref: outlinePrimary-725 outlineColor-rgb(24,56,78) outlineSolid-4;
 }`, 
     output: `.outlineClass {
   outline-width: 3px;

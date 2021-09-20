@@ -6,7 +6,7 @@ test('Text or txt reference testing', async () => {
   await execute({
     input: `.txtClass {
   ref: txtPrimary;
-  ref: txtColor.hex(009900);
+  ref: txtColor-hex(009900);
   ref: txt-5;
   ref: txtStart;
   ref: txtBold;
@@ -16,7 +16,7 @@ test('Text or txt reference testing', async () => {
 }
 
 .txtOtherClass {
-  ref: txtPrimary-625 txtColor.rgb(24,56,78) txtEnd txtBold-3 txtOblique txtLowercase txtOverlineWavy;
+  ref: txtPrimary-625 txtColor-rgb(24,56,78) txtEnd txtBold-3 txtOblique txtLowercase txtOverlineWavy;
 }`, 
     output: `.txtClass {
   color: rgba(13,110,253, 1);

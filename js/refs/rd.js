@@ -2,6 +2,7 @@ const postcss = require('postcss')
 const gbl = require('../props/global.js')
 const unit = require('../props/unit.js')
 const unitUtil = require('../utils/unit-util.js')
+const calcUtil = require('../utils/calc-util.js')
 const isUtil = require('../utils/is-util.js')
 
 const rightLeft = ['right', 'left']

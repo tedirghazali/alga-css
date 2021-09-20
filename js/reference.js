@@ -7,7 +7,7 @@ const single = require('./props/single.js')
 const double = require('./props/double.js')
 const triple = require('./props/triple.js')
 const grid = require('./props/grid.js')
-const flex = require('./props/flex.js')
+const flex = require('./refs/flex.js')
 const txt = require('./refs/txt.js')
 const bg = require('./refs/bg.js')
 const bd = require('./refs/bd.js')
@@ -21,8 +21,8 @@ const isUtil = require('./utils/is-util.js')
 
 const rightLeft = ['right', 'left']
 const topBottom = ['top', 'bottom']
-const sidePosition = [...topBottom, ...rightLeft]
-const globalVal = ['inherit', 'initial', 'revert', 'unset']
+//const sidePosition = [...topBottom, ...rightLeft]
+//const globalVal = ['inherit', 'initial', 'revert', 'unset']
 
 module.exports = (nameArg, valueArg, opts) => {
   const arr = []
@@ -199,30 +199,7 @@ module.exports = (nameArg, valueArg, opts) => {
       arr.push(postcss.decl({ prop: indexing[cls[0]], value: indVal }))
     }
   } else if(cls[0] === 'flex') {
-    const decl1 = postcss.decl({prop: 'display', value: 'flex'})
-    if(Object.keys(flex.justify).includes(cls[1])) {
-      const decl2 = postcss.decl({prop: flex.justify[cls[1]].key, value: flex.justify[cls[1]].val})
-      arr.push(decl1, decl2)
-    } else if(cls[1] === 'items' && Object.keys(flex.items).includes(cls[2])) {
-      const decl2 = postcss.decl({prop: flex.items[cls[2]].key, value: flex.items[cls[2]].val})
-      arr.push(decl1, decl2)
-    } else if(Object.keys(flex.attrs).includes(cls[1])) {
-      if(typeof flex.attrs[cls[1]].val === 'string') {
-        arr.push(postcss.decl({prop: flex.attrs[cls[1]].key, value: flex.attrs[cls[1]].val}))
-      } else if(typeof flex.attrs[cls[1]].val === 'object' && Object.keys(flex.attrs[cls[1]].val).includes(cls[2])) {
-        arr.push(postcss.decl({prop: flex.attrs[cls[1]].key, value: flex.attrs[cls[1]].val[cls[2]]}))
-      } else {
-        if(flex.attrs[cls[1]].val.base) {
-          arr.push(postcss.decl({prop: flex.attrs[cls[1]].key, value: flex.attrs[cls[1]].val.base}))
-        }
-      }
-    } else {
-      if(valueArg !== '' && isNaN(valueArg) === false) {
-        arr.push(postcss.decl({prop: 'flex', value: `${valueArg} 1 0px`}))
-      } else {
-        arr.push(decl1)
-      }
-    }
+    arr.push(...flex(cls, valueArg, opts))
   } else if(cls[0] === 'bd') {
     arr.push(...bd(cls, valueArg, opts))
   } else if(cls[0] === 'outline') {

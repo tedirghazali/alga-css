@@ -6,9 +6,9 @@ const colorUtil = require('../utils/color-util.js')
 const unitUtil = require('../utils/unit-util.js')
 const isUtil = require('../utils/is-util.js')
 
-const rightLeft = ['right', 'left']
-const topBottom = ['top', 'bottom']
-const sidePosition = [...topBottom, ...rightLeft]
+//const rightLeft = ['right', 'left']
+//const topBottom = ['top', 'bottom']
+//const sidePosition = [...topBottom, ...rightLeft]
 
 module.exports = (cls, valueArg, opts) => {
   const arr = []

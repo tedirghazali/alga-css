@@ -17,7 +17,7 @@ function readPath(rp, defs, opts) {
             selectNodes.push(...defs[cls.value.trim()])
           }
         } else if(cls.type === 'decl' && cls.prop === 'ref') {
-          const refs = cls.value.trim() ? Array.from(new Set(cls.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+          const refs = cls.value.trim() ? Array.from(new Set(cls.value.trim().split(/\s/).filter(i => i !== ''))) : []
           for(let ref of refs) {
             selectNodes.push(...declaration(ref, opts))
           }
@@ -37,7 +37,9 @@ module.exports = (paths, opts) => {
   const coreFiles = fs.readdirSync(__dirname.toString().replace('js', 'css') + '/defines/')
   if(coreFiles) {
     for(let file of coreFiles) {
-      define = Object.assign({}, define, readPath(__dirname.toString().replace('js', 'css') + '/defines/' + file, define, opts))
+      if(file.endsWith('.css')) {
+        define = Object.assign({}, define, readPath(__dirname.toString().replace('js', 'css') + '/defines/' + file, define, opts))
+      }
     }
   }
   

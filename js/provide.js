@@ -18,7 +18,26 @@ function readPath(rp, opts) {
               const prefersParam = node.params.trim()
               if(opts.prefers[prefersParam] !== undefined) {
                 const media = postcss.atRule({name: 'media', params: opts.prefers[prefersParam]})
-                media.append(node.nodes)
+                const mediaSels = []
+                for(let nds of node.nodes) {
+                  const setRule = postcss.rule({selector: nds.selector})
+                  for(let nd of nds.nodes) {
+                    if(nd.type === 'decl' && nd.prop === 'props') {
+                      if(opts.define[nd.value.trim()] !== undefined) {
+                        setRule.append(opts.define[nd.value.trim()].join(';'))
+                      }
+                    } else if(nd.type === 'decl' && nd.prop === 'ref') {
+                      const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                      for(let ref of refs) {
+                        setRule.append(...declaration(ref, opts))
+                      }
+                    } else {
+                      setRule.append(nd)
+                    }
+                  }
+                  mediaSels.push(setRule)
+                }
+                media.append(mediaSels)
                 selectNodes.push(media)
               }
               node.remove()
@@ -26,7 +45,26 @@ function readPath(rp, opts) {
               const screenParam = node.params.trim()
               if(Object.keys(opts.screen).includes(screenParam)) {
                 const media = postcss.atRule({name: 'media', params: `(min-width: ${opts.screen[screenParam]})`})
-                media.append(node.nodes)
+                const mediaSels = []
+                for(let nds of node.nodes) {
+                  const setRule = postcss.rule({selector: nds.selector})
+                  for(let nd of nds.nodes) {
+                    if(nd.type === 'decl' && nd.prop === 'props') {
+                      if(opts.define[nd.value.trim()] !== undefined) {
+                        setRule.append(opts.define[nd.value.trim()].join(';'))
+                      }
+                    } else if(nd.type === 'decl' && nd.prop === 'ref') {
+                      const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                      for(let ref of refs) {
+                        setRule.append(...declaration(ref, opts))
+                      }
+                    } else {
+                      setRule.append(nd)
+                    }
+                  }
+                  mediaSels.push(setRule)
+                }
+                media.append(mediaSels)
                 selectNodes.push(media)
               }
               node.remove()
@@ -38,7 +76,7 @@ function readPath(rp, opts) {
                 if(node.nodes) {
                   for(let getNode of node.nodes) {
                     if(getNode.type === 'decl' && getNode.prop === 'emit') {
-                      const refs = getNode.value.trim() ? Array.from(new Set(getNode.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                      const refs = getNode.value.trim() ? Array.from(new Set(getNode.value.trim().split(/\s/).filter(i => i !== ''))) : []
                       for(let ref of refs) {
                         setRule.append(...declaration(ref, opts))
                       }
@@ -60,7 +98,7 @@ function readPath(rp, opts) {
                     setRule.append(opts.define[nd.value.trim()].join(';'))
                   }
                 } else if(nd.type === 'decl' && nd.prop === 'ref') {
-                  const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                  const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
                   for(let ref of refs) {
                     setRule.append(...declaration(ref, opts))
                   }
@@ -68,7 +106,7 @@ function readPath(rp, opts) {
                   for(let [scrKey, scrVal] of Object.entries(opts.screen)) {
                     const setAtRule = postcss.atRule({name: 'media', params: `(min-width: ${scrVal})`})
                     const setNewRule = postcss.rule({selector: `.${scrKey}\\.${node.selector.replace('.', '')}`})
-                    const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                    const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
                     for(let ref of refs) {
                       setNewRule.append(...declaration(ref, opts))
                     }
@@ -78,7 +116,7 @@ function readPath(rp, opts) {
                 } else if(nd.type === 'decl' && Object.keys(opts.screen).includes(nd.prop)) {
                   const setAtRule = postcss.atRule({name: 'media', params: `(min-width: ${opts.screen[nd.prop]})`})
                   const setNewRule = postcss.rule({selector: `.${nd.prop}\\.${node.selector.replace('.', '')}`})
-                  const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                  const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
                   for(let ref of refs) {
                     setNewRule.append(...declaration(ref, opts))
                   }
@@ -109,7 +147,9 @@ module.exports = (paths, opts) => {
   const coreFiles = fs.readdirSync(__dirname.toString().replace('js', 'css') + '/provides/')
   if(coreFiles) {
     for(let file of coreFiles) {
-      provide = Object.assign({}, provide, readPath(__dirname.toString().replace('js', 'css') + '/provides/' + file, opts))
+      if(file.endsWith('.css')) {
+        provide = Object.assign({}, provide, readPath(__dirname.toString().replace('js', 'css') + '/provides/' + file, opts))
+      }
     }
   }
   

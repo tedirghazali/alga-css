@@ -1,5 +1,6 @@
 const define = require('./define.js')
 const provide = require('./provide.js')
+const component = require('./component.js')
 const extract = require('./extract.js')
 const screen = require('./screen.js')
 const prefers = require('./prefers.js')
@@ -8,7 +9,7 @@ const declaration = require('./declaration.js')
 const preset = require('./preset.js')
 
 // caranya bukan parse tapi menggunakan regexp
-function algacss(options, result) {
+function algacss(options) {
   const config = {
     preset: Object.assign({}, preset, options.preset),
     screen: Object.assign({}, screen, options.screen),
@@ -16,6 +17,7 @@ function algacss(options, result) {
     color: Object.assign({}, color, options.color),
     define: {},
     provide: {},
+    component: {},
     extract: []
   }
   
@@ -23,13 +25,14 @@ function algacss(options, result) {
   config.define = define(options.define, opts1)
   
   const opts2 = {define: config.define, ...opts1}
-  config.provide = provide(options.provide, opts2)
+  config.provide = provide(options.define, opts2)
+  config.component = component(options.define, {define: config.define, provide: config.provide})
   config.extract = extract(options.extract, opts2)
   
   return {
     Once (root, {Rule, Declaration, AtRule}) {
       root.walkDecls('ref', decl => {
-        const refs = decl.value.trim() ? Array.from(new Set(decl.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+        const refs = decl.value.trim() ? Array.from(new Set(decl.value.trim().split(/\s/).filter(i => i !== ''))) : []
         if(refs.length > 0) {
           const selectNodes = []
           for(let ref of refs) {
@@ -59,7 +62,7 @@ function algacss(options, result) {
               if(node.type === 'decl' && (node.prop !== undefined && node.prop !== null && node.prop !== '')) {
                 const areaRule = new Rule({ selector: '.'+node.prop.trim() })
                 const areaNodes = []
-                const refs = node.value.trim() ? Array.from(new Set(node.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                const refs = node.value.trim() ? Array.from(new Set(node.value.trim().split(/\s/).filter(i => i !== ''))) : []
                 for(let ref of refs) {
                   areaNodes.push(...declaration(ref, opts1))
                 }
@@ -86,7 +89,7 @@ function algacss(options, result) {
                 selectNodes.push(config.define[node.value.trim()].join(';'))
               }
             } else if(node.type === 'decl' && node.prop === 'ref') {
-              const refs = node.value.trim() ? Array.from(new Set(node.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+              const refs = node.value.trim() ? Array.from(new Set(node.value.trim().split(/\s/).filter(i => i !== ''))) : []
               for(let ref of refs) {
                 selectNodes.push(...declaration(ref, opts1))
               }
@@ -108,7 +111,7 @@ function algacss(options, result) {
           if(rule.nodes) {
             for(let node of rule.nodes) {
               if(node.type === 'decl' && node.prop === 'emit') {
-                const refs = node.value.trim() ? Array.from(new Set(node.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                const refs = node.value.trim() ? Array.from(new Set(node.value.trim().split(/\s/).filter(i => i !== ''))) : []
                 for(let ref of refs) {
                   setRule.append(...declaration(ref, opts1))
                 }
@@ -137,11 +140,11 @@ function algacss(options, result) {
       })
       
       root.walkAtRules('prefers', rule => {
-        const param = rule.params.trim()
+        const prefersParam = rule.params.trim()
         
         if(config.prefers[prefersParam]) {
           const media = new AtRule({name: 'media', params: config.prefers[prefersParam]})
-          media.append(node.nodes)
+          media.append(rule.nodes)
           rule.replaceWith(media)
         } else {
           rule.remove()
@@ -149,11 +152,11 @@ function algacss(options, result) {
       })
       
       root.walkAtRules('screen', rule => {
-        const param = rule.params.trim()
+        const screenParam = rule.params.trim()
         
         if(config.screen[screenParam]) {
           const media = new AtRule({name: 'media', params: `(min-width: ${config.screen[screenParam]})`})
-          media.append(node.nodes)
+          media.append(rule.nodes)
           rule.replaceWith(media)
         } else {
           rule.remove()
@@ -192,7 +195,7 @@ function algacss(options, result) {
                 if(node.nodes) {
                   for(let getNode of node.nodes) {
                     if(getNode.type === 'decl' && getNode.prop === 'emit') {
-                      const refs = getNode.value.trim() ? Array.from(new Set(getNode.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                      const refs = getNode.value.trim() ? Array.from(new Set(getNode.value.trim().split(/\s/).filter(i => i !== ''))) : []
                       for(let ref of refs) {
                         setRule.append(...declaration(ref, opts1))
                       }
@@ -212,7 +215,7 @@ function algacss(options, result) {
                       setRule.append(config.define[nd.value.trim()].join(';'))
                     }
                   } else if(nd.type === 'decl' && nd.prop === 'ref') {
-                    const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s|\|/).filter(i => i !== ''))) : []
+                    const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
                     for(let ref of refs) {
                       setRule.append(...declaration(ref, opts1))
                     }
@@ -242,6 +245,40 @@ function algacss(options, result) {
         
       })
       
+      root.walkAtRules('component', rule => {
+        const param = rule.params.trim()
+        
+        if(config.component[param] === undefined) {
+          const selectNodes = []
+          for(let node of rule.nodes) {
+            if(node.type === 'decl' && node.prop === 'get') {
+              if(config.define[node.value.trim()]) {
+                const setRule = new Rule({selector: '.'+node.value.trim()})
+                setRule.append(...config.define[node.value.trim()])
+                selectNodes.push(setRule)
+              }
+            } else if(node.type === 'decl' && node.prop === 'inject') {
+              if(config.provide[node.value.trim()]) {
+                selectNodes.push(config.provide[node.value.trim()])
+              }
+            }
+          }
+          config.component[param] = selectNodes
+        }
+        rule.remove()
+      })
+      
+      root.walkAtRules('use', rule => {
+        const param = rule.params.trim()
+        
+        if(config.component[param]) {
+          rule.replaceWith(...config.component[param])
+        } else {
+          rule.remove()
+        }
+        
+      })
+      
       if(config.extract.length >= 1) {
         root.append(...config.extract)
       }
@@ -253,8 +290,8 @@ function algacss(options, result) {
 module.exports = (opts = {}) => {
   return {
     postcssPlugin: 'algacss',
-    prepare (res) {
-      return algacss(opts, res)
+    prepare() {
+      return algacss(opts)
     }
   }
 }

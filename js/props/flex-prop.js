@@ -26,5 +26,6 @@ module.exports = {
     none: {key: 'flex', val: 'none'},
     auto: {key: 'flex', val: '1 1 auto'},
     initial: {key: 'flex', val: '0 1 auto'},
-  }
+  },
+  globals: ['direction', 'wrap', 'grow', 'shrink']
 }

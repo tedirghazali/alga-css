@@ -5,7 +5,6 @@
   "main": "js/index.js",
   "unpkg": "dist/alga-v1.min.css",
   "scripts": {
-    "build": "gulp",
     "test": "jest",
     "lint": "eslint js"
   },

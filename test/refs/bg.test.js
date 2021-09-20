@@ -6,7 +6,7 @@ test('Background or bg reference testing', async () => {
   await execute({
     input: `.bgClass {
   ref: bgPrimary;
-  ref: bgColor.hex(33333);
+  ref: bgColor-hex(33333);
   ref: bgCenter;
   ref: bgFixed;
   ref: bgClipPadding;
@@ -18,7 +18,7 @@ test('Background or bg reference testing', async () => {
 }
 
 .bgOtherClass {
-  ref: bgPrimary-725 bgColor.rgb(24,56,78) bgLeft bgScroll bgClipBorder bgOriginBorder bgRepeatY bgContain bgBlendOverlay;
+  ref: bgPrimary-725 bgColor-rgb(24,56,78) bgLeft bgScroll bgClipBorder bgOriginBorder bgRepeatY bgContain bgBlendOverlay;
 }`, 
     output: `.bgClass {
   background-color: rgba(13,110,253, 1);
