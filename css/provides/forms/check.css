@@ -1,36 +1,25 @@
 @provide check {
   .checkWrapper {
-    ref: flex itemsCenter nhg-1,5rem pdLeft-1,5em mgBottom-0,125rem;
+    ref: flex itemsCenter nhg-1.5rem pdLeft-1.5em mgBottom-0.125rem;
   }
   
   .checkWrapper > .check {
-    ref: mgLeft-n1,5em;
+    ref: mgLeft-n1.5em;
   }
 
   .check {
-    width: 1em;
-    height: 1em;
-    margin-top: 0.25em;
-    vertical-align: top;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    ref: wd-1em hg-1em mgTop-1 alignTop bgColor-hex(fff) bgNorepeat bgCenter bgContain bdSolid-1px bdColor-rgba(0,0,0,0.25) appearanceNone;
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
     transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   
   .check[type=checkbox] {
-    border-radius: 0.25em;
+    ref: rd-0.25em;
   }
   
   .check[type=radio] {
-    border-radius: 50%;
+    ref: red-50per;
   }
   
   .check:active {
@@ -38,14 +27,12 @@
   }
     
   .check:focus {
-    border-color: #86b7fe;
-    outline: 0;
+    ref: bdColor-hex(86b7fe) outline-0;
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   }
   
   .check:checked {
-    background-color: var(--background-active, #0d6efd);
-    border-color: var(--text-active, #0d6efd);
+    ref: bgColor-hex(0d6efd) bdColor-hex(0d6efd);
   }
 
   .check:checked[type=checkbox] {
@@ -57,15 +44,13 @@
   }
 
   .check[type=checkbox]:indeterminate {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    ref: bgColor-hex(0d6efd) bdColor-hex(0d6efd);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
   }
 
   .check:disabled {
-    pointer-events: none;
+    ref: eventsNone opacity-0.5;
     filter: none;
-    opacity: 0.5;
   }
   
   @prefers reduce {
@@ -73,6 +58,6 @@
   }
   
   .check[disabled] ~ .checkWrapper .label, .check:disabled ~ .checkWrapper .label {
-    opacity: 0.5;
+    ref: opacity-0.5;
   }
 }

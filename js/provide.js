@@ -147,7 +147,7 @@ module.exports = (paths, opts) => {
   const coreFiles = fs.readdirSync(__dirname.toString().replace('js', 'css') + '/provides/')
   if(coreFiles) {
     for(let file of coreFiles) {
-      if(file.endsWith('.css')) {
+      if(file.endsWith('provide.css') || file.endsWith('.css')) {
         provide = Object.assign({}, provide, readPath(__dirname.toString().replace('js', 'css') + '/provides/' + file, opts))
       }
     }
@@ -156,14 +156,18 @@ module.exports = (paths, opts) => {
   if(typeof paths === 'string') {
     const files = glob.sync(paths, {})
     for(let file of files) {
-      provide = Object.assign({}, provide, readPath(file, opts))
+      if(file.endsWith('provide.css') || file.endsWith('.css')) {
+        provide = Object.assign({}, provide, readPath(file, opts))
+      }
     }
   } else if(Array.isArray(paths)) {
     for(let p of Array.from(paths)) {
       if(typeof p === 'string') {
         const files = glob.sync(p, {})
         for(let file of files) {
-          provide = Object.assign({}, provide, readPath(file, opts))
+          if(file.endsWith('provide.css') || file.endsWith('.css')) {
+            provide = Object.assign({}, provide, readPath(file, opts))
+          }
         }
       }
     }

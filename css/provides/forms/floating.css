@@ -1,63 +1,72 @@
-.floating {
-  position: relative;
-  
-  & > .input,
-  & > .select {
-    height: calc(3.5rem + 2px);
-    padding: 1rem 0.75rem;
+@provide floating {
+  .floating {
+    ref: relative;
   }
-  & > label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    padding: 1rem 0.75rem;
-    pointer-events: none;
-    border: 1px solid transparent;
+  
+  .floating > .input,
+  .floating > .select {
+    ref: pdY-4 pdX-3;
+    height: calc(3.5rem + 2px);
+  }
+  
+  .floating > label {
+    ref: absolute top-0 left-0 hg-100 pdY-4 pdX-3 eventsNone bdSolid-1 bdTransparent;
     transorigin: 0 0;
     transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
-    
-    @media (prefers-reduced-motion: reduce) {
+  }
+  
+  @prefers reduce {
+    .floating > label {
       transition: none;
     }
   }
-  & > .input::-webkit-input-placeholder {
+  
+  .floating > .input::-webkit-input-placeholder {
     color: transparent;
   }
-  & > .input::-moz-placeholder {
+  
+  .floating > .input::-moz-placeholder {
     color: transparent;
   }
-  & > .input::placeholder {
+  
+  .floating > .input::placeholder {
     color: transparent;
   }
-  & > .input:not(:-moz-placeholder-shown) {
+  
+  .floating > .input:not(:-moz-placeholder-shown) {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
   }
-  & > .input:focus, & > .input:not(:placeholder-shown) {
+  
+  .floating > .input:focus, & > .input:not(:placeholder-shown) {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
   }
-  & > .input:-webkit-autofill {
+  
+  .floating > .input:-webkit-autofill {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
   }
-  & > .select {
+  
+  .floating > .select {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
   }
-  & > .input:not(:-moz-placeholder-shown) ~ label {
-    opacity: 0.65;
+  
+  .floating > .input:not(:-moz-placeholder-shown) ~ label {
+    ref: opacity-0.65;
     transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
   }
-  & > .input:focus ~ label,
-  & > .input:not(:placeholder-shown) ~ label,
-  & > .select ~ label {
-    opacity: 0.65;
+  
+  .floating > .input:focus ~ label,
+  .floating > .input:not(:placeholder-shown) ~ label,
+  .floating > .select ~ label {
+    ref: opacity-0.65;
     transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
   }
-  & > .input:-webkit-autofill ~ label {
-    opacity: 0.65;
+  
+  .floating > .input:-webkit-autofill ~ label {
+    ref: opacity-0.65;
     transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
   }
 }

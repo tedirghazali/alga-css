@@ -1,4 +1,16 @@
 module.exports = {
+  property: {
+    bg: 'background',
+    bgColor: 'background-color',
+    bgPosition: 'background-position',
+    bgAttach: 'background-attachment',
+    bgClip: 'background-clip',
+    bgOrigin: 'background-origin',
+    bgRepeat: 'background-repeat',
+    bgSize: 'background-size',
+    bgImage: 'background-image',
+    bgBlend: 'background-blend-mode'
+  },
   color: 'background-color',
   position: 'background-position',
   attrs: {

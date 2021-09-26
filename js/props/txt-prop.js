@@ -1,4 +1,15 @@
 module.exports = {
+  property: {
+    txtColor: 'color',
+    txtSize: 'font-size',
+    txtAlign: 'text-align',
+    txtWeight: 'font-weight',
+    txtStyle: 'font-style',
+    txtTransform: 'text-transform',
+    txtDecoration: 'text-decoration',
+    txtDecorationLine: 'text-decoration-line',
+    txtDecorationStyle: 'text-decoration-style'
+  },
   color: 'color',
   width: {
     key: 'font-size', 

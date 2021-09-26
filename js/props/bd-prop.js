@@ -1,4 +1,22 @@
 module.exports = {
+  property: {
+    bd: 'border',
+    bdWidth: 'border-width',
+    bdTopWidth: 'border-top-width',
+    bdRightWidth: 'border-right-width',
+    bdBottomWidth: 'border-bottom-width',
+    bdLeftWidth: 'border-left-width',
+    bdStyle: 'border-style',
+    bdTopStyle: 'border-top-style',
+    bdRightStyle: 'border-right-style',
+    bdBottomStyle: 'border-bottom-style',
+    bdLeftStyle: 'border-left-style',
+    bdColor: 'border-color',
+    bdTopColor: 'border-top-color',
+    bdRightColor: 'border-right-color',
+    bdBottomColor: 'border-bottom-color',
+    bdLeftColor: 'border-left-color'
+  },
   color: 'border-color',
   width: 'border-width',
   collapse: 'border-collapse',

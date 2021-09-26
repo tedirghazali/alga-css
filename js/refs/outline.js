@@ -14,7 +14,7 @@ module.exports = (cls, valueArg, opts) => {
   const arr = []
   
   if(cls[1] === 'offset') {
-    if(typeof valueArg === 'string') {
+    if(valueArg !== '') {
       arr.push(postcss.decl({ prop: outlineProp.offset, value: unitUtil(valueArg, unit.length, 'px', 1) }))
     }
   } else if(cls[1] === 'color') {

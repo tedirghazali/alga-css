@@ -1,7 +1,7 @@
 const prop = require('./property.js')
 
 module.exports = {
-  property: prop,
+  property: {...prop, all: 'all'},
   duration: ['s', 'ms'],
   delay: ['s', 'ms'],
   effect: { //timingFunction

@@ -1,4 +1,11 @@
 module.exports = {
+  property: {
+    outline: 'outline',
+    outlineWidth: 'outline-width',
+    outlineStyle: 'outline-style',
+    outlineColor: 'outline-color',
+    outlineOffset: 'outline-offset'
+  },
   color: 'outline-color',
   width: 'outline-width',
   offset: 'outline-offset',
