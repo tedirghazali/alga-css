@@ -6,26 +6,83 @@ function readPath(rp, opts) {
   const define = {}
   const data = fs.readFileSync(rp, 'utf8')
   const root = postcss.parse(data)
-  for(let node of root.nodes) {
-    if(node.type === 'atrule' && node.name === 'component') {
-      const selectNodes = []
-      const clsNames = Array.from(node.nodes)
-      for(let cls of clsNames) {
-        if(cls.type === 'decl' && cls.prop === 'get') {
-          if(opts.define[cls.value.trim()]) {
-            const setRule = postcss.rule({selector: '.'+cls.value.trim()})
-            setRule.append(...opts.define[cls.value.trim()])
-            selectNodes.push(setRule)
-          }
-        } else if(cls.type === 'decl' && cls.prop === 'inject') {
-          if(opts.provide[cls.value.trim()]) {
-            selectNodes.push(opts.provide[cls.value.trim()])
+  for(let rnode of root.nodes) {
+    if(rnode.type === 'atrule' && rnode.name === 'component') {
+      const param = rnode.params.trim()
+      if(param) {
+        const selectNodes = []
+        for(let node of rnode.nodes) {
+          if(node.type === 'atrule') {
+            if(node.name === 'get') {
+              const getParam = node.params.trim()
+              if(opts.define[getParam]) {
+                const setRule = postcss.rule({selector: '.'+getParam})
+                setRule.append(...opts.define[getParam])
+                if(node.nodes) {
+                  for(let getNode of node.nodes) {
+                    if(getNode.type === 'decl' && getNode.prop === 'emit') {
+                      const refs = getNode.value.trim() ? Array.from(new Set(getNode.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                      for(let ref of refs) {
+                        setRule.append(...declaration(ref, opts))
+                      }
+                    }
+                  }
+                }
+                selectNodes.push(setRule)
+              } else {
+                node.remove()
+              }
+            }
+          } else if(node.type === 'rule') {
+            const setRule = postcss.rule({selector: node.selector})
+            const mediaDecl = []
+            if(node.nodes) {
+              for(let nd of node.nodes) {
+                if(nd.type === 'decl' && nd.prop === 'props') {
+                  if(opts.define[nd.value.trim()] !== undefined) {
+                    setRule.append(opts.define[nd.value.trim()].join(';'))
+                  }
+                } else if(nd.type === 'decl' && nd.prop === 'ref') {
+                  const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                  for(let ref of refs) {
+                    setRule.append(...declaration(ref, opts))
+                  }
+                } else if(nd.type === 'decl' && nd.prop === 'screen') {
+                  for(let [scrKey, scrVal] of Object.entries(opts.screen)) {
+                    const setAtRule = postcss.atRule({name: 'media', params: `(min-width: ${scrVal})`})
+                    const setNewRule = postcss.rule({selector: `.${scrKey}\\.${node.selector.replace('.', '')}`})
+                    const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                    for(let ref of refs) {
+                      setNewRule.append(...declaration(ref, opts))
+                    }
+                    setAtRule.append(setNewRule)
+                    mediaDecl.push(setAtRule)
+                  }
+                } else if(nd.type === 'decl' && Object.keys(opts.screen).includes(nd.prop)) {
+                  const setAtRule = postcss.atRule({name: 'media', params: `(min-width: ${opts.screen[nd.prop]})`})
+                  const setNewRule = postcss.rule({selector: `.${nd.prop}\\.${node.selector.replace('.', '')}`})
+                  const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                  for(let ref of refs) {
+                    setNewRule.append(...declaration(ref, opts))
+                  }
+                  setAtRule.append(setNewRule)
+                  mediaDecl.push(setAtRule)
+                } else {
+                  setRule.append(nd)
+                }
+              }
+            }
+            selectNodes.push(setRule, ...mediaDecl)
+          } else {
+            selectNodes.push(node)
           }
         }
+        define[param] = selectNodes
       }
-      define[node.params.trim()] = selectNodes
     }
+    //rnode.remove()
   }
+  
   return define
 }
 

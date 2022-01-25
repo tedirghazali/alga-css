@@ -12,16 +12,15 @@
 <br/>
 
 # Alga CSS
-Alga CSS is a scope-first CSS toolkit for quickly mix or compose the CSS references and share the CSS properties between components
+Alga CSS is a scope or component-first CSS toolkit for quickly mix or compose the CSS components and properties
 
-What I mean by scope-first is, this Alga CSS is specially made for frameworks or libraries that support scoped-css like `Vue`, `Svelte` or `Astro`. Also, my goal in building this is to support all the UI libraries that I have now like `vidie` or `sastra`.
+I rewrite the entire api again, this time I will focus on provide a component for CSS instead
 
 All the main features:
 1. Created for scoped CSS
 2. As a PostCSS plugin
 3. Composing or mixing CSS components
-4. Provide/inject a large CSS component
-5. Custom CSS utility/helper (preset, define, color, screen, etc.)
+5. Custom CSS helpers (preset, define, color, screen, etc.)
 6. Extract classes from HTML (Petite-Vue, Alpine.js), Vue, Svelte, and Astro
 
 ## Installation and Setup
@@ -54,125 +53,62 @@ Alga CSS allow you to use whatever special character you wish (use either `-`, `
 
 ```css
 /* highly recommended */
-<span class="md|mgTop-5 bgPrimary-725 txtColor-hex(333)"></span>
+<span class="marginTop-0.75rem padding-10px md:marginTop-5per color-rgb(205,45,67) backgroundColor-hex(fff)"></span>
 
 .className {
-  ref: txtColor-rgb(205,45,67);
-  screen-md: mgTop-5;
+  ref: marginTop-0.75rem padding-10px color-rgb(205,45,67) backgroundColor-hex(fff);
+  md: marginTop-5per;
 }
 
+/* class structure: property (camelCase for name and value separated by - or dash) */
+justifyContent-spaceBetween
 
-/* alternative */
-md|pdTop-2
+/* class structure: unit size (per is unit size in percent) */
+width-100per
 
-md-pdBottom-4
+/* class structure: screen */
+md:paddingLeft-3px
 
-md:pdLeft-3
+/* class structure: mode */
+dark:backgroundColor-hex(333)
 
-md_pdRight_7
+/* class structure: state */
+facus:paddingLeft-3px
+```
+
+## CSS Component
+We provide alga format `.alga` for creating CSS component.
+
+```css
+/* navBar.alga */
+
+@define props {
+  size: 0.75rem;
+}
+
+@alga navBar {
+  .navBar {
+    ref: position-relative zIndex-3 paddingTop-{size} paddingBottom-{size};
+  }
+}
+
+@use {
+  size: 20px;
+}
 ```
 
 ## Mixin and Composing CSS Component
-to compose the CSS reference, we provide a custom property which is `ref` to apply css property to our class.
+to compose the CSS component.
 
 ```css
-.className {
-  ref: flex justifyCenter flex-20 bgPrimary-3;
+/* layout.alga */
+
+@import 'navBar.alga'
+
+@alga layout {
+  @use navBar;
 }
 
-.otherClassName {
-  ref: flex;
-  ref: justifyCenter;
-  ref: flex-20;
-  ref: bgPrimary-3;
-}
+@use layout;
 ```
 
-to mix the CSS properties, we provide `props` custom property, this only allow to get CSS properties from `@set` custom atRule.
-
-```css
-@set className {
-  ref: flex justifyCenter flex-20 bgPrimary-3;
-}
-
-.otherClassName {
-  props: className;
-}
-```
-
-to get the CSS custom class from `@set` directive, you can use `@get` custom rule and `emit` custom property if you want to inject CSS reference to it.
-
-```css
-@get className;
-
-/* or */
-
-@get className {
-  emit: txtBold-5 bdSolid-5;
-}
-
-/* or */
-
-@get className {
-  emit: txtBold-5;
-  emit: bdSolid-5;
-}
-```
-
-## Fragmenting CSS Component
-Alga CSS also provide a custom atRule for just solving that problem, to create a CSS component, you can use `@provide` and if you want to insert that component to your actual CSS file or scope CSS (like using Vue SFC `<style scoped>`).
-
-```css
-/* Create a component */
-@provide componentName {
-  
-  @get className;
-  
-  .otherClassName {
-    ref: flexBetween;
-  }
-  
-  @slot slotName;
-}
-
-/* Insert the component */
-@inject componentName;
-
-/* In the future */
-@inject componentName {
-  slot: className otherClassName;
-  slotName: anotherClassName;
-}
-```
-
-## Area or Layout Component
-You might want to create a complex layout that based on `grid-template` using Alga CSS, like for instance, creating page layout with multiple sections, you can do that by just using our custom atRule `@area`.
-
-```css
-/* Input: */
-@area layoutName {
-  areas: "a b c" "a b c" "a b c";
-  x: auto 1fr auto;
-  y: auto 1fr auto;
-  layoutSectionA: areaA;
-  layoutSectionB: areaB;
-  layoutSectionC: areaC;
-}
-
-/* Output: */
-.layoutName {
-  display: grid;
-  grid-template-areas: "a b c" "a b c" "a b c";
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr auto;
-}
-.layoutSectionA {
-  grid-area: a;
-}
-.layoutSectionB {
-  grid-area: b;
-}
-.layoutSectionC {
-  grid-area: c;
-}
-```

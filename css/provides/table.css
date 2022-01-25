@@ -1,96 +1,42 @@
 @provide table {
   .table {
-    ref: wd-100 mgBottom-4 captionBottom bdSpacing-0 bdCollapse txtColor-hex(212529) bdColor-hex(dee2e6);
+    width: 100%;
+    border-collapse: collapse;
   }
-
-  .tableCaption, caption {
-    ref: pdTop-2 pdBottom-2 txtLeft txtColor-hex(6c757d);
+    
+  .table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   }
-
-  .tableScope, th {
-    ref: txtAlignInherit txtAlignWebkit;
+    
+  .table thead {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
   }
-
-  .tableHead, thead, 
-  .tableBody, tbody, 
-  .tableFoot, tfoot, 
-  .tableRow, tr, 
-  .tableCell, td, 
-  .tableScope, th {
-    ref: bdColorInherit bdSolid bd-0;
+    
+  .table tfoot {
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
   }
-
-  .table > :not(.tableCaption) > * > *,
-  .table > :not(caption) > * > * {
-    ref: pd-2 bdBottom-1px bgTransparent;
+    
+  .table tr:last-child {
+    border-bottom-width: 0px;
   }
-
-  .tableSmall > :not(.tableCaption) > * > *,
-  .tableSmall > :not(caption) > * > * {
-    ref: pd-1 bdBottom-1px bgTransparent;
+    
+  .table tr th, .table tr td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.75rem;
   }
-
-  .table.tableLarge > :not(.tableCaption) > * > *,
-  .table.tableLarge > :not(caption) > * > * {
-    ref: pd-3 bdBottom-1px bgTransparent;
+    
+  .tableBorder {
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   }
-
-  .table > .tableBody,
-  .table > tbody {
-    ref: alignVerticalInherit;
+    
+  .tableBorder th, .tableBorder td {
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
   }
-
-  .table > .tableHead,
-  .table > thead {
-    ref: alignBottom;
-  }
-
-  .table > :not(:last-child) > :last-child > * {
-    ref: bdBottomColorInherit;
-  }
-
-  .tableCaptionTop {
-    ref: captionTop;
-  }
-
-  .tableBorder > :not(.tableCaption) > *,
-  .tableBorder > :not(caption) > * {
-    ref: bdY-1 bdX-0;
-  }
-
-  .tableBorder > :not(.tableCaption) > * > *,
-  .tableBorder > :not(caption) > * > * {
-    ref: bdY-0 bdX-1;
-  }
-
-  .tableBorderless > :not(.tableCaption) > * > *,
-  .tableBorderless > :not(caption) > * > * {
-    ref: bdBottom-0;
-  }
-
-  .tableStripe > .tableBody > .tableRow:nth-of-type(odd),
-  .tableStripe > tbody > tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-
-  .tableActive {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .tableHover > .tableBody > .tableRow:hover,
-  .tableHover > tbody > tr:hover {
-    background-color: rgba(0, 0, 0, 0.075);
-  }
-
+    
   .tableResponsive {
-    ref: overflowXAuto overflowTouch;
-    screen: overflowXAuto overflowTouch;
-  }
-
-  @screen sm {
-    .sm\.table > :not(.tableCaption) > * > *,
-    .sm\.table > :not(caption) > * > * {
-      padding: 0.25rem 0.25rem;
-    }
+    overflow-x: auto;
   }
 }

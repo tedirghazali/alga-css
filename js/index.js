@@ -249,8 +249,96 @@ function algacss(options) {
         const param = rule.params.trim()
         
         if(config.component[param] === undefined) {
+          config.component[param] = rule
+        }
+        rule.remove()
+      })
+      
+      root.walkAtRules('use', rule => {
+        const param = rule.params.trim()
+        
+        if(config.component[param]) {
           const selectNodes = []
-          for(let node of rule.nodes) {
+          for(let use of Object.values(config.component[param])) {
+            for(let node of use.nodes)
+              if(use.type === 'atrule' && use.prop === 'set') {
+                if(config.define[node.params.trim()] === undefined) {
+                  const selectNodes = []
+                  const clsNames = Array.from(node.nodes)
+                  for(let cls of clsNames) {
+                    if(cls.type === 'decl' && cls.prop === 'props') {
+                      if(typeof cls.params === 'string' && defs[cls.value.trim()]) {
+                        selectNodes.push(...defs[cls.value.trim()])
+                      }
+                    } else if(cls.type === 'decl' && cls.prop === 'ref') {
+                      const refs = cls.value.trim() ? Array.from(new Set(cls.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                      for(let ref of refs) {
+                        selectNodes.push(...declaration(ref, opts))
+                      }
+                    } else {
+                      selectNodes.push(cls)
+                    }
+                  }
+                  config.define[node.value.trim()] = selectNodes
+                }
+              } else if(use.type === 'atrule' && use.prop === 'component') {
+                if(node.type === 'rule') {
+                  const setRule = postcss.rule({selector: node.selector})
+                  const mediaDecl = []
+                  if(node.nodes) {
+                    for(let nd of node.nodes) {
+                      if(nd.type === 'decl' && nd.prop === 'props') {
+                        if(opts.define[nd.value.trim()] !== undefined) {
+                          setRule.append(opts.define[nd.value.trim()].join(';'))
+                        }
+                      } else if(nd.type === 'decl' && nd.prop === 'ref') {
+                        const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                        for(let ref of refs) {
+                          setRule.append(...declaration(ref, opts))
+                        }
+                      } else if(nd.type === 'decl' && nd.prop === 'screen') {
+                        for(let [scrKey, scrVal] of Object.entries(opts.screen)) {
+                          const setAtRule = postcss.atRule({name: 'media', params: `(min-width: ${scrVal})`})
+                          const setNewRule = postcss.rule({selector: `.${scrKey}\\.${node.selector.replace('.', '')}`})
+                          const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                          for(let ref of refs) {
+                            setNewRule.append(...declaration(ref, opts))
+                          }
+                          setAtRule.append(setNewRule)
+                          mediaDecl.push(setAtRule)
+                        }
+                      } else if(nd.type === 'decl' && Object.keys(opts.screen).includes(nd.prop)) {
+                        const setAtRule = postcss.atRule({name: 'media', params: `(min-width: ${opts.screen[nd.prop]})`})
+                        const setNewRule = postcss.rule({selector: `.${nd.prop}\\.${node.selector.replace('.', '')}`})
+                        const refs = nd.value.trim() ? Array.from(new Set(nd.value.trim().split(/\s/).filter(i => i !== ''))) : []
+                        for(let ref of refs) {
+                          setNewRule.append(...declaration(ref, opts))
+                        }
+                        setAtRule.append(setNewRule)
+                        mediaDecl.push(setAtRule)
+                      } else {
+                        setRule.append(nd)
+                      }
+                    }
+                  }
+                  selectNodes.push(setRule, ...mediaDecl)
+                }
+              }
+            }
+          }
+          rule.replaceWith(...selectNodes)
+        } else {
+          rule.remove()
+        }
+        
+      })
+      
+      root.walkAtRules('render', rule => {
+        const param = rule.params.trim()
+        
+        if(config.component[param]) {
+          const selectNodes = []
+          for(let node of config.component[param].nodes) {
             if(node.type === 'decl' && node.prop === 'get') {
               if(config.define[node.value.trim()]) {
                 const setRule = new Rule({selector: '.'+node.value.trim()})
@@ -263,16 +351,7 @@ function algacss(options) {
               }
             }
           }
-          config.component[param] = selectNodes
-        }
-        rule.remove()
-      })
-      
-      root.walkAtRules('use', rule => {
-        const param = rule.params.trim()
-        
-        if(config.component[param]) {
-          rule.replaceWith(...config.component[param])
+          rule.replaceWith(...selectNodes)
         } else {
           rule.remove()
         }

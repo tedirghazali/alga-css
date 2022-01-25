@@ -10,6 +10,7 @@
   },
   "files": [
     "js",
+    "src",
     "css/defines",
     "css/provides"
   ],
@@ -31,11 +32,11 @@
   },
   "homepage": "https://github.com/tedirghazali/alga-css#readme",
   "devDependencies": {
-    "eslint": "^7.30.0",
-    "jest": "^27.0.6",
-    "postcss": "^8.1.7"
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "postcss": "^8.4.5"
   },
   "dependencies": {
-    "glob": "^7.1.7"
+    "glob": "^7.2.0"
   }
 }
