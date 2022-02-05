@@ -1,19 +1,36 @@
+// Configs
 const preset = require('./configs/preset.js')
+const screen = require('./configs/screen.js')
+
+// Cores
+const component = require('./cores/component.js')
 
 function algacss(options) {
   const config = {
     preset: Object.assign({}, preset, options?.preset),
-    /*screen: Object.assign({}, screen, options.screen),
-    prefers: Object.assign({}, prefers),
+    screen: Object.assign({}, screen, options?.screen),
+    /*prefers: Object.assign({}, prefers),
     color: Object.assign({}, color, options.color),*/
     components: {},
     props: {},
     extract: []
   }
   
+  config.components = component(options.src, {preset: config.preset, screen: config.screen})
+  
   return {
     Once (root, {Rule, Declaration, AtRule}) {
-      root.walkDecls('ref', decl => {
+      root.walkAtRules('define', rule => {
+        const param = rule.params.trim()
+        const defineObj = {}
+        for(let dnode of rule.nodes) {
+          defineObj[dnode.prop] = dnode.value
+        }
+        config.components[param] = Object.assign({}, config.components[param], defineObj)
+        rule.remove()
+      })
+      
+      /*root.walkDecls('ref', decl => {
         const refs = decl.value.trim() ? Array.from(new Set(decl.value.trim().split(/\s/).filter(i => i !== ''))) : []
         if(refs.length > 0) {
           const selectNodes = []
@@ -24,7 +41,7 @@ function algacss(options) {
         } else {
           decl.remove()
         }
-      })
+      })*/
     
       root.walkAtRules('alga', rule => {
         const param = rule.params.trim()

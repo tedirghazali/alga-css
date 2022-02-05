@@ -1,0 +1,84 @@
+@define props {
+  size: 0.75rem;
+}
+
+@provide navItem {
+  ref: padding-0.5rem fontSize1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
+}
+
+@provide navItemFirstChild {
+  ref: paddingLeft-0;
+}
+
+@provide navItemLastChild {
+  ref: paddingRight-0;
+}
+
+@alga navBar {
+  .navBar {
+    ref: position-relative zIndex-3;
+    props-paddingTop: size;
+    props-paddingBottom: size;
+    
+    .navWrap {
+      ref: display-flex flexDirection-row flexWrap-nowrap alignItems-center justifyContent-spaceBetween;
+      props-paddingRight: size;
+      props-paddingLeft: size;
+      
+      .navStart {
+        ref: display-flex justifyContent-flexStart flexWrap-nowrap alignItems-center width-100per;
+        screen-ss: width-auto;
+        
+        .navBrand {
+          ref: paddingTop-0.375rem paddingBottom-0.375rem paddingRight-0.75rem paddingLeft-0.75rem fontSize-1.25rem textDecoration-none color-inherit whiteSpace-nowrap marginRight-auto cursor-pointer;
+        }
+        
+        .navBrand:first-child {
+          inject: navItemFirstChild;
+        }
+        
+        .navToggler {
+          inject: navItem;
+          ref: appearance-none border-0 backgroundColor-transparent;
+          
+          svg, i {
+            ref: pointerEvents-none display-block;
+          }
+        }
+        
+        .navToggler:first-child {
+          inject: navItemFirstChild;
+        }
+        
+        .navToggler:last-child {
+          inject: navItemLastChild;
+        }
+        
+        .navToggler.navMobile {
+          screen-ss: display-none;
+        }
+      }
+      
+      .navEnd {
+        ref: display-none;
+        screen-ss: display-flex justifyContent-spaceBetween flexWrap-nowrap alignItems-center flexGrow-1 paddingLeft-0.75rem;
+        
+        .navMenu {
+          ref: display-flex justifyContent-flexStart flexWrap-nowrap alignItems-center;
+          
+          .navItem {
+            inject: navItem;
+          }
+          
+          .navItem:first-child {
+            inject: navItemFirstChild;
+          }
+          
+          .navItem:last-child {
+            inject: navItemLastChild;
+          }
+        }
+      }
+    }
+  }
+}

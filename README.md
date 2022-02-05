@@ -88,7 +88,9 @@ We provide alga format `.alga` for creating CSS component.
 
 @alga navBar {
   .navBar {
-    ref: position-relative zIndex-3 paddingTop-{size} paddingBottom-{size};
+    ref: position-relative zIndex-3;
+    props-paddingTop: size;
+    props-paddingBottom: size;
   }
 }
 
