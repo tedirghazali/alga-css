@@ -1,9 +1,11 @@
 @define props {
   size: 0.75rem;
+  margin: 10px;
 }
 
 @provide navItem {
   ref: padding-0.5rem fontSize1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
+  props-margin: margin;
 }
 
 @provide navItemFirstChild {
@@ -13,6 +15,9 @@
 @provide navItemLastChild {
   ref: paddingRight-0;
 }
+
+@alga navBarMenu {};
+@alga navMenu {};
 
 @alga navBar {
   .navBar {

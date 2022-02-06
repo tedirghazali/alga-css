@@ -108,7 +108,7 @@ to compose the CSS component.
 @import 'navBar.alga'
 
 @alga layout {
-  @use navBar;
+  use: navBar;
 }
 
 @use layout;

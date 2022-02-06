@@ -10,7 +10,7 @@ module.exports = (ref, opt = {}) => {
     if(Number(props.length) === 3) {
     
     } else if(Number(props.length) === 2) {
-      // Switch from short to real property like m to margin
+      // Switch from preset to real property like m to margin
       if('preset' in opt && Object.keys(opt.preset).includes(props[0])) {
         props[0] = opt.preset[props[0]]
       }
