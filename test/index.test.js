@@ -14,7 +14,7 @@ test('Reading component atRule', async () => {
   let result = await postcss([
     algacss()
   ]).process(`
-
+@use navBar;
   `, { from: undefined })
   console.log(result.css)
 })

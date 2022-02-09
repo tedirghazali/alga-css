@@ -1,6 +1,7 @@
 const postcss = require('postcss')
 const glob = require('glob')
 const fs = require('fs')
+const screen = require('../configs/screen.js')
 const camelDash = require('../helpers/camelDash.js')
 const reference = require('./reference.js')
 const recursive = require('./recursive.js')
@@ -13,11 +14,17 @@ function readPath(rp, opts) {
   const splitFileName = splitFilePath.split('.')[0]
   let componentName = splitFileName
   component[componentName] = {}
+  component[componentName]['modules'] = {}
   
   const root = postcss.parse(data)
   for(let rnode of root.nodes) {
     // Convert define into property
-    if(rnode.type === 'atrule' && rnode.name === 'define' && 'nodes' in rnode) {
+    if(rnode.type === 'atrule' && rnode.name === 'import') {
+      const param = rnode.params.trim()
+      const paramFilePaths = param.split(/\/|\./)
+      const paramFileName = paramFilePaths[Number(paramFilePaths.length) - 2]
+      component[componentName]['modules'] = Object.assign({}, component[componentName]['modules'], readPath(param, opts))
+    } else if(rnode.type === 'atrule' && rnode.name === 'define' && 'nodes' in rnode) {
       const param = rnode.params.trim()
       const defineObj = {}
       for(let dnode of rnode.nodes) {
@@ -38,31 +45,27 @@ function readPath(rp, opts) {
           splitPropsObj = {}
           splitPropsObj[camelDash(splitProps)] = '{'+dnode.value+'}'
           defineObj[param] = Object.assign({}, defineObj[param], splitPropsObj)
+        } else if(dnode.type === 'decl' && dnode.prop.startsWith('screen-')) {
+          screenObj = {}
+          screenObj[dnode.prop] = Object.assign({}, screenObj[dnode.prop], reference(dnode.value))
+          defineObj[param] = Object.assign({}, defineObj[param], screenObj)
         }
       }
-      console.log(defineObj[param])
       component[componentName]['provide'] = Object.assign({}, component[componentName]['provide'], defineObj)
     } else if(rnode.type === 'atrule' && rnode.name === 'alga' && 'nodes' in rnode) {
       const param = rnode.params.trim()
       let defineObj = {}
       defineObj['header'] = {}
       for(let dnode of rnode.nodes) {
-        if(dnode.type === 'decl' && dnode.prop === 'ref') {
-          defineObj['header'] = Object.assign({}, defineObj['header'], reference(dnode.value))
-        } else if(dnode.type === 'decl' && dnode.prop.startsWith('props-')) {
-          splitProps = dnode.prop.split('-')[1]
-          splitPropsObj = {}
-          splitPropsObj[camelDash(splitProps)] = '{'+dnode.value+'}'
-          defineObj['header'] = Object.assign({}, defineObj['header'], splitPropsObj)
+        if(dnode.type === 'decl' && dnode.prop === 'use') {
+          defineObj['header'] = Object.assign({}, defineObj['header'], component[componentName]['modules'][dnode.value.trim()])
         } else {
-          defineObj['body'] = Object.assign({}, defineObj['body'], recursive(dnode)) 
+          defineObj = Object.assign({}, defineObj, recursive(dnode)) 
         }
       }
-      console.log(defineObj['body'])
       component[componentName][param] = Object.assign({}, component[componentName][param], defineObj)
     }
   }
-  console.log(component)
   return component
 }
 

@@ -1,3 +1,4 @@
+const screen = require('../configs/screen.js')
 const camelDash = require('../helpers/camelDash.js')
 const reference = require('./reference.js')
 const selector = require('./selector.js')
@@ -16,8 +17,14 @@ function recursiveFunc(root, prm, opt = {}) {
         splitPropsObj = {}
         splitPropsObj[camelDash(splitProps)] = '{'+node.value+'}'
         recursiveObj[param] = Object.assign({}, recursiveObj[param], splitPropsObj)
+      } else if(node.type === 'decl' && node.prop.startsWith('screen-')) {
+        screenObj = {}
+        screenObj[node.prop] = Object.assign({}, screenObj[node.prop], reference(node.value))
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], screenObj)
       } else if(node.type === 'rule') {
-        recursiveArr.push(recursiveFunc(node, param, opt))
+        for(let par of param.split(',')) {
+          recursiveArr.push(recursiveFunc(node, par.trim(), opt))
+        }
       }
     }
     recursiveArr.unshift(recursiveObj)
