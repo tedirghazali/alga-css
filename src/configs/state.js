@@ -1,8 +1,20 @@
 module.exports = {
-  focus: 'focus',
-  hover: 'hover',
-  active: 'active',
-  disabled: 'disabled',
-  visited: 'visited',
-  checked: 'checked'
+  focus: {
+    state: ':focus'
+  },
+  hover: {
+    state: ':hover'
+  },
+  active: {
+    state: ':active'
+  },
+  disabled: {
+    state: ':disabled'
+  },
+  visited: {
+    state: ':visited'
+  },
+  checked: {
+    state: ':checked'
+  }
 }

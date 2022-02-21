@@ -1,7 +1,13 @@
 const postcss = require('postcss')
+const flatScreen = require('../helpers/flatScreen.js')
+const statusValue = require('../helpers/statusValue.js')
 
-module.exports = (body, props) => {
+module.exports = (body, props, opts) => {
+  const screen = Object.assign({}, flatScreen(opts.screen))
+  const state = Object.assign({}, statusValue(opts.state))
+  const prefers = Object.assign({}, statusValue(opts.prefers))
   let ruleArray = []
+  let atRuleArray = []
   
   for(let item of body) {
     const itemKey = Object.keys(item)[0]
@@ -9,11 +15,58 @@ module.exports = (body, props) => {
     const newRule = postcss.rule({ selector: itemKey })
     for(let [key, val] of itemValues) {
       if(typeof val === 'string') {
-        const declVal = postcss.decl({ prop: key.trim(), value: val.trim() })
+        let declVal = undefined
+        if(val.trim().startsWith('{') && val.trim().endsWith('}')) {
+          declVal = postcss.decl({ prop: key.trim(), value: props[val.replace('{', '').replace('}', '').trim()] })
+        } else {
+          declVal = postcss.decl({ prop: key.trim(), value: val.trim() })
+        }
         newRule.append(declVal)
+      } else {
+        const splitKey = key.split('-')
+        if(splitKey.length >= 2) {
+          if(Object.keys(screen).includes(splitKey[1])) {
+            screen[splitKey[1]].value[itemKey] = Object.assign({}, screen[splitKey[1]].value[itemKey], val)
+            screen[splitKey[1]].status = true
+          } else if(Object.keys(state).includes(splitKey[1])) {
+            state[splitKey[1]].value[itemKey] = Object.assign({}, state[splitKey[1]].value[itemKey], val)
+            state[splitKey[1]].status = true
+          } else if(Object.keys(prefers).includes(splitKey[1])) {
+            prefers[splitKey[1]].value[itemKey] = Object.assign({}, prefers[splitKey[1]].value[itemKey], val)
+            prefers[splitKey[1]].status = true
+          }
+        }
       }
     }
     ruleArray.push(newRule)
   }
-  return ruleArray
+  
+  for(let [entryKey, entryVal] of Object.entries(screen)) {
+    if(entryVal.status) {
+      let newAtRule = undefined
+      if(entryVal.minmax === 'max') {
+        newAtRule = postcss.atRule({ name: 'media', params: `(max-width: ${entryVal.size})` })
+      } else {
+        newAtRule = postcss.atRule({ name: 'media', params: `(min-width: ${entryVal.size})` })
+      }
+      for(let [itemKey, itemValue] of Object.entries(entryVal.value)) {
+        const newRule = postcss.rule({ selector: itemKey })
+        for(let [key, val] of Object.entries(itemValue)) {
+          if(typeof val === 'string') {
+            let declVal = undefined
+            if(val.trim().startsWith('{') && val.trim().endsWith('}')) {
+              declVal = postcss.decl({ prop: key.trim(), value: props[val.replace('{', '').replace('}', '').trim()] })
+            } else {
+              declVal = postcss.decl({ prop: key.trim(), value: val.trim() })
+            }
+            newRule.append(declVal)
+          }
+        }
+        newAtRule.append(newRule)
+      }
+      atRuleArray.push(newAtRule)
+    }
+  }
+  
+  return [...ruleArray, ...atRuleArray]
 }

@@ -40,6 +40,11 @@ function readPath(rp, opts) {
         // Extracting content of provide
         if(dnode.type === 'decl' && dnode.prop === 'ref') {
           defineObj[param] = Object.assign({}, defineObj[param], reference(dnode.value))
+        } else if(dnode.type === 'decl' && dnode.prop.startsWith('ref-')) {
+          splitRefs = dnode.prop.split('-')[1]
+          splitRefsObj = {}
+          splitRefsObj[camelDash(splitRefs)] = dnode.value
+          defineObj[param] = Object.assign({}, defineObj[param], splitRefsObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('props-')) {
           splitProps = dnode.prop.split('-')[1]
           splitPropsObj = {}
@@ -49,6 +54,14 @@ function readPath(rp, opts) {
           screenObj = {}
           screenObj[dnode.prop] = Object.assign({}, screenObj[dnode.prop], reference(dnode.value))
           defineObj[param] = Object.assign({}, defineObj[param], screenObj)
+        } else if(dnode.type === 'decl' && dnode.prop.startsWith('state-')) {
+          stateObj = {}
+          stateObj[dnode.prop] = Object.assign({}, stateObj[dnode.prop], reference(dnode.value))
+          defineObj[param] = Object.assign({}, defineObj[param], stateObj)
+        } else if(dnode.type === 'decl' && dnode.prop.startsWith('prefers-')) {
+          prefersObj = {}
+          prefersObj[dnode.prop] = Object.assign({}, prefersObj[dnode.prop], reference(dnode.value))
+          defineObj[param] = Object.assign({}, defineObj[param], prefersObj)
         }
       }
       component[componentName]['provide'] = Object.assign({}, component[componentName]['provide'], defineObj)
@@ -60,7 +73,9 @@ function readPath(rp, opts) {
         if(dnode.type === 'decl' && dnode.prop === 'use') {
           defineObj['header'] = Object.assign({}, defineObj['header'], component[componentName]['modules'][dnode.value.trim()])
         } else {
-          defineObj = Object.assign({}, defineObj, recursive(dnode)) 
+          defineObj = Object.assign({}, defineObj, recursive(dnode, {
+            'provide': component[componentName]['provide']
+          })) 
         }
       }
       component[componentName][param] = Object.assign({}, component[componentName][param], defineObj)

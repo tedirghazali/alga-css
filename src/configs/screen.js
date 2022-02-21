@@ -1,20 +1,47 @@
 module.exports = {
-  ss: '599px',
-  smallest: '599px',
-  sr: '600px',
-  smaller: '600px',
-  sm: '768px',
-  small: '768px',
-  md: '1024px',
-  medium: '1024px',
-  lg: '1280px',
-  large: '1280px',
-  lr: '1536px',
-  larger: '1536px',
-  ls: '1920px',
-  largest: '1920px',
-  wd: '2560px',
-  wide: '2560px',
-  wr: '3840px',
-  wider: '3840px',
+  ss: {
+    alias: ['smallest', 'xxs'],
+    size: '599px',
+    minmax: 'max'
+  },
+  sr: {
+    alias: ['smaller', 'xs'],
+    size: '600px',
+    minmax: 'min'
+  },
+  sm: {
+    alias: ['small', 's'],
+    size: '768px',
+    minmax: 'min'
+  },
+  md: {
+    alias: ['medium', 'm'],
+    size: '1024px',
+    minmax: 'min'
+  },
+  lg: {
+    alias: ['large', 'l'],
+    size: '1280px',
+    minmax: 'min'
+  },
+  lr: {
+    alias: ['larger', 'xl'],
+    size: '1536px',
+    minmax: 'min'
+  },
+  ls: {
+    alias: ['largest', 'xxl'],
+    size: '1920px',
+    minmax: 'min'
+  },
+  wd: {
+    alias: ['wide', 'w'],
+    size: '2560px',
+    minmax: 'min'
+  },
+  wr: {
+    alias: ['wider', 'xw'],
+    size: '3840px',
+    minmax: 'min'
+  }
 }
