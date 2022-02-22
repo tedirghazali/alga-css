@@ -7,6 +7,7 @@ const prefers = require('./configs/prefers.js')
 // Cores
 const component = require('./cores/component.js')
 const declaration = require('./cores/declaration.js')
+const extraction = require('./cores/extraction.js')
 
 function algacss(options) {
   const config = {
@@ -19,7 +20,9 @@ function algacss(options) {
     extract: []
   }
   
-  config.components = component(options?.src, {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers})
+  const opts = {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers}
+  config.components = component(options?.src, opts)
+  config.extract = extraction(options?.extract, opts)
   
   return {
     Once (root, {Rule, Declaration, AtRule}) {
@@ -51,6 +54,10 @@ function algacss(options) {
           rule.remove()
         }
       })
+      
+      if(config.extract.length >= 1) {
+        root.append(...config.extract)
+      }
     }
   }
 }

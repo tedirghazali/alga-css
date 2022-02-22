@@ -1,23 +1,52 @@
-const reference = require('./reference.js')
+const glob = require('glob')
+const fs = require('fs')
+const rules = require('./rules.js')
 
-module.exports = (ref, opt) => {
-  let declarations = {}
+function readPath(rp) {
+  const content = []
+  const data = fs.readFileSync(rp, 'utf8')
+  let regexp, replaceData
+  if(rp.endsWith('.vue')) {
+    regexp = /(v-bind:class|:class|class)="([\w]+|[\s\w]+|[\s\w\-_\.:\d\(\)]+)"/g
+    replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
+  } else if(rp.endsWith('.svelte')) {
+    regexp = /class:([\w]+|[\s\w]+|[\s\w\-_.:\d\(\)]+)\s/g
+    replaceData = data.replace(/=|\>/ig, ' ')
+  } else { //.html, .astro, .edge, .blade.php, .twig
+    regexp = /(v-bind:class|x-bind:class|:class|class)="([\w]+|[\s\w]+|[\s\w\-_\.:\d\(\)]+)"/g
+    replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
+  }
+  if(regexp !== undefined && replaceData !== undefined) {
+    const classes = [...replaceData.matchAll(regexp)].flat().filter(i => i.indexOf('class') === -1)
+    const uniqClasses = Array.from(new Set(classes.map(i => i.split(' ')).flat())).filter(i => i !== '')
+    content.push(...uniqClasses)
+  }
+  return content
+}
+
+module.exports = (paths, options) => {
+  let extract = []
   
-  const refs = ref.trim().split(/-|:/).filter(i => i !== '')
-  
-  if(Number(refs.length) === 3) {
-  
-  } else if(Number(refs.length) === 2) {
-    declarations = Object.assign({}, declarations, reference())
+  if(typeof paths === 'string') {
+    const files = glob.sync(paths, {})
+    for(let file of files) {
+      extract = extract.concat(readPath(file))
+    }
+  } else if(Array.isArray(paths)) {
+    for(let p of Array.from(paths)) {
+      if(typeof p === 'string') {
+        const files = glob.sync(p, {})
+        for(let file of files) {
+          extract = extract.concat(readPath(file))
+        }
+      }
+    }
   }
   
-  /*if(Object.keys(opts.preset).includes(refs[0])) {
-    refs[0] = opts.preset[refs[0]]
+  const newExtract = []
+  for(let ref of Array.from(new Set(extract))) {
+    newExtract.push(...rules(ref, options))
   }
   
-  if(!Object.keys(opts.screen).includes(refs[0]) && !Object.keys(opts.prefers).includes(refs[0]) && refs[0] !== 'print' && refs[0] !== 'screen') {
-    arr = arr.concat(reference(refs[0], refs[1] ? refs[1] : '', opts))
-  }*/
-  
-  return declarations
+  return newExtract
 }

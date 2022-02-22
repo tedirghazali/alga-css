@@ -41,27 +41,47 @@ function readPath(rp, opts) {
         if(dnode.type === 'decl' && dnode.prop === 'ref') {
           defineObj[param] = Object.assign({}, defineObj[param], reference(dnode.value))
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('ref-')) {
-          splitRefs = dnode.prop.split('-')[1]
-          splitRefsObj = {}
+          let splitRefs = dnode.prop.split('-')[1]
+          let splitRefsObj = {}
           splitRefsObj[camelDash(splitRefs)] = dnode.value
           defineObj[param] = Object.assign({}, defineObj[param], splitRefsObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('props-')) {
-          splitProps = dnode.prop.split('-')[1]
-          splitPropsObj = {}
+          let splitProps = dnode.prop.split('-')[1]
+          let splitPropsObj = {}
           splitPropsObj[camelDash(splitProps)] = '{'+dnode.value+'}'
           defineObj[param] = Object.assign({}, defineObj[param], splitPropsObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('screen-')) {
-          screenObj = {}
+          let screenObj = {}
           screenObj[dnode.prop] = Object.assign({}, screenObj[dnode.prop], reference(dnode.value))
           defineObj[param] = Object.assign({}, defineObj[param], screenObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('state-')) {
-          stateObj = {}
+          let stateObj = {}
           stateObj[dnode.prop] = Object.assign({}, stateObj[dnode.prop], reference(dnode.value))
           defineObj[param] = Object.assign({}, defineObj[param], stateObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('prefers-')) {
-          prefersObj = {}
+          let prefersObj = {}
           prefersObj[dnode.prop] = Object.assign({}, prefersObj[dnode.prop], reference(dnode.value))
           defineObj[param] = Object.assign({}, defineObj[param], prefersObj)
+        } else if(dnode.type === 'decl' && dnode.prop.startsWith('if-')) {
+          let conditionalObj = {}
+          conditionalObj[dnode.prop] = Object.assign({}, conditionalObj[dnode.prop], reference(dnode.value))
+          defineObj[param] = Object.assign({}, defineObj[param], conditionalObj)
+        } else if(dnode.type === 'atrule' && dnode.name === 'if' && 'nodes' in dnode) {
+          const paramConditional = node.params.split('in')
+          const valueConditional = paramConditional[0]?.trim() || ''
+          const propsConditional = paramConditional[1]?.trim() || ''
+          let conditionalObj = {}
+          for(let condVal of dnode.nodes) {
+            if(condVal.type === 'decl' && condVal.prop === 'ref') {
+              conditionalObj['if-'+propsConditional+'-'+valueConditional] = Object.assign({}, conditionalObj['if-'+propsConditional+'-'+valueConditional], reference(condVal))
+            } else if(condVal.type === 'decl' && condVal.prop.startsWith('ref-')) {
+              let splitRefs = condVal.prop.split('-')[1]
+              let splitRefsObj = {}
+              splitRefsObj[camelDash(splitRefs)] = condVal.value
+              conditionalObj['if-'+propsConditional+'-'+valueConditional] = Object.assign({}, conditionalObj['if-'+propsConditional+'-'+valueConditional], splitRefsObj)
+            }
+          }
+          defineObj[param] = Object.assign({}, defineObj[param], conditionalObj)
         }
       }
       component[componentName]['provide'] = Object.assign({}, component[componentName]['provide'], defineObj)
