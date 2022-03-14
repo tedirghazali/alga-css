@@ -1,3 +1,3 @@
 <template>
-  <div :class="['display-flex', 'justifyContent-center']"></div>
+  <div :class="['display-flex', 'justifyContent-center', 'navBar']"></div>
 </template>

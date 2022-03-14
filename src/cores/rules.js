@@ -22,7 +22,5 @@ module.exports = (ref, opts) => {
     arr.push(newRule)
   }
   
-  console.log(arr)
-  
   return arr
 }

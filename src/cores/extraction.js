@@ -21,7 +21,7 @@ function readPath(rp) {
     const uniqClasses = Array.from(new Set(classes.map(i => i.split(' ')).flat())).filter(i => i !== '')
     content.push(...uniqClasses)
   }
-  return content
+  return content.filter(i => i.includes('-'))
 }
 
 module.exports = (paths, options) => {
