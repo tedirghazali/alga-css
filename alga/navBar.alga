@@ -4,7 +4,7 @@
 }
 
 @provide navItem {
-  ref: padding-0.5rem fontSize1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
+  ref: padding-0.5rem fontSize-1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
   props-margin: margin;
 }
 

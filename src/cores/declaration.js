@@ -2,7 +2,7 @@ const postcss = require('postcss')
 const flatScreen = require('../helpers/flatScreen.js')
 const statusValue = require('../helpers/statusValue.js')
 
-module.exports = (body, props, opts) => {
+module.exports = (body, props, provide, opts) => {
   const screen = Object.assign({}, flatScreen(opts.screen))
   const state = Object.assign({}, statusValue(opts.state))
   const prefers = Object.assign({}, statusValue(opts.prefers))
@@ -15,13 +15,22 @@ module.exports = (body, props, opts) => {
     const newRule = postcss.rule({ selector: itemKey })
     for(let [key, val] of itemValues) {
       if(typeof val === 'string') {
-        let declVal = undefined
-        if(val.trim().startsWith('{') && val.trim().endsWith('}')) {
-          declVal = postcss.decl({ prop: key.trim(), value: props[val.replace('{', '').replace('}', '').trim()] })
+        if(key.trim().startsWith('inject-')) {
+          for(let [keyInject, valInject] of Object.entries(provide[props[val]])) {
+            let declVal = postcss.decl({ prop: keyInject.trim(), value: valInject.trim() })
+            newRule.append(declVal)
+          }
         } else {
-          declVal = postcss.decl({ prop: key.trim(), value: val.trim() })
+          let declVal = undefined
+          if(val.trim().startsWith('{') && val.trim().endsWith('}')) {
+            declVal = postcss.decl({ prop: key.trim(), value: props[val.replace('{', '').replace('}', '').trim()] })
+          } else if(val.trim().startsWith('props{') && val.trim().endsWith('}')) {
+            declVal = postcss.decl({ prop: key.trim(), value: props[val.replace('{', '').replace('}', '').trim()] })
+          } else {
+            declVal = postcss.decl({ prop: key.trim(), value: val.trim() })
+          }
+          newRule.append(declVal)
         }
-        newRule.append(declVal)
       } else {
         const splitKey = key.split('-')
         if(splitKey.length >= 2) {

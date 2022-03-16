@@ -43,7 +43,7 @@ function algacss(options) {
           }
           newNodes = [
             ...newNodes, 
-            ...declaration(config.components[param][name]['body'], config.components[param]['props'], {
+            ...declaration(config.components[param][name]['body'], config.components[param]['props'], config.components[param]['provide'], {
               screen: config.screen,
               state: config.state, 
               prefers: config.prefers

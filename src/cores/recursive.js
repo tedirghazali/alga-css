@@ -24,6 +24,10 @@ function recursiveFunc(root, prm, opt = {}) {
         recursiveObj[param] = Object.assign({}, recursiveObj[param], splitPropsObj)
       } else if(node.type === 'decl' && node.prop === 'inject') {
         recursiveObj[param] = Object.assign({}, recursiveObj[param], opt.provide[node.value])
+      } else if(node.type === 'decl' && node.prop === 'inject-props') {
+        let injectPropsObj = {}
+        injectPropsObj['inject-'+node.value] = node.value
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], injectPropsObj)
       } else if(node.type === 'decl' && node.prop.startsWith('screen-')) {
         let screenObj = {}
         screenObj[node.prop] = Object.assign({}, screenObj[node.prop], reference(node.value))

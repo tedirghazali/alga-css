@@ -1,0 +1,130 @@
+@define props {
+  layout: full
+}
+
+@provide top {
+  ref-gridTemplate: [top-section-left] "top-section top-section" auto [top-section-right]
+                    [main-section-left] "main-section main-section" 1fr [main-section-right]
+                    / auto 1fr;
+}
+
+@provide left {
+  ref-gridTemplate: [left-section-left] "left-section main-section" auto [main-section-right]
+                    [left-section-left] "left-section main-section" 1fr [main-section-right]
+                    / auto 1fr;
+}
+
+@provide right {
+  ref-gridTemplate: [main-section-left] "main-section right-section" auto [right-section-right]
+                    [main-section-left] "main-section right-section" 1fr [right-section-right]
+                    / auto 1fr;
+}
+
+@provide bottom {
+  ref-gridTemplate: [main-section-left] "main-section main-section" 1fr [main-section-right]
+                    [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
+                    / auto 1fr;
+}
+
+@provide topLeft {
+  ref-gridTemplate: [top-section-left] "top-section top-section" auto [top-section-right]
+                    [left-section-left] "left-section main-section" 1fr [main-section-right]
+                    / auto 1fr;
+}
+
+@provide topRight {
+  ref-gridTemplate: [top-section-left] "top-section top-section" auto [top-section-right]
+                    [main-section-left] "main-section right-section" 1fr [right-section-right]
+                    / auto 1fr;
+}
+
+@provide bottomLeft {
+  ref-gridTemplate: [left-section-left] "left-section main-section" 1fr [main-section-right]
+                    [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
+                    / auto 1fr;
+}
+
+@provide bottomRight {
+  ref-gridTemplate: [main-section-left] "main-section right-section" 1fr [right-section-right]
+                    [bottom-section-left] "bottom-section bottom-section" auto [bottom-section-right]
+                    / auto 1fr;
+}
+
+@provide topBoth {
+  ref-gridTemplate: [top-section-left] "top-section top-section top-section" auto [top-section-right]
+                    [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
+                    / auto 1fr auto;
+}
+
+@provide bottomBoth {
+  ref-gridTemplate: [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
+                    [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
+                    / auto 1fr auto;
+}
+
+@provide vertical {
+  ref-gridTemplate: [top-section-left] "top-section top-section top-section" auto [top-section-right]
+                    [main-section-left] "main-section main-section main-section" 1fr [main-section-right]
+                    [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
+                    / auto 1fr auto;
+}
+
+@provide horizontal {
+  ref-gridTemplate: [left-section-left] "left-section main-section right-section" auto [right-section-right]
+                    [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
+                    [left-section-left] "left-section main-section right-section" auto [right-section-right]
+                    / auto 1fr auto;
+}
+
+@provide sideLeft {
+  ref-gridTemplate: [top-section-left] "top-section top-section top-section" auto [top-section-right]
+                    [left-section-left] "left-section main-section main-section" 1fr [main-section-right]
+                    [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
+                    / auto 1fr auto;
+}
+
+@provide sideRight {
+  ref-gridTemplate: [top-section-left] "top-section top-section top-section" auto [top-section-right]
+                    [main-section-left] "main-section main-section right-section" 1fr [right-section-right]
+                    [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
+                    / auto 1fr auto;
+}
+
+@provide full {
+  ref-gridTemplate: [top-section-left] "top-section top-section top-section" auto [top-section-right]
+                    [left-section-left] "left-section main-section right-section" 1fr [right-section-right]
+                    [bottom-section-left] "bottom-section bottom-section bottom-section" auto [bottom-section-right]
+                    / auto 1fr auto; 
+}
+
+@provide center {
+  ref: placeItems-center;
+}
+
+@alga page {
+  .page {
+    ref: display-grid maxWidth-100vw;
+    ref-width: 100%;
+    inject-props: layout;
+
+    .pageSectionTop {
+      ref: gridArea-topSection;
+    }
+
+    .pageSectionLeft {
+      ref: gridArea-leftSection;
+    }
+
+    .pageSectionMain {
+      ref: gridArea-mainSection;
+    }
+
+    .pageSectionRight {
+      ref: gridArea-rightSection;
+    }
+
+    .pageSectionBottom {
+      ref: gridArea-bottomSection;
+    }
+  }
+}

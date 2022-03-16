@@ -41,6 +41,7 @@ test('Testing navBar component', async () => {
 }
 .navBar .navWrap .navStart .navToggler {
     padding: 0.5rem;
+    font-size: 1rem;
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
@@ -72,6 +73,7 @@ test('Testing navBar component', async () => {
 }
 .navBar .navWrap .navEnd .navMenu .navItem {
     padding: 0.5rem;
+    font-size: 1rem;
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
