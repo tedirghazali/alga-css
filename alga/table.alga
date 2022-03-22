@@ -1,0 +1,38 @@
+@alga table {
+  .table {
+    ref: width-100pct borderCollapse-collapse;
+    
+    tr {
+      ref: borderBottom-1px_solid_rgba(0,0,0,0.25);
+    }
+    
+    thead {
+      ref: borderBottom-2px_solid_rgba(0,0,0,0.5);
+    }
+    
+    tfoot {
+      ref: borderTop-2px_solid_rgba(0,0,0,0.5);
+    }
+    
+    tr:last-child {
+      ref: borderBottomWidth-0px;
+    }
+    
+    tr th,
+    tr td {
+      ref: textAlign-left verticalAlign-top padding-0.75rem;
+    }
+  }
+
+  .tableBorder {
+    ref: borderTop-1px_solid_rgba(0,0,0,0.25) borderRight-1px_solid_rgba(0,0,0,0.25) borderBottom-1px_solid_rgba(0,0,0,0.25);
+    
+    th, td {
+      ref: borderLeft-1px_solid_rgba(0,0,0,0.25);
+    }
+  }
+   
+  .tableResponsive {
+    ref: overflowX-auto;
+  }
+}

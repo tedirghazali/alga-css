@@ -89,15 +89,18 @@ function readPath(rp, opts) {
       const param = rnode.params.trim()
       let defineObj = {}
       defineObj['header'] = {}
+      defineObj['body'] = []
       for(let dnode of rnode.nodes) {
         if(dnode.type === 'decl' && dnode.prop === 'use') {
           defineObj['header'] = Object.assign({}, defineObj['header'], component[componentName]['modules'][dnode.value.trim()])
         } else {
-          defineObj = Object.assign({}, defineObj, recursive(dnode, {
+          let recursiveDefineObj = recursive(dnode, {
             'provide': component[componentName]['provide']
-          })) 
+          })
+          defineObj['body'].push(recursiveDefineObj.body)
         }
       }
+      defineObj['body'] = defineObj['body'].flat()
       component[componentName][param] = Object.assign({}, component[componentName][param], defineObj)
     }
   }
