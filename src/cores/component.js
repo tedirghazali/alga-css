@@ -90,9 +90,23 @@ function readPath(rp, opts) {
       let defineObj = {}
       defineObj['header'] = {}
       defineObj['body'] = []
+      defineObj['condition'] = {}
       for(let dnode of rnode.nodes) {
         if(dnode.type === 'decl' && dnode.prop === 'use') {
           defineObj['header'] = Object.assign({}, defineObj['header'], component[componentName]['modules'][dnode.value.trim()])
+        } else if(dnode.type === 'atrule' && dnode.name === 'if') {
+          if('nodes' in dnode) {
+            let ifDefineObj = {}
+            ifDefineObj[dnode.params.trim()] = []
+            for(let ifnode of dnode.nodes) {
+              let ifRecursiveDefineObj = recursive(ifnode, {
+                'provide': component[componentName]['provide']
+              })
+              ifDefineObj[dnode.params.trim()].push(ifRecursiveDefineObj.body)
+            }
+            ifDefineObj[dnode.params.trim()] = ifDefineObj[dnode.params.trim()].flat()
+            defineObj['condition'] = Object.assign({}, defineObj['condition'], ifDefineObj)
+          }
         } else {
           let recursiveDefineObj = recursive(dnode, {
             'provide': component[componentName]['provide']

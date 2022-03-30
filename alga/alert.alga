@@ -1,0 +1,51 @@
+@define props {
+  type: success, info, warning, error;
+}
+
+@alga alert {
+  .alert {
+    ref: display-flex justifyContent-spaceBetween alignItems-center;
+    ref: borderLeft-5px_solid_hexc3c0c0 borderRadius-0.375rem;
+    ref: backgroundColor-hexf1ebeb padding-1rem color-hex5c5b5b;
+  }
+  
+  @if type includes success {
+    .alertSuccess {
+      ref: borderColor-hex008200 backgroundColor-hex79ec79 color-hex2d5a2d;
+    }
+  }
+  
+  @if type includes info {
+    .alertInfo {
+      ref: borderColor-hex0061eb backgroundColor-hexaccaf5 color-hex364150;
+    }
+  }
+  
+  @if type includes warning {
+    .alertWarning {
+      ref: borderColor-hexeb8f00 backgroundColor-hexf5cc8d color-hex635540;
+    }
+  }
+  
+  @if type includes error {
+    .alertError {
+      ref: borderColor-hexc10202 backgroundColor-hexf9a1a1 color-hex5c3939;
+    }
+  }
+    
+  .alertContent {
+    ref: flexGrow-1;
+  }
+    
+  .alertTitle {
+    ref: margin-0_0_7px_0;
+  }
+    
+  .alertText {
+    ref: margin-0;
+  }
+    
+  .alertAction {
+    ref: cursor-pointer;
+  }
+}

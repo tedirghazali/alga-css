@@ -1,0 +1,211 @@
+@define props {
+  field: label, input, check, group, button;
+}
+
+@alga form {
+  @if field includes label {
+    .label {
+      ref: display-block marginBottom-0.25rem color-hex283541;
+    }
+  }
+  
+  @if field includes input {
+    .input, .select {
+      ref: display-block width-100pct padding-0.5rem-0.75rem margin-0 fontSize-1rem fontWeight-400;
+      ref: lineHeight-1.5 backgroundColor-hexf9f9f9 backgroundClip-paddingBox appearance-none;
+      ref: color-hex283541 border-1px_solid_hexd9d9d9 borderRadius-0.375rem outline-0;
+      ref-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+      
+    .input::placeholder, .select::placeholder {
+      ref: color-hex555555;
+    }
+      
+    .input:focus, .select:focus {
+      ref: borderColor-hex1d84b6 backgroundColor-hexf7faff;
+    }
+      
+    .input[disabled], .input[readonly], .input.disabled,
+    .select[disabled], .select[readonly], .select.disabled {
+      ref: borderColor-hexd6d6d6 backgroundColor-hexf0f0f0 cursor-default;
+    }
+      
+    .input[disabled], .input.disabled,
+    .select[disabled], .select.disabled {
+      ref: color-hex9b9b9b userSelect-none pointerEvents-none;
+    }
+      
+    .input.plainText {
+      ref: backgroundColor-transparent borderColor-transparent paddingLeft-0 paddingRight-0;
+    }
+      
+    .input.valid,
+    .validated :valid {
+      ref: borderColor-hex198754 backgroundColor-hexf1fff8;
+      ref-paddingRight: calc(1.5em + .75rem);
+      ref-backgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+      ref: backgroundRepeat-noRepeat;
+      ref-backgroundPosition: right calc(.375em + .1875rem) center;
+      ref-backgroundSize: calc(.75em + .375rem) calc(.75em + .375rem);
+    }
+      
+    .validMessage {
+      ref: display-none width-100pct marginTop-0.25rem fontSize-0.875em color-hex198754;
+    }
+      
+    .validTooltip {
+      ref: position-absolute top-100pct zIndex-5 display-none maxWidth-100pct;
+      ref: padding-0.25rem_0.5rem marginTop-0.1rem fontSize-0.875rem color-hexfff;
+      ref: backgroundColor-rgba(25,135,84,0.9) borderRadius-0.25rem;
+    }
+      
+    .input.invalid,
+    .validated :invalid {
+      ref: borderColor-hexdc3545 backgroundColor-hexfbf1f2;
+      ref-paddingRight: calc(1.5em + .75rem);
+      ref-backgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+      ref: backgroundRepeat-noRepeat;
+      ref-backgroundPosition: right calc(.375em + .1875rem) center;
+      ref-backgroundSize: calc(.75em + .375rem) calc(.75em + .375rem);
+    }
+      
+    .invalidMessage {
+      ref: display-none width-100pct marginTop-0.25rem fontSize-0.875em color-hexdc3545;
+    }
+      
+    .invalidTooltip {
+      ref: position-absolute top-100pct zIndex-5 display-none maxWidth-100pct padding-0.25rem_0.5rem;
+      ref: marginTop-0.1rem fontSize-0.875rem color-hexfff backgroundColor-rgba(220,53,69,0.9) borderRadius-0.25rem;
+    }
+      
+    .valid ~ .validMessage, .valid ~ .validTooltip, .validated :valid ~ .validMessage, .validated :valid ~ .validTooltip,
+    .invalid ~ .invalidMessage, .invalid ~ .invalidTooltip, .validated :invalid ~ .invalidMessage, .validated :invalid ~ .invalidTooltip {
+      ref: display-block;
+    }
+      
+    textarea.input {
+      ref: minHeight-6.5rem resize-none;
+    }
+      
+    .select:not([multiple]) {
+      ref: padding-0.5rem;
+      ref-backgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+      ref: backgroundRepeat-noRepeat backgroundPosition-right_0.75rem_center backgroundSize-16px_12px;
+    }
+    
+    .select[multiple] {
+      ref: paddingTop-0.5rem paddingBottom-0.5rem;
+    }
+      
+    .select[multiple] option {
+      ref: paddingTop-0.375rem paddingBottom-0.375rem outline-0;
+    }
+  }
+  
+  @if field includes check {
+    .check {
+      ref: display-inlineFlex alignItems-center;
+    }
+      
+    .check .checkInput {
+      ref: width-1.5em height-1.5em appearance-none border-1px_solid_hexd9d9d9;
+    }
+      
+    .check .checkInput[type="checkbox"] {
+      ref: borderRadius-0.25rem;
+    }
+      
+    .check .checkInput[type="radio"] {
+      ref: borderRadius-0.75rem;
+    }
+      
+    .check .checkInput:checked {
+      ref: borderColor-hex1d84b6 backgroundColor-hex1d84b6;
+    }
+      
+    .check .checkInput[disabled], .check .checkInput.disabled {
+      ref: borderColor-hexd6d6d6 backgroundColor-hexf0f0f0 pointerEvents-none;
+    }
+      
+    .check .checkInput:checked[disabled], .check .checkInput:checked.disabled {
+      ref: backgroundColor-hexbbb;
+    }
+      
+    .check .checkInput[disabled] ~ .checkLabel, .check .checkInput.disabled ~ .checkLabel {
+      ref: color-hex9b9b9b cursor-default;
+    }
+      
+    .check .checkInput[type="checkbox"]:checked {
+      ref-backgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+    }
+      
+    .check .checkInput[type="checkbox"]:indeterminate {
+      ref-backgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+    }
+      
+    .check .checkInput[type="radio"]:checked {
+      ref-backgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+    }
+      
+    .check .checkLabel {
+      ref: display-inlineBlock paddingLeft-0.25rem;
+    }
+      
+    .check.switch .checkInput {
+      ref: width-2.85em backgroundRepeat-noRepeat;
+      ref-backgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+      ref: backgroundPosition-left_center borderRadius-2em;
+      ref-transition: background-position .15s ease-in-out;
+    }
+      
+    .check.switch .checkInput:checked {
+      ref: backgroundPosition-right_center;
+      ref-backgroundImage: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    }
+  }
+  
+  @if field includes group {
+    .group {
+      ref: position-relative display-inlineFlex flexWrap-nowrap alignItems-stretch;
+    }
+      
+    .group > .groupItem {
+      ref: flex-1_1_auto borderRadius-0;
+    }
+      
+    .group > .groupItem:first-child {
+      ref: borderTopLeftRadius-0.375rem borderBottomLeftRadius-0.375rem borderRight-none;
+    }
+      
+    .group > .groupItem:last-child {
+      ref: borderTopRightRadius-0.375rem borderBottomRightRadius-0.375rem;
+    }
+      
+    .group > :not(.groupItem:first-child):not(.groupItem:last-child) {
+      ref: borderRight-none;
+    }
+      
+    .group > .input:focus,
+    .group > .select:focus {
+      ref: borderColor-hexd9d9d9;
+    }
+  }
+  
+  @if field includes button {
+    .button {
+      ref: display-inlineFlex alignItems-center fontWeight-400 color-hex283541 textAlign-center;
+      ref: textDecoration-none cursor-pointer userSelect-none backgroundColor-hexf0f0f0;
+      ref: border-1px_solid_hexd6d6d6 padding-0.5rem_0.75rem fontSize-1rem borderRadius-0.375rem;
+      ref-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+      
+    .button[type=button]:hover {
+      ref: backgroundColor-hexe9e9e9;
+    }
+      
+    .button[type=button]:active {
+      ref: borderColor-hexbbbbbb;
+      ref: backgroundColor-hexbfbfbf;
+    }
+  }
+}

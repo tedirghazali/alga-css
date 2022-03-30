@@ -1,0 +1,10 @@
+@alga base {
+  *, ::after, ::before {
+    ref: boxSizing-borderBox;
+  }
+  
+  body {
+    ref: margin-0px padding-0px;
+    ref-fontFamily: 'Calibri', Arial;
+  }
+}
