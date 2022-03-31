@@ -11,7 +11,7 @@
   
   @if field includes input {
     .input, .select {
-      ref: display-block width-100pct padding-0.5rem-0.75rem margin-0 fontSize-1rem fontWeight-400;
+      ref: display-block width-100pct padding-0.5rem_0.75rem margin-0 fontSize-1rem fontWeight-400;
       ref: lineHeight-1.5 backgroundColor-hexf9f9f9 backgroundClip-paddingBox appearance-none;
       ref: color-hex283541 border-1px_solid_hexd9d9d9 borderRadius-0.375rem outline-0;
       ref-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;

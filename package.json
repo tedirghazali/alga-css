@@ -1,18 +1,15 @@
 {
   "name": "alga-css",
-  "version": "1.0.0-wood-1",
+  "version": "1.0.0-wood-3",
   "description": "Alga CSS is a scope-first CSS toolkit for quickly mix or compose CSS references and share CSS properties between components",
-  "main": "js/index.js",
-  "unpkg": "dist/alga-v1.min.css",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint js"
   },
   "files": [
-    "js",
     "src",
-    "css/defines",
-    "css/provides"
+    "alga"
   ],
   "repository": {
     "type": "git",

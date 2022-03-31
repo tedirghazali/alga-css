@@ -11,5 +11,18 @@ module.exports = {
   mb: 'marginBottom',
   ms: 'marginLeft',
   ml: 'marginLeft',
-  bd: 'border'
+  bd: 'border',
+  bg: 'background',
+  fg: 'color',
+  ff: 'fontFamily',
+  fs: 'fontSize',
+  fw: 'fontWeight',
+  fv: 'fontVariant',
+  fw: 'fontWeight',
+  fe: 'fontStretch',
+  fi: 'fontStyle',
+  lh: 'lineHeight',
+  align: 'textAlign',
+  justify: 'justifyContent',
+  items: 'alignItems'
 }
