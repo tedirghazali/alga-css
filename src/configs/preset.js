@@ -18,11 +18,12 @@ module.exports = {
   fs: 'fontSize',
   fw: 'fontWeight',
   fv: 'fontVariant',
-  fw: 'fontWeight',
   fe: 'fontStretch',
   fi: 'fontStyle',
   lh: 'lineHeight',
   align: 'textAlign',
+  decoration: 'textDecoration',
+  rounded: 'borderRadius',
   justify: 'justifyContent',
   items: 'alignItems'
 }

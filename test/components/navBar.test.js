@@ -4,9 +4,11 @@ test('Testing navBar component', async () => {
   const input = '@use navBar;'
   const output = `.navBar {
     position: relative;
-    z-index: 3;
+    z-index: 4;
     padding-top: 0.75rem;
-    padding-bottom: 0.75rem
+    padding-bottom: 0.75rem;
+    background-color: transparent;
+    box-shadow: none
 }
 .navBar .navWrap {
     display: flex;
@@ -14,8 +16,8 @@ test('Testing navBar component', async () => {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem
+    padding-right: 1.5rem;
+    padding-left: 1.5rem
 }
 .navBar .navWrap .navStart {
     display: flex;
@@ -40,13 +42,12 @@ test('Testing navBar component', async () => {
     padding-left: 0
 }
 .navBar .navWrap .navStart .navToggler {
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-size: 1rem;
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
     cursor: pointer;
-    margin: 10px;
     appearance: none;
     border: 0;
     background-color: transparent
@@ -63,7 +64,12 @@ test('Testing navBar component', async () => {
 }
 .navBar .navWrap .navStart .navToggler.navMobile {}
 .navBar .navWrap .navEnd {
-    display: none
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 0.75rem
 }
 .navBar .navWrap .navEnd .navMenu {
     display: flex;
@@ -72,13 +78,12 @@ test('Testing navBar component', async () => {
     align-items: center
 }
 .navBar .navWrap .navEnd .navMenu .navItem {
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-size: 1rem;
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
-    cursor: pointer;
-    margin: 10px
+    cursor: pointer
 }
 .navBar .navWrap .navEnd .navMenu .navItem:first-child {
     padding-left: 0
@@ -94,12 +99,7 @@ test('Testing navBar component', async () => {
         display: none
     }
     .navBar .navWrap .navEnd {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        align-items: center;
-        flex-grow: 1;
-        padding-left: 0.75rem
+        display: none
     }
 }`
   await execute(input, output, {log: false, file: './examples/navBar/navBar.css'})

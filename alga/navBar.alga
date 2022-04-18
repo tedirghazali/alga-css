@@ -1,11 +1,12 @@
 @define props {
-  size: 0.75rem;
-  margin: 10px;
+  size-x: 0.75rem;
+  size-y: 1.5rem;
+  bg-color: transparent;
+  shadow: none;
 }
 
 @provide navItem {
-  ref: padding-0.5rem fontSize-1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
-  props-margin: margin;
+  ref: padding-0.75rem fontSize-1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
 }
 
 @provide navItemFirstChild {
@@ -21,14 +22,16 @@
 
 @alga navBar {
   .navBar {
-    ref: position-relative zIndex-3;
-    props-paddingTop: size;
-    props-paddingBottom: size;
+    ref: position-relative zIndex-4;
+    props-paddingTop: size-x;
+    props-paddingBottom: size-x;
+    props-backgroundColor: bg-color;
+    props-boxShadow: shadow;
     
     .navWrap {
       ref: display-flex flexDirection-row flexWrap-nowrap alignItems-center justifyContent-spaceBetween;
-      props-paddingRight: size;
-      props-paddingLeft: size;
+      props-paddingRight: size-y;
+      props-paddingLeft: size-y;
       
       .navStart {
         ref: display-flex justifyContent-flexStart flexWrap-nowrap alignItems-center width-100per;
@@ -65,8 +68,8 @@
       }
       
       .navEnd {
-        ref: display-none;
-        screen-ss: display-flex justifyContent-spaceBetween flexWrap-nowrap alignItems-center flexGrow-1 paddingLeft-0.75rem;
+        ref: display-flex justifyContent-spaceBetween flexWrap-nowrap alignItems-center flexGrow-1 paddingLeft-0.75rem;
+        screen-ss: display-none;
         
         .navMenu {
           ref: display-flex justifyContent-flexStart flexWrap-nowrap alignItems-center;

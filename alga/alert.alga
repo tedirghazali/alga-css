@@ -9,25 +9,25 @@
     ref: backgroundColor-hexf1ebeb padding-1rem color-hex5c5b5b;
   }
   
-  @if type includes success {
+  @if type has success {
     .alertSuccess {
       ref: borderColor-hex008200 backgroundColor-hex79ec79 color-hex2d5a2d;
     }
   }
   
-  @if type includes info {
+  @if type has info {
     .alertInfo {
       ref: borderColor-hex0061eb backgroundColor-hexaccaf5 color-hex364150;
     }
   }
   
-  @if type includes warning {
+  @if type has warning {
     .alertWarning {
       ref: borderColor-hexeb8f00 backgroundColor-hexf5cc8d color-hex635540;
     }
   }
   
-  @if type includes error {
+  @if type has error {
     .alertError {
       ref: borderColor-hexc10202 backgroundColor-hexf9a1a1 color-hex5c3939;
     }

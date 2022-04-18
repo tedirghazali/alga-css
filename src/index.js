@@ -54,8 +54,8 @@ function algacss(options) {
                   })
                 ])
               }
-            } else if(condKey.includes(' includes ')) {
-              const splitKey = condKey.trim().split(/\@if\s|\sincludes\s/g).filter(i => i !== '')
+            } else if(condKey.includes(' has ')) {
+              const splitKey = condKey.trim().split(/\@if\s|\shas\s/g).filter(i => i !== '')
               if(config.components[param]['props'] && splitKey[0].trim() in config.components[param]['props'] && config.components[param]['props'][splitKey[0].trim()].replaceAll(' ', '').split(',').filter(i => i !== '').includes(splitKey[1].trim())) {
                 conditionDecls.push([
                   ...declaration(condVal, config.components[param]['props'], config.components[param]['provide'], {
