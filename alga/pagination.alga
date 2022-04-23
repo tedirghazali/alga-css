@@ -1,0 +1,63 @@
+@define props {
+  type: dense, sparse;
+}
+
+@alga pagination {
+  .pagination {
+    ref: display-flex flexWrap-wrap alignItems-center paddingLeft-0 margin-0 listStyle-none;
+      
+    .item .link {
+      ref: display-block padding-0.5rem_1rem color-hex4a5568 textDecoration-none;
+    }
+  }
+   
+  @if type has dense {
+    .pagination.dense .item .link {
+      ref: borderStyle-solid borderColor-hexcbcbcb borderTopWidth-1px borderBottomWidth-1px borderRightWidth-0px;
+      ref: borderLeftWidth-1px minWidth-10px textAlign-center;
+    }
+  
+    .pagination.dense .item:first-child .link {
+      ref: borderTopLeftRadius-5px borderBottomLeftRadius-5px;
+    }
+    
+    .pagination.dense .item:last-child .link {
+      ref: borderRightWidth-1px borderTopRightRadius-5px borderBottomRightRadius-5px;
+    }
+    
+    .pagination.dense .item.ellipsis .link {
+      ref: pointerEvents-none paddingLeft-0.675rem paddingRight-0.675rem borderRightColor-hexededed borderTopColor-hexededed;
+      ref: borderBottomColor-hexededed backgroundColor-hexf4f4f4;
+    }
+  }
+    
+  @if type has sparse {
+    .pagination.sparse .item .link {
+      ref: border-1px_solid_hexcbcbcb marginLeft-0.25rem marginRight-0.25rem borderRadius-5px minWidth-10px textAlign-center;
+    }
+    
+    .pagination.sparse .item:first-child .link {
+      ref: marginLeft-0;
+    }
+    
+    .pagination.sparse .item:last-child .link {
+      ref: marginRight-0;
+    }
+    
+    .pagination.sparse .item.ellipsis .link {
+      ref: pointerEvents-none border-none paddingLeft-0.25rem paddingRight-0.25rem;
+    }
+  }
+  
+  .pagination .item:hover .link {
+    ref: backgroundColor-hexeeeeee;
+  }
+    
+  .pagination .item.disabled .link {
+    ref: pointerEvents-none backgroundColor-hexeeeeee;
+  }
+    
+  .pagination .item.active .link {
+    ref: pointerEvents-none borderColor-hex4890eb backgroundColor-hex4c9bff color-hexfff;
+  }
+}

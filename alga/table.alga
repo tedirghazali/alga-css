@@ -7,11 +7,11 @@
     }
     
     thead {
-      ref: borderBottom-2px_solid_rgba(0,0,0,0.5);
+      ref: borderBottom-3px_solid_rgba(0,0,0,0.25);
     }
     
     tfoot {
-      ref: borderTop-2px_solid_rgba(0,0,0,0.5);
+      ref: borderTop-3px_solid_rgba(0,0,0,0.25);
     }
     
     tr:last-child {

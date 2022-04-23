@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pagination</title>
+  <link href="pagination.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Calibri', Arial;
+    }
+    .box1 {
+      padding: 10px;
+      background-color: seagreen;
+    }
+    .box2 {
+      padding: 12px;
+      background-color: olive;
+    }
+    p {
+      text-align: justify;
+    }
+    
+    /* Container */
+    .container,
+    .containerFluid {
+      width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Pagination Default</h1>
+    <ul class="pagination">
+      <li class="item"><a href="#" class="link">&laquo;</a></li>
+      <li class="item"><a href="#" class="link">&lsaquo;</a></li>
+      <li class="item ellipsis"><a href="#" class="link">...</a></li>
+      <li class="item active"><a href="#" class="link" aria-current="page">1</a></li>
+      <li class="item"><a href="#" class="link">2</a></li>
+      <li class="item disabled"><a href="#" class="link">3</a></li>
+      <li class="item ellipsis"><a href="#" class="link">...</a></li>
+      <li class="item"><a href="#" class="link">&rsaquo;</a></li>
+      <li class="item"><a href="#" class="link">&raquo;</a></li>
+    </ul>
+    <h1>Pagination Dense</h1>
+    <ul class="pagination dense">
+      <li class="item"><a href="#" class="link">&laquo;</a></li>
+      <li class="item"><a href="#" class="link">&lsaquo;</a></li>
+      <li class="item ellipsis"><a href="#" class="link">...</a></li>
+      <li class="item active"><a href="#" class="link" aria-current="page">1</a></li>
+      <li class="item"><a href="#" class="link">2</a></li>
+      <li class="item disabled"><a href="#" class="link">3</a></li>
+      <li class="item ellipsis"><a href="#" class="link">...</a></li>
+      <li class="item"><a href="#" class="link">&rsaquo;</a></li>
+      <li class="item"><a href="#" class="link">&raquo;</a></li>
+    </ul>
+    <h1>Pagination Sparse</h1>
+    <ul class="pagination sparse">
+      <li class="item"><a href="#" class="link">&laquo;</a></li>
+      <li class="item"><a href="#" class="link">&lsaquo;</a></li>
+      <li class="item ellipsis"><a href="#" class="link">...</a></li>
+      <li class="item active"><a href="#" class="link" aria-current="page">1</a></li>
+      <li class="item"><a href="#" class="link">2</a></li>
+      <li class="item disabled"><a href="#" class="link">3</a></li>
+      <li class="item ellipsis"><a href="#" class="link">...</a></li>
+      <li class="item"><a href="#" class="link">&rsaquo;</a></li>
+      <li class="item"><a href="#" class="link">&raquo;</a></li>
+    </ul>
+  </div>
+  
+</body>
+</html>
