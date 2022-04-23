@@ -24,7 +24,7 @@ test('Testing navBar component', async () => {
     justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
-    width: 100per
+    max-width: 240px
 }
 .navBar .navWrap .navStart .navBrand {
     padding-top: 0.375rem;
@@ -35,7 +35,7 @@ test('Testing navBar component', async () => {
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
-    margin-right: auto;
+    flex-grow: 1;
     cursor: pointer
 }
 .navBar .navWrap .navStart .navBrand:first-child {
@@ -93,12 +93,18 @@ test('Testing navBar component', async () => {
 }
 @media (max-width: 599px) {
     .navBar .navWrap .navStart {
-        width: auto
-    }
-    .navBar .navWrap .navStart .navToggler.navMobile {
-        display: none
+        width: 100%;
+        max-width: 100%
     }
     .navBar .navWrap .navEnd {
+        display: none
+    }
+    .navBar .navWrap .navEnd .navMenu {
+        display: none
+    }
+}
+@media (min-width: 600px) {
+    .navBar .navWrap .navStart .navToggler.navMobile {
         display: none
     }
 }`
