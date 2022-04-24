@@ -1,0 +1,82 @@
+const execute = require('../execute.js')
+
+test('Testing menu component', async () => {
+  const input = '@use menu;'
+  const output = `.nav, .menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0;
+    list-style: none
+}
+.menu {
+    flex-direction: column
+}
+.nav > .item > .link, .menu > .item > .link {
+    display: block;
+    padding: 0.675rem 1rem;
+    border-radius: 0.25rem;
+    color: #4a5568;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
+}
+.nav > .item:hover > .link, .menu > .item:hover > .link {
+    background-color: #f6f8f9
+}
+.nav > .item.active > .link, .menu > .item.active > .link {
+    background-color: #0d6efd;
+    color: #fff
+}
+.menu > .item > .link {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem
+}
+.nav.fill > .item {
+    flex: 1 1 auto;
+    text-align: center
+}
+.nav.custom > .item > .link {
+    border-top: 2px solid transparent;
+    border-bottom: 4px solid transparent
+}
+.menu.custom > .item > .link {
+    border-right: 2px solid transparent;
+    border-left: 4px solid transparent
+}
+.nav.custom > .item:hover > .link {
+    border-bottom-color: #7d8ca4;
+    background-color: #f1f2f3;
+    color: #363d46
+}
+.nav.custom > .item.active > .link {
+    border-bottom-color: #0d6efd;
+    background-color: #ebf4ff;
+    color: #0d6efd
+}
+.menu.custom > .item:hover > .link {
+    border-left-color: #7d8ca4;
+    background-color: #f6f8f9;
+    color: #363d46
+}
+.menu.custom > .item.active > .link {
+    border-left-color: #0d6efd;
+    background-color: #ebf4ff;
+    color: #0d6efd
+}
+.nav.tab {
+    border-bottom: 1px solid #dee2e6
+}
+.nav.tab > .item > .link {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-bottom: n1px
+}
+.nav.tab > .item.active > .link {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff
+}`
+  await execute(input, output, {log: false, file: './examples/menu/menu.css'})
+})

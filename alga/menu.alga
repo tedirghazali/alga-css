@@ -1,0 +1,79 @@
+@define props {
+  type: custom, tab;
+}
+
+@alga menu {
+  .nav, .menu {
+    ref: display-flex flexWrap-wrap paddingLeft-0 margin-0 listStyle-none;
+  }
+    
+  .menu {
+    ref: flexDirection-column;
+  }
+    
+  .nav > .item > .link,
+  .menu > .item > .link {
+    ref: display-block padding-0.675rem_1rem borderRadius-0.25rem color-hex4a5568 textDecoration-none;
+    ref-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+  }
+    
+  .nav > .item:hover > .link,
+  .menu > .item:hover > .link {
+    ref: backgroundColor-hexf6f8f9;
+  }
+    
+  .nav > .item.active > .link,
+  .menu > .item.active > .link {
+    ref: backgroundColor-hex0d6efd color-hexfff;
+  }
+    
+  .menu > .item > .link {
+    ref: paddingTop-0.75rem paddingBottom-0.75rem;
+  }
+    
+  .nav.fill > .item {
+    ref: flex-1_1_auto textAlign-center;
+  }
+  
+  @if type has custom {
+    .nav.custom > .item > .link {
+      ref: borderTop-2px_solid_transparent borderBottom-4px_solid_transparent;
+    }
+    
+    .menu.custom > .item > .link {
+      ref: borderRight-2px_solid_transparent borderLeft-4px_solid_transparent;
+    }
+    
+    .nav.custom > .item:hover > .link {
+      ref: borderBottomColor-hex7d8ca4 backgroundColor-hexf1f2f3 color-hex363d46;
+    }
+    
+    .nav.custom > .item.active > .link {
+      ref: borderBottomColor-hex0d6efd backgroundColor-hexebf4ff color-hex0d6efd;
+    }
+    
+    .menu.custom > .item:hover > .link {
+      ref: borderLeftColor-hex7d8ca4 backgroundColor-hexf6f8f9 color-hex363d46;
+    }
+    
+    .menu.custom > .item.active > .link {
+      ref: borderLeftColor-hex0d6efd backgroundColor-hexebf4ff color-hex0d6efd;
+    }
+  }
+  
+  @if type has tab {
+    .nav.tab {
+      ref: borderBottom-1px_solid_hexdee2e6;
+    }
+    
+    .nav.tab > .item > .link {
+      ref: borderTopLeftRadius-0.25rem borderTopRightRadius-0.25rem backgroundColor-transparent;
+      ref: border-1px_solid_transparent marginBottom-n1px;
+    }
+    
+    .nav.tab > .item.active > .link {
+      ref: color-hex495057 backgroundColor-hexfff borderColor-hexdee2e6_hexdee2e6_hexfff;
+    }
+  }
+  
+}
