@@ -1,0 +1,42 @@
+@alga card {
+  .card {
+    ref: position-relative display-flex flexDirection-column;
+  }
+    
+  .card, .box {
+    ref: width-100pct backgroundColor-hexfff backgroundClip-borderBox border-1px_solid_hexd9d9d9;
+    ref: borderRadius-0.25rem boxShadow-1px_1px_4px_hexd9d9d9 wordWrap-breakWord;
+  }
+    
+  .card *:first-child {
+    ref: borderTopRightRadius-0.25rem borderTopLeftRadius-0.25rem;
+  }
+    
+  .card *:last-child {
+    ref: borderBottomRightRadius-0.25rem borderBottomLeftRadius-0.25rem;
+  }
+    
+  .cardHeader, .cardFooter {
+    ref: display-flex justifyContent-spaceBetween alignItems-center padding-0.75rem_1rem;
+  }
+    
+  .cardHeader {
+    ref: borderBottom-1px_solid_hexd9d9d9;
+  }
+    
+  .cardFooter {
+    ref: borderTop-1px_solid_hexd9d9d9;
+  }
+    
+  .cardBody {
+    ref: flex-1_1_auto;
+  }
+    
+  .box, .cardBody {
+    ref: padding-1rem;
+  }
+    
+  .cardImage {
+    ref: width-100pct;
+  }
+}
