@@ -5,19 +5,21 @@ const rules = require('./rules.js')
 function readPath(rp) {
   const content = []
   const data = fs.readFileSync(rp, 'utf8')
-  let regexp, replaceData
+  let regexp, replaceData, classes
   if(rp.endsWith('.vue')) {
-    regexp = /(v-bind:class|:class|class)="([\w]+|[\s\w]+|[\s\w\-_\.:\d\(\)]+)"/g
+    //regexp = /(v-bind:class|:class|class)="([\w]+|[\s\w]+|[\s\w\-_\.:\d\(\)]+)"/g
     replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
+    classes = replaceData.replace(/class="|"/g, '').split(' ').filter(i => i.includes('-'))
   } else if(rp.endsWith('.svelte')) {
     regexp = /class:([\w]+|[\s\w]+|[\s\w\-_.:\d\(\)]+)\s/g
     replaceData = data.replace(/=|\>/ig, ' ')
+    classes = [...replaceData.matchAll(regexp)].flat().filter(i => i.indexOf('class') === -1)
   } else { //.html, .astro, .edge, .blade.php, .twig
     regexp = /(v-bind:class|x-bind:class|:class|class)="([\w]+|[\s\w]+|[\s\w\-_\.:\d\(\)]+)"/g
     replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
+    classes = [...replaceData.matchAll(regexp)].flat().filter(i => i.indexOf('class') === -1)
   }
-  if(regexp !== undefined && replaceData !== undefined) {
-    const classes = [...replaceData.matchAll(regexp)].flat().filter(i => i.indexOf('class') === -1)
+  if(classes) {
     const uniqClasses = Array.from(new Set(classes.map(i => i.split(' ')).flat())).filter(i => i !== '')
     content.push(...uniqClasses)
   }

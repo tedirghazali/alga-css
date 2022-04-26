@@ -71,7 +71,7 @@ test('Testing menu component', async () => {
     border-top-right-radius: 0.25rem;
     background-color: transparent;
     border: 1px solid transparent;
-    margin-bottom: n1px
+    margin-bottom: -1px
 }
 .nav.tab > .item.active > .link {
     color: #495057;
