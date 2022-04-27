@@ -23,9 +23,18 @@ module.exports = (body, props, provide, opts) => {
         } else {
           let declVal = undefined
           if(val.trim().startsWith('{') && val.trim().endsWith('}')) {
-            declVal = postcss.decl({ prop: key.trim(), value: props[val.replace('{', '').replace('}', '').trim()] })
-          } else if(val.trim().startsWith('props{') && val.trim().endsWith('}')) {
-            declVal = postcss.decl({ prop: key.trim(), value: props[val.replace('{', '').replace('}', '').trim()] })
+            let newDeclVal = val.replace('{', '').replace('}', '').trim()
+            const splitDeclVal = newDeclVal.split(/\(|\)|\s|,/g).filter(i => i !== '')
+            if(Number(splitDeclVal.length) === 1) {
+              declVal = postcss.decl({ prop: key.trim(), value: props[newDeclVal] })
+            } else {
+              for(let splittedDecl of splitDeclVal) {
+                if(props[splittedDecl]) {
+                  newDeclVal = newDeclVal.replaceAll(splittedDecl, props[splittedDecl])
+                }
+              }
+              declVal = postcss.decl({ prop: key.trim(), value: newDeclVal })
+            }
           } else {
             declVal = postcss.decl({ prop: key.trim(), value: val.trim() })
           }

@@ -1,3 +1,7 @@
+@define props {
+  menu: 10;
+}
+
 @alga picker {
   .picker {
     ref: width-auto;
@@ -12,7 +16,7 @@
   }
     
   .pickerOverlay {
-    ref: position-absolute zIndex-5 inset-0_3em_3em_0 width-100vw height-100vh display-none;
+    ref: position-fixed zIndex-5 inset-0_3em_3em_0 width-100vw height-100vh display-none;
   }
     
   .picker.active .pickerOverlay {
@@ -50,7 +54,8 @@
   }
     
   .pickerMenu {
-    ref: borderRadius-0.375rem;
+    ref: borderRadius-0.375rem overflowY-auto;
+    props-maxHeight: calc(menu * 36px);
     
     .pickerItem {
       ref: padding-0.5rem_0.75rem borderBottom-1px_solid_hexd9d9d9 textDecoration-none color-hex283541;

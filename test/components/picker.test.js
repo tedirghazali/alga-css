@@ -13,7 +13,7 @@ test('Testing picker or dropdown component', async () => {
     display: inline-block
 }
 .pickerOverlay {
-    position: absolute;
+    position: fixed;
     z-index: 5;
     inset: 0 3em 3em 0;
     width: 100vw;
@@ -56,7 +56,9 @@ test('Testing picker or dropdown component', async () => {
     border-radius: 0.375rem
 }
 .pickerMenu {
-    border-radius: 0.375rem
+    border-radius: 0.375rem;
+    overflow-y: auto;
+    max-height: calc(10 * 36px)
 }
 .pickerMenu .pickerItem {
     padding: 0.5rem 0.75rem;
