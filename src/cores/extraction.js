@@ -8,8 +8,11 @@ function readPath(rp) {
   let regexp, replaceData, classes
   if(rp.endsWith('.vue')) {
     //regexp = /(v-bind:class|:class|class)="([\w]+|[\s\w]+|[\s\w\-_\.:\d\(\)]+)"/g
-    replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
-    classes = replaceData.replace(/class="|"/g, '').split(' ').filter(i => i.includes('-'))
+    //replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/:\s/ig, '')
+    //classes = replaceData.replace(/class="|"/g, '').split(' ').filter(i => i.includes('-'))
+    regexp = /(?<=class=").*?(?=")/gs
+    replaceData = data.replace(/\[|\]|',|,\s|'|\(|\)|\<|\>|\{|\}/ig, ' ').replace(/\s+/ig, ',')
+    classes = [...replaceData.matchAll(regexp)].map(i => i[0].split(',').filter(w => w !== '')).flat(2).filter(i => i.includes('-'))
   } else if(rp.endsWith('.svelte')) {
     regexp = /class:([\w]+|[\s\w]+|[\s\w\-_.:\d\(\)]+)\s/g
     replaceData = data.replace(/=|\>/ig, ' ')

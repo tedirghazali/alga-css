@@ -11,15 +11,15 @@
     ref: display-block position-relative;
   }
     
-  .picker.dropDown .pickerContent {
+  .picker.dropdown .pickerContent {
     ref: display-inlineBlock;
   }
     
-  .pickerOverlay {
+  .pickerBackdrop {
     ref: position-fixed zIndex-5 inset-0_3em_3em_0 width-100vw height-100vh display-none;
   }
     
-  .picker.active .pickerOverlay {
+  .picker.active .pickerBackdrop {
     ref: display-block;
   }
     

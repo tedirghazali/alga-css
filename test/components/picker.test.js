@@ -9,10 +9,10 @@ test('Testing picker or dropdown component', async () => {
     display: block;
     position: relative
 }
-.picker.dropDown .pickerContent {
+.picker.dropdown .pickerContent {
     display: inline-block
 }
-.pickerOverlay {
+.pickerBackdrop {
     position: fixed;
     z-index: 5;
     inset: 0 3em 3em 0;
@@ -20,7 +20,7 @@ test('Testing picker or dropdown component', async () => {
     height: 100vh;
     display: none
 }
-.picker.active .pickerOverlay {
+.picker.active .pickerBackdrop {
     display: block
 }
 .pickerToggler {
