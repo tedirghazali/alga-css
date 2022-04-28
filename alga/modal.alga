@@ -1,0 +1,59 @@
+@alga modal {
+  .modal {
+    ref: position-absolute top-0 left-0 width-100vw height-100vh;
+  }
+    
+  .modalBackdrop {
+    ref: position-fixed zIndex-5 inset-0_3em_3em_0 width-100vw height-100vh display-none; 
+  }
+    
+  .modal.active .modalBackdrop {
+    ref: display-block backgroundColor-rgba(0,0,0,0.5);
+  }
+    
+  .modalDialog {
+    ref: position-relative zIndex-6 padding-1.5rem display-none;
+  }
+    
+  .modal.active .modalDialog {
+    ref: display-block;
+  }
+    
+  .modal.active .modalDialog.modalCenter {
+    ref: display-grid placeItems-center width-100vw height-100vh;
+  }
+    
+  .modalContent {
+    ref: backgroundColor-hexfff border-1px_solid_hexd9d9d9 marginRight-auto marginLeft-auto borderRadius-0.375rem;
+    screen-ss: width-100pct marginRight-0.25rem marginLeft-0.25rem;
+    screen-sr: width-500px;
+  }
+    
+  .modalFullscreen {
+    ref: padding-0;
+  }
+    
+  .modalFullscreen .modalContent {
+    ref: width-100vw height-100vh borderRadius-0;
+  }
+    
+  .modalHeader, .modalFooter {
+    ref: display-flex justifyContent-spaceBetween alignItems-center padding-0.75rem_1rem;
+  }
+    
+  .modalHeader {
+    ref: borderBottom-1px_solid_hexd9d9d9;
+  }
+    
+  .modalHeader .modalTitle {
+    ref: marginTop-0 marginBottom-0 lineHeight-1.5 fontSize-1.25rem;
+  }
+    
+  .modalBody {
+    ref: padding-0.75rem_1rem;
+  }
+    
+  .modalFooter {
+    ref: borderTop-1px_solid_hexd9d9d9;
+  }
+}
