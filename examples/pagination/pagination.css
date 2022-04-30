@@ -9,15 +9,20 @@
 .pagination .item .link {
     display: block;
     padding: 0.5rem 1rem;
-    color: #4a5568;
-    text-decoration: none
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer
+}
+.pagination .item .link svg, .pagination .item .link i {
+    pointer-events: none
 }
 .pagination .item:hover .link {
     background-color: #eeeeee
 }
 .pagination .item.disabled .link {
     pointer-events: none;
-    background-color: #eeeeee
+    background-color: #eeeeee;
+    color: #4a5568
 }
 .pagination .item.active .link {
     pointer-events: none;
@@ -51,7 +56,8 @@
     border-right-color: #ededed;
     border-top-color: #ededed;
     border-bottom-color: #ededed;
-    background-color: #f4f4f4
+    background-color: #f4f4f4;
+    color: #4a5568
 }
 .pagination.sparse .item .link {
     border: 1px solid #cbcbcb;

@@ -20,7 +20,7 @@ test('Testing table component', async () => {
 }
 .table tr th, .table tr td {
     text-align: left;
-    vertical-align: top;
+    vertical-align: middle;
     padding: 0.75rem
 }
 .tableBorder {

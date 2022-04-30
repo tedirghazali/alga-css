@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link href="form.css" rel="stylesheet" />
+  <style>
+    *, ::after, ::before {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 30px;
+      padding: 20px;
+      font-family: 'Calibri', Arial;
+    }
+    .box1 {
+      padding: 10px;
+      background-color: seagreen;
+    }
+    .box2 {
+      padding: 12px;
+      background-color: olive;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Text Field</label>
+      <input type="text" class="input" placeholder="This is placeholder title">
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Text Area</label>
+      <textarea class="input"></textarea>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Text Disabled</label>
+      <input type="text" class="input" value="Disabled by attribute" disabled>
+      <p></p>
+      <input type="text" class="input disabled" value="Disabled by class" disabled>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Text Readonly</label>
+      <input type="text" class="input" value="This is placeholder title" readonly>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Plain Text</label>
+      <input type="text" class="input plainText" value="This is placeholder title" readonly>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Combo Field</label>
+      <input type="text" class="input" list="datalistOptions">
+      <datalist id="datalistOptions">
+        <option value="San Francisco">
+        <option value="New York">
+        <option value="Seattle">
+        <option value="Los Angeles">
+        <option value="Chicago">
+      </datalist>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Select Field</label>
+      <select class="select">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+        <option>Option 6</option>
+      </select>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">List Field</label>
+      <select class="select" multiple>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+        <option>Option 6</option>
+      </select>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Text Field</label>
+      <input type="number" class="input">
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <div class="check">
+        <input type="checkbox" class="checkInput" id="checkOne" checked>
+        <label class="checkLabel" for="checkOne">Checkbox One</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" class="checkInput" id="checkTwo">
+        <label class="checkLabel" for="checkTwo">Checkbox Two</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" class="checkInput" id="checkDisabled" checked disabled>
+        <label class="checkLabel" for="checkDisabled">Checkbox Disabled</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" class="checkInput" id="checkDisabled2" disabled>
+        <label class="checkLabel" for="checkDisabled2">Checkbox Disabled2</label>
+      </div>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <div class="check">
+        <input type="radio" class="checkInput" name="radio" id="radioOne">
+        <label class="checkLabel" for="radioOne">Radio One</label>
+      </div>
+      <div class="check">
+        <input type="radio" class="checkInput" name="radio" id="radioTwo">
+        <label class="checkLabel" for="radioTwo">Radio Two</label>
+      </div>
+      <div class="check">
+        <input type="radio" class="checkInput" name="radio" id="radioThree" checked disabled>
+        <label class="checkLabel" for="radioThree">Radio Three</label>
+      </div>
+      <div class="check">
+        <input type="radio" class="checkInput" name="radio" id="radioFour" disabled>
+        <label class="checkLabel" for="radioFour">Radio Four</label>
+      </div>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <div class="check switch">
+        <input type="checkbox" class="checkInput" id="switchOne" checked>
+        <label class="checkLabel" for="switchOne">Checkbox One</label>
+      </div>
+      <div class="check switch">
+        <input type="checkbox" class="checkInput" id="switchTwo">
+        <label class="checkLabel" for="switchTwo">Checkbox Two</label>
+      </div>
+      <div class="check switch">
+        <input type="checkbox" class="checkInput" id="switchDisabled" checked disabled>
+        <label class="checkLabel" for="switchDisabled">Checkbox Disabled</label>
+      </div>
+      <div class="check switch">
+        <input type="checkbox" class="checkInput" id="switchDisabled2" disabled>
+        <label class="checkLabel" for="switchDisabled2">Checkbox Disabled2</label>
+      </div>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <button type="button" class="button">Button</button>
+      <button type="button" class="button">Button</button>
+      <button type="button" class="button">Button</button>
+      <div class="group">
+        <button type="button" class="button groupItem">Button</button>
+        <button type="button" class="button groupItem">Button</button>
+        <button type="button" class="button groupItem">Button</button>
+      </div>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <div class="group">
+        <span class="button groupItem">$</span>
+        <select class="select groupItem">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+          <option>Option 6</option>
+        </select>
+        <input type="text" class="input groupItem" aria-label="Amount (to the nearest dollar)">
+        <span class="button groupItem">.00</span>
+      </div>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Text Valid</label>
+      <input type="text" class="input valid" placeholder="This is valid input">
+      <div class="validMessage">
+        Looks good!
+      </div>
+    </div>
+    <div style="margin-bottom: 0.5rem;">
+      <label class="label">Text Invalid</label>
+      <input type="text" class="input invalid" placeholder="This is invalid input">
+      <div class="invalidMessage">
+        Please provide a valid state.
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

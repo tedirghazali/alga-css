@@ -1,6 +1,7 @@
 const camelDash = require('../helpers/camelDash.js')
 const values = require('../configs/values.js')
 const units = require('../configs/units.js')
+const specialValues = ['currentColor']
 
 module.exports = (value) => {
   let newValue = value.replaceAll('_', ' ')
@@ -8,7 +9,9 @@ module.exports = (value) => {
   if(Object.keys(values).includes(newValue.trim())) {
     newValue = values[newValue.trim()]
   }
-  newValue = camelDash(newValue)
+  if(!specialValues.includes(newValue)) {
+    newValue = camelDash(newValue)
+  }
   if(/\d+/g.test(newValue)) {
     const unitVals = []
     for(let newVal of newValue.split(' ')) {

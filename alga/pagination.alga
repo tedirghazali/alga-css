@@ -7,7 +7,11 @@
     ref: display-flex flexWrap-wrap alignItems-center paddingLeft-0 margin-0 listStyle-none;
       
     .item .link {
-      ref: display-block padding-0.5rem_1rem color-hex4a5568 textDecoration-none;
+      ref: display-block padding-0.5rem_1rem color-currentColor textDecoration-none cursor-pointer;
+      
+      svg, i {
+        ref: pointerEvents-none;
+      }
     }
   }
    
@@ -27,7 +31,7 @@
     
     .pagination.dense .item.ellipsis .link {
       ref: pointerEvents-none paddingLeft-0.675rem paddingRight-0.675rem borderRightColor-hexededed borderTopColor-hexededed;
-      ref: borderBottomColor-hexededed backgroundColor-hexf4f4f4;
+      ref: borderBottomColor-hexededed backgroundColor-hexf4f4f4 color-hex4a5568;
     }
   }
     
@@ -54,7 +58,7 @@
   }
     
   .pagination .item.disabled .link {
-    ref: pointerEvents-none backgroundColor-hexeeeeee;
+    ref: pointerEvents-none backgroundColor-hexeeeeee color-hex4a5568;
   }
     
   .pagination .item.active .link {

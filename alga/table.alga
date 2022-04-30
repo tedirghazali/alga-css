@@ -20,7 +20,7 @@
     
     tr th,
     tr td {
-      ref: textAlign-left verticalAlign-top padding-0.75rem;
+      ref: textAlign-left verticalAlign-middle padding-0.75rem;
     }
   }
 
