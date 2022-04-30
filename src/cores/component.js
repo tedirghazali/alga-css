@@ -15,6 +15,7 @@ function readPath(rp, opts) {
   let componentName = splitFileName
   component[componentName] = {}
   component[componentName]['modules'] = {}
+  component[componentName]['inits'] = []
   
   const root = postcss.parse(data)
   for(let rnode of root.nodes) {
@@ -92,8 +93,8 @@ function readPath(rp, opts) {
       defineObj['body'] = []
       defineObj['condition'] = {}
       for(let dnode of rnode.nodes) {
-        if(dnode.type === 'decl' && dnode.prop === 'use') {
-          defineObj['header'] = Object.assign({}, defineObj['header'], component[componentName]['modules'][dnode.value.trim()])
+        if(dnode.type === 'atrule' && dnode.name === 'use') {
+          defineObj['header'] = Object.assign({}, defineObj['header'], component[componentName]['modules'][dnode.params.trim()])
         } else if(dnode.type === 'atrule' && dnode.name === 'if') {
           if('nodes' in dnode) {
             let ifDefineObj = {}
@@ -116,6 +117,16 @@ function readPath(rp, opts) {
       }
       defineObj['body'] = defineObj['body'].flat()
       component[componentName][param] = Object.assign({}, component[componentName][param], defineObj)
+    } else if(rnode.type === 'atrule' && rnode.name === 'use') {
+      component[componentName]['inits'].push(rnode)
+    } else if(rnode.type === 'atrule' && rnode.name === 'export') {
+      const param = rnode.params?.trim() || ''
+      const newParams = param.split(',').filter(i => i !== '')
+      for(let dnode of newParams) {
+        if(component[componentName]['modules'][dnode.trim()]) {
+          component[dnode.trim()] = component[componentName]['modules'][dnode.trim()]
+        }
+      }
     }
   }
   return component
