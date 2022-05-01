@@ -1,5 +1,6 @@
 @define props {
-  layout: full
+  layout: full;
+  layouts: none;
 }
 
 @provide top {
@@ -125,6 +126,102 @@
 
     .pageSectionBottom {
       ref: gridArea-bottomSection;
+    }
+  }
+  
+  @if layouts has top {
+    .pageTop {
+      inject: top;
+    }
+  }
+  
+  @if layouts has bottom {
+    .pageBottom {
+      inject: bottom;
+    }
+  }
+  
+  @if layouts has right {
+    .pageRight {
+      inject: right;
+    }
+  }
+  
+  @if layouts has left {
+    .pageLeft {
+      inject: left;
+    }
+  }
+  
+  @if layouts has topRight {
+    .pageTopRight {
+      inject: topRight;
+    }
+  }
+  
+  @if layouts has topLeft {
+    .pageTopLeft {
+      inject: topLeft;
+    }
+  }
+  
+  @if layouts has bottomRight {
+    .pageBottomRight {
+      inject: bottomRight;
+    }
+  }
+  
+  @if layouts has bottomLeft {
+    .pageBottomLeft {
+      inject: bottomLeft;
+    }
+  }
+  
+  @if layouts has topBoth {
+    .pageTopBoth {
+      inject: topBoth;
+    }
+  }
+  
+  @if layouts has bottomBoth {
+    .pageBottomBoth {
+      inject: bottomBoth;
+    }
+  }
+  
+  @if layouts has vertical {
+    .pageVertical {
+      inject: vertical;
+    }
+  }
+  
+  @if layouts has horizontal {
+    .pageHorizontal {
+      inject: horizontal;
+    }
+  }
+  
+  @if layouts has sideRight {
+    .pageSideRight {
+      inject: sideRight;
+    }
+  }
+  
+  @if layouts has sideLeft {
+    .pageSideLeft {
+      inject: sideLeft;
+    }
+  }
+  
+  @if layouts has full {
+    .pageFull {
+      inject: full;
+    }
+  }
+  
+  @if layouts has center {
+    .pageCenter {
+      inject: center;
     }
   }
 }
