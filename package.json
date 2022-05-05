@@ -1,6 +1,6 @@
 {
   "name": "alga-css",
-  "version": "1.0.0-stone-2",
+  "version": "1.0.0-stone-3",
   "description": "Alga CSS is a scope-first CSS toolkit for quickly mix or compose CSS references and share CSS properties between components",
   "main": "src/index.js",
   "scripts": {

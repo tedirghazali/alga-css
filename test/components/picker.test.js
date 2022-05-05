@@ -61,6 +61,7 @@ test('Testing picker or dropdown component', async () => {
     max-height: calc(10 * 36px)
 }
 .pickerMenu .pickerItem {
+    display: block;
     padding: 0.5rem 0.75rem;
     border-bottom: 1px solid #d9d9d9;
     text-decoration: none;
