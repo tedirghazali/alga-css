@@ -1,0 +1,96 @@
+@define props {
+  type: tag, tagInput, badge;
+  menu: 10;
+}
+
+@alga tags {
+  
+  @if type has tag {
+    .tag {
+      ref: display-inlineFlex alignItems-center borderRadius-0.375rem textDecoration-none cursor-pointer;
+      ref: backgroundColor-hex283541 color-hexfff fontSize-0.75rem lineHeight-1.5 fontWeight-bold;
+      ref-padding: 3px 10px;
+      ref-border: 1px solid #192229;
+    }
+    
+    .tag.groupItem:first-child {
+      ref: cursor-default;
+    }
+    
+    .tag.groupItem:last-child {
+      ref: paddingRight-5px paddingLeft-5px;
+    }
+    
+    .tag.groupItem svg {
+      ref: pointerEvents-none;
+    }
+    
+    .tags {
+      ref: display-inlineFlex flexWrap-wrap justifyContent-start gap-0.5rem;
+    }
+  }  
+  
+  @if type has tagInput {
+    .taggable {
+      ref: width-auto;
+    }
+      
+    .tagContent {
+      ref: display-block position-relative zIndex-6;
+    }
+     
+    .tagBackdrop {
+      ref: position-fixed zIndex-5 inset-0_3em_3em_0 width-100vw height-100vh display-none;
+    }
+      
+    .taggable.active .tagBackdrop {
+      ref: display-block;
+    }
+      
+    .input.tagToggler {
+      ref: padding-0.5rem display-flex justifyContent-start;
+    }
+    
+    .tagInput {
+      ref: backgroundColor-transparent borderColor-transparent width-100px outline-0;
+    }
+      
+    .tagList {
+      ref: position-absolute zIndex-7 top-100pct left-0 backgroundColor-hexfff border-1px_solid_hexd9d9d9;
+      ref: width-100pct borderRadius-0.375rem overflowY-auto display-none borderTopWidth-0px;
+      props-maxHeight: calc(menu * 36px);
+      
+      .tagOption {
+        ref: display-block padding-0.5rem_0.75rem borderBottom-1px_solid_hexd9d9d9 textDecoration-none color-hex283541;
+      }
+      
+      .tagOption:last-child {
+        ref: borderBottom-0;
+      }
+    }
+    
+    .taggable.active .input.tagToggler {
+      ref: borderBottomRightRadius-0 borderBottomLeftRadius-0;
+    }
+    
+    .taggable.active .tagList {
+      ref: borderTopRightRadius-0 borderTopLeftRadius-0 display-block;
+    }
+  }
+  
+  @if type has badge {
+    .badge {
+      ref: display-inline marginTop-0px marginLeft-0.15rem padding-3px_7.5px;
+      ref: borderRadius-0.375rem textDecoration-none backgroundColor-hex283541;
+      ref: color-hexfff fontSize-0.75rem fontWeight-bold;
+    }
+    
+    .badgeTop {
+      ref: marginTop-n0.375rem;
+    }
+    
+    .badgeRound {
+      ref: borderRadius-99px;
+    }
+  }
+}

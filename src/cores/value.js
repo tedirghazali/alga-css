@@ -15,7 +15,8 @@ module.exports = (value) => {
   if(/\d+/g.test(newValue)) {
     const unitVals = []
     for(let newVal of newValue.split(' ')) {
-      if(newVal.startsWith('n') && newUnits.includes(newVal.split(/\d+/g)[1])) {
+      const splitValByNum = newVal.split(/\d+/g)
+      if(newVal.startsWith('n') && newUnits.includes(splitValByNum[Number(splitValByNum.length) - 1])) {
         unitVals.push(newVal.replace('n', '-'))
       } else if(newVal.includes('/')) {
         const splitValue = newVal.split('/')
