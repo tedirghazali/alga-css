@@ -18,7 +18,7 @@ test('Testing list group component', async () => {
 }
 .list .listItem {
     display: block;
-    padding: 0.5rem 0.75rem;
+    padding: 0.675rem 0.75rem;
     border-bottom: 1px solid #d9d9d9;
     text-decoration: none;
     color: #283541

@@ -8,6 +8,7 @@ const prefers = require('./configs/prefers.js')
 const component = require('./cores/component.js')
 const declaration = require('./cores/declaration.js')
 const extraction = require('./cores/extraction.js')
+const packages = require('./cores/package.js')
 
 function algacss(options) {
   const config = {
@@ -29,7 +30,7 @@ function algacss(options) {
     const newPlugins = options?.plugins.map(item => {
       return './node_modules/'+item+'/*.alga'
     })
-    const newComponent = component(options?.plugins, opts)
+    const newComponent = packages(newPlugins, opts)
     config.components = Object.assign({}, config.components, newComponent)
     for(let keyComponent of Object.keys(newComponent)) {
       if(newComponent[keyComponent]['inits']) {
@@ -104,6 +105,8 @@ function algacss(options) {
         root.append(...config.extract)
       }
       
+      let newPackNodes = []
+      const filterPackNodes = []
       for(let rule of config.inits) {
         let param = rule.params.trim()
         let name = param
@@ -112,7 +115,8 @@ function algacss(options) {
           param = prms[0].trim()
           name = prms[1].trim()
         }
-        if(config.components[param]) {
+        if(!filterPackNodes.includes(param) && config.components[param]) {
+          filterPackNodes.push(param)
           let newNodes = []
           if(rule?.nodes) {
             for(let node of rule.nodes) {
@@ -145,7 +149,7 @@ function algacss(options) {
               }
             }
           }
-          newNodes = [
+          newPackNodes.push([
             ...newNodes, 
             ...declaration(config.components[param][name]['body'], config.components[param]['props'], config.components[param]['provide'], {
               screen: config.screen,
@@ -153,10 +157,10 @@ function algacss(options) {
               prefers: config.prefers
             }),
             ...conditionDecls.flat()
-          ]
-          root.append(newNodes)
+          ])
         }
       }
+      root.append(...newPackNodes.flat())
       
     }
   }

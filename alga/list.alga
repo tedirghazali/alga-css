@@ -17,7 +17,7 @@
     }
     
     .listItem {
-      ref: display-block padding-0.5rem_0.75rem borderBottom-1px_solid_hexd9d9d9 textDecoration-none color-hex283541;
+      ref: display-block padding-0.675rem_0.75rem borderBottom-1px_solid_hexd9d9d9 textDecoration-none color-hex283541;
     }
     
     .listItem:last-child {

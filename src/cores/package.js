@@ -24,7 +24,16 @@ function readPath(rp, opts) {
       const param = rnode.params.replaceAll(/\'|\"|\`/g, '').trim()
       const paramFilePaths = param.split(/\/|\./)
       const paramFileName = paramFilePaths[Number(paramFilePaths.length) - 2]
-      component[componentName]['modules'] = Object.assign({}, component[componentName]['modules'], readPath(param, opts))
+      const paramParentFolder = rp.split('/')[Number(rp.split('/').length) - 2]
+      let newPrmUrl = param
+      if(param.startsWith('./')) {
+        newPrmUrl = param.replace('./', './node_modules/'+paramParentFolder+'/')
+      } else if(param.startsWith('/')) {
+        newPrmUrl = './node_modules/'+paramParentFolder+''+param
+      } else {
+        newPrmUrl = './node_modules/'+paramParentFolder+'/'+param
+      }
+      component[componentName]['modules'] = Object.assign({}, component[componentName]['modules'], readPath(newPrmUrl, opts))
     } else if(rnode.type === 'atrule' && rnode.name === 'define' && 'nodes' in rnode) {
       const param = rnode.params.trim()
       const defineObj = {}
@@ -127,6 +136,7 @@ function readPath(rp, opts) {
           component[dnode.trim()] = component[componentName]['modules'][dnode.trim()]
         }
       }
+      component[componentName]['inits'].push(rnode)
     }
   }
   return component
@@ -134,15 +144,6 @@ function readPath(rp, opts) {
 
 module.exports = (paths, opts) => {
   let component = {}
-  
-  const coreFiles = fs.readdirSync(__dirname.toString().replace('src/cores', 'alga') + '/')
-  if(coreFiles) {
-    for(let file of coreFiles) {
-      if(file.endsWith('alga.css') || file.endsWith('.alga')) {
-        component = Object.assign({}, component, readPath(__dirname.toString().replace('src/cores', 'alga') + '/' + file, opts))
-      }
-    }
-  }
   
   if(typeof paths === 'string') {
     const files = glob.sync(paths, {})
