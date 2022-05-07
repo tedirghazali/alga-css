@@ -65,6 +65,15 @@ test('Testing picker or dropdown component', async () => {
 .pickerMenu .pickerItem:last-child {
     border-bottom: 0
 }
+.pickerMenu .pickerItem:hover {
+    background-color: #ededed
+}
+.pickerMenu .pickerItem.active {
+    pointer-events: none;
+    border-color: #4890eb;
+    background-color: #4c9bff;
+    color: #fff
+}
 .pickerMenu.pickerSizing {
     overflow-y: auto;
     max-height: calc(10 * 36px)

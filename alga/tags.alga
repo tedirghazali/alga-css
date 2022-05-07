@@ -67,6 +67,10 @@
       .tagOption:last-child {
         ref: borderBottom-0;
       }
+      
+      .tagOption:hover {
+        ref: backgroundColor-hexededed;;
+      }
     }
     
     .taggable.active .input.tagToggler {

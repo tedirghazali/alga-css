@@ -23,6 +23,14 @@
     .listItem:last-child {
       ref: borderBottom-0;
     }
+    
+    .listItem:hover {
+      ref: backgroundColor-hexededed;;
+    }
+    
+    .listItem.active {
+      ref: pointerEvents-none borderColor-hex4890eb backgroundColor-hex4c9bff color-hexfff;
+    }
   }
   
   .list.sizing {

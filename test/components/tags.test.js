@@ -86,6 +86,9 @@ test('Testing tags, tag input, and badge component', async () => {
 .tagList .tagOption:last-child {
     border-bottom: 0
 }
+.tagList .tagOption:hover {
+    background-color: #ededed
+}
 .taggable.active .input.tagToggler {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0

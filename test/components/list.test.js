@@ -26,6 +26,15 @@ test('Testing list group component', async () => {
 .list .listItem:last-child {
     border-bottom: 0
 }
+.list .listItem:hover {
+    background-color: #ededed
+}
+.list .listItem.active {
+    pointer-events: none;
+    border-color: #4890eb;
+    background-color: #4c9bff;
+    color: #fff
+}
 .list.sizing {
     overflow-y: auto;
     max-height: calc(10 * 36px)

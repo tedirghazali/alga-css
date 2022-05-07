@@ -59,6 +59,14 @@
     .pickerItem:last-child {
       ref: borderBottom-0;
     }
+    
+    .pickerItem:hover {
+      ref: backgroundColor-hexededed;;
+    }
+    
+    .pickerItem.active {
+      ref: pointerEvents-none borderColor-hex4890eb backgroundColor-hex4c9bff color-hexfff;
+    }
   }
   
   .pickerMenu.pickerSizing {
