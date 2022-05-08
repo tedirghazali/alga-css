@@ -15,7 +15,7 @@ module.exports = (ref, opts) => {
       refs[0] = opts.preset[refs[0]]
     }
     
-    const newRule = postcss.rule({ selector: '.'+ref })
+    const newRule = postcss.rule({ selector: '.'+ref.replaceAll('.', '\\.').replaceAll('/', '\\/') })
     const declVal = postcss.decl({ prop: camelDash(refs[0]), value: value(refs[1]) })
     newRule.append(declVal)
     

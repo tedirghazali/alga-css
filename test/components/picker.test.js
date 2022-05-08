@@ -28,7 +28,8 @@ test('Testing picker or dropdown component', async () => {
 }
 .select.pickerToggler {
     padding-left: 0.75rem;
-    padding-right: 0.75rem
+    padding-right: 0.75rem;
+    cursor: default
 }
 .pickerBody, .pickerMenu {
     position: absolute;
@@ -60,7 +61,8 @@ test('Testing picker or dropdown component', async () => {
     padding: 0.675rem 0.75rem;
     border-bottom: 1px solid #d9d9d9;
     text-decoration: none;
-    color: #283541
+    color: #283541;
+    cursor: default
 }
 .pickerMenu .pickerItem:last-child {
     border-bottom: 0
