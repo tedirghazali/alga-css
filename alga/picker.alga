@@ -49,7 +49,7 @@
     
     .pickerGroup {
       ref: overflowY-auto;
-      props-maxHeight: calc(menu * 36px);
+      props-maxHeight: calc(menu * 42px);
     }
     
     .pickerItem {
@@ -72,7 +72,7 @@
   
   .pickerMenu.pickerSizing {
     ref: overflowY-auto;
-    props-maxHeight: calc(menu * 36px);
+    props-maxHeight: calc(menu * 42px);
   }
   
   .suggestion .pickerMenu,

@@ -1,6 +1,6 @@
 @define props {
-  size-x: 0.75rem;
-  size-y: 1.5rem;
+  size-x: 1.5rem;
+  size-y: 0.75rem;
   bg-color: transparent;
   shadow: none;
 }
@@ -23,15 +23,15 @@
 @alga navBar {
   .navBar {
     ref: position-relative zIndex-4;
-    props-paddingTop: size-x;
-    props-paddingBottom: size-x;
+    props-paddingTop: size-y;
+    props-paddingBottom: size-y;
     props-backgroundColor: bg-color;
     props-boxShadow: shadow;
     
     .navWrap {
       ref: display-flex flexDirection-row flexWrap-nowrap alignItems-center justifyContent-spaceBetween;
-      props-paddingRight: size-y;
-      props-paddingLeft: size-y;
+      props-paddingRight: size-x;
+      props-paddingLeft: size-x;
       
       .navStart {
         ref: display-flex justifyContent-flexStart flexWrap-nowrap alignItems-center maxWidth-240px;

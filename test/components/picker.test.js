@@ -54,7 +54,7 @@ test('Testing picker or dropdown component', async () => {
 }
 .pickerMenu .pickerGroup {
     overflow-y: auto;
-    max-height: calc(10 * 36px)
+    max-height: calc(10 * 42px)
 }
 .pickerMenu .pickerItem {
     display: block;
@@ -78,7 +78,7 @@ test('Testing picker or dropdown component', async () => {
 }
 .pickerMenu.pickerSizing {
     overflow-y: auto;
-    max-height: calc(10 * 36px)
+    max-height: calc(10 * 42px)
 }
 .suggestion .pickerMenu, .fill .pickerBody {
     width: 100%

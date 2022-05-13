@@ -1,0 +1,51 @@
+@alga dropZone {
+  .dropZone {
+    ref: overflowWrap-breakWord padding-0.5rem;
+    ref-maxWidth: calc(100vw - 0.5rem);
+    ref-maxHeight: calc(100vh - 0.5rem);
+    
+    .dropZoneFile {
+      ref: position-absolute width-0px height-0px overflow-hidden;
+      ref-clip: rect(1px, 1px, 1px, 1px);
+    }
+    
+    .dropZoneWrap {
+      ref-border: 3px dashed currentColor;
+      ref-boxShadow: -1px 5px 25px -9px rgba(0, 0, 0, 0.2);
+      
+      .dropZoneLabel {
+        ref: display-grid placeItems-center width-100pct height-100pct;
+        ref: paddingTop-1.5rem paddingBottom-2.5rem cursor-pointer;
+      }
+        
+      .dropZoneImage {
+        ref: pointerEvents-none;
+        ref-color: currentColor;
+      }
+      
+      .dropZoneBody {
+        ref: textAlign-center;
+        
+        p, span {
+          ref: margin-0px;
+        }
+        
+        .dropZoneTitle {
+          ref: color-hex333;
+        }
+        
+        .dropZoneText {
+          ref: color-hex737373;
+        }
+              
+        .button {
+          ref: backgroundColor-transparent display-inlineBlock textAlign-center verticalAlign-middle pointerEvents-none;
+          ref: fontSize-1rem lineHeight-1.5rem fontWeight-400 userSelect-none marginTop-1.25rem borderRadius-0.35rem;
+          ref-color: currentColor;
+          ref-border: 2px solid currentColor;
+          ref-padding: 0.375rem 0.75rem;
+        }
+      }
+    }
+  }
+}
