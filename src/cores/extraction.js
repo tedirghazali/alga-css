@@ -1,6 +1,7 @@
 const glob = require('glob')
 const fs = require('fs')
 const rules = require('./rules.js')
+const atrules = require('./atrules.js')
 
 function readPath(rp) {
   const content = []
@@ -49,9 +50,11 @@ module.exports = (paths, options) => {
   }
   
   const newExtract = []
+  let newStateExtract = {}
   for(let ref of Array.from(new Set(extract))) {
     newExtract.push(...rules(ref, options))
+    newStateExtract = Object.assign({}, atrules(newStateExtract, ref, options))
   }
   
-  return newExtract
+  return [...newExtract, ...Object.values(newStateExtract)]
 }

@@ -3,7 +3,7 @@
     <div :class="{'pt-2px': true}">
       Test
     </div>
-    <span class="borderTop-none w-33.333333pct">
+    <span class="md:mb-20px dark:bgColor-hex333 hover:color-green borderTop-none w-33.333333pct">
       Border
     </span>
   </div>
