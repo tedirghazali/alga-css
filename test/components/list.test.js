@@ -21,7 +21,8 @@ test('Testing list group component', async () => {
     padding: 0.675rem 0.75rem;
     border-bottom: 1px solid #d9d9d9;
     text-decoration: none;
-    color: #283541
+    color: #283541;
+    cursor: default
 }
 .list .listItem:last-child {
     border-bottom: 0
