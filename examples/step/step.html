@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Step Wizard</title>
+  <link href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="step.css" rel="stylesheet" />
+  <style>
+    *, ::after, ::before {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 30px;
+      padding: 20px;
+      font-family: 'Calibri', Arial;
+    }
+    .box1 {
+      padding: 10px;
+      background-color: seagreen;
+    }
+    .box2 {
+      padding: 12px;
+      background-color: olive;
+    }
+    .container {
+      width: 1024px;
+      padding: 20px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <div style="margin-bottom: 1.5rem;">
+      <label class="label">Step Wizard</label>
+      <div class="step">
+        <div class="stepItem active">
+          <div class="stepFeature">
+            <i class="fa fa-home"></i>
+          </div>
+          <div class="stepBody">
+            <h3 class="stepTitle">Step 1</h3>
+            <p class="stepSubtitle">Description 1</p>
+          </div>
+        </div>
+        <div class="stepItem">
+          <div class="stepFeature">
+            <i class="fa fa-file"></i>
+          </div>
+          <div class="stepBody">
+            <h3 class="stepTitle">Step 2</h3>
+            <p class="stepSubtitle">Description 2</p>
+          </div>
+        </div>
+        <div class="stepItem">
+          <div class="stepFeature">
+            <i class="fa fa-cog"></i>
+          </div>
+          <div class="stepBody">
+            <h3 class="stepTitle">Step 3</h3>
+            <p class="stepSubtitle">Description 3</p>
+          </div>
+        </div>
+        <div class="stepItem">
+          <div class="stepFeature">
+            <i class="fa fa-trash"></i>
+          </div>
+          <div class="stepBody">
+            <h3 class="stepTitle">Step 4</h3>
+            <p class="stepSubtitle">Description 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -3,6 +3,7 @@ const glob = require('glob')
 const fs = require('fs')
 const screen = require('../configs/screen.js')
 const camelDash = require('../helpers/camelDash.js')
+const randomChar = require('../helpers/randomChar.js')
 const reference = require('./reference.js')
 const recursive = require('./recursive.js')
 
@@ -91,31 +92,37 @@ function readPath(rp, opts) {
       let defineObj = {}
       defineObj['header'] = {}
       defineObj['body'] = []
-      defineObj['condition'] = {}
+      defineObj['content'] = {}
+      let index = 1
       for(let dnode of rnode.nodes) {
+        const randId = randomChar(index, 6)
+        defineObj['content'][randId] = []
         if(dnode.type === 'atrule' && dnode.name === 'use') {
-          defineObj['header'] = Object.assign({}, defineObj['header'], component[componentName]['modules'][dnode.params.trim()])
+          defineObj['content'][randId].push(component[componentName]['modules'][dnode.params.trim()])
         } else if(dnode.type === 'atrule' && dnode.name === 'if') {
           if('nodes' in dnode) {
             let ifDefineObj = {}
-            ifDefineObj[dnode.params.trim()] = []
+            ifDefineObj['@if '+dnode.params.trim()] = []
             for(let ifnode of dnode.nodes) {
               let ifRecursiveDefineObj = recursive(ifnode, {
                 'provide': component[componentName]['provide']
               })
-              ifDefineObj[dnode.params.trim()].push(ifRecursiveDefineObj.body)
+              ifDefineObj['@if '+dnode.params.trim()].push(ifRecursiveDefineObj.body)
             }
-            ifDefineObj[dnode.params.trim()] = ifDefineObj[dnode.params.trim()].flat()
-            defineObj['condition'] = Object.assign({}, defineObj['condition'], ifDefineObj)
+            ifDefineObj['@if '+dnode.params.trim()] = ifDefineObj['@if '+dnode.params.trim()].flat()
+            defineObj['content'][randId].push(ifDefineObj)
           }
         } else {
           let recursiveDefineObj = recursive(dnode, {
             'provide': component[componentName]['provide']
           })
-          defineObj['body'].push(recursiveDefineObj.body)
+          defineObj['content'][randId].push(recursiveDefineObj.body)
         }
+        
+        defineObj['content'][randId] = defineObj['content'][randId].flat()
+        index++
       }
-      defineObj['body'] = defineObj['body'].flat()
+      defineObj['body'] = Object.values(defineObj['content']).flat()
       component[componentName][param] = Object.assign({}, component[componentName][param], defineObj)
     } else if(rnode.type === 'atrule' && rnode.name === 'use') {
       component[componentName]['inits'].push(rnode)

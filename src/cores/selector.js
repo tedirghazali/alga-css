@@ -3,7 +3,7 @@ module.exports = (root, param) => {
   for(let selector of root.selectors) {
     let newSelector = selector.trim()
     if(newSelector.includes('&')) {
-      newSelector.replaceAll('&', param.trim())
+      newSelector = newSelector.replaceAll('&', param.trim())
     } else {
       newSelector = param.trim() +' '+ newSelector
     }

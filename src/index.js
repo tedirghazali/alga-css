@@ -60,40 +60,13 @@ function algacss(options) {
               config.components[param]['props'][node.prop] = node.value
             }
           }
-          const conditionDecls = []
-          for(let [condKey, condVal] of Object.entries(config.components[param][name]['condition'])) {
-            if(condKey.includes(' is ')) {
-              const splitKey = condKey.trim().split(/\@if\s|\sis\s/g).filter(i => i !== '')
-              if(config.components[param]['props'] && splitKey[0].trim() in config.components[param]['props'] && config.components[param]['props'][splitKey[0].trim()] === splitKey[1].trim()) {
-                conditionDecls.push([
-                  ...declaration(condVal, config.components[param]['props'], config.components[param]['provide'], {
-                    screen: config.screen,
-                    state: config.state, 
-                    prefers: config.prefers
-                  })
-                ])
-              }
-            } else if(condKey.includes(' has ')) {
-              const splitKey = condKey.trim().split(/\@if\s|\shas\s/g).filter(i => i !== '')
-              if(config.components[param]['props'] && splitKey[0].trim() in config.components[param]['props'] && config.components[param]['props'][splitKey[0].trim()].replaceAll(' ', '').split(',').filter(i => i !== '').includes(splitKey[1].trim())) {
-                conditionDecls.push([
-                  ...declaration(condVal, config.components[param]['props'], config.components[param]['provide'], {
-                    screen: config.screen,
-                    state: config.state, 
-                    prefers: config.prefers
-                  })
-                ])
-              }
-            }
-          }
           newNodes = [
             ...newNodes, 
             ...declaration(config.components[param][name]['body'], config.components[param]['props'], config.components[param]['provide'], {
               screen: config.screen,
               state: config.state, 
               prefers: config.prefers
-            }),
-            ...conditionDecls.flat()
+            })
           ]
           rule.replaceWith(newNodes)
         } else {
@@ -123,40 +96,13 @@ function algacss(options) {
               config.components[param]['props'][node.prop] = node.value
             }
           }
-          const conditionDecls = []
-          for(let [condKey, condVal] of Object.entries(config.components[param][name]['condition'])) {
-            if(condKey.includes(' is ')) {
-              const splitKey = condKey.trim().split(/\@if\s|\sis\s/g).filter(i => i !== '')
-              if(config.components[param]['props'] && splitKey[0].trim() in config.components[param]['props'] && config.components[param]['props'][splitKey[0].trim()] === splitKey[1].trim()) {
-                conditionDecls.push([
-                  ...declaration(condVal, config.components[param]['props'], config.components[param]['provide'], {
-                    screen: config.screen,
-                    state: config.state, 
-                    prefers: config.prefers
-                  })
-                ])
-              }
-            } else if(condKey.includes(' has ')) {
-              const splitKey = condKey.trim().split(/\@if\s|\shas\s/g).filter(i => i !== '')
-              if(config.components[param]['props'] && splitKey[0].trim() in config.components[param]['props'] && config.components[param]['props'][splitKey[0].trim()].replaceAll(' ', '').split(',').filter(i => i !== '').includes(splitKey[1].trim())) {
-                conditionDecls.push([
-                  ...declaration(condVal, config.components[param]['props'], config.components[param]['provide'], {
-                    screen: config.screen,
-                    state: config.state, 
-                    prefers: config.prefers
-                  })
-                ])
-              }
-            }
-          }
           newPackNodes.push([
             ...newNodes, 
             ...declaration(config.components[param][name]['body'], config.components[param]['props'], config.components[param]['provide'], {
               screen: config.screen,
               state: config.state, 
               prefers: config.prefers
-            }),
-            ...conditionDecls.flat()
+            })
           ])
         }
       }

@@ -20,20 +20,6 @@ test('Testing pagination component', async () => {
 .pagination .item .link svg, .pagination .item .link i {
     pointer-events: none
 }
-.pagination .item:hover .link {
-    background-color: #eeeeee
-}
-.pagination .item.disabled .link {
-    pointer-events: none;
-    background-color: #eeeeee;
-    color: #4a5568
-}
-.pagination .item.active .link {
-    pointer-events: none;
-    border-color: #4890eb;
-    background-color: #4c9bff;
-    color: #fff
-}
 .pagination.dense .item .link {
     border-style: solid;
     border-color: #cbcbcb;
@@ -82,6 +68,20 @@ test('Testing pagination component', async () => {
     border: none;
     padding-left: 0.25rem;
     padding-right: 0.25rem
+}
+.pagination .item:hover .link {
+    background-color: #eeeeee
+}
+.pagination .item.disabled .link {
+    pointer-events: none;
+    background-color: #eeeeee;
+    color: #4a5568
+}
+.pagination .item.active .link {
+    pointer-events: none;
+    border-color: #4890eb;
+    background-color: #4c9bff;
+    color: #fff
 }`
   await execute(input, output, {log: false, file: './examples/pagination/pagination.css'})
 })

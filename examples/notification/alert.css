@@ -8,6 +8,16 @@
     padding: 1rem;
     color: #5c5b5b
 }
+.alertSuccess {
+    border-color: #008200;
+    background-color: #79ec79;
+    color: #2d5a2d
+}
+.alertError {
+    border-color: #c10202;
+    background-color: #f9a1a1;
+    color: #5c3939
+}
 .alertContent {
     flex-grow: 1
 }
@@ -19,14 +29,4 @@
 }
 .alertAction {
     cursor: pointer
-}
-.alertSuccess {
-    border-color: #008200;
-    background-color: #79ec79;
-    color: #2d5a2d
-}
-.alertError {
-    border-color: #c10202;
-    background-color: #f9a1a1;
-    color: #5c3939
 }

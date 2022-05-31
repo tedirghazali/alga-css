@@ -36,7 +36,7 @@ test('Testing picker or dropdown component', async () => {
     z-index: 6;
     top: 2.5rem;
     left: 0;
-    width: 240px;
+    min-width: 240px;
     background-color: #fff;
     border: 1px solid #d9d9d9;
     display: none

@@ -14,6 +14,16 @@ test('Testing alert component', async () => {
     padding: 1rem;
     color: #5c5b5b
 }
+.alertSuccess {
+    border-color: #008200;
+    background-color: #79ec79;
+    color: #2d5a2d
+}
+.alertError {
+    border-color: #c10202;
+    background-color: #f9a1a1;
+    color: #5c3939
+}
 .alertContent {
     flex-grow: 1
 }
@@ -25,16 +35,6 @@ test('Testing alert component', async () => {
 }
 .alertAction {
     cursor: pointer
-}
-.alertSuccess {
-    border-color: #008200;
-    background-color: #79ec79;
-    color: #2d5a2d
-}
-.alertError {
-    border-color: #c10202;
-    background-color: #f9a1a1;
-    color: #5c3939
 }`
   await execute(input, output, {log: false, file: './examples/notification/alert.css'})
 })

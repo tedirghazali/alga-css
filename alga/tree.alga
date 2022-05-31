@@ -1,0 +1,31 @@
+@alga tree {
+  .tree {
+    ref: display-flex flexWrap-wrap paddingLeft-0 margin-0 listStyle-none flexDirection-column;
+    
+    & > &Item {
+      ref-padding: 0.25rem 0 0.25rem 1rem;
+      
+      & > .treeLink {
+        ref: display-block borderRadius-0.25rem color-hex4a5568 textDecoration-none;
+        ref-padding: 0.675rem 1rem;
+        ref-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+      }
+    }
+     
+    & > &Item > & {
+      ref: display-none;
+    }
+    
+    & > &Item.active > &Link {
+      ref: fontWeight-bold backgroundColor-hexf6f8f9;
+    }
+    
+    & > &Item.active > & {
+      ref: display-flex;
+    }
+      
+    & > &Item:hover > &Link {
+      ref: fontWeight-bold backgroundColor-hexd2f4ea;
+    }
+  }
+}

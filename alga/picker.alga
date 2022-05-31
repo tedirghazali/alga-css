@@ -32,7 +32,7 @@
   }
    
   .pickerBody, .pickerMenu {
-    ref: position-absolute zIndex-6 top-2.5rem left-0 width-240px backgroundColor-hexfff border-1px_solid_hexd9d9d9 display-none;
+    ref: position-absolute zIndex-6 top-2.5rem left-0 minWidth-240px backgroundColor-hexfff border-1px_solid_hexd9d9d9 display-none;
   }
     
   .pickerBody {
