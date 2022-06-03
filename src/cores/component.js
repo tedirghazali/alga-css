@@ -18,7 +18,7 @@ function readPath(rp, opts) {
   component[componentName]['modules'] = {}
   component[componentName]['inits'] = []
   
-  const root = postcss.parse(data)
+  const root = postcss.parse(data.replaceAll(/\{(\w+)\.(\w+)\}/g, '$1($2)'))
   for(let rnode of root.nodes) {
     // Convert define into property
     if(rnode.type === 'atrule' && rnode.name === 'import') {
@@ -88,7 +88,11 @@ function readPath(rp, opts) {
       }
       component[componentName]['provide'] = Object.assign({}, component[componentName]['provide'], defineObj)
     } else if(rnode.type === 'atrule' && rnode.name === 'alga' && 'nodes' in rnode) {
-      const param = rnode.params.trim()
+      let param = rnode.params.trim()
+      if(param.startsWith('refs(') || param.startsWith('props(')) {
+        const arrowParams = param.split(/\(|\)/g)
+        param = component[componentName][arrowParams[0]][arrowParams[1]]
+      }
       let defineObj = {}
       defineObj['header'] = {}
       defineObj['body'] = []
@@ -98,7 +102,30 @@ function readPath(rp, opts) {
         const randId = randomChar(index, 6)
         defineObj['content'][randId] = []
         if(dnode.type === 'atrule' && dnode.name === 'use') {
-          defineObj['content'][randId].push(component[componentName]['modules'][dnode.params.trim()])
+          if('params' in dnode && dnode.params !== '') {
+            component[componentName]['refs'] = Object.assign({}, component[componentName]['refs'], component[componentName]['modules'][dnode.params.trim()]['refs'])
+            component[componentName]['props'] = Object.assign({}, component[componentName]['props'], component[componentName]['modules'][dnode.params.trim()]['props'])
+            component[componentName]['provide'] = Object.assign({}, component[componentName]['provide'], component[componentName]['modules'][dnode.params.trim()]['provide'])
+            defineObj['content'][randId].push(component[componentName]['modules'][dnode.params.trim()][dnode.params.trim()]['body'])
+          }
+        } else if(dnode.type === 'atrule' && dnode.name === 'keyframes') {
+          if('nodes' in dnode) {
+            let paramDnode = dnode.params.trim()
+            if(paramDnode.startsWith('refs(') || paramDnode.startsWith('props(')) {
+              const arrowDnodeParams = paramDnode.split(/\(|\)/g)
+              paramDnode = component[componentName][arrowDnodeParams[0]][arrowDnodeParams[1]]
+            }
+            let keyframeDefineObj = {}
+            keyframeDefineObj['@keyframes '+paramDnode] = []
+            for(let kfnode of dnode.nodes) {
+              let keyframeRecursiveDefineObj = recursive(kfnode, {
+                'provide': component[componentName]['provide']
+              })
+              keyframeDefineObj['@keyframes '+paramDnode].push(keyframeRecursiveDefineObj.body)
+            }
+            keyframeDefineObj['@keyframes '+paramDnode] = keyframeDefineObj['@keyframes '+paramDnode].flat()
+            defineObj['content'][randId].push(keyframeDefineObj)
+          }
         } else if(dnode.type === 'atrule' && dnode.name === 'if') {
           if('nodes' in dnode) {
             let ifDefineObj = {}

@@ -1,0 +1,28 @@
+@define refs {
+  name: bounce;
+}
+
+@define props {
+  duration: 0.5s;
+}
+
+@alga {refs.name} {
+  .{refs.name}-enter-active {
+    ref-animation: {refs.name} {props.duration};
+  }
+  .{refs.name}-leave-active {
+    ref-animation: {refs.name} {props.duration} reverse;
+  }
+  
+  @keyframes {refs.name} {
+    0% {
+      ref-transform: scale(0);
+    }
+    50% {
+      ref-transform: scale(1.25);
+    }
+    100% {
+      ref-transform: scale(1);
+    }
+  }
+}

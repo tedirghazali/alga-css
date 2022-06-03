@@ -1,0 +1,24 @@
+@define refs {
+  name: fade;
+}
+
+@define props {
+  duration: 0.5s
+}
+
+@alga {refs.name} {
+  .{refs.name}-enter-active,
+  .{refs.name}-leave-active {
+    ref-transition: opacity {props.duration} ease;
+  }
+
+  .{refs.name}-enter-from,
+  .{refs.name}-leave-to {
+    ref: opacity-0;
+  }
+
+  .{refs.name}-enter-to,
+  .{refs.name}-leave-from {
+    ref: opacity-1;
+  }
+}

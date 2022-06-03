@@ -62,7 +62,13 @@ function algacss(options) {
           }
           newNodes = [
             ...newNodes, 
-            ...declaration(config.components[param][name]['body'], config.components[param]['props'], config.components[param]['provide'], {
+            ...declaration(config.components[param][name]['body'],
+            {
+              refs: config.components[param]['refs'],
+              props: config.components[param]['props'], 
+              provide: config.components[param]['provide']
+            },
+            {
               screen: config.screen,
               state: config.state, 
               prefers: config.prefers
@@ -98,7 +104,13 @@ function algacss(options) {
           }
           newPackNodes.push([
             ...newNodes, 
-            ...declaration(config.components[param][name]['body'], config.components[param]['props'], config.components[param]['provide'], {
+            ...declaration(config.components[param][name]['body'],
+            {
+              refs: config.components[param]['refs'],
+              props: config.components[param]['props'], 
+              provide: config.components[param]['provide']
+            },
+            {
               screen: config.screen,
               state: config.state, 
               prefers: config.prefers
