@@ -13,7 +13,7 @@ module.exports = (ref, opts) => {
     }
     
     if(Object.keys(opts.state).includes(refs[0])) {
-      const newRule = postcss.rule({ selector: '.'+ref.replaceAll(':', '\\:').replaceAll('.', '\\.').replaceAll('/', '\\/')+''+opts.state[refs[0]].state })
+      const newRule = postcss.rule({ selector: '.'+ref.replaceAll(':', '\\:').replaceAll('.', '\\.').replaceAll('/', '\\/').replaceAll('(', '\\(').replaceAll(')', '\\)')+''+opts.state[refs[0]].state })
       const declVal = postcss.decl({ prop: camelDash(refs[1]), value: value(refs[2]) })
       newRule.append(declVal)
       
@@ -25,7 +25,7 @@ module.exports = (ref, opts) => {
       refs[0] = opts.preset[refs[0]]
     }
     
-    const newRule = postcss.rule({ selector: '.'+ref.replaceAll('.', '\\.').replaceAll('/', '\\/') })
+    const newRule = postcss.rule({ selector: '.'+ref.replaceAll('.', '\\.').replaceAll('/', '\\/').replaceAll('(', '\\(').replaceAll(')', '\\)') })
     const declVal = postcss.decl({ prop: camelDash(refs[0]), value: value(refs[1]) })
     newRule.append(declVal)
     
