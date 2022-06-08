@@ -12,8 +12,12 @@ module.exports = (ref, opt = {}) => {
       if('preset' in opt && Object.keys(opt.preset).includes(props[0])) {
         props[0] = opt.preset[props[0]]
       }
+      const refOpt = {
+        ...opt,
+        property: props[0]
+      }
       const refObj = {}
-      refObj[camelDash(props[0])] = value(props[1])
+      refObj[camelDash(props[0])] = value(props[1], refOpt)
       
       references = Object.assign({}, references, refObj)
     }

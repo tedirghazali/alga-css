@@ -36,12 +36,17 @@ function readPath(rp, opts) {
     // Get all provide and set a new property under provide
     } else if(rnode.type === 'atrule' && rnode.name === 'provide' && 'nodes' in rnode) {
       const param = rnode.params.trim()
+      const refOpt = {
+        ...opts,
+        refs: component[componentName]['refs'] || {},
+        props: component[componentName]['props'] || {}
+      }
       const defineObj = {}
       defineObj[param] = {}
       for(let dnode of rnode.nodes) {
         // Extracting content of provide
         if(dnode.type === 'decl' && dnode.prop === 'ref') {
-          defineObj[param] = Object.assign({}, defineObj[param], reference(dnode.value))
+          defineObj[param] = Object.assign({}, defineObj[param], reference(dnode.value, refOpt))
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('ref-')) {
           let splitRefs = dnode.prop.split('-')[1]
           let splitRefsObj = {}
@@ -54,19 +59,19 @@ function readPath(rp, opts) {
           defineObj[param] = Object.assign({}, defineObj[param], splitPropsObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('screen-')) {
           let screenObj = {}
-          screenObj[dnode.prop] = Object.assign({}, screenObj[dnode.prop], reference(dnode.value))
+          screenObj[dnode.prop] = Object.assign({}, screenObj[dnode.prop], reference(dnode.value, refOpt))
           defineObj[param] = Object.assign({}, defineObj[param], screenObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('state-')) {
           let stateObj = {}
-          stateObj[dnode.prop] = Object.assign({}, stateObj[dnode.prop], reference(dnode.value))
+          stateObj[dnode.prop] = Object.assign({}, stateObj[dnode.prop], reference(dnode.value, refOpt))
           defineObj[param] = Object.assign({}, defineObj[param], stateObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('prefers-')) {
           let prefersObj = {}
-          prefersObj[dnode.prop] = Object.assign({}, prefersObj[dnode.prop], reference(dnode.value))
+          prefersObj[dnode.prop] = Object.assign({}, prefersObj[dnode.prop], reference(dnode.value, refOpt))
           defineObj[param] = Object.assign({}, defineObj[param], prefersObj)
         } else if(dnode.type === 'decl' && dnode.prop.startsWith('if-')) {
           let conditionalObj = {}
-          conditionalObj[dnode.prop] = Object.assign({}, conditionalObj[dnode.prop], reference(dnode.value))
+          conditionalObj[dnode.prop] = Object.assign({}, conditionalObj[dnode.prop], reference(dnode.value, refOpt))
           defineObj[param] = Object.assign({}, defineObj[param], conditionalObj)
         } else if(dnode.type === 'atrule' && dnode.name === 'if' && 'nodes' in dnode) {
           const paramConditional = node.params.split('in')
@@ -75,7 +80,7 @@ function readPath(rp, opts) {
           let conditionalObj = {}
           for(let condVal of dnode.nodes) {
             if(condVal.type === 'decl' && condVal.prop === 'ref') {
-              conditionalObj['if-'+propsConditional+'-'+valueConditional] = Object.assign({}, conditionalObj['if-'+propsConditional+'-'+valueConditional], reference(condVal))
+              conditionalObj['if-'+propsConditional+'-'+valueConditional] = Object.assign({}, conditionalObj['if-'+propsConditional+'-'+valueConditional], reference(condVal, refOpt))
             } else if(condVal.type === 'decl' && condVal.prop.startsWith('ref-')) {
               let splitRefs = condVal.prop.split('-')[1]
               let splitRefsObj = {}

@@ -4,13 +4,17 @@
   }
   
   body {
-    ref: margin-0px padding-0px;
+    ref: margin-0px padding-0px fontSize-1rem fontWeight-400 lineHeight-1.5 color-hex15181c;
     ref-fontFamily: 'Calibri', Arial;
   }
   
   .h1, .h2, .h3, .h4, .h5, .h6, 
   h1, h2, h3, h4, h5, h6 {
-    ref: marginTop-0px marginBottom-0.5rem fontWeight-500 lineHeight-1.2;
+    ref: marginTop-0.5rem marginBottom-0.5rem fontWeight-500 lineHeight-1.2;
+  }
+  
+  .p, p {
+    ref: marginTop-0.5rem marginBottom-0.5rem;
   }
   
   .mark, mark {

@@ -3,11 +3,15 @@ const values = require('../configs/values.js')
 const units = require('../configs/units.js')
 const specialValues = ['currentColor']
 
-module.exports = (value) => {
+module.exports = (value, opt = {}) => {
   let newValue = value.replaceAll('_', ' ')
   const newUnits = [...units.length, ...units.angle, ...units.time, ...units.resolution]
   if(Object.keys(values).includes(newValue.trim())) {
     newValue = values[newValue.trim()]
+  }
+  if(newValue.startsWith('refs(') || newValue.startsWith('props(')) {
+    const splitValues = newValue.split(/\(|\)/g)
+    newValue = opt[splitValues[0]][splitValues[1]] || newValue
   }
   if(!specialValues.includes(newValue)) {
     newValue = camelDash(newValue)

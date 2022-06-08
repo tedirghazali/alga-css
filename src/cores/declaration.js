@@ -53,7 +53,7 @@ const declaration = (body, defs, opts) => {
                           .split('<=>').map(i => {
           if(i.startsWith('refs===') || i.startsWith('props===')) {
             const arrowValues = i.split('===')
-            i = defs[arrowValues[0]][arrowValues[1]]
+            i = defs[arrowValues[0]][arrowValues[1]] || `${arrowValues[0]}-${arrowValues[1]}`
           }
           return i
         }).filter(i => i !== '').join('')
@@ -85,7 +85,7 @@ const declaration = (body, defs, opts) => {
               declVal = postcss.decl({ prop: key.trim(), value: val.split(' ').map(i => {
                 if(i.startsWith('refs(') || i.startsWith('props(')) {
                   const arrowValues = i.split(/\(|\)/g)
-                  i = defs[arrowValues[0]][arrowValues[1]]
+                  i = defs[arrowValues[0]][arrowValues[1]] || i
                 }
                 return i
               }).join(' ').trim() })
@@ -130,7 +130,7 @@ const declaration = (body, defs, opts) => {
                             .split('<=>').map(i => {
             if(i.startsWith('refs===') || i.startsWith('props===')) {
               const arrowValues = i.split('===')
-              i = defs[arrowValues[0]][arrowValues[1]]
+              i = defs[arrowValues[0]][arrowValues[1]] || `${arrowValues[0]}-${arrowValues[1]}`
             }
             return i
           }).filter(i => i !== '').join('')
@@ -145,7 +145,7 @@ const declaration = (body, defs, opts) => {
               declVal = postcss.decl({ prop: key.trim(), value: val.split(' ').map(i => {
                 if(i.startsWith('refs(') || i.startsWith('props(')) {
                   const arrowValues = i.split(/\(|\)/g)
-                  i = defs[arrowValues[0]][arrowValues[1]]
+                  i = defs[arrowValues[0]][arrowValues[1]] || i
                 }
                 return i
               }).join(' ').trim() })
