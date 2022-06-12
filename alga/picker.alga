@@ -77,7 +77,7 @@
   
   .suggestion .pickerMenu,
   .fill .pickerBody {
-    ref: width-100pct;
+    ref: width-100pct minWidth-auto;
   }
   
   .pickerEnd .pickerBody,

@@ -81,7 +81,8 @@ test('Testing picker or dropdown component', async () => {
     max-height: calc(10 * 42px)
 }
 .suggestion .pickerMenu, .fill .pickerBody {
-    width: 100%
+    width: 100%;
+    min-width: auto
 }
 .pickerEnd .pickerBody, .pickerEnd .pickerMenu {
     right: 0;
