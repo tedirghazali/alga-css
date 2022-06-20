@@ -16,6 +16,7 @@ module.exports = (ref, opt = {}) => {
         ...opt,
         property: props[0]
       }
+      
       const refObj = {}
       refObj[camelDash(props[0])] = value(props[1], refOpt)
       

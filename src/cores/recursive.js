@@ -11,7 +11,7 @@ function recursiveFunc(root, prm, opt = {}) {
   if('nodes' in root && Array.isArray(root.nodes) && root.nodes.length >= 1) {
     for(let node of root.nodes) {
       if(node.type === 'decl' && node.prop === 'ref') {
-        recursiveObj[param] = Object.assign({}, recursiveObj[param], reference(node.value))
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], reference(node.value, opt))
       } else if(node.type === 'decl' && node.prop.startsWith('ref-')) {
         let splitRefs = node.prop.split('-')[1]
         let splitRefsObj = {}
@@ -30,19 +30,19 @@ function recursiveFunc(root, prm, opt = {}) {
         recursiveObj[param] = Object.assign({}, recursiveObj[param], injectPropsObj)
       } else if(node.type === 'decl' && node.prop.startsWith('screen-')) {
         let screenObj = {}
-        screenObj[node.prop] = Object.assign({}, screenObj[node.prop], reference(node.value))
+        screenObj[node.prop] = Object.assign({}, screenObj[node.prop], reference(node.value, opt))
         recursiveObj[param] = Object.assign({}, recursiveObj[param], screenObj)
       } else if(node.type === 'decl' && node.prop.startsWith('state-')) {
         let stateObj = {}
-        stateObj[node.prop] = Object.assign({}, stateObj[node.prop], reference(node.value))
+        stateObj[node.prop] = Object.assign({}, stateObj[node.prop], reference(node.value, opt))
         recursiveObj[param] = Object.assign({}, recursiveObj[param], stateObj)
       } else if(node.type === 'decl' && node.prop.startsWith('prefers-')) {
         let prefersObj = {}
-        prefersObj[node.prop] = Object.assign({}, prefersObj[node.prop], reference(node.value))
+        prefersObj[node.prop] = Object.assign({}, prefersObj[node.prop], reference(node.value, opt))
         recursiveObj[param] = Object.assign({}, recursiveObj[param], prefersObj)
       } else if(node.type === 'decl' && node.prop.startsWith('if-')) {
         let conditionalObj = {}
-        conditionalObj[node.prop] = Object.assign({}, conditionalObj[node.prop], reference(node.value))
+        conditionalObj[node.prop] = Object.assign({}, conditionalObj[node.prop], reference(node.value, opt))
         recursiveObj[param] = Object.assign({}, recursiveObj[param], conditionalObj)
       } else if(node.type === 'atrule' && node.name === 'if' && 'nodes' in node) {
         const paramConditional = node.params.split('in')
@@ -51,7 +51,7 @@ function recursiveFunc(root, prm, opt = {}) {
         let conditionalObj = {}
         for(let condVal of node.nodes) {
           if(condVal.type === 'decl' && condVal.prop === 'ref') {
-            conditionalObj['if-'+propsConditional+'-'+valueConditional] = Object.assign({}, conditionalObj['if-'+propsConditional+'-'+valueConditional], reference(condVal))
+            conditionalObj['if-'+propsConditional+'-'+valueConditional] = Object.assign({}, conditionalObj['if-'+propsConditional+'-'+valueConditional], reference(condVal, opt))
           } else if(condVal.type === 'decl' && condVal.prop.startsWith('ref-')) {
             let splitRefs = condVal.prop.split('-')[1]
             let splitRefsObj = {}

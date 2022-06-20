@@ -9,6 +9,15 @@ module.exports = (value, opt = {}) => {
   if(Object.keys(values).includes(newValue.trim())) {
     newValue = values[newValue.trim()]
   }
+  if(newValue.startsWith('calc(')) {
+    newValue = newValue.split('_').map(item => {
+      if(item.startsWith('refs(') || item.startsWith('props(')) {
+        const splitValues = item.split(/\(|\)/g)
+        item = opt[splitValues[0]][camelDash(splitValues[1])] || item
+      }
+      return item
+    }).join('')
+  }
   if(newValue.startsWith('refs(') || newValue.startsWith('props(')) {
     const splitValues = newValue.split(/\(|\)/g)
     newValue = opt[splitValues[0]][splitValues[1]] || newValue

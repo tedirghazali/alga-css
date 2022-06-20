@@ -17,21 +17,19 @@
   ref: paddingRight-0;
 }
 
-@alga navBarMenu {};
-@alga navMenu {};
-
 @alga navBar {
   .navBar {
     ref: position-relative zIndex-4;
-    props-paddingTop: size-y;
-    props-paddingBottom: size-y;
-    props-backgroundColor: bg-color;
-    props-boxShadow: shadow;
+    ref-paddingTop: {props.size-y};
+    ref-paddingBottom: {props.size-y};
+    ref-backgroundColor: {props.bg-color};
+    ref-boxShadow: {props.shadow};
     
     .navWrap {
       ref: display-flex flexDirection-row flexWrap-nowrap alignItems-center justifyContent-spaceBetween;
-      props-paddingRight: size-x;
-      props-paddingLeft: size-x;
+      ref-paddingRight: {props.size-x};
+      ref-paddingLeft: {props.size-x};
+      screen-ss: position-relative;
       
       .navStart {
         ref: display-flex justifyContent-flexStart flexWrap-nowrap alignItems-center maxWidth-240px;
@@ -69,23 +67,38 @@
       
       .navEnd {
         ref: display-flex justifyContent-spaceBetween flexWrap-nowrap alignItems-center flexGrow-1 paddingLeft-0.75rem;
-        screen-ss: display-none;
+        screen-ss: display-none position-absolute width-auto right-10px border-1px_solid_hexcac7c7 flexDirection-column borderRadius-5px padding-0.5rem_0px backgroundColor-hexfff minWidth-240px top-calc(_{props.sizeY}_*2+26px);
         
         .navMenu {
           ref: display-flex justifyContent-flexStart flexWrap-nowrap alignItems-center;
-          screen-ss: display-none;
+          screen-ss: display-none flexDirection-column minWidth-inherit;
           
           .navItem {
             inject: navItem;
+            screen-ss: padding-0.5rem_0.75rem minWidth-inherit;
+            
+            &:hover {
+              screen-ss: backgroundColor-hexcac7c7;
+            }
           }
           
           .navItem:first-child {
             inject: navItemFirstChild;
+            screen-ss: padding-0.5rem_0.75rem minWidth-inherit;
           }
           
           .navItem:last-child {
             inject: navItemLastChild;
+            screen-ss: padding-0.5rem_0.75rem minWidth-inherit;
           }
+          
+          &.active {
+            screen-ss: display-flex;
+          }
+        }
+        
+        &.active {
+          screen-ss: display-flex;
         }
       }
     }

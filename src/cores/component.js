@@ -18,7 +18,7 @@ function readPath(rp, opts) {
   component[componentName]['modules'] = {}
   component[componentName]['inits'] = []
   
-  const root = postcss.parse(data.replaceAll(/\{(\w+)\.(\w+)\}/g, '$1($2)'))
+  const root = postcss.parse(data.replaceAll(/\{([A-Za-z0-9\-\_]+)\.([A-Za-z0-9\-\_]+)\}/g, '$1($2)')) /* (\w+) */
   for(let rnode of root.nodes) {
     // Convert define into property
     if(rnode.type === 'atrule' && rnode.name === 'import') {
@@ -93,6 +93,12 @@ function readPath(rp, opts) {
       }
       component[componentName]['provide'] = Object.assign({}, component[componentName]['provide'], defineObj)
     } else if(rnode.type === 'atrule' && rnode.name === 'alga' && 'nodes' in rnode) {
+      const refOpt = {
+        ...opts,
+        refs: component[componentName]['refs'] || {},
+        props: component[componentName]['props'] || {}
+      }
+          
       let param = rnode.params.trim()
       if(param.startsWith('refs(') || param.startsWith('props(')) {
         const arrowParams = param.split(/\(|\)/g)
@@ -137,6 +143,7 @@ function readPath(rp, opts) {
             ifDefineObj['@if '+dnode.params.trim()] = []
             for(let ifnode of dnode.nodes) {
               let ifRecursiveDefineObj = recursive(ifnode, {
+                ...refOpt,
                 'provide': component[componentName]['provide']
               })
               ifDefineObj['@if '+dnode.params.trim()].push(ifRecursiveDefineObj.body)
@@ -146,6 +153,7 @@ function readPath(rp, opts) {
           }
         } else {
           let recursiveDefineObj = recursive(dnode, {
+            ...refOpt,
             'provide': component[componentName]['provide']
           })
           defineObj['content'][randId].push(recursiveDefineObj.body)

@@ -109,7 +109,9 @@ const declaration = (body, defs, opts) => {
         }
       }
       
-      ruleArray.push(newRule)
+      if(newRule.nodes.length >= 1) {
+        ruleArray.push(newRule)
+      }
     }
   }
   

@@ -58,7 +58,6 @@
 .navBar .navWrap .navStart .navToggler:last-child {
     padding-right: 0
 }
-.navBar .navWrap .navStart .navToggler.navMobile {}
 .navBar .navWrap .navEnd {
     display: flex;
     justify-content: space-between;
@@ -88,15 +87,51 @@
     padding-right: 0
 }
 @media (max-width: 599px) {
+    .navBar .navWrap {
+        position: relative
+    }
     .navBar .navWrap .navStart {
         width: 100%;
         max-width: 100%
     }
     .navBar .navWrap .navEnd {
-        display: none
+        display: none;
+        position: absolute;
+        width: auto;
+        right: 10px;
+        border: 1px solid #cac7c7;
+        flex-direction: column;
+        border-radius: 5px;
+        padding: 0.5rem 0px;
+        background-color: #fff;
+        min-width: 240px;
+        top: calc( 0.75rem *2+26px)
     }
     .navBar .navWrap .navEnd .navMenu {
-        display: none
+        display: none;
+        flex-direction: column;
+        min-width: inherit
+    }
+    .navBar .navWrap .navEnd .navMenu .navItem {
+        padding: 0.5rem 0.75rem;
+        min-width: inherit
+    }
+    .navBar .navWrap .navEnd .navMenu .navItem:hover {
+        background-color: #cac7c7
+    }
+    .navBar .navWrap .navEnd .navMenu .navItem:first-child {
+        padding: 0.5rem 0.75rem;
+        min-width: inherit
+    }
+    .navBar .navWrap .navEnd .navMenu .navItem:last-child {
+        padding: 0.5rem 0.75rem;
+        min-width: inherit
+    }
+    .navBar .navWrap .navEnd .navMenu.active {
+        display: flex
+    }
+    .navBar .navWrap .navEnd.active {
+        display: flex
     }
 }
 @media (min-width: 600px) {
