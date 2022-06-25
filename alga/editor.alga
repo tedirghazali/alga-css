@@ -1,0 +1,97 @@
+@provide bar {
+  ref: display-flex justifyContent-spaceBetween alignItems-center flexWrap-wrap;
+  ref: padding-0.5rem_0.5rem backgroundColor-hexfff;
+}
+
+@provide block {
+  ref: position-relative display-flex flexDirection-column border-1px_solid_hexd9d9d9;
+  ref: borderRadius-0.25rem boxShadow-1px_1px_4px_hexd9d9d9 zIndex-5;
+}
+
+@alga editor {
+  .editor {
+    ref: width-100pct backgroundColor-hexfff backgroundClip-borderBox wordWrap-breakWord;
+      
+    & > *:first-child {
+      ref: borderTopRightRadius-0.25rem borderTopLeftRadius-0.25rem;
+    }
+      
+    & > *:last-child {
+      ref: borderBottomRightRadius-0.25rem borderBottomLeftRadius-0.25rem;
+    }
+  }
+  
+  .editorToolbar {
+    ref: borderBottom-1px_solid_hexd9d9d9;
+    inject: bar;
+  }
+    
+  .editorStatusbar {
+    ref: borderTop-1px_solid_hexd9d9d9;
+    inject: bar;
+  }
+    
+  .editorContent {
+    ref: flex-1_1_auto padding-1rem_0.75rem outline-0 display-block position-relative;
+  }
+    
+  .editorMenu {
+    ref: display-flex paddingLeft-0 margin-0 listStyle-none gap-5px;
+  }
+    
+  .editorItem {
+    ref: display-block padding-0.25rem_0.25rem borderRadius-0.25rem color-hex4a5568;
+    ref: textDecoration-none cursor-default;
+    ref-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    
+    &.active {
+      ref: backgroundColor-hexe7eefa border-1px_solid_hexb8e7fd;
+    }
+  }
+     
+  .editorText {
+    inject: block;
+  }
+    
+  .editorTooltip {
+    ref: position-relative display-flex flexDirection-column;
+  }
+  
+  .editorSection {
+    ref: borderTopLeftRadius-0px;
+    
+    .editorBlock {
+      inject: block;
+      ref: borderTopLeftRadius-0px marginTop-47px;
+      
+      .editorToolbar {
+        ref: position-absolute top-n37px left-n1px border-1px_solid_hexd9d9d9;
+        ref: borderTopRightRadius-0.25rem borderTopLeftRadius-0.25rem zIndex-4;
+      }
+    }
+  }
+  
+  .editorBackdrop {
+    ref: position-fixed zIndex-25 inset-0_3em_3em_0 width-100vw height-100vh display-none; 
+  }
+    
+  .editorInline {
+    ref: position-relative display-inlineBlock;
+    
+    .editorToolbar {
+      ref: visibility-hidden position-absolute zIndex-30 bottom-n47px left-0px display-inlineBlock;
+      ref: border-1px_solid_hexd9d9d9 borderRadius-0.25rem;
+    }
+    
+    &:hover .editorToolbar {
+      ref: visibility-visible;
+    }
+    
+    .editorToolbar:after {
+      ref-content: "";
+      ref: position-absolute zIndex-29 top-n16px left-20px marginLeft-n10px borderWidth-8px;
+      ref: borderStyle-solid transform-rotate(180deg);
+      ref-border-color: #d9d9d9 transparent transparent transparent;
+    }
+  }
+}

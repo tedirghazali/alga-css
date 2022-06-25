@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Card</title>
+  <link href="editor.css" rel="stylesheet">
+  <style>
+    *, ::after, ::before {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Calibri', Arial;
+    }
+    p {
+      text-align: justify;
+    }
+    .container {
+      width: 1024px;
+      padding: 20px;
+      margin: auto;
+    }
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 10px;
+    }
+    .col {
+      width: 25%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Basic Editor</h1>
+    <div class="editor editorText">
+      <div class="editorToolbar">
+        <ul class="editorMenu">
+          <li class="editorItem active">Bold</li>
+          <li class="editorItem">Italic</li>
+          <li class="editorItem active">Underscore</li>
+        </ul>
+        <ul class="editorMenu">
+          <li class="editorItem">Compose</li>
+          <li class="editorItem">View</li>
+        </ul>
+      </div>
+      <div class="editorContent" contenteditable="true">
+        This is the first content for tooltip
+      </div>
+      <div class="editorStatusbar">
+        <ul class="editorMenu">
+          <li class="editorItem">p &gt; b</li>
+        </ul>
+        <ul class="editorMenu">
+          <li class="editorItem">Total: 2345 word</li>
+        </ul>
+      </div>
+    </div>
+    <h1>Block Editor</h1>
+    <div class="editor editorSection">
+      <div class="editorBlock">
+        <div class="editorToolbar">
+          <span>Paragraph</span>
+        </div>
+        <div class="editorContent" contenteditable="true">
+          This is the first content for tooltip
+        </div>
+      </div>
+    </div>
+    <h1>Tooltip Editor</h1>
+    <div class="editor editorTooltip">
+      <div class="editorBackdrop"></div>
+      <div class="editorContent" contenteditable="true">
+        This is the first
+        <span class="editorInline">
+          <span class="editorToolbar" contenteditable="false">
+            <ul class="editorMenu">
+              <li class="editorItem">Bold</li>
+              <li class="editorItem">Italic</li>
+              <li class="editorItem">Underscore</li>
+            </ul>
+          </span>
+          <span>content yang saya suka</span>
+        </span>
+        for tooltip
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
