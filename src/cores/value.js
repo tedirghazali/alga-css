@@ -1,13 +1,35 @@
 const camelDash = require('../helpers/camelDash.js')
+const lightenDarkenColor = require('../helpers/lightenDarkenColor.js')
 const values = require('../configs/values.js')
 const units = require('../configs/units.js')
+const color = require('../configs/color.js')
 const specialValues = ['currentColor']
 
 module.exports = (value, opt = {}) => {
   let newValue = value.replaceAll('_', ' ')
   const newUnits = [...units.length, ...units.angle, ...units.time, ...units.resolution]
+  const newColor = opt?.color || color
+  
   if(Object.keys(values).includes(newValue.trim())) {
     newValue = values[newValue.trim()]
+  }
+  if(Object.keys(newColor).includes(newValue)) {
+    newValue = newColor[newValue]
+  }
+  if(newValue.startsWith('lighten(') || newValue.startsWith('darken(')) {
+    const splitValues = newValue.split(/\(|\)|\,/g)
+    let colorValue = splitValues[1]
+    let amtValue = splitValues[2]
+    if(colorValue.includes('hex')) {
+      colorValue = colorValue.replaceAll('hex', '')
+    }
+    if(Object.keys(newColor).includes(colorValue)) {
+      colorValue = newColor[colorValue]
+    }
+    if(splitValues[0] === 'darken') {
+      amtValue = '-' + amtValue
+    }
+    newValue = '#'+ lightenDarkenColor(colorValue.replaceAll('#', ''), Number(amtValue))
   }
   if(newValue.startsWith('calc(')) {
     newValue = newValue.split('_').map(item => {
