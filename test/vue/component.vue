@@ -6,5 +6,8 @@
     <span class="md:mb-20px dark:bgColor-hex333 hover:color-green borderTop-none w-33.333333pct">
       Border
     </span>
+    <span class="primary-light-20 bgColor-lighten(006efd,0)">
+      color
+    </span>
   </div>
 </template>

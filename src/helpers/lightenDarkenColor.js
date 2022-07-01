@@ -1,4 +1,3 @@
-// source css-tricks.com
 module.exports = (hex, amt) => {
   let num = parseInt(hex,16);
  
@@ -17,5 +16,12 @@ module.exports = (hex, amt) => {
   if (g > 255) g = 255;
   else if (g < 0) g = 0;
  
-  return (g | (b << 8) | (r << 16)).toString(16);
+  let res = (g | (b << 8) | (r << 16)).toString(16);
+  
+  if(Number(res.length) !== 6) {
+    const newNum = 6 - Number(res.length)
+    res = '0'.repeat(newNum) + res
+  }
+  
+  return res
 }

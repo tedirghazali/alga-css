@@ -26,7 +26,7 @@ module.exports = (ref, opts) => {
     }
   } else { // if(Number(refs.length) === 2)*/
   if(!ref.includes(':')) {
-    const newRule = postcss.rule({ selector: '.'+ref.replaceAll('.', '\\.').replaceAll('/', '\\/').replaceAll('(', '\\(').replaceAll(')', '\\)') })
+    const newRule = postcss.rule({ selector: '.'+ref.replaceAll('.', '\\.').replaceAll(',', '\\,').replaceAll('/', '\\/').replaceAll('(', '\\(').replaceAll(')', '\\)') })
     if(Object.keys(newColor).includes(refs[0])) {
       let newNum = 0
       if(refs[2] || isNaN(refs[1]) === false) {
@@ -36,16 +36,16 @@ module.exports = (ref, opts) => {
       if(refs[1] === 'dark') {
         newValue = `darken(${refs[0]},${newNum})`
       }
-      const bgDeclVal = postcss.decl({ prop: 'background-color', value: value(newValue) })
+      const bgDeclVal = postcss.decl({ prop: 'background-color', value: value(newValue, opts) })
       newRule.append(bgDeclVal)
-      const bdDeclVal = postcss.decl({ prop: 'border-color', value: value(newValue) })
+      const bdDeclVal = postcss.decl({ prop: 'border-color', value: value(newValue, opts) })
       newRule.append(bdDeclVal)
       const fgDeclVal = postcss.decl({ prop: 'color', value: '#fff' })
       newRule.append(fgDeclVal)
     } else if(Object.keys(shorts).includes(refs[0])) {
       const newShorts = shorts[refs[0]]
       for(let newShort of newShorts) {
-        const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[1]) })
+        const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[1], opts) })
         newRule.append(declVal)
       }
     } else {
@@ -54,7 +54,7 @@ module.exports = (ref, opts) => {
         refs[0] = newPreset[refs[0]]
       }
     
-      const declVal = postcss.decl({ prop: camelDash(refs[0]), value: value(refs[1]) })
+      const declVal = postcss.decl({ prop: camelDash(refs[0]), value: value(refs[1], opts) })
       newRule.append(declVal)
     }
     
