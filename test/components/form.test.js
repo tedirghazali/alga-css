@@ -25,10 +25,10 @@ test('Testing form component', async () => {
     border-radius: 0.375rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
 }
-.button[type=button]:hover {
+.button:hover {
     background-color: #e9e9e9
 }
-.button[type=button]:active {
+.button:active {
     border-color: #bbbbbb;
     background-color: #bfbfbf
 }`
