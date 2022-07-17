@@ -48,6 +48,9 @@ function algacss(options) {
       root.walkAtRules('use', rule => {
         let param = rule.params.trim()
         let name = param
+        if(name === 'base') {
+          config.extract = extraction(options?.extract, opts)
+        }
         if(param.includes('.')) {
           const prms = param.split('.')
           param = prms[0].trim()
