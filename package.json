@@ -1,6 +1,6 @@
 {
   "name": "alga-css",
-  "version": "1.0.0-bronze-2",
+  "version": "1.0.0-bronze-3",
   "description": "Alga CSS is a scope-first CSS toolkit for quickly mix or compose CSS references and share CSS properties between components",
   "main": "src/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   "devDependencies": {
     "eslint": "^8.7.0",
     "jest": "^27.4.7",
-    "postcss": "^8.4.5"
+    "postcss": "^8.4.14"
   },
   "dependencies": {
     "glob": "^7.2.0"
