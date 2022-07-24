@@ -15,7 +15,7 @@ module.exports = (ref, opts) => {
   
   const refs = ref.trim().split(/-|:/).filter(i => i !== '')
   
-  if(ref.includes(':') && [...properties, ...Object.keys(newPreset), ...Object.keys(newColor)].includes(refs[1])) { // for state colon like hover or active
+  if(ref.includes(':') && [...properties, ...Object.keys(newPreset), ...Object.keys(newColor), ...Object.keys(shorts)].includes(refs[1])) { // for state colon like hover or active
     /*if('preset' in opts && Object.keys(opts.preset).includes(refs[1])) {
       refs[1] = opts.preset[refs[1]]
     }*/
@@ -41,8 +41,12 @@ module.exports = (ref, opts) => {
         newRule.append(fgDeclVal)
       } else if(Object.keys(shorts).includes(refs[1])) {
         const newShorts = shorts[refs[1]]
+        const refOpt = {
+          ...opts,
+          property: newShorts
+        }
         for(let newShort of newShorts) {
-          const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[2], opts) })
+          const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[2], refOpt) })
           newRule.append(declVal)
         }
       } else {
@@ -50,15 +54,20 @@ module.exports = (ref, opts) => {
         if(Object.keys(newPreset).includes(refs[1])) {
           refs[1] = newPreset[refs[1]]
         }
-      
-        const declVal = postcss.decl({ prop: camelDash(refs[1]), value: value(refs[2], opts) })
+        
+        const refOpt = {
+          ...opts,
+          property: refs[1]
+        }
+        
+        const declVal = postcss.decl({ prop: camelDash(refs[1]), value: value(refs[2], refOpt) })
         newRule.append(declVal)
       }
       
       arr.push(newRule)
     }
   } else { // for class that not have colon
-    if([...properties, ...Object.keys(newPreset)].includes(refs[0])) {
+    if([...properties, ...Object.keys(newPreset), ...Object.keys(newColor), ...Object.keys(shorts)].includes(refs[0])) {
       const newRule = postcss.rule({ selector: '.'+ref.replaceAll('.', '\\.').replaceAll(',', '\\,').replaceAll('/', '\\/').replaceAll('(', '\\(').replaceAll(')', '\\)') })
       if(Object.keys(newColor).includes(refs[0])) {
         let newNum = 0
@@ -77,8 +86,12 @@ module.exports = (ref, opts) => {
         newRule.append(fgDeclVal)
       } else if(Object.keys(shorts).includes(refs[0])) {
         const newShorts = shorts[refs[0]]
+        const refOpt = {
+          ...opts,
+          property: newShorts
+        }
         for(let newShort of newShorts) {
-          const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[1], opts) })
+          const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[1], refOpt) })
           newRule.append(declVal)
         }
       } else {
@@ -86,8 +99,13 @@ module.exports = (ref, opts) => {
         if(Object.keys(newPreset).includes(refs[0])) {
           refs[0] = newPreset[refs[0]]
         }
-      
-        const declVal = postcss.decl({ prop: camelDash(refs[0]), value: value(refs[1], opts) })
+        
+        const refOpt = {
+          ...opts,
+          property: refs[0]
+        }
+        
+        const declVal = postcss.decl({ prop: camelDash(refs[0]), value: value(refs[1], refOpt) })
         newRule.append(declVal)
       }
       

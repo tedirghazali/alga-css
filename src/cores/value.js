@@ -13,8 +13,8 @@ module.exports = (value, opt = {}) => {
   if(Object.keys(values).includes(newValue.trim())) {
     newValue = values[newValue.trim()]
   }
-  if(Object.keys(newColor).includes(newValue)) {
-    newValue = newColor[newValue]
+  else if(Object.keys(newColor).includes(newValue.trim())) {
+    newValue = newColor[newValue.trim()]
   }
   if(newValue.startsWith('lighten(') || newValue.startsWith('darken(')) {
     const splitValues = newValue.split(/\(|\)|\,/g)
@@ -31,7 +31,7 @@ module.exports = (value, opt = {}) => {
     }
     newValue = '#'+ lightenDarkenColor(colorValue.replaceAll('#', ''), Number(amtValue))
   }
-  if(newValue.startsWith('calc(')) {
+  else if(newValue.startsWith('calc(')) {
     newValue = newValue.split('_').map(item => {
       if(item.startsWith('refs(') || item.startsWith('props(')) {
         const splitValues = item.split(/\(|\)/g)
@@ -40,7 +40,7 @@ module.exports = (value, opt = {}) => {
       return item
     }).join('')
   }
-  if(newValue.startsWith('refs(') || newValue.startsWith('props(')) {
+  else if(newValue.startsWith('refs(') || newValue.startsWith('props(')) {
     const splitValues = newValue.split(/\(|\)/g)
     newValue = opt[splitValues[0]][splitValues[1]] || newValue
   }
@@ -65,6 +65,15 @@ module.exports = (value, opt = {}) => {
       }
     }
     newValue = unitVals.join(' ')
+  }
+  else if(isNaN(newValue) === false && opt?.property) {
+    if(['width', 'maxWidth', 'minWidth', 'height', 'maxHeight', 'minHeight', 'top', 'right', 'bottom', 'left'].includes(opt.property)) {
+      newValue = newValue + '%'
+    } else if(['margin', 'marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'padding', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft', 'fontSize'].includes(opt.property)) {
+      newValue = (Number(newValue) * 0.25) + 'rem'
+    } else if(['borderWidth'].includes(opt.property)) {
+      newValue = newValue + 'px'
+    }
   }
   if(newValue.includes('pct')) {
     newValue = newValue.replaceAll('pct', '%')
