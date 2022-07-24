@@ -47,7 +47,20 @@ module.exports = (value, opt = {}) => {
   if(!specialValues.includes(newValue)) {
     newValue = camelDash(newValue)
   }
-  if(/\d+/g.test(newValue)) {
+  if(isNaN(newValue) === false && opt?.property) {
+    if(['width', 'maxWidth', 'minWidth', 'height', 'maxHeight', 'minHeight', 'top', 'right', 'bottom', 'left'].includes(opt.property)) {
+      if(Number(newValue) !== 0) {
+        newValue = newValue + '%'
+      }
+    } else if(['margin', 'marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'padding', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft', 'fontSize'].includes(opt.property)) {
+      if(Number(newValue) !== 0) {
+        newValue = (Number(newValue) * 0.25) + 'rem'
+      }
+    } else if(['borderWidth'].includes(opt.property)) {
+      newValue = newValue + 'px'
+    }
+  }
+  else if(/\d+/g.test(newValue)) {
     const unitVals = []
     for(let newVal of newValue.split(' ')) {
       const splitValByNum = newVal.split(/\d+/g)
@@ -65,15 +78,6 @@ module.exports = (value, opt = {}) => {
       }
     }
     newValue = unitVals.join(' ')
-  }
-  else if(isNaN(newValue) === false && opt?.property) {
-    if(['width', 'maxWidth', 'minWidth', 'height', 'maxHeight', 'minHeight', 'top', 'right', 'bottom', 'left'].includes(opt.property)) {
-      newValue = newValue + '%'
-    } else if(['margin', 'marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'padding', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft', 'fontSize'].includes(opt.property)) {
-      newValue = (Number(newValue) * 0.25) + 'rem'
-    } else if(['borderWidth'].includes(opt.property)) {
-      newValue = newValue + 'px'
-    }
   }
   if(newValue.includes('pct')) {
     newValue = newValue.replaceAll('pct', '%')

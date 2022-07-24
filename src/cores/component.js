@@ -19,7 +19,8 @@ function readPath(rp, opts) {
   component[componentName]['modules'] = {}
   component[componentName]['inits'] = []
   
-  const root = postcss.parse(data.replaceAll(/\{([A-Za-z0-9\-\_]+)\.([A-Za-z0-9\-\_]+)\}/g, '$1($2)'), { from: path.basename(rp) }) /* (\w+) */
+  const root = postcss.parse(data.replaceAll(/\{([A-Za-z0-9\-\_]+)\.([A-Za-z0-9\-\_]+)\}/g, '$1($2)'), { from: path.basename(rp).replace('.alga', '.css') }) /* (\w+) */
+  
   for(let rnode of root.nodes) {
     // Convert define into property
     if(rnode.type === 'atrule' && rnode.name === 'import') {
