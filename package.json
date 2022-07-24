@@ -1,6 +1,6 @@
 {
   "name": "alga-css",
-  "version": "1.0.0-bronze-5",
+  "version": "1.0.0-bronze-6",
   "description": "Alga CSS is a scope-first CSS toolkit for quickly mix or compose CSS references and share CSS properties between components",
   "main": "src/index.js",
   "scripts": {
