@@ -5,7 +5,7 @@ const fs = require('fs')
 module.exports = async function execute(inputArg = 'a {}', outputArg = 'a {}', optionArg = {}) {
   let result = await postcss([
     algacss(optionArg)
-  ]).process(inputArg, { from: undefined })
+  ]).process(inputArg, { from: undefined, map: false })
   if('log' in optionArg && optionArg.log === true) {
     console.log(result.css);
     if('file' in optionArg && typeof optionArg.file === 'string') {
