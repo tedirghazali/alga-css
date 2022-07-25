@@ -71,7 +71,8 @@ test('Testing sideBar component', async () => {
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
     font-size: 1rem;
-    color: #4c4c4c
+    color: inherit;
+    opacity: 0.5
 }
 .sideMenu {
     display: flex;
@@ -83,7 +84,7 @@ test('Testing sideBar component', async () => {
     padding: 0.5rem;
     font-size: 1rem;
     text-decoration: none;
-    color: #2d2d2d;
+    color: inherit;
     white-space: nowrap;
     cursor: pointer
 }
@@ -91,7 +92,7 @@ test('Testing sideBar component', async () => {
     padding: 0.375rem;
     font-size: 1rem;
     text-decoration: none;
-    color: #2d2d2d;
+    color: inherit;
     white-space: nowrap;
     cursor: pointer
 }

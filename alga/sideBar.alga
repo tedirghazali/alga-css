@@ -51,7 +51,7 @@
   }
    
   .sideTitle {
-    ref: marginTop-0.625rem marginBottom-0.625rem fontSize-1rem color-hex4c4c4c;
+    ref: marginTop-0.625rem marginBottom-0.625rem fontSize-1rem color-inherit opacity-0.5;
   }
     
   .sideMenu {
@@ -59,12 +59,12 @@
   }
     
   .sideMenu > .sideItem {
-    ref: padding-0.5rem fontSize-1rem textDecoration-none color-hex2d2d2d whiteSpace-nowrap cursor-pointer;
+    ref: padding-0.5rem fontSize-1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
   }
   
   .sideNav > .navItem,
   .sideNav > .navToggler {
-    ref: padding-0.375rem fontSize-1rem textDecoration-none color-hex2d2d2d whiteSpace-nowrap cursor-pointer;
+    ref: padding-0.375rem fontSize-1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
   }
     
   .sideNav > .navToggler {
