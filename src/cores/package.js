@@ -1,7 +1,6 @@
 const postcss = require('postcss')
 const glob = require('glob')
 const fs = require('fs')
-const path = require('path')
 const screen = require('../configs/screen.js')
 const camelDash = require('../helpers/camelDash.js')
 const reference = require('./reference.js')
@@ -18,7 +17,7 @@ function readPath(rp, opts) {
   component[componentName]['modules'] = {}
   component[componentName]['inits'] = []
   
-  const root = postcss.parse(data, { from: path.basename(rp).replace('.alga', '.css') })
+  const root = postcss.parse(data, { from: rp })
   for(let rnode of root.nodes) {
     // Convert define into property
     if(rnode.type === 'atrule' && rnode.name === 'import') {
