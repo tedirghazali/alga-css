@@ -41,11 +41,11 @@ module.exports = (ref, opts) => {
         newRule.append(fgDeclVal)
       } else if(Object.keys(shorts).includes(refs[1])) {
         const newShorts = shorts[refs[1]]
-        const refOpt = {
-          ...opts,
-          property: newShorts
-        }
         for(let newShort of newShorts) {
+          const refOpt = {
+            ...opts,
+            property: newShort
+          }
           const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[2], refOpt) })
           newRule.append(declVal)
         }
@@ -86,11 +86,11 @@ module.exports = (ref, opts) => {
         newRule.append(fgDeclVal)
       } else if(Object.keys(shorts).includes(refs[0])) {
         const newShorts = shorts[refs[0]]
-        const refOpt = {
-          ...opts,
-          property: newShorts
-        }
         for(let newShort of newShorts) {
+          const refOpt = {
+            ...opts,
+            property: newShort
+          }
           const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[1], refOpt) })
           newRule.append(declVal)
         }

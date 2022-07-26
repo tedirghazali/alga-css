@@ -19,12 +19,12 @@ function algacss(options) {
     prefers: Object.assign({}, prefers, options?.prefers),
     /*color: Object.assign({}, color, options.color),*/
     components: {},
-    extract: []
+    extract: {raws: [], rules: []}
   }
   
   const opts = {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers}
   config.components = component(options?.src, opts)
-  config.extract = extraction(options?.extract, opts)
+  config.extract = extraction(options?.extract, {...opts, extract: config.extract})
   
   if(options?.plugins && Number(options?.plugins.length) >= 1) {
     const newPlugins = options?.plugins.map(item => {
@@ -48,13 +48,13 @@ function algacss(options) {
       root.walkAtRules('extract', rule => {
         let param = rule.params.trim()
         if(param === 'refresh') {
-          config.extract = extraction(options?.extract, opts)
+          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
         }
         else if(param === 'force') {
-          config.extract = extraction(options?.extract, opts)
+          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
           
-          if(config.extract.length >= 1) {
-            root.append(...config.extract)
+          if(config.extract.rules.length >= 1) {
+            root.append(...config.extract.rules)
           }
         }
       })
@@ -63,7 +63,7 @@ function algacss(options) {
         let param = rule.params.trim()
         let name = param
         if(name === 'base') {
-          config.extract = extraction(options?.extract, opts)
+          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
         }
         if(param.includes('.')) {
           const prms = param.split('.')
@@ -97,8 +97,8 @@ function algacss(options) {
         }
       })
       
-      if(config.extract.length >= 1) {
-        root.append(...config.extract)
+      if(config.extract.rules.length >= 1) {
+        root.append(...config.extract.rules)
       }
       
       let newPackNodes = []
