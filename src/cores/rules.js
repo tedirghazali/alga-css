@@ -33,9 +33,9 @@ module.exports = (ref, opts) => {
         if(refs[2] === 'dark') {
           newValue = `darken(${refs[1]},${newNum})`
         }
-        const bgDeclVal = postcss.decl({ prop: 'background-color', value: value(newValue, opts) })
+        const bgDeclVal = postcss.decl({ prop: 'background-color', value: value(newValue, opts) + ' !important' })
         newRule.append(bgDeclVal)
-        const bdDeclVal = postcss.decl({ prop: 'border-color', value: value(newValue, opts) })
+        const bdDeclVal = postcss.decl({ prop: 'border-color', value: value(newValue, opts) + ' !important' })
         newRule.append(bdDeclVal)
         const fgDeclVal = postcss.decl({ prop: 'color', value: '#fff' })
         newRule.append(fgDeclVal)
@@ -46,7 +46,7 @@ module.exports = (ref, opts) => {
             ...opts,
             property: newShort
           }
-          const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[2], refOpt) })
+          const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[2], refOpt) + ' !important' })
           newRule.append(declVal)
         }
       } else {
@@ -60,7 +60,7 @@ module.exports = (ref, opts) => {
           property: refs[1]
         }
         
-        const declVal = postcss.decl({ prop: camelDash(refs[1]), value: value(refs[2], refOpt) })
+        const declVal = postcss.decl({ prop: camelDash(refs[1]), value: value(refs[2], refOpt) + ' !important' })
         newRule.append(declVal)
       }
       
@@ -78,9 +78,9 @@ module.exports = (ref, opts) => {
         if(refs[1] === 'dark') {
           newValue = `darken(${refs[0]},${newNum})`
         }
-        const bgDeclVal = postcss.decl({ prop: 'background-color', value: value(newValue, opts) })
+        const bgDeclVal = postcss.decl({ prop: 'background-color', value: value(newValue, opts) + ' !important' })
         newRule.append(bgDeclVal)
-        const bdDeclVal = postcss.decl({ prop: 'border-color', value: value(newValue, opts) })
+        const bdDeclVal = postcss.decl({ prop: 'border-color', value: value(newValue, opts) + ' !important' })
         newRule.append(bdDeclVal)
         const fgDeclVal = postcss.decl({ prop: 'color', value: '#fff' })
         newRule.append(fgDeclVal)
@@ -91,7 +91,7 @@ module.exports = (ref, opts) => {
             ...opts,
             property: newShort
           }
-          const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[1], refOpt) })
+          const declVal = postcss.decl({ prop: camelDash(newShort), value: value(refs[1], refOpt) + ' !important' })
           newRule.append(declVal)
         }
       } else {
@@ -105,7 +105,7 @@ module.exports = (ref, opts) => {
           property: refs[0]
         }
         
-        const declVal = postcss.decl({ prop: camelDash(refs[0]), value: value(refs[1], refOpt) })
+        const declVal = postcss.decl({ prop: camelDash(refs[0]), value: value(refs[1], refOpt) + ' !important' })
         newRule.append(declVal)
       }
       

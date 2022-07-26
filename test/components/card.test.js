@@ -13,14 +13,13 @@ test('Testing card or box component', async () => {
     background-clip: border-box;
     border: 1px solid #d9d9d9;
     border-radius: 0.25rem;
-    box-shadow: 1px 1px 4px #d9d9d9;
     word-wrap: break-word
 }
-.card *:first-child {
+.card > *:first-child {
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 0.25rem
 }
-.card *:last-child {
+.card > *:last-child {
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem
 }

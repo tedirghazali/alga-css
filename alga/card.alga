@@ -5,14 +5,14 @@
     
   .card, .box {
     ref: width-100pct backgroundColor-hexfff backgroundClip-borderBox border-1px_solid_hexd9d9d9;
-    ref: borderRadius-0.25rem boxShadow-1px_1px_4px_hexd9d9d9 wordWrap-breakWord;
+    ref: borderRadius-0.25rem wordWrap-breakWord;
   }
     
-  .card *:first-child {
+  .card > *:first-child {
     ref: borderTopRightRadius-0.25rem borderTopLeftRadius-0.25rem;
   }
     
-  .card *:last-child {
+  .card > *:last-child {
     ref: borderBottomRightRadius-0.25rem borderBottomLeftRadius-0.25rem;
   }
     

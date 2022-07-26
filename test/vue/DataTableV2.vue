@@ -81,7 +81,7 @@ if('theme' in props && props.theme !== undefined && props.theme !== null) {
 </script>
 
 <template>
-  <div class="dataTable">
+  <div class="dataTable d-flex justify-between">
     <div class="dataTableHeader">
       <div></div>
       <div>

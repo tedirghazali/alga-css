@@ -7,7 +7,7 @@ test('Testing form component', async () => {
   const output = `.label {
     display: block;
     margin-bottom: 0.25rem;
-    color: #283541
+    color: inherit
 }
 .button {
     display: inline-flex;

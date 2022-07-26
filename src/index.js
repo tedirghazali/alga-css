@@ -24,7 +24,6 @@ function algacss(options) {
   
   const opts = {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers}
   config.components = component(options?.src, opts)
-  config.extract = extraction(options?.extract, {...opts, extract: config.extract})
   
   if(options?.plugins && Number(options?.plugins.length) >= 1) {
     const newPlugins = options?.plugins.map(item => {
@@ -47,16 +46,14 @@ function algacss(options) {
     Once (root, {Rule, Declaration, AtRule}) {
       root.walkAtRules('extract', rule => {
         let param = rule.params.trim()
-        if(param === 'refresh') {
+        if(param === 'refresh' || param === 'fresh') {
           config.extract = extraction(options?.extract, {...opts, extract: config.extract})
         }
         else if(param === 'force') {
+          config.extract.raws = []
           config.extract = extraction(options?.extract, {...opts, extract: config.extract})
-          
-          if(config.extract.rules.length >= 1) {
-            root.append(...config.extract.rules)
-          }
         }
+        rule.remove()
       })
     
       root.walkAtRules('use', rule => {
