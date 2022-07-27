@@ -24,6 +24,9 @@ function algacss(options) {
   
   const opts = {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers}
   config.components = component(options?.src, opts)
+  if(options?.initialExtraction) {
+    config.extract = extraction(options?.extract, {...opts, extract: config.extract})
+  }
   
   if(options?.plugins && Number(options?.plugins.length) >= 1) {
     const newPlugins = options?.plugins.map(item => {
@@ -46,7 +49,7 @@ function algacss(options) {
     Once (root, {Rule, Declaration, AtRule}) {
       root.walkAtRules('extract', rule => {
         let param = rule.params.trim()
-        if(param === 'refresh' || param === 'fresh') {
+        if(param === 'refresh' || param === 'reload') {
           config.extract = extraction(options?.extract, {...opts, extract: config.extract})
         }
         else if(param === 'force') {
@@ -59,15 +62,14 @@ function algacss(options) {
       root.walkAtRules('use', rule => {
         let param = rule.params.trim()
         let name = param
-        if(name === 'base') {
-          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
-        }
         if(param.includes('.')) {
           const prms = param.split('.')
           param = prms[0].trim()
           name = prms[1].trim()
         }
         if(config.components[param]) {
+          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
+        
           let newNodes = []
           if(rule?.nodes) {
             for(let node of rule.nodes) {

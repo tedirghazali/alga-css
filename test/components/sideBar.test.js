@@ -40,7 +40,7 @@ test('Testing sideBar component', async () => {
     padding-left: 0.75rem;
     font-size: 1.25rem;
     text-decoration: none;
-    color: #2d2d2d;
+    color: inherit;
     white-space: nowrap;
     margin-right: auto;
     cursor: pointer

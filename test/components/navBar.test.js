@@ -49,8 +49,8 @@ test('Testing navBar component', async () => {
     white-space: nowrap;
     cursor: pointer;
     appearance: none;
-    border: 0;
-    background-color: transparent
+    background: transparent;
+    border: none
 }
 .navBar .navWrap .navStart .navToggler svg, .navBar .navWrap .navStart .navToggler i {
     pointer-events: none;
@@ -82,7 +82,10 @@ test('Testing navBar component', async () => {
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
-    cursor: pointer
+    cursor: pointer;
+    appearance: none;
+    background: transparent;
+    border: none
 }
 .navBar .navWrap .navEnd .navMenu .navItem:first-child {
     padding-left: 0

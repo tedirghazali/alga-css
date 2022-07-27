@@ -6,7 +6,7 @@
 }
 
 @provide navItem {
-  ref: padding-0.75rem fontSize-1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer;
+  ref: padding-0.75rem fontSize-1rem textDecoration-none color-inherit whiteSpace-nowrap cursor-pointer appearance-none background-transparent border-none;
 }
 
 @provide navItemFirstChild {
@@ -45,7 +45,6 @@
         
         .navToggler {
           inject: navItem;
-          ref: appearance-none border-0 backgroundColor-transparent;
           
           svg, i {
             ref: pointerEvents-none display-block;
