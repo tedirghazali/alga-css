@@ -1,8 +1,4 @@
-const execute = require('../execute.js')
-
-test('Testing alert component', async () => {
-  const input = `@use alert;`
-  const output = `.alert {
+.alert {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,6 +147,4 @@ test('Testing alert component', async () => {
     margin: 0;
     color: #595959;
     line-height: 1.5
-}`
-  await execute(input, output, {log: false, file: './examples/alert/alert.css'})
-})
+}

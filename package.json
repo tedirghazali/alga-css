@@ -1,8 +1,8 @@
 {
   "name": "alga-css",
-  "version": "1.0.0-silver-8",
+  "version": "1.0.0-silver-9",
   "description": "Alga CSS is a scope-first CSS toolkit for quickly mix or compose CSS references and share CSS properties between components",
-  "main": "src/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint js"
