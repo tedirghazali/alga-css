@@ -60,6 +60,6 @@ module.exports = (paths, options) => {
   
   return {
     raws: Array.from(new Set([...options.extract.raws, ...extract])),
-    rules: [...newExtract, ...Object.values(newStateExtract)]
+    rules: [...options.extract.rules, ...newExtract, ...Object.values(newStateExtract)]
   }
 }

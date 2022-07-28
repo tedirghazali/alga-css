@@ -99,11 +99,12 @@ const declaration = (body, defs, opts) => {
               screen[splitKey[1]].value[itemKey] = Object.assign({}, screen[splitKey[1]].value[itemKey], val)
               screen[splitKey[1]].status = true
             } else if(Object.keys(state).includes(splitKey[1])) {
-              state[splitKey[1]].value[itemKey] = Object.assign({}, state[splitKey[1]].value[itemKey], val)
+              state[splitKey[1]].value[itemKey] = Object.assign({}, state[splitKey[1]]['value'][itemKey], val)
               state[splitKey[1]].status = true
             } else if(Object.keys(prefers).includes(splitKey[1])) {
-              prefers[splitKey[1]].value[itemKey] = Object.assign({}, prefers[splitKey[1]].value[itemKey], val)
+              prefers[splitKey[1]].value[itemKey] = Object.assign({}, prefers[splitKey[1]]['value'][itemKey], val)
               prefers[splitKey[1]].status = true
+              
             }
           }
         }
@@ -123,6 +124,47 @@ const declaration = (body, defs, opts) => {
       } else {
         newAtRule = postcss.atRule({ name: 'media', params: `(min-width: ${entryVal.size})` })
       }
+      for(let [itemKey, itemValue] of Object.entries(entryVal.value)) {
+        let selectorItemKey = itemKey
+        if(selectorItemKey.includes('refs(') || selectorItemKey.includes('props(')) {
+          selectorItemKey = itemKey
+                            .replaceAll(/refs\((\w+)\)/g, '<=>refs===$1<=>')
+                            .replaceAll(/props\((\w+)\)/g, '<=>props===$1<=>')
+                            .split('<=>').map(i => {
+            if(i.startsWith('refs===') || i.startsWith('props===')) {
+              const arrowValues = i.split('===')
+              i = defs[arrowValues[0]][arrowValues[1]] || `${arrowValues[0]}-${arrowValues[1]}`
+            }
+            return i
+          }).filter(i => i !== '').join('')
+        }
+        const newRule = postcss.rule({ selector: selectorItemKey })
+        for(let [key, val] of Object.entries(itemValue)) {
+          if(typeof val === 'string') {
+            let declVal = undefined
+            if(val.trim().startsWith('{') && val.trim().endsWith('}')) {
+              declVal = postcss.decl({ prop: key.trim(), value: props[val.replace('{', '').replace('}', '').trim()] })
+            } else {
+              declVal = postcss.decl({ prop: key.trim(), value: val.split(' ').map(i => {
+                if(i.startsWith('refs(') || i.startsWith('props(')) {
+                  const arrowValues = i.split(/\(|\)/g)
+                  i = defs[arrowValues[0]][arrowValues[1]] || i
+                }
+                return i
+              }).join(' ').trim() })
+            }
+            newRule.append(declVal)
+          }
+        }
+        newAtRule.append(newRule)
+      }
+      atRuleArray.push(newAtRule)
+    }
+  }
+  
+  for(let [entryKey, entryVal] of Object.entries(prefers)) {
+    if(entryVal.status) {
+      let newAtRule = postcss.atRule({ name: 'media', params: `(${entryVal.media}: ${entryVal.prefers})` })
       for(let [itemKey, itemValue] of Object.entries(entryVal.value)) {
         let selectorItemKey = itemKey
         if(selectorItemKey.includes('refs(') || selectorItemKey.includes('props(')) {

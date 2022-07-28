@@ -7,6 +7,7 @@
     ref: display-flex justifyContent-spaceBetween alignItems-center;
     ref: borderLeft-5px_solid_hexc3c0c0 borderRadius-0.375rem;
     ref: backgroundColor-hexf1ebeb padding-1rem color-hex5c5b5b;
+    prefers-dark: backgroundColor-hex2f2f2f color-hexe2e2e2 borderColor-hexc3c0c0;
     
     .alertContent {
       ref: flexGrow-1;
@@ -36,24 +37,28 @@
   @if type has success {
     .alert.alertSuccess {
       ref: borderColor-hex008200 backgroundColor-hexd4ffd4 color-hex2d5a2d;
+      prefers-dark: backgroundColor-hex2f2f2f color-hexd4ffd4;
     }
   }
   
   @if type has info {
     .alert.alertInfo {
       ref: borderColor-hex0061eb backgroundColor-hexddebff color-hex364150;
+      prefers-dark: backgroundColor-hex2f2f2f color-hexddebff;
     }
   }
   
   @if type has warning {
     .alert.alertWarning {
       ref: borderColor-hexeb8f00 backgroundColor-hexffedd1 color-hex635540;
+      prefers-dark: backgroundColor-hex2f2f2f color-hexffedd1;
     }
   }
   
   @if type has error {
     .alert.alertError {
       ref: borderColor-hexc10202 backgroundColor-hexffeaea color-hex5c3939;
+      prefers-dark: backgroundColor-hex2f2f2f color-hexffeaea;
     }
   }
   
@@ -71,8 +76,9 @@
       ref: position-fixed zIndex-31 padding-1.5rem display-none;
       
       .alertContent {
-        ref: backgroundColor-hexfff width-500px marginRight-auto marginLeft-auto borderRadius-0.375rem;
+        ref: backgroundColor-hexfff color-hex595959 width-500px marginRight-auto marginLeft-auto borderRadius-0.375rem;
         ref-boxShadow: 0 5px 22px 0 rgba(0,0,0,0.2);
+        prefers-dark: backgroundColor-hex2f2f2f color-hexe2e2e2 borderColor-hexe2e2e2;
       }
     }
     &.active .alertDialog {
@@ -123,11 +129,11 @@
     
     .alertTitle {
       ref: marginTop-0 marginBottom-0 lineHeight-1.5 fontSize-27px marginBottom-0.25rem;
-      ref: color-hex595959 fontWeight-600 textAlign-center;
+      ref: color-inherit fontWeight-600 textAlign-center;
     }
     
     .alertText {
-      ref: textAlign-center margin-0 color-hex595959 lineHeight-1.5;
+      ref: textAlign-center margin-0 color-inherit lineHeight-1.5;
     }
   } 
 }

@@ -49,12 +49,20 @@ function algacss(options) {
     Once (root, {Rule, Declaration, AtRule}) {
       root.walkAtRules('extract', rule => {
         let param = rule.params.trim()
-        if(param === 'refresh' || param === 'reload') {
+        if(param === 'refresh') {
+          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
+        }
+        else if(param === 'reload') {
+          config.extract.raws = []
           config.extract = extraction(options?.extract, {...opts, extract: config.extract})
         }
         else if(param === 'force') {
           config.extract.raws = []
           config.extract = extraction(options?.extract, {...opts, extract: config.extract})
+          
+          if(config.extract.rules.length >= 1) {
+            root.append(...config.extract.rules)
+          }
         }
         rule.remove()
       })

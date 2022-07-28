@@ -39,20 +39,44 @@ test('Testing alert component', async () => {
     background-color: #d4ffd4;
     color: #2d5a2d
 }
+@media (prefers-color-scheme: dark) {
+    .alert.alertSuccess {
+        background-color: #2f2f2f;
+        color: #d4ffd4
+    }
+}
 .alert.alertInfo {
     border-color: #0061eb;
     background-color: #ddebff;
     color: #364150
+}
+@media (prefers-color-scheme: dark) {
+    .alert.alertInfo {
+        background-color: #2f2f2f;
+        color: #ddebff
+    }
 }
 .alert.alertWarning {
     border-color: #eb8f00;
     background-color: #ffedd1;
     color: #635540
 }
+@media (prefers-color-scheme: dark) {
+    .alert.alertWarning {
+        background-color: #2f2f2f;
+        color: #ffedd1
+    }
+}
 .alert.alertError {
     border-color: #c10202;
     background-color: #ffeaea;
     color: #5c3939
+}
+@media (prefers-color-scheme: dark) {
+    .alert.alertError {
+        background-color: #2f2f2f;
+        color: #ffeaea
+    }
 }
 .alertModal {
     position: absolute;
@@ -80,6 +104,7 @@ test('Testing alert component', async () => {
 }
 .alertModal .alertDialog .alertContent {
     background-color: #fff;
+    color: #595959;
     width: 500px;
     margin-right: auto;
     margin-left: auto;
@@ -142,15 +167,27 @@ test('Testing alert component', async () => {
     margin-bottom: 0.25rem;
     line-height: 1.5;
     font-size: 27px;
-    color: #595959;
+    color: inherit;
     font-weight: 600;
     text-align: center
 }
 .alertBody .alertText {
     text-align: center;
     margin: 0;
-    color: #595959;
+    color: inherit;
     line-height: 1.5
+}
+@media (prefers-color-scheme: dark) {
+    .alert {
+        background-color: #2f2f2f;
+        color: #e2e2e2;
+        border-color: #c3c0c0
+    }
+    .alertModal .alertDialog .alertContent {
+        background-color: #2f2f2f;
+        color: #e2e2e2;
+        border-color: #e2e2e2
+    }
 }`
   await execute(input, output, {log: false, file: './examples/alert/alert.css'})
 })
