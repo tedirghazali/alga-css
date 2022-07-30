@@ -7,6 +7,6 @@ test('Reading css classes from file', async () => {
     algacss({
       extract: './**/*.vue'
     })
-  ]).process(`@use base;`, { from: undefined })
+  ]).process(`@use helpers;`, { from: undefined })
   console.log(result.css)
 })

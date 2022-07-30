@@ -47,7 +47,7 @@ function algacss(options) {
   
   return {
     Once (root, {Rule, Declaration, AtRule}) {
-      root.walkAtRules('extract', rule => {
+      /*root.walkAtRules('extract', rule => {
         let param = rule.params.trim()
         if(param === 'refresh') {
           config.extract = extraction(options?.extract, {...opts, extract: config.extract})
@@ -65,7 +65,7 @@ function algacss(options) {
           }
         }
         rule.remove()
-      })
+      })*/
     
       root.walkAtRules('use', rule => {
         let param = rule.params.trim()
@@ -75,9 +75,14 @@ function algacss(options) {
           param = prms[0].trim()
           name = prms[1].trim()
         }
-        if(config.components[param]) {
+        if(name === 'helpers') {
           config.extract = extraction(options?.extract, {...opts, extract: config.extract})
-        
+          
+          if(config.extract.rules.length >= 1) {
+            root.append(...config.extract.rules)
+          }
+        }
+        if(config.components[name]) {
           let newNodes = []
           if(rule?.nodes) {
             for(let node of rule.nodes) {
@@ -103,10 +108,6 @@ function algacss(options) {
           rule.remove()
         }
       })
-      
-      if(config.extract.rules.length >= 1) {
-        root.append(...config.extract.rules)
-      }
       
       let newPackNodes = []
       const filterPackNodes = []
