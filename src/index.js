@@ -1,3 +1,4 @@
+const chokidar = require('chokidar');
 // Configs
 const preset = require('./configs/preset.js')
 const screen = require('./configs/screen.js')
@@ -24,9 +25,18 @@ function algacss(options) {
   
   const opts = {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers}
   config.components = component(options?.src, opts)
-  if(options?.initialExtraction) {
+  /*if(options?.initialExtraction) {
     config.extract = extraction(options?.extract, {...opts, extract: config.extract})
-  }
+  }*/
+  
+  const watcher = chokidar.watch(options?.extract, {
+    ignored: new RegExp('(^|[/\])..'),
+    persistent: true
+  });
+  
+  watcher.on('change', path => {
+    config.extract = extraction(path, {...opts, extract: config.extract})
+  });
   
   if(options?.plugins && Number(options?.plugins.length) >= 1) {
     const newPlugins = options?.plugins.map(item => {
@@ -47,26 +57,6 @@ function algacss(options) {
   
   return {
     Once (root, {Rule, Declaration, AtRule}) {
-      /*root.walkAtRules('extract', rule => {
-        let param = rule.params.trim()
-        if(param === 'refresh') {
-          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
-        }
-        else if(param === 'reload') {
-          config.extract.raws = []
-          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
-        }
-        else if(param === 'force') {
-          config.extract.raws = []
-          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
-          
-          if(config.extract.rules.length >= 1) {
-            root.append(...config.extract.rules)
-          }
-        }
-        rule.remove()
-      })*/
-    
       root.walkAtRules('use', rule => {
         let param = rule.params.trim()
         let name = param
@@ -108,6 +98,10 @@ function algacss(options) {
           rule.remove()
         }
       })
+      
+      if(config.extract.rules.length >= 1) {
+        root.append(...config.extract.rules)
+      }
       
       let newPackNodes = []
       const filterPackNodes = []
