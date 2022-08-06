@@ -147,17 +147,21 @@ function readPath(rp, opts) {
         } else if(dnode.type === 'atrule' && dnode.name === 'if') {
           if('nodes' in dnode) {
             let ifDefineObj = {}
+            let ifDefineSource = {}
             ifDefineObj['@if '+dnode.params.trim()] = []
+            ifDefineSource['@if '+dnode.params.trim()] = []
             for(let ifnode of dnode.nodes) {
               let ifRecursiveDefineObj = recursive(ifnode, {
                 ...refOpt,
                 'provide': component[componentName]['provide']
               })
               ifDefineObj['@if '+dnode.params.trim()].push(ifRecursiveDefineObj.body)
+              ifDefineSource['@if '+dnode.params.trim()].push(ifRecursiveDefineObj.sourceBody)
             }
             ifDefineObj['@if '+dnode.params.trim()] = ifDefineObj['@if '+dnode.params.trim()].flat()
+            ifDefineSource['@if '+dnode.params.trim()] = ifDefineSource['@if '+dnode.params.trim()].flat()
             defineObj['content'][randId].push(ifDefineObj)
-            defineObj['sourceContent'][randId].push(dnode.source)
+            defineObj['sourceContent'][randId].push(ifDefineSource)
           }
         } else {
           let recursiveDefineObj = recursive(dnode, {
