@@ -1,6 +1,7 @@
 const screen = require('../configs/screen.js')
 const camelDash = require('../helpers/camelDash.js')
 const reference = require('./reference.js')
+const source = require('./source.js')
 const selector = require('./selector.js')
 
 function recursiveFunc(root, prm, opt = {}) {
@@ -71,6 +72,78 @@ function recursiveFunc(root, prm, opt = {}) {
   return recursiveArr
 }
 
+function recursiveSource(root, prm, opt = {}) {
+  let param = (root.type === 'rule') ? selector(root, prm) : ''
+  const recursiveArr = []
+  const recursiveObj = {}
+  recursiveObj[param] = {}
+  if('nodes' in root && Array.isArray(root.nodes) && root.nodes.length >= 1) {
+    for(let node of root.nodes) {
+      if(node.type === 'decl' && node.prop === 'ref') {
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], source(node.value, root.source, opt))
+      } else if(node.type === 'decl' && node.prop.startsWith('ref-')) {
+        let splitRefs = node.prop.split('-')[1]
+        let splitRefsObj = {}
+        splitRefsObj[camelDash(splitRefs)] = root.source
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], splitRefsObj)
+      } else if(node.type === 'decl' && node.prop.startsWith('props-')) {
+        let splitProps = node.prop.split('-')[1]
+        let splitPropsObj = {}
+        splitPropsObj[camelDash(splitProps)] = root.source
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], splitPropsObj)
+      } else if(node.type === 'decl' && node.prop === 'inject') {
+        const optProvideSource = {}
+        for(let optProv of Object.keys(opt.provide[node.value])) {
+          optProvideSource[optProv] = root.source
+        }
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], optProvideSource)
+      } else if(node.type === 'decl' && node.prop === 'inject-props') {
+        let injectPropsObj = {}
+        injectPropsObj['inject-'+node.value] = root.source
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], injectPropsObj)
+      } else if(node.type === 'decl' && node.prop.startsWith('screen-')) {
+        let screenObj = {}
+        screenObj[node.prop] = Object.assign({}, screenObj[node.prop], source(node.value, root.source, opt))
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], screenObj)
+      } else if(node.type === 'decl' && node.prop.startsWith('state-')) {
+        let stateObj = {}
+        stateObj[node.prop] = Object.assign({}, stateObj[node.prop], source(node.value, root.source, opt))
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], stateObj)
+      } else if(node.type === 'decl' && node.prop.startsWith('prefers-')) {
+        let prefersObj = {}
+        prefersObj[node.prop] = Object.assign({}, prefersObj[node.prop], source(node.value, root.source, opt))
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], prefersObj)
+      } else if(node.type === 'decl' && node.prop.startsWith('if-')) {
+        let conditionalObj = {}
+        conditionalObj[node.prop] = Object.assign({}, conditionalObj[node.prop], source(node.value, root.source, opt))
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], conditionalObj)
+      } else if(node.type === 'atrule' && node.name === 'if' && 'nodes' in node) {
+        const paramConditional = node.params.split('in')
+        const valueConditional = paramConditional[0]?.trim() || ''
+        const propsConditional = paramConditional[1]?.trim() || ''
+        let conditionalObj = {}
+        for(let condVal of node.nodes) {
+          if(condVal.type === 'decl' && condVal.prop === 'ref') {
+            conditionalObj['if-'+propsConditional+'-'+valueConditional] = Object.assign({}, conditionalObj['if-'+propsConditional+'-'+valueConditional], source(condVal, node.source, opt))
+          } else if(condVal.type === 'decl' && condVal.prop.startsWith('ref-')) {
+            let splitRefs = condVal.prop.split('-')[1]
+            let splitRefsObj = {}
+            splitRefsObj[camelDash(splitRefs)] = node.source
+            conditionalObj['if-'+propsConditional+'-'+valueConditional] = Object.assign({}, conditionalObj['if-'+propsConditional+'-'+valueConditional], splitRefsObj)
+          }
+        }
+        recursiveObj[param] = Object.assign({}, recursiveObj[param], conditionalObj)
+      } else if(node.type === 'rule') {
+        for(let par of param.split(',')) {
+          recursiveArr.push(recursiveSource(node, par.trim(), opt))
+        }
+      }
+    }
+    recursiveArr.unshift(recursiveObj)
+  }
+  return recursiveArr
+}
+
 module.exports = (node, opt = {}) => {
-  return { body: Array.from(recursiveFunc(node, '', opt)).flat(Infinity)}
+  return { body: Array.from(recursiveFunc(node, '', opt)).flat(Infinity), sourceBody: Array.from(recursiveSource(node, '', opt)).flat(Infinity)}
 }

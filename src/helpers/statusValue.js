@@ -3,7 +3,8 @@ module.exports = (objectArg) => {
   for(let [key, val] of Object.entries(objectArg)) {
     newObj[key] = {...val}
     newObj[key].value = {}
-    newObj[key].status = false
+    newObj[key].status = false,
+    newObj[key].source = undefined
   }
   return newObj
 }

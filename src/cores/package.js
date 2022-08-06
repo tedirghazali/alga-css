@@ -17,7 +17,9 @@ function readPath(rp, opts) {
   component[componentName]['modules'] = {}
   component[componentName]['inits'] = []
   
-  const root = postcss.parse(data, { from: rp })
+  const root = postcss.parse(data.replaceAll(/\{([A-Za-z0-9\-\_]+)\.([A-Za-z0-9\-\_]+)\}/g, '$1($2)'), { from: rp })
+  component[componentName]['root'] = root
+  
   for(let rnode of root.nodes) {
     // Convert define into property
     if(rnode.type === 'atrule' && rnode.name === 'import') {
@@ -96,35 +98,85 @@ function readPath(rp, opts) {
       }
       component[componentName]['provide'] = Object.assign({}, component[componentName]['provide'], defineObj)
     } else if(rnode.type === 'atrule' && rnode.name === 'alga' && 'nodes' in rnode) {
-      const param = rnode.params.trim()
+      const refOpt = {
+        ...opts,
+        refs: component[componentName]['refs'] || {},
+        props: component[componentName]['props'] || {}
+      }
+          
+      let param = rnode.params.trim()
+      if(param.startsWith('refs(') || param.startsWith('props(')) {
+        const arrowParams = param.split(/\(|\)/g)
+        param = component[componentName][arrowParams[0]][arrowParams[1]]
+      }
       let defineObj = {}
       defineObj['header'] = {}
       defineObj['body'] = []
-      defineObj['condition'] = {}
+      defineObj['sourceBody'] = []
+      defineObj['content'] = {}
+      defineObj['sourceContent'] = {}
+      let index = 1
       for(let dnode of rnode.nodes) {
+        const randId = randomChar(index, 6)
+        defineObj['content'][randId] = []
+        defineObj['sourceContent'][randId] = []
         if(dnode.type === 'atrule' && dnode.name === 'use') {
-          defineObj['header'] = Object.assign({}, defineObj['header'], component[componentName]['modules'][dnode.params.trim()])
+          if('params' in dnode && dnode.params !== '') {
+            component[componentName]['refs'] = Object.assign({}, component[componentName]['refs'], component[componentName]['modules'][dnode.params.trim()]['refs'])
+            component[componentName]['props'] = Object.assign({}, component[componentName]['props'], component[componentName]['modules'][dnode.params.trim()]['props'])
+            component[componentName]['provide'] = Object.assign({}, component[componentName]['provide'], component[componentName]['modules'][dnode.params.trim()]['provide'])
+            defineObj['content'][randId].push(component[componentName]['modules'][dnode.params.trim()][dnode.params.trim()]['body'])
+            defineObj['sourceContent'][randId].push(component[componentName]['modules'][dnode.params.trim()][dnode.params.trim()]['sourceBody'])
+          }
+        } else if(dnode.type === 'atrule' && dnode.name === 'keyframes') {
+          if('nodes' in dnode) {
+            let paramDnode = dnode.params.trim()
+            if(paramDnode.startsWith('refs(') || paramDnode.startsWith('props(')) {
+              const arrowDnodeParams = paramDnode.split(/\(|\)/g)
+              paramDnode = component[componentName][arrowDnodeParams[0]][arrowDnodeParams[1]]
+            }
+            let keyframeDefineObj = {}
+            keyframeDefineObj['@keyframes '+paramDnode] = []
+            for(let kfnode of dnode.nodes) {
+              let keyframeRecursiveDefineObj = recursive(kfnode, {
+                'provide': component[componentName]['provide']
+              })
+              keyframeDefineObj['@keyframes '+paramDnode].push(keyframeRecursiveDefineObj.body)
+            }
+            keyframeDefineObj['@keyframes '+paramDnode] = keyframeDefineObj['@keyframes '+paramDnode].flat()
+            defineObj['content'][randId].push(keyframeDefineObj)
+            defineObj['sourceContent'][randId].push(dnode.source)
+          }
         } else if(dnode.type === 'atrule' && dnode.name === 'if') {
           if('nodes' in dnode) {
             let ifDefineObj = {}
-            ifDefineObj[dnode.params.trim()] = []
+            ifDefineObj['@if '+dnode.params.trim()] = []
             for(let ifnode of dnode.nodes) {
               let ifRecursiveDefineObj = recursive(ifnode, {
+                ...refOpt,
                 'provide': component[componentName]['provide']
               })
-              ifDefineObj[dnode.params.trim()].push(ifRecursiveDefineObj.body)
+              ifDefineObj['@if '+dnode.params.trim()].push(ifRecursiveDefineObj.body)
             }
-            ifDefineObj[dnode.params.trim()] = ifDefineObj[dnode.params.trim()].flat()
-            defineObj['condition'] = Object.assign({}, defineObj['condition'], ifDefineObj)
+            ifDefineObj['@if '+dnode.params.trim()] = ifDefineObj['@if '+dnode.params.trim()].flat()
+            defineObj['content'][randId].push(ifDefineObj)
+            defineObj['sourceContent'][randId].push(dnode.source)
           }
         } else {
           let recursiveDefineObj = recursive(dnode, {
+            ...refOpt,
             'provide': component[componentName]['provide']
           })
-          defineObj['body'].push(recursiveDefineObj.body)
+          defineObj['content'][randId].push(recursiveDefineObj.body)
+          defineObj['sourceContent'][randId].push(recursiveDefineObj.sourceBody)
         }
+        
+        defineObj['content'][randId] = defineObj['content'][randId].flat()
+        defineObj['sourceContent'][randId] = defineObj['sourceContent'][randId].flat()
+        index++
       }
-      defineObj['body'] = defineObj['body'].flat()
+      defineObj['body'] = Object.values(defineObj['content']).flat()
+      defineObj['sourceBody'] = Object.values(defineObj['sourceContent']).flat()
       component[componentName][param] = Object.assign({}, component[componentName][param], defineObj)
     } else if(rnode.type === 'atrule' && rnode.name === 'use') {
       component[componentName]['inits'].push(rnode)
@@ -136,7 +188,6 @@ function readPath(rp, opts) {
           component[dnode.trim()] = component[componentName]['modules'][dnode.trim()]
         }
       }
-      component[componentName]['inits'].push(rnode)
     }
   }
   return component

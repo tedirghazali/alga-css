@@ -83,6 +83,7 @@ function algacss(options) {
             ...newNodes, 
             ...declaration(config.components[param][name]['body'],
             {
+              source: config.components[param][name]['sourceBody'],
               refs: config.components[param]['refs'],
               props: config.components[param]['props'], 
               provide: config.components[param]['provide']
@@ -93,7 +94,10 @@ function algacss(options) {
               prefers: config.prefers
             })
           ]
-          rule.replaceWith(newNodes)
+          const newRoot = config.components[param]['root']
+          newRoot.removeAll()
+          newRoot.append(...newNodes)
+          rule.replaceWith(newRoot)
         } else {
           rule.remove()
         }
@@ -121,10 +125,11 @@ function algacss(options) {
               config.components[param]['props'][node.prop] = node.value
             }
           }
-          newPackNodes.push([
+          /*newPackNodes.push([
             ...newNodes, 
             ...declaration(config.components[param][name]['body'],
             {
+              source: config.components[param][name]['sourceBody'],
               refs: config.components[param]['refs'],
               props: config.components[param]['props'], 
               provide: config.components[param]['provide']
@@ -134,7 +139,26 @@ function algacss(options) {
               state: config.state, 
               prefers: config.prefers
             })
-          ])
+          ])*/
+          newNodes = [
+            ...newNodes, 
+            ...declaration(config.components[param][name]['body'],
+            {
+              source: config.components[param][name]['sourceBody'],
+              refs: config.components[param]['refs'],
+              props: config.components[param]['props'], 
+              provide: config.components[param]['provide']
+            },
+            {
+              screen: config.screen,
+              state: config.state, 
+              prefers: config.prefers
+            })
+          ]
+          const newRoot = config.components[param]['root']
+          newRoot.removeAll()
+          newRoot.append(...newNodes)
+          newPackNodes.push(newRoot)
         }
       }
       root.append(...newPackNodes.flat())

@@ -5,7 +5,8 @@ module.exports = (screen) => {
       size: val.size,
       minmax: val.minmax,
       value: {},
-      status: false
+      status: false,
+      source: undefined
     }
     if(Array.isArray(val.alias) && val.alias.length >= 1) {
       for(let alias of val.alias) {
@@ -13,7 +14,8 @@ module.exports = (screen) => {
           size: val.size,
           minmax: val.minmax,
           value: {},
-          status: false
+          status: false,
+          source: undefined
         }
       }
     }
