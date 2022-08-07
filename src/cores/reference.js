@@ -7,7 +7,7 @@ module.exports = (ref, opt = {}) => {
   let references = {}
   const newPreset = opt?.preset || preset
   
-  const refs = ref.split(' ').filter(i => i !== '')
+  const refs = ref.value.split(' ').filter(i => i !== '')
   for(let rf of refs) {
     const props = rf.trim().split('-').filter(i => i !== '')
     
@@ -23,7 +23,10 @@ module.exports = (ref, opt = {}) => {
         }
         
         const refObj = {}
-        refObj[camelDash(props[0])] = value(props[1], refOpt)
+        refObj[camelDash(props[0])] = {
+          value: value(props[1], refOpt),
+          source: ref.source
+        }
         
         references = Object.assign({}, references, refObj)
       }

@@ -76,14 +76,13 @@ function algacss(options) {
           let newNodes = []
           if(rule?.nodes) {
             for(let node of rule.nodes) {
-              config.components[param]['props'][node.prop] = node.value
+              config.components[param]['props'][node.prop].value = node.value
             }
           }
           newNodes = [
             ...newNodes, 
             ...declaration(config.components[param][name]['body'],
             {
-              source: config.components[param][name]['sourceBody'],
               refs: config.components[param]['refs'],
               props: config.components[param]['props'], 
               provide: config.components[param]['provide']
@@ -144,7 +143,6 @@ function algacss(options) {
             ...newNodes, 
             ...declaration(config.components[param][name]['body'],
             {
-              source: config.components[param][name]['sourceBody'],
               refs: config.components[param]['refs'],
               props: config.components[param]['props'], 
               provide: config.components[param]['provide']
