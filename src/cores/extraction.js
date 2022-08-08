@@ -30,7 +30,7 @@ function readPath(rp) {
   return content.filter(i => i.includes('-'))
 }
 
-module.exports = (paths, options) => {
+module.exports = (paths, source, options) => {
   let extract = []
   
   if(typeof paths === 'string') {
@@ -53,8 +53,8 @@ module.exports = (paths, options) => {
   let newStateExtract = {}
   for(let ref of Array.from(new Set(extract))) {
     if(!options.extract.raws.includes(ref)) {
-      newExtract.push(...rules(ref, options))
-      newStateExtract = Object.assign({}, atrules(newStateExtract, ref, options))
+      newExtract.push(...rules(ref, source, options))
+      newStateExtract = Object.assign({}, atrules(newStateExtract, ref, source, options))
     }
   }
   

@@ -20,14 +20,12 @@ function algacss(options) {
     prefers: Object.assign({}, prefers, options?.prefers),
     /*color: Object.assign({}, color, options.color),*/
     components: {},
-    extract: {raws: [], rules: []}
+    extract: {raws: [], rules: []},
+    root: {}
   }
   
   const opts = {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers}
   config.components = component(options?.src, opts)
-  /*if(options?.initialExtraction) {
-    config.extract = extraction(options?.extract, {...opts, extract: config.extract})
-  }*/
   
   const watcher = chokidar.watch(options?.extract, {
     ignored: new RegExp('(^|[/\])..'),
@@ -35,7 +33,7 @@ function algacss(options) {
   });
   
   watcher.on('change', path => {
-    config.extract = extraction(path, {...opts, extract: config.extract})
+    console.log(path)
   });
   
   if(options?.plugins && Number(options?.plugins.length) >= 1) {
@@ -65,14 +63,16 @@ function algacss(options) {
           param = prms[0].trim()
           name = prms[1].trim()
         }
-        if(name === 'helpers') {
-          config.extract = extraction(options?.extract, {...opts, extract: config.extract})
+        if(name === 'helpers' || param === 'helpers') {
+          config.root = root
+          //console.log(root.source)
+          config.extract = extraction(options?.extract, rule.source, {...opts, extract: config.extract})
           
           if(config.extract.rules.length >= 1) {
             root.append(...config.extract.rules)
           }
-        }
-        if(config.components[name]) {
+          rule.remove()
+        } else if(config.components[name]) {
           let newNodes = []
           if(rule?.nodes) {
             for(let node of rule.nodes) {
@@ -101,10 +101,6 @@ function algacss(options) {
           rule.remove()
         }
       })
-      
-      if(config.extract.rules.length >= 1) {
-        root.append(...config.extract.rules)
-      }
       
       let newPackNodes = []
       const filterPackNodes = []
