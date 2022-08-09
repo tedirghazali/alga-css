@@ -1,4 +1,5 @@
-const chokidar = require('chokidar');
+const chokidar = require('chokidar')
+const { readFile, writeFile } = require('fs')
 // Configs
 const preset = require('./configs/preset.js')
 const screen = require('./configs/screen.js')
@@ -21,20 +22,27 @@ function algacss(options) {
     /*color: Object.assign({}, color, options.color),*/
     components: {},
     extract: {raws: [], rules: []},
-    root: {}
+    helpers: []
   }
   
   const opts = {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers}
   config.components = component(options?.src, opts)
   
   const watcher = chokidar.watch(options?.extract, {
-    ignored: new RegExp('(^|[/\])..'),
+    ignored: /(^|[\/\\])\../, // ignore dotfiles
     persistent: true
-  });
+  })
   
   watcher.on('change', path => {
-    console.log(path)
-  });
+    for(let helperFile of config.helpers) {
+      readFile(helperFile, (err, data) => {
+        if (err) throw err;
+        writeFile(helperFile, data, (err) => {
+          if (err) throw err;
+        })
+      })
+    }
+  })
   
   if(options?.plugins && Number(options?.plugins.length) >= 1) {
     const newPlugins = options?.plugins.map(item => {
@@ -64,8 +72,9 @@ function algacss(options) {
           name = prms[1].trim()
         }
         if(name === 'helpers' || param === 'helpers') {
-          config.root = root
-          //console.log(root.source)
+          if(root.source?.input?.from) {
+            config.helpers.push(root.source.input.from)
+          }
           config.extract = extraction(options?.extract, rule.source, {...opts, extract: config.extract})
           
           if(config.extract.rules.length >= 1) {
