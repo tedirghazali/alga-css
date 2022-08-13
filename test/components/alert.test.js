@@ -36,45 +36,45 @@ test('Testing alert component', async () => {
 }
 .alert.alertSuccess {
     border-color: #008200;
-    background-color: #d4ffd4;
+    background-color: #baffba;
     color: #2d5a2d
 }
 @media (prefers-color-scheme: dark) {
     .alert.alertSuccess {
-        background-color: #2f2f2f;
+        background-color: #1f6a1f;
         color: #d4ffd4
     }
 }
 .alert.alertInfo {
     border-color: #0061eb;
-    background-color: #ddebff;
+    background-color: #cde2ff;
     color: #364150
 }
 @media (prefers-color-scheme: dark) {
     .alert.alertInfo {
-        background-color: #2f2f2f;
+        background-color: #1d4985;
         color: #ddebff
     }
 }
 .alert.alertWarning {
     border-color: #eb8f00;
-    background-color: #ffedd1;
+    background-color: #fce2ba;
     color: #635540
 }
 @media (prefers-color-scheme: dark) {
     .alert.alertWarning {
-        background-color: #2f2f2f;
+        background-color: #8e6528;
         color: #ffedd1
     }
 }
 .alert.alertError {
     border-color: #c10202;
-    background-color: #ffeaea;
+    background-color: #fec4c4;
     color: #5c3939
 }
 @media (prefers-color-scheme: dark) {
     .alert.alertError {
-        background-color: #2f2f2f;
+        background-color: #a53737;
         color: #ffeaea
     }
 }
@@ -181,7 +181,7 @@ test('Testing alert component', async () => {
     .alert {
         background-color: #2f2f2f;
         color: #e2e2e2;
-        border-color: #c3c0c0
+        border-color: #828181
     }
     .alertModal .alertDialog .alertContent {
         background-color: #2f2f2f;
