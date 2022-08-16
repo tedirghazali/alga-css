@@ -2,21 +2,13 @@
   .modal {
     ref: position-absolute zIndex-30 top-0 left-0 width-100vw height-100vh;
   }
-    
-  .modalBackdrop {
-    ref: position-fixed zIndex-31 inset-0_3em_3em_0 width-100vw height-100vh display-none; 
-  }
-    
-  .modal.active .modalBackdrop {
-    ref: display-block backgroundColor-rgba(0,0,0,0.5);
-  }
-    
+   
   .modalDialog {
-    ref: position-fixed zIndex-32 width-100vw height-100vh display-none pointerEvents-none;
+    ref: position-fixed zIndex-35 inset-0_3em_3em_0 width-100vw height-100vh display-none;
   }
   
   .modal.active .modalDialog {
-    ref: display-block padding-1.5rem;
+    ref: display-block padding-1.5rem backgroundColor-rgba(0,0,0,0.5);
   }
     
   .modal.active .modalDialog.modalCenter {
@@ -27,7 +19,7 @@
     ref: backgroundColor-hexfff border-1px_solid_hexd9d9d9 marginRight-auto marginLeft-auto borderRadius-0.375rem;
     screen-ss: width-100pct marginRight-0.25rem marginLeft-0.25rem;
     screen-sr: width-500px;
-    prefers-dark: backgroundColor-hex2f2f2f borderColor-hex5f5f5f;
+    prefers-dark: backgroundColor-hex2f2f2f color-hexf2f2f2 borderColor-hex5f5f5f;
   }
     
   .modalFullscreen {

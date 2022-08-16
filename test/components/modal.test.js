@@ -10,29 +10,18 @@ test('Testing modal dialog component', async () => {
     width: 100vw;
     height: 100vh
 }
-.modalBackdrop {
+.modalDialog {
     position: fixed;
-    z-index: 31;
+    z-index: 35;
     inset: 0 3em 3em 0;
     width: 100vw;
     height: 100vh;
     display: none
 }
-.modal.active .modalBackdrop {
-    display: block;
-    background-color: rgba(0,0,0,0.5)
-}
-.modalDialog {
-    position: fixed;
-    z-index: 32;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    pointer-events: none
-}
 .modal.active .modalDialog {
     display: block;
-    padding: 1.5rem
+    padding: 1.5rem;
+    background-color: rgba(0,0,0,0.5)
 }
 .modal.active .modalDialog.modalCenter {
     display: grid;
@@ -90,6 +79,7 @@ test('Testing modal dialog component', async () => {
 @media (prefers-color-scheme: dark) {
     .modalContent {
         background-color: #2f2f2f;
+        color: #f2f2f2;
         border-color: #5f5f5f
     }
     .modalHeader {
