@@ -4,6 +4,7 @@ test('Testing modal dialog component', async () => {
   const input = '@use modal;'
   const output = `.modal {
     position: absolute;
+    z-index: 30;
     top: 0;
     left: 0;
     width: 100vw;
@@ -11,7 +12,7 @@ test('Testing modal dialog component', async () => {
 }
 .modalBackdrop {
     position: fixed;
-    z-index: 5;
+    z-index: 31;
     inset: 0 3em 3em 0;
     width: 100vw;
     height: 100vh;
@@ -22,19 +23,20 @@ test('Testing modal dialog component', async () => {
     background-color: rgba(0,0,0,0.5)
 }
 .modalDialog {
-    position: relative;
-    z-index: 6;
-    padding: 1.5rem;
-    display: none
+    position: fixed;
+    z-index: 32;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    pointer-events: none
 }
 .modal.active .modalDialog {
-    display: block
+    display: block;
+    padding: 1.5rem
 }
 .modal.active .modalDialog.modalCenter {
     display: grid;
-    place-items: center;
-    width: 100vw;
-    height: 100vh
+    place-items: center
 }
 .modalContent {
     background-color: #fff;
@@ -67,7 +69,8 @@ test('Testing modal dialog component', async () => {
     font-size: 1.25rem
 }
 .modalBody {
-    padding: 0.75rem 1rem
+    padding: 0.75rem 1rem;
+    overflow-y: auto
 }
 .modalFooter {
     border-top: 1px solid #d9d9d9
@@ -82,6 +85,15 @@ test('Testing modal dialog component', async () => {
 @media (min-width: 600px) {
     .modalContent {
         width: 500px
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .modalContent {
+        background-color: #2f2f2f;
+        border-color: #5f5f5f
+    }
+    .modalHeader {
+        border-color: #242424
     }
 }`
   await execute(input, output, {log: false, file: './examples/modal/modal.css'})

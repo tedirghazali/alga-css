@@ -43,6 +43,18 @@ test('Testing card or box component', async () => {
 }
 .cardImage {
     width: 100%
+}
+@media (prefers-color-scheme: dark) {
+    .card, .box {
+        background-color: #2f2f2f;
+        border-color: #5f5f5f
+    }
+    .cardHeader {
+        border-color: #242424
+    }
+    .cardFooter {
+        border-color: #242424
+    }
 }`
   await execute(input, output, {log: false, file: './examples/card/card.css'})
 })
