@@ -3,10 +3,113 @@
     ref: boxSizing-borderBox;
   }
   
+  html {
+	  ref: lineHeight-1.15 tabSize-4;
+  }
+  
   body {
+    ref-fontFamily: 'Calibri', Arial, sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, 'Apple Color Emoji', 'Segoe UI Emoji';
     ref: backgroundColor-hexffffff margin-0px padding-0px fontSize-1rem fontWeight-400 lineHeight-1.5 color-hex15181c;
-    ref-fontFamily: 'Calibri', Arial;
     prefers-dark: backgroundColor-hex242424 color-hexe2e2e2;
+  }
+  
+  hr {
+	  ref: height-0 color-inherit;
+  }
+  
+  abbr[title] {
+	  ref-textDecoration: underline dotted;
+  }
+  
+  b,
+  strong {
+	  ref: fontWeight-bolder;
+  }
+  
+  code,
+  kbd,
+  samp,
+  pre {
+	  ref-fontFamily: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+	  ref: fontSize-1em;
+  }
+  
+  small {
+	  ref: fontSize-80pct;
+  }
+  
+  sub,
+  sup {
+	  ref: fontSize-75pct lineHeight-0 position-relative verticalAlign-baseline;
+  }
+
+  sub {
+	  ref: bottom-n0.25em;
+  }
+
+  sup {
+	  ref: top-n0.5em;
+  }
+  
+  table {
+	  ref: textIndent-0 borderColor-inherit borderCollapse-collapse;
+  }
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+	  ref: fontFamily-inherit fontSize-100pct lineHeight-1.15 margin-0;
+  }
+  
+  button,
+  select {
+	  ref: textTransform-none;
+  }
+  
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+	  ref: appearance-none border-none backgroundColor-transparent;
+  }
+  
+  ::-moz-focus-inner {
+	  ref: borderStyle-none padding-0;
+  }
+  
+  :-moz-focusring {
+	  ref-outline: 1px dotted ButtonText;
+  }
+  
+  :-moz-ui-invalid {
+	  ref: boxShadow-none;
+  }
+  
+  legend {
+	  ref: padding-0;
+  }
+  
+  progress {
+	  ref: verticalAlign-baseline;
+  }
+  
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button {
+	  ref: height-auto;
+  }
+  
+  [type='search'] {
+	  ref: outlineOffset-n2px;
+  }
+  
+  ::-webkit-file-upload-button {
+	  ref: font-inherit;
+  }
+  
+  summary {
+	  ref: display-listItem;
   }
   
   .h1, .h2, .h3, .h4, .h5, .h6, 

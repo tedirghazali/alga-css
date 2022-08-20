@@ -49,28 +49,31 @@ module.exports = {
 ```
 
 ## Class Name Structure
-Alga CSS allow you to use whatever special character you wish (use either `-`, `|`, `:` or `_`) as divider or separator of class names or references.
+Alga CSS uses special character `-` to gab classes from HTML elements or Vue components, and it uses `:` for breakpoints and states and also `_` as a divider or separator of css values.
 
 ```css
 /* highly recommended */
-<span class="marginTop-0.75rem padding-10px md:marginTop-5per color-rgb(205,45,67) backgroundColor-hex(fff)"></span>
+<span class="marginTop-0.75rem padding-10px md:marginTop-5pct color-rgb(205,45,67) backgroundColor-hexfff"></span>
 
 .className {
-  ref: marginTop-0.75rem padding-10px color-rgb(205,45,67) backgroundColor-hex(fff);
-  md: marginTop-5per;
+  ref: marginTop-0.75rem padding-10px color-rgb(205,45,67) backgroundColor-hexfff;
+  md: marginTop-5pct;
 }
 
-/* class structure: property (camelCase for name and value separated by - or dash) */
+/* class structure: property (camelCase for prop name and prop value separated by - or dash) */
 justifyContent-spaceBetween
 
-/* class structure: unit size (per is unit size in percent) */
-width-100per
+/* class structure: unit size (pct is unit size in percent) */
+width-100pct
 
-/* class structure: screen */
-md:paddingLeft-3px
+/* class structure: screen, ss (extra small), sr (smaller), sm (small), md (medium), lg (large), lr (larger), ls (largest), wd (wide), wr (wider) */
+ss:paddingLeft-3px
 
 /* class structure: mode */
-dark:backgroundColor-hex(333)
+dark:backgroundColor-hex333
+light:backgroundColor-hexfff
+
+mode:backgroundColor-hexfff /* for [data-mode=dark] .backgroundColor-hexfff {} */
 
 /* class structure: state */
 facus:paddingLeft-3px
@@ -81,20 +84,24 @@ We provide alga format `.alga` for creating CSS component.
 
 ```css
 /* navBar.alga */
+@define refs {
+  name: navBar;
+}
 
 @define props {
   size: 0.75rem;
 }
 
-@alga navBar {
-  .navBar {
+@alga {refs.name} {
+  .{refs.name} {
     ref: position-relative zIndex-3;
-    props-paddingTop: size;
-    props-paddingBottom: size;
+    ref-paddingTop: {props.size};
+    ref-paddingBottom: {props.size};
   }
 }
 
-@use {
+/* navBar.vue <style scoped> */
+@use navBar {
   size: 20px;
 }
 ```

@@ -12,6 +12,9 @@ const declaration = require('./cores/declaration.js')
 const extraction = require('./cores/extraction.js')
 const packages = require('./cores/package.js')
 
+// Helpers
+const randomChar = require('./helpers/randomChar.js')
+
 function algacss(options) {
   const config = {
     inits: [],
@@ -37,7 +40,13 @@ function algacss(options) {
     for(let helperFile of config.helpers) {
       readFile(helperFile, (err, data) => {
         if (err) throw err;
-        writeFile(helperFile, data, (err) => {
+        let newData = data.toString()
+        if(newData.includes('@use helpers { uniqid: ')) {
+          newData = newData.replace(/\@use helpers \{ uniqid: .*\; \}/, '@use helpers { uniqid: '+ randomChar() +'; }')
+        } else {
+          newData = newData.replace('@use helpers;', '@use helpers { uniqid: '+ randomChar() +'; }')
+        }
+        writeFile(helperFile, newData, (err) => {
           if (err) throw err;
         })
       })

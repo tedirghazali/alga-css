@@ -5,7 +5,10 @@ test('Reading css classes from file', async () => {
   //await execute()
   let result = await postcss([
     algacss({
-      extract: './**/*.vue'
+      extract: [
+        './test/vue/**/*.vue',
+        './test/js-html/**/*.js'
+      ]
     })
   ]).process(`@use helpers;`, { from: undefined })
   console.log(result.css)
