@@ -38,15 +38,16 @@ function algacss(options) {
   
   watcher.on('change', path => {
     for(let helperFile of config.helpers) {
-      readFile(helperFile, (err, data) => {
+      const newHelperFile = helperFile.split('?')[0]
+      readFile(newHelperFile, (err, data) => {
         if (err) throw err;
         let newData = data.toString()
-        if(newData.includes('@use helpers { uniqid: ')) {
-          newData = newData.replace(/\@use helpers \{ uniqid: .*\; \}/, '@use helpers { uniqid: '+ randomChar() +'; }')
+        if(newData.includes('@use helpers.')) {
+          newData = newData.replace(/\@use helpers\..*\;/, '@use helpers.'+ randomChar() +';')
         } else {
-          newData = newData.replace('@use helpers;', '@use helpers { uniqid: '+ randomChar() +'; }')
+          newData = newData.replace('@use helpers;', '@use helpers.'+ randomChar() +';')
         }
-        writeFile(helperFile, newData, (err) => {
+        writeFile(newHelperFile, newData, (err) => {
           if (err) throw err;
         })
       })
@@ -94,7 +95,14 @@ function algacss(options) {
           let newNodes = []
           if(rule?.nodes) {
             for(let node of rule.nodes) {
-              config.components[param]['props'][node.prop].value = node.value
+              if(node.type === 'rule' && rule.nodes.length >= 1) {
+                const ruleNodeName = node.selector.replace(/\#|\./, '').trim()
+                for(let ruleNode of node.nodes) {
+                  config.components[param][ruleNodeName][ruleNode.prop].value = ruleNode.value
+                }
+              } else {
+                config.components[param]['props'][node.prop].value = node.value
+              }
             }
           }
           newNodes = [

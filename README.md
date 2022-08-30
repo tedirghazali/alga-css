@@ -12,9 +12,7 @@
 <br/>
 
 # Alga CSS
-Alga CSS is a scope or component-first CSS toolkit for quickly mix or compose the CSS components and properties
-
-I rewrite the entire api again, this time I will focus on provide a component for CSS instead
+Alga CSS is a scope or component-first CSS toolkit for quickly mix or compose CSS components and properties
 
 All the main features:
 1. Created for scoped CSS
@@ -34,7 +32,7 @@ npm install alga-css@next
 yarn add alga-css@next
 ```
 
-If you use tool that support PostCSS out of the box like Vite for instance, you just need to create a new config file which is `postcss.config.js` and add the code below to that file.
+If you use tool that support PostCSS out of the box like Vite for instance, you just need to create a new config file which is `postcss.config.cjs` and add the code below to that file.
 
 ```js
 const algacss = require('alga-css')
@@ -42,7 +40,7 @@ const algacss = require('alga-css')
 module.exports = {
   plugins: [
     algacss({
-      extract: ['./src/**/*.vue', './src/**/*.html', './src/**/*.svelte', './src/**/*.astro']
+      extract: ['./src/**/*.vue', './src/**/*.html', './src/**/*.astro', './src/**/*.svelte']
     })
   ]
 }
@@ -57,7 +55,7 @@ Alga CSS uses special character `-` to gab classes from HTML elements or Vue com
 
 .className {
   ref: marginTop-0.75rem padding-10px color-rgb(205,45,67) backgroundColor-hexfff;
-  md: marginTop-5pct;
+  screen-md: marginTop-5pct;
 }
 
 /* class structure: property (camelCase for prop name and prop value separated by - or dash) */
