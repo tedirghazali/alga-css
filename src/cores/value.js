@@ -35,7 +35,7 @@ module.exports = (value, opt = {}) => {
     newValue = newValue.split('_').map(item => {
       if(item.startsWith('refs(') || item.startsWith('props(')) {
         const splitValues = item.split(/\(|\)/g)
-        item = opt[splitValues[0]][camelDash(splitValues[1])] || item
+        item = opt[splitValues[0]][splitValues[1]] || item
       }
       return item
     }).join('')
@@ -43,8 +43,7 @@ module.exports = (value, opt = {}) => {
   else if(newValue.startsWith('refs(') || newValue.startsWith('props(')) {
     const splitValues = newValue.split(/\(|\)/g)
     newValue = opt[splitValues[0]][splitValues[1]] || newValue
-  }
-  if(!specialValues.includes(newValue)) {
+  } else if(!specialValues.includes(newValue)) {
     newValue = camelDash(newValue)
   }
   if(isNaN(newValue) === false && opt?.property) {

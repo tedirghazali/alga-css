@@ -47,9 +47,11 @@ function algacss(options) {
         } else {
           newData = newData.replace('@use helpers;', '@use helpers.'+ randomChar() +';')
         }
-        writeFile(newHelperFile, newData, (err) => {
-          if (err) throw err;
-        })
+        if(newData.includes('@use helpers')) {
+          writeFile(newHelperFile, newData, (err) => {
+            if (err) throw err;
+          })
+        }
       })
     }
   })

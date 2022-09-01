@@ -38,7 +38,7 @@ function readPath(rp, opts) {
         }
       }
       component[componentName][param] = Object.assign({}, component[componentName][param], defineObj)
-    // Get all provide and set a new property under provide
+    // Get all provides and set a new property under provide name
     } else if(rnode.type === 'atrule' && rnode.name === 'provide' && 'nodes' in rnode) {
       const param = rnode.params.trim()
       const refOpt = {
