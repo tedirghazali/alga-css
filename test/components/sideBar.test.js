@@ -81,20 +81,26 @@ test('Testing sideBar component', async () => {
     flex-wrap: nowrap
 }
 .sideMenu > .sideItem {
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
-    cursor: pointer
+    cursor: pointer;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem
 }
 .sideNav > .navItem, .sideNav > .navToggler {
-    padding: 0.375rem;
-    font-size: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
-    cursor: pointer
+    cursor: pointer;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem
 }
 .sideNav > .navToggler {
     appearance: none;

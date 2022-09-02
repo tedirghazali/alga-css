@@ -42,10 +42,10 @@ function algacss(options) {
       readFile(newHelperFile, (err, data) => {
         if (err) throw err;
         let newData = data.toString()
-        if(newData.includes('@use helpers.')) {
-          newData = newData.replace(/\@use helpers\..*\;/, '@use helpers.'+ randomChar() +';')
+        if(newData.includes('@use helpers-')) {
+          newData = newData.replace(/\@use helpers-.*\;/, '@use helpers-'+ randomChar() +';')
         } else {
-          newData = newData.replace('@use helpers;', '@use helpers.'+ randomChar() +';')
+          newData = newData.replace('@use helpers;', '@use helpers-'+ randomChar() +';')
         }
         if(newData.includes('@use helpers')) {
           writeFile(newHelperFile, newData, (err) => {
@@ -83,7 +83,7 @@ function algacss(options) {
           param = prms[0].trim()
           name = prms[1].trim()
         }
-        if(name === 'helpers' || param === 'helpers') {
+        if(name.includes('helpers') || param.includes('helpers')) {
           if(root.source?.input?.from) {
             config.helpers.push(root.source.input.from)
           }

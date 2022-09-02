@@ -1,6 +1,10 @@
 module.exports = {
   w: 'width',
+  mxw: 'maxWidth',
+  mnw: 'minWidth',
   h: 'height',
+  mxh: 'maxHeight',
+  mnh: 'minHeight',
   d: 'display',
   z: 'zIndex',
   m: 'margin',
