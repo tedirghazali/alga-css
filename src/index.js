@@ -29,7 +29,6 @@ function algacss(options) {
   }
   
   const opts = {preset: config.preset, screen: config.screen, state: config.state, prefers: config.prefers}
-  config.components = component(options?.src, opts)
   
   const watcher = chokidar.watch(options?.extract, {
     ignored: /(^|[\/\\])\../, // ignore dotfiles
@@ -82,6 +81,9 @@ function algacss(options) {
           const prms = param.split('.')
           param = prms[0].trim()
           name = prms[1].trim()
+        }
+        if(!config.components[name]) {
+          config.components = Object.assign({}, config.components, component(options?.src, {...opts, componentName: name}))
         }
         if(name.includes('helpers') || param.includes('helpers')) {
           if(root.source?.input?.from) {
@@ -148,21 +150,6 @@ function algacss(options) {
               config.components[param]['props'][node.prop] = node.value
             }
           }
-          /*newPackNodes.push([
-            ...newNodes, 
-            ...declaration(config.components[param][name]['body'],
-            {
-              source: config.components[param][name]['sourceBody'],
-              refs: config.components[param]['refs'],
-              props: config.components[param]['props'], 
-              provide: config.components[param]['provide']
-            },
-            {
-              screen: config.screen,
-              state: config.state, 
-              prefers: config.prefers
-            })
-          ])*/
           newNodes = [
             ...newNodes, 
             ...declaration(config.components[param][name]['body'],

@@ -206,7 +206,10 @@ module.exports = (paths, opts) => {
   if(coreFiles) {
     for(let file of coreFiles) {
       if(file.endsWith('alga.css') || file.endsWith('.alga')) {
-        component = Object.assign({}, component, readPath(__dirname.toString().replace('src/cores', 'alga') + '/' + file, opts))
+        if(file.includes(opts.componentName)) {
+          component = Object.assign({}, component, readPath(__dirname.toString().replace('src/cores', 'alga') + '/' + file, opts))
+          break;
+        }
       }
     }
   }
@@ -215,7 +218,10 @@ module.exports = (paths, opts) => {
     const files = glob.sync(paths, {})
     for(let file of files) {
       if(file.endsWith('alga.css') || file.endsWith('.alga')) {
-        component = Object.assign({}, component, readPath(file, opts))
+        if(file.includes(opts.componentName)) {
+          component = Object.assign({}, component, readPath(file, opts))
+          break;
+        }
       }
     }
   } else if(Array.isArray(paths)) {
@@ -224,7 +230,10 @@ module.exports = (paths, opts) => {
         const files = glob.sync(p, {})
         for(let file of files) {
           if(file.endsWith('alga.css') || file.endsWith('.alga')) {
-            component = Object.assign({}, component, readPath(file, opts))
+            if(file.includes(opts.componentName)) {
+              component = Object.assign({}, component, readPath(file, opts))
+              break;
+            }
           }
         }
       }
