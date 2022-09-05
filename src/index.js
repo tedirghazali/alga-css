@@ -82,7 +82,7 @@ function algacss(options) {
           param = prms[0].trim()
           name = prms[1].trim()
         }
-        if(!config.components[name]) {
+        if(!name.includes('helpers') && !config.components[name]) {
           config.components = Object.assign({}, config.components, component(options?.src, {...opts, componentName: name}))
         }
         if(name.includes('helpers') || param.includes('helpers')) {
