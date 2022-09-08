@@ -17,7 +17,7 @@ test('Testing breadCrumb component', async () => {
     float: left;
     padding-right: 0.5rem;
     color: #6c757d;
-    content: var(--ag-breadCrumbDivider, "/")
+    content: "/"
 }
 .breadCrumbItem a {
     color: #0d6efd;

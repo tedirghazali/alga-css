@@ -1,27 +1,35 @@
-@alga breadCrumb {
-  .breadCrumb {
+@define refs {
+  name: breadCrumb;
+}
+
+@define props {
+  divider: "/";
+}
+
+@alga {refs.name} {
+  .{refs.name} {
     ref: display-flex flexWrap-wrap padding-0_0 marginTop-0 marginBottom-1rem listStyle-none;
   }
     
-  .breadCrumbItem {
+  .{refs.name}Item {
     ref: padding-0_0.5rem_0_0;
   }
     
-  .breadCrumbItem + .breadCrumbItem::before {
+  .{refs.name}Item + .{refs.name}Item::before {
     ref: float-left paddingRight-0.5rem color-hex6c757d;
-    ref-content: var(--ag-breadCrumbDivider, "/");
+    ref-content: {props.divider};
   }
     
-  .breadCrumbItem a {
+  .{refs.name}Item a {
     ref: color-hex0d6efd textDecoration-none;
   }
     
-  .breadCrumbItem.active a,
-  .breadCrumbItem.disabled a {
+  .{refs.name}Item.active a,
+  .{refs.name}Item.disabled a {
     ref: pointerEvents-none color-hex4a5568;
   }
     
-  .breadCrumbItem:not(.active):not(.disabled):hover a {
+  .{refs.name}Item:not(.active):not(.disabled):hover a {
     ref: color-hex0d6efd textDecoration-underline;
   }
 }
