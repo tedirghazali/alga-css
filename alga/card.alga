@@ -1,45 +1,55 @@
-@alga card {
-  .card {
+@define refs {
+  name: card;
+}
+
+@define props {
+  rounded: 0.25rem;
+  bodyPadding: 1rem;
+}
+
+@alga {refs.name} {
+  .{refs.name} {
     ref: position-relative display-flex flexDirection-column;
   }
     
-  .card, .box {
+  .{refs.name}, .box {
     ref: width-100pct backgroundColor-hexfff backgroundClip-borderBox border-1px_solid_hexd9d9d9;
-    ref: borderRadius-0.25rem wordWrap-breakWord;
+    ref-borderRadius: {props.rounded};
+    ref: wordWrap-breakWord;
     prefers-dark: backgroundColor-hex2f2f2f borderColor-hex5f5f5f;
   }
     
-  .card > *:first-child {
+  .{refs.name} > *:first-child {
     ref: borderTopRightRadius-0.25rem borderTopLeftRadius-0.25rem;
   }
     
-  .card > *:last-child {
+  .{refs.name} > *:last-child {
     ref: borderBottomRightRadius-0.25rem borderBottomLeftRadius-0.25rem;
   }
     
-  .cardHeader, .cardFooter {
+  .{refs.name}Header, .{refs.name}Footer {
     ref: display-flex justifyContent-spaceBetween alignItems-center padding-0.75rem_1rem;
   }
     
-  .cardHeader {
+  .{refs.name}Header {
     ref: borderBottom-1px_solid_hexd9d9d9;
     prefers-dark: borderColor-hex242424;
   }
     
-  .cardFooter {
+  .{refs.name}Footer {
     ref: borderTop-1px_solid_hexd9d9d9;
     prefers-dark: borderColor-hex242424;
   }
     
-  .cardBody {
+  .{refs.name}Body {
     ref: flex-1_1_auto;
   }
     
-  .box, .cardBody {
-    ref: padding-1rem;
+  .box, .{refs.name}Body {
+    ref-padding: {props.bodyPadding};
   }
     
-  .cardImage {
+  .{refs.name}Image {
     ref: width-100pct;
   }
 }
