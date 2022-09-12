@@ -1,40 +1,53 @@
-@alga dropZone {
-  .dropZone {
+@define refs {
+  name: dropZone;
+}
+
+@define props {
+  borderSize: 3px;
+  borderType: dashed;
+  borderColor: currentColor;
+  shadow: -1px 5px 25px -9px rgba(0, 0, 0, 0.2);
+}
+
+@alga {refs.name} {
+  .{refs.name} {
     ref: overflowWrap-breakWord padding-0.5rem;
     ref-maxWidth: calc(100vw - 0.5rem);
     ref-maxHeight: calc(100vh - 0.5rem);
     
-    .dropZoneFile {
+    .{refs.name}File {
       ref: position-absolute width-0px height-0px overflow-hidden;
       ref-clip: rect(1px, 1px, 1px, 1px);
     }
     
-    .dropZoneWrap {
-      ref-border: 3px dashed currentColor;
-      ref-boxShadow: -1px 5px 25px -9px rgba(0, 0, 0, 0.2);
+    .{refs.name}Wrap {
+      ref-borderWidth: {props.borderSize};
+      ref-borderStyle: {props.borderType};
+      ref-borderColor: {props.borderColor};
+      ref-boxShadow: {props.shadow};
       
-      .dropZoneLabel {
+      .{refs.name}Label {
         ref: display-grid placeItems-center width-100pct height-100pct;
         ref: paddingTop-1.5rem paddingBottom-2.5rem cursor-pointer;
       }
         
-      .dropZoneImage {
+      .{refs.name}Image {
         ref: pointerEvents-none;
         ref-color: currentColor;
       }
       
-      .dropZoneBody {
+      .{refs.name}Body {
         ref: textAlign-center;
         
         p, span {
           ref: margin-0px;
         }
         
-        .dropZoneTitle {
+        .{refs.name}Title {
           ref: color-hex333;
         }
         
-        .dropZoneText {
+        .{refs.name}Text {
           ref: color-hex737373;
         }
               

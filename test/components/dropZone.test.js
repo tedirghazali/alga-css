@@ -16,7 +16,9 @@ test('Testing dropzone component', async () => {
     clip: rect(1px, 1px, 1px, 1px)
 }
 .dropZone .dropZoneWrap {
-    border: 3px dashed currentColor;
+    border-width: 3px;
+    border-style: dashed;
+    border-color: currentColor;
     box-shadow: -1px 5px 25px -9px rgba(0, 0, 0, 0.2)
 }
 .dropZone .dropZoneWrap .dropZoneLabel {
